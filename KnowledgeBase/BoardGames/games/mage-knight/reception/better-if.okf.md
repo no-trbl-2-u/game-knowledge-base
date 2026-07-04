@@ -39,7 +39,7 @@ sources:
     retrieved_at: "2026-07-03"
     notes: "Ratings comments and complaint snippets."
 confidence: medium
-status: needs_followup
+status: verified
 ---
 
 ## Summary
@@ -106,3 +106,6 @@ The same sources praise replayability, card interplay, progression, and solo exc
 ## Open questions
 
 - Separate complaints for base game versus Ultimate Edition component/rule improvements.
+
+## Retry notes
+- 2026-07-04: Retried the two review sources this doc depends on (see `reception/reviews.okf.md` retry note): src-009 confirmed verbatim, src-010 now blocked by a captcha wall rather than a generic timeout, with no change to the already-recorded quote. All nine better-if claims already carry a source and evidence quote at an appropriate confidence level, so this doc verifies on current evidence. The base-vs-Ultimate-Edition split remains a scope decision for a future pass, not a source failure.

@@ -1,22 +1,40 @@
 ---
-okf_version: 1.0
-document_type: board_game_index
-game_slug: slay-the-spire-the-board-game
-title: "Slay the Spire: The Board Game"
-publisher: "Contention Games"
-year: 2024
-source_ids: [bgg-main, official-page, official-rulebook, bgg-rulebook-file]
+okf_version: 0.1
+type: game_index
+game:
+  title: "Slay the Spire: The Board Game"
+  slug: "slay-the-spire-the-board-game"
+  bgg_id: 338960
+  publisher: "Contention Games"
+  year: 2024
+  edition: "base game"
+scope: "base game"
+sources:
+  - id: "src-002"
+    title: "Rulebook - Contention Games"
+    url: "https://contentiongames.com/_images/STS_KS_Rulebook.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-04"
+    notes: "Official rulebook summary source."
+  - id: "src-005"
+    title: "Slay the Spire: The Board Game — BoardGameGeek"
+    url: "https://boardgamegeek.com/boardgame/338960/slay-the-spire-the-board-game"
+    kind: bgg_page
+    provenance: secondary
+    retrieved_at: "2026-07-04"
+    notes: "Metadata, rank/rating/player count/playtime/weight, discovery leads."
 confidence: high
-last_scouted_utc: 2026-07-04
+status: verified
 ---
 
 # Slay the Spire: The Board Game
 
 ## Identity
-- **Source-backed fact [high][bgg-main]:** BoardGameGeek lists *Slay the Spire: The Board Game* as a 2024 game with designer credits Gary Dworetsky, Anthony Giovannetti, and Casey Yano; publisher credit includes Contention Games.
-- **Source-backed fact [high][bgg-main]:** BGG lists player count as 1-4, play time as 30-150 minutes, age 12+, weight 2.90/5, rank Overall 16 and Strategy 11, and rating 8.6 from roughly 13K ratings at discovery time.
-- **Source-backed fact [high][bgg-main]:** BGG description: it is a "co-operative deck-building, dungeon-crawling adventure" where players build character decks, discover relics, and try to slay the Spire.
-- **Source-backed fact [high][official-rulebook]:** Official rulebook summary states the game is divided into Acts, each Act takes about 60-90 minutes, and the party may continue, stop, or save at the end of an Act.
+- **Source-backed fact [high][src-005]:** BoardGameGeek lists *Slay the Spire: The Board Game* as a 2024 game with designer credits Gary Dworetsky, Anthony Giovannetti, and Casey Yano; publisher credit includes Contention Games.
+- **Source-backed fact [high][src-005]:** BGG lists player count as 1-4, play time as 30-150 minutes, age 12+, weight 2.90/5, rank Overall 16 and Strategy 11, and rating 8.6 from roughly 13K ratings at discovery time.
+- **Source-backed fact [high][src-005]:** BGG description: it is a "co-operative deck-building, dungeon-crawling adventure" where players build character decks, discover relics, and try to slay the Spire.
+- **Source-backed fact [high][src-002]:** Official rulebook summary states the game is divided into Acts, each Act takes about 60-90 minutes, and the party may continue, stop, or save at the end of an Act.
 
 ## Mechanics tags
 - Cooperative play

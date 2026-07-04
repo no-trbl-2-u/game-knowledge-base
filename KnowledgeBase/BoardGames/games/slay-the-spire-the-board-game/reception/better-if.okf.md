@@ -10,28 +10,28 @@ game:
   edition: "base game"
 scope: "base game"
 sources:
-  - id: "rolling-meep-review"
+  - id: "src-007"
     title: "REVIEW: Slay the Spire: The Board Game"
     url: "https://rollinginthemeep.com/2025/05/22/review-slay-the-spire-the-board-game"
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-04"
     notes: "Dislikes list includes complexity, footprint, solo value."
-  - id: "coopgestalt-review"
-    title: "A Review of Slay The Spire (The Board Game) From Someone Who Doesn’t Like Rogue-like Games And Has Never Played The Video Game!"
+  - id: "src-008"
+    title: "A Review of Slay The Spire (The Board Game) From Someone Who Doesn't Like Rogue-like Games And Has Never Played The Video Game!"
     url: "https://coopgestalt.com/2024/06/13/a-review-of-slay-the-spire-the-board-game-from-someone-who-doesnt-like-rogue-like-games-and-has-never-played-the-video-game"
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-04"
     notes: "Rulebook ambiguity and progression confusion."
-  - id: "miniature-market-reviews"
+  - id: "src-010"
     title: "Slay the Spire: The Board Game retail reviews"
     url: "https://www.miniaturemarket.com/slay-spireboard-game-cgm1001.html"
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-04"
     notes: "Retail snippets mention lengthy setup and heavy setup time."
-  - id: "bgg-rulebook-file"
+  - id: "src-003"
     title: "Slay the Spire - Official Rulebook"
     url: "https://boardgamegeek.com/filepage/276680/slay-the-spire-official-rulebook"
     kind: bgg_page
@@ -52,7 +52,7 @@ The game is admired, not acquitted. Its best opportunities are in teaching, phys
 ### 1. Explain abnormal setup steps
 - Labels: onboarding, setup/teardown, rules ambiguity, component clarity
 - Claim: The game would be better if setup rules explained why certain decks must not be shuffled.
-- Source: coopgestalt-review
+- Source: src-008
 - Evidence: Reviewer says they accidentally shuffled the Summon deck and proposes clarifying that it is searched alphabetically later.
 - Confidence: high
 - Design implication: Any instruction that contradicts genre habit needs a reason in-line.
@@ -60,7 +60,7 @@ The game is admired, not acquitted. Its best opportunities are in teaching, phys
 ### 2. Improve post-run / post-Act progression clarity
 - Labels: campaign/progression, scoring/endgame, rules ambiguity, onboarding
 - Claim: The game would be better if reset, unlock, and after-Act-III progression were explicit for players without video game knowledge.
-- Source: coopgestalt-review
+- Source: src-008
 - Evidence: Reviewer says moving forward after Act III was "very unclear" and that video-game familiarity filled the gap.
 - Confidence: high
 - Design implication: Roguelike tabletop rules need a ritualized reset procedure: what persists, what resets, what unlocks, what gets boxed.
@@ -68,7 +68,7 @@ The game is admired, not acquitted. Its best opportunities are in teaching, phys
 ### 3. Reduce handling overhead and table friction
 - Labels: setup/teardown, component clarity, accessibility
 - Claim: The game would be better if setup, teardown, cube movement, and effect tracking were lighter or better distributed.
-- Source: rolling-meep-review; miniature-market-reviews
+- Source: src-007; src-010
 - Evidence: Rolling In The Meep dislikes include fiddly tracking, many cubes/effects, and a massive box/table footprint; Miniature Market snippets call setup "a little lengthy" and "a bit heavy".
 - Confidence: high
 - Design implication: Complex co-op systems should assign table jobs or provide app/player-aid support before fatigue becomes the hidden enemy.
@@ -76,7 +76,7 @@ The game is admired, not acquitted. Its best opportunities are in teaching, phys
 ### 4. Strengthen solo-specific value
 - Labels: solo/co-op automation, player interaction
 - Claim: Solo play would be better if it felt less like a slower physical substitute for the original video game.
-- Source: rolling-meep-review
+- Source: src-007
 - Evidence: Reviewer says solo play is admirable but less successful because it feels too much like the video game.
 - Confidence: medium
 - Design implication: Solo tabletop adaptations need distinct tactile or procedural advantages, not just manual execution of digital logic.
@@ -84,7 +84,7 @@ The game is admired, not acquitted. Its best opportunities are in teaching, phys
 ### 5. Preserve flexible action order while teaching it explicitly
 - Labels: turn pacing, downtime, player interaction
 - Claim: The game is better because of simultaneous/free-order player action, but that strength needs clear teaching and examples.
-- Source: coopgestalt-review; bgg-rulebook-file
+- Source: src-008; src-003
 - Evidence: coopgestalt praises the rulebook line allowing players to play cards/use potions/activate abilities in any order; BGG file notes v2.30 cut optional sequential-turn rules.
 - Confidence: medium
 - Design implication: Free-order co-op phases must be presented as a feature, not an exception.

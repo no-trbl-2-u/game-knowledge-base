@@ -10,43 +10,43 @@ game:
   edition: "base game"
 scope: "base game"
 sources:
-  - id: "bgg-main"
+  - id: "src-005"
     title: "Slay the Spire: The Board Game"
     url: "https://boardgamegeek.com/boardgame/338960/slay-the-spire-the-board-game"
     kind: bgg_page
     provenance: secondary
     retrieved_at: "2026-07-04"
     notes: "Primary discovery source."
-  - id: "official-rulebook"
+  - id: "src-002"
     title: "Rulebook - Contention Games"
     url: "https://contentiongames.com/_images/STS_KS_Rulebook.pdf"
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-04"
     notes: "Official publisher-hosted rulebook PDF."
-  - id: "bgg-rulebook-file"
+  - id: "src-003"
     title: "Slay the Spire - Official Rulebook"
     url: "https://boardgamegeek.com/filepage/276680/slay-the-spire-official-rulebook"
     kind: bgg_page
     provenance: community
     retrieved_at: "2026-07-04"
     notes: "Official rulebook file/version lead."
-  - id: "meeple-mountain-review"
+  - id: "src-006"
     title: "Slay the Spire: The Board Game Review"
     url: "https://www.meeplemountain.com/reviews/slay-the-spire-the-board-game"
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-04"
     notes: "Reception."
-  - id: "rolling-meep-review"
+  - id: "src-007"
     title: "REVIEW: Slay the Spire: The Board Game"
     url: "https://rollinginthemeep.com/2025/05/22/review-slay-the-spire-the-board-game"
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-04"
     notes: "Reception and complaints."
-  - id: "coopgestalt-review"
-    title: "A Review of Slay The Spire (The Board Game) From Someone Who Doesn’t Like Rogue-like Games And Has Never Played The Video Game!"
+  - id: "src-008"
+    title: "A Review of Slay The Spire (The Board Game) From Someone Who Doesn't Like Rogue-like Games And Has Never Played The Video Game!"
     url: "https://coopgestalt.com/2024/06/13/a-review-of-slay-the-spire-the-board-game-from-someone-who-doesnt-like-rogue-like-games-and-has-never-played-the-video-game"
     kind: review
     provenance: secondary

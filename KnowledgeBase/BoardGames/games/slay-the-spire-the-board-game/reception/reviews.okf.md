@@ -10,29 +10,29 @@ game:
   edition: "base game"
 scope: "base game"
 sources:
-  - id: "bgg-main"
+  - id: "src-005"
     title: "Slay the Spire: The Board Game"
     url: "https://boardgamegeek.com/boardgame/338960/slay-the-spire-the-board-game"
     kind: bgg_page
     provenance: secondary
     retrieved_at: "2026-07-04"
     notes: "Discovery, ranking, rating, review leads."
-  - id: "meeple-mountain-review"
+  - id: "src-006"
     title: "Slay the Spire: The Board Game Review"
     url: "https://www.meeplemountain.com/reviews/slay-the-spire-the-board-game"
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-04"
     notes: "Detailed positive review."
-  - id: "rolling-meep-review"
+  - id: "src-007"
     title: "REVIEW: Slay the Spire: The Board Game"
     url: "https://rollinginthemeep.com/2025/05/22/review-slay-the-spire-the-board-game"
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-04"
     notes: "Detailed review with likes/dislikes."
-  - id: "coopgestalt-review"
-    title: "A Review of Slay The Spire (The Board Game) From Someone Who Doesn’t Like Rogue-like Games And Has Never Played The Video Game!"
+  - id: "src-008"
+    title: "A Review of Slay The Spire (The Board Game) From Someone Who Doesn't Like Rogue-like Games And Has Never Played The Video Game!"
     url: "https://coopgestalt.com/2024/06/13/a-review-of-slay-the-spire-the-board-game-from-someone-who-doesnt-like-rogue-like-games-and-has-never-played-the-video-game"
     kind: review
     provenance: secondary
@@ -49,19 +49,19 @@ Reception is strongly positive. The dominant praise is that the adaptation justi
 
 ## Source-backed facts
 - Claim: BGG shows strong reception: Overall rank 16, Strategy rank 11, 8.6 rating, roughly 13K ratings and 2.1K comments at discovery time.
-  Source: bgg-main
+  Source: src-005
   Evidence: BGG page search extract lists "Rank: Overall 16", "Strategy 11", "8.6", and "13K Ratings & 2.1K Comments".
   Confidence: high
 - Claim: Meeple Mountain gives the game a highest-recommendation verdict and says it is a great game in its own right.
-  Source: meeple-mountain-review
-  Evidence: Extracted quote: "It’s not just a great version of the game; it’s a great game full stop." and "gets the highest recommendation".
+  Source: src-006
+  Evidence: Extracted quote: "It's not just a great version of the game; it's a great game full stop." and "gets the highest recommendation".
   Confidence: high
 - Claim: Rolling In The Meep calls cooperative play the central justification and praises the adaptation as both faithful and distinct.
-  Source: rolling-meep-review
+  Source: src-007
   Evidence: Extracted quote: "It feels like the same game and its own thing" and "Cooperative play is a revelation".
   Confidence: high
 - Claim: coopgestalt rates the game highly even from a reviewer unfamiliar with the video game, but criticizes the rulebook.
-  Source: coopgestalt-review
+  Source: src-008
   Evidence: Extracted final ratings: solo 8.5/10, co-op 9/10, fans potentially 10/10, overall production 9.5/10; criticism: rulebook seems to assume video game knowledge.
   Confidence: high
 

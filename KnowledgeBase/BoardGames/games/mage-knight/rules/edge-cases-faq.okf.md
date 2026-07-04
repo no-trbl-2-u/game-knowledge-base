@@ -77,3 +77,6 @@ Mage Knight’s edge-case cost is architectural: the game splits learning betwee
 ## Open questions
 
 - Reconcile official FAQ 1.0v2 with BGG wiki FAQ and identify any contradictions.
+
+## Retry notes
+- 2026-07-04: Retried the official FAQ PDF at both `wizkidsgames.com` and `wizkids.com` hosts; both now return HTTP 500 Internal Server Error (previously only a TLS hostname mismatch). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the PDF, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.

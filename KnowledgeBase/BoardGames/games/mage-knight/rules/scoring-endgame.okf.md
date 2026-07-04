@@ -24,6 +24,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-03"
     notes: "Secondary round-end and fame references."
+  - id: "src-007"
+    title: "Movement in Mage Knight — UltraBoardGames"
+    url: "https://www.ultraboardgames.com/mage-knight/movement.php"
+    kind: other
+    provenance: secondary
+    retrieved_at: "2026-07-03"
+    notes: "Secondary fame-reward reference for first-scenario exploration."
 confidence: medium
 status: needs_followup
 ---
@@ -67,3 +74,6 @@ Scenario-dependent scoring can create lookup friction and misplayed sessions if 
 ## Open questions
 
 - Extract the official Scenario Book text for base scenarios and build a scenario matrix.
+
+## Retry notes
+- 2026-07-04: Retried the official rulebook/walkthrough PDFs at both `wizkidsgames.com` and `wizkids.com` hosts; both now return HTTP 500 Internal Server Error (previously only a TLS hostname mismatch). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the PDFs, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.

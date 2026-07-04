@@ -73,3 +73,6 @@ The setup is not merely long; it is condition-heavy. Players must know which dec
 ## Open questions
 
 - Verify exact base-game setup sequence against official rulebook pages.
+
+## Retry notes
+- 2026-07-04: Retried the official rulebook PDF at both `wizkidsgames.com` and `wizkids.com` hosts; both now return HTTP 500 Internal Server Error (previously only a TLS hostname mismatch). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the PDF, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.

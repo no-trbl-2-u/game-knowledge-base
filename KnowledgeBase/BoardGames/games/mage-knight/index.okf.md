@@ -102,3 +102,6 @@ See `reception/better-if.okf.md`.
 
 - Direct PDF text extraction failed this run; verify page references from the official PDFs with a later browser/PDF-capable fetch.
 - Decide whether Ultimate Edition deserves a separate edition entry after base-game study is complete.
+
+## Retry notes
+- 2026-07-04: Retried the official rulebook/walkthrough/FAQ PDFs at both `wizkidsgames.com` and `wizkids.com` hosts; all three now return HTTP 500 Internal Server Error on both hostnames (previously only a TLS hostname mismatch on `wizkidsgames.com`). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the three PDFs, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.

@@ -78,3 +78,6 @@ A complex system needs a living oracle. Build expandable games with source-linke
 - Which FAQ pages are core-game-only and which require expansions?
 - Are there official errata documents separate from wiki entries?
 - Which edge cases recur most often in player forums?
+
+## Retry notes
+- 2026-07-04: Attempted to drill into specific wiki subpages (`Category:FAQ`, `FAQ`) beyond the main landing page (`src-004`) to answer the open questions, but guessed URLs returned empty/404 content rather than real pages. Per citation discipline this pass did not fabricate a URL to force a result. A future attempt needs the actual FAQ/errata subpage URL from a real search (BGG forum links or a site search on spiritislandwiki.com), not a guessed path.

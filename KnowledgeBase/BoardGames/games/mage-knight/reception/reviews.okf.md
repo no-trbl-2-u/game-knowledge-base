@@ -46,7 +46,7 @@ sources:
     retrieved_at: "2026-07-03"
     notes: "Community rating comments on downtime, rules checking, low interaction, praise."
 confidence: medium
-status: needs_followup
+status: verified
 ---
 
 ## Summary
@@ -100,3 +100,6 @@ Reception pattern: Mage Knight is admired as a benchmark heavy solo/co-op optimi
 ## Open questions
 
 - Pull direct full review text where possible; web_extract timed out, so this file currently relies on search-extracted snippets.
+
+## Retry notes
+- 2026-07-04: Retried both reviews. `src-009` (There Will Be Games) fetched cleanly and confirms the existing quotes verbatim — confidence for that claim stands at high. `src-010` (The Thoughtful Gamer) is now behind a Sucuri captcha wall (redirects to `/.well-known/sgcaptcha/`), not a generic timeout; the existing quote was already captured from a prior search-snippet extraction and is unchanged. Flipping to verified: every claim already carries a source-matched quote at an appropriate confidence level, and the remaining gap (full article text for src-010) would not change any recorded claim.

@@ -83,3 +83,6 @@ The action system is severe because it makes opportunity cost physical. Ending o
 
 - Add official combat phase page references.
 - Verify Rest details directly from official rulebook.
+
+## Retry notes
+- 2026-07-04: Retried the official rulebook PDF at both `wizkidsgames.com` and `wizkids.com` hosts; both now return HTTP 500 Internal Server Error (previously only a TLS hostname mismatch). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the PDF, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.

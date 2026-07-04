@@ -125,3 +125,6 @@ Primary discovery was BGG. Official rules availability was established through W
 
 - Re-fetch official PDFs through a browser or alternate mirror and add page references.
 - Locate publisher errata beyond FAQ 1.0v2 if any exists for later printings or Ultimate Edition.
+
+## Retry notes
+- 2026-07-04: Retried `src-003`/`src-004`/`src-005` (rulebook, walkthrough, FAQ PDFs) at both `wizkidsgames.com` and `wizkids.com` hosts; all three now return HTTP 500 Internal Server Error on both hostnames (previously only a TLS hostname mismatch on `wizkidsgames.com`). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the three PDFs, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.

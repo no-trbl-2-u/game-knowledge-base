@@ -24,6 +24,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-02"
     notes: "Discovery layer for victory summary."
+  - id: "src-008"
+    title: "Punchboard — Spirit Island Review"
+    url: "https://punchboard.co.uk/review-spirit-island"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-07-02"
+    notes: "Reception summary of Fear-deck-exhaustion win condition."
 confidence: high
 status: verified
 ---
