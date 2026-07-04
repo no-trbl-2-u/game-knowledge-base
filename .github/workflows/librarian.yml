@@ -1,0 +1,40 @@
+name: librarian
+
+# Weekly corpus maintenance (see .claude/commands/librarian.md): fix
+# schema drift, drain status: needs_followup by retrying failed sources,
+# check off covered wishlist entries, flag dupes. Commits to main.
+# Scheduled before the daily 06:00 UTC scout so the two never collide.
+
+on:
+  schedule:
+    - cron: '17 5 * * 3'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: kb-maintenance
+  cancel-in-progress: false
+
+jobs:
+  librarian:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Claude (librarian)
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GH_PAT || github.token }}
+          prompt: '/librarian'
+          claude_args: |
+            --model claude-sonnet-5
+            --allowedTools "Bash,Edit,Write,Read,Glob,Grep,Task,TodoWrite,WebFetch,WebSearch"

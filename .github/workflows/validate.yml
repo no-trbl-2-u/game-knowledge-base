@@ -1,0 +1,36 @@
+name: validate
+
+# The corpus's type-checker: structural OKF validation on every change.
+# Plain script, no model, no tokens.
+#
+# NOTE: currently NON-BLOCKING (continue-on-error) because the corpus has
+# known pre-existing findings (a scout run drifted to an off-spec
+# frontmatter schema). Flip continue-on-error to false after the
+# librarian's first pass brings the corpus clean — from then on drift
+# fails CI the day it lands.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'KnowledgeBase/**'
+      - 'scripts/validate-okf.mjs'
+      - '.github/workflows/validate.yml'
+  pull_request:
+    paths:
+      - 'KnowledgeBase/**'
+      - 'scripts/validate-okf.mjs'
+      - '.github/workflows/validate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate OKF corpus
+        continue-on-error: true
+        run: node scripts/validate-okf.mjs

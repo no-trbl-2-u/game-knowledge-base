@@ -1,0 +1,40 @@
+name: patterns
+
+# Weekly cross-game synthesis (see .claude/commands/synthesize-patterns.md):
+# folds the week's new game docs into patterns/<label>.okf.md, keyed to the
+# better-if taxonomy and major mechanics. Commits to main. Scheduled before
+# the daily 06:00 UTC scout so the two never collide.
+
+on:
+  schedule:
+    - cron: '17 5 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: kb-maintenance
+  cancel-in-progress: false
+
+jobs:
+  patterns:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Claude (patterns synthesis)
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GH_PAT || github.token }}
+          prompt: '/synthesize-patterns'
+          claude_args: |
+            --model claude-sonnet-5
+            --allowedTools "Bash,Edit,Write,Read,Glob,Grep,Task,TodoWrite,WebFetch,WebSearch"
