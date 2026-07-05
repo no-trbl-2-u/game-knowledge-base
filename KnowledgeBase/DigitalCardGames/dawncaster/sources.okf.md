@@ -26,7 +26,7 @@ sources:
     kind: other
     provenance: community
     retrieved_at: "2026-07-05"
-    notes: "Lead for future keyword glossary import; not yet merged into the first 500 card records."
+    notes: "Imported into `keywords.okf.md`, `keywords.csv`, and `keywords.json` as a community-source glossary; cross-check before treating as canonical."
 confidence: medium
 status: draft
 ---

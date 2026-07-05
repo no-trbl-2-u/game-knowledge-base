@@ -1,0 +1,1197 @@
+{
+  "source_url": "https://dawncasterrpg.fandom.com/wiki/Keywords",
+  "api_url": "https://dawncasterrpg.fandom.com/api.php?action=parse&page=Keywords&prop=wikitext%7Csections&format=json&formatversion=2",
+  "retrieved_at": "2026-07-05",
+  "keyword_count": 141,
+  "keywords": [
+    {
+      "keyword": "Affliction",
+      "type": "Effect",
+      "description": "A negative effect such as Poison, Bleeding or Dazed. Most Afflictions are additive. They can be prevented with a Ward, or removed by Cleansing",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Ambush",
+      "type": "Effect",
+      "description": "Triggers if this card is the first card played of the round. (Reliable cards also trigger this effect)",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Ancestral",
+      "type": "Effect",
+      "description": "Ancestral effects are active while you have 4 or more cards in your Discard Pile",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Anger",
+      "type": "Blessing",
+      "description": "Increases the damage dealt by Actions by 1 per stack of Anger. (The damage bonus from Anger can, in turn, be doubled by Rampage)",
+      "functions": [
+        "Buff",
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Armor",
+      "type": "Other",
+      "description": "When dealt damage, take 1 less damage per stack of Armor. Armor fades at the start of the turn",
+      "functions": [
+        "Defense"
+      ]
+    },
+    {
+      "keyword": "Ascend",
+      "type": "Effect",
+      "description": "Ascend to a higher form, gaining more powerful buffs for each Ascended level. You can Ascend up to 3 levels",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Ascended",
+      "type": "Effect",
+      "description": "Ascended effects are active while you are currently in an Ascended form",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Attune",
+      "type": "Effect",
+      "description": "If you are not Attuned already, attune to a random Element. Attunements empower Actions that share their type",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Balance",
+      "type": "Effect",
+      "description": "The remaining number of cards in your deck and remaining Health are both even numbered",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Bane",
+      "type": "Affliction",
+      "description": "Whenever you gain an Affliction (except Dazzled, Jinxed or Shocked), gain an additional stack of that Affliction for each point of Bane",
+      "functions": [
+        "Debuff"
+      ]
+    },
+    {
+      "keyword": "Barrier",
+      "type": "Blessing",
+      "description": "When dealt damage, take 1 less non-Piercing damage per stack of Barrier. Barrier does not fade, and can be Dispelled",
+      "functions": [
+        "Defense"
+      ]
+    },
+    {
+      "keyword": "Basic Attack",
+      "type": "Effect",
+      "description": "Play your Basic Weapon attack. You start the game with several copies of your class-specific Basic Weapon, which may be relatively weak compared to later cards. If you are Disarmed, you cannot play Basic Attack cards. You can pay the Blacksmith 50 Gold to Upgrade all of your Basic Attacks, or 30 Gold to permanently Remove a Basic Attack from your deck. Some rare cards allow you to Swap all your Basic Weapon cards for another",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Beastform",
+      "type": "Effect",
+      "description": "4 possible Beastforms provide various powerful buffs (Bear, Cat, Raven, or Dragon). Only 1 Beastform can be active at a time: activating a new Beastform will replace the old one. As a Channeling card, Beastform can be extended by 1 round by having at least 1 Energy at the end of your turn, and ends when you get Interrupted",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Bleeding",
+      "type": "Affliction",
+      "description": "When dealt damage, take 1 additional damage per stack of Bleeding, then reduce Bleeding stacks by 1",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Blessing",
+      "type": "Effect",
+      "description": "A beneficial effect such as Regenerate, Focus or Chain. Most Blessings are additive. They can be removed by Dispelling them",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Blood",
+      "type": "Effect",
+      "description": "Sacrifice your own blood instead of Energy in order to gain special powers. Goes hand in hand with Corruption, Darkness, Hexes, and Lifedrain",
+      "functions": [
+        "Blood Ritual",
+        "Energy Management"
+      ]
+    },
+    {
+      "keyword": "Bloodlust",
+      "type": "Effect",
+      "description": "Bloodlust requires the enemy to have the Bleeding Affliction. (Reliable cards also trigger the Bloodlust effect, even when the enemy isn't Bleeding)",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Brittle",
+      "type": "Affliction",
+      "description": "When dealt damage, remove Brittle. If the damage was dealt from a Melee Action, take 1 more damage per stack removed",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Burning",
+      "type": "Affliction",
+      "description": "At the end of the turn, take 1 damage per stack of Burning",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Bury",
+      "type": "Effect",
+      "description": "Removes the top card of your deck from combat. Persistent cards cannot be Buried",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Cascade",
+      "type": "Effect",
+      "description": "Triggers when played after a card that costs 1 more or 1 less Energy. (Reliable cards also trigger this effect)",
+      "functions": [
+        "Deck Management",
+        "Energy Management"
+      ]
+    },
+    {
+      "keyword": "Chain",
+      "type": "Blessing, Effect",
+      "description": "Increase the damage of the next action by 1 per stack. Chain fades if a played card did not increase Chain. Activating Chains plays a key role in raising the Tide",
+      "functions": [
+        "Buff",
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Challenger",
+      "type": "Effect",
+      "description": "A Challenger has to be selected first. Opportunities return to the area deck when a Challenger is selected",
+      "functions": [
+        "-"
+      ]
+    },
+    {
+      "keyword": "Channel",
+      "type": "Effect",
+      "description": "A channeling effect can be extended by 1 round by having at least 1 Energy at the end of your turn. Channeled cards end when you get Interrupted",
+      "functions": [
+        "Energy Management"
+      ]
+    },
+    {
+      "keyword": "Chaos",
+      "type": "Effect",
+      "description": "Requires an odd number of cards remaining in your deck",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Charges",
+      "type": "Effect",
+      "description": "Cards with Charges can be played X number of times per combat before they become Depleted and are removed from combat",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Charmed",
+      "type": "Affliction",
+      "description": "Lose the battle if your Health is less than your Charmed stack. When dealt non-Piercing damage, remove an equal amount of Charmed",
+      "functions": [
+        "Instakill"
+      ]
+    },
+    {
+      "keyword": "Cleanse",
+      "type": "Effect",
+      "description": "Removes an Affliction",
+      "functions": [
+        "Healing"
+      ]
+    },
+    {
+      "keyword": "Codes",
+      "type": "Effect",
+      "description": "Codes provide a strict rule for your deck. If it is met at the Start of Combat, a code is put directly in play. If not, it gets removed. Codes are Unique and Grounded: only one Code with that name can be played per combat, and Codes can't be altered, copied or Imbued",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Combat Fatigue",
+      "type": "Effect",
+      "description": "Whenever your deck runs out of cards, you increase your Fatigue by 1, then take 10% of your Maximum Health per Fatigue in unpreventable damage",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Conjure",
+      "type": "Effect",
+      "description": "Creates a temporary card that is always Removed from your deck after use or after the combat ends, even if it has non-Removable properties such as Cursed",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Continuity",
+      "type": "Effect",
+      "description": "Triggers when played after a card of the same type (melee, magic, ranged, divine). (Reliable cards also trigger this effect)",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Corrupted",
+      "type": "Effect",
+      "description": "4 or more Corruptions are present in your deck, hand and/or Discard Pile",
+      "functions": [
+        "Blood Ritual",
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Corruption",
+      "type": "Effect",
+      "description": "Corruptions are cards with negative effects to their owner (Corruptions may have a negative effect when drawn, even if they are not played. Some Corruptions are unplayable (such as Envy, Greed, or Lust). If your deck contains 4 or more Corruptions, you become Corrupted, which unlocks special effects on many Blood Ritual cards.)",
+      "functions": [
+        "Blood Ritual"
+      ]
+    },
+    {
+      "keyword": "Critical Hit",
+      "type": "Effect",
+      "description": "Critical Hits deal double damage. You can't inflict Critical Hits while Afflicted by Weakness. (Critical Hits can be buffed by the Ferocious Blessing)",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Crushing",
+      "type": "Effect",
+      "description": "Crushing requires a card to deal 10 or more damage",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Cursed",
+      "type": "Effect",
+      "description": "Cursed cards can't be Transmuted or Removed from your deck. However, they can be transformed into a card of equal rarity at a Shrine of Commerce. Conjured and One Use cards are always Removed from your deck after use or after the combat ends, even if they are Cursed",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Darkness",
+      "type": "Other",
+      "description": "When dealt damage, take 1 less damage per stack of Darkness. When Darkness runs out, gain Stunned. Your Maximum Health is lowered by your total Darkness",
+      "functions": [
+        "Blood Ritual"
+      ]
+    },
+    {
+      "keyword": "Dazed",
+      "type": "Affliction",
+      "description": "When playing a card, decrease Dazed by 1. When Dazed reaches 0, gain Stunned. Dazed fades at the end of the turn",
+      "functions": [
+        "Deck Management",
+        "Defense"
+      ]
+    },
+    {
+      "keyword": "Dazzled",
+      "type": "Affliction",
+      "description": "Draw one fewer card per stack of Dazzled, then decrease Dazzled stacks by 1 per skipped draw. Stacks of Dazzled cannot be increased",
+      "functions": [
+        "Deck Management",
+        "Defense"
+      ]
+    },
+    {
+      "keyword": "Deep Wound",
+      "type": "Effect",
+      "description": "Inflicts Bleeding every turn. A target who has sustained 5 or more Deep Wounds is instantly slain",
+      "functions": [
+        "Offense",
+        "Instakill"
+      ]
+    },
+    {
+      "keyword": "Delirious",
+      "type": "Affliction",
+      "description": "After playing a card, shuffle the costs of all cards in hand. Lasts 1 round per stack",
+      "functions": [
+        "Chaos",
+        "Energy Management"
+      ]
+    },
+    {
+      "keyword": "Delve",
+      "type": "Effect",
+      "description": "Select 1 of 3 randomly selected cards",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Deplete",
+      "type": "Effect",
+      "description": "Depleted cards are removed from combat. Deplete triggers when the final Charge of a card with Charges is spent, or when Equipment has used up its Durability",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Disarmed",
+      "type": "Affliction",
+      "description": "While Disarmed, Basic Attack cards can't be played. Lasts 1 round per stack",
+      "functions": [
+        "Deck Management",
+        "Defense"
+      ]
+    },
+    {
+      "keyword": "Discard",
+      "type": "Effect",
+      "description": "Removes a card from the hand",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Discard Pile",
+      "type": "Effect",
+      "description": "After you play a card, it gets moved to the Discard Pile. Once your deck is empty, your Discard Pile is shuffled back into your deck",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Dispel",
+      "type": "Effect",
+      "description": "Removes a Blessing from the target",
+      "functions": [
+        "Debuff"
+      ]
+    },
+    {
+      "keyword": "Dominated",
+      "type": "Affliction",
+      "description": "While Dominated, you can only play the randomly selected card in your hand. Exception: Reliable cards can still be played",
+      "functions": [
+        "Chaos",
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Doom",
+      "type": "Affliction",
+      "description": "At the end of your turn, take 1 damage for each stack of Doom. Increase Doom by 1 each time an Action is played",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Dragon",
+      "type": "Effect",
+      "description": "-",
+      "functions": [
+        "-"
+      ]
+    },
+    {
+      "keyword": "Durability",
+      "type": "Effect",
+      "description": "The number of times Equipment can be activated before it's Depleted for the remainder of the combat",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Echo",
+      "type": "Effect",
+      "description": "Cards with Echo are cast twice when played from your hand",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Empower",
+      "type": "Effect",
+      "description": "Empower is active while you have 5 or more Energy",
+      "functions": [
+        "Energy Management"
+      ]
+    },
+    {
+      "keyword": "Evasion",
+      "type": "Blessing",
+      "description": "When dealt Melee damage, reduce the first damage taken to 0, then decrease Evasion by 1. Evasion fades at the start of the turn",
+      "functions": [
+        "Defense",
+        "Immunity"
+      ]
+    },
+    {
+      "keyword": "Execute",
+      "type": "Effect",
+      "description": "Triggers if the card with Execute is active when you defeat your foe, including if you use this card to defeat your foe",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Ferocious",
+      "type": "Blessing",
+      "description": "Your next Critical Hit deals 1 additional damage and heals you for 1 Health per stack of Ferocious",
+      "functions": [
+        "Buff",
+        "Healing",
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Figmented",
+      "type": "Effect",
+      "description": "Conjures a copy of the card when played.",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Finale",
+      "type": "Effect",
+      "description": "Triggers when played with 2 or fewer cards remaining in hand. (Reliable cards also trigger this effect, regardless of how many cards are left in hand)",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Firecast",
+      "type": "Effect",
+      "description": "A card with Firecast is played and moved into the discard pile whenever it gets Buried on your turn",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Flanking",
+      "type": "Effect",
+      "description": "Triggers when this card is played from either the leftmost or the rightmost position in hand. (Reliable cards also trigger this effect, regardless of their position in hand)",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Flow",
+      "type": "Effect",
+      "description": "Triggers when played after playing at least X number of cards during the turn. (Reliable cards also trigger this effect, regardless of how many cards have been played during the turn)",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Focus",
+      "type": "Blessing",
+      "description": "At the start of the turn, draw an additional card if you have 5 or more Focus",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Foretell",
+      "type": "Effect",
+      "description": "Look at the top X cards of your deck. Put 1 on top, and the others at the bottom of your deck",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Form",
+      "type": "Effect",
+      "description": "Forms transform your appearance. Only 1 Form can be active at a time: activating a new Form will replace the old one",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Frenzy",
+      "type": "Effect",
+      "description": "Triggers when you've taken damage during your turn. (Reliable cards also trigger this effect, regardless of whether you've taken damage on your turn)",
+      "functions": [
+        "Buff"
+      ]
+    },
+    {
+      "keyword": "Frozen",
+      "type": "Affliction",
+      "description": "Look at the top X cards of your deck. Put one on top, and the others at the bottom of your deck",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Grounded",
+      "type": "Effect",
+      "description": "Grounded cards can't be altered, copied or Imbued",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Haste",
+      "type": "Blessing",
+      "description": "Reduce the cost of the next drawn card by 1 Energy, then decrease Haste by 1",
+      "functions": [
+        "Energy Management"
+      ]
+    },
+    {
+      "keyword": "Health",
+      "type": "Effect",
+      "description": "If you lose all your Health, you lose the game! If your enemy loses all their Health, you win the battle! Some cards add or remove Health points, while others increase or decrease Maximum Health",
+      "functions": [
+        "Defense",
+        "Healing"
+      ]
+    },
+    {
+      "keyword": "Heavy",
+      "type": "Effect",
+      "description": "Heavy cards do not get Reshuffled after your deck reaches 0 cards",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Hex",
+      "type": "Effect",
+      "description": "Hexes are powerful effects that debilitate foes in different ways",
+      "functions": [
+        "Blood Ritual",
+        "Debuff"
+      ]
+    },
+    {
+      "keyword": "Holy",
+      "type": "Effect",
+      "description": "Holy Energy can be spent on powerful Divine cards. Goes hand in hand with Zeal",
+      "functions": [
+        "Holy Energy",
+        "Energy Management"
+      ]
+    },
+    {
+      "keyword": "Imbued",
+      "type": "Other",
+      "description": "Imbuing an Enchantment Removes an Enchantment from your deck and activates it permanently, from the start of every combat. In order to be Imbued, the Enchantment card must already be present in your deck, and must last for the entire combat when activated. Grounded cards and Codes cannot be Imbued. Imbuing is expensive, often costing 100 Gold",
+      "functions": [
+        "Buff",
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Impervious",
+      "type": "Blessing",
+      "description": "While Impervious, take no non-Piercing damage. When dealt damage on the enemy turn, take no non-Piercing damage and decrease Impervious by 1",
+      "functions": [
+        "Defense",
+        "Immunity"
+      ]
+    },
+    {
+      "keyword": "Imprint",
+      "type": "Effect",
+      "description": "Add a card to this card's memory",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Infected",
+      "type": "Affliction",
+      "description": "Whenever you discard a card, take 1 damage for every point of Infected. Remove all Infected whenever you gain Health",
+      "functions": [
+        "Deck Management",
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Infuse",
+      "type": "Other",
+      "description": "When you Infuse a card, you convert its energy cost to Neutral (colorless). Also, if the card is Upgradeable, Infusing it will Upgrade the card as many times as its cost in energy",
+      "functions": [
+        "Energy Management",
+        "Upgrade",
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Infusion",
+      "type": "Effect",
+      "description": "When you add a card with Infusion to your deck, Upgrade all other cards with Infusion by 1",
+      "functions": [
+        "Deck Management",
+        "Upgrade",
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Insight",
+      "type": "Blessing",
+      "description": "Whenever you are dealt an amount of non-Piercing damage exactly the same as your current Insight, prevent that damage",
+      "functions": [
+        "Defense",
+        "Immunity"
+      ]
+    },
+    {
+      "keyword": "Interrupt",
+      "type": "Effect",
+      "description": "Removes the target's remaining Energy (and ends their Channeling effects, including Beastform). If it targets an enemy, it will force them to replace their Deadly attacks with their regular cards",
+      "functions": [
+        "Deck Management",
+        "Energy Management"
+      ]
+    },
+    {
+      "keyword": "Jinxed",
+      "type": "Affliction",
+      "description": "The next Action card played has no effect and reduces Jinxed by 1. (Exception: Reliable cards still have an effect.) Jinxed stacks fade at the end of the turn, and cannot be increased by Bane.",
+      "functions": [
+        "Debuff",
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Ki",
+      "type": "Affliction",
+      "description": "If you start the turn with more Ki than Health, remove all Ki and gain Stunned",
+      "functions": [
+        "Debuff",
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Lasting",
+      "type": "Effect",
+      "description": "The effects of Lasting cards are extended by 1 turn whenever the card is played again",
+      "functions": [
+        "Buff",
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Lifedrain",
+      "type": "Effect",
+      "description": "Cards with Lifedrain restore Health equal to the damage they deal",
+      "functions": [
+        "Blood Ritual",
+        "Healing"
+      ]
+    },
+    {
+      "keyword": "Memorized",
+      "type": "Effect",
+      "description": "This card always starts at the top of your deck",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Mergecraft",
+      "type": "Effect",
+      "description": "When Mergecraft cards are added to the deck, they Upgrade all copies of that card by their Mergecraft value",
+      "functions": [
+        "Deck Management",
+        "Upgrade",
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Momentum",
+      "type": "Blessing",
+      "description": "Whenever you have 5 or more Momentum, remove all stacks and draw a card",
+      "functions": [
+        "Buff",
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Monster Card",
+      "type": "Effect",
+      "description": "All enemy cards are monster cards, and can be recognized by their deep red banner",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "On Draw",
+      "type": "Effect",
+      "description": "Triggers whenever this card is drawn from your deck",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "On Hit",
+      "type": "Effect",
+      "description": "Triggers when this attack hits the target, and deals damage",
+      "functions": [
+        "Buff"
+      ]
+    },
+    {
+      "keyword": "One Use",
+      "type": "Effect",
+      "description": "This card will be permanently Removed from your deck after playing it, even if it has non-Removable properties such as Cursed",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Order",
+      "type": "Effect",
+      "description": "Requires an even number of cards remaining in your deck",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Overkill",
+      "type": "Effect",
+      "description": "Whenever a foe dies to damage, \"Overkill\" refers to their negative Health total. (For example, if you do 13 damage to an enemy who has 10 Health left with no defenses, they will die at –3 Health, which is the same as 3 Overkill)",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Perform",
+      "type": "Effect",
+      "description": "Increase your current Performance by X, or start a new Performance",
+      "functions": [
+        "Buff"
+      ]
+    },
+    {
+      "keyword": "Performance",
+      "type": "Effect",
+      "description": "Performance counts the progress of your currently active song. While no song is active, your Performance is 0. Performance stacks are increased by Performing",
+      "functions": [
+        "Buff"
+      ]
+    },
+    {
+      "keyword": "Persistent",
+      "type": "Effect",
+      "description": "Cards with Persistent don't get Discarded at the end of the turn and cannot be Buried",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Piercing",
+      "type": "Effect",
+      "description": "Piercing damage ignores all effects that would reduce or prevent its damage (such as Charmed, Impervious, Insight, and Resilient)",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Pinned",
+      "type": "Affliction",
+      "description": "While Pinned, only the leftmost and rightmost cards in hand can be played. (Exception: Reliable cards can still be played, regardless of their position in your hand.) Lasts 1 round per stack",
+      "functions": [
+        "Chaos",
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Poison",
+      "type": "Affliction",
+      "description": "After playing a card, take 1 damage, then decrease Poison by 1. When gaining Health, prevent 1 Health per stack and reduce Poison by 1 for each Health prevented",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Precision",
+      "type": "Effect",
+      "description": "The target ends the attack at an amount of total Health ending in 0 or 5",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Rally",
+      "type": "Blessing",
+      "description": "Whenever your opponent plays a card, gain Health equal to your Rally, then lower your Rally by 1",
+      "functions": [
+        "Deck Management",
+        "Healing"
+      ]
+    },
+    {
+      "keyword": "Rampage",
+      "type": "Effect",
+      "description": "Cards with Rampage gain double the damage bonus from Anger",
+      "functions": [
+        "Buff",
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Reaping",
+      "type": "Effect",
+      "description": "Reaping lowers the target's Maximum Health equal to the damage it deals. When used against creatures who benefit from Anima, it lowers Anima instead. When used by creatures who benefit from Anima, Reaping damage is added to the Anima instead",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Rebound",
+      "type": "Effect",
+      "description": "Rebound counts the number of times you played the card, and triggers its special effect when the card has been played X number of times",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Reflect",
+      "type": "Blessing",
+      "description": "Return the next damage dealt to you to the attacker. Increase this damage by 1 for each stack of Reflect. Fades at the start of your turn",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Regenerate",
+      "type": "Blessing",
+      "description": "At the start of your turn, gain 1 Health per stack and decrease Regenerate by 1",
+      "functions": [
+        "Healing"
+      ]
+    },
+    {
+      "keyword": "Reliable",
+      "type": "Effect",
+      "description": "The Ambush, Bloodlust, Cascade, Continuity, Finale, Flanking, Flow, and Frenzy conditions are always met. Reliable cards ignore disabling conditions like Crushing, Jinxed, Stunned, Pinned or Dominated",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Removed",
+      "type": "Other",
+      "description": "Cards that are removed from your deck are permanently eliminated. You can Remove cards at Campfires, the Shrine of Potential, and some special events. (You can also pay the Blacksmith 30 Gold to Remove a Basic Attack.) Cursed cards cannot be removed from your deck. Generally, cards that are removed from your hand during combat are only Discarded, not Removed from your deck entirely. However, Conjured or One Use cards are always Removed after they are activated",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Reshuffle",
+      "type": "Effect",
+      "description": "Whenever your deck runs out of cards, your Discard Pile and the cards you have played (except for Conjure or One Use cards) return to your deck in a random order",
+      "functions": [
+        "Chaos",
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Resilience",
+      "type": "Blessing",
+      "description": "When dealt damage, take 1 less non-Piercing damage per stack of Resilience, then lower your Resilience by 1",
+      "functions": [
+        "Defense"
+      ]
+    },
+    {
+      "keyword": "Revelation",
+      "type": "Effect",
+      "description": "Revelations offer incredibly powerful and Unique effects",
+      "functions": [
+        "Holy Energy"
+      ]
+    },
+    {
+      "keyword": "Scholar",
+      "type": "Effect",
+      "description": "Triggers if your deck contained 20 or more cards at the start of combat",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Shift",
+      "type": "Effect",
+      "description": "Assume a new Form. Only one Form can be active at a time: activating a new Form will replace the old one",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Shocked",
+      "type": "Affliction",
+      "description": "At the start of the turn, reduce Shocked by 1. When Shocked reaches 0, you are Stunned. The stacks of this Affliction cannot be increased",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Sickened",
+      "type": "Affliction",
+      "description": "While Sickened, you lose 1 random Energy at the start of your turn. Lasts 1 round per stack",
+      "functions": [
+        "Energy Management"
+      ]
+    },
+    {
+      "keyword": "Silenced",
+      "type": "Affliction",
+      "description": "While Silenced, Magic Actions can't be played. Lasts 1 round per stack",
+      "functions": [
+        "Deck Management",
+        "Defense"
+      ]
+    },
+    {
+      "keyword": "Sinister",
+      "type": "Effect",
+      "description": "Sinister cards get more powerful for each other Sinister card you played during the entire combat",
+      "functions": [
+        "Buff",
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Slay",
+      "type": "Effect",
+      "description": "Triggers when an enemy is reduced to exactly 0 Health (no Overkill)",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Slow",
+      "type": "Affliction",
+      "description": "Increase the cost of the next drawn card by 1 Neutral Energy, then decrease Slow by 1",
+      "functions": [
+        "Energy Management"
+      ]
+    },
+    {
+      "keyword": "Souls",
+      "type": "Effect",
+      "description": "Use the lingering essence of slain foes to empower Actions. When you die with over 100 souls collected, revive and lose all Souls",
+      "functions": [
+        "Blood Ritual",
+        "Healing"
+      ]
+    },
+    {
+      "keyword": "Stagger",
+      "type": "Affliction",
+      "description": "At the start of your turn, take damage equal to half of your Stagger, then reduce your Stagger by an equal amount",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Stances",
+      "type": "Effect",
+      "description": "Stances are special fighting techniques that can be adopted through various cards. Only one Stance can be active at a time: activating a new Stance replaces the old one",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Status Damage",
+      "type": "Effect",
+      "description": "Status Damage is damage taken from effects like Poison, Burning, Doomed, and Brittle. This damage typically can't be prevented except by Impervious or Cleansing the condition",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Stunned",
+      "type": "Other",
+      "description": "While Stunned, cards cannot be played. Stunned fades at the end of the turn. (Exception: Reliable cards can still be played)",
+      "functions": [
+        "Deck Management",
+        "Defense"
+      ]
+    },
+    {
+      "keyword": "Swap",
+      "type": "Effect",
+      "description": "This card changes into a different card when played",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Synergy",
+      "type": "Effect",
+      "description": "Triggers whenever you play a non-Conjured card of the same type while this card is in your hand. (The card's type is found at the bottom of the card)",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Tides",
+      "type": "Effect",
+      "description": "Tides shift the effects and power of certain Tidal cards. Generally speaking, Low Tide is the default state, but activating multiple Chains or a card that change the Tide can trigger High Tide, which unlocks more powerful effects. In a combat, only one side can enjoy the High Tide: if your opponent activates High Tide, you will go back to Low Tide.",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Transmute",
+      "type": "Effect",
+      "description": "Transmuting a card permanently converts it into a random card of the same color, with a higher rarity. For a list of what cards a card can Transmute into, see: https://blightbane.io/cards. However, Cursed cards can't be Transmuted",
+      "functions": [
+        "Chaos",
+        "Deck Management",
+        "Upgrade"
+      ]
+    },
+    {
+      "keyword": "Treasure",
+      "type": "Effect",
+      "description": "This card can be found through various events",
+      "functions": [
+        "-"
+      ]
+    },
+    {
+      "keyword": "Unique",
+      "type": "Effect",
+      "description": "You can only play one card with this name per combat. All Enchantments, Codes, and Revelations are Unique",
+      "functions": [
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Unplayable",
+      "type": "Effect",
+      "description": "This card can't be played from your hand. However, you will still draw the card, and it may still have an effect",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Unscathed",
+      "type": "Effect",
+      "description": "You've taken no damage during the enemy turn. Inactive on your first turn",
+      "functions": [
+        "Defense"
+      ]
+    },
+    {
+      "keyword": "Untempered",
+      "type": "Effect",
+      "description": "Untempered cards are removed from your deck at the end of combat.",
+      "functions": [
+        "Deck Management"
+      ]
+    },
+    {
+      "keyword": "Upgrade",
+      "type": "Effect",
+      "description": "Upgraded cards deal 1 additional damage per upgrade. Generally, only cards that deal damage can be Upgraded, as well as cards with the Upgradeable effect",
+      "functions": [
+        "Upgrade",
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Upgradeable",
+      "type": "Effect",
+      "description": "This card can be Upgraded, which improves the card in unusual ways",
+      "functions": [
+        "Upgrade",
+        "Various"
+      ]
+    },
+    {
+      "keyword": "Valuable",
+      "type": "Effect",
+      "description": "This card adds double its merchant value to the final score",
+      "functions": [
+        "-"
+      ]
+    },
+    {
+      "keyword": "Vulnerable",
+      "type": "Affliction",
+      "description": "Take 10% more damage from each Action for each stack of Vulnerable. Stacks up to 100% extra damage",
+      "functions": [
+        "Offense"
+      ]
+    },
+    {
+      "keyword": "Ward",
+      "type": "Blessing",
+      "description": "Whenever you gain an Affliction, prevent that Affliction and lower your Ward by 1 instead. Fades at the start of the turn",
+      "functions": [
+        "Defense",
+        "Immunity"
+      ]
+    },
+    {
+      "keyword": "Weakness",
+      "type": "Affliction",
+      "description": "The next damage you deal is reduced by 50%. You can't inflict Critical Hits while affected by Weakness",
+      "functions": [
+        "Debuff",
+        "Defense",
+        "Immunity"
+      ]
+    },
+    {
+      "keyword": "Zeal",
+      "type": "Blessing",
+      "description": "Your Divine actions deal additional damage for each Zeal. At the start of the turn, take damage equal to your Zeal",
+      "functions": [
+        "Holy Energy } ===Functions=== *Blood Ritual: Sacrifice your own blood instead of Energy in order to gain special powers. Goes hand in hand with Corruption",
+        "Darkness",
+        "Hexes",
+        "and Lifedrain. *Buff: This effect does not itself benefit the owner",
+        "but it boosts the effect of other cards that do. *Chaos: This card randomly reshuffles the target's available cards and/or their functions. *Debuff: This effect does not itself harm the target",
+        "but it boosts the effect of other cards that do",
+        "or removes effects that benefit the target. *Deck Management: This card relates to the removal or addition of cards",
+        "and/or the order in which they are played. *Defense: This card prevents damage",
+        "or adds Maximum Health. *Energy Management: This card changes the amount or type of available Energy. *Healing: This card adds Health",
+        "or removes an Affliction. *Holy Energy: Use Holy Energy to play powerful Divine cards. Goes hand in hand with Zeal *Immunity: This card prevents a negative effect",
+        "or causes an enemy attack to deal 0 non-Piercing damage. *Instakill: This card allows for an immediate victory",
+        "without needing to reduce the opponent's Health to 0. *Offense: This card causes damage",
+        "or reduces Maximum Health. *Upgrade: This card upgrades or transmutes other cards in the deck",
+        "and may not itself be playable. *Various: This card has many possible functions. __INDEX__"
+      ]
+    }
+  ]
+}
