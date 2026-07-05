@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: better_if
 game:
   title: "Dune: Imperium"
@@ -9,6 +9,8 @@ game:
   year: 2020
   edition: "English base game"
 scope: "base game"
+mechanics: [deck-building, worker-placement, hand-management, multi-use-cards, force-commitment, race, variable-player-powers]
+better_if_labels: [onboarding, component-clarity, accessibility, rules-ambiguity, combat-resolution, randomness, balance-faction-asymmetry, solo-coop-automation]
 sources:
   - id: "src-006"
     title: "Dune: Imperium Rulebook and Supplements — BGG file page"

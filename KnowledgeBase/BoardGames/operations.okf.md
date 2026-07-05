@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: operations
 game:
   title: "SomberSoft Board Game Knowledge Base"
@@ -24,6 +24,13 @@ sources:
     provenance: official
     retrieved_at: "2026-06-29"
     notes: "Scheduled Hermes cron job configured to run daily at 06:00 UTC and deliver reports back to origin."
+  - id: "src-003"
+    title: "OKF 0.2 proposal (GitHub issue #1)"
+    url: "https://github.com/no-trbl-2-u/game-knowledge-base/issues/1"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-07-05"
+    notes: "Axiomancer integration proposal: mechanics tags, corpus index, patterns layer, librarian gate, wishlist consumption, failed-source policy."
 confidence: high
 status: verified
 ---
@@ -70,6 +77,21 @@ The current purpose is knowledge gathering only. Full integration into downstrea
   Evidence: T specified a large focus on "this game would be better if..."
   Confidence: high
 
+- Claim: The scout consumes WISHLIST.md before free selection.
+  Source: src-003
+  Evidence: OKF 0.2 §5: "before free selection, take the topmost unchecked WISHLIST.md entry; check it off in the same run that covers it... Free-choice selection applies only when the wishlist is empty."
+  Confidence: high
+
+- Claim: Failed sources become structured followups records, never raw stashed documents.
+  Source: src-003
+  Evidence: OKF 0.2 §6 recommendation: "no raw stashing... make failures structured and retryable" — per failure: source id + exact URL, what failed, what was used as fallback, what a retry needs. The weekly librarian consumes exactly this.
+  Confidence: high
+
+- Claim: Every scout run must validate its own output against OKF_SPEC.md before pushing.
+  Source: src-003
+  Evidence: Issue #1 status comment after the 2026-07-04 slay-the-spire run drifted off-spec (46 findings): "have the scout run node scripts/validate-okf.mjs on its own output before pushing, and treat findings as a failed run."
+  Confidence: high
+
 ## Specialist assignment
 
 **The Governor** owns the daily scout function.
@@ -107,6 +129,14 @@ Cron job:
 - Toolsets: `web`, `file`, `terminal`
 - Delivery: origin Telegram thread
 
+## Selection doctrine (amended per OKF 0.2 §5)
+
+1. Take the **topmost unchecked entry in `WISHLIST.md`**. Cover it, and check it off in the same run with a link to the new game dir.
+2. Only when the wishlist is empty: free-choice selection per the README's selection doctrine (accessible official rules, high BGG signal, SomberSoft-relevant mechanics).
+3. Never repeat a game already present unless explicitly updating an older entry.
+
+This turns daily growth from "whatever the scout felt like" into demand-driven coverage: design sessions append requests, the scout drains them top-down.
+
 ## Daily output contract
 
 Each successful scout run writes one game directory:
@@ -126,6 +156,14 @@ Minimum expected files:
 - `reception/reviews.okf.md`
 - `reception/better-if.okf.md`
 - `scout-report.okf.md`
+
+Every doc uses **OKF 0.2 frontmatter exactly as written in `OKF_SPEC.md`** — the spec, not the scout's memory of it, is the output format. In particular: `okf_version: 0.2`, `mechanics` (controlled slugs, identical across the game's docs), `better_if_labels` on reception docs, and `src-NNN` source ids.
+
+Before pushing, the run must:
+
+1. Record every failed source fetch/extraction as a structured `followups:` entry in `scout-report.okf.md` (OKF 0.2 §6) — never stash raw fetched documents in the repo.
+2. Regenerate the corpus index: `node scripts/generate-index.mjs`.
+3. Run `node scripts/validate-okf.mjs` and treat **any finding as a failed run** — fix before pushing.
 
 ## Design implications for SomberSoft
 

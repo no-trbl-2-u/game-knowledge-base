@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: game_index
 game:
   title: "Slay the Spire: The Board Game"
@@ -7,8 +7,10 @@ game:
   bgg_id: 338960
   publisher: "Contention Games"
   year: 2024
+  weight: 2.90
   edition: "base game"
 scope: "base game"
+mechanics: [deck-building, cooperative-game, hand-management, campaign-game, point-to-point-movement, variable-player-powers, solo-solitaire-game]
 sources:
   - id: "src-002"
     title: "Rulebook - Contention Games"

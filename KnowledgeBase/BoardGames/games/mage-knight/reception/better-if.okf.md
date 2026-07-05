@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: better_if
 game:
   title: "Mage Knight Board Game"
@@ -9,6 +9,8 @@ game:
   year: 2011
   edition: "English base game / rules updated March 2012"
 scope: "base game"
+mechanics: [deck-building, hand-management, card-play-conflict-resolution, modular-board, grid-movement, dice-rolling, cooperative-game, solo-solitaire-game, variable-player-powers, campaign-game]
+better_if_labels: [rules-ambiguity, downtime, solo-coop-automation, player-interaction, onboarding, component-clarity, turn-pacing, campaign-progression]
 sources:
   - id: "src-009"
     title: "A Very Great Adventure — Mage Knight Review"

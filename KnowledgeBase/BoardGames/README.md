@@ -25,6 +25,11 @@ Operational record:
 
 - `operations.okf.md` — the active mandate, specialist assignment, cron schedule, and daily output contract.
 
+Retrieval entry points:
+
+- `INDEX.okf.md` — **generated** corpus index (one row per game + mechanics → games table). The first file an agent should read; regenerate with `node scripts/generate-index.mjs`, never hand-edit.
+- `index.html` — the human dashboard twin.
+
 Each run should produce, at minimum:
 
 ```txt
@@ -44,7 +49,9 @@ games/<slug>/
   scout-report.okf.md
 ```
 
-If official rulebooks are unavailable, the scout must say so plainly and use secondary sources only as secondary testimony.
+If official rulebooks are unavailable, the scout must say so plainly, use secondary sources only as secondary testimony, and record each failure as a structured `followups:` entry in `scout-report.okf.md` (see `OKF_SPEC.md`) for the weekly librarian to retry.
+
+Every run ends by regenerating `INDEX.okf.md` (`node scripts/generate-index.mjs`) and running `node scripts/validate-okf.mjs`; any validator finding means the run failed.
 
 ## Source hierarchy
 
@@ -70,7 +77,9 @@ The corpus is for private research and design analysis, not republication of rul
 
 ## Selection doctrine
 
-Prefer games with:
+**Wishlist first:** take the topmost unchecked entry in `WISHLIST.md` (repo root) and check it off in the run that covers it, linking the game dir. Free choice applies only when the wishlist is empty.
+
+When choosing freely, prefer games with:
 
 - accessible official rules;
 - high BGG rank or unusual mechanics;
