@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 266 of first 500 generated cards
+- **Ordinal:** 266 of 1692 generated cards
 - **Source card id:** `867449`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ Whenever you are dealt damage, gain 1 Anger. When you have |#4+[[difficulty]]+[[
 ## Observed keyword / token leads
 
 `Anger`, `difficulty`, `Piercing`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

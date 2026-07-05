@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 182 of first 500 generated cards
+- **Ordinal:** 182 of 1692 generated cards
 - **Source card id:** `548213`
 - **Category:** Action
 - **Type:** Utility
@@ -84,8 +84,3 @@ Gain Bolster each time you take or deal damage this turn.
 ## Observed keyword / token leads
 
 `Bolster`, `Gain Bolster`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

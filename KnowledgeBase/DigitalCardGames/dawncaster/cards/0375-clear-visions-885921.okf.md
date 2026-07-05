@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 375 of first 500 generated cards
+- **Ordinal:** 375 of 1692 generated cards
 - **Source card id:** `885921`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -81,8 +81,3 @@ This combat, conjure a copy of any card you Foretell. Unique.
 ## Observed keyword / token leads
 
 `Foretell`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

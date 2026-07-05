@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 495 of first 500 generated cards
+- **Ordinal:** 495 of 1692 generated cards
 - **Source card id:** `619533`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Your next 2 Ranged Actions deal extra damage equal to the previous damage. Start
 ## Observed keyword / token leads
 
 `Ranged Actions`, `Reload`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

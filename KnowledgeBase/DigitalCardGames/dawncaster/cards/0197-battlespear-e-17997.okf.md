@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 197 of first 500 generated cards
+- **Ordinal:** 197 of 1692 generated cards
 - **Source card id:** `17997`
 - **Category:** Basic Attack
 - **Type:** Divine
@@ -81,8 +81,3 @@ Deal [damage:5] damage. Untempered.
 ## Observed keyword / token leads
 
 `Untempered`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

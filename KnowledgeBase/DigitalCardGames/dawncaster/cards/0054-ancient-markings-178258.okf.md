@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 54 of first 500 generated cards
+- **Ordinal:** 54 of 1692 generated cards
 - **Source card id:** `178258`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Delve and play a Totem.<br>Ancestral: Summon two more random Totems.
 ## Observed keyword / token leads
 
 `Ancestral`, `Delve`, `Summon`, `Totem`, `Totems`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

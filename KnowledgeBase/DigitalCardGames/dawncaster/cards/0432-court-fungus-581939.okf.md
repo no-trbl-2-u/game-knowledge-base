@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 432 of first 500 generated cards
+- **Ordinal:** 432 of 1692 generated cards
 - **Source card id:** `581939`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ The next Court Fungus you draw will cause you to take [[enchantmentStacks+1]] da
 ## Observed keyword / token leads
 
 `Court Fungus`, `enchantmentStacks+1`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

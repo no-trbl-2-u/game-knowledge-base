@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 230 of first 500 generated cards
+- **Ordinal:** 230 of 1692 generated cards
 - **Source card id:** `117435`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Make a Basic Attack. <br>Gain a random Blessing with 2 stacks. Chain.
 ## Observed keyword / token leads
 
 `Basic Attack`, `Blessing`, `Chain`, `Make`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

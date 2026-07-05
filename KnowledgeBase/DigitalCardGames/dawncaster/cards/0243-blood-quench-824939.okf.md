@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 243 of first 500 generated cards
+- **Ordinal:** 243 of 1692 generated cards
 - **Source card id:** `824939`
 - **Category:** Action
 - **Type:** Utility
@@ -84,8 +84,3 @@ If it can be Adapted, add the Draining Adaptation.
 ## Observed keyword / token leads
 
 `Adapted`, `Draining Adaptation`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

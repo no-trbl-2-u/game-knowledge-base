@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 352 of first 500 generated cards
+- **Ordinal:** 352 of 1692 generated cards
 - **Source card id:** `628311`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -81,8 +81,3 @@ At the end of your turn, gain a random Enchantment. Unique.
 ## Observed keyword / token leads
 
 `Enchantment`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

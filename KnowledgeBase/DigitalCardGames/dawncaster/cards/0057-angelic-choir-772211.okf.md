@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 57 of first 500 generated cards
+- **Ordinal:** 57 of 1692 generated cards
 - **Source card id:** `772211`
 - **Category:** Enchantment
 - **Type:** Divine
@@ -84,8 +84,3 @@ This combat, whenever you complete a Performance or Hymn gain 1 HEALTH and HOLY.
 ## Observed keyword / token leads
 
 `HEALTH`, `HOLY`, `Hymn`, `Performance`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

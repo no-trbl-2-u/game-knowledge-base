@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 371 of first 500 generated cards
+- **Ordinal:** 371 of 1692 generated cards
 - **Source card id:** `51635`
 - **Category:** Action
 - **Type:** Melee
@@ -86,8 +86,3 @@ Advantage: Add 3 damage and inflict a Critical Hit.
 ## Observed keyword / token leads
 
 `Add`, `Advantage`, `companionlevel+2`, `Critical Hit`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 340 of first 500 generated cards
+- **Ordinal:** 340 of 1692 generated cards
 - **Source card id:** `232014`
 - **Category:** Path
 - **Type:** Utility
@@ -82,8 +82,3 @@ After you draw 3 additional cards in a turn, reduce the cost of all cards in you
 ## Observed keyword / token leads
 
 `Advance`, `After`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

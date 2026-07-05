@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 355 of first 500 generated cards
+- **Ordinal:** 355 of 1692 generated cards
 - **Source card id:** `18906`
 - **Category:** Action
 - **Type:** Melee
@@ -84,8 +84,3 @@ Deal [damage:3-[[damageBonus]]] damage. <br>This damage is improved by |#[[damag
 ## Observed keyword / token leads
 
 `damageBonus`, `DEX`, `Upgradeable`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

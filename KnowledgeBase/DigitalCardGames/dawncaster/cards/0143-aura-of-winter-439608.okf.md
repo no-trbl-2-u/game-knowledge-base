@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 143 of first 500 generated cards
+- **Ordinal:** 143 of 1692 generated cards
 - **Source card id:** `439608`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, inflict 1 Frozen at the start of your turn. Unique. Memorized.
 ## Observed keyword / token leads
 
 `Frozen`, `Memorized`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

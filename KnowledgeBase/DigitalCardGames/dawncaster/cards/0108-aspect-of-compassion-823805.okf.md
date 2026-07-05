@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 108 of first 500 generated cards
+- **Ordinal:** 108 of 1692 generated cards
 - **Source card id:** `823805`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ Start of Turn<br>Gain 5 HEALTH. Unique.
 ## Observed keyword / token leads
 
 `HEALTH`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

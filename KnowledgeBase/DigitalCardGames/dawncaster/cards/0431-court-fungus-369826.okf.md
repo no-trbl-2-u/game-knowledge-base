@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 431 of first 500 generated cards
+- **Ordinal:** 431 of 1692 generated cards
 - **Source card id:** `369826`
 - **Category:** Action
 - **Type:** Corruption
@@ -83,8 +83,3 @@ On Draw: Take 1 damage for each Court Fungus drawn this combat. Draw a card.
 ## Observed keyword / token leads
 
 `Court Fungus`, `On Draw`, `Take`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

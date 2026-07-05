@@ -52,7 +52,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 93 of first 500 generated cards
+- **Ordinal:** 93 of 1692 generated cards
 - **Source card id:** `953488`
 - **Category:** Action
 - **Type:** Utility
@@ -87,8 +87,3 @@ Make a Basic Attack.<br>Flow ([[actionsPlayed]]/3): Conjure a random Magic Actio
 ## Observed keyword / token leads
 
 `actionsPlayed`, `Basic Attack`, `Conjure`, `Flow`, `Magic Action`, `Make`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

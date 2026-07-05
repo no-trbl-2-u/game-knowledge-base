@@ -52,7 +52,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 8 of first 500 generated cards
+- **Ordinal:** 8 of 1692 generated cards
 - **Source card id:** `235476`
 - **Category:** Action
 - **Type:** Melee
@@ -86,8 +86,3 @@ At [[(areaSpecial)Abyssal Corruption]]/500 Dante, Lord of Despair becomes the fi
 ## Observed keyword / token leads
 
 `(areaSpecial)Abyssal Corruption`, `Abyssal Corruption`, `Dante`, `Despair`, `Increases`, `Lord`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 384 of first 500 generated cards
+- **Ordinal:** 384 of 1692 generated cards
 - **Source card id:** `45713`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Gain Swiftness.<br>Gain 2 Momentum.<br>Reset your Ambush.
 ## Observed keyword / token leads
 
 `Ambush`, `Gain Swiftness`, `Momentum`, `Reset`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

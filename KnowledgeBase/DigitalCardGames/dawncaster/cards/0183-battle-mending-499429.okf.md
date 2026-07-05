@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 183 of first 500 generated cards
+- **Ordinal:** 183 of 1692 generated cards
 - **Source card id:** `499429`
 - **Category:** Action
 - **Type:** Utility
@@ -82,8 +82,3 @@ At the end of turn, gain HEALTH equal to twice the damage taken this turn ([[dam
 ## Observed keyword / token leads
 
 `damageTaken`, `HEALTH`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

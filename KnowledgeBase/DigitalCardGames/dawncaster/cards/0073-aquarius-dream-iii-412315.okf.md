@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 73 of first 500 generated cards
+- **Ordinal:** 73 of 1692 generated cards
 - **Source card id:** `412315`
 - **Category:** Path
 - **Type:** Utility
@@ -84,8 +84,3 @@ After the Tide changes four times, create a Spark of Eternity. Unique.
 ## Observed keyword / token leads
 
 `After`, `Eternity`, `Spark`, `Tide`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

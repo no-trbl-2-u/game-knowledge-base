@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 124 of first 500 generated cards
+- **Ordinal:** 124 of 1692 generated cards
 - **Source card id:** `417583`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ Whenever you inflict a unique Affliction during your turn, draw a card. Unique. 
 ## Observed keyword / token leads
 
 `Affliction`, `Memorized`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

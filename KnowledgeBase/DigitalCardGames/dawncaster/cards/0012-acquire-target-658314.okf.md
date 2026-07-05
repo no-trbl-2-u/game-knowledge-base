@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 12 of first 500 generated cards
+- **Ordinal:** 12 of 1692 generated cards
 - **Source card id:** `658314`
 - **Category:** Action
 - **Type:** Utility
@@ -82,8 +82,3 @@ Deal 1 extra damage with your next attack. Improves by 1 at the start of your tu
 ## Observed keyword / token leads
 
 `Fades`, `Improves`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

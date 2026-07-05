@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 423 of first 500 generated cards
+- **Ordinal:** 423 of 1692 generated cards
 - **Source card id:** `948538`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Inflict 4 Poison.<br>Ancestral: Repeat this for every 10 of your Souls.
 ## Observed keyword / token leads
 
 `Ancestral`, `Inflict`, `Poison`, `Repeat`, `Souls`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

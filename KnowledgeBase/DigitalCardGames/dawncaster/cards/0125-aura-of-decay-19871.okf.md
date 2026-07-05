@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 125 of first 500 generated cards
+- **Ordinal:** 125 of 1692 generated cards
 - **Source card id:** `19871`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -81,8 +81,3 @@ At the start of your turn, inflict a stack of 3 random Afflictions to yourself a
 ## Observed keyword / token leads
 
 `Afflictions`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

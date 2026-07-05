@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 75 of first 500 generated cards
+- **Ordinal:** 75 of 1692 generated cards
 - **Source card id:** `898810`
 - **Category:** Action
 - **Type:** Utility
@@ -82,8 +82,3 @@ Discard your hand then summon an equal amount of Clones and gain 2 Barrier for e
 ## Observed keyword / token leads
 
 `Barrier`, `Clones`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

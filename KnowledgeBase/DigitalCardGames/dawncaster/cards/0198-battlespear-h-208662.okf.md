@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 198 of first 500 generated cards
+- **Ordinal:** 198 of 1692 generated cards
 - **Source card id:** `208662`
 - **Category:** Basic Attack
 - **Type:** Divine
@@ -84,8 +84,3 @@ Deal [damage:5] damage. <br>Critical Hit if HOLY was spent. Untempered.
 ## Observed keyword / token leads
 
 `Critical Hit`, `HOLY`, `Untempered`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

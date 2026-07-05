@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 327 of first 500 generated cards
+- **Ordinal:** 327 of 1692 generated cards
 - **Source card id:** `201882`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -84,8 +84,3 @@ Protect the caravan until you reach Brightcandle to earn a reward! Current Healt
 ## Observed keyword / token leads
 
 `areaSpecial`, `Brightcandle`, `Current Health`, `Protect`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

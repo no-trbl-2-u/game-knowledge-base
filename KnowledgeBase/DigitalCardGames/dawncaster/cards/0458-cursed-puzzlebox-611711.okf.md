@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 458 of first 500 generated cards
+- **Ordinal:** 458 of 1692 generated cards
 - **Source card id:** `611711`
 - **Category:** Artifact
 - **Type:** Utility
@@ -83,8 +83,3 @@ Swap the cost of the Puzzlebox with a card in hand. It becomes Cursed. Unique.
 ## Observed keyword / token leads
 
 `Cursed`, `Puzzlebox`, `Swap`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 118 of first 500 generated cards
+- **Ordinal:** 118 of 1692 generated cards
 - **Source card id:** `617523`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -85,8 +85,3 @@ Start of Turn: Inflict 1 Decay for each Court Presence ([[courtPresence]]). Uniq
 ## Observed keyword / token leads
 
 `Court Presence`, `courtPresence`, `Decay`, `Inflict`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

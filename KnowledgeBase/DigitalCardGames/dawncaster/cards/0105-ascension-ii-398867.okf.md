@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 105 of first 500 generated cards
+- **Ordinal:** 105 of 1692 generated cards
 - **Source card id:** `398867`
 - **Category:** Form
 - **Type:** Divine
@@ -81,8 +81,3 @@ When you deal damage, inflict an equal amount of Burning.
 ## Observed keyword / token leads
 
 `Burning`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

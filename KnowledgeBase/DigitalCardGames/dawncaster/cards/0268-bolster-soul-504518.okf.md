@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 268 of first 500 generated cards
+- **Ordinal:** 268 of 1692 generated cards
 - **Source card id:** `504518`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Remove VOIDVOIDVOIDVOID:<br>Gain HOLY and draw 2 cards.
 ## Observed keyword / token leads
 
 `Gain HOLY`, `Remove VOIDVOIDVOIDVOID`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

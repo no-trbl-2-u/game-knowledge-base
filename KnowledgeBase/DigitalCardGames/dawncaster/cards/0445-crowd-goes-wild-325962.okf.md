@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 445 of first 500 generated cards
+- **Ordinal:** 445 of 1692 generated cards
 - **Source card id:** `325962`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ After finishing a Performance, conjure a random item. Unique.
 ## Observed keyword / token leads
 
 `After`, `Performance`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

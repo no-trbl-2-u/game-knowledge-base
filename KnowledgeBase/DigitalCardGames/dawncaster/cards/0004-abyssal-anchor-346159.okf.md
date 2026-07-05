@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 4 of first 500 generated cards
+- **Ordinal:** 4 of 1692 generated cards
 - **Source card id:** `346159`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ Whenever you gain HEALTH over your Maximum, gain an equal amount of Anger. Uniqu
 ## Observed keyword / token leads
 
 `Anger`, `HEALTH`, `Maximum`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

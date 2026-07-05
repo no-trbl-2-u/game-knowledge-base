@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 341 of first 500 generated cards
+- **Ordinal:** 341 of 1692 generated cards
 - **Source card id:** `550239`
 - **Category:** Path
 - **Type:** Utility
@@ -83,8 +83,3 @@ After you draw 10 additional cards, gain Way of the Wise Unique.
 ## Observed keyword / token leads
 
 `After`, `Way`, `Wise Unique`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

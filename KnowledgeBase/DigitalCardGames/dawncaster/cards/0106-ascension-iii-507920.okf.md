@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 106 of first 500 generated cards
+- **Ordinal:** 106 of 1692 generated cards
 - **Source card id:** `507920`
 - **Category:** Form
 - **Type:** Divine
@@ -85,8 +85,3 @@ At the start of your turn, conjure a free Solar Lance. <br>On Death: heal up to 
 ## Observed keyword / token leads
 
 `Ascension`, `HEALTH`, `On Death`, `Solar Lance`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

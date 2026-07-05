@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 78 of first 500 generated cards
+- **Ordinal:** 78 of 1692 generated cards
 - **Source card id:** `44101`
 - **Category:** Action
 - **Type:** Utility
@@ -82,8 +82,3 @@ Add 2 Spider Broodlings to your foe’s discard pile. Spider Broodlings deal 1 a
 ## Observed keyword / token leads
 
 `Add`, `Spider Broodlings`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

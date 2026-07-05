@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 165 of first 500 generated cards
+- **Ordinal:** 165 of 1692 generated cards
 - **Source card id:** `663780`
 - **Category:** Artifact
 - **Type:** Utility
@@ -84,8 +84,3 @@ Start of Turn:<br>Gain INT and 1 Focus. Unique.
 ## Observed keyword / token leads
 
 `Focus`, `Gain INT`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

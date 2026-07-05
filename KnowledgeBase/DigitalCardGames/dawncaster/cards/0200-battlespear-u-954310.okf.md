@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 200 of first 500 generated cards
+- **Ordinal:** 200 of 1692 generated cards
 - **Source card id:** `954310`
 - **Category:** Basic Attack
 - **Type:** Divine
@@ -84,8 +84,3 @@ Deal [damage:5] damage.<br>On Hit: Upgrade this by 5. Untempered.
 ## Observed keyword / token leads
 
 `On Hit`, `Untempered`, `Upgrade`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

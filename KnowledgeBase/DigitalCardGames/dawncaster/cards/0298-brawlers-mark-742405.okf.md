@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 298 of first 500 generated cards
+- **Ordinal:** 298 of 1692 generated cards
 - **Source card id:** `742405`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, whenever you inflict a Critical Hit, gain Armor equal to the damage
 ## Observed keyword / token leads
 
 `Armor`, `Critical Hit`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

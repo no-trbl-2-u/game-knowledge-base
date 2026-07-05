@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 472 of first 500 generated cards
+- **Ordinal:** 472 of 1692 generated cards
 - **Source card id:** `848150`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ Execute: Gain 5 Maximum Health if your current foe is a Boss. Unique.
 ## Observed keyword / token leads
 
 `Boss`, `Execute`, `Maximum Health`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

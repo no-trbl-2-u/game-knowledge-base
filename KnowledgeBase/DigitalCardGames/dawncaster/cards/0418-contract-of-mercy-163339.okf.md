@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 418 of first 500 generated cards
+- **Ordinal:** 418 of 1692 generated cards
 - **Source card id:** `163339`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ Execute: Gain 10 Souls if your foe dies while affected by 3 or more Afflictions.
 ## Observed keyword / token leads
 
 `Afflictions`, `Execute`, `Souls`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

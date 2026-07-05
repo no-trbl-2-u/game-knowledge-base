@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 101 of first 500 generated cards
+- **Ordinal:** 101 of 1692 generated cards
 - **Source card id:** `211470`
 - **Category:** Path
 - **Type:** Utility
@@ -84,8 +84,3 @@ After you Foretell 12 cards in a single turn, gain 20 Barrier. Advance. Unique.
 ## Observed keyword / token leads
 
 `Advance`, `After`, `Barrier`, `Foretell`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

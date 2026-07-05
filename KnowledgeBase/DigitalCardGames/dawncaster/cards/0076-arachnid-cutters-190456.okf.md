@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 76 of first 500 generated cards
+- **Ordinal:** 76 of 1692 generated cards
 - **Source card id:** `190456`
 - **Category:** Action
 - **Type:** Melee
@@ -83,8 +83,3 @@ Deal [damage:1] damage twice.<br>If Wall Climb is not active, attack two more ti
 ## Observed keyword / token leads
 
 `Climb`, `If Wall`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 116 of first 500 generated cards
+- **Ordinal:** 116 of 1692 generated cards
 - **Source card id:** `456437`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Foretell [[foretell+3]] and draw a card. Conjure Stardarts equal to the cost of 
 ## Observed keyword / token leads
 
 `Conjure Stardarts`, `Foretell`, `foretell+3`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

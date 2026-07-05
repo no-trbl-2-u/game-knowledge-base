@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 177 of first 500 generated cards
+- **Ordinal:** 177 of 1692 generated cards
 - **Source card id:** `661847`
 - **Category:** Action
 - **Type:** Divine
@@ -83,8 +83,3 @@ Inflict 3 Bleeding <br>Gain 3 Bleeding.
 ## Observed keyword / token leads
 
 `Bleeding`, `Inflict`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

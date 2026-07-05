@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 142 of first 500 generated cards
+- **Ordinal:** 142 of 1692 generated cards
 - **Source card id:** `448711`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, double the amount of Poison on the enemy at the start of your turn.
 ## Observed keyword / token leads
 
 `Memorized`, `Poison`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

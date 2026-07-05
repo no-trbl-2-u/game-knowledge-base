@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 221 of first 500 generated cards
+- **Ordinal:** 221 of 1692 generated cards
 - **Source card id:** `734395`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Gain 12 Armor.<br>Gain 5 Stagger.
 ## Observed keyword / token leads
 
 `Armor`, `Stagger`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

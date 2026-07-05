@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 346 of first 500 generated cards
+- **Ordinal:** 346 of 1692 generated cards
 - **Source card id:** `86560`
 - **Category:** Action
 - **Type:** Magic
@@ -83,8 +83,3 @@ Deal [damage:1] to [damage:6] damage.<br>Gain Chain equal to the damage dealt. C
 ## Observed keyword / token leads
 
 `Chain`, `Gain Chain`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

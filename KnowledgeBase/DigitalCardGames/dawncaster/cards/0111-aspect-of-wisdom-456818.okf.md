@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 111 of first 500 generated cards
+- **Ordinal:** 111 of 1692 generated cards
 - **Source card id:** `456818`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -84,8 +84,3 @@ Start of Turn.<br>Conjure a random Virtue. Unique.
 ## Observed keyword / token leads
 
 `Conjure`, `Turn`, `Virtue`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

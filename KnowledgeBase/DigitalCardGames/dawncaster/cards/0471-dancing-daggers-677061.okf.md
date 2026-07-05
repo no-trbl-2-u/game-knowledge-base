@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 471 of first 500 generated cards
+- **Ordinal:** 471 of 1692 generated cards
 - **Source card id:** `677061`
 - **Category:** Action
 - **Type:** Utility
@@ -84,8 +84,3 @@ Draw a card.<br>This turn, while Performing Perform 1 after making a Basic Attac
 ## Observed keyword / token leads
 
 `Basic Attack`, `Lasting`, `Performing Perform`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

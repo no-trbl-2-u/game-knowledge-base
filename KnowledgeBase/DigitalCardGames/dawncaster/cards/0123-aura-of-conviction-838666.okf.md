@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 123 of first 500 generated cards
+- **Ordinal:** 123 of 1692 generated cards
 - **Source card id:** `838666`
 - **Category:** Enchantment
 - **Type:** Divine
@@ -87,8 +87,3 @@ This combat, Charmed and Burning you inflict is increased by your Zeal. Unique. 
 ## Observed keyword / token leads
 
 `Burning`, `Charmed`, `Memorized`, `Turn`, `Zeal`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

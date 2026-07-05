@@ -52,7 +52,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 113 of first 500 generated cards
+- **Ordinal:** 113 of 1692 generated cards
 - **Source card id:** `600185`
 - **Category:** Action
 - **Type:** Melee
@@ -87,8 +87,3 @@ Deal [damage:4] damage. <br>On Hit: Slay your foe if their HEALTH is |#[[siniste
 ## Observed keyword / token leads
 
 `Each`, `HEALTH`, `On Hit`, `sinister`, `Sinister`, `Slay`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

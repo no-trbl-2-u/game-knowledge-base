@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 7 of first 500 generated cards
+- **Ordinal:** 7 of 1692 generated cards
 - **Source card id:** `931847`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Inflict 1 Bane.<br>Convert a Blessing into a random Affliction.
 ## Observed keyword / token leads
 
 `Affliction`, `Bane`, `Blessing`, `Convert`, `Inflict`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -1,0 +1,83 @@
+---
+okf_version: 0.2
+type: card_record
+card:
+  game: "Dawncaster"
+  source_id: 79545
+  name: "Tinkerer's Toolbox"
+  ordinal: 1553
+  slug: "tinkerer-s-toolbox"
+  category: "Action"
+  type: "Utility"
+  rarity: "Legendary"
+  expansion: "Core Extended"
+  color: "Brown"
+  cost:
+  dex: 0
+  int: 0
+  str: 0
+  holy: 0
+  neutral: 1
+  dexint: 0
+  dexstr: 0
+  intstr: 0
+  blood: 0
+observed_terms:
+  - "Otherwise"
+sources:
+  - id: "src-001"
+    title: "Neurrone Dawncaster SQLite card database"
+    url: "https://neurrone.com/dawncaster/dawncaster-cards.db"
+    kind: other
+    provenance: secondary
+    retrieved_at: "2026-07-05"
+    notes: "Local harvested copy: /root/Workspace/reports/dawncaster-card-library/neurrone-dawncaster-cards.db"
+  - id: "src-002"
+    title: "Blightbane Dawncaster card page"
+    url: "https://blightbane.io/card/Tinkerer%27s_Toolbox"
+    kind: other
+    provenance: community
+    retrieved_at: "2026-07-05"
+    notes: "Per-card page inferred from the shared card id/name space; verify manually before treating as official wording."
+confidence: medium
+status: draft
+---
+
+# Tinkerer's Toolbox
+
+## Card identity
+
+- **Ordinal:** 1553 of 1692 generated cards
+- **Source card id:** `79545`
+- **Category:** Action
+- **Type:** Utility
+- **Rarity:** Legendary
+- **Expansion:** Core Extended
+- **Color:** Brown
+- **Cost summary:** neutral=1
+
+## Source-backed facts
+
+- Claim: `Tinkerer's Toolbox` appears in the Neurrone Dawncaster SQLite card table with id `79545`.
+  Source: src-001
+  Evidence: Joined row from `cards`, `costs`, `categories`, `types`, `rarities`, `colors`, and `expansions`.
+  Confidence: high
+
+- Claim: The card's raw rules text in the SQLite mirror is preserved below.
+  Source: src-001
+  Evidence: `description_html` column copied verbatim from the local DB.
+  Confidence: high
+
+## Rules text
+
+If this has any keywords other than Unique, transfer them to a card in hand. Otherwise, this card gains a random keyword. Unique.
+
+## Raw rules HTML
+
+```html
+If this has any keywords other than Unique, transfer them to a card in hand. Otherwise, this card gains a random keyword. Unique.
+```
+
+## Observed keyword / token leads
+
+`Otherwise`

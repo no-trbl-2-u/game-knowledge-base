@@ -53,7 +53,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 330 of first 500 generated cards
+- **Ordinal:** 330 of 1692 generated cards
 - **Source card id:** `411605`
 - **Category:** Equipment
 - **Type:** Utility
@@ -87,8 +87,3 @@ Use: Delve a Totem. Deplete: Trigger all your Start of Turn effects. Durability 
 ## Observed keyword / token leads
 
 `Delve`, `Deplete`, `Durability`, `Totem`, `Trigger`, `Turn`, `Use`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

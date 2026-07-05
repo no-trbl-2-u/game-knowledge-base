@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 144 of first 500 generated cards
+- **Ordinal:** 144 of 1692 generated cards
 - **Source card id:** `327485`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -86,8 +86,3 @@ Start of Turn:<br>Convert a random <br>Affliction to Zeal. Unique.
 ## Observed keyword / token leads
 
 `Affliction`, `Convert`, `Turn`, `Zeal`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

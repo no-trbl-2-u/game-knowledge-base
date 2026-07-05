@@ -24,8 +24,8 @@ card:
   blood: 0
 observed_terms:
   - "Grounded"
-  - "HEALTH"
   - "Health"
+  - "HEALTH"
   - "Set"
 sources:
   - id: "src-001"
@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 377 of first 500 generated cards
+- **Ordinal:** 377 of 1692 generated cards
 - **Source card id:** `872858`
 - **Category:** Action
 - **Type:** Melee
@@ -83,9 +83,4 @@ Set the enemy Health to half their current HEALTH. Grounded.
 
 ## Observed keyword / token leads
 
-`Grounded`, `HEALTH`, `Health`, `Set`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.
+`Grounded`, `Health`, `HEALTH`, `Set`

@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 421 of first 500 generated cards
+- **Ordinal:** 421 of 1692 generated cards
 - **Source card id:** `108922`
 - **Category:** Action
 - **Type:** Melee
@@ -88,8 +88,3 @@ a free Command.
 ## Observed keyword / token leads
 
 `Advantage`, `Command`, `Flanking`, `Grant`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

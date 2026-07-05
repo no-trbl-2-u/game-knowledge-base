@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 79 of first 500 generated cards
+- **Ordinal:** 79 of 1692 generated cards
 - **Source card id:** `5158902`
 - **Category:** Basic Attack
 - **Type:** Melee
@@ -84,8 +84,3 @@ Increase the cost of all cards in hand by NEUTRAL.
 ## Observed keyword / token leads
 
 `Increase`, `NEUTRAL`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

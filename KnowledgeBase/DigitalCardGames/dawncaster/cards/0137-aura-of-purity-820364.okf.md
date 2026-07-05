@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 137 of first 500 generated cards
+- **Ordinal:** 137 of 1692 generated cards
 - **Source card id:** `820364`
 - **Category:** Enchantment
 - **Type:** Divine
@@ -82,8 +82,3 @@ This combat, bury a card and gain 2 Zeal at the start of your turn. Unique. Memo
 ## Observed keyword / token leads
 
 `Memorized`, `Zeal`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

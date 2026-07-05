@@ -53,7 +53,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 56 of first 500 generated cards
+- **Ordinal:** 56 of 1692 generated cards
 - **Source card id:** `813243`
 - **Category:** Artifact
 - **Type:** Utility
@@ -89,8 +89,3 @@ On Draw: Gain [[damageBonus]] Slow<br>and upgrade this by 1. <br>One Use: The ne
 ## Observed keyword / token leads
 
 `Basic Attack`, `damageBonus`, `Grounded`, `Heavy`, `On Draw`, `One Use`, `Slow`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

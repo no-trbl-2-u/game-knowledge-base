@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 37 of first 500 generated cards
+- **Ordinal:** 37 of 1692 generated cards
 - **Source card id:** `143011`
 - **Category:** Action
 - **Type:** Melee
@@ -82,8 +82,3 @@ Deal [damage:8] damage. <br>Gain 1 Impervious.
 ## Observed keyword / token leads
 
 `Impervious`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

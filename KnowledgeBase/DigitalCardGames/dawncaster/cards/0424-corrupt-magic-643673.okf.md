@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 424 of first 500 generated cards
+- **Ordinal:** 424 of 1692 generated cards
 - **Source card id:** `643673`
 - **Category:** Action
 - **Type:** Corruption
@@ -83,8 +83,3 @@ Convert a foe's Blessing into a random Affliction.
 ## Observed keyword / token leads
 
 `Affliction`, `Blessing`, `Convert`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

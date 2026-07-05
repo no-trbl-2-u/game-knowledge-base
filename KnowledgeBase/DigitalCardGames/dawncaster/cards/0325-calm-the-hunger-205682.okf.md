@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 325 of first 500 generated cards
+- **Ordinal:** 325 of 1692 generated cards
 - **Source card id:** `205682`
 - **Category:** Action
 - **Type:** Magic
@@ -88,8 +88,3 @@ Deal [damage:5] damage.<br>Remove VOIDVOID: Gain 1 Anger.<br>Remove VOIDVOIDVOID
 ## Observed keyword / token leads
 
 `Anger`, `Lifedrain`, `Remove VOIDVOID`, `Remove VOIDVOIDVOID`, `Remove VOIDVOIDVOIDVOID`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

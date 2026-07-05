@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 231 of first 500 generated cards
+- **Ordinal:** 231 of 1692 generated cards
 - **Source card id:** `911226`
 - **Category:** Action
 - **Type:** Divine
@@ -82,8 +82,3 @@ Gain and inflict a random Affliction with [[chapter]] stacks.
 ## Observed keyword / token leads
 
 `Affliction`, `chapter`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 383 of first 500 generated cards
+- **Ordinal:** 383 of 1692 generated cards
 - **Source card id:** `138741`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Gain 1 Ferocity.<br>Double your Ferocity while in Darkness.<br>Darkness 7.
 ## Observed keyword / token leads
 
 `Darkness`, `Double`, `Ferocity`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

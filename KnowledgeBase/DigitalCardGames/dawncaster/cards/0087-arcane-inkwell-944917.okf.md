@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 87 of first 500 generated cards
+- **Ordinal:** 87 of 1692 generated cards
 - **Source card id:** `944917`
 - **Category:** Item
 - **Type:** Utility
@@ -83,8 +83,3 @@ One Use: Delve a Mergecraft card and add it to your deck
 ## Observed keyword / token leads
 
 `Delve`, `Mergecraft`, `One Use`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

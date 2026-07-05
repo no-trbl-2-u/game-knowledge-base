@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 339 of first 500 generated cards
+- **Ordinal:** 339 of 1692 generated cards
 - **Source card id:** `362272`
 - **Category:** Path
 - **Type:** Utility
@@ -83,8 +83,3 @@ After you draw 3 additional cards in a turn, gain 10 Barrier and Advance. Unique
 ## Observed keyword / token leads
 
 `Advance`, `After`, `Barrier`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

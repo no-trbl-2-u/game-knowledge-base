@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 134 of first 500 generated cards
+- **Ordinal:** 134 of 1692 generated cards
 - **Source card id:** `691913`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, conjure a copy of any non-conjured Mantra you play. Unique. Memoriz
 ## Observed keyword / token leads
 
 `Mantra`, `Memorized`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

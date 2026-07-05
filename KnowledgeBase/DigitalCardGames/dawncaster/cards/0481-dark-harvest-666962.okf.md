@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 481 of first 500 generated cards
+- **Ordinal:** 481 of 1692 generated cards
 - **Source card id:** `666962`
 - **Category:** Action
 - **Type:** Corruption
@@ -86,8 +86,3 @@ Requires an Effigy<br>Gain 5% of your current Maximum HEALTH as Souls ([[myMaxHe
 ## Observed keyword / token leads
 
 `Effigy`, `Maximum HEALTH`, `myMaxHealth/20`, `Requires`, `Souls`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

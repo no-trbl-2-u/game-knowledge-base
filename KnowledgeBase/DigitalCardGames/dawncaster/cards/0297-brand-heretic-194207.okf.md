@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 297 of first 500 generated cards
+- **Ordinal:** 297 of 1692 generated cards
 - **Source card id:** `194207`
 - **Category:** Action
 - **Type:** Divine
@@ -83,8 +83,3 @@ Deal [damage:5] damage.<br>Frenzy: The target is considered a Demon for the rema
 ## Observed keyword / token leads
 
 `Demon`, `Frenzy`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

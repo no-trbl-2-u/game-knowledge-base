@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 81 of first 500 generated cards
+- **Ordinal:** 81 of 1692 generated cards
 - **Source card id:** `253781`
 - **Category:** Item
 - **Type:** Utility
@@ -85,8 +85,3 @@ One Use:<br>Add any Basic Attack <br>to your deck.
 ## Observed keyword / token leads
 
 `Add`, `Basic Attack`, `One Use`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

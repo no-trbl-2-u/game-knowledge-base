@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 195 of first 500 generated cards
+- **Ordinal:** 195 of 1692 generated cards
 - **Source card id:** `121918`
 - **Category:** Basic Attack
 - **Type:** Divine
@@ -85,8 +85,3 @@ Deal [damage:5] damage.<br>Crushing: Interrupt and Gain HOLY. Untempered.
 ## Observed keyword / token leads
 
 `Crushing`, `Gain HOLY`, `Interrupt`, `Untempered`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

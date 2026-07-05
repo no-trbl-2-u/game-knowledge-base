@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 427 of first 500 generated cards
+- **Ordinal:** 427 of 1692 generated cards
 - **Source card id:** `223049`
 - **Category:** Action
 - **Type:** Utility
@@ -81,8 +81,3 @@ Shuffle your discard pile into your deck, then draw a card.
 ## Observed keyword / token leads
 
 `Shuffle`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 397 of first 500 generated cards
+- **Ordinal:** 397 of 1692 generated cards
 - **Source card id:** `707474`
 - **Category:** Action
 - **Type:** Melee
@@ -85,8 +85,3 @@ Start of Turn: Adapt this. Persistent.
 ## Observed keyword / token leads
 
 `Adapt`, `Persistent`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

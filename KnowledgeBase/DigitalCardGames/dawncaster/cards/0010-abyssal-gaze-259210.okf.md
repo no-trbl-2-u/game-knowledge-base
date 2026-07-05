@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 10 of first 500 generated cards
+- **Ordinal:** 10 of 1692 generated cards
 - **Source card id:** `259210`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Inflict 1 Weakness.<br>Add 1 stack to your foe's Dark Embrace.
 ## Observed keyword / token leads
 
 `Add`, `Dark Embrace`, `Inflict`, `Weakness`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

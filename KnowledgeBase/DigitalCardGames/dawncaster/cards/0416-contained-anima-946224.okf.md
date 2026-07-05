@@ -52,7 +52,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 416 of first 500 generated cards
+- **Ordinal:** 416 of 1692 generated cards
 - **Source card id:** `946224`
 - **Category:** Artifact
 - **Type:** Utility
@@ -86,8 +86,3 @@ One Use: Gain |#[[corruptionCards]]*3#| Maximum Health. Improves for each Corrup
 ## Observed keyword / token leads
 
 `Corruption`, `corruptionCards`, `Grounded`, `Improves`, `Maximum Health`, `One Use`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

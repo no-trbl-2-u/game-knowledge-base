@@ -52,7 +52,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 136 of first 500 generated cards
+- **Ordinal:** 136 of 1692 generated cards
 - **Source card id:** `636398`
 - **Category:** Enchantment
 - **Type:** Divine
@@ -88,8 +88,3 @@ Inflict 1 Charmed. Increases by 1 whenever you spend HOLY. Unique. Memorized.
 ## Observed keyword / token leads
 
 `Charmed`, `HOLY`, `Increases`, `Inflict`, `Memorized`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

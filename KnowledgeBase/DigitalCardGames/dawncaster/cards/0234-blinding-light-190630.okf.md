@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 234 of first 500 generated cards
+- **Ordinal:** 234 of 1692 generated cards
 - **Source card id:** `190630`
 - **Category:** Action
 - **Type:** Divine
@@ -84,8 +84,3 @@ Deal 3 damage for every active enchantment and Blessing on the target.<br>Inflic
 ## Observed keyword / token leads
 
 `Blessing`, `Inflict`, `Jinxed`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

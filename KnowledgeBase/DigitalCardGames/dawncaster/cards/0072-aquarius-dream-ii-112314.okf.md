@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 72 of first 500 generated cards
+- **Ordinal:** 72 of 1692 generated cards
 - **Source card id:** `112314`
 - **Category:** Path
 - **Type:** Utility
@@ -83,8 +83,3 @@ After the Tide changes three times, gain an extra turn and Advance. Unique.
 ## Observed keyword / token leads
 
 `Advance`, `After`, `Tide`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

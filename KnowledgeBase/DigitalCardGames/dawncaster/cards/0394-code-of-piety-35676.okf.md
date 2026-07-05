@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 394 of first 500 generated cards
+- **Ordinal:** 394 of 1692 generated cards
 - **Source card id:** `35676`
 - **Category:** Code
 - **Type:** Divine
@@ -85,8 +85,3 @@ One of your Blessings carries over to next combat. Code: You recruited Viola Sky
 ## Observed keyword / token leads
 
 `Blessings`, `Code`, `Grounded`, `One`, `Viola Skysworn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

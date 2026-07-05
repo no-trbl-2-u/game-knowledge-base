@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 321 of first 500 generated cards
+- **Ordinal:** 321 of 1692 generated cards
 - **Source card id:** `156749`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ At the end of your turn inflict Doom for each card you've Foretold. Unique.
 ## Observed keyword / token leads
 
 `Doom`, `Foretold`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

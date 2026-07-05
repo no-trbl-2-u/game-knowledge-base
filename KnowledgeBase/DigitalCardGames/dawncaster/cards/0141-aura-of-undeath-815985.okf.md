@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 141 of first 500 generated cards
+- **Ordinal:** 141 of 1692 generated cards
 - **Source card id:** `815985`
 - **Category:** Action
 - **Type:** Utility
@@ -81,8 +81,3 @@ At the start of your foe’s turn they discard a card and conjure a Terror.
 ## Observed keyword / token leads
 
 `Terror`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

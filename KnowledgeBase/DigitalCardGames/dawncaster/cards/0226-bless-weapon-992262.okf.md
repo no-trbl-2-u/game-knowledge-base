@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 226 of first 500 generated cards
+- **Ordinal:** 226 of 1692 generated cards
 - **Source card id:** `992262`
 - **Category:** Action
 - **Type:** Divine
@@ -85,8 +85,3 @@ This turn, whenever <br>you play a Basic Attack gain 1 HEALTH and HOLY. Lasting.
 ## Observed keyword / token leads
 
 `Basic Attack`, `HEALTH`, `HOLY`, `Lasting`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

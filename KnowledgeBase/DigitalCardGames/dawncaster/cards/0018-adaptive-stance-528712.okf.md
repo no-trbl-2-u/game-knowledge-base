@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 18 of first 500 generated cards
+- **Ordinal:** 18 of 1692 generated cards
 - **Source card id:** `528712`
 - **Category:** Form
 - **Type:** Utility
@@ -84,8 +84,3 @@ Cards deal additional damage for each of its Adaptation slots. You are Immune to
 ## Observed keyword / token leads
 
 `Adaptation`, `Cards`, `Disarmed`, `Immune`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 152 of first 500 generated cards
+- **Ordinal:** 152 of 1692 generated cards
 - **Source card id:** `951235`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Add an Adaptation Slot to all Melee actions in your deck for the remainder of co
 ## Observed keyword / token leads
 
 `Adaptation Slot`, `Add`, `Melee`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

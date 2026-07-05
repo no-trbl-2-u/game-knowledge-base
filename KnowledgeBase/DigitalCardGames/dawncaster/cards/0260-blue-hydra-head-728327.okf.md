@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 260 of first 500 generated cards
+- **Ordinal:** 260 of 1692 generated cards
 - **Source card id:** `728327`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Bury this card.<br>Discard: Your foe regrows this Head.
 ## Observed keyword / token leads
 
 `Bury`, `Head`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

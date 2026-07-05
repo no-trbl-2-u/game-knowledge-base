@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 392 of first 500 generated cards
+- **Ordinal:** 392 of 1692 generated cards
 - **Source card id:** `362876`
 - **Category:** Code
 - **Type:** Divine
@@ -85,8 +85,3 @@ Ascend at the beginning of the round.<br>Code: Your deck contains only Divine ac
 ## Observed keyword / token leads
 
 `Ascend`, `Code`, `Divine`, `Grounded`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

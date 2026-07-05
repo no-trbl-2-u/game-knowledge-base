@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 233 of first 500 generated cards
+- **Ordinal:** 233 of 1692 generated cards
 - **Source card id:** `861551`
 - **Category:** Action
 - **Type:** Melee
@@ -84,8 +84,3 @@ Deal [damage:5] damage.<br>On Hit: Inflict 5 Poison.
 ## Observed keyword / token leads
 
 `Inflict`, `On Hit`, `Poison`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

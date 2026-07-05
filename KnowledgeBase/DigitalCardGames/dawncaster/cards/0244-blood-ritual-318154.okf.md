@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 244 of first 500 generated cards
+- **Ordinal:** 244 of 1692 generated cards
 - **Source card id:** `318154`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Inflict 3 Bleeding. <br>Ancestral: Return a random card from your discard pile t
 ## Observed keyword / token leads
 
 `Ancestral`, `Bleeding`, `Charges`, `Inflict`, `Return`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

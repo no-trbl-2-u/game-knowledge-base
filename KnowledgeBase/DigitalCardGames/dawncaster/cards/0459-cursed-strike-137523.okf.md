@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 459 of first 500 generated cards
+- **Ordinal:** 459 of 1692 generated cards
 - **Source card id:** `137523`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Make a Basic Attack.<br>Inflict a Random Affliction with 3 stacks.
 ## Observed keyword / token leads
 
 `Basic Attack`, `Inflict`, `Make`, `Random Affliction`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

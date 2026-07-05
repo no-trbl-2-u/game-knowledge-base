@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 121 of first 500 generated cards
+- **Ordinal:** 121 of 1692 generated cards
 - **Source card id:** `885764`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ At the start of your turn, inflict [[enchantmentStacks]] Poison then increase th
 ## Observed keyword / token leads
 
 `enchantmentStacks`, `Poison`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

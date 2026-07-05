@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 338 of first 500 generated cards
+- **Ordinal:** 338 of 1692 generated cards
 - **Source card id:** `79122`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Bury a card in your deck, then gain Zeal and HEALTH equal to twice its cost.
 ## Observed keyword / token leads
 
 `Bury`, `HEALTH`, `Zeal`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

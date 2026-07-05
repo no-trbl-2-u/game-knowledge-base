@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 389 of first 500 generated cards
+- **Ordinal:** 389 of 1692 generated cards
 - **Source card id:** `519620`
 - **Category:** Code
 - **Type:** Utility
@@ -87,8 +87,3 @@ Code: your deck has 30 or more Adaptation slots across all cards ([[totalAdaptat
 ## Observed keyword / token leads
 
 `Adapt`, `Adaptation`, `Code`, `Grounded`, `totalAdaptationSlots`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

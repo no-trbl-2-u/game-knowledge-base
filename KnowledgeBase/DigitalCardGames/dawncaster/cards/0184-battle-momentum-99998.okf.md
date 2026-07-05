@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 184 of first 500 generated cards
+- **Ordinal:** 184 of 1692 generated cards
 - **Source card id:** `99998`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ Foes gain [[areaSpecial]] energy at the start of their turn. Unique.
 ## Observed keyword / token leads
 
 `areaSpecial`, `Foes`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 146 of first 500 generated cards
+- **Ordinal:** 146 of 1692 generated cards
 - **Source card id:** `1561`
 - **Category:** Artifact
 - **Type:** Utility
@@ -81,8 +81,3 @@ The Prism appears to store spent energy and uses it in unexpected ways. Unique.
 ## Observed keyword / token leads
 
 `The Prism`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

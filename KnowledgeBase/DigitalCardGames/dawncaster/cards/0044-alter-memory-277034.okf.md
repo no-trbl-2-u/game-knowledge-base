@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 44 of first 500 generated cards
+- **Ordinal:** 44 of 1692 generated cards
 - **Source card id:** `277034`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Choose a card in your deck. If it has Memorized, destroy it. If it does not, add
 ## Observed keyword / token leads
 
 `Charges`, `Choose`, `Memorized`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

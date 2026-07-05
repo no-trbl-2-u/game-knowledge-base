@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 314 of first 500 generated cards
+- **Ordinal:** 314 of 1692 generated cards
 - **Source card id:** `748926`
 - **Category:** Action
 - **Type:** Divine
@@ -87,8 +87,3 @@ Gain 3 Armor.<br>Gain 3 Evasion.<br>Gain 3 Regenerate.<br>Gain 3 Focus.
 ## Observed keyword / token leads
 
 `Armor`, `Evasion`, `Focus`, `Regenerate`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

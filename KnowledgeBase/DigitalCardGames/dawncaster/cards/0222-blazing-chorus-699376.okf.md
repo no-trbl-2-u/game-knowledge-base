@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 222 of first 500 generated cards
+- **Ordinal:** 222 of 1692 generated cards
 - **Source card id:** `699376`
 - **Category:** Action
 - **Type:** Divine
@@ -86,8 +86,3 @@ On Hit: Play a Hymn from a selection equal to the damage dealt. Charges (1/1).
 ## Observed keyword / token leads
 
 `Charges`, `Hymn`, `On Hit`, `Play`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

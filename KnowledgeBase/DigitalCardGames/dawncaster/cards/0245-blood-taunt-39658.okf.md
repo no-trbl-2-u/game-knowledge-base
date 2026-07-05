@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 245 of first 500 generated cards
+- **Ordinal:** 245 of 1692 generated cards
 - **Source card id:** `39658`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Gain 1 Anger.<br>If your foe played 4 or more cards, inflict Silenced.
 ## Observed keyword / token leads
 
 `Anger`, `Silenced`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

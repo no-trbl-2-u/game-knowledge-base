@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 487 of first 500 generated cards
+- **Ordinal:** 487 of 1692 generated cards
 - **Source card id:** `177094`
 - **Category:** Action
 - **Type:** Corruption
@@ -83,8 +83,3 @@ Destroy a card, then add a base copy of that card to your deck. Charges (1/1). D
 ## Observed keyword / token leads
 
 `Charges`, `Defiled`, `Destroy`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

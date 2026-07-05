@@ -1,0 +1,1693 @@
+card_number,card_name,keywords_on_card
+1,Abolish,Armor; Blessing; Dispel
+2,Abracardabra,Perform
+3,Absorb Magic,Blessing; Dispel; INT
+4,Abyssal Anchor,Anger; HEALTH; Maximum
+5,Abyssal Bulwark,Inflict Brittle
+6,Abyssal Bulwark,Inflict Brittle
+7,Abyssal Contempt,Affliction; Bane; Blessing; Convert; Inflict
+8,Abyssal Corruption,(areaSpecial)Abyssal Corruption; Abyssal Corruption; Dante; Despair; Increases; Lord
+9,Abyssal Corruption Listener,(areaSpecial)Abyssal Corruption; Abyssal Corruption; Dante; Despair; Increases; Lord
+10,Abyssal Gaze,Add; Dark Embrace; Inflict; Weakness
+11,Acid Breath,
+12,Acquire Target,Fades; Improves
+13,Acquisition,Delve; GOLD; HOLY; Pay; permaValue
+14,Acrobatics,Conjure Knife; Dazed; Empower; Evasion; Gain STR; Toss
+15,ActiveUnnaturalCorrosion,Rust
+16,Adaptation,After; Immunity
+17,Adaptive Edge,Adapt; On Hit
+18,Adaptive Stance,Adaptation; Cards; Disarmed; Immune
+19,Adrenaline,DEX; DEX DEX
+20,Adrenaline Rush,Charges; DEX; Finale; Gain DEX; Performance; performanceStacks
+21,Advance,Ambush; Critical Hit; Haste; Melee
+22,Aegis,Armor; damageBonus+3; Enable; Equipment; Frenzy; Upgradeable
+23,Aeternal Mantle,Activate; Durability; Hymn
+24,Aeternal Mitre,Activate; Aeternal; Durability; HOLY
+25,Aeternal Staff,Activate; Durability; Performance; Reactivate; Turn
+26,Aeternal Summons,Acts; Companion; Follower; Grounded; Memorized; Summon
+27,Aeternal Tabard,Activate; Durability; HOLY; Perform
+28,Aethershock,After; Chain; Lightning; tempValue+1
+29,Afterburn,Inflict Burning; lastDamage
+30,Aftershock,Gain Stagger; lastDamage; Stagger
+31,Agenda,Corruption; corruptionCards; Gain HEALTH; Turn
+32,Aggressive,Anger; Combat; myLevel
+33,Agile,Evasion; Gain DEX
+34,Agile Mind,Choose; Evasion; Focus; Gain DEX; Gain INT; Memorized
+35,Agnosiophobia,(areaSpecial)Agnosiophobia; Add; Agnosiophobia; Combat; Increases; Insanity; Lowered
+36,Agonizing Howl,Add; Blessing; difficulty; Dispel; Terrors
+37,Agonizing Strike,Impervious
+38,Agony,Anger; opponentLastActions
+39,Aim and Pray,Burning; damageBonus; Frozen; HEALTH
+40,Aimed Shot,Ambush; Critical Hit; Increase; Persistent; tempValue; Turn
+41,Alchemic Presence,Conjure; Potion
+42,Alignment,Critical Hit; Magic Action
+43,Alone in the Dark,Blessings; Darkness; On Hit
+44,Alter Memory,Charges; Choose; Memorized
+45,Amber Blast,Amber Infusion; Reduce
+46,Amber Bomb,difficulty+4; Inflict; Slow
+47,Amber Infusion,Cards; enchantmentStacks
+48,Amber Shell,Armor
+49,Ambition,Consumes; Focus; Upgrade
+50,Amp Up,Chain; Lightning Action; magicActionsPlayed
+51,Amphibify,Can; Cursed; HEALTH; Persistent; Set; tempValue
+52,Amplification,Attunement; damageBonus; Upgradeable
+53,Ancient Curse,After; Deadly Effigy; Heavy; tempValue
+54,Ancient Markings,Ancestral; Delve; Summon; Totem; Totems
+55,Ancient Stirrings,Dragon; Form; Shift
+56,Ancient Whetstone,Basic Attack; damageBonus; Grounded; Heavy; On Draw; One Use; Slow
+57,Angelic Choir,HEALTH; HOLY; Hymn; Performance
+58,Angelic Ward,Impervious; Regain Divinity; Ward
+59,Anima,(areaSpecial)Anima; Anima; Foes; Increased; Maximum HEALTH; Reaping; Reduced
+60,Anima Listener,(areaSpecial)Anima; Anima; Dealing Reaping; Foes; Maximum HEALTH
+61,Anneal,Bleeding; Burning; Inflict
+62,Annulling Strike,On Hit; Reaping; Remove
+63,Another Round,Conjure; Delirious; Inflict; Potion
+64,Antimage Bomb,Blessings; Charge; Dispel; Persistent; Ready; Speed
+65,Antimagic Zone,Affliction
+66,Anyform Claw,Anyform Claw; Transform
+67,Apex Maul,Gain Ferocity
+68,Apex Predator,Critical Hit; Darkness; Ferocity; While
+69,Apex Strike,Bleeding; Darkness; While
+70,Apocalypse,Bury; Conjure; Persistent; s; Solar Lance; Synergy; tempValue+1
+71,Aquarius' Dream,Advance; After; Tide
+72,Aquarius' Dream II,Advance; After; Tide
+73,Aquarius' Dream III,After; Eternity; Spark; Tide
+74,Aquatic Clone,After; Basic Attack; Channel; Clones
+75,Aquatic Phalanx,Barrier; Clones
+76,Arachnid Cutters,Climb; If Wall
+77,Arachnid Strike,
+78,Arachnid Swarm,Add; Spider Broodlings
+79,Arboreal Claws,Increase; NEUTRAL
+80,Arcane Alignment,Attunement; Critical Hit; Magic Action
+81,Arcane Anvil,Add; Basic Attack; One Use
+82,Arcane Arrow,Blessing; Dispel
+83,Arcane Barrage,(cardvalue); Arcane Barrage; Mergecraft; Repeat
+84,Arcane Blades,Magic Action; Melee Action
+85,Arcane Bow,Focus; Foretold; Repeat; Shoot; Stardart; tempValue
+86,Arcane Coil,Lightning Bolt
+87,Arcane Inkwell,Delve; Mergecraft; One Use
+88,Arcane Lance,Free; Mergecraft
+89,Arcane Missiles,damageBonus; Mergecraft; Upgrades
+90,Arcane Overload,Artifacts; Enchantments; otherEnchantments; Repeat
+91,Arcane Quiver,Activate; Arrow; Delve; Durability; Ranged Actions
+92,Arcane Ripple,Conjure; Free
+93,Arcane Slice,actionsPlayed; Basic Attack; Conjure; Flow; Magic Action; Make
+94,Arcane Visions,Conjure; Foretell; foretell+3; Magic Action; Scholar
+95,Arcane Ward,
+96,Arcane Warding,Barrier; Permanently; permaValue+2
+97,Arcane Weaver,Echo; Magic
+98,Arcanist's Locket,Focus; Gain INT; INT; While
+99,Ardor,Code; Gain Impervious; Gain Zeal; HOLY
+100,Aries' Reflection,Advance; After; Foretell; Prophetic Bolts
+101,Aries' Reflection II,Advance; After; Barrier; Foretell
+102,Aries' Reflection III,After; Clear Visions; Foretell
+103,Artificer's Insight,Equipment; equipments; Repeat
+104,Ascension I,Buried; cardsBuried
+105,Ascension II,Burning
+106,Ascension III,Ascension; HEALTH; On Death; Solar Lance
+107,Ashes to Ashes,cardsBuried; Inflict Burning
+108,Aspect of Compassion,HEALTH; Turn
+109,Aspect of Courage,Turn; Ward
+110,Aspect of Vengeance,HEALTH; myCurrentHealth; Slain
+111,Aspect of Wisdom,Conjure; Turn; Virtue
+112,Assassin's Mark,Charges; Critical Hit; Melee; Ranged
+113,Assassinate,Each; HEALTH; On Hit; sinister; Sinister; Slay
+114,Asteran,Blessings; Firecast; Gain HOLY; HOLY; Increase; myEnergyHOLY
+115,Astrakan,Astrakan; Basic Attack; Gain HOLYHOLY; Hex; Inflict; Lifedrain
+116,Astral Visions,Conjure Stardarts; Foretell; foretell+3
+117,Asylum,Corruption; corruptionCards; Repeat; Ward
+118,Attendant's Presence,Court Presence; courtPresence; Decay; Inflict; Turn
+119,Augury,Foretell; foretell+3; Scholar
+120,Aura Mastery,Enchantment; Memorized
+121,Aura of Blight,enchantmentStacks; Poison
+122,Aura of Brilliance,Focus; INT; Memorized
+123,Aura of Conviction,Burning; Charmed; Memorized; Turn; Zeal
+124,Aura of Corruption,Affliction; Memorized
+125,Aura of Decay,Afflictions
+126,Aura of Depravity,Add; Memorized; Sin; Turn
+127,Aura of Despair,Doom; Terror
+128,Aura of Despair Listener,Terror
+129,Aura of Divinity,Blessing; Memorized
+130,Aura of Entropy,Anima; difficulty*2; Reap; Turn
+131,Aura of Fire,Burning; Burning Unique; Immune
+132,Aura of Frost,Frozen; Memorized
+133,Aura of Heroism,Dazed
+134,Aura of Mantras,Mantra; Memorized
+135,Aura of Mind,Focus; Memorized
+136,Aura of Piety,Charmed; HOLY; Increases; Inflict; Memorized; Turn
+137,Aura of Purity,Memorized; Zeal
+138,Aura of Resolve,Blessing; HOLY; Memorized
+139,Aura of Rime,Frozen; Memorized; Momentum
+140,Aura of Solace,Poison
+141,Aura of Undeath,Terror
+142,Aura of Venom,Memorized; Poison
+143,Aura of Winter,Frozen; Memorized
+144,Aura of Wrath,Affliction; Convert; Turn; Zeal
+145,Aura of Zeal,HOLY; Memorized; Zeal
+146,Aurora Prism,The Prism
+147,Avalanche,Can; Channel; Frozen; Turn
+148,Avatar of Blight,DEX; Poison; Potency
+149,Avatar of Thunder,Chain; Critical Hit
+150,Avenger's Choice,Blood; Charges; Conjure Forged; Fire; Forged; If HOLY
+151,Avenging Strike,Basic Attack; Play; Take
+152,Awaken Arsenal,Adaptation Slot; Add; Melee
+153,Awakening,Bury; cardsBuried; Gain Zeal; HEALTH
+154,Backfire,Armor; Burning; Inflict; Lose
+155,Backswing,Basic Attack; Flanking; Haste; Make
+156,Bad Apple,Add; Corrupted; Forbidden Fruit; Gain DEX; Sinister
+157,Balanced Shots,Balance; Conjure
+158,Baleclaw,Activate; Affliction; Armor; Durability; Evil Eye
+159,Bandage,Bleeding; HEALTH; One Use; Persistent
+160,Bandages,HEALTH; One Use; Persistent; Untempered
+161,Banish,Burning
+162,Banner of Elsmyr,Gain HOLY; Turn; Zeal
+163,Banner of Kaelis,Gain STR; OR INT; Rally; Turn
+164,Banner of Rehdan,Anger; Gain STR; Turn
+165,Banner of Valyn,Focus; Gain INT; Turn
+166,Barbarism,After; Fury; Rally; Turn
+167,Barbed Bolt,Critical Hit; Marked
+168,Barbed Snares,Bleeding; Slowed
+169,Barfight,Basic Attacks; Critical Hit
+170,Bargain,Bargain
+171,Barnacled Chitin,Impervious
+172,Barnacled Strike,Inflict Stagger
+173,Baron's Presence,Court Presence; courtPresence; Potency
+174,Barricade,Gain Armor; lastDamage
+175,Bash,Armor; Critical Hit; Fortified; Interrupt; my(status)Armor
+176,Bat Familiar,Activate; Bleeding; Deplete; Durability; Evasion; Familiar; Return Bat; Vampirism
+177,Bathe in Blood,Bleeding; Inflict
+178,Battle Axe,Bloodlust; Critical Hit; Inflict
+179,Battle Brawler,my(status)Stagger; Stagger
+180,Battle Broth,Charges; Create; Ingredient; Stance
+181,Battle Command,Armor; Basic Attacks; Fortified
+182,Battle Hardened,Bolster; Gain Bolster
+183,Battle Mending,damageTaken; HEALTH
+184,Battle Momentum,areaSpecial; Foes
+185,Battle Sense,Armor; Foretell; foretell+3; my(status)Armor
+186,Battle Station,allDurability; Durability; Equipment; Gain Armor; Restore
+187,Battle Vents,damageTaken; HEALTH; Inflict Burning
+188,Battle Vigor,Take; Turn
+189,Battle Vitality,Grounded; Maximum Health
+190,Battleclaw,Activate; Armor; Conjure; Deplete; Durability; Play; Reconfigure; Starts
+191,Battlecry,Charges; Frenzy; Gain STR; Rally
+192,Battlerage,Anger; Conjure; Frenzy; Fury; Your Fury
+193,Battleroar,Anger; Momentum; Raise Battle; roundNumber
+194,Battlespear,Gains; Untempered
+195,Battlespear C,Crushing; Gain HOLY; Interrupt; Untempered
+196,Battlespear D,Add; damageTakenLastTurn; Untempered
+197,Battlespear E,Untempered
+198,Battlespear H,Critical Hit; HOLY; Untempered
+199,Battlespear L,HOLY; Lifedrain; Reaping; Untempered
+200,Battlespear U,On Hit; Untempered; Upgrade
+201,Battlevisor,Activate; Durability
+202,Bear Claws,Gain Armor
+203,Beartrap,Pinned
+204,Beastform,Shift
+205,Beastly Weapon Rewards,Companion Cards; Sets
+206,Beguile,Charmed; difficulty+2; Heal
+207,Belly Rush,Armor
+208,Bellybump,Inflict Stagger; my(status)Sated; Sated; Your Sated
+209,Berzerk,Charges; Fury; Shuffle
+210,Beseech,Bury
+211,Bestow,Persistent; Synergy; tempValue+1
+212,Big Bomb,Charge; Persistent; Rampage; Ready; Speed
+213,Big Eater,Immune; Ingredient; Stunned
+214,Big Hack,Any; Wagon
+215,Biophobia,costHand; End; Lose; Maximum HEALTH; Turn
+216,Bite,
+217,Bite (Companion),Advantage; Anger; companionlevel; companionlevel*2
+218,Blast Junkie,Bombs; Memorized
+219,Blast Zone,Bomb
+220,Blaster,Charges; Equipment; equipments; Interrupt; Remove
+221,Blastshield,Armor; Stagger
+222,Blazing Chorus,Charges; Hymn; On Hit; Play
+223,Blazing Weapon,Burning
+224,Bleeding Immunity,Bleeding; Immune; Poison; Stunned
+225,Blend In,Evasion
+226,Bless Weapon,Basic Attack; HEALTH; HOLY; Lasting
+227,Blessed,Gain HOLY; On Hit
+228,Blessed,Blessings
+229,Blessed Foes,
+230,Blessed Strike,Basic Attack; Blessing; Chain; Make
+231,Blight's Blessing,Affliction; chapter
+232,Blightbite,
+233,Blightstrike,Inflict; On Hit; Poison
+234,Blinding Light,Blessing; Inflict; Jinxed
+235,Blinkstrike,Chain; Conjure; Persistent; Turn
+236,Blizzard,areaSpecial; Frozen; Remove Blizzard
+237,Block,Armor
+238,Blood and Iron,Battlespear; Create; damageTakenLastTurn; If HOLY
+239,Blood Fever,Bleeding; Convert; Poison
+240,Blood for Blood,Bleeding; Blood; Charges; Convert
+241,Blood Levy,Bleeding; BLOOD
+242,Blood Offering,Gain HEALTH
+243,Blood Quench,Adapted; Draining Adaptation
+244,Blood Ritual,Ancestral; Bleeding; Charges; Inflict; Return
+245,Blood Taunt,Anger; Silenced
+246,Blood Taxes,Bleeding; HEALTH
+247,Bloodbank,BLOOD; Bloodbank; HEALTH; Remove; Turn
+248,Bloodbite,Lifedrain
+249,Bloodcast,Blood
+250,Bloodcraft,Charges; Grounded; Melee Actions
+251,Bloodhowl,difficulty+4; Doom; Inflict; Until
+252,Bloodhunt,Basic Attack; Persistent; tempValue
+253,Bloodletting,Bleeding
+254,Bloodmagic,BLOOD; Charges; Convert
+255,Bloodmoney,Lucky Coins; sinister; Sinister
+256,Bloodmoon,Anger; Enemies; Visit
+257,Bloodscent,
+258,Bloom,HEALTH; Slay
+259,Bloom Listener,HEALTH; Slay
+260,Blue Hydra Head,Bury; Head
+261,Blue Ray,damageBonus; Frozen; Inflict
+262,Blunt,Interrupt; On Hit; Rampage
+263,Blunt Arrow,Dazed; Inflict; On Hit
+264,Boarding Party,Ambush; DEX; enemyEnergy; enemyHand
+265,Body of Steel,HEALTH; Reflect
+266,Boiling Rage,Anger; difficulty; Piercing
+267,Bolgar Blightbane,Bolgar; Conjure; HEALTH; Poison
+268,Bolster Soul,Gain HOLY; Remove VOIDVOIDVOIDVOID
+269,Bolstered,Affliction; Cleanse; HEALTH
+270,Bolstered Strike,Bash; Conjure; On Hit
+271,Bolstering Presence,Basic Attacks; Gain Armor; HEALTH; myCurrentHealth
+272,Bolter,Bolter; Critical Hits; Interrupts
+273,Bomb,Charge; costThisCard; Interrupt; Persistent; Ready
+274,Bombardment,areaSpecial; Momentum; Raise; Turn
+275,Bone Armor,Gain Armor
+276,Bone Carapace,Armor; difficulty; Turn
+277,Bone Knuckles,Armor; On Hit
+278,Bone Nova,Nova; novacards; Reaping; Repeat
+279,Bone Pin,HEALTH; Maximum HEALTH; otherMaxHealth/20; Persistent; Steal; They
+280,Bone Ritual,Armor; Return
+281,Bonebreaker,Lifedrain
+282,Boneshred,
+283,Boneskewer,Ancestral; Bleeding; Increase; Inflict; tempValue
+284,Bonesweep,Adaptation; Add; Frenzy
+285,Bonfire,Bury; Turn
+286,Boooo!,Unplayable
+287,Boots of Speed,Activate; Durability; Haste
+288,Booty,Activate; Deplete; Destroy; Durability; Grounded; Treasure
+289,Bottled Message,Conjure; One Use; Tide
+290,Bouldercrash,Inflict Dazed
+291,Bound Spirit,Barrier; difficulty; HEALTH
+292,Brace for Impact,Armor; Persistent
+293,Brain Ink,Agnosiophobia; Bury
+294,Brainpain,
+295,Brainstorm,Gain INT; Magic Action; Scholar
+296,Brainwarp,Focus; my(status)Focus
+297,Brand Heretic,Demon; Frenzy
+298,Brawlers Mark,Armor; Critical Hit
+299,Break a Leg,Charmed; Critical Hit; Performance; performanceStacks
+300,Break Apart,Crushing
+301,Break Bonds,Cleanse; Dazed; Dominated; Enter Frenzied; Pinned; Reliable; Stance
+302,Brew Concoction,Charges; Delve; Potion
+303,Brightclaw,Activate; Armor; Blessing; Durability; Solar Lance
+304,Broken Amulet,Actions; Increase; Turn
+305,Broken Hilt,Broken Hilt; Eternal Winter; Frozen; On Hit; permaValue; Rhymebind
+306,Brutalizing Strike,Adaptation; adaptations; Costs NEUTRAL
+307,Bubbly Brew,Inflict; One Use; Poison
+308,Bullet Time,Ammo; Channel; Ranged Action
+309,Bullrush,Interrupt Rampage; Stunned
+310,Bunker Down,Armor; damageBonus; Fortified; Upgradeable
+311,Burning Arrow,Burning; Inflict
+312,Burning Resolve,Burning; HEALTH
+313,Burst of Karma,
+314,Burst of Radiance,Armor; Evasion; Focus; Regenerate
+315,Bury Alive,Discard Pile; Move; Return
+316,Butter Up,Armor; Inflict Brittle
+317,Buzzsword,Chain; Execute; Overkill; Reaping; Upgrade
+318,By the Light,Ascended; Ascension; Conjure; HOLY; Lose; VOID
+319,Caduceus,healingTurn; HEALTH
+320,Call Element,Attune
+321,Call of the Void,Doom; Foretold
+322,Call the Spirits,DEX; Gain DEX; tempValue
+323,Call the Storm,Conjure; Focus; Lightning Card
+324,Call to Heel,Focus; Grounded; HEALTH; Requires; Subjugate
+325,Calm the Hunger,Anger; Lifedrain; Remove VOIDVOID; Remove VOIDVOIDVOID; Remove VOIDVOIDVOIDVOID
+326,Caltrops,Bleeding; damageBonus; Persistent; Piercing
+327,Caravan Wagon,areaSpecial; Brightcandle; Current Health; Protect
+328,Carnage,Bleeding; Melee Attacks
+329,Carrion Cut,Memorized
+330,Carving Knife,Delve; Deplete; Durability; Totem; Trigger; Turn; Use
+331,Casa Nova,Charmed; Inflict; Nova; novacards; Repeat
+332,Cash out,Conjure; GOLD; Lucky Coin
+333,Cat Claws,Bleeding; Inflict
+334,Cataclysm,Anger; Can; cardsDrawnThisTurn; my(status)Anger; Rampage; Upgraded
+335,Catalyst,Attunement; Costs INT; Shift
+336,Cauterize,Bleeding; Burning; Firecast; HEALTH; Remove
+337,Celestial Claws,HEALTH; Inflict Burning
+338,Censorship,Bury; HEALTH; Zeal
+339,Centaur's Truth,Advance; After; Barrier
+340,Centaur's Truth II,Advance; After
+341,Centaur's Truth III,After; Way; Wise Unique
+342,Center Self,Focus
+343,Centered Strikes,Basic Attacks; Focus Unique; Mantras
+344,Cerebral Surge,Chain; Focus; Increase; Maximum Handsize
+345,Ceremony of Roses,Blessings; Inflict Charmed; myTotalBlessings
+346,Chain Lightning,Chain; Gain Chain
+347,Chakram,Clone; Summon
+348,Chalice of Blood,Grounded; Heavy; Maximum Health; On Draw; One Use; permaValue; Take
+349,Chaos Armor,Armor; Corrupted; Hex; Inflict
+350,Chaos Casting,
+351,Chaos Nova,Affliction; Inflict; Nova; novacards; Repeat
+352,Chaotic Presence,Enchantment
+353,Charged,Chain; Haste; On Hit
+354,Charged Blade,Chain; Piercing
+355,Charged Slice,damageBonus; DEX; Upgradeable
+356,Charged Wand,Afflictions; HEALTH; Improved; my(status)Potency; Potency; Steal; Swap
+357,Charity,HEALTH
+358,Chasm,Deals; Stagger
+359,Chastity,Impervious
+360,Chefs' Kiss,Charmed; Ingredient; Memorized; my(status)Sated; Sated; Stagger
+361,Chimera's Visage,Activate; Channel; Durability; Shift; While
+362,Choice Cut,Delve; Ingredient; On Hit
+363,Chop 'em Up,Conjure; Hit; Ingredient
+364,Chorus,Cascade; Perform
+365,Chromatic Breath,Attunement; difficultyBonus+3; Has
+366,Chromatic Orb,Delve; Orb
+367,Chronomend,Health
+368,Chump Change,Conjure; Lucky Coin; Performance; Return
+369,City of Gold,After; GOLD; Grounded; Persistent
+370,Clarity,Gain INT; Scholar
+371,Claw (Companion),Add; Advantage; companionlevel+2; Critical Hit
+372,Cleansing Presence,Burning; HEALTH
+373,Cleansing Waters,Clone; Create; Persistent; Regenerate; Tidal
+374,Cleansing Waters,Affliction; Cleanse; Persistent
+375,Clear Visions,Foretell
+376,Cleave,Basic Attack; Conjure; Flanking; Make
+377,Cleave in Twain,Grounded; Health; HEALTH; Set
+378,Cleavers,Attack; Bleeding; Frenzy
+379,Cleaving Carve,Adaptation; adaptations; Attack
+380,Clever Maneuver,Advantage; Ambush; Gain Evasion
+381,Cling to Sanity,Affliction; Cleanse; Corruption; HEALTH; Remove
+382,Cloak and Dagger,Conjure; Daggers; Evasion; Persistent; Turn
+383,Cloak of Night,Darkness; Double; Ferocity
+384,Cloak of Sand,Ambush; Gain Swiftness; Momentum; Reset
+385,Clobber,Anger; Interrupt Rampage; On Hit; Your Fury
+386,Cloudkill,Poison; Trigger
+387,Cluster Grenade,Charges; Deep Wound; Deplete; Inflict
+388,Code of Chivalry,Blessings; Code; Double; Grounded; Turn
+389,Code of Craft,Adapt; Adaptation; Code; Grounded; totalAdaptationSlots
+390,Code of Egality,All; Code; Grounded
+391,Code of Hope,Barrier; Code; Grounded; HEALTH
+392,Code of Loyalty,Ascend; Code; Divine; Grounded
+393,Code of Mind,All; Clarity; Code; Conjure; Grounded; Memorized; Turn
+394,Code of Piety,Blessings; Code; Grounded; One; Viola Skysworn
+395,Code of Poverty,Code; Gain HOLY; Grounded; Turn
+396,Code of Steel,Battle Spear; Code; Create; Grounded; Scars; Turn
+397,Coiled Strike,Adapt; Persistent; Turn
+398,Coinflip,Charges; Heads; Randomly; Tails
+399,Colonel,
+400,Combust,Burning; Firecast; Inflict
+401,Come get me!,Add; Ambush; Evasion; Snares
+402,Command,
+403,Compel,Choose One; Companion; Convert; Dazed; Dominated
+404,Compel 1,Convert; Dazed; Dominated
+405,Compel 2,
+406,Concordance,Banner; Grounded; One Use; Select
+407,Concussive Bomb,Charge; Inflict Stunned; Persistent; Ready; Speed
+408,Conduit,actionsPlayed; Chain; Charges; Flow
+409,Confession,Corruptions; Gain HOLY
+410,Conjure Arrow,Arrow; Conjure
+411,Conjurers Boon,Conjuration; HEALTH
+412,Conquer,Banner; Memorized; Play; Rally
+413,Conquest,Critical Hit; GOLD
+414,Consecration,Basic Attacks; Burning
+415,Consume Ashes,Anger; Gain Regenerate; Move
+416,Contained Anima,Corruption; corruptionCards; Grounded; Improves; Maximum Health; One Use
+417,Contaminate,damageBonus+2; Potency; Upgradeable
+418,Contract of Mercy,Afflictions; Execute; Souls
+419,Conviction,Bury; Gain HOLY; Zeal
+420,Cooking,Garnish
+421,Coordinated Strike,Advantage; Command; Flanking; Grant
+422,Coronation,GOLD; Inflict Charm; INT DEX; myGold; One Use; STR HOLY
+423,Corrosive Spirits,Ancestral; Inflict; Poison; Repeat; Souls
+424,Corrupt Magic,Affliction; Blessing; Convert
+425,Cosmic Guidance,Choose; Lifedrain; Stardart
+426,Cosmic Healing,Lifedrain; Stardart
+427,Cosmic Insight,Shuffle
+428,Cosmic Revelation,Focus; Foretold; permaValue+3; Revelation; tempValue
+429,Counterfeit,Coin; Conjure; Corrupted; HOLY; myEnergyHOLY; sinister; Sinister; Upgrade
+430,Counterspell,Charges; Inflict; Jinxed
+431,Court Fungus,Court Fungus; On Draw; Take
+432,Court Fungus,Court Fungus; enchantmentStacks+1
+433,Court of Combat,Blessing; Interrupt; STR
+434,Courtly Manners,Perform; typesOfEnergy
+435,Coven of Chaos,Affliction; Cursed; Increases; Inflict; s; tempValue+1
+436,Coven's Sight,BLOOD; Convert; Corrupted; Cursed
+437,Crafty Contract,Basic Attacks; Execute; Upgrade
+438,Cranium Blow,Finale; Inflict; Jinxed
+439,Creeping Death,Performance; Potency
+440,Crescendo,Charges; Perform; Performing
+441,Crimson Contract,Bleeding; Execute; HEALTH
+442,Crone's Recipe,Cursed; Memorized; Potion
+443,Crooked Wand,Affliction; Inflict; Swap
+444,Crossbow,Add; Ambush OR; Finale; Snare
+445,Crowd goes Wild,After; Performance
+446,Crown of Unity,Activate; Durability; Surge
+447,Cruel Intent,sinister; Sinister
+448,Cruelty,Critical Hit; Deep Wound
+449,Crush,Charmed; Cleanse
+450,Crush (Companion),Advantage; companionlevel*4; Deep Wound; Inflict; Rampage
+451,Crushing Blow,Frenzy; Gain STR; Rampage
+452,Cryo Bomb,Charge; Frozen; Persistent; Ready; Speed
+453,Cryolance,Frozen; INT; Reduce
+454,Culinary Cutlery,Basic Attacks; Conjure; Cooking; NEUTRAL
+455,Cunning Contract,Execute; Maximum Health
+456,Cunning Plan,DEX; Next; Spend
+457,Cursed Cauldron,Activate; Cursed; Deplete; Durability; Hex; Inflict; Transmute
+458,Cursed Puzzlebox,Cursed; Puzzlebox; Swap
+459,Cursed Strike,Basic Attack; Inflict; Make; Random Affliction
+460,Cut all Ties,Add; highestSnareUpgrade; Snare
+461,Cut and Run,Execute; GOLD
+462,Cutlass,Ambush; Cutlasses; Reset; Swap
+463,Cutlass_OLD,(cardvalue); Your Cutlasses
+464,Cutting Words,Can; Deep Wound; Flanking; Inflict; On Hit
+465,Daggers,Ambush; Critical Hit
+466,Daggerstorm,Basic Attack; Gain DEX
+467,Damnation,Execute; HEALTH; Lose; Repeat; souls; Souls
+468,Dance of Blight,Completing; damageBonus+1; Gain Ritualist; Heavy; Performance; Potency; Upgradeable
+469,Dance of Life,Completing; Gain Ritualist; Heavy; Maximum HEALTH; myMaxHealth/20; Performance; Restore
+470,Dance of Spirits,Charges; Gain Ritualist; Heavy; Performance; Souls
+471,Dancing Daggers,Basic Attack; Lasting; Performing Perform
+472,Daring Contract,Boss; Execute; Maximum Health
+473,Daring Dash,Charges; Evasion; Finale; Gain DEX; Perform
+474,Dark Ascension I,Anger; Ascend; difficulty; Reach; VOID
+475,Dark Ascension II,Ascend; Lifedrain; Reach; VOID
+476,Dark Ascension III,Dark Ascension; HEALTH; Slain
+477,Dark Aspiration,Corrupted; Increase; Sinister
+478,Dark Blessing,Affliction; Anger; Inflict
+479,Dark End,Effigy; Execute; Maximum HEALTH; Slay; souls; Souls
+480,Dark Halo,Anger; Corrupted; HEALTH; Memorized
+481,Dark Harvest,Effigy; Maximum HEALTH; myMaxHealth/20; Requires; Souls
+482,Dark Hunt,Critical Hit; Darkness; Ferocity; Melee Action; While
+483,Dark Inquiry,Corrupted; Foretell; foretell+3; HEALTH; Scholar
+484,Dark Mirror Vial,Create; Cursed; Defiled; One Use
+485,Dark Omen,Doom; Gain Darkness; Inflict
+486,Dark Power,Add; Gain INT; INT; Malignance
+487,Dark Renewal,Charges; Defiled; Destroy
+488,Dark Revenance,Darkness; Health; Undead
+489,Dark Spire,actionsPlayed; Add; Corruption; corruptionsInHand; Flow; Malignance; Repeat
+490,Dark Starfall,Conjure; Doom; Stardart; Stardarts; Turn
+491,Dark Urge,Anger; Defiled; VOID
+492,Dark Whispers,Add; Corrupted; Forbidden; Fruit; Gain INT
+493,Darksteel Ammo,Armor; my(status)Armor; Ranged Actions
+494,Dash,Ambush; DEX; Evasion; Gain DEX
+495,Deadeye Rounds,Ranged Actions; Reload; Turn
+496,Deadly Dance,Evade; Focus; my(status)Focus
+497,Deadly Effigy,Blessings; Enchantments; Slain
+498,Death Snap,Advantage; Bleeding; Marked; Your Companion
+499,Deathblow,Free; HEALTH; On Draw
+500,Deathwish,Critical Hits; Take
+501,Decommission,allDurability; allDurability+6; Durability; Equipment; Execute
+502,Dedication,Ascend; Bury; Charges; Deplete; HOLY
+503,Deep Faith,Add; Blessings; Firecast; HOLY
+504,Deep Prayer,Burning; Charmed; HOLY Unique
+505,Deep Study,Memorized; Repeat
+506,Deep Wound,Bleeding; Deep Wound; Deep Wounds; enchantmentStacks
+507,Defensive Strike,Gain Armor
+508,Deflect,Charges; Resilience
+509,Defy Death,Armor; HEALTH; One Use
+510,Deific Larceny,Conjure; HOLY
+511,Deification,Ascend; Bury; Charges; HOLY
+512,Delay,Inflict; Jinxed
+513,Demolition,Bomb; Charges; Delve
+514,Demon Claws,Add; Lifedrain; On Hit; Terror
+515,Demon's Tail,Critical Hit; Fury; Garnish; One Use; Shuffle
+516,Demonform I,Actions; BLOOD; Convert; defiled; VOID
+517,Demonform II,HEALTH; myCurrentHealth
+518,Demonform III,Conjure; Control; End; Fight; Lifedrain; LOSE YOUR; SOUL; Turn
+519,Demonology,BLOOD; Convert; Corrupted
+520,Dervish,Basic Attack; Make; Momentum; my(status)Momentum; Repeat
+521,Desert Rush,Agile; Foretell; foretell+3; Foretold; Free; Momentum
+522,Desert Veil,Swiftness
+523,Determination,Also; Anger; Frenzy; Melee; STR
+524,Devoted Strike,Gain HOLY; HOLY; On Hit
+525,Devour Vitality,Execute; Maximum HEALTH; otherMaxHealth
+526,Diamond Potion,Impervious; One Use
+527,Diligence,Gain HOLY
+528,Direction,Gain HOLY; Your Companion
+529,Disguise Self,Channel; Monster Card; Pacified
+530,Dispel Magic,Blessings; Dispel
+531,Distraction,Add; Ambush; Corruption; enemyCorruptions; Glimmer; HEALTH
+532,Dividing Strike,Charges; Deep Wound; EVEN; HEALTH; On Hit
+533,Divine Arsenal,Add; Battlespear; Memorized
+534,Divine Bulwark,Barrier; Zeal
+535,Divine Focus,Gain HOLY; Holy Cards; While
+536,Divine Gilt,HOLY; Lucky Coin
+537,Divine Inspiration,Delve; Divine
+538,Divine Lashings,my(status)Zeal; Take; Zeal
+539,Divine Power,Charges; Gain Anger; Gain Oathbound; HOLY; Rally; Scars; scars
+540,Diving Strike,Conjure; On Hit; Scorpion Strike
+541,Divinity,HEALTH; Interrupt; Maximum Health
+542,Divinity,HEALTH; Interrupt; Maximum Health
+543,Donation,Conjure; Gain HOLY; Lucky Coin; s; Synergy; tempValue+1
+544,Doomsay,Add; Foretold; tempValue; Terror
+545,Double Barreled,Ammo
+546,Double Nock,Arrows; Coins; DEX; Echo; Ranged Action; Reduce
+547,Double Tap,Ambush; Gain Ferocity
+548,Double Up,
+549,Dragon Breath,Barrier; Inflict Burning; Persistent; tempValue+1
+550,Dragon Claws,
+551,Dragon Kick,Inflict; Persistent; Shocked; tempValue
+552,Dragon Mind,Focus; Persistent; tempValue; Turn
+553,Dragon Punch,Focus; Increase; Persistent; tempValue; Turn
+554,Dragon Scales,Armor; Increase; Persistent; Reflect; tempValue+3; Turn
+555,Dragon Wraps,Add; Persistent; tempValue; Turn
+556,Dragonslayer,Maximum HEALTH
+557,Drain (Companion),Advantage; companionlevel+3; Lifedrain
+558,Drain Health,Can; Corrupted; Lifedrain
+559,Drain Soul,Affliction; Deals; Defiled; Lifedrain; otherAfflictions
+560,Drain Strength,Anger; Inflict; Weakness
+561,Draining,Echoing Lifedrain
+562,Drake Familiar,Activate; Attune; Deplete; Drake; Durability; Summon
+563,Drakkan,Execute; Hex; Inflict; On Hit; Upgrade
+564,Draw,
+565,Draw Blood,Bleeding; damageBonus+2; Flanking; Inflict; Upgradeable
+566,Draw Yantra,Conjure; Delve; Mantra; Scholar
+567,Dressed to Kill,Charmed; Poison
+568,Drinking Shanty,Conjure; Perform; Potion
+569,Drowning,Drowning; Frozen
+570,Duel Mastery,Basic Attacks; Deep Wound
+571,Duelist Contract,Execute; Upgrade
+572,Dull Axe,Decapitator; Heavy; Majatome; permaValue; Rebound; Transform
+573,Dull Hammer,Heavy; permaValue; Rebound; Thundering Might; Trancor; Transform
+574,Duskblades,Critical Hit; Darkness; Has
+575,Earth Shuffle,Shuffle; Staggered
+576,Earthen Shield,Gain Resilience; Shuffle
+577,Earthshock,HEALTH; Inflict Stunned; Stagger
+578,Ebb,Change; Ebb
+579,Echo Chamber,Create; Enchantment
+580,Echoing Strike,lastDamage
+581,Effigy,Any; Create; Maximum HEALTH; Pin; Turn
+582,Effortless Magic,Cards
+583,Eldermind Pendant,Dragon; Turn
+584,Eldritch Binding,Bane; Charges; Cursed; Inflict; Inflict Jinxed
+585,Eldritch Flame,Add; corruptionCards; Corruptions; Forbidden Fruit
+586,Eldritch Ritual,(areaSpecial)Eldritch Ritual; Araxx; Eldritch Ritual; Increases; Insanity; Xhev
+587,Eldritch Ritual Listener,(areaSpecial)Eldritch Ritual; Araxx; Eldritch Ritual; Increases; Insanity; Xhev
+588,Electroflare,Burning; Chain; Inflict
+589,Electrosurge,Chain
+590,Elegance,Evasion; Impervious; Performing
+591,Elemental Focus,Attunement; Element; Magic Action
+592,Elemental Power,Attunement
+593,Elite Fireball,Inflict Burning; Lifedrain
+594,Elite Frostbolt,Inflict Frozen; Lifedrain
+595,Elite Lightning Bolt,Chain; Lifedrain
+596,Elite Prayer,Bury; Gain HOLY; HOLY
+597,Elite Weaponry,Delve; Elite; One Use
+598,Emerald Prism,Cards; DEX; enchantmentStacks; Ferocity
+599,Encore!,GOLD; One Use; Perform
+600,Energize,Chain; INT; my(status)Chain; Take
+601,Energy Infusion,allEnergy; Melee Actions
+602,Energyshield,Barrier
+603,Enfeeble,Inflict; Maximum HEALTH; otherMaxHealth/10; Weakness
+604,Enigma,ANY
+605,Enlighten,Focus; my(status)Focus; Reduce; Repeat
+606,Enrage,Add; Anger; Fury
+607,Entrapment,Add; Persistent; Snares; Synergy; tempValue
+608,Envy,Anger; Unplayable
+609,Essence of Life,HEALTH; Heavy; One Use
+610,Essence of Pain,Anger; HEALTH; Heavy; One Use
+611,Essence of Vigor,DEX DEX; Gain DEX; HEALTH; Heavy; One Use
+612,Essential Oils,Channel; Create; Potion; Potions
+613,Eternity,Take
+614,Euphoria,Health; Turn
+615,Evangelize,Blessing; Firecast; Gain Zeal
+616,Evil Eye,Charges; Delve; Hex
+617,Evocation,Attune; Conjure; Fire; Frost; Lightning
+618,Exalt,Ascend; Firecast; Grounded
+619,Execute,Slay
+620,Exorcise,Critical Hit; Demons; Lifedrain; Undead
+621,Exorcism,Critical Hits; Demons; Undead
+622,Expel Corruption,Affliction; Cleanse; Gain STR; VOID; VOIDVOIDVOIDVOID
+623,Exploration,Ambush; Evasion; Foretell
+624,Explorer's Trick,Add; Discard Pile; Rewards; Scholar; Treasure; Untempered Artifact
+625,Expulsion,Frenzy; Lifedrain; my(status)Zeal; Piercing; Zeal
+626,Exterminate,Flanking
+627,Extricate,Add; Essence; On Hit
+628,Fade to black,Blessings; Convert ALL; Darkness
+629,Fae Familiar,Activate; Durability; Gains; Prank; Wand
+630,Faerystorm,Add; Cursed; Increases; Persistent; Prank; s; tempValue+1
+631,Faewand,Add; Chaotic; Cursed; On Hit; Pranks
+632,Faith Healing,Firecast; HEALTH; HOLY
+633,False Profit,Conjure; HOLY; Lucky Coin
+634,Fan the Flames,Burning; Bury; Double
+635,Fanaticism,Firecast; Rally; Zeal
+636,Fast Forward,Haste; Scholar; Slow
+637,Fatigue,fatigue
+638,Favor of the Gods,Blessing; HOLY
+639,Feast,Execute; HEALTH
+640,Feast on Misery,Add; Afflictions; Corrupted; Forbidden Fruit; hexes; Hexes; otherAfflictions
+641,Featherform,Focus; Form; Raven; Shift
+642,Fellblast,Corrupted; Cursed; Lifedrain
+643,Fellstorm,Channel; Corruption; damageBonus+1; Lifedrain
+644,Feral Mark,Companion; Critical Hits; Mark
+645,Feral Strikes,Basic Attack; Frenzy; Gain Anger; Make
+646,Feral Weapon,enchantmentStacks; Regenerate
+647,Fertility,Consumes; Focus; Heal; HEALTH; Health
+648,Fervent Spirit,allEnergy; Also; Bolster; Burning; Frenzy; Spend
+649,Fervent Strikes,Attacks; Demons; Firecast; Undead; Zeal
+650,Festering Wounds,Bleeding; Poison
+651,Fetch Weapon,Basic Attack
+652,Field Repairs,Armor; Charges; Durability; Equipment; Frenzy; Restore
+653,Field Surgery,Charges; Regenerate; Take
+654,Fierce Guardian (Companion),Armor; companionlevel; Turn
+655,Fiery Barrage,Fireballs; Persistent; Shuffle
+656,Fiery Incantation,Bury; Cleanse; Frozen; Gain INT; INT
+657,Fiery Rapture,Burning; HEALTH; Maximum; Zeal
+658,Fight Dirty,Delve; Melee Action; Sinister
+659,Fight for Control,Defiled Energy; Demon Form; Destroy
+660,Fire Attunement,After; Attune; Element; Fire; INT
+661,Fire Nova,Burning; Firecast; Inflict; Nova; novacards; Repeat
+662,Fire Shield,Attune; Barrier; Burning
+663,Fireball,Firecast; Inflict Burning
+664,Firebinders,Burning; Inflict; Swap
+665,Fireside Blessings,Activate; Durability; Firecast; Otherwise
+666,First Aid Kit,Bandages; Charges; Conjure
+667,First Rites,Gain Armor; Memorized; Move
+668,Flameclaw,Activate; Armor; Burning; Combust; Durability
+669,Flash Ammo,Hit; Ranged Actions; Shocked
+670,Flashfreeze,Chain; Frozen; Inflict
+671,Flashheal,HEALTH
+672,Flashing Fists,Basic Attacks; Evade; Increases
+673,Flat-Tipped Ammo,Ranged; Stagger
+674,Fleeting Thoughts,Bury; Conjure; INT
+675,Flintlock,Ambush; Critical Hit; Flintlocks; Swap
+676,Flourishing Bow,Charmed; Evasion; Finale; Inflict; Perform
+677,Flow,Change; Flow
+678,Fluid,On Hit
+679,Flurry,Basic Attack
+680,Flurry of Blows,Quick Jab; Sudden Strike
+681,Flurry of Steel,Basic Attack; Cascade; Conjure; Frenzy; Unscathed
+682,Flying Carpet,Activate; Carpet; Deplete; Durability; Gain Evasion; Return Flying
+683,Follow Through,actionsPlayed; Deep Wound; Flow; Hits; otherWounds; STR
+684,Font of Youth,After; Grounded; HEALTH; Persistent
+685,Foodfight,Ingredient
+686,Forbidden Fruit,HEALTH; One Use
+687,Forbidden Magic,Conjure; Corrupted; Elite; Fireball; Frostbolt; Lightning Bolt
+688,Force Expulsion,Barrier; Shocked
+689,Forceshield,cardsInHand; Gain Barrier
+690,Forcewand,Chain
+691,Forecast,Magic Action
+692,Foresight,Foretell; foretell+3
+693,Forge of Wrath,Activate; Battlespear; Durability; HOLY
+694,Forged in Blood,Battlespear; Create; damageTakenLastTurn; Untempered; Upgrade
+695,Forged in Fire,Battlespear; Create; healingTurn; HEALTH; Untempered; Upgrade
+696,Forgehammer,Forgehammer; Upgrade
+697,Forgiving Grace,Bolster; Charmed; HEALTH; Lasting
+698,Forgotten Mask,Activate; Chimera; Durability; permaValue; Shift; Visage
+699,Form of the Bear,Armor; Channel; HEALTH; Turn
+700,Form of the Cat,Channel; Haste; Lay; Play; Turn; Wait
+701,Form of the Dragon,Channel; Cleanse; Gain INT; Turn
+702,Form of the Elm,Channel; Reflect; Turn
+703,Form of the Maple,Channel; Lose; Poison; Potency; Turn
+704,Form of the Oak,Channel; Decay; Lose; Resilience; Turn
+705,Form of the Raven,Channel; Focus; Turn
+706,Form of the Willow,Barrier; Channel; Doom; Lose; Turn
+707,Fortified,Your Armor
+708,Fracture,Armor
+709,Frenzied,Fury; On Hit; Shuffle
+710,Frenzied Stance,Critical Hit; Dominated; Immune
+711,From the Void,Charges; Corruptions; Return
+712,Frost Arrow,Frozen; Inflict
+713,Frost Attunement,Barrier; Element; Frost
+714,Frost Nova,Frozen; Inflict; Nova; novacards; Repeat
+715,Frost Shield,Attune; Barrier; Frozen
+716,Frostbinders,Frozen; Inflict; Swap
+717,Frostblock,Charges; Negate
+718,Frostbolt,Inflict Frozen
+719,Frostlance,Frozen
+720,Funhouse,Clone; Clones; Summon; Terror
+721,Fur Hide,Anger; Armor; Bear; Form; Shift
+722,Furious Recovery,damageBonus; Fury; Rally; Upgradeable
+723,Fury,(cardvalue); Anger; Take
+724,Fusion,Attune; Attunement; enchantmentStacks; Magic Actions
+725,Garbarrage,Scrap Pile; scrapcards; Untempered
+726,Garrote,Inflict Bleeding; sinister; Sinister
+727,Gather Thoughts,Foretold; Reduce
+728,Gathering Storm,Echo; Persistent; tempValue
+729,Gaze into the Beyond,Focus; Foretell
+730,Ghost Wound,HEALTH; Piercing; Reaping
+731,Ghostcleave,Critical Hit; Lifedrain; permaValue; Rebound
+732,Gift of Nature,Heal; HEALTH; Monster Cards; One Use; While
+733,Gift of the Sea,Delve; Equipment; Persistent
+734,Gift of the Sea,Persistent
+735,Gilded Blade,Ambush; Gain HOLY; Lucky Coin; On Hit
+736,Gilded Gauntlets,Activate; Blessing; Durability
+737,Gilded Grace,Impervious; Lucky Coins
+738,Gilded Ring,Charmed; damageBonus+5; GOLD; Inflict; myGold; Repeat; Upgradeable
+739,Gilded Staff,HOLY; Trigger; Turn
+740,Glaive,Flanking; Your Companion
+741,Glaivestrike,Basic Attack; Conjure; Corrupted; Hexglaive; Make; On Hit
+742,Gleeful Torment,Add; sinister; Sinister; Snare; Snares; Upgrade
+743,Glimmer,Charmed; One Use
+744,Glimpse of Evil,Add; Bane; Corrupted; Inflict; Terror
+745,Gluttony,Poison; Unplayable
+746,Golden Idol,Dazzled; Delirious; Inflict; On Draw
+747,Golden Prism,Cards; enchantmentStacks; HEALTH; HOLY
+748,Goldrush,GOLD; Persistent
+749,Goldrush (Tides),Ferocity; GOLD; Persistent
+750,Goldstrike,GOLD; myGold
+751,Good Tidings,Affliction; Channel; Focus; Tide
+752,Gouge,Basic Attack; Bleeding; Inflict; Make
+753,Grace of Light,Blessings; Increase; Performance; performanceStacks
+754,Grand Entrance,Ambush; Perform; Reset
+755,Grappler,On Hit; Scavenge
+756,Gratitude,Affliction; Cleanse
+757,Grave Pact,Heavy; Maximum HEALTH; Steal; tempValue
+758,Gravedance,cardsReturnedThisTurn; Perform; Persistent; Repeat
+759,Gravesite,Activate; Durability; Skip
+760,Greatbow,Ambush; Critical Hit; Evasion
+761,Greater Good,Grounded; One Use; Remove
+762,Greatsword,Critical Hit; HOLY
+763,Greed,Unplayable
+764,Grievous Injury,Bloodlust; Deep Wound; Inflict; Lifedrain; permaValue; Rebound
+765,Grimoire of Fire,Activate; Deplete; Durability; Fire; Fire Action; Gain Aura
+766,Grimoire of Hate,Activate; Corrupted Action; Deplete; Durability; Gain Lifelink
+767,Grimoire of Ice,Activate; Deplete; Durability; Frost Action; Gain Aura; Rime
+768,Grimoire of Storms,Activate; Deplete; Durability; Gain Amp; Lightning Action
+769,Grimoire of Taste,Activate; Deplete; Durability; Eater; Gain Big; Ingredient
+770,Grimoire of Thieves,Activate; Deplete; Durability; Monster Action; Monster Enchantment
+771,Groundpound,Brittle; cardsDrawnThisTurn; Enter Shattering; Stance
+772,Guard (Companion),Advantage; Armor; companionlevel*2; companionlevel/2; Regenerate
+773,Guerrilla Tactics,Ambush; Evasion
+774,Guidance,HOLY; Reduce; Your Companion
+775,Guiding Shot,Focus
+776,Hail of Arrows,Arrow; DEX; Spend
+777,Hail of Steel,Basic; Blessings; Make; Repeat
+778,Halifax,Blessing; Firecast; Piercing
+779,Hallowed Ground,Burning; Enemies
+780,Halo of Conviction,Memorized; Zeal
+781,Halo of Harmony,Bury; HOLY; Memorized
+782,Halo of Purity,Bury; Memorized; Virtue
+783,Halo of Wrath,Burning; Bury; Memorized
+784,Hammer,Increase Armor; On Hit
+785,Handcannon,Bomb
+786,Harmful Intent,Add; Ambush; Snares; Upgrade
+787,Harmony,channeling; Channeling; INT
+788,Harp,Hymn; Perform; permaValue; Play; Rebound
+789,Haste,Haste
+790,Hatchet,Attack; Flanking
+791,Haunting Laugh,Corruption; corruptionsInHand; Fear; Inflict; Repeat; Swap
+792,Headbutt,Damage; Interrupt; Maximum HEALTH; myMaxHealth
+793,Heads,GOLD; One Use
+794,Headshot,Critical Hit; Deep Wound; Inflict
+795,Healing Orb,HEALTH
+796,Healing Potion,HEALTH; One Use
+797,Heartfelt Sermon,Charmed; HOLY; Perform
+798,Heartstriker,Critical Hit; Darkness; Piercing; While
+799,Hearty Flank,Gain STR; Garnish; HEALTH; One Use
+800,Heavy Armor,Armor
+801,Heavy Crate,Heavy; One Use; Persistent; Untempered
+802,Heavy Strike,
+803,Heavy Swing,Rampage
+804,Helios,Execute; Firecast; Grounded; Lifedrain; Piercing
+805,Hellforged Axe,Fury; Rampage; Shuffle
+806,Herald,Charges; Deplete; Perform
+807,Hex of Cold,Frozen; Hexes
+808,Hex of Feebleness,Hexes; Increase
+809,Hex of Flames,Burning; Hexes
+810,Hex of Life,Drain; HEALTH; Hexes
+811,Hex of Vulnerability,Hexes; Vulnerable
+812,Hex of Wounding,Bleeding; Hexes
+813,Hexglaive,Corrupted; Deals; Hex; Lifedrain
+814,Hexterminate,Chain; Hexes; On Hit; Trigger
+815,Hidden Blade,Ambush; Improved; sinister; Sinister
+816,Hidden Flurry,After; Basic Attack; Make; s; Sinister; tempValue+1
+817,Hidden Pouch,Activate; Durability
+818,Hidden Pouch Effect,Conjure; Durability; Hidden Pouch
+819,Hidden Weapon,Ambush; Attack; Basic; Conjure
+820,Hierophany,Code
+821,Hoarding Presence,Enchantment
+822,Hold the Line,Gain Bolster; Gain Ward; HEALTH
+823,Hollow-tip Ammo,Critical Hit; Ranged Actions
+824,Holy Defiance,HEALTH; On Death; Overkill; Starts; Upgrade
+825,Holy Fire,Burning; HOLY; Inflict
+826,Holy Mackerel,Garnish; HEALTH; One; Rally; Remove; Scar
+827,Holy Nova,Firecast; HEALTH; Nova; novacards; Repeat
+828,Holy War,Ascend; Scars
+829,Holy Water,Burning; HEALTH; One Use; Undead
+830,Houroboros,Activate; Deplete; Durability; Foretell; foretell+3; Reactivates; Take; Tide
+831,Howl (Companion),Advantage; Bane; Inflict
+832,Humility,Dispel
+833,Hungering Strike,Execute; Lifedrain
+834,Hunter's Mark,HEALTH
+835,Hunter's Presence,Critical Hit; Ferocity
+836,Hush,Add; Inflict; Jinxed; Snare; Snares; snares
+837,Hydroform,Clone
+838,Hydromancy,Change; Charges; DEX; Ebb; Flow; For; INT; Tide
+839,Hymn of Conviction,Burning; Inflict
+840,Hymn of Conviction I,Burning; Inflict
+841,Hymn of Conviction II,Burning; Inflict
+842,Hymn of Conviction III,Burning; Inflict
+843,Hymn of Light,HOLYHOLY; HOLYHOLYHOLY; HOLYHOLYHOLYHOLY
+844,Hymn of Light I,Gain HOLYHOLY
+845,Hymn of Light II,Gain HOLYHOLYHOLY
+846,Hymn of Light III,Gain HOLYHOLYHOLYHOLY
+847,Hymn of Mercy,Charmed; Inflict
+848,Hymn of Mercy I,Charmed; Inflict
+849,Hymn of Mercy II,Charmed; Inflict
+850,Hymn of Mercy III,Charmed; Inflict
+851,Hymn of Penance,Piercing
+852,Hymn of Penance I,Piercing
+853,Hymn of Penance II,Piercing
+854,Hymn of Penance III,Piercing
+855,Hymn of Power,Blessings
+856,Hymn of Power I,Blessings
+857,Hymn of Power II,Blessings
+858,Hymn of Power III,Blessings
+859,Hymn of Vitality,HEALTH
+860,Hymn of Vitality I,HEALTH
+861,Hymn of Vitality II,HEALTH
+862,Hymn of Vitality III,HEALTH
+863,Hypnosis,Choose One; Consumes; Focus; Play
+864,Hypnosis 1,Delve
+865,Hypnosis 2,Delve
+866,Ice Lance,Critical Hit; Frozen
+867,Iceblast,Frozen; Inflict
+868,Idolize,Charges; Summon; Totem
+869,Ill-Gotten Gains,GOLD; Greed; One Use
+870,Illumination,Bury; Gain HOLY; tempValue
+871,Illusionary Arms,Basic Attack
+872,Illusionary Presence,Action; Conjure
+873,Imaginarium,ANY INT; Delve; Psionic
+874,Imp Offer,Anger; GOLD; roundNumber*2
+875,Imp Offer 1,Afflictions; Anger; my(status)Anger
+876,Imp Offer 2,Anger; GOLD; Lose; my(status)Anger
+877,Imp Offer 3,difficulty*3; HEALTH; Lose
+878,Imp Offer 4,chapter*10; HEALTH
+879,Imp Offer 5,Random Enchantment
+880,Imp Offer 6,Anger; Bury; my(status)Anger
+881,Impending Doom,Channel; Doom; Focus; my(status)Focus; Turn
+882,Imprint,Magic Action
+883,Improvision,Charges
+884,Incendiary Ammo,Burning; Hit; Ranged Actions
+885,Inevitable End,damageBonus+1; Doom; Upgradeable
+886,Infernal Contract,Corrupted; HEALTH; Impervious
+887,Infernal Racket,Delirious; Gain Anger; On Draw
+888,InfernalOffering,Infernal Offerings; Placeholder
+889,Inner Demon,Anger; Defiled; permaValue; Waning
+890,Innervation,Chain; Channel; Conjure; Critical Hit; Lightning; my(status)Chain
+891,Insidious Strike,Damage; sinister; Sinister
+892,Inspiring Shanty,Perform
+893,Intervention,Firecast; Impervious; Rally
+894,Into the Pot,damageBonus; HEALTH; Potion; Slay; Upgradeable
+895,Invocation,Blessings; Gain HOLY; HEALTH; myBlessings
+896,Ire of Serem-Pek,Combat; Gain Doom; HEALTH
+897,Iron Blood,Armor; my(status)Armor; Take
+898,Judgment,Gains; Zeal Piercing
+899,Juggling Balls,Activate; Deplete; Durability; Perform; Tada
+900,Juggling Balls Effect,Activate; Durability; Perform
+901,Junk Dive,allEnergy; Delve; Junk; Reduce
+902,Junklord,
+903,Junkyard,Add; damageBonus+1; Junk; Play; s; Scrap Pile; Starts; Turn; Upgradeable
+904,Karma Strike,Attacks; Make Basic
+905,Katana,Critical Hit; Reduce
+906,Keelhaul,Drowning; Gain Sinister; Inflict; Persistent; sinister; Sinister; Tidal
+907,Keelhaul (Tides),Inflict Drowning; Persistent; sinister; Sinister
+908,Khanjali,Inflict Poison; sinister; Sinister
+909,Killer Instincts,Ambush
+910,Kitchen Brawl,Ingredient; tempValue+1
+911,Kitchen Raid,Create; Frenzy; Ingredient
+912,Knowledge,Focus
+913,Knuckles,Cascade; Conjure
+914,Lacerate,Bleeding; Inflict
+915,Landsmeet,Banner; banners; Delve; Treaty
+916,Larceny,Charges; Steal
+917,Larceny DEX,DEX; Steal
+918,Larceny HOLY,HOLY; Steal
+919,Larceny INT,INT; Steal
+920,Larceny STR,Steal; STR
+921,Lash Out,Can; Melee
+922,Last Laugh,Bane; Fear; Finale; Inflict; Maximum HEALTH; Swap
+923,Last Stand,Gain Armor; myMissingHealth
+924,Lay In Wait,Critical Hit; Evasion
+925,Lay of the Land,Charges; Delve; Scrap Deck
+926,Lead Pipe,Dazed; Inflict; On Hit; One Use; Persistent; Untempered
+927,Lead the Charge,Banner; Blessing; Gain Rally; Memorized; ownedbanners; Repeat
+928,Leaping Shot,Evasion
+929,Leave a Mark,Ferocity; Flanking; Inflict Marked
+930,Legplates,Activate; Durability; Equipment
+931,Leo's Pride,Advance; After; Evasion; Focus
+932,Leo's Pride II,Advance; After; Focus
+933,Leo's Pride III,After; Delve; Focus; Revelation
+934,Lethal,Critical Hit; Inflict; On Hit
+935,Lieutenant,
+936,Lifedrinker Venom,Gain HEALTH; One Use
+937,Lifelink,Barrier; BLOOD
+938,Lifepod,HEALTH; Regenerate
+939,Lightning Attunement,Attune; Element; Lightning Action
+940,Lightning Bolt,Chain
+941,Lightning Rod,Chain; damageBonus+3; Shocked; Upgradeable
+942,Lightning Shield,Attune; Barrier; Chain
+943,Living Fort,Armor; Gain Fortified
+944,Lock and Load,Ammo; Bomb; Conjure; Reload
+945,Lockbox,GOLD; Lose; One Use; permaimprint
+946,Longsword,Armor; damageBonus+2; Upgradeable
+947,Lost Lagoon,Grounded; Location; Persistent; Swap; Tide; Unplayable
+948,Love Potion,Add; Charmed; Glimmer; Inflict; One Use
+949,Lovestruck,Charmed; Critical Hits
+950,Luck of the Draw,
+951,Lucky Coin,GOLD; Lose
+952,Lunging Strike,Enter Steady; Stance
+953,Lust,Unplayable; Vulnerable
+954,Lust for Battle,Add; Anger; attacksInEnemyHand; Fury
+955,Lust for Blood,Bleeding; Darkness; Gain Ferocity
+956,Mage Armor,Barrier; Chain; The Barrier
+957,Magebane,Blessing; Dispel; On Hit
+958,Mageblade,Focus; Magic; While
+959,Majatome,Execute; Lifedrain; Maximum Health; otherMaxHealth
+960,Majestic Grandeur,After; Charmed; Legendary; Maximum HEALTH
+961,Majestic Grandeur Listener,After; Charmed; Legendary; Maximum HEALTH
+962,Majestic Mind,Conjure; Dragon; Turn
+963,Maki Tagdahar,Critical Hit; Ferocity
+964,Malignance,Anger; On Draw; Take; Unplayable
+965,Mantra Mastery,Increase; Mantras; Scholar; Trigger; Turn
+966,Mantra of Mind,(cardvalue); Focus
+967,Mantra of Pain,(cardvalue)
+968,Mantra of Soul,(cardvalue); Basic Attacks
+969,Mantra of Stone,(cardvalue); Barrier
+970,Mantra of Time,(cardvalue); Momentum
+971,MantraSoulEffect,(cardvalue); Basic Attacks
+972,Map of Forms,After; Determines; Grounded; One Use; Plunder; Sunforge; TYPE
+973,Map of Forms 1,All; Melee
+974,Map of Forms 2,All; Ranged
+975,Map of Forms 3,All; Magic
+976,Map of Forms 4,All; Divine
+977,Map of Forms 5,All
+978,Map of Hues,After; COLOR; Determines; Grounded; One Use; Plunder; Sunforge
+979,Map of Hues 1,All; DEX
+980,Map of Hues 2,All; AQUA
+981,Map of Hues 3,All; ORANGE
+982,Map of Hues 4,All; INT
+983,Map of Hues 5,All; PURPLE
+984,Map of Hues 6,All; STR
+985,Map of Hues 7,All; HOLY
+986,Map of Hues 8,All; NEUTRAL
+987,Map of Hues 9,All; BLOOD
+988,Map of Power,After; CATEGORY; Determines; Grounded; One Use; Plunder; Sunforge
+989,Map of Power 1,Action; All
+990,Map of Power 2,All; Enchantment
+991,Map of Power 3,All; Item
+992,Map of Power 4,All; Equipment
+993,Map of Riches,After; Determines; Grounded; One Use; Plunder; RARITY; Sunforge
+994,Map of Riches 1,All; Common
+995,Map of Riches 2,All; Uncommon
+996,Map of Riches 3,All; Rare
+997,Map of Riches 4,All; Legendary
+998,Martial Combat,Basic Attack; Lasting
+999,Martyr's Assault,Untempered
+1000,Martyr's Resolve,HEALTH
+1001,Master of Arms,Basic Attack; Basic Attacks; enchantmentStacks; Increases
+1002,Master of Crafts,Adapt; Adaptation; Delve
+1003,Master of Forms,Anger Unique; Beastform; Shift
+1004,Masterchef,Add; Ingredients
+1005,Materialize,Bleeding; Inflict; Persistent; Piercing
+1006,Maul (Companion),Advantage; Attack; companionlevel+4
+1007,Mauler,Crushing; Fury; Rampage; Shuffle
+1008,Mechanical Arm,Activate; Durability; Play
+1009,Medikit,Activate; Durability; HEALTH
+1010,Meditations,Mantra
+1011,Melee Mastery,Basic Attack; Choose; Melee Action
+1012,Mental Assault,Attacks; Basic Attacks; Focus; Make; my(status)Focus; Scholar
+1013,Mesmerize,Charmed; damageBonus; Inflict
+1014,Meteor Storm,Burning; Bury; Channel; Foretold; Free; Turn
+1015,Mind,Focus; Gain INT
+1016,Mind Expansion,Increase; Maximum Handsize
+1017,Mind Nova,Nova; novacards; Repeat
+1018,Mind Palace,Focus; INT; Psionic
+1019,Mindblast,Focus
+1020,Mindlash,Companion; Dazed; Inflict
+1021,Mindsight,Gain Focus; INT
+1022,Mindstrike,Basic Attacks; Focus
+1023,Mojo,Perform; Soul; Souls; Use
+1024,Molten Fury,Double; Frenzy; Temporary; Upgrade
+1025,Monolith,Dazed Rampage; Inflict; Interrupt; On Hit; Untempered
+1026,Moonclaws,Swaps
+1027,Moondancing,Darkness
+1028,Moonwell,Add; Foretell; HEALTH; Moonwell
+1029,Move to Tears,Bleeding; other(status)Bleeding; Perform; Persistent
+1030,Multishot,Arrow; Evasion
+1031,Muscle Memory,Frenzy; Gain STR; Melee Action; STR
+1032,Mystic Assault,Basic Attack; Enchantment; Make; myEnchantments; Repeat
+1033,Mystic Contract,Execute
+1034,Myth of Gura,Charges; differentCostCards; Perform
+1035,Naval Warfare (Ebb),Persistent; Repeat; roundNumber
+1036,Naval Warfare (Flow),NEUTRAL; Persistent; tempValue+10; Tidal
+1037,Night Whispers,Dominated; HEALTH; Otherwise; Sleeping; Subjugate
+1038,Night's Demise,Darkness; Execute; Increase; permaValue
+1039,No Mercy,HEALTH; Maximum Health; Slay
+1040,No Soup,Anger; Charges; cooking; Cooking; Repeat
+1041,Nope!,Nope; Only; Reduce
+1042,Not Dead Yet,Aspect; HEALTH; On Death; Overkill; Resurrect; Vengeance
+1043,Oath of Blood,Anger; If HOLY; Oathbound
+1044,Oath of Fire,If HOLY; Oathbound; Rally
+1045,Oathbound,HEALTH; HOLY; Scar
+1046,Oathbreaker,Add; Ambush; Blood Taxes; Code; Inflict Bleeding; oathsbroken
+1047,Oblivion,Consumes; Focus; Slay
+1048,Observe,Foretell; foretell+3
+1049,Obsession,Gain Zeal
+1050,Occult Secrets,Cursed; Hex; Inflict
+1051,Occultism,BLOOD; Memorized; Momentum; Potency
+1052,Offer of Doom,Slain
+1053,Old Grievances,Anger; Corrupted; Gain Anger
+1054,On my Command,Basic Attack; Charges; Make
+1055,Ooooh Shiny,Charmed; Conjure; Jinxed
+1056,Opulence,Revelations
+1057,Oracle's Pendant,Conjurations; Focus
+1058,Orb of Fire,Attune; Burning; Fire; Inflict
+1059,Orb of Frost,Attune; Frost; Frozen; Inflict
+1060,Orb of Thunder,Attune; Chain; Lightning
+1061,Orphic Glance,Bury; Swap
+1062,Overdraft,BLOOD; Convert
+1063,Overmind,cardsInHand; Discard Phase; End; HEALTH; Lose; Maximum Handsize; Turn
+1064,Overwatch,Armor; Stagger
+1065,Pacified,Magic; Melee; Ranged
+1066,Pacifism,Impervious
+1067,Painful Inquiry,BLOOD; Vile Wound
+1068,Painful Memories,Anger; Discard Pile
+1069,Panacea,Affliction; Cleanse; HEALTH; One Use
+1070,Panzer,Activate; Armor; damageTaken; Durability
+1071,Parrot Familiar,Activate; Deplete; DEX; Durability; Gain GOLD; Surge
+1072,Parrot Listener,Copy
+1073,Passing of Time,Conjure; Foretell; foretell+3; Memorized
+1074,Patience,
+1075,Pay Out,GOLD; sinister; Sinister
+1076,Peace Offering,Charmed; Inflict; Magic; Melee; Ranged; Repeat
+1077,Permafrost,Frozen
+1078,Permeating Cold,Frozen
+1079,Persecution,Basic Attack; Code; Make
+1080,Perseverance,Affliction; Afflictions; Gain HOLY
+1081,Pestilent Decree,chapter; Decay; Forbidden Name; Forbidden Names
+1082,Phantom Volley,Arrow; Conjure
+1083,Phase (Companion),Advantage; Grant Evasion
+1084,Philosophers Stone,Charges; Conjure; Scholar
+1085,Phylactery Visor,Armor; Bane; Corrupted; Hexglaive; Inflict; Transform
+1086,Pickpocket,Ambush; Charges; Delve; GOLD; On Hit; Potion
+1087,Piece of Eight,Change; Channel; Conjure; Lucky Coin; Tide
+1088,Pierce the Veil,Basic Attack; Foretell; foretell+3
+1089,Pinspitter,Delve; Effigy; On Hit; Pin
+1090,Pious Sermon,HOLY; Perform; Zeal
+1091,Pirate Bank,GOLD; HEALTH; Increase; Persistent; tempValue+1; Tidal
+1092,Pirate Bank (Tides),GOLD; Increase; myGold/50; Persistent; tempValue+1; Tidal
+1093,Pirate Ink I,Grounded; Talent
+1094,Pirate Ink II,Grounded; Talent
+1095,Pirate Ink III,Grounded; Talent
+1096,Pirate Ink IV,Grounded; Talent
+1097,Pirate Ink V,Grounded; Talent
+1098,Pirate Parlour,Durability; GOLD; Grounded; Open; Pay
+1099,Pirate's Parley,Booty; damageDealtThisTurn; Elite; Execute; GOLD; Inflict Charmed
+1100,Pitch,Reduce
+1101,Plague Strike,Flanking; other(status)Poison; Poison
+1102,Plain Bow,DEX INT; Rainbow; STR HOLY
+1103,Plated,Gain Armor; On Hit
+1104,Plated Maul,Armor; On Hit; Swap
+1105,Plunder,Delve; On Hit; Reward
+1106,Pocket Aces,Conjure
+1107,Poison Arrow,Inflict Poison
+1108,Poison Coating,Hit; Melee; Poison; Ranged
+1109,Poison Damage,poisonDamage; Your Poison
+1110,Poison Nova,Inflict; Nova; novacards; Poison; Potency; Repeat
+1111,Polish,Armor; Blessing; typesOfEnergy
+1112,Polished Steel,Armor; damageBonus+1; Equipment; Upgradeable
+1113,Portal,Battle; Leave
+1114,Potion of Alacrity,Haste; One Use
+1115,Potion of Trickery,Add; Evasion; One Use; Snare
+1116,Potion of Visions,One Use
+1117,Potion Sash,Activate; Conjure; Durability; Potion
+1118,Pounce (Companion),Bleeding; Free
+1119,Powder Pockets,Bomb; Bombs; Charges; Conjure
+1120,Power Armor,Activate; Armor; Durability; Fortified
+1121,Prayer,Bury; Gain HOLY
+1122,Precision,Critical Hit; Deep Wounds; Melee Actions; otherWounds
+1123,Predator's Guile,Ambush; Critical Hits; Darkness; Melee Actions; While
+1124,Preordain,Grounded; One Use; Upgrade
+1125,Preparation,DEX; Gain DEX
+1126,Prepare for Prey,Bleeding; Inflict Marked; Soul; Spend
+1127,Preserve,Remove ALL; Return; Status Effects
+1128,Prestidigitation,Reduce
+1129,Prestige,Conjure
+1130,Pride,Jinxed; Unplayable
+1131,Prismatic Shard,Anger; Evasion; Focus; HEALTH; Memorized; Use DEX; Use HOLY; Use INT; Use STR
+1132,Private,
+1133,Profane Shell,Afflictions; Barrier; Convert
+1134,Profanity,Corrupted; Increase
+1135,Profess,Conjure; Focus; Foretell; my(status)Focus; Prophetic Bolts
+1136,Project Kata,highestCopiesPlayed; Mantra
+1137,Promotion,Charges; Conjure; Coronation; Deplete; Rally
+1138,Prophetic Bolt,Inflict Doom; tempValue; When Foretold
+1139,Prosperity,Consumes; Focus; GOLD
+1140,Providence,Foretell; foretell+3; Foretold; Gain HOLY
+1141,Prowl (Companion),Advantage; companionlevel; Critical Hit; Ferocity; Grant
+1142,Prowler,Ferocity; Melee; Ranged
+1143,Prowling Guardian (Companion),companionlevel; Ferocity; Turn
+1144,Psionic Pulse,(cardvalue); cardsInHand
+1145,Psychic Binding,Elite; Scar; Subjugate; Your Companion
+1146,Pull from Aether,Conjure; Magic Action
+1147,Pull from Fire,Adaptation; Melee
+1148,Pure gold,GOLD; Lucky Coins; myGold/10
+1149,Pyroclasm,Add; Burning; Destroy Pyroclasm; Memorized; Remove ALL; Turn
+1150,Quarterstaff,(cardvalue); All Quarterstaffs; On Hit
+1151,Quick Adaptation,Permanently
+1152,Quick Chemistry,Potion
+1153,Quick Jab,Ambush; Basic Attack; Make
+1154,Quick Recitation,Scholar; Trigger; Turn
+1155,Quick Recovery,Charges; Gain HEALTH; my(status)Stagger; Stagger
+1156,Quickchange,Ambush; Conjure
+1157,Quicksand,(cardvalue); Conjure; Doom; Evasion; Momentum; Quicksand
+1158,Quickshot,Critical Hit; Evasion
+1159,Rabbit Foot,Activate; Coins; Conjure; Durability; Lucky Coin
+1160,Radiant Assault,Basic Attack; Make; Repeat; typesOfEnergy
+1161,Radiant Burst,Blessings; Empower; Gain DEXINTSTRHOLY; Spend
+1162,Radiant Mace,(cardvalue); Critical Hit; Gain HOLY
+1163,Radiant Power,Delve; Equipment; Surge
+1164,Radiant Recovery,damageBonus+2; healingTurn; HEALTH; Upgradable
+1165,Rage Forge,Adapt; Anger
+1166,Raider's Reward,Basic Attack; Basic Attacks; Choose; Conjure; Make; One Use; Swap
+1167,Rainbow,Arrow; Conjure
+1168,Rallying Shout,(cardvalue)Fury; Anger; Charges; Fury; Gain Rally
+1169,Ransack,Gain DEX; Scavenge
+1170,Ransom,Add; Pay Out; Sinister
+1171,Rapid Reload,Arrow; Conjure
+1172,Rapier,Add; Can; Flanking; Glimmer; Piercing
+1173,Rapture,Can; cardsInGraveyard; Lifedrain; permaValue; Rebound; Repeat
+1174,Rations,Create; Ingredients Persistent; One Use; Untempered
+1175,Rattler,Flanking; Perform; Reaping
+1176,Ravage,Ascended; On Hit; Rampage; VOIDVOID Defiled
+1177,Ravage (Companion),Advantage; companionlevel; Grant DEX
+1178,Raven Claws,Focus
+1179,Raven Familiar,Activate; Durability
+1180,Reach Within,Defiled
+1181,Reapers Mark,After; Darkness; Deep Wound; Hit
+1182,Reaping Strike,Lifedrain; Reaping
+1183,Reave,Critical Hit; HEALTH; Souls; Spend
+1184,Reaver,Frenzy; HEALTH; Restore
+1185,Recast,actionsPlayed; Conjure; Flow; Magic Action
+1186,Recite,Conjure; Delve; Hymn; Scholar
+1187,Reckless Charge,Ambush; Take
+1188,Reckless Frenzy,Melee Action
+1189,Reckoning,Critical Hit; Melee Actions; Soul; souls
+1190,Reclaim,Charges; Soul; Spend
+1191,Reconfigure,Battleclaw; Charges; Persistent; Play
+1192,Reconnaissance,Ambush; Foretell; foretell+5
+1193,Recruitment,Aeternal Regelia; Perform; regalia; Subjugate
+1194,Rectify,Firecast; Gain HEALTH; Zeal
+1195,Recuperate,Anger; enemyDamageTakenLastTurn; HEALTH; Unscathed
+1196,Recurring Thoughts,Choose; Conjure; damageBonus+1; Upgradeable
+1197,Recycle,Return
+1198,Reforge,Basic Attack; Delve; Grounded
+1199,Refracture,Repeat; typesOfEnergy
+1200,Remembrance,Enchantment; Soul; Spend
+1201,Rend (Companion),Advantage; Affliction; companionlevel+2; Inflict
+1202,Renew,HEALTH; HOLY; INT; Lasting
+1203,Renewing Insights,HEALTH
+1204,Repel,Barrier
+1205,Replication,Channel; Clone; Summon; Turn
+1206,Represent,Banner; Delve
+1207,Reprisal,Add; damageTakenLastTurn
+1208,Reservoir,Channel; Turn
+1209,Resonance,Conjure
+1210,Resourceful Presence,ANY
+1211,Restock,Bombs; Conjure
+1212,Retaliate,Gain STR; Interrupt; Melee
+1213,Retribution,Affliction; Gain Reflect; Lifedrain
+1214,Return to Dust,Agile; Ambush; Costs; Reset
+1215,Reverberations,damageBonus+1; INT; Removed; Upgradeable
+1216,Reverence,Ascend; Divine
+1217,Revive,Bury; Cleanse; HEALTH
+1218,Revived,Companion
+1219,Revivify,HEALTH
+1220,Rewind,actionsPlayedLastTurn; Conjure
+1221,Rhymebind,Critical Hit; Frozen; Inflict; Inflict Permafrost; On Hit
+1222,Rigged Explosives,Charges; damageBonus; Upgradeable; Your Bombs
+1223,Righteous Blades,Basic Attack; Basic Attacks; Burning; Hit; HOLY On
+1224,Righteous Vigor,Frenzy; HEALTH; HOLY; Repeat
+1225,Righteousness,Blessings; myBlessings
+1226,Rimebind,Frozen; Gain INT; INT
+1227,Ring of Power,Burning; damageBonus; Frozen; GOLD; HEALTH; myGold; Randomly; Repeat; Upgradeable
+1228,Riot Shield,Activate; Armor; Can; Durability
+1229,Rip (Companion),Advantage; companionlevel; Grant Souls
+1230,Riptide,Persistent
+1231,Rise Again,Scars; Shuffle
+1232,Ritual Contract,Execute; HEALTH
+1233,Ritual of Aphotic,Add; After; myLevel/2; Performances; Poison; Potency
+1234,Ritual of Rain,Affliction; After; Ferocity; Performances
+1235,Ritual of Strength,After; HEALTH; Maximum HEALTH; Performances
+1236,Ritual of Strings,After; Effigy; Performances; Pin
+1237,Ritual of Vodou,After; HEALTH; Maximum Health; myMaxHealth; Performances
+1238,Ritual Totem,Summon; Totem
+1239,Ritualist,Performance; Ritual
+1240,Roar (Companion),Advantage; Anger; companionlevel; Grant; Inflict Stagger
+1241,Rogue's Locket,DEX; Evasion; Gain DEX; While
+1242,Roll the Bones,
+1243,Rousing Sermon,Divine; Perform; Zeal
+1244,Rousing Shanty,Ferocity; Perform
+1245,Ruby Prism,Armor; Cards; enchantmentStacks; STR
+1246,Ruination,Critical Hit
+1247,Rumblings,Charges; Deplete; Return; Shuffle
+1248,Rummage,Charges; damageBonus+1; Scavenge; Upgradeable
+1249,Rune of Persistence,Add Persistent; Grounded; One Use
+1250,Rune of Smithing,Adaptation Slot; Add; Grounded; Melee Action; One Use
+1251,Runehammer,Adapt; On Hit
+1252,Rush of Steel,Anger; Basic Attacks; Gain Haste; Shuffle
+1253,Rushed Forgery,Create; Untempered
+1254,Rust,enchantmentStacks; Rust; Upgrade
+1255,Rusty Lamp,Activate; Durability; Grounded; Permanently; permaValue; Revelation
+1256,Rusty Spear,Blessings; Halifax; Hallowed Spear; permaValue; Transform
+1257,Sabotage,allEnergy; Blessing; Dispel; Energy; Momentum; Reduce Battle
+1258,Sacred Tome,Code; Delve; Devotion; One Use
+1259,Sacred Ward,
+1260,Safeguard,Free; Ward
+1261,Sageblast,Gain INT; Magic Actions; magicCards
+1262,Saint,Gain HEALTH; Gain HOLYHOLY; HOLY
+1263,Salty,Critical Hit
+1264,Salty Femur,Armor; Gain Fortified; Garnish; One Use
+1265,Salvage,Basic Attack; Make; permaValue; Rebound; Return
+1266,Salvation,Anger; Defiled; During; Form; HEALTH; Your Demon
+1267,Sanctified Strikes,Actions; HOLY; myEnergyHOLY
+1268,Sanctify,Burning; Firecast; Grounded; HEALTH; Inflict
+1269,Sanctuary,Bury; Interventions; Shuffle
+1270,Sand Nova,Basic Attack; Make; Nova; novacards; Repeat
+1271,Sand Soldiers,Clone; Create; Evasion; Persistent
+1272,Sandblast,Agile; Interrupt; Momentum
+1273,Sandcastle,Barrier; Channel; Clone; Clones; clones; Gain Barrier
+1274,Sandkick,Gain Evasion; Junk; On Hit; Scrap Pile
+1275,Sandshroud,Evasion; Momentum; Swiftness
+1276,Sandstride,Dexterity; Evade; Surge
+1277,Sanguinaria,Darkness; Lifedrain; Melee Actions
+1278,Sanguine Casting,Blood
+1279,Sanguine Scrying,Bleeding
+1280,Sanguine Shield,Barrier; Bleeding
+1281,Sanguine Step,Conjure; Evasion; Gain Immune; Materialize; Slowed
+1282,Sanguine Surge,Gain STR; STR; Take
+1283,Sanguine Visions,Blood; Conjure
+1284,Sapphire Prism,Cards; Chain; enchantmentStacks; INT
+1285,Savagery,Crushing; STR
+1286,Scalding,Perform; Scalding; Scalding Unique
+1287,Scatter Souls,Souls; Spend; Vengeance
+1288,Scatterbrain,Boss; Can; Grounded; Replace
+1289,Scattershot,Ambush; Arrow; Cascade; Continuity; Evasion; Finale; Flanking; Play
+1290,Scheme,Charges; DEX; Reduce; Sinister
+1291,Schism,Zeal
+1292,Scimitar,actionsPlayed; Burning; Flanking; Flow; Frozen; Inflict
+1293,Scorch,Attuned; Burning; While Fire
+1294,Scorpio's Ruin,Advance; After; Doom; Jinxed
+1295,Scorpio's Ruin II,Advance; After; Darkness; Doom
+1296,Scorpio's Ruin III,After; Doom; Time
+1297,Scorpion Strike,Agile; Inflict Doom; Inflict Stunned; Persistent
+1298,Scythe,Execute; Gain HEALTH; Overkill Reaping
+1299,Sea Legs,Critical Hit; Tide
+1300,Sea Shanty,Change; Performance; Shanty; Tide
+1301,Searing Radiance,Burning
+1302,Searing Ray,Burning; Firecast; Gain INT
+1303,Searing Weapon,Basic Attack; Burning; Focus; Make; While
+1304,Seeker's Wisdom,Foretelling
+1305,Seers Orb,Doom; Inflict; tempValue; When Foretold
+1306,Seething Anger,(cardvalue)Fury; Add; Anger; Fury; STR
+1307,Seismic Shield,Armor
+1308,Seismic Slam,Gain STRSTR; Rampage
+1309,Serenade,Charmed; Inflict; Performing
+1310,Serenity,Focus; HEALTH
+1311,Sergeant,
+1312,Serrated Arrow,Bleeding Piercing; Inflict
+1313,Served Cold,Frozen; HEALTH; Inflict; Ingredient; Stance; While
+1314,Served Hot,Burning; Inflict; Ingredient; Momentum; Stance; While
+1315,Set Sail,Foretell; foretell+3; Foretold; Increase; Persistent; tempValue; Tidal
+1316,Set Sail (Tides),Add; Gain DEX; Persistent; s; tempValue+1; Tidal
+1317,Set the Trap,Add Snares; allEnergy
+1318,Set to Blow,Bombs; Conjure
+1319,Shadow Mastery,damageBonus; Darkness; Increase; permaValue; Rebound; Upgradeable
+1320,Shadow Play,Advantage; Darkness; Evasion
+1321,Shadow Sanctuary,Evasion; Regenerate; Sinister
+1322,Shadowtheft,Delve; Item
+1323,Shakedown,Add; Corruption; corruptionCards; GOLD; Greed; Sinister
+1324,Shamshir,Add; Agile; Ambush; Gain Evasion
+1325,Shape Steel,Adaptations; Charges; Conjure
+1326,Shapeless Mastery,
+1327,Shard of Divinity,Blessing; HOLY
+1328,Shard of Malice,Bleeding; Inflict; Memorized; Poison; Use DEX; Use STR
+1329,Sharp,Add; Piercing
+1330,Sharp Leaves,Bleeding; Deep Wound; Garnish; Inflict; One Use
+1331,Sharp Pin,Armor; Maximum HEALTH; otherMaxHealth/20; Persistent; Steal; They
+1332,Sharp Wires,Add; damageBonus; Snare; Snares
+1333,Sharpening Stone,Basic Attack; Grounded; One Use; Upgrade
+1334,Sharpshooter,Ranged Actions; rangedactionsPlayed
+1335,Shatter,Frozen
+1336,Shattering Stance,Brittle; Immune; Pinned
+1337,Shell Box,Ammo; Delve; One Use; Persistent; Untempered
+1338,Shield of Faith,Armor; Gain HOLY; On Draw
+1339,Shield Throw,Armor; Conjure; Flanking; my(status)Armor; Shield Throw
+1340,Shieldglare,HOLY; Impervious
+1341,Shiv,Bleeding; DEX; Inflict; On Hit; Sinister
+1342,Shock Therapy,Chain; Gain Focus
+1343,Shock Wires,Chain; Gain DEX; Gain DEXDEX; One Use; Persistent; Untempered
+1344,Shocking Grasp,Chain; my(status)Chain; Shocked Chain
+1345,Shortbow,Arrow; Flanking; Shoot
+1346,Shovel,Activate; Deplete; Destroy; Durability; Scavenge; Treasure
+1347,Show must go on,HEALTH; Perform; Performance; performanceStacks
+1348,Shrapnel,Bomb; Create; One Use; Persistent; Untempered
+1349,Shrapnel Bomb,Charge; Persistent; Ready; Speed
+1350,Shred,Cat; Critical Hit; Form; Shift
+1351,Shred (Companion),Advantage; Bleeding; companionlevel/2; Critical Hit; Grant; Inflict
+1352,Shredder Axe,Critical Hit; Interrupt; Performing
+1353,Shuriken,Play
+1354,Sift the sands,Shuffle
+1355,Sifting Time,Barrier; Foretell; Persistent
+1356,Sight Beyond,
+1357,Silent Shanty,Ambush; Perform; Reset
+1358,Simulacrum,Conjure
+1359,Singe,Burning; Bury; Inflict
+1360,Singular Focus,All; Code; Combat; Element; Grounded; Permanently Attune
+1361,Singularity,Play
+1362,Sinner,Corrupted; GOLD; Sin; Sinister; Swap
+1363,Siphon Magic,Blessing; Steal
+1364,Siphoning Pin,Anger; Maximum HEALTH; otherMaxHealth/20; Persistent; Steal; They
+1365,Siphoning Strike,Frenzy; HEALTH
+1366,Siren's Call,Inflict Charmed; Perform; Performance; performanceStacks; Persistent; Tidal
+1367,Siren's Call,Charmed; Finish; other(status)Charmed; Performance; Persistent; Piercing
+1368,Skillshot,Critical Hits; Foretell; foretell+3; Gain Barrier; Ranged
+1369,Skylars Arrow,Charmed; Inflict; Piercing
+1370,Skylars Quiver,Memorized; Perform; Skylars Arrow
+1371,Slam (Companion),Advantage; companionlevel*3; Dazed; Inflict
+1372,Slayer's Advance,Darkness; Execute; Overkill
+1373,Sleep,
+1374,Sleep Sand,Can; Charges; HEALTH; Sleep
+1375,Sleeping Poison,Charges; Inflict; Jinxed
+1376,Sleight of Hand,Ambush; Charges; Conjure; Delve
+1377,Sloth,Slow; Unplayable
+1378,Slow,Inflict; Slow
+1379,Smite,HOLY; Piercing
+1380,Smoldering Ribs,Burning; Garnish; Inflict; Interrupt; One Use
+1381,Snake Dance,Charmed; Gain Potency; Perform; Performance; performanceStacks
+1382,Snake Familiar,Activate; Affliction; Corrupted; Durability; Gain HEALTH; otherAfflictions; Poison
+1383,Snare,One Use; Piercing; Snares; Take; tempValue; Upgrade
+1384,Sneak Attack,Ambush
+1385,Snowstorm,areaSpecial; Campsites; Frozen; Intensifies
+1386,Solar Lance,Burning; Deals; Firecast; Piercing
+1387,Solarium,Code; Firecast; HEALTH
+1388,Solid Strike,Brittle; Inflict; On Draw; tempValue
+1389,Song of Aldour,After; DEX; Performances
+1390,Song of Lovers,After; Charmed; Inflict; myLevel; Performances
+1391,Song of Prime,After; HEALTH; Performances; Restore
+1392,Song of Resilience,After; Barrier; Performances
+1393,Song of Sages,After; Performances
+1394,Song of Slaughter,After; myLevel; Performances; Piercing
+1395,Song of Strength,After; myLevel; Performances
+1396,Song of Vitae,After; Lifedrinker Venom; Performances
+1397,Soul Imprint,Convert; Create; NEUTRAL; Untempered
+1398,Soul Kama,permaValue; Rebound; Souls; Upgrade
+1399,Soul Nova,Heavy; Nova; novacards; Repeat; Soul
+1400,Soul of Vengeance,Critical Hit; On Draw; Soul
+1401,Soul Tether,Critical Hit; Souls
+1402,Soulbinder,HEALTH; Heavy; Maximum HEALTH; Souls; souls/2; Steal
+1403,Soulbolt,Affliction; Flanking; Soulbolt; Souls; Spend
+1404,Soulbrand,Critical Hit; Soul
+1405,Soulfire Bomb,Charge; Lifedrain; Persistent; Ready; Reaping; Speed
+1406,Soulfood,Create; Heavy; Ingredient; Performance
+1407,Soulreave,Charges; Flanking; Gain Souls
+1408,Souls,HEALTH; Souls; Use Souls
+1409,Soulsearch,Charges; Souls; Spend
+1410,Soultap,cardsInGraveyard; Discard Pile; Soul; Take
+1411,Spark of Eternity,Enchantment; Grounded; Imbue; Untempered
+1412,Sparkclaw,Activate; Armor; Chain; Durability; Zap
+1413,Spectral Guardian (Companion),Afflictions; otherAfflictions; Reduce
+1414,Spell Echo,Gain Slow; Play
+1415,Spell Thief,Play
+1416,Spellbind Bracers,Activate; Attune; Durability; Element
+1417,Spellbinders,Persistent; Swap
+1418,Spellbreaker,Afflictions; Anger; Blessing; Dispel; myAfflictions
+1419,Spellburn,Bury; Conjure; HOLY
+1420,Spellcoil,actionsPlayed; Chain; Flow; Inflict; Shocked
+1421,Spellcraft,Conjure; Focus; Magic Action
+1422,Spellsnap,imprints; Magic Action
+1423,Spellstrike,Basic Attack; Blessing; Dispel; Make
+1424,Spicy Acid,Garnish; Inflict; Lose; One Use; Poison; Potency; Sated
+1425,Spin the Web,Charmed; Poison; Snares
+1426,Spirit Arrow,Deals; Focus
+1427,Spirit Bond,Grounded; HEALTH; Reduce; Spirit Bond; Turn
+1428,Spirit Duet,Ancestral; Charges; Gains Souls; Perform; Performance; performanceStacks
+1429,Spirit Vessel,Effigy; Heal; Maximum HEALTH; myMaxHealth/5; Requires
+1430,Spiritbomb,Maximum HEALTH; On Hit; Reaping
+1431,Spiritual Warfare,Basic Attack; Make
+1432,Split,Charges; Clone; Summon
+1433,Spoils of War,Conjure; Item
+1434,Staff of Thunder,Chain
+1435,Staggering Blow,Balance; Basic Attack; Basic Attacks; Make
+1436,Stance Dance,Enter; Stance
+1437,Stand Your Ground,Armor
+1438,Standoff,Armor; Impervious; Persistent; Unscathed
+1439,Stardart,(cardvalue)Stardart; Can; Chance; On Hit; Revelation; Stardart
+1440,Starfall,Channel; Conjure; Stardart; Turn
+1441,Starmap,Conjure; Foretold; Stardarts; tempValue+2
+1442,Stash of Weapons,Basic Attacks; Conjure
+1443,Steady Ground,Armor; Critical Hit
+1444,Steady Stance,Immunity; STR; Stunned
+1445,Steady Strike,Basic Attack; Charges; Make
+1446,Steel Arrow,
+1447,Steel Evolution,Adapt
+1448,Steel Faith,Blessings; Gain Armor; highestBlessings
+1449,Steel Golem,Activate; Durability; Reduce
+1450,Steel Longsword,Armor
+1451,Steel Soul,Barrier; Basic Attack
+1452,Steel Strikes,Adaptation; adaptations; Gain STR; On Hit
+1453,Steel Titan,Armor; Combat; damageBonus+10; Gain Fortified; Upgradeable
+1454,Steelcharge,Untempered
+1455,Steelskin Potion,Armor; One Use
+1456,Steelwall,Add; Armor; Steelcharge
+1457,Stimshot,Bolster; Charges; damageBonus+1; Gain Armor; Take; Upgradeable
+1458,Stockpile,Bomb; damageBonus+2; Play; Starts; Upgradeable
+1459,Stone Legends,Shuffle; Stone Blade; Untempered Monolith
+1460,Stone Nova,Armor; Nova; novacards; Repeat
+1461,Stone Stance,Armor; Bleeding; Immune
+1462,Stone Strength,Anger; Return; Stance
+1463,Stoneshape,Enter Stone; Gain Armor; other(status)Stagger; Stagger; Stance
+1464,Stoneskin,Charges; Resilience; Totems; totems
+1465,Stonewall,Armor; Increase; On Draw; tempValue
+1466,Storm Arrow,Cascade; Chain; Conjure; Storm Arrow
+1467,Storm Nova,Chain; Nova; novacards; Repeat
+1468,Storm Shield,actionsPlayed; Chain; Flow; Gain Barrier
+1469,Stormaxe,Cascade; Chain; Conjure; Zap
+1470,Stormbinders,Chain; Swap
+1471,Stormblade,Add; Chain; Charged Blade
+1472,Stormbolt,Conjure; Continuity; Empower; Zap; Zap Chain
+1473,Stormbrand,Critical Hit; Lightning
+1474,Stormcast,Chain; damageBonus; Mergecraft; Upgradeable
+1475,Stormshell,Barrier; Chain; Channel; When Stormshell
+1476,Stormstrikes,Basic Attack; Lightning Bolt
+1477,Strange Vial,Conjure; One Use; Persistent; Potion; Untempered
+1478,Strike of Anguish,permaValue; Rebound
+1479,Strike Vitals,HEALTH; Lifedrain; Melee; On Hit
+1480,Stroke of Misery,Bane; Basic Attack; Inflict; Make
+1481,Studied Strike,Add; tempValue+3
+1482,Stupor,Discard Phase; Gain Focus; Skip; Sleep
+1483,Stylus,Conjure; Mantra; On Hit
+1484,Substance Z,Charges; Double
+1485,Succumb,Defile; permaValue; Waning
+1486,Sudden Oration,Ambush; Gain HOLY; HOLY; Perform
+1487,Sudden Strike,Basic Attack; Make; Play
+1488,Sugarplum,Add; Garnish; Inflict Charmed; One Use; Potency; Prank
+1489,Sunbolt,Blessings; Increase
+1490,Sunder,Basic Attack; Critical Hit; Return; Stance
+1491,Sunder Armor,Armor; other(status)Armor; Remove; Vulnerable
+1492,Sungod's Armory,Basic Attacks; If HOLY
+1493,Sunken Forge,Grounded; Persistent
+1494,Sunlance,Firecast; If HOLY; Virtue; Zeal
+1495,Suntree Twig,Demons; Grounded; Lifedrain; Undead
+1496,Surge of Dexterity,Basic Attack; Conjure; Gain DEX
+1497,Surge of Intellect,Focus; Gain INT
+1498,Surge of Strength,Gain STR; HEALTH
+1499,Surge of Unity,Charges; Gain DEX; HOLY; INT STR
+1500,Surgestone,damageBonus; Heavy; Momentum; Surge; Upgradeable
+1501,Surveillance,Basic Attack; Equipment; Foretell; foretell+3; Take
+1502,Suspicious Offer,highestSnareUpgrade; Put; Snare; Upgrade
+1503,Sweeping Strikes,Conjure; Frenzy; Melee Action
+1504,Swift Strike,Return; Stance
+1505,Swipe (Companion),Advantage; Attacks; companionlevel+4
+1506,Symbiote,Lifedrain; Monster Actions; Psionic
+1507,Symbol of Unity,
+1508,Synaptic Storm,Can; Chain; Upgraded
+1509,Tabu Ritual,Charges; Return
+1510,Tactical Retreat,Ambush; Arrows; Conjure; Evasion
+1511,Tails,Gain HOLY; One Use
+1512,Take Cover,Ambush; Armor; Reset; Sinister
+1513,Take the Hit,Charges; Prevent; Stagger
+1514,Taunt,Perform; Snares; Upgrade
+1515,Taurus' Rage,Advance; After; Basic Attacks; INTDEX
+1516,Taurus' Rage II,Advance; After; Anger; Basic Attacks; HEALTH
+1517,Taurus' Rage III,After; Basic Attacks; Mark; Tauros
+1518,Tectonic Fury,Anger; Enter Frenzied; On Draw; Stance; STR
+1519,Televan Compass,Activate; Durability; Foretell; foretell+3
+1520,Televan Insight,Foretell; foretell+3; mapsindeck; Tide; Treasure Map
+1521,Televan Rum,Delirious; HEALTH; One Use
+1522,Temperance,Armor
+1523,Tempered,Execute; Upgrade
+1524,Tempered Soul,Scholar
+1525,Tempered Steel,Add; Anger; Fury; Gain Armor; my(status)Anger
+1526,Tempest Blast,Chain; Crushing
+1527,Ten-Sided Strike,Conjure; DEX; On Hit
+1528,Tenderize,Crushing Blow; Imbue; Ingredient; Ingredients
+1529,Terminate,Consumes; Focus; Remove
+1530,Test of Faith,allEnergy; HOLY; Oathbound; Take
+1531,Test Subject,damageBonus+1; Inflict; Upgradeable
+1532,Thaumaturgy,Corrupted; Increase; Magic; Magic Action; magicActionsPlayed
+1533,The Dawnbringer,Dawnbringer
+1534,The Hunger,Defiled; Destroy; On Hit; Upgrade
+1535,The Journey,Choose; Path; paths; Scholar
+1536,Thick Skin,Armor; Cooking; Sated
+1537,Thinktank,allEnergy; Spend
+1538,Thorned Pin,Impervious; Maximum HEALTH; otherMaxHealth/20; Persistent; Steal; They
+1539,Thoughtcast,Add Psionic
+1540,Thousand Cuts,DEX
+1541,Thrill of the Find,DEX
+1542,Throw Technique,Attacks; Basic; Melee Actions; Melee Basic; One Use; Permanently; Ranged Actions
+1543,Throwing Knife,Conjured; Free; Hits; Perform; tempValue
+1544,Thunderclap,Cascade; Chain; Critical Hit
+1545,Thundergod's Fury,Anger; Critical Hit
+1546,Tidal Shift,Change; Channel; Clone; Tide
+1547,Tidalweave,Basic Attacks; Clone; clones; Clones; Summon
+1548,Time is Money,Haste; Persistent; While
+1549,Time's Up,Slain
+1550,Timestop,Gain INTINT; Grounded; Scholar
+1551,Timetap,Charges; Gain INT; INT; Scholar
+1552,Tinker,Bomb; Charges; Delve
+1553,Tinkerer's Toolbox,Otherwise
+1554,Toolbelt,Ammo; Bomb; Charges; Conjure; Delve
+1555,Total Recall,differentCards; Experience
+1556,Totem of Carnage,Anger; enchantmentStacks; Turn
+1557,Totem of Defiance,Armor; enchantmentStacks; Turn
+1558,Totem of Spirits,enchantmentStacks; Souls; Turn
+1559,Totem of Storms,Chain; Conjure; enchantmentStacks; Turn; Zap
+1560,Totemstrike,Basic Attack; Increase; Make; Totems
+1561,Towershield,Armor; damageBonus; Upgrades
+1562,Toxic Bloom,damageBonus+1; Execute; Maximum HEALTH; Permanently; Poison; Slay; Upgradeable
+1563,Toxic Relation,Maximum HEALTH; Poison
+1564,Toxic Salve,Inflict; Poison
+1565,Toxicity,Inflict; Poison; Potency
+1566,Tracking,Bleeding; Command; Memorized; Turn
+1567,Tradepost,ANY; Grounded; One Use; Replace
+1568,Trancor,Chain; Continuity; Gain Chain
+1569,Transcendence,highestCopiesPlayed
+1570,Transmorph,Conjure; Copy
+1571,Trapper's Sentry,During; Evasion; Interrupt
+1572,Treasure for Trash,Charges; Scrap Pile
+1573,Treaty of Insight,
+1574,Treaty of Joy,Perform
+1575,Treaty of Mercy,Both; HEALTH
+1576,Treaty of Might,Anger
+1577,Treaty of Peace,Charmed; Inflict
+1578,Tremors,Return; Shuffle; Stance
+1579,Tremorsense,Inflict; Stagger; Summon; Totem; totems
+1580,Trickshot,Conjure; Delve; Finale
+1581,Tripwire,Snares; Upgrade
+1582,Trophy Shot,Execute; Heal; HEALTH
+1583,True Faith,Ascended; Blessings; Double
+1584,Truesight Lodestone,damageBonus; Unplayable; Upgrade; Upgradeable
+1585,Twincasting,Magic Action
+1586,Twinlightning,Chain
+1587,Twinned,Attack
+1588,Twins,Consumes; Copy; Focus
+1589,Twinstrike,Basic Attack; Flanking; Make
+1590,Typhon's Cunning,Advance; After; Monster; Untempered Monster
+1591,Typhon's Cunning II,Advance; After; Monster Cards; Shift
+1592,Typhon's Cunning III,After; Monster Cards; Monster Enchantments
+1593,Umbral Armor,Activate; Armor; Corrupted; Defiled; Durability; Gain Fortified; VOID
+1594,Umbral Lance,Add; Vile Wound
+1595,Umbral Script,Activate; Defile; Durability
+1596,Uncanny Luck,Coins; Critical Hit; Improved; luck; Luck
+1597,Underling,GOLD; Human; Subjugate; Your Companion
+1598,Undertow,Double; drowning; Drowning; Persistent
+1599,Undertow,damageBonus+1; Drowning; Inflict; Persistent; Upgradeable
+1600,Unite,Banners; Rally; Slay
+1601,Unknown Meat,Create; Garnish; Ingredient; One Use
+1602,Unleash Arsenal,Basic Attack; Grounded; Make
+1603,Unstoppable,Armor; Pinned; Slowed; Stunned
+1604,Up the Crow's Nest,Ambush; damageBonus+1; Reset; Upgradeable
+1605,Upheaval,
+1606,Urgent Contract,Execute; GOLD
+1607,Vampirism,Add; Bleeding; Bloodlust; Lifedrain; other(status)Bleeding
+1608,Vanish,Ambush; Charges; Reset
+1609,Vanquish,Execute; HEALTH; myMissingHealth; Remove; Scar
+1610,Vault,Dazed
+1611,Vengeful Assault,Basic Attack; If HOLY
+1612,Venomancing,Basic Attacks; Poison
+1613,Vexing Echo 1,Corruption
+1614,Vexing Echo 2,Cursed
+1615,Vexing Echoes,Choose; Conjure; Corruption OR; Cursed
+1616,Vexing Presence,Charmed; End; Inflict; Jinxed; Turn
+1617,Vigil,Virtues
+1618,Vigorating Strike,Deep Wound; On Hit
+1619,Vile Blast,Afflictions; Cursed; otherAfflictions; Repeat; tempValue
+1620,Vile Sacrifice,Ascend; Corrupted; Defiled; Destroy
+1621,Vile Skewer,Inflict Bleeding; Poison
+1622,Vile Thoughts,Afflictions; Channel; INT; Magic Actions
+1623,Vile Voracity,Defiled
+1624,Vile Wound,Bleeding; One Use; Take
+1625,Violent Impulses,Basic Attack; Delve; Melee Action
+1626,Vipers Touch,Charmed; Double; Inflict; other(status)Charmed; Poison
+1627,Visceral Blow,HEALTH; myCurrentHealth; Reduce
+1628,Vision of Mercy,Charmed; damageBonus+1; HOLY; Inflict; Repeat; Upgradeable
+1629,Vital Essence,Grounded; Maximum HEALTH; One Use
+1630,Vital Strike,Lifedrain; Melee
+1631,Vitalize,Basic Attack; HEALTH; Momentum
+1632,Vodou,Effigy; Enchantment; HEALTH; Imbue; Maximum HEALTH; myMaxHealth/10; Remove; Requires; Slay
+1633,Vodou Mask,Activate; Durability; Memorized; Perform; Performance; Ritual
+1634,Void Armor,Armor; permaValue; Waning Defiled
+1635,Void Lance,Rampage
+1636,Voidcast,Attunement; Delve; Magic Action
+1637,Vow of Vengeance,Charges; Delve; Oath; Take
+1638,Vulture Soul,Ferocity; Poison
+1639,Waning Whimsy,Jinxed
+1640,Warchest,Equipment; GOLD; Pay; Turn
+1641,Warp Steel,Basic Attack; Convert; Hexglaive; One Use
+1642,Warpaint,Fury; Memorized; Shuffle
+1643,Warping Presence,Condemnation
+1644,Warrior's Locket,Anger; Gain STR; STR; While
+1645,Washed Ashore,Change; Clone; Summon; Tide
+1646,Wasteful Whimsy,Do Nothing
+1647,Wasteland,Grounded; Nothing; Persistent
+1648,Watchful Whimsy,Evasion
+1649,Watershaping,Clone; Persistent; Summon
+1650,Watershaping,Clones; Persistent; Summon
+1651,Waterwall,Clones; clones; During
+1652,Wave of Light,Affliction; Cleanse; Regenerate
+1653,Wavebreaker,Clones; clones; Repeat
+1654,Way of the Wise,Barrier; Focus
+1655,Waylay,Ambush; Conjure; Sinister
+1656,Weapon Sense,Basic Attack; Enter Adaptive; Make; Stance
+1657,Weathercast,Delve; Tidal
+1658,Weathered Hide,Junk; Resilience
+1659,Whirling Strikes,Basic Attack; basicsPlayed; Make; Repeat
+1660,Whirlpool,Drowning; Inflict; Persistent; Tidal
+1661,Whirlpool,Drowning; Inflict; Persistent; Tidal
+1662,Whistle,Activate; Command; Durability
+1663,Wicked Glare,Defiled; Hex; Inflict; Remove; VOID; VOIDVOID
+1664,Wicker Crux,Cursed; Delve; Doom; Hex; Inflict
+1665,Wild Alchemy,Charges; Conjure; Potions
+1666,Wild Storm,Conjure; Zap
+1667,Wild Strike,Fury; On Hit
+1668,Wild Surge,STR
+1669,Wildshape,Charges; Memorized; Shift
+1670,Wildshift,Shift
+1671,Will of the Jungle,Companion; Delve
+1672,Winged Strike,Flanking; Temporary; Upgrade
+1673,Winsome Whimsy,Charmed
+1674,Winter Harvest,Critical Hit; Deals; Frozen; other(status)Frozen
+1675,Wired Pin,Evasion; Maximum HEALTH; otherMaxHealth/20; Persistent; Steal; They
+1676,Wishful Whimsy,
+1677,Witching Hour,Cursed; Increases; Potency; tempValue+1
+1678,Wither (Companion),Advantage; Affliction; companionlevel; Decay; Gain HEALTH; Inflict
+1679,Withering Touch,Inflict; Poison; Synergy; tempValue+1
+1680,Witness True Evil,Add; corruptionCards; Corruptions; Vile Wound
+1681,Word of Purity,Affliction; Blessings; Cleanse; HEALTH; myBlessings
+1682,Workshop,Memorized; Snare
+1683,Worldbreaker,Can; Double; On Draw; tempValue+1
+1684,Wounded Hunter,
+1685,Wrath,Unplayable
+1686,Wrathbolt,
+1687,Wrathful Whimsy,HEALTH
+1688,X,Treasure Map
+1689,Yardsale,Next; Scavenge; Scrap Pile
+1690,Zap,Chain
+1691,Zealous Rebuke,Zeal
+1692,Zen Archery,Arrow; Conjure; Focus

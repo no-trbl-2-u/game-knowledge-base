@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 428 of first 500 generated cards
+- **Ordinal:** 428 of 1692 generated cards
 - **Source card id:** `968729`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Gain 3 Focus.<br>When this was Foretold ([[tempValue]]/[[permaValue+3]]) times, 
 ## Observed keyword / token leads
 
 `Focus`, `Foretold`, `permaValue+3`, `Revelation`, `tempValue`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

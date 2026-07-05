@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 322 of first 500 generated cards
+- **Ordinal:** 322 of 1692 generated cards
 - **Source card id:** `101565`
 - **Category:** Action
 - **Type:** Utility
@@ -84,8 +84,3 @@ Gain DEX.<br>Gain additional DEX for each time you played this card this combat 
 ## Observed keyword / token leads
 
 `DEX`, `Gain DEX`, `tempValue`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

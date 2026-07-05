@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 90 of first 500 generated cards
+- **Ordinal:** 90 of 1692 generated cards
 - **Source card id:** `157102`
 - **Category:** Action
 - **Type:** Magic
@@ -85,8 +85,3 @@ Deal [damage:4] damage.<br>Repeat this attack for each your foe's Enchantments a
 ## Observed keyword / token leads
 
 `Artifacts`, `Enchantments`, `otherEnchantments`, `Repeat`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

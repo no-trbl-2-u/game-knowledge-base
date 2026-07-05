@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 483 of first 500 generated cards
+- **Ordinal:** 483 of 1692 generated cards
 - **Source card id:** `458928`
 - **Category:** Action
 - **Type:** Corruption
@@ -87,8 +87,3 @@ Foretell [[foretell+3]].<br>Corrupted: Gain 4 HEALTH.<br>Scholar: Draw a card.
 ## Observed keyword / token leads
 
 `Corrupted`, `Foretell`, `foretell+3`, `HEALTH`, `Scholar`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

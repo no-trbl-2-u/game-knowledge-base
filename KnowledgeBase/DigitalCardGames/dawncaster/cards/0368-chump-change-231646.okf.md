@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 368 of first 500 generated cards
+- **Ordinal:** 368 of 1692 generated cards
 - **Source card id:** `231646`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Conjure a Lucky Coin.<br>Return this to your hand whenever you finish a Performa
 ## Observed keyword / token leads
 
 `Conjure`, `Lucky Coin`, `Performance`, `Return`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

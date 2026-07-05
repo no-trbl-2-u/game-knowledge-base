@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 450 of first 500 generated cards
+- **Ordinal:** 450 of 1692 generated cards
 - **Source card id:** `476818`
 - **Category:** Action
 - **Type:** Melee
@@ -87,8 +87,3 @@ Advantage: Inflict a Deep Wound. Rampage.
 ## Observed keyword / token leads
 
 `Advantage`, `companionlevel*4`, `Deep Wound`, `Inflict`, `Rampage`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

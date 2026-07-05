@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 148 of first 500 generated cards
+- **Ordinal:** 148 of 1692 generated cards
 - **Source card id:** `101699`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -84,8 +84,3 @@ This combat, gain DEX when you inflict Poison.<br>DEX: Gain 1 Potency. Unique.
 ## Observed keyword / token leads
 
 `DEX`, `Poison`, `Potency`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

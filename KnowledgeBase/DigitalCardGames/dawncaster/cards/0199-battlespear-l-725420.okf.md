@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 199 of first 500 generated cards
+- **Ordinal:** 199 of 1692 generated cards
 - **Source card id:** `725420`
 - **Category:** Basic Attack
 - **Type:** Divine
@@ -85,8 +85,3 @@ Deal [damage:5] damage. <br>Lifedrain if HOLY was spent Reaping. Untempered.
 ## Observed keyword / token leads
 
 `HOLY`, `Lifedrain`, `Reaping`, `Untempered`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

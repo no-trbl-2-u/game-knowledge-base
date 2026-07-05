@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 242 of first 500 generated cards
+- **Ordinal:** 242 of 1692 generated cards
 - **Source card id:** `229024`
 - **Category:** Action
 - **Type:** Utility
@@ -81,8 +81,3 @@ Gain HEALTH equal to twice the next damage you take.
 ## Observed keyword / token leads
 
 `Gain HEALTH`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

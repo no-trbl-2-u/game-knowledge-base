@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 264 of first 500 generated cards
+- **Ordinal:** 264 of 1692 generated cards
 - **Source card id:** `967481`
 - **Category:** Action
 - **Type:** Melee
@@ -85,8 +85,3 @@ Deal [damage:4] damage.<br>Ambush: Draw cards equal to your foe's cards ([[enemy
 ## Observed keyword / token leads
 
 `Ambush`, `DEX`, `enemyEnergy`, `enemyHand`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 390 of first 500 generated cards
+- **Ordinal:** 390 of 1692 generated cards
 - **Source card id:** `775992`
 - **Category:** Code
 - **Type:** Divine
@@ -84,8 +84,3 @@ When you play a card, reduce the cost of a card in your hand and deck by 1.<br>C
 ## Observed keyword / token leads
 
 `All`, `Code`, `Grounded`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

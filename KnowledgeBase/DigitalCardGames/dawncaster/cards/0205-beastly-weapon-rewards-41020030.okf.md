@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 205 of first 500 generated cards
+- **Ordinal:** 205 of 1692 generated cards
 - **Source card id:** `41020030`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ Sets the rewards of this combat to Companion Cards Unique.
 ## Observed keyword / token leads
 
 `Companion Cards`, `Sets`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

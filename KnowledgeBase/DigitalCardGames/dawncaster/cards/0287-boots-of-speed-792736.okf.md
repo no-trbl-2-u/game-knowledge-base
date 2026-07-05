@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 287 of first 500 generated cards
+- **Ordinal:** 287 of 1692 generated cards
 - **Source card id:** `792736`
 - **Category:** Equipment
 - **Type:** Utility
@@ -83,8 +83,3 @@ Activate to gain 1 Haste and reduce the cost of the leftmost card in your hand b
 ## Observed keyword / token leads
 
 `Activate`, `Durability`, `Haste`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

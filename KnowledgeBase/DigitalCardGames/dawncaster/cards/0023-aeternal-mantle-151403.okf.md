@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 23 of first 500 generated cards
+- **Ordinal:** 23 of 1692 generated cards
 - **Source card id:** `151403`
 - **Category:** Equipment
 - **Type:** Divine
@@ -83,8 +83,3 @@ Activate to start a Hymn. Durability (3/3). Unique.
 ## Observed keyword / token leads
 
 `Activate`, `Durability`, `Hymn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 477 of first 500 generated cards
+- **Ordinal:** 477 of 1692 generated cards
 - **Source card id:** `230637`
 - **Category:** Action
 - **Type:** Corruption
@@ -84,8 +84,3 @@ Draw a card.<br>Corrupted: Increase your Sinister by 3. Sinister
 ## Observed keyword / token leads
 
 `Corrupted`, `Increase`, `Sinister`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

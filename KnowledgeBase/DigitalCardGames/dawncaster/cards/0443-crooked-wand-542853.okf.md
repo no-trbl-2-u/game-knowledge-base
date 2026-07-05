@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 443 of first 500 generated cards
+- **Ordinal:** 443 of 1692 generated cards
 - **Source card id:** `542853`
 - **Category:** Basic Attack
 - **Type:** Magic
@@ -85,8 +85,3 @@ Deal [damage:1] damage.<br>Inflict a random Affliction.<br>Swap.
 ## Observed keyword / token leads
 
 `Affliction`, `Inflict`, `Swap`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

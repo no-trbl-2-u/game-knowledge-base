@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 365 of first 500 generated cards
+- **Ordinal:** 365 of 1692 generated cards
 - **Source card id:** `41020035`
 - **Category:** Action
 - **Type:** Magic
@@ -83,8 +83,3 @@ Deal [damage:[[difficultyBonus+3]]] damage. Has an additional effect based on yo
 ## Observed keyword / token leads
 
 `Attunement`, `difficultyBonus+3`, `Has`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 254 of first 500 generated cards
+- **Ordinal:** 254 of 1692 generated cards
 - **Source card id:** `9845`
 - **Category:** Action
 - **Type:** Corruption
@@ -83,8 +83,3 @@ Convert the energy costs of all cards remaining in your deck to BLOOD until play
 ## Observed keyword / token leads
 
 `BLOOD`, `Charges`, `Convert`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

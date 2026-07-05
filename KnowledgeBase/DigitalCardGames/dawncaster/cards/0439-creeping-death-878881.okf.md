@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 439 of first 500 generated cards
+- **Ordinal:** 439 of 1692 generated cards
 - **Source card id:** `878881`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, gain 1 Potency whenever you finish a Performance. Unique.
 ## Observed keyword / token leads
 
 `Performance`, `Potency`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

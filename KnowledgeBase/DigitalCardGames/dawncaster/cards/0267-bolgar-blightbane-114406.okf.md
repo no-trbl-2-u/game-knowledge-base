@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 267 of first 500 generated cards
+- **Ordinal:** 267 of 1692 generated cards
 - **Source card id:** `114406`
 - **Category:** Enchantment
 - **Type:** Monster
@@ -85,8 +85,3 @@ Conjure a free Bolgar card at the beginning of the round. <br>Whenever your foe 
 ## Observed keyword / token leads
 
 `Bolgar`, `Conjure`, `HEALTH`, `Poison`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

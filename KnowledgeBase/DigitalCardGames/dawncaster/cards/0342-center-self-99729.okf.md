@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 342 of first 500 generated cards
+- **Ordinal:** 342 of 1692 generated cards
 - **Source card id:** `99729`
 - **Category:** Action
 - **Type:** Utility
@@ -82,8 +82,3 @@ Gain 3 Focus. <br>Draw a card.
 ## Observed keyword / token leads
 
 `Focus`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

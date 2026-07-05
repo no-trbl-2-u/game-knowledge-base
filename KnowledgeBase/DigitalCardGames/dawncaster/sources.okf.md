@@ -39,7 +39,7 @@ This file records the source registry for the Dawncaster digital-card OKF corpus
 
 ## Source-backed facts
 
-- Claim: The first 500 card records were generated from the Neurrone SQLite mirror.
+- Claim: The card records were generated from the Neurrone SQLite mirror.
   Source: src-001
   Evidence: Local script `scripts/generate-dawncaster-card-okf.py` queries `cards`, `costs`, `categories`, `types`, `rarities`, `colors`, and `expansions`.
   Confidence: high

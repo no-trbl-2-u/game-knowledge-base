@@ -52,7 +52,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 150 of first 500 generated cards
+- **Ordinal:** 150 of 1692 generated cards
 - **Source card id:** `724041`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Conjure Forged in Blood. If HOLY was spent, conjure a Forged in Fire instead. Ch
 ## Observed keyword / token leads
 
 `Blood`, `Charges`, `Conjure Forged`, `Fire`, `Forged`, `If HOLY`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

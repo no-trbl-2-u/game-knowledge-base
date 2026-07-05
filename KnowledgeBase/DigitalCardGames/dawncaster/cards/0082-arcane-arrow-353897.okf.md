@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 82 of first 500 generated cards
+- **Ordinal:** 82 of 1692 generated cards
 - **Source card id:** `353897`
 - **Category:** Action
 - **Type:** Ranged
@@ -83,8 +83,3 @@ Dispel a random Blessing.<br>Deal [damage:3] damage.
 ## Observed keyword / token leads
 
 `Blessing`, `Dispel`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

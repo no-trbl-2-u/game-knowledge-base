@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 223 of first 500 generated cards
+- **Ordinal:** 223 of 1692 generated cards
 - **Source card id:** `598525`
 - **Category:** Action
 - **Type:** Utility
@@ -81,8 +81,3 @@ Your next attack inflicts Burning equal to the damage dealt.
 ## Observed keyword / token leads
 
 `Burning`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

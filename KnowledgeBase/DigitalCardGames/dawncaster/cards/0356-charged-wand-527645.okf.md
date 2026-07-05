@@ -53,7 +53,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 356 of first 500 generated cards
+- **Ordinal:** 356 of 1692 generated cards
 - **Source card id:** `527645`
 - **Category:** Basic Attack
 - **Type:** Magic
@@ -88,8 +88,3 @@ Steal |#[[my(status)Potency]]+1#| HEALTH.<br>Improved by the Potency of your Aff
 ## Observed keyword / token leads
 
 `Afflictions`, `HEALTH`, `Improved`, `my(status)Potency`, `Potency`, `Steal`, `Swap`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

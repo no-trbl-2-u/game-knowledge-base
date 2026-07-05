@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 91 of first 500 generated cards
+- **Ordinal:** 91 of 1692 generated cards
 - **Source card id:** `28569`
 - **Category:** Equipment
 - **Type:** Utility
@@ -85,8 +85,3 @@ Ranged Actions deal 2 additional damage. Activate: Delve an Arrow. Durability (5
 ## Observed keyword / token leads
 
 `Activate`, `Arrow`, `Delve`, `Durability`, `Ranged Actions`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

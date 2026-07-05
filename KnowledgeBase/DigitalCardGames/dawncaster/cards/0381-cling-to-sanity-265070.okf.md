@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 381 of first 500 generated cards
+- **Ordinal:** 381 of 1692 generated cards
 - **Source card id:** `265070`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Remove a Corruption from your deck, then gain 5 HEALTH and Cleanse an Affliction
 ## Observed keyword / token leads
 
 `Affliction`, `Cleanse`, `Corruption`, `HEALTH`, `Remove`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 151 of first 500 generated cards
+- **Ordinal:** 151 of 1692 generated cards
 - **Source card id:** `294533`
 - **Category:** Action
 - **Type:** Utility
@@ -84,8 +84,3 @@ Take 3 damage.<br>Play a Basic Attack from your discard pile.
 ## Observed keyword / token leads
 
 `Basic Attack`, `Play`, `Take`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

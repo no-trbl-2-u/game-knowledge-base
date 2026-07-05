@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 271 of first 500 generated cards
+- **Ordinal:** 271 of 1692 generated cards
 - **Source card id:** `392837`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -84,8 +84,3 @@ Gain Armor equal to your current HEALTH ([[myCurrentHealth]]) for every 5 Basic 
 ## Observed keyword / token leads
 
 `Basic Attacks`, `Gain Armor`, `HEALTH`, `myCurrentHealth`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

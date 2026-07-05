@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 224 of first 500 generated cards
+- **Ordinal:** 224 of 1692 generated cards
 - **Source card id:** `31484`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -84,8 +84,3 @@ Immune to Bleeding, Poison and Stunned. Unique.
 ## Observed keyword / token leads
 
 `Bleeding`, `Immune`, `Poison`, `Stunned`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

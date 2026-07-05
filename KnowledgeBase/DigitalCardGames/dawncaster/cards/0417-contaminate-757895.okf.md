@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 417 of first 500 generated cards
+- **Ordinal:** 417 of 1692 generated cards
 - **Source card id:** `757895`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Gain [[damageBonus+2]] Potency. Upgradeable.
 ## Observed keyword / token leads
 
 `damageBonus+2`, `Potency`, `Upgradeable`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

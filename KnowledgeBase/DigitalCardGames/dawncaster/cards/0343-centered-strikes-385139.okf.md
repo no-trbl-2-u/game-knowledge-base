@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 343 of first 500 generated cards
+- **Ordinal:** 343 of 1692 generated cards
 - **Source card id:** `385139`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ This combat, your Basic Attacks and Mantras deal additional damage equal to your
 ## Observed keyword / token leads
 
 `Basic Attacks`, `Focus Unique`, `Mantras`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 395 of first 500 generated cards
+- **Ordinal:** 395 of 1692 generated cards
 - **Source card id:** `376703`
 - **Category:** Code
 - **Type:** Divine
@@ -86,8 +86,3 @@ Start of Turn: <br>Gain HOLY and draw a card. <br>Code: Your deck contains only 
 ## Observed keyword / token leads
 
 `Code`, `Gain HOLY`, `Grounded`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

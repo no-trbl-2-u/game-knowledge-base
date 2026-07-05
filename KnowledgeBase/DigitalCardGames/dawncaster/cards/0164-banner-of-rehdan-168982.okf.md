@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 164 of first 500 generated cards
+- **Ordinal:** 164 of 1692 generated cards
 - **Source card id:** `168982`
 - **Category:** Artifact
 - **Type:** Utility
@@ -84,8 +84,3 @@ Start of Turn:<br>Gain STR and 1 Anger. Unique.
 ## Observed keyword / token leads
 
 `Anger`, `Gain STR`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

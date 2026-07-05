@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 415 of first 500 generated cards
+- **Ordinal:** 415 of 1692 generated cards
 - **Source card id:** `672953`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Move the top card of your deck to your discard pile. Gain Regenerate and Anger e
 ## Observed keyword / token leads
 
 `Anger`, `Gain Regenerate`, `Move`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

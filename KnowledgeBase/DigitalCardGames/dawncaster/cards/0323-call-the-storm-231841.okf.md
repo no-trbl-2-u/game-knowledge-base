@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 323 of first 500 generated cards
+- **Ordinal:** 323 of 1692 generated cards
 - **Source card id:** `231841`
 - **Category:** Action
 - **Type:** Magic
@@ -83,8 +83,3 @@ Conjure a random Lightning Card for each point of your Focus.
 ## Observed keyword / token leads
 
 `Conjure`, `Focus`, `Lightning Card`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

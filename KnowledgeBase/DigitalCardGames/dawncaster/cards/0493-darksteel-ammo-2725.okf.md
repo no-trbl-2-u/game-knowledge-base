@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 493 of first 500 generated cards
+- **Ordinal:** 493 of 1692 generated cards
 - **Source card id:** `2725`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Your next 3 Ranged Actions deal additional damage equal to your Armor ([[my(stat
 ## Observed keyword / token leads
 
 `Armor`, `my(status)Armor`, `Ranged Actions`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

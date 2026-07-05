@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 63 of first 500 generated cards
+- **Ordinal:** 63 of 1692 generated cards
 - **Source card id:** `720652`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Conjure a Potion.<br>Inflict 1 Delirious.
 ## Observed keyword / token leads
 
 `Conjure`, `Delirious`, `Inflict`, `Potion`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

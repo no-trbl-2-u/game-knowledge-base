@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 277 of first 500 generated cards
+- **Ordinal:** 277 of 1692 generated cards
 - **Source card id:** `471033`
 - **Category:** Action
 - **Type:** Melee
@@ -83,8 +83,3 @@ Deal [damage:2] damage twice.<br>On Hit: Gain 2 Armor.
 ## Observed keyword / token leads
 
 `Armor`, `On Hit`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

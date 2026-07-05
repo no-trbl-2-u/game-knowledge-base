@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 13 of first 500 generated cards
+- **Ordinal:** 13 of 1692 generated cards
 - **Source card id:** `884552`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Pay [[permaValue]] GOLD:<br>Delve a HOLY card and add it to your deck.
 ## Observed keyword / token leads
 
 `Delve`, `GOLD`, `HOLY`, `Pay`, `permaValue`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

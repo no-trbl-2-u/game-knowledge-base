@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 350 of first 500 generated cards
+- **Ordinal:** 350 of 1692 generated cards
 - **Source card id:** `730040`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -81,8 +81,3 @@ This combat, gain a free copy of a random magic action you played last turn at t
 ## Observed keyword / token leads
 
 none observed
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

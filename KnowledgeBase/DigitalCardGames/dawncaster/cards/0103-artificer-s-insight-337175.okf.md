@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 103 of first 500 generated cards
+- **Ordinal:** 103 of 1692 generated cards
 - **Source card id:** `337175`
 - **Category:** Action
 - **Type:** Utility
@@ -84,8 +84,3 @@ Draw a card.<br>Repeat for each active Equipment ([[equipments]]).
 ## Observed keyword / token leads
 
 `Equipment`, `equipments`, `Repeat`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 120 of first 500 generated cards
+- **Ordinal:** 120 of 1692 generated cards
 - **Source card id:** `645739`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, draw a card whenever you play this or another Enchantment. Unique. 
 ## Observed keyword / token leads
 
 `Enchantment`, `Memorized`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

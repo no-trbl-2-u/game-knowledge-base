@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 6 of first 500 generated cards
+- **Ordinal:** 6 of 1692 generated cards
 - **Source card id:** `295712`
 - **Category:** Action
 - **Type:** Melee
@@ -83,8 +83,3 @@ Inflict Brittle for each damage dealt.
 ## Observed keyword / token leads
 
 `Inflict Brittle`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 84 of first 500 generated cards
+- **Ordinal:** 84 of 1692 generated cards
 - **Source card id:** `149592`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, whenever you play a Melee Action, conjure a free random Magic Actio
 ## Observed keyword / token leads
 
 `Magic Action`, `Melee Action`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

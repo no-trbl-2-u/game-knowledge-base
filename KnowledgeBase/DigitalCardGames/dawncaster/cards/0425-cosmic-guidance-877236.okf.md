@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 425 of first 500 generated cards
+- **Ordinal:** 425 of 1692 generated cards
 - **Source card id:** `877236`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Choose one: Your next Stardart this turn gains Lifedrain or shuffle your discard
 ## Observed keyword / token leads
 
 `Choose`, `Lifedrain`, `Stardart`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

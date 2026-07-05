@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 188 of first 500 generated cards
+- **Ordinal:** 188 of 1692 generated cards
 - **Source card id:** `736057`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ Start of Turn: Take 1 damage and draw a card. Unique.
 ## Observed keyword / token leads
 
 `Take`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

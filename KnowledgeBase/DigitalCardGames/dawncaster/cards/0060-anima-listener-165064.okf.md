@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 60 of first 500 generated cards
+- **Ordinal:** 60 of 1692 generated cards
 - **Source card id:** `165064`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -85,8 +85,3 @@ Foes gain [[(areaSpecial)Anima]] Maximum HEALTH. You lose [[(areaSpecial)Anima]]
 ## Observed keyword / token leads
 
 `(areaSpecial)Anima`, `Anima`, `Dealing Reaping`, `Foes`, `Maximum HEALTH`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 442 of first 500 generated cards
+- **Ordinal:** 442 of 1692 generated cards
 - **Source card id:** `245148`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ This combat, after you play four Cursed cards, create a random Potion. Unique. M
 ## Observed keyword / token leads
 
 `Cursed`, `Memorized`, `Potion`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

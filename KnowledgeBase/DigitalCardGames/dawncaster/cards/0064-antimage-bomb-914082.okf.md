@@ -52,7 +52,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 64 of first 500 generated cards
+- **Ordinal:** 64 of 1692 generated cards
 - **Source card id:** `914082`
 - **Category:** Action
 - **Type:** Ranged
@@ -87,8 +87,3 @@ Dispel your foe's Blessings, then deal [damage:10] damage.<br>Ready after 3 turn
 ## Observed keyword / token leads
 
 `Blessings`, `Charge`, `Dispel`, `Persistent`, `Ready`, `Speed`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

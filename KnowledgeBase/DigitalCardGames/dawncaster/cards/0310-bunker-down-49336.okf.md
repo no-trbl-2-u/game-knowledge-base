@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 310 of first 500 generated cards
+- **Ordinal:** 310 of 1692 generated cards
 - **Source card id:** `49336`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Gain |#4+[[damageBonus]]#| Armor.<br>If you have 10 or more Armor, gain Fortifie
 ## Observed keyword / token leads
 
 `Armor`, `damageBonus`, `Fortified`, `Upgradeable`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

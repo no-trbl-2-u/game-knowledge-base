@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 186 of first 500 generated cards
+- **Ordinal:** 186 of 1692 generated cards
 - **Source card id:** `302018`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Restore all Durability and enable all Equipment. Gain Armor equal to the sum of 
 ## Observed keyword / token leads
 
 `allDurability`, `Durability`, `Equipment`, `Gain Armor`, `Restore`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

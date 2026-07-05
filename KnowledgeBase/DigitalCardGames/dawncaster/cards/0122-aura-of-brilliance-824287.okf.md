@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 122 of first 500 generated cards
+- **Ordinal:** 122 of 1692 generated cards
 - **Source card id:** `824287`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ This combat, gain INT whenever you gain Focus. Unique. Memorized.
 ## Observed keyword / token leads
 
 `Focus`, `INT`, `Memorized`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

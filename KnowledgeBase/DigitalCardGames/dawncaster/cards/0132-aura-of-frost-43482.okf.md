@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 132 of first 500 generated cards
+- **Ordinal:** 132 of 1692 generated cards
 - **Source card id:** `43482`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ At the end of your turn, inflict 2 Frozen. Unique. Memorized.
 ## Observed keyword / token leads
 
 `Frozen`, `Memorized`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

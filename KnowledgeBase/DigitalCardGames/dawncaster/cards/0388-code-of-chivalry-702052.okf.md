@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 388 of first 500 generated cards
+- **Ordinal:** 388 of 1692 generated cards
 - **Source card id:** `702052`
 - **Category:** Code
 - **Type:** Divine
@@ -87,8 +87,3 @@ Start of Turn:<br>Double your Blessings.<br>Code: Your deck contains no duplicat
 ## Observed keyword / token leads
 
 `Blessings`, `Code`, `Double`, `Grounded`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

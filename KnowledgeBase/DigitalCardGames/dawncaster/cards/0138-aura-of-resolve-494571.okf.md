@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 138 of first 500 generated cards
+- **Ordinal:** 138 of 1692 generated cards
 - **Source card id:** `494571`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ This combat, whenever you take damage during your turn, gain HOLY and a random B
 ## Observed keyword / token leads
 
 `Blessing`, `HOLY`, `Memorized`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

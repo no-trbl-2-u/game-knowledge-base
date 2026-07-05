@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 97 of first 500 generated cards
+- **Ordinal:** 97 of 1692 generated cards
 - **Source card id:** `261420`
 - **Category:** Basic Attack
 - **Type:** Magic
@@ -83,8 +83,3 @@ Deal [damage:2] damage.<br>Echo your next non-basic Magic action this turn.
 ## Observed keyword / token leads
 
 `Echo`, `Magic`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -53,7 +53,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 457 of first 500 generated cards
+- **Ordinal:** 457 of 1692 generated cards
 - **Source card id:** `509394`
 - **Category:** Equipment
 - **Type:** Utility
@@ -87,8 +87,3 @@ Activate to Transmute a card into a Cursed card of a higher rarity. Deplete: Inf
 ## Observed keyword / token leads
 
 `Activate`, `Cursed`, `Deplete`, `Durability`, `Hex`, `Inflict`, `Transmute`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

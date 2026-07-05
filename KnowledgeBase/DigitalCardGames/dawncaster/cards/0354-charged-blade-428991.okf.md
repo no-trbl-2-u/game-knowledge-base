@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 354 of first 500 generated cards
+- **Ordinal:** 354 of 1692 generated cards
 - **Source card id:** `428991`
 - **Category:** Basic Attack
 - **Type:** Magic
@@ -83,8 +83,3 @@ Deal [damage:0] damage.<br>Draw a card Chain. Piercing.
 ## Observed keyword / token leads
 
 `Chain`, `Piercing`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 484 of first 500 generated cards
+- **Ordinal:** 484 of 1692 generated cards
 - **Source card id:** `978149`
 - **Category:** Item
 - **Type:** Utility
@@ -84,8 +84,3 @@ One Use: Create a copy of the next non-unique card you play. It gains Cursed and
 ## Observed keyword / token leads
 
 `Create`, `Cursed`, `Defiled`, `One Use`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

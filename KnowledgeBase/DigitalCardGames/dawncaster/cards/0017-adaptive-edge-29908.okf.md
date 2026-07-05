@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 17 of first 500 generated cards
+- **Ordinal:** 17 of 1692 generated cards
 - **Source card id:** `29908`
 - **Category:** Action
 - **Type:** Melee
@@ -84,8 +84,3 @@ On Hit: Adapt this.
 ## Observed keyword / token leads
 
 `Adapt`, `On Hit`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

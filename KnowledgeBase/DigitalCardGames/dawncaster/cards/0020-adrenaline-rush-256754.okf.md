@@ -52,7 +52,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 20 of first 500 generated cards
+- **Ordinal:** 20 of 1692 generated cards
 - **Source card id:** `256754`
 - **Category:** Action
 - **Type:** Utility
@@ -87,8 +87,3 @@ Gain DEX equal to your current Performance ([[performanceStacks]]). <br>Finale: 
 ## Observed keyword / token leads
 
 `Charges`, `DEX`, `Finale`, `Gain DEX`, `Performance`, `performanceStacks`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

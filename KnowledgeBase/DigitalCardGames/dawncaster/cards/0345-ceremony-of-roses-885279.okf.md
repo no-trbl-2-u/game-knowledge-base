@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 345 of first 500 generated cards
+- **Ordinal:** 345 of 1692 generated cards
 - **Source card id:** `885279`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Inflict Charmed <br>equal to the sum of <br>your Blessings ([[myTotalBlessings]]
 ## Observed keyword / token leads
 
 `Blessings`, `Inflict Charmed`, `myTotalBlessings`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

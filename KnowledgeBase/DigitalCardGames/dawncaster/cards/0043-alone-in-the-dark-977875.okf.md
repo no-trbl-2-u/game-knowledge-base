@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 43 of first 500 generated cards
+- **Ordinal:** 43 of 1692 generated cards
 - **Source card id:** `977875`
 - **Category:** Action
 - **Type:** Melee
@@ -85,8 +85,3 @@ Deal [damage:5] damage.<br>On Hit: Your foe can't gain Blessings this round.<br>
 ## Observed keyword / token leads
 
 `Blessings`, `Darkness`, `On Hit`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

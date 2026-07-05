@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 149 of first 500 generated cards
+- **Ordinal:** 149 of 1692 generated cards
 - **Source card id:** `931491`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, gain 1 Chain when you draw a card, and draw a card when you inflict
 ## Observed keyword / token leads
 
 `Chain`, `Critical Hit`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

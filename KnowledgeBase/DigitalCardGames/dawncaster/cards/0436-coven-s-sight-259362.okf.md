@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 436 of first 500 generated cards
+- **Ordinal:** 436 of 1692 generated cards
 - **Source card id:** `259362`
 - **Category:** Action
 - **Type:** Corruption
@@ -84,8 +84,3 @@ Draw a card. It permanently gains Cursed. Corrupted: Convert its cost to BLOOD. 
 ## Observed keyword / token leads
 
 `BLOOD`, `Convert`, `Corrupted`, `Cursed`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

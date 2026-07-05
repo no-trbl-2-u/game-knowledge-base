@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 55 of first 500 generated cards
+- **Ordinal:** 55 of 1692 generated cards
 - **Source card id:** `996896`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Discard all cards in hand.<br>Shift into Form of the Dragon.<br>If you were in F
 ## Observed keyword / token leads
 
 `Dragon`, `Form`, `Shift`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

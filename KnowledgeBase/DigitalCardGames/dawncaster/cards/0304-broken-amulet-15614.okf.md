@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 304 of first 500 generated cards
+- **Ordinal:** 304 of 1692 generated cards
 - **Source card id:** `15614`
 - **Category:** Artifact
 - **Type:** Utility
@@ -83,8 +83,3 @@ Actions deal 1 extra damage. Start of Turn: Increase this damage bonus by one. U
 ## Observed keyword / token leads
 
 `Actions`, `Increase`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 240 of first 500 generated cards
+- **Ordinal:** 240 of 1692 generated cards
 - **Source card id:** `118668`
 - **Category:** Action
 - **Type:** Melee
@@ -85,8 +85,3 @@ Draw a card.<br>Convert its cost to Blood and inflict Bleeding equal to its cost
 ## Observed keyword / token leads
 
 `Bleeding`, `Blood`, `Charges`, `Convert`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

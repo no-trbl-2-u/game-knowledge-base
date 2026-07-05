@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 382 of first 500 generated cards
+- **Ordinal:** 382 of 1692 generated cards
 - **Source card id:** `339517`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Conjure 2 Daggers.<br>Start of Turn: Gain 1 Evasion if this is in hand. Persiste
 ## Observed keyword / token leads
 
 `Conjure`, `Daggers`, `Evasion`, `Persistent`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

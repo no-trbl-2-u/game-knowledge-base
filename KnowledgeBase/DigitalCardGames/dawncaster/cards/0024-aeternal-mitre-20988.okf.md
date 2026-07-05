@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 24 of first 500 generated cards
+- **Ordinal:** 24 of 1692 generated cards
 - **Source card id:** `20988`
 - **Category:** Equipment
 - **Type:** Divine
@@ -84,8 +84,3 @@ Activate to gain HOLY for each Aeternal vestment equipped. Durability (3/3). Uni
 ## Observed keyword / token leads
 
 `Activate`, `Aeternal`, `Durability`, `HOLY`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 235 of first 500 generated cards
+- **Ordinal:** 235 of 1692 generated cards
 - **Source card id:** `484701`
 - **Category:** Action
 - **Type:** Magic
@@ -85,8 +85,3 @@ Deal [damage:1] damage.<br>Start of Turn: Conjure a base copy of this card. Chai
 ## Observed keyword / token leads
 
 `Chain`, `Conjure`, `Persistent`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

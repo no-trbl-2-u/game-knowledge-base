@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 337 of first 500 generated cards
+- **Ordinal:** 337 of 1692 generated cards
 - **Source card id:** `720436`
 - **Category:** Basic Attack
 - **Type:** Melee
@@ -83,8 +83,3 @@ Gain 3 HEALTH.<br>Inflict Burning equal to the health you gained this round.
 ## Observed keyword / token leads
 
 `HEALTH`, `Inflict Burning`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

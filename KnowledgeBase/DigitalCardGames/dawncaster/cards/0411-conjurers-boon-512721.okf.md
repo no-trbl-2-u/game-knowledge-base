@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 411 of first 500 generated cards
+- **Ordinal:** 411 of 1692 generated cards
 - **Source card id:** `512721`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, whenever you play a Conjuration, gain 2 HEALTH. Unique.
 ## Observed keyword / token leads
 
 `Conjuration`, `HEALTH`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

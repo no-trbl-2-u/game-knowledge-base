@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 460 of first 500 generated cards
+- **Ordinal:** 460 of 1692 generated cards
 - **Source card id:** `24427`
 - **Category:** Action
 - **Type:** Melee
@@ -84,8 +84,3 @@ Deal [damage:4] damage.<br>Add damage equal to the most upgraded Snare in your f
 ## Observed keyword / token leads
 
 `Add`, `highestSnareUpgrade`, `Snare`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 312 of first 500 generated cards
+- **Ordinal:** 312 of 1692 generated cards
 - **Source card id:** `533067`
 - **Category:** Enchantment
 - **Type:** Divine
@@ -82,8 +82,3 @@ This combat, inflict Burning equal to the HEALTH you gain. Unique.
 ## Observed keyword / token leads
 
 `Burning`, `HEALTH`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

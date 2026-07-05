@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 110 of first 500 generated cards
+- **Ordinal:** 110 of 1692 generated cards
 - **Source card id:** `105003`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ Your attacks deal additional damage equal to your HEALTH ([[myCurrentHealth]]). 
 ## Observed keyword / token leads
 
 `HEALTH`, `myCurrentHealth`, `Slain`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

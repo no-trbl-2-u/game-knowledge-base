@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 372 of first 500 generated cards
+- **Ordinal:** 372 of 1692 generated cards
 - **Source card id:** `258913`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ Start combat at full HEALTH.<br>Whenever you gain HEALTH, cleanse an equal amoun
 ## Observed keyword / token leads
 
 `Burning`, `HEALTH`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

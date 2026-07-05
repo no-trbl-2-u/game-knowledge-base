@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 289 of first 500 generated cards
+- **Ordinal:** 289 of 1692 generated cards
 - **Source card id:** `664971`
 - **Category:** Item
 - **Type:** Utility
@@ -83,8 +83,3 @@ One Use: Conjure a random free card and change the Tide.
 ## Observed keyword / token leads
 
 `Conjure`, `One Use`, `Tide`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

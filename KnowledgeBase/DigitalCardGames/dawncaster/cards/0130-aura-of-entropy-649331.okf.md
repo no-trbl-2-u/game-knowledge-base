@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 130 of first 500 generated cards
+- **Ordinal:** 130 of 1692 generated cards
 - **Source card id:** `649331`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -85,8 +85,3 @@ Start of Turn:<br>Reap [[difficulty*2]] Anima. Unique.
 ## Observed keyword / token leads
 
 `Anima`, `difficulty*2`, `Reap`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

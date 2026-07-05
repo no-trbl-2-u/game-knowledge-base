@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 98 of first 500 generated cards
+- **Ordinal:** 98 of 1692 generated cards
 - **Source card id:** `783723`
 - **Category:** Item
 - **Type:** Utility
@@ -85,8 +85,3 @@ Gain INT and Focus.<br>While this is in your deck, rewards include cards that co
 ## Observed keyword / token leads
 
 `Focus`, `Gain INT`, `INT`, `While`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

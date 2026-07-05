@@ -52,7 +52,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 396 of first 500 generated cards
+- **Ordinal:** 396 of 1692 generated cards
 - **Source card id:** `543581`
 - **Category:** Code
 - **Type:** Divine
@@ -87,8 +87,3 @@ Start of Turn:<br>Create a Battle Spear. Code: You have two or more Scars. Uniqu
 ## Observed keyword / token leads
 
 `Battle Spear`, `Code`, `Create`, `Grounded`, `Scars`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

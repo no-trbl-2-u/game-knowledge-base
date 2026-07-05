@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 94 of first 500 generated cards
+- **Ordinal:** 94 of 1692 generated cards
 - **Source card id:** `967014`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Foretell [[foretell+3]].<br>Scholar: Conjure a free copy of any Magic Action rev
 ## Observed keyword / token leads
 
 `Conjure`, `Foretell`, `foretell+3`, `Magic Action`, `Scholar`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

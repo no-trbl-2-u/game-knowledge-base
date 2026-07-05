@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 475 of first 500 generated cards
+- **Ordinal:** 475 of 1692 generated cards
 - **Source card id:** `957938`
 - **Category:** Form
 - **Type:** Corruption
@@ -84,8 +84,3 @@ Your attacks gain Lifedrain. Reach 5 VOID to Ascend to the next form.
 ## Observed keyword / token leads
 
 `Ascend`, `Lifedrain`, `Reach`, `VOID`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

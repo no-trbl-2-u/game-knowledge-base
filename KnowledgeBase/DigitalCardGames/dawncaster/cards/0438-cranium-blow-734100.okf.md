@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 438 of first 500 generated cards
+- **Ordinal:** 438 of 1692 generated cards
 - **Source card id:** `734100`
 - **Category:** Action
 - **Type:** Melee
@@ -84,8 +84,3 @@ Deal [damage:3] damage. <br>Finale: Inflict 1 Jinxed.
 ## Observed keyword / token leads
 
 `Finale`, `Inflict`, `Jinxed`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

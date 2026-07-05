@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 28 of first 500 generated cards
+- **Ordinal:** 28 of 1692 generated cards
 - **Source card id:** `507703`
 - **Category:** Action
 - **Type:** Magic
@@ -85,8 +85,3 @@ Deal [damage:1] to [damage:[[tempValue+1]]] damage. <br>After you play a Lightni
 ## Observed keyword / token leads
 
 `After`, `Chain`, `Lightning`, `tempValue+1`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

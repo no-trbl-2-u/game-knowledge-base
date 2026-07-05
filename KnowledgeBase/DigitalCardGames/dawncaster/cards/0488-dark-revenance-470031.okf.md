@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 488 of first 500 generated cards
+- **Ordinal:** 488 of 1692 generated cards
 - **Source card id:** `470031`
 - **Category:** Artifact
 - **Type:** Utility
@@ -83,8 +83,3 @@ This combat, if you would die, remove this from your deck, gain Health equal to 
 ## Observed keyword / token leads
 
 `Darkness`, `Health`, `Undead`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

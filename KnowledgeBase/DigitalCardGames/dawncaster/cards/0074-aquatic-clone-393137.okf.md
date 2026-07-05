@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 74 of first 500 generated cards
+- **Ordinal:** 74 of 1692 generated cards
 - **Source card id:** `393137`
 - **Category:** Form
 - **Type:** Utility
@@ -84,8 +84,3 @@ After you play a Basic Attack, make another. Clones are dispersed after making a
 ## Observed keyword / token leads
 
 `After`, `Basic Attack`, `Channel`, `Clones`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

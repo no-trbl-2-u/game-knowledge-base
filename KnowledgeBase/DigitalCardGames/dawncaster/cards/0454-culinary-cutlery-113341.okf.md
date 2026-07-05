@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 454 of first 500 generated cards
+- **Ordinal:** 454 of 1692 generated cards
 - **Source card id:** `113341`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Conjure 3 Basic Attacks.<br>If you are Cooking, reduce the cost of Basic Attacks
 ## Observed keyword / token leads
 
 `Basic Attacks`, `Conjure`, `Cooking`, `NEUTRAL`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

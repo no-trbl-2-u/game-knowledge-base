@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 68 of first 500 generated cards
+- **Ordinal:** 68 of 1692 generated cards
 - **Source card id:** `777609`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -84,8 +84,3 @@ Start combat with Darkness equal to your health. While you have 10 more Ferocity
 ## Observed keyword / token leads
 
 `Critical Hit`, `Darkness`, `Ferocity`, `While`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

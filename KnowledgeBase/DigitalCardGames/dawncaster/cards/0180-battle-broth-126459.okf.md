@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 180 of first 500 generated cards
+- **Ordinal:** 180 of 1692 generated cards
 - **Source card id:** `126459`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Create an Ingredient.<br>Whenever you enter a Stance, return this to hand. Charg
 ## Observed keyword / token leads
 
 `Charges`, `Create`, `Ingredient`, `Stance`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

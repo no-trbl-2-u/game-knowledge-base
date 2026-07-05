@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 274 of first 500 generated cards
+- **Ordinal:** 274 of 1692 generated cards
 - **Source card id:** `396232`
 - **Category:** Action
 - **Type:** Ranged
@@ -86,8 +86,3 @@ Start of Turn:<br>Deal [damage:3] damage for each  Momentum ([[areaSpecial]]).<b
 ## Observed keyword / token leads
 
 `areaSpecial`, `Momentum`, `Raise`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

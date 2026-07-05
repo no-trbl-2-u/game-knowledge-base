@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 196 of first 500 generated cards
+- **Ordinal:** 196 of 1692 generated cards
 - **Source card id:** `714376`
 - **Category:** Basic Attack
 - **Type:** Divine
@@ -84,8 +84,3 @@ Deal [damage:[[damageTakenLastTurn]]+5] damage. <br>Add any damage you took sinc
 ## Observed keyword / token leads
 
 `Add`, `damageTakenLastTurn`, `Untempered`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

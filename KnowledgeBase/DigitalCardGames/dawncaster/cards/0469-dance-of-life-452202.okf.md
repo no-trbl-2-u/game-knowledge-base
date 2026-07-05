@@ -53,7 +53,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 469 of first 500 generated cards
+- **Ordinal:** 469 of 1692 generated cards
 - **Source card id:** `452202`
 - **Category:** Action
 - **Type:** Utility
@@ -87,8 +87,3 @@ Gain Ritualist. Restore 5% of your Maximum HEALTH ([[myMaxHealth/20]]). Completi
 ## Observed keyword / token leads
 
 `Completing`, `Gain Ritualist`, `Heavy`, `Maximum HEALTH`, `myMaxHealth/20`, `Performance`, `Restore`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

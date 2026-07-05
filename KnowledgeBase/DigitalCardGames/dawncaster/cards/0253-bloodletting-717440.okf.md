@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 253 of first 500 generated cards
+- **Ordinal:** 253 of 1692 generated cards
 - **Source card id:** `717440`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -81,8 +81,3 @@ Your foe's Bleeding carries over to the next combat. Unique.
 ## Observed keyword / token leads
 
 `Bleeding`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

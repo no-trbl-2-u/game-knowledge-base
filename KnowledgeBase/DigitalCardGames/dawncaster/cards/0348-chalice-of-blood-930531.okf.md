@@ -53,7 +53,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 348 of first 500 generated cards
+- **Ordinal:** 348 of 1692 generated cards
 - **Source card id:** `930531`
 - **Category:** Action
 - **Type:** Divine
@@ -88,8 +88,3 @@ On Draw: Take [[permaValue]] damage then upgrade this by 2. <br>One Use: Gain [[
 ## Observed keyword / token leads
 
 `Grounded`, `Heavy`, `Maximum Health`, `On Draw`, `One Use`, `permaValue`, `Take`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

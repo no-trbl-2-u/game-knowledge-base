@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 189 of first 500 generated cards
+- **Ordinal:** 189 of 1692 generated cards
 - **Source card id:** `165764`
 - **Category:** Action
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, double your Maximum Health (You do not heal for the amount) Grounde
 ## Observed keyword / token leads
 
 `Grounded`, `Maximum Health`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

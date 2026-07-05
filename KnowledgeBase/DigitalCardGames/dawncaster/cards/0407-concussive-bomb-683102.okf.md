@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 407 of first 500 generated cards
+- **Ordinal:** 407 of 1692 generated cards
 - **Source card id:** `683102`
 - **Category:** Action
 - **Type:** Ranged
@@ -85,8 +85,3 @@ Deal [damage:5] damage. Inflict Stunned. Ready after 3 turns. Speed up the timer
 ## Observed keyword / token leads
 
 `Charge`, `Inflict Stunned`, `Persistent`, `Ready`, `Speed`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

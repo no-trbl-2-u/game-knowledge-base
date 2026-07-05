@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 270 of first 500 generated cards
+- **Ordinal:** 270 of 1692 generated cards
 - **Source card id:** `88985`
 - **Category:** Action
 - **Type:** Melee
@@ -85,8 +85,3 @@ Deal [damage:4] damage.<br>On Hit: Conjure a <br>free Bash
 ## Observed keyword / token leads
 
 `Bash`, `Conjure`, `On Hit`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

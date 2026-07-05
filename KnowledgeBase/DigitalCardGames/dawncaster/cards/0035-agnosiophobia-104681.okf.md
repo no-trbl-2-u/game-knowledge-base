@@ -53,7 +53,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 35 of first 500 generated cards
+- **Ordinal:** 35 of 1692 generated cards
 - **Source card id:** `104681`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -87,8 +87,3 @@ Start of Combat: Add [[(areaSpecial)Agnosiophobia]] Insanity cards to your disca
 ## Observed keyword / token leads
 
 `(areaSpecial)Agnosiophobia`, `Add`, `Agnosiophobia`, `Combat`, `Increases`, `Insanity`, `Lowered`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

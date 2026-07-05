@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 179 of first 500 generated cards
+- **Ordinal:** 179 of 1692 generated cards
 - **Source card id:** `460858`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, your actions deal additional damage equal to your Stagger ([[my(sta
 ## Observed keyword / token leads
 
 `my(status)Stagger`, `Stagger`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

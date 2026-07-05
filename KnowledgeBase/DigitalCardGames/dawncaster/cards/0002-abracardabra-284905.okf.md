@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 2 of first 500 generated cards
+- **Ordinal:** 2 of 1692 generated cards
 - **Source card id:** `284905`
 - **Category:** Action
 - **Type:** Utility
@@ -81,8 +81,3 @@ Draw a card. It costs no energy. Perform 1.
 ## Observed keyword / token leads
 
 `Perform`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 470 of first 500 generated cards
+- **Ordinal:** 470 of 1692 generated cards
 - **Source card id:** `372990`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Gain Ritualist and 3 Souls. When you finish a Performance, return this to hand. 
 ## Observed keyword / token leads
 
 `Charges`, `Gain Ritualist`, `Heavy`, `Performance`, `Souls`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

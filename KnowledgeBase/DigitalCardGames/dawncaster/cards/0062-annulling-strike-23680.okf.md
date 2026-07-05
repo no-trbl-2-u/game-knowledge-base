@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 62 of first 500 generated cards
+- **Ordinal:** 62 of 1692 generated cards
 - **Source card id:** `23680`
 - **Category:** Action
 - **Type:** Divine
@@ -84,8 +84,3 @@ Deal [damage:8] damage.<br>On Hit: Remove one of your foe’s enchantments. Reap
 ## Observed keyword / token leads
 
 `On Hit`, `Reaping`, `Remove`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

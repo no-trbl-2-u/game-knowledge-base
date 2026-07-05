@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 456 of first 500 generated cards
+- **Ordinal:** 456 of 1692 generated cards
 - **Source card id:** `509972`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Spend all DEX. Next turn you gain that much DEX and draw that many extra cards.
 ## Observed keyword / token leads
 
 `DEX`, `Next`, `Spend`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

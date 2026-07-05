@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 497 of first 500 generated cards
+- **Ordinal:** 497 of 1692 generated cards
 - **Source card id:** `510383`
 - **Category:** Summon
 - **Type:** Corruption
@@ -84,8 +84,3 @@ You are Slain.<br>Your foe starts next combat with all your Blessings and applic
 ## Observed keyword / token leads
 
 `Blessings`, `Enchantments`, `Slain`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

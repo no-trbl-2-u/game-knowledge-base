@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 313 of first 500 generated cards
+- **Ordinal:** 313 of 1692 generated cards
 - **Source card id:** `163540`
 - **Category:** Action
 - **Type:** Magic
@@ -83,8 +83,3 @@ Deal [damage:3] damage<br>whenever you discard <br>a card this turn.
 ## Observed keyword / token leads
 
 none observed
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

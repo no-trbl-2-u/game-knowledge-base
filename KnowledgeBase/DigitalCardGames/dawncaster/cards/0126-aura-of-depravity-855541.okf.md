@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 126 of first 500 generated cards
+- **Ordinal:** 126 of 1692 generated cards
 - **Source card id:** `855541`
 - **Category:** Enchantment
 - **Type:** Corruption
@@ -84,8 +84,3 @@ Start of Turn: Add a Sin to your foe's deck. Unique. Memorized.
 ## Observed keyword / token leads
 
 `Add`, `Memorized`, `Sin`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

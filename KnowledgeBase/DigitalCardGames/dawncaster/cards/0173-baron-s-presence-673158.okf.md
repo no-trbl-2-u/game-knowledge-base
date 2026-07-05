@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 173 of first 500 generated cards
+- **Ordinal:** 173 of 1692 generated cards
 - **Source card id:** `673158`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ At the start of combat, gain 1 Potency for each Court Presence ([[courtPresence]
 ## Observed keyword / token leads
 
 `Court Presence`, `courtPresence`, `Potency`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

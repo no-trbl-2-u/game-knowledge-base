@@ -53,7 +53,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 468 of first 500 generated cards
+- **Ordinal:** 468 of 1692 generated cards
 - **Source card id:** `286891`
 - **Category:** Action
 - **Type:** Utility
@@ -87,8 +87,3 @@ Gain Ritualist and [[damageBonus+1]] Potency. Completing a Performance returns t
 ## Observed keyword / token leads
 
 `Completing`, `damageBonus+1`, `Gain Ritualist`, `Heavy`, `Performance`, `Potency`, `Upgradeable`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

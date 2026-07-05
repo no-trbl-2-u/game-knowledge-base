@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 66 of first 500 generated cards
+- **Ordinal:** 66 of 1692 generated cards
 - **Source card id:** `522815`
 - **Category:** Action
 - **Type:** Melee
@@ -84,8 +84,3 @@ Deal [damage:3] damage.<br>Transform the next non-Anyform Claw card you play int
 ## Observed keyword / token leads
 
 `Anyform Claw`, `Transform`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 447 of first 500 generated cards
+- **Ordinal:** 447 of 1692 generated cards
 - **Source card id:** `155044`
 - **Category:** Action
 - **Type:** Utility
@@ -82,8 +82,3 @@ Your next action deals extra damage for each Sinister card you've played ([[sini
 ## Observed keyword / token leads
 
 `sinister`, `Sinister`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

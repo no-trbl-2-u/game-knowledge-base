@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 100 of first 500 generated cards
+- **Ordinal:** 100 of 1692 generated cards
 - **Source card id:** `612033`
 - **Category:** Path
 - **Type:** Utility
@@ -84,8 +84,3 @@ After you Foretell 6 or more cards in a turn, add 3 Prophetic Bolts to your deck
 ## Observed keyword / token leads
 
 `Advance`, `After`, `Foretell`, `Prophetic Bolts`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 311 of first 500 generated cards
+- **Ordinal:** 311 of 1692 generated cards
 - **Source card id:** `352793`
 - **Category:** Action
 - **Type:** Ranged
@@ -83,8 +83,3 @@ Deal [damage:4] damage. <br>Inflict 2 Burning.
 ## Observed keyword / token leads
 
 `Burning`, `Inflict`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

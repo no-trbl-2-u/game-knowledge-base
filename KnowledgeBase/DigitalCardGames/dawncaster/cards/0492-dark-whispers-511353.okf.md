@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 492 of first 500 generated cards
+- **Ordinal:** 492 of 1692 generated cards
 - **Source card id:** `511353`
 - **Category:** Action
 - **Type:** Utility
@@ -87,8 +87,3 @@ Add a Forbidden<br>Fruit to your deck.<br>Corrupted: Gain INT.
 ## Observed keyword / token leads
 
 `Add`, `Corrupted`, `Forbidden`, `Fruit`, `Gain INT`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

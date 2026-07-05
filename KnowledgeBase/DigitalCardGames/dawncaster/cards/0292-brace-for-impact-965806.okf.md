@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 292 of first 500 generated cards
+- **Ordinal:** 292 of 1692 generated cards
 - **Source card id:** `965806`
 - **Category:** Action
 - **Type:** Utility
@@ -83,8 +83,3 @@ Gain 4 Armor.<br>If the enemy is holding an attack, gain 8 Armor instead. Persis
 ## Observed keyword / token leads
 
 `Armor`, `Persistent`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

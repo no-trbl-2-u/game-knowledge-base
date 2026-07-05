@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 373 of first 500 generated cards
+- **Ordinal:** 373 of 1692 generated cards
 - **Source card id:** `75232`
 - **Category:** Action
 - **Type:** Utility
@@ -86,8 +86,3 @@ Gain 3 Regenerate.<br>Tidal: Create a Clone. Persistent.
 ## Observed keyword / token leads
 
 `Clone`, `Create`, `Persistent`, `Regenerate`, `Tidal`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

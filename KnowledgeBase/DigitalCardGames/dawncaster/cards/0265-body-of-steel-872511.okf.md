@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 265 of first 500 generated cards
+- **Ordinal:** 265 of 1692 generated cards
 - **Source card id:** `872511`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, gain Reflect equal to the HEALTH you gain. Unique.
 ## Observed keyword / token leads
 
 `HEALTH`, `Reflect`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

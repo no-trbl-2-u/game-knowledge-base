@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 201 of first 500 generated cards
+- **Ordinal:** 201 of 1692 generated cards
 - **Source card id:** `307839`
 - **Category:** Equipment
 - **Type:** Utility
@@ -82,8 +82,3 @@ Activate: Draw a card. Durability (8/8). Unique.
 ## Observed keyword / token leads
 
 `Activate`, `Durability`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

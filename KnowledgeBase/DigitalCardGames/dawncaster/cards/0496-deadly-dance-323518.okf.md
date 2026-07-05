@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 496 of first 500 generated cards
+- **Ordinal:** 496 of 1692 generated cards
 - **Source card id:** `323518`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ This combat, whenever you Evade, gain 1 Focus and deal damage equal to your Focu
 ## Observed keyword / token leads
 
 `Evade`, `Focus`, `my(status)Focus`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

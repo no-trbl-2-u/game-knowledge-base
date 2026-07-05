@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 437 of first 500 generated cards
+- **Ordinal:** 437 of 1692 generated cards
 - **Source card id:** `628930`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ Execute: Upgrade all your Basic Attacks by 1 if your foe dies at exactly 0 healt
 ## Observed keyword / token leads
 
 `Basic Attacks`, `Execute`, `Upgrade`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

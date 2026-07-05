@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 302 of first 500 generated cards
+- **Ordinal:** 302 of 1692 generated cards
 - **Source card id:** `740974`
 - **Category:** Action
 - **Type:** Magic
@@ -83,8 +83,3 @@ Delve a Potion. Charges (1/1).
 ## Observed keyword / token leads
 
 `Charges`, `Delve`, `Potion`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

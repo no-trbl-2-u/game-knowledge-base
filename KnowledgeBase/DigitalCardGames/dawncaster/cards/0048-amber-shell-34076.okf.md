@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 48 of first 500 generated cards
+- **Ordinal:** 48 of 1692 generated cards
 - **Source card id:** `34076`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -81,8 +81,3 @@ At the start of your turn, gain 1 Armor for every 2 damage you've taken last tur
 ## Observed keyword / token leads
 
 `Armor`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

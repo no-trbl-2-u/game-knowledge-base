@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 112 of first 500 generated cards
+- **Ordinal:** 112 of 1692 generated cards
 - **Source card id:** `778358`
 - **Category:** Action
 - **Type:** Utility
@@ -84,8 +84,3 @@ This turn, your Ranged and Melee actions will Critical Hit. Charges (1/1).
 ## Observed keyword / token leads
 
 `Charges`, `Critical Hit`, `Melee`, `Ranged`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

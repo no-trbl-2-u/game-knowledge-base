@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 168 of first 500 generated cards
+- **Ordinal:** 168 of 1692 generated cards
 - **Source card id:** `491688`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ This combat, when your foe plays a card that was not in their deck when combat b
 ## Observed keyword / token leads
 
 `Bleeding`, `Slowed`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

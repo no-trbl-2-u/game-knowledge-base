@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 451 of first 500 generated cards
+- **Ordinal:** 451 of 1692 generated cards
 - **Source card id:** `871873`
 - **Category:** Action
 - **Type:** Melee
@@ -84,8 +84,3 @@ Deal [damage:7] damage. <br>Frenzy: Gain STR and draw a card Rampage.
 ## Observed keyword / token leads
 
 `Frenzy`, `Gain STR`, `Rampage`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

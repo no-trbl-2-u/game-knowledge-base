@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 39 of first 500 generated cards
+- **Ordinal:** 39 of 1692 generated cards
 - **Source card id:** `3447`
 - **Category:** Action
 - **Type:** Magic
@@ -84,8 +84,3 @@ Gain |#5+[[damageBonus]]#| HEALTH, OR deal that much damage OR inflict that much
 ## Observed keyword / token leads
 
 `Burning`, `damageBonus`, `Frozen`, `HEALTH`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

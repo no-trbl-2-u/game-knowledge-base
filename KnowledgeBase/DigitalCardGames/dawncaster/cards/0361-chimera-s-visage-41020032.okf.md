@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 361 of first 500 generated cards
+- **Ordinal:** 361 of 1692 generated cards
 - **Source card id:** `41020032`
 - **Category:** Equipment
 - **Type:** Utility
@@ -87,8 +87,3 @@ Activate: Shift into a beastform.
 ## Observed keyword / token leads
 
 `Activate`, `Channel`, `Durability`, `Shift`, `While`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

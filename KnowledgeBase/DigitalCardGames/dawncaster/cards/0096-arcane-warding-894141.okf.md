@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 96 of first 500 generated cards
+- **Ordinal:** 96 of 1692 generated cards
 - **Source card id:** `894141`
 - **Category:** Action
 - **Type:** Magic
@@ -83,8 +83,3 @@ Gain [[permaValue+2]] Barrier. Permanently improve the Barrier gained by 2 after
 ## Observed keyword / token leads
 
 `Barrier`, `Permanently`, `permaValue+2`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

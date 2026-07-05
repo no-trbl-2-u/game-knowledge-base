@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 464 of first 500 generated cards
+- **Ordinal:** 464 of 1692 generated cards
 - **Source card id:** `528897`
 - **Category:** Action
 - **Type:** Melee
@@ -86,8 +86,3 @@ Deal [damage:1] damage.<br>Flanking: Inflict a Deep Wound On Hit. Can't be upgra
 ## Observed keyword / token leads
 
 `Can`, `Deep Wound`, `Flanking`, `Inflict`, `On Hit`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

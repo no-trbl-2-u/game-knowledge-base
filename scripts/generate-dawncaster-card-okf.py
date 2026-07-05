@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Generate Dawncaster card OKF records from the local Neurrone SQLite mirror.
 
-The first batch intentionally covers the first N cards in deterministic
-case-insensitive name order. Source material is the harvested Dawncaster card DB
-kept under /root/Workspace/reports/dawncaster-card-library/.
+The generator covers the full local DB in deterministic case-insensitive name
+order. Source material is the harvested Dawncaster card DB kept under
+/root/Workspace/reports/dawncaster-card-library/.
 """
 from __future__ import annotations
 
+import csv
 import html
 import re
 import sqlite3
@@ -17,8 +18,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DB = Path('/root/Workspace/reports/dawncaster-card-library/neurrone-dawncaster-cards.db')
 OUT = ROOT / 'KnowledgeBase' / 'DigitalCardGames' / 'dawncaster'
 CARDS = OUT / 'cards'
+CARD_INDEX = OUT / 'card-index.csv'
 RETRIEVED_AT = '2026-07-05'
-LIMIT = 500
 
 COST_FIELDS = ['dex', 'int', 'str', 'holy', 'neutral', 'dexint', 'dexstr', 'intstr', 'blood']
 
@@ -97,7 +98,7 @@ type: digital_card_game_index
 game:
   title: "Dawncaster"
   slug: "dawncaster"
-scope: "digital card corpus; first {LIMIT} Neurrone DB cards by name"
+scope: "digital card corpus; all {total} Neurrone DB cards by name"
 sources:
   - id: "src-001"
     title: "Neurrone Dawncaster SQLite card database"
@@ -121,9 +122,10 @@ status: draft
 
 ## Summary
 
-- Generated the first {LIMIT} card records from a local SQLite mirror containing {total} cards.
+- Generated {total} card records from a local SQLite mirror.
 - Ordering is deterministic: case-insensitive card name, then numeric card id.
 - Each record preserves card id, name, category, type, rarity, expansion, color, cost vector, raw rules HTML, plain rules text, and observed keyword/token leads.
+- The minimal card lookup lives at `card-index.csv` and contains only card number, card name, and observed keyword/token leads.
 
 ## Source-backed facts
 
@@ -132,10 +134,6 @@ status: draft
   Evidence: `select count(*) from cards` against the harvested SQLite DB.
   Confidence: high
 
-## Design implications for SomberSoft
-
-- This corpus is machine-generated evidence for card-library scale, wording patterns, status vocabulary, and cost/action taxonomy.
-- The records are deliberately atomic so future agents can grep, cluster, parse, and curate without wading through prose sludge.
 
 ## Open questions
 
@@ -184,7 +182,7 @@ This file records the source registry for the Dawncaster digital-card OKF corpus
 
 ## Source-backed facts
 
-- Claim: The first 500 card records were generated from the Neurrone SQLite mirror.
+- Claim: The card records were generated from the Neurrone SQLite mirror.
   Source: src-001
   Evidence: Local script `scripts/generate-dawncaster-card-okf.py` queries `cards`, `costs`, `categories`, `types`, `rarities`, `colors`, and `expansions`.
   Confidence: high
@@ -219,8 +217,9 @@ def main() -> None:
         JOIN colors col ON c.color=col.id
         JOIN costs co ON c.id=co.card_id
         ORDER BY lower(c.name), c.id
-        LIMIT ?
-    ''', (LIMIT,)).fetchall()
+    ''').fetchall()
+
+    index_rows: list[dict[str, str]] = []
 
     for idx, row in enumerate(rows, start=1):
         row = dict(row)
@@ -234,6 +233,11 @@ def main() -> None:
         terms_yaml = '\n'.join(f'  - {yaml_quote(term)}' for term in terms) if terms else '  []'
         body_terms = ', '.join(f'`{t}`' for t in terms) if terms else 'none observed'
         raw = str(row['description_html']).replace('```', '` ` `')
+        index_rows.append({
+            'card_number': str(idx),
+            'card_name': str(row['name']),
+            'keywords_on_card': '; '.join(terms),
+        })
         file.write_text(f'''---
 okf_version: 0.2
 type: card_record
@@ -260,7 +264,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** {idx} of first {LIMIT} generated cards
+- **Ordinal:** {idx} of {total} generated cards
 - **Source card id:** `{row['id']}`
 - **Category:** {row['category']}
 - **Type:** {row['type']}
@@ -294,14 +298,15 @@ status: draft
 ## Observed keyword / token leads
 
 {body_terms}
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.
 ''', encoding='utf-8')
 
+    with CARD_INDEX.open('w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=['card_number', 'card_name', 'keywords_on_card'], lineterminator='\n')
+        writer.writeheader()
+        writer.writerows(index_rows)
+
     print(f'generated {len(rows)} card OKF files under {CARDS}')
+    print(f'card index: {CARD_INDEX}')
     print(f'index: {OUT / "index.okf.md"}')
     print(f'sources: {OUT / "sources.okf.md"}')
 

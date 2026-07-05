@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 217 of first 500 generated cards
+- **Ordinal:** 217 of 1692 generated cards
 - **Source card id:** `767783`
 - **Category:** Action
 - **Type:** Melee
@@ -86,8 +86,3 @@ Advantage: Gain [[companionlevel]] Anger.
 ## Observed keyword / token leads
 
 `Advantage`, `Anger`, `companionlevel`, `companionlevel*2`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

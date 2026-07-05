@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 89 of first 500 generated cards
+- **Ordinal:** 89 of 1692 generated cards
 - **Source card id:** `944422`
 - **Category:** Action
 - **Type:** Magic
@@ -84,8 +84,3 @@ Deal [damage:1-[[damageBonus]]] damage (|#[[damageBonus]]+1#|) times.<br>Upgrade
 ## Observed keyword / token leads
 
 `damageBonus`, `Mergecraft`, `Upgrades`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

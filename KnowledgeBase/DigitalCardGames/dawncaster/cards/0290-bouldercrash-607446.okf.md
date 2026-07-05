@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 290 of first 500 generated cards
+- **Ordinal:** 290 of 1692 generated cards
 - **Source card id:** `607446`
 - **Category:** Action
 - **Type:** Ranged
@@ -82,8 +82,3 @@ Deal [damage:6] damage.<br>Inflict Dazed for every damage dealt.
 ## Observed keyword / token leads
 
 `Inflict Dazed`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

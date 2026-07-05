@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 238 of first 500 generated cards
+- **Ordinal:** 238 of 1692 generated cards
 - **Source card id:** `608098`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Create a Battlespear.<br>If HOLY was spent, upgrade it for each damage you took 
 ## Observed keyword / token leads
 
 `Battlespear`, `Create`, `damageTakenLastTurn`, `If HOLY`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -49,7 +49,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 181 of first 500 generated cards
+- **Ordinal:** 181 of 1692 generated cards
 - **Source card id:** `834532`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -83,8 +83,3 @@ This combat, gain Fortified and 4 Armor after you play or make 4 Basic Attacks. 
 ## Observed keyword / token leads
 
 `Armor`, `Basic Attacks`, `Fortified`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 47 of first 500 generated cards
+- **Ordinal:** 47 of 1692 generated cards
 - **Source card id:** `41063`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ Cards rewarded by this creature are upgraded by [[enchantmentStacks]]. When this
 ## Observed keyword / token leads
 
 `Cards`, `enchantmentStacks`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

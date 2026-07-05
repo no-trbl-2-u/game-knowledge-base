@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 41 of first 500 generated cards
+- **Ordinal:** 41 of 1692 generated cards
 - **Source card id:** `354742`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -82,8 +82,3 @@ Conjure a random Potion for every 5 energy you spend. Unique.
 ## Observed keyword / token leads
 
 `Conjure`, `Potion`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

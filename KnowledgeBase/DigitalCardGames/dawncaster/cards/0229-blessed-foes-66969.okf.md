@@ -47,7 +47,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 229 of first 500 generated cards
+- **Ordinal:** 229 of 1692 generated cards
 - **Source card id:** `66969`
 - **Category:** Enchantment
 - **Type:** Utility
@@ -81,8 +81,3 @@ At the start of combat and every turn thereafter, foes gain 2 random blessings f
 ## Observed keyword / token leads
 
 none observed
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

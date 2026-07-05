@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 36 of first 500 generated cards
+- **Ordinal:** 36 of 1692 generated cards
 - **Source card id:** `436515`
 - **Category:** Action
 - **Type:** Utility
@@ -87,8 +87,3 @@ Dispel a Blessing.<br>Add [[difficulty]] Terrors to<br>your foe’s deck.
 ## Observed keyword / token leads
 
 `Add`, `Blessing`, `difficulty`, `Dispel`, `Terrors`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

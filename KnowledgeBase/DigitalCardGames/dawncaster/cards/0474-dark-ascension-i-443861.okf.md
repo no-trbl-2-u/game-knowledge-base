@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 474 of first 500 generated cards
+- **Ordinal:** 474 of 1692 generated cards
 - **Source card id:** `443861`
 - **Category:** Form
 - **Type:** Corruption
@@ -85,8 +85,3 @@ At the start of your turn, gain [[difficulty]] Anger. Reach 5 VOID to Ascend to 
 ## Observed keyword / token leads
 
 `Anger`, `Ascend`, `difficulty`, `Reach`, `VOID`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

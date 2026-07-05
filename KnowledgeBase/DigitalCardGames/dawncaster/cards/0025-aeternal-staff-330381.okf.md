@@ -51,7 +51,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 25 of first 500 generated cards
+- **Ordinal:** 25 of 1692 generated cards
 - **Source card id:** `330381`
 - **Category:** Equipment
 - **Type:** Divine
@@ -85,8 +85,3 @@ Activate to trigger your Start of Turn effects. Reactivate whenever you complete
 ## Observed keyword / token leads
 
 `Activate`, `Durability`, `Performance`, `Reactivate`, `Turn`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

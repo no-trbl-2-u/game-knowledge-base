@@ -48,7 +48,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 92 of first 500 generated cards
+- **Ordinal:** 92 of 1692 generated cards
 - **Source card id:** `426088`
 - **Category:** Action
 - **Type:** Magic
@@ -84,8 +84,3 @@ Deal [damage:1] damage.<br>Free when conjured.<br>Conjure a base copy at the sta
 ## Observed keyword / token leads
 
 `Conjure`, `Free`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

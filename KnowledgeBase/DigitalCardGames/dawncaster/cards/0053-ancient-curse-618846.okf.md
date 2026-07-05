@@ -50,7 +50,7 @@ status: draft
 
 ## Card identity
 
-- **Ordinal:** 53 of first 500 generated cards
+- **Ordinal:** 53 of 1692 generated cards
 - **Source card id:** `618846`
 - **Category:** Action
 - **Type:** Utility
@@ -85,8 +85,3 @@ Draw a card. <br>After you cast this ([[tempValue]]/4) times, shuffle a Deadly E
 ## Observed keyword / token leads
 
 `After`, `Deadly Effigy`, `Heavy`, `tempValue`
-
-## Design notes for SomberSoft
-
-- Preserve this record as source evidence, not final design guidance.
-- Use the observed terms to seed parsing, clustering, and the future keyword glossary.
