@@ -13,15 +13,15 @@ card:
   expansion: "Core"
   color: "Aqua"
   cost:
-  dex: 1
-  int: 1
-  str: 0
-  holy: 0
-  neutral: 0
-  dexint: 0
-  dexstr: 0
-  intstr: 0
-  blood: 0
+    dex: 1
+    int: 1
+    str: 0
+    holy: 0
+    neutral: 0
+    dexint: 0
+    dexstr: 0
+    intstr: 0
+    blood: 0
 observed_terms:
   - "Quick Jab"
   - "Sudden Strike"

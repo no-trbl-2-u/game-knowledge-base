@@ -13,15 +13,15 @@ card:
   expansion: "Core Extended"
   color: "Blue"
   cost:
-  dex: 0
-  int: 2
-  str: 0
-  holy: 0
-  neutral: 1
-  dexint: 0
-  dexstr: 0
-  intstr: 0
-  blood: 0
+    dex: 0
+    int: 2
+    str: 0
+    holy: 0
+    neutral: 1
+    dexint: 0
+    dexstr: 0
+    intstr: 0
+    blood: 0
 observed_terms:
   - "Critical Hit"
   - "Deals"

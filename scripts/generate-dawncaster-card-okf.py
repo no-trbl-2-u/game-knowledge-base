@@ -125,7 +125,11 @@ status: draft
 - Generated {total} card records from a local SQLite mirror.
 - Ordering is deterministic: case-insensitive card name, then numeric card id.
 - Each record preserves card id, name, category, type, rarity, expansion, color, cost vector, raw rules HTML, plain rules text, and observed keyword/token leads.
-- The minimal card lookup lives at `card-index.csv` and contains only card number, card name, and observed keyword/token leads.
+- Machine sidecars are generated from the card records by `scripts/generate-dawncaster-card-sidecars.mjs` (freshness enforced by `scripts/validate-okf.mjs`):
+  - `cards.csv` — one row per card: identity, category/type/rarity/expansion/color, the nine-field cost vector, observed term leads, and the record path.
+  - `cards.json` — full structured records including plain rules text and raw rules HTML.
+  - `card-index.csv` — minimal lookup: card number, card name, and observed keyword/token leads.
+- Keyword sidecars (`keywords.csv`, `keywords.json`) are described in `keywords.okf.md`.
 
 ## Source-backed facts
 
@@ -229,7 +233,7 @@ def main() -> None:
         text = clean_text(row['description_html'])
         terms = extract_terms(row['description_html'])
         costs = {field: int(row[field] or 0) for field in COST_FIELDS}
-        cost_yaml = '\n'.join(f'  {field}: {costs[field]}' for field in COST_FIELDS)
+        cost_yaml = '\n'.join(f'    {field}: {costs[field]}' for field in COST_FIELDS)
         terms_yaml = '\n'.join(f'  - {yaml_quote(term)}' for term in terms) if terms else '  []'
         body_terms = ', '.join(f'`{t}`' for t in terms) if terms else 'none observed'
         raw = str(row['description_html']).replace('```', '` ` `')

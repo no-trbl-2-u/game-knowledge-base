@@ -13,15 +13,15 @@ card:
   expansion: "None"
   color: "Brown"
   cost:
-  dex: 0
-  int: 0
-  str: 0
-  holy: 0
-  neutral: 2
-  dexint: 0
-  dexstr: 0
-  intstr: 0
-  blood: 0
+    dex: 0
+    int: 0
+    str: 0
+    holy: 0
+    neutral: 2
+    dexint: 0
+    dexstr: 0
+    intstr: 0
+    blood: 0
 observed_terms:
   - "Activate"
   - "Durability"

@@ -13,15 +13,15 @@ card:
   expansion: "Infinitum"
   color: "Green"
   cost:
-  dex: 1
-  int: 0
-  str: 0
-  holy: 0
-  neutral: 0
-  dexint: 0
-  dexstr: 0
-  intstr: 0
-  blood: 0
+    dex: 1
+    int: 0
+    str: 0
+    holy: 0
+    neutral: 0
+    dexint: 0
+    dexstr: 0
+    intstr: 0
+    blood: 0
 observed_terms:
   - "During"
   - "Evasion"

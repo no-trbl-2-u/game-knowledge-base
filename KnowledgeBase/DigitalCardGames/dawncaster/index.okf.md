@@ -31,7 +31,11 @@ status: draft
 - Generated 1692 card records from a local SQLite mirror.
 - Ordering is deterministic: case-insensitive card name, then numeric card id.
 - Each record preserves card id, name, category, type, rarity, expansion, color, cost vector, raw rules HTML, plain rules text, and observed keyword/token leads.
-- The minimal card lookup lives at `card-index.csv` and contains only card number, card name, and observed keyword/token leads.
+- Machine sidecars are generated from the card records by `scripts/generate-dawncaster-card-sidecars.mjs` (freshness enforced by `scripts/validate-okf.mjs`):
+  - `cards.csv` — one row per card: identity, category/type/rarity/expansion/color, the nine-field cost vector, observed term leads, and the record path.
+  - `cards.json` — full structured records including plain rules text and raw rules HTML.
+  - `card-index.csv` — minimal lookup: card number, card name, and observed keyword/token leads.
+- Keyword sidecars (`keywords.csv`, `keywords.json`) are described in `keywords.okf.md`.
 
 ## Source-backed facts
 

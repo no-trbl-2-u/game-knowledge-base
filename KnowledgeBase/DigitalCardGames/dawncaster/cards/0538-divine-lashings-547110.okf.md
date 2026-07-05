@@ -13,15 +13,15 @@ card:
   expansion: "Infinitum"
   color: "Gold"
   cost:
-  dex: 0
-  int: 0
-  str: 0
-  holy: 2
-  neutral: 0
-  dexint: 0
-  dexstr: 0
-  intstr: 0
-  blood: 0
+    dex: 0
+    int: 0
+    str: 0
+    holy: 2
+    neutral: 0
+    dexint: 0
+    dexstr: 0
+    intstr: 0
+    blood: 0
 observed_terms:
   - "my(status)Zeal"
   - "Take"

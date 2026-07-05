@@ -13,12 +13,14 @@ on:
       - 'KnowledgeBase/**'
       - 'scripts/validate-okf.mjs'
       - 'scripts/generate-index.mjs'
+      - 'scripts/generate-dawncaster-card-sidecars.mjs'
       - '.github/workflows/validate.yml'
   pull_request:
     paths:
       - 'KnowledgeBase/**'
       - 'scripts/validate-okf.mjs'
       - 'scripts/generate-index.mjs'
+      - 'scripts/generate-dawncaster-card-sidecars.mjs'
       - '.github/workflows/validate.yml'
 
 permissions:

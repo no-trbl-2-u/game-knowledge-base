@@ -13,15 +13,15 @@ card:
   expansion: "Catalyst"
   color: "Orange"
   cost:
-  dex: 0
-  int: 0
-  str: 0
-  holy: 0
-  neutral: 0
-  dexint: 0
-  dexstr: 0
-  intstr: 0
-  blood: 4
+    dex: 0
+    int: 0
+    str: 0
+    holy: 0
+    neutral: 0
+    dexint: 0
+    dexstr: 0
+    intstr: 0
+    blood: 4
 observed_terms:
   - "damageBonus"
   - "Darkness"

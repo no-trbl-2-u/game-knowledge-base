@@ -13,15 +13,15 @@ card:
   expansion: "Eclypse"
   color: "Purple"
   cost:
-  dex: 0
-  int: 0
-  str: 0
-  holy: 0
-  neutral: 1
-  dexint: 0
-  dexstr: 0
-  intstr: 0
-  blood: 2
+    dex: 0
+    int: 0
+    str: 0
+    holy: 0
+    neutral: 1
+    dexint: 0
+    dexstr: 0
+    intstr: 0
+    blood: 2
 observed_terms:
   - "Activate"
   - "Defile"

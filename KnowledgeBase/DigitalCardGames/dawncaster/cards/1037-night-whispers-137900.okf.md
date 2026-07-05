@@ -13,15 +13,15 @@ card:
   expansion: "Synthesis"
   color: "Blue"
   cost:
-  dex: 0
-  int: 2
-  str: 0
-  holy: 0
-  neutral: 0
-  dexint: 0
-  dexstr: 0
-  intstr: 0
-  blood: 1
+    dex: 0
+    int: 2
+    str: 0
+    holy: 0
+    neutral: 0
+    dexint: 0
+    dexstr: 0
+    intstr: 0
+    blood: 1
 observed_terms:
   - "Dominated"
   - "HEALTH"

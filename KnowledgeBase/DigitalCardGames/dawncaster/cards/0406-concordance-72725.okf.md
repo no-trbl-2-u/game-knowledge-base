@@ -13,15 +13,15 @@ card:
   expansion: "Catalyst"
   color: "Purple"
   cost:
-  dex: 0
-  int: 1
-  str: 1
-  holy: 1
-  neutral: 0
-  dexint: 0
-  dexstr: 0
-  intstr: 0
-  blood: 0
+    dex: 0
+    int: 1
+    str: 1
+    holy: 1
+    neutral: 0
+    dexint: 0
+    dexstr: 0
+    intstr: 0
+    blood: 0
 observed_terms:
   - "Banner"
   - "Grounded"

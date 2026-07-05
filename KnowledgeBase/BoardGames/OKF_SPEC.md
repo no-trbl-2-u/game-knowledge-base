@@ -43,6 +43,7 @@ Field rules:
 - `game.weight` is the BGG complexity weight, cited from the game's discovery source; `null` when unknown.
 - `pattern` and `operations` docs omit the `game` block, `scope`, and `sources` requirements where they do not apply (see the validator for the exact exemptions).
 - Digital card-game docs (`digital_card_game_index`, `digital_card_sources`, `digital_card_glossary`, `digital_card_keyword`, `card_record`) are source-evidence records for large digital card corpora. They are exempt from board-game `mechanics` vocabulary requirements; `card_record` may use a `card:` frontmatter block instead of `game:`.
+- A `card_record`'s `card:` block must carry `name`, `slug`, `source_id`, `ordinal`, and a `cost:` sub-block with all nine cost fields (`dex`, `int`, `str`, `holy`, `neutral`, `dexint`, `dexstr`, `intstr`, `blood`) nested one level below `cost:` (4-space indent). The validator enforces the nesting — cost fields indented level with `cost:` parse as its siblings and the cost block silently reads as null.
 
 ## Mechanics vocabulary (controlled)
 
@@ -131,6 +132,17 @@ node scripts/generate-index.mjs --check  # exit 1 if stale
 ```
 
 Regenerate it at the end of every scout run and every librarian/patterns pass. The validator fails the corpus when INDEX is stale.
+
+## Digital card corpus sidecars (generated)
+
+Large digital card corpora keep machine sidecars next to their OKF records. For Dawncaster (`KnowledgeBase/DigitalCardGames/dawncaster/`), `cards.csv`, `cards.json`, and `card-index.csv` are derived from `cards/*.okf.md` — **generated, never hand-edited**:
+
+```sh
+node scripts/generate-dawncaster-card-sidecars.mjs          # regenerate
+node scripts/generate-dawncaster-card-sidecars.mjs --check  # exit 1 if stale
+```
+
+Edit card records (or rerun `scripts/generate-dawncaster-card-okf.py` against the SQLite mirror), then regenerate the sidecars. The validator fails the corpus when they are stale.
 
 ## Failed-source followups (structured failure records)
 

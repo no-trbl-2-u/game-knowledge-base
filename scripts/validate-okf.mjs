@@ -13,6 +13,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { buildIndex } from './generate-index.mjs'
+import { buildSidecars } from './generate-dawncaster-card-sidecars.mjs'
 
 // --- controlled vocabularies -------------------------------------------
 // Extend here first (OKF_SPEC.md is the human copy; keep in sync).
@@ -141,6 +142,19 @@ function validate(file) {
     if (!BETTER_IF_LABELS.includes(l)) flag(file, `better_if_labels "${l}" not in taxonomy`)
   }
 
+  // card_record structure: identity fields plus a properly nested cost vector.
+  // The nesting check matters — cost fields indented level with `cost:` parse
+  // as siblings of it and the cost block silently reads as null.
+  if (type === 'card_record') {
+    for (const key of ['name', 'slug', 'source_id', 'ordinal']) {
+      if (!new RegExp(`^  ${key}: \\S`, 'm').test(head)) flag(file, `missing card.${key}`)
+    }
+    if (!/^  cost:\s*$/m.test(head)) flag(file, 'missing card.cost block')
+    for (const key of ['dex', 'int', 'str', 'holy', 'neutral', 'dexint', 'dexstr', 'intstr', 'blood']) {
+      if (!new RegExp(`^    ${key}: -?\\d+$`, 'm').test(head)) flag(file, `card.cost.${key} missing or not nested under cost (needs 4-space indent)`)
+    }
+  }
+
   // OKF 0.2 §6: followups block (structured failure records)
   const hasFollowups = /^followups:\s*$/m.test(head) || /^followups:\s*\[/m.test(head)
   for (const m of head.matchAll(/^\s+failure:\s*(\S+)/gm)) {
@@ -165,6 +179,18 @@ if (fullCorpus) {
   const indexFile = path.join('KnowledgeBase/BoardGames', INDEX_BASENAME)
   const actual = fs.existsSync(indexFile) ? fs.readFileSync(indexFile, 'utf-8') : null
   if (actual !== buildIndex()) flag(indexFile, 'stale or missing — run: node scripts/generate-index.mjs')
+
+  // Dawncaster card sidecars (cards.csv / cards.json / card-index.csv) are
+  // derived from the card records; regenerate and diff the same way.
+  try {
+    for (const [file, expected] of Object.entries(buildSidecars())) {
+      const onDisk = fs.existsSync(file) ? fs.readFileSync(file, 'utf-8') : null
+      if (onDisk !== expected) flag(file, 'stale or missing — run: node scripts/generate-dawncaster-card-sidecars.mjs')
+    }
+  }
+  catch (err) {
+    flag('KnowledgeBase/DigitalCardGames/dawncaster', `card sidecar generation failed: ${err.message}`)
+  }
 }
 
 if (findings.length) {

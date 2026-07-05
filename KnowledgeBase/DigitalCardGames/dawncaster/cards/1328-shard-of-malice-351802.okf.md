@@ -13,15 +13,15 @@ card:
   expansion: "Core Extended"
   color: "Orange"
   cost:
-  dex: 1
-  int: 0
-  str: 1
-  holy: 0
-  neutral: 0
-  dexint: 0
-  dexstr: 0
-  intstr: 0
-  blood: 0
+    dex: 1
+    int: 0
+    str: 1
+    holy: 0
+    neutral: 0
+    dexint: 0
+    dexstr: 0
+    intstr: 0
+    blood: 0
 observed_terms:
   - "Bleeding"
   - "Inflict"
