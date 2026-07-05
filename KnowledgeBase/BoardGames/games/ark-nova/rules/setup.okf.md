@@ -67,10 +67,6 @@ The setup makes long-term goals visible early: base conservation projects and fi
 - onboarding: first-game starting decks should be integrated into setup rather than optional lookup.
 - component clarity: display when project slots are blocked in two-player games.
 
-## Design implications for SomberSoft
-
-A heavy game should expose strategic anchors during setup. If hidden scoring exists, the market and public projects must give players meaningful first-hand filtering.
-
 ## Open questions
 
 - How often do new players misbuild association/project setup by player count?

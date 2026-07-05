@@ -73,10 +73,6 @@ The card/board coupling prevents static worker-placement optimization. Deck comp
 - component clarity: board spaces and cards should use redundant icon plus color/faction labeling.
 - strategic depth: card market evaluation should foreground both current reveal economy and future board access.
 
-## Design implications for SomberSoft
-
-For digital card-worker hybrids, show "future access map" on card acquisition: buying a card should preview what spaces/actions it opens later.
-
 ## Open questions
 
 - Which Agent icons are most commonly underdrafted by new players.

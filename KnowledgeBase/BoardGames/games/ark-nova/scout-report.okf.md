@@ -120,10 +120,6 @@ Top 3:
 2. scoring/endgame: make final scoring and trigger timing executable without rulebook lookup.
 3. downtime / turn pacing: redesign or constrain the 4-player experience; community and reviewers favor lower counts.
 
-## Design implications for SomberSoft
-
-Ark Nova is a case study in governing abundance. It has many cards, icons, subsystems, and spatial constraints, yet remains beloved because one central mechanism gives players a constant tactical heartbeat. Our designs can carry breadth if the player always knows what lever they are pulling now and why waiting might matter.
-
 ## Open questions
 
 - Future scout should compare Ark Nova to Sanctuary, its listed reimplementation, to see what was streamlined.

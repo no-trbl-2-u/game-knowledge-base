@@ -113,10 +113,6 @@ Reception sources repeatedly praise asymmetric spirits, theme-mechanic unity, re
 
 See `reception/better-if.okf.md` for classified opportunities.
 
-## Design implications for SomberSoft
-
-Keep discovery, official rules, and player testimony separate. Treat ratings as lead signals, not proof of rules quality.
-
 ## Open questions
 
 - Need a future crawl of official FAQ subpages for exact errata and recurring edge cases.

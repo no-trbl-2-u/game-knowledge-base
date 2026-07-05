@@ -78,10 +78,6 @@ Timing windows create most ambiguity: Plot vs Combat vs Endgame Intrigues, revea
 - component clarity: mark errata-prone first-print cards or include replacement labels.
 - combat resolution: provide conflict deployment reminder: current-turn recruits plus up to two garrison troops.
 
-## Design implications for SomberSoft
-
-If a system uses hidden tactical interrupts, its timing grammar must be visible. Every interrupt type needs an explicit window and a UI/table marker.
-
 ## Open questions
 
 - Whether expansions increase ambiguity enough to merit separate combined-rules summaries.

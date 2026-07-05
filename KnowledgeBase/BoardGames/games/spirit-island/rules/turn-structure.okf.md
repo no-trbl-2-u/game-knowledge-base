@@ -75,10 +75,6 @@ Each round follows a five-part cadence: Spirit Phase, Fast Power Phase, Invader 
 - rules ambiguity: highlight what slow powers can still usefully affect after invader action.
 - turn pacing: digital threat previews can shorten table calculus.
 
-## Design implications for SomberSoft
-
-Split actions by timing windows. Give delayed actions enough value that foresight feels like mastery, not punishment.
-
 ## Open questions
 
 - How often do players misplay cleanup and temporary damage clearing?

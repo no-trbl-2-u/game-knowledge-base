@@ -76,12 +76,6 @@ Reception sources repeatedly praise the fusion of deck-building and worker place
 
 See `reception/better-if.okf.md` for classified opportunities.
 
-## Design implications for SomberSoft
-
-- Dual-use cards are strongest when each use creates a real opportunity cost, not a decorative alternate mode.
-- Short victory races make every scoring vector legible and urgent.
-- Hidden combat modifiers can create tension if bounded by public commitment signals.
-
 ## Open questions
 
 - Whether the original base game should be studied beside Uprising as an official iteration/patch of the same design lineage.

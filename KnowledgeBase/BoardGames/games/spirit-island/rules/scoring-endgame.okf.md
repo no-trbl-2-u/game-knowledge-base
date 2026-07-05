@@ -79,10 +79,6 @@ There is no point scoring in the conventional sense. The endgame is victory or d
 - scoring/endgame: add concession/auto-resolve support or endgame acceleration when victory/loss certainty is high.
 - turn pacing: reveal outcome certainty carefully; do not drain drama with bookkeeping.
 
-## Design implications for SomberSoft
-
-Avoid static victory ladders. Let morale/fear/reputation reshape the win condition over time.
-
 ## Open questions
 
 - Does official FAQ specify any tricky timing for fear-card victory or terror-level transitions?

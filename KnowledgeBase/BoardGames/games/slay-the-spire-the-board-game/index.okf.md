@@ -57,11 +57,6 @@ This entry was chosen because the game is high-ranked on BGG, has strong co-op d
 - Official publisher-hosted rulebook PDF: `https://contentiongames.com/_images/STS_KS_Rulebook.pdf`
 - BGG file entry confirms official rulebook v2.30 exists and notes changes: added teardown rules to page 23 and cut optional sequential-turn rules.
 
-## Design implications for SomberSoft
-- The strongest transferable lesson is numerical compression: the adaptation preserves deckbuilding identity while reducing health/damage/gold scale for tabletop handling.
-- Cooperative deckbuilding gains teeth when one player death loses the party; shared fate increases table talk and interdependence.
-- Flexible action order lets players co-plan without rigid downtime, but it demands careful rulebook clarity and interface affordances.
-
 ## Open questions
 - [medium] Need direct full-text comparison between rulebook v2.30 and the publisher-hosted `STS_KS_Rulebook.pdf`; source extraction identifies official PDF content but not version metadata in the URL itself.
 - [medium] Need a deeper sample of BGG user comments beyond search-visible snippets to quantify complaints by category.

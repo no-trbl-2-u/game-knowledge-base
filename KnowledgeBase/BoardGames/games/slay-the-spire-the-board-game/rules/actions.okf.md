@@ -60,7 +60,3 @@ status: verified
 ## Praised design
 - **Praised design [strategic depth][high][src-007]:** Reviewer praises cooperative play as the main value beyond the video game and calls it a revelation.
 - **Praised design [player interaction][high][src-006]:** The multiplayer element shines because players coordinate attacks, block, and shared survival.
-
-## Design implications for SomberSoft
-- Tabletop deckbuilders benefit when deck-thinning, upgrades, and cross-player assistance are always present but costly.
-- Character action vocabularies should differ sharply while sharing a common resolution grammar: Energy, card type, target, status, reward.

@@ -123,13 +123,6 @@ Top 3:
 2. **turn pacing / downtime** — threat-priority aids and coordination tools for high player counts.
 3. **scoring/endgame** — compress solved late states and make timer losses feel climactic.
 
-## Design implications for SomberSoft
-
-- Show enemy intent early.
-- Make prevention feel as vivid as damage.
-- Bind asymmetric powers to fiction.
-- Treat tutorials, reference, and endgame compression as core systems in any heavy co-op design.
-
 ## Open questions
 
 - Crawl official FAQ subpages for exact edge cases and errata.

@@ -51,7 +51,3 @@ status: verified
 ## Player friction
 - **Player friction [rules ambiguity][medium][src-008]:** A reviewer accidentally shuffled the Summon deck and argued the rulebook should explain why it remains unshuffled; they suggested wording that the Summon deck is searched alphabetically later.
 - **Player friction [setup/teardown][medium][src-007]:** Review dislikes include fiddly tracking and a massive box/large table footprint; retail comments also call setup time heavy or lengthy.
-
-## Design implications for SomberSoft
-- Setup instructions should not merely say what to do; they should say why when a step violates common habit, e.g., "do not shuffle this searchable deck."
-- Physical setup can support procedural variety if token types constrain randomness into legible bands.

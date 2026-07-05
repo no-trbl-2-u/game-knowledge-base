@@ -99,12 +99,6 @@ The chief better-if pattern is not that Mage Knight lacks depth. It has depth in
 
 The same sources praise replayability, card interplay, progression, and solo excellence. Preserve the engine; reform the interface.
 
-## Design implications for SomberSoft
-
-1. Build complex games with a rules database from day one.
-2. Do not promise co-op unless players need one another mechanically.
-3. Use shorter scenarios or simultaneous planning when each turn is a dense optimization puzzle.
-
 ## Open questions
 
 - Separate complaints for base game versus Ultimate Edition component/rule improvements.

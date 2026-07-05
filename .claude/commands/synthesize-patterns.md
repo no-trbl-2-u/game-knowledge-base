@@ -20,9 +20,6 @@ games — it never invents claims. Body sections:
                         <game-slug> (src-NNN), with confidence carried over
 ## Where it works     — designs that players praised, and why
 ## Where it fails     — designs that players punished, and why
-## Design implications for SomberSoft
-## Coverage gaps      — games/questions the corpus lacks for this pattern
-```
 
 ## Procedure
 

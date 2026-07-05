@@ -56,7 +56,3 @@ Player actions are simple: draw, place, resolve color effects, stop or continue.
 ## Rules / Mechanics
 
 The market restriction prevents single-color tunneling and keeps bags mixed. The flask is a pressure valve, but its timing restriction preserves the punishment of overreach.
-
-## Design implications for SomberSoft
-
-Good mitigation does not erase consequence. Let players undo danger before catastrophe, not after the line is crossed.

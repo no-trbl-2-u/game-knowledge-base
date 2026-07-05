@@ -67,10 +67,6 @@ Setup is both configuration and difficulty selection. The system can be made lig
 - setup/teardown: provide trays or digital checklists keyed by player count.
 - onboarding: first-game script should make the recommended omissions unavoidable.
 
-## Design implications for SomberSoft
-
-Treat setup as a difficulty contract. The interface should prevent players from accidentally accepting rules burden they do not understand.
-
 ## Open questions
 
 - Does the current official rulebook include enough visual setup examples for all player counts?

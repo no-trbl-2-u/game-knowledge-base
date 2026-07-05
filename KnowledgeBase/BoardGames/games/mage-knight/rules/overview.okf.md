@@ -74,12 +74,6 @@ The same density that makes the game durable also raises lookup burden. New play
 
 The praised design is the conversion of adventure theme into deterministic resource algebra. The player is not waiting for a die to tell a story; the player is manufacturing the story from constraints.
 
-## Design implications for SomberSoft
-
-- If a system has many subsystems, make each subsystem pay rent by changing decisions, not merely adding keywords.
-- The most durable campaign-feeling one-shot designs create visible character growth inside a single session.
-- Consider a layered onboarding path: walkthrough first, reference second, scenario variants last.
-
 ## Open questions
 
 - Add exact official rulebook page references for deck, mana, fame, reputation, wounds, and scenario setup.

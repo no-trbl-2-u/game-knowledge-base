@@ -93,12 +93,6 @@ Reception pattern: Mage Knight is admired as a benchmark heavy solo/co-op optimi
 - Deterministic combat that rewards planning.
 - Solo mode that preserves crunch with less waiting.
 
-## Design implications for SomberSoft
-
-- Heavy solo games can tolerate rule density better than heavy multiplayer games because downtime is self-inflicted.
-- Progression feels stronger when each gained card is used only a few times before final judgment.
-- If multiplayer cooperation is promised, the rules must create shared dependencies, not merely parallel proximity.
-
 ## Open questions
 
 - Pull direct full review text where possible; web_extract timed out, so this file currently relies on search-extracted snippets.

@@ -76,10 +76,6 @@ The action-row makes tempo a visible resource. The opposing scoring tracks creat
 - component clarity: icon tooltips/reference integration.
 - scoring/endgame: persistent endgame preview.
 
-## Design implications for SomberSoft
-
-When a game asks players to parse many cards, the action economy must be simple and ritualistic. Ark Nova proves that a five-card conveyor belt can tame a broad ruleset.
-
 ## Open questions
 
 - Which action upgrades are most decisive, and can digital telemetry detect dominant upgrade orders?

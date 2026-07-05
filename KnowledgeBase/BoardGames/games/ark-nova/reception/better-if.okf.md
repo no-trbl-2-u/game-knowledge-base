@@ -131,10 +131,6 @@ Top friction: large-deck variance, four-player length, endgame scoring, and inte
 
 Even the complaint sources praise the central action-card engine and replayability. The lesson is not to make Ark Nova smaller; it is to make its frictions more governable.
 
-## Design implications for SomberSoft
-
-A large-content game must provide agency over uncertainty. Randomness is tolerated when it demands adaptation; it is resented when it nullifies declared intent.
-
 ## Open questions
 
 - Would a modular market variant preserve replayability while reducing deck frustration?

@@ -129,10 +129,6 @@ Top opportunities:
 2. Endgame compression/auto-resolution for solved states.
 3. High-player-count pacing and negotiation support.
 
-## Design implications for SomberSoft
-
-Heavy co-op systems need governors: tutorial governors, pacing governors, and endgame governors. Let players wrestle the monster, not the manual.
-
 ## Open questions
 
 - Did later expansions solve base-game variety complaints enough to validate modular expansion as the intended answer?

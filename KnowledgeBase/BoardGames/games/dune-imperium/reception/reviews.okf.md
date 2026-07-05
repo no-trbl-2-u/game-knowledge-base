@@ -95,10 +95,6 @@ Reception is strongly positive: BGG rank/rating signals are high, reviewers prai
 
 See `better-if.okf.md` for categorized proposals.
 
-## Design implications for SomberSoft
-
-Positive reception does not remove friction; it shows friction can be valuable when it is legible, consequential, and narratively aligned.
-
 ## Open questions
 
 - Need deeper primary comment sampling from BGG forums/ratings if a later run wants quantified complaint frequencies.

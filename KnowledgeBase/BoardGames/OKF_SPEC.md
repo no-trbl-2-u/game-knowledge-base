@@ -1,6 +1,6 @@
 # OKF Specification — Board Game Research
 
-OKF here means **Operational Knowledge File**: markdown documents with strict frontmatter, source-backed claims, and explicit design implications.
+OKF here means **Operational Knowledge File**: markdown documents with strict frontmatter, source-backed claims, confidence labels, and retrieval-friendly metadata.
 
 This is a provisional SomberSoft format. If T defines another OKF standard, replace this file and migrate forward.
 
@@ -109,8 +109,6 @@ Use these sections when applicable:
 ## Praised design
 
 ## Better-if opportunities
-
-## Design implications for SomberSoft
 
 ## Open questions
 ```

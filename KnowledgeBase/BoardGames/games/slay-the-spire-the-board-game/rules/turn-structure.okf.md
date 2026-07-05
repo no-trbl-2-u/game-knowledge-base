@@ -55,7 +55,3 @@ status: verified
 ## Timing style
 - **Praised design [turn pacing][high][src-008]:** Flexible action order allows simultaneous action for speed and precise player-selected sequencing when tactics demand it.
 - **Source-backed fact [medium][src-003]:** The BGG official rulebook v2.30 file notes that optional sequential-turn rules were cut from page 23; a designer/publisher comment says removing the snippet corrected an overreaction to early playtesting feedback.
-
-## Design implications for SomberSoft
-- The game replaces rigid turns with a shared tactical phase. This improves co-op expressiveness but requires UI clarity in digital analogues: visible intents, shared queue, reversible planning, and no hidden timing traps.
-- Simultaneous/free order is safest when enemies have readable intents and all players share loss conditions.

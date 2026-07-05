@@ -69,10 +69,6 @@ status: verified
 - Onboarding: preserve low-complexity spirits and preset first games.
 - Component clarity: surface invader pipeline state as a visual threat queue.
 
-## Design implications for SomberSoft
-
-Use enemy intent tracks. Let players see doom forming, then make them decide which doom they can afford.
-
 ## Open questions
 
 - Which rulebook concepts cause the most early failures: targeting/range, fast-vs-slow timing, or invader explore adjacency?

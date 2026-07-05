@@ -64,10 +64,6 @@ The game compresses a large strategic map into a small number of consequential t
 - onboarding: teach the card split with a scripted first round before exposing the full board.
 - rules ambiguity: emphasize that card text can override normal rules and that the back-cover/icon guide is part of the operating system.
 
-## Design implications for SomberSoft
-
-Design dual-use cards so both halves are desirable in different board states. If one side is dominant, the mechanism becomes bookkeeping; if both are urgent, the mechanism becomes judgment.
-
 ## Open questions
 
 - How often new players misplay Agent/Reveal boxes in first sessions.

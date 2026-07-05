@@ -67,11 +67,6 @@ Endgame is not one universal VP race in the Dune/Ark Nova sense. It is a scenari
 
 Scenario-dependent scoring can create lookup friction and misplayed sessions if the goal and round limit are not reiterated on a scenario card/player aid.
 
-## Design implications for SomberSoft
-
-- Scenario success should be summarized in one invariant panel: objective, round limit, loss condition, scoring/tiebreak.
-- Advancement and victory can be separate if the advancement itself makes the final assault emotionally legible.
-
 ## Open questions
 
 - Extract the official Scenario Book text for base scenarios and build a scenario matrix.

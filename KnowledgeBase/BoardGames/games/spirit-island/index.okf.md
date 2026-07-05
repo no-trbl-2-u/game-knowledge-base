@@ -88,13 +88,6 @@ status: verified
 - Turn pacing/downtime: simultaneous play still demands negotiation; digital tooling could provide threat-map highlights and conflict detection.
 - Scoring/endgame: avoid procedural mop-up once outcome is clear.
 
-## Design implications for SomberSoft
-
-- Enemy automation should show intent early enough for players to feel responsible for outcomes.
-- Asymmetry gains force when powers express fiction, not just math.
-- Victory thresholds can move dynamically as pressure resources accumulate.
-- Co-op complexity needs ritualized onboarding: preset first games, recommended roles, and low-complexity archetypes.
-
 ## Open questions
 
 - Which official FAQ edge cases generate the highest recurrent confusion among players?

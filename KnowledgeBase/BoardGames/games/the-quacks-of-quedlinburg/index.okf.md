@@ -78,10 +78,6 @@ The design grants drama without attack. Players suffer by their own hand, laugh 
 - randomness: high-luck systems need visible mitigation and permission to enjoy failure.
 - player-interaction: simultaneous solitaire can still feel communal if reveals, busts, and bonus contests are staged publicly.
 
-## Design implications for SomberSoft
-
-Axiomancer can use a similar risk economy: let the player knowingly pollute a pool for power, then offer enough remediation that a bust feels authored rather than arbitrary.
-
 ## Open questions
 
 - Whether current CMYK/Schmidt editions materially revise component durability or rules text from the cited older English rulebook.

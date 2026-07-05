@@ -56,7 +56,3 @@ Players brew potions by drawing chips from personal bags. Chips advance along a 
 ## Rules / Mechanics
 
 The design makes risk cumulative and legible. White chips are not merely misses; they are debt already in the bag. Buying colored chips dilutes risk while adding tactical effects, so the market phase is both engine-building and probability management.
-
-## Design implications for SomberSoft
-
-For digital or tabletop roguelike systems, dangerous tokens should remain useful as pacing devices. The player fears them because they count toward failure, not because they are inert blanks.

@@ -78,10 +78,6 @@ Opposed tracks make the end visible throughout the game. The race can be acceler
 - rules ambiguity: table examples for end-of-turn vs break trigger.
 - accessibility: visual scoring area highlights on track.
 
-## Design implications for SomberSoft
-
-If using opposing tracks, make the current net score and final-turn rights immediately calculable. Let the drama be strategic, not arithmetic.
-
 ## Open questions
 
 - Do players misjudge final scoring because conservation points move in larger perceived steps than appeal?

@@ -73,10 +73,6 @@ Hidden Endgame Intrigue cards and combat timing can make the true score state op
 - scoring/endgame: provide a public endgame checklist and hidden-score warning icon.
 - combat resolution: make tie consequences visible because tied first place produces no winner.
 
-## Design implications for SomberSoft
-
-A 10-point race suits systems with multiple narrow scoring channels. Keep tiebreakers thematically ordered and easy to audit.
-
 ## Open questions
 
 - How often endgame Intrigue changes table perception from dramatic to unfair.

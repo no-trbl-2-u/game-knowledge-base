@@ -56,7 +56,3 @@ Setup gives each player identical starting risk and then varies the shared ingre
 ## Rules / Mechanics
 
 Setup creates constrained variability: players do not draft powers individually, but the table's economy changes from game to game.
-
-## Design implications for SomberSoft
-
-Variable setup should be modular but curated. If mixed modules can break balance, label them with visible tiers or sets and teach the safe default first.

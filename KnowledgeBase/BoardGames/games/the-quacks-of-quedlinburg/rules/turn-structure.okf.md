@@ -56,7 +56,3 @@ Each round opens with a Fortune Teller card, applies catch-up rat tails, then al
 ## Rules / Mechanics
 
 The round order is ritualized enough for families: event, catch-up, risk, reckoning, purchase. Simultaneous brewing removes downtime but shifts burden to self-policing and clear table conventions.
-
-## Design implications for SomberSoft
-
-A risk phase can run in parallel if the payoff is public. The drama is each player narrating draws and stopping decisions while the system remains private enough to feel personal.

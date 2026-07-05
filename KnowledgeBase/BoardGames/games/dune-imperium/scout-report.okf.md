@@ -132,12 +132,6 @@ Onboarding/procedure load: players praise the system but report a steep learning
 2. rules ambiguity — timing-window player aid for Plot/Combat/Endgame Intrigue, reveal draws, and "when you win" effects.
 3. component clarity — compact printable references/rule index to reduce table-footprint and lookup friction.
 
-## Design implications for SomberSoft
-
-- Use dual-use cards only when both uses matter.
-- Let hidden combat create dread, but expose enough public risk indicators to prevent accusations of arbitrary loss.
-- In digital adaptations, automate legality and timing but also explain why an action is legal/illegal; rules enforcement without explanation does not teach dominion.
-
 ## Open questions
 
 - Do Uprising's changes represent a better official patch target than the original base game?

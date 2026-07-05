@@ -74,12 +74,6 @@ The key ambiguity burden is site-specific: every location changes which action i
 
 The action system is severe because it makes opportunity cost physical. Ending one hex short or using influence instead of attack is not a flavor choice; it is a lost turn tempo.
 
-## Design implications for SomberSoft
-
-- Movement that can reveal content before action creates suspense without random event spam.
-- Reputation-modified shopping is a clean way to make moral/violent choices matter mechanically.
-- Keep "one action after movement" visible on player aid; this rule carries the game.
-
 ## Open questions
 
 - Add official combat phase page references.

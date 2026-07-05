@@ -125,12 +125,6 @@ Top three:
 2. downtime / turn pacing — add simultaneous planning scaffolds, shorter multiplayer scenarios, and firm recommended player-count framing.
 3. solo/co-op automation / player interaction — make co-op require stronger shared dependencies so it does not collapse into parallel solo.
 
-## Design implications for SomberSoft
-
-- Complexity is acceptable when it generates consequential conversion choices; it is waste when it generates lookup chores.
-- If the best mode is solo, embrace that openly or redesign multiplayer interaction rather than marketing all modes equally.
-- Scenario objectives should be operational checklists: setup, clock, target, failure, scoring.
-
 ## Open questions
 
 - Re-fetch official PDFs with a browser-capable path and add page references.

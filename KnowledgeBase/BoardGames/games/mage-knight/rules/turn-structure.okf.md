@@ -65,12 +65,6 @@ Turn timing creates a knife-edge:
 
 Players may stall because the turn is a puzzle of current hand, mana source, terrain costs, site opportunities, enemy risk, and future deck exhaustion.
 
-## Design implications for SomberSoft
-
-- A strong turn can be simple in outline and monstrous in decision depth.
-- End-of-round triggers tied to deck exhaustion are clean clocks for solo and multiplayer alike.
-- Letting the next player begin while cleanup finishes is a practical downtime mitigation worth stealing.
-
 ## Open questions
 
 - Confirm official text for simultaneous cleanup/next-player handoff and Day/Night tactic replacement.

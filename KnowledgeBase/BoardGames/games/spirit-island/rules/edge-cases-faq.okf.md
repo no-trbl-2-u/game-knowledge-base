@@ -70,10 +70,6 @@ Likely FAQ domains based on wiki structure:
 - rules ambiguity: provide canonical FAQ exports by base/expansion/module.
 - accessibility: in-app glossary/search would reduce page-hunting.
 
-## Design implications for SomberSoft
-
-A complex system needs a living oracle. Build expandable games with source-linked rulings from the beginning.
-
 ## Open questions
 
 - Which FAQ pages are core-game-only and which require expansions?

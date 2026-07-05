@@ -78,12 +78,6 @@ The action-slot mechanism produces timing tension: take a weak action now or wai
 - scoring/endgame: endgame scoring should be teachable without rulebook retrieval.
 - randomness: a large deck needs enough churn and market access to prevent dead strategic lanes.
 
-## Design implications for SomberSoft
-
-- A simple five-action row can carry a heavy system if every action is desirable at different tempos.
-- Physical or digital UI should show future action strength and card prerequisites clearly.
-- Two opposing scoring markers create a race with legible tension, but final-score math must be ritualized and visible.
-
 ## Open questions
 
 - How much of Ark Nova's replayability survives if card count is reduced but churn tools improve?

@@ -78,7 +78,3 @@ Reception is strongly positive. Reviewers praise accessible tension, replayabili
 ## Praised design
 
 The game turns failure into spectacle. Busting is memorable, market purchases create hope, and rat tails let the fallen approach the front again without erasing the leader's work.
-
-## Design implications for SomberSoft
-
-A light system can still generate loud table emotion if uncertainty is personal, repeated, and publicly resolved. The table does not need combat to feel alive.

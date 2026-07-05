@@ -57,7 +57,3 @@ status: verified
 
 ## Player friction
 - **Player friction [campaign/progression][high][src-008]:** A reviewer who had never played the video game found post-Act III progression unclear and said the rulebook seemed to assume video-game knowledge.
-
-## Design implications for SomberSoft
-- Modular victory length is strong: one Act can satisfy a table, while three Acts or Act IV offer mastery depth.
-- If a game has unlocks/ascension, the post-win reset/progression procedure must be explicit. The absence of a save-file metaphor on tabletop makes reset rules mission-critical.

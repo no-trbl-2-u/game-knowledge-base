@@ -83,10 +83,6 @@ Each action is a subsystem but all share one timing chassis. Upgrades widen deci
 - rules ambiguity: display refill timing should be marked on Cards/Animals/Association references.
 - strategic depth: action upgrades are an elegant progression lever worth stealing.
 
-## Design implications for SomberSoft
-
-Design action cards as living UI panels: base action, upgraded action, strength table, and exceptions all in the player's hand of sight.
-
 ## Open questions
 
 - Which action has the highest mistake frequency for first-time players?

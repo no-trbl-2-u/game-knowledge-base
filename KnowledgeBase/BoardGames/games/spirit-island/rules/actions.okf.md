@@ -76,10 +76,6 @@ Player actions are principally growth choices, card play, power resolution, pres
 - component clarity: explicit threat overlays for lands where one push prevents build/ravage.
 - onboarding: teach indirect prevention as a first-class move, not an advanced tactic.
 
-## Design implications for SomberSoft
-
-Make non-damage actions visually consequential. If prevention is optimal, show the catastrophe it erased.
-
 ## Open questions
 
 - Which power verbs need glossary support in a digital adaptation: push, gather, isolate, defend, replace, remove, damage?

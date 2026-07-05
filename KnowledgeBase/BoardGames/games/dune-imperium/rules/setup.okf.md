@@ -58,10 +58,6 @@ Setup touches many zones: factions, conflict deck, multiple decks, reserve stack
 - setup/teardown: provide a tray/insertion layout mapped to setup order.
 - onboarding: keep first-game leader recommendations on a separate teach card, not buried in setup text.
 
-## Design implications for SomberSoft
-
-Stage hidden objective/reward decks by era to control escalation without scripting the exact game. This gives designers a pacing hand while preserving uncertainty.
-
 ## Open questions
 
 - How often first-time groups miss solo/two-player additional setup because it is delegated to a separate sheet.

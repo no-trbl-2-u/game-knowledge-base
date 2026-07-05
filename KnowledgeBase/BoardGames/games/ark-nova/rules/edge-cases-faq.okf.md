@@ -86,10 +86,6 @@ The FAQ's smallest-valid-enclosure rule avoids forcing players to remember which
 - component clarity: special enclosure occupancy markers should be prominent.
 - player interaction: optional alternate effects for take-that cards are a practical social valve.
 
-## Design implications for SomberSoft
-
-Every subsystem shortcut needs an explicit authority rule: does it bypass cost, prerequisites, timing, or only action selection? Ambiguity breeds forum law.
-
 ## Open questions
 
 - Which FAQ rulings were absorbed into later printings versus still external?

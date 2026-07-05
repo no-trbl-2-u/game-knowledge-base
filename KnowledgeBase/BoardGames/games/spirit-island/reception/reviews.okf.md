@@ -116,10 +116,6 @@ Reception sources consistently understand the game as a cooperative tactical puz
 
 See `better-if.okf.md`.
 
-## Design implications for SomberSoft
-
-A game can earn heavy complexity if the system continuously converts it into foresight, identity, and consequence. Complexity without forecasting tools becomes mud.
-
 ## Open questions
 
 - Which player counts produce the best balance of cooperation and time cost beyond BGG's community "best: 2" signal?

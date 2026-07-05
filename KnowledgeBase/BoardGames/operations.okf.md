@@ -171,12 +171,6 @@ Before pushing, the run must:
 2. Regenerate the corpus index: `node scripts/generate-index.mjs`.
 3. Run `node scripts/validate-okf.mjs` and treat **any finding as a failed run** — fix before pushing.
 
-## Design implications for SomberSoft
-
-- This corpus should become a design memory bank for Axiomancer and future SomberSoft games.
-- The most valuable entries will not merely summarize rules; they will expose where rules created friction, delight, ambiguity, pacing trouble, or strategic depth.
-- The "better-if" sections are the ore. Mine them hard.
-
 ## Open questions
 
 - Whether 6am should be interpreted as UTC permanently or later moved to T's local timezone.

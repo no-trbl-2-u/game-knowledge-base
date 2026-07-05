@@ -62,10 +62,6 @@ The turn structure controls downtime by making turns small and frequent while st
 - turn pacing: provide visible player-state markers for "still placing Agents" vs "revealed/done".
 - onboarding: teach that Agent turns are optional; early Reveal is legal but costly.
 
-## Design implications for SomberSoft
-
-Alternating micro-turns can make medium-weight systems feel interactive. The price is state tracking; UI or table aids should show who has revealed.
-
 ## Open questions
 
 - Whether digital implementations should auto-highlight players already revealed to reduce combat/reveal confusion.

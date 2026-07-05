@@ -68,7 +68,3 @@ Quacks would be better if its physical chips resisted wear, its randomness was m
   Source: src-006
   Evidence: "make sure all the books are from that set" or the game can become "wildly unbalanced".
   Confidence: medium
-
-## Design implications for SomberSoft
-
-If Axiomancer uses bag/deck pollution and bust risk, make mitigation visible: odds estimates, durable digital state, clear comeback bands, and a final-round catch-up curve that creates hope without softening judgment into mush.

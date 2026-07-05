@@ -57,7 +57,3 @@ No official FAQ/errata was extracted in this run. The rulebook itself clarifies 
 
 - Whether an official current FAQ or errata exists for the 2024 English rules file.
 - Whether current deluxe/current editions alter chip component handling enough to reduce wear and identification edge cases.
-
-## Design implications for SomberSoft
-
-Private random draws require trust, visibility, or automation. A digital implementation can eliminate cheating while keeping the drama of the unknown draw.

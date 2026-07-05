@@ -110,10 +110,6 @@ Reception is strongly positive: BGG rank and rating are exceptional, and the sam
 - scoring/endgame: cleaner final scoring aid.
 - player interaction: make attack cards feel systemic or provide official non-attack alternates.
 
-## Design implications for SomberSoft
-
-Ark Nova's reception says the market will forgive complexity when the central action engine is memorable and tactile. It will not forgive opacity at the finish line or dead time at higher player counts.
-
 ## Open questions
 
 - Do post-expansion rules or new maps reduce the major base-game complaints, or add expansion bloat?

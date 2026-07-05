@@ -66,11 +66,6 @@ Setup has two distinct burdens:
 
 The setup is not merely long; it is condition-heavy. Players must know which decks/offers/tile stacks are scenario dependent and which are global defaults.
 
-## Design implications for SomberSoft
-
-- Scenario-based setup should be printed as an executable checklist, not prose.
-- Any solo/co-op dummy system should sit in its own panel and never be implied by ordinary multiplayer setup.
-
 ## Open questions
 
 - Verify exact base-game setup sequence against official rulebook pages.

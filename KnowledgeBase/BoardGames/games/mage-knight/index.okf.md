@@ -94,12 +94,6 @@ Reception praises the game as a dense solo/co-op puzzle with meaningful characte
 
 See `reception/better-if.okf.md`.
 
-## Design implications for SomberSoft
-
-- High agency can come from forcing players to wring multiple currencies out of one hand, not from offering many unpriced menu actions.
-- Solo/co-op automation benefits when the clock is structural: deck exhaustion and scenario rounds press the player without a full enemy AI script.
-- Rules reference burden is a design cost. If a game wants Mage Knight depth, it needs Mage Knight-grade player aids or better.
-
 ## Open questions
 
 - Direct PDF text extraction failed this run; verify page references from the official PDFs with a later browser/PDF-capable fetch.

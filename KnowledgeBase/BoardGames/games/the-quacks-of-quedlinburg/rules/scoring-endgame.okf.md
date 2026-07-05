@@ -56,7 +56,3 @@ Pot position drives points and money. Explosion denies the full reward package; 
 ## Rules / Mechanics
 
 Explosion is not elimination. It is a fork: score now or invest. That choice keeps a busted round active and helps the loser decide whether to chase present victory points or future bag quality.
-
-## Design implications for SomberSoft
-
-When a player fails a risk check, offer a strategic wound rather than a dead turn. Forced choice after failure is stronger than simple penalty.

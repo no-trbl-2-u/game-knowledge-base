@@ -118,12 +118,6 @@ The sharpest complaint is not that the game lacks decisions. It is that the deci
 
 The same elements that create complaints are the source of acclaim: hidden combat, direct blocking, asymmetric leaders, and the split use of cards.
 
-## Design implications for SomberSoft
-
-- Preserve conflict. Reduce uncertainty about procedure.
-- Do not nerf drama when a reference card would solve the wound.
-- Use telemetry for balance allegations; use comments for pain discovery.
-
 ## Open questions
 
 - Which complaints persist after 3+ plays versus first-play-only friction.

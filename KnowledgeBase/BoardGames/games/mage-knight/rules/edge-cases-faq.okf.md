@@ -69,12 +69,6 @@ Mage Knight’s edge-case cost is architectural: the game splits learning betwee
 - component clarity: icon appendix and site-card cross references.
 - onboarding: rulebook should not rely on walkthrough memory for critical exceptions.
 
-## Design implications for SomberSoft
-
-- If rules are intentionally modular, ship a searchable glossary/index from day one.
-- Every keyword that changes combat math needs one canonical example.
-- Community FAQ volume is a warning beacon: players will become your documentation department if you abdicate.
-
 ## Open questions
 
 - Reconcile official FAQ 1.0v2 with BGG wiki FAQ and identify any contradictions.

@@ -75,10 +75,6 @@ The action row turns time into geography. It makes delay, impatience, and opport
 - turn pacing: action preview and auto-shift UI in digital adaptation.
 - downtime: simultaneous planning aids during other players' turns.
 
-## Design implications for SomberSoft
-
-Use physical position to encode action cooldown. It creates tactics without adding upkeep counters.
-
 ## Open questions
 
 - Does repeated access to low-strength actions create viable rapid-cycle strategies, or is waiting generally forced?

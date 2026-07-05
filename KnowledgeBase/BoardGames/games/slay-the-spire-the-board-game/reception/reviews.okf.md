@@ -79,6 +79,3 @@ Reception is strongly positive. The dominant praise is that the adaptation justi
 - rules ambiguity: rulebook may rely on video-game familiarity.
 - solo/co-op automation: solo play can feel redundant beside the digital original.
 - component clarity: many decks, tokens, sleeves, and status markers require organization.
-
-## Design implications for SomberSoft
-A digital-to-tabletop or tabletop-to-digital adaptation must earn its body. Here the body is earned by co-op coordination, tactile rewards, and shared tactical planning. Faith alone is insufficient; the new medium must claim new territory.
