@@ -1,0 +1,90 @@
+---
+okf_version: 0.2
+type: card_record
+card:
+  game: "Dawncaster"
+  source_id: 894141
+  name: "Arcane Warding"
+  ordinal: 96
+  slug: "arcane-warding"
+  category: "Action"
+  type: "Magic"
+  rarity: "Rare"
+  expansion: "Core"
+  color: "Blue"
+  cost:
+  dex: 0
+  int: 1
+  str: 0
+  holy: 0
+  neutral: 0
+  dexint: 0
+  dexstr: 0
+  intstr: 0
+  blood: 0
+observed_terms:
+  - "Barrier"
+  - "Permanently"
+  - "permaValue+2"
+sources:
+  - id: "src-001"
+    title: "Neurrone Dawncaster SQLite card database"
+    url: "https://neurrone.com/dawncaster/dawncaster-cards.db"
+    kind: other
+    provenance: secondary
+    retrieved_at: "2026-07-05"
+    notes: "Local harvested copy: /root/Workspace/reports/dawncaster-card-library/neurrone-dawncaster-cards.db"
+  - id: "src-002"
+    title: "Blightbane Dawncaster card page"
+    url: "https://blightbane.io/card/Arcane_Warding"
+    kind: other
+    provenance: community
+    retrieved_at: "2026-07-05"
+    notes: "Per-card page inferred from the shared card id/name space; verify manually before treating as official wording."
+confidence: medium
+status: draft
+---
+
+# Arcane Warding
+
+## Card identity
+
+- **Ordinal:** 96 of first 500 generated cards
+- **Source card id:** `894141`
+- **Category:** Action
+- **Type:** Magic
+- **Rarity:** Rare
+- **Expansion:** Core
+- **Color:** Blue
+- **Cost summary:** int=1
+
+## Source-backed facts
+
+- Claim: `Arcane Warding` appears in the Neurrone Dawncaster SQLite card table with id `894141`.
+  Source: src-001
+  Evidence: Joined row from `cards`, `costs`, `categories`, `types`, `rarities`, `colors`, and `expansions`.
+  Confidence: high
+
+- Claim: The card's raw rules text in the SQLite mirror is preserved below.
+  Source: src-001
+  Evidence: `description_html` column copied verbatim from the local DB.
+  Confidence: high
+
+## Rules text
+
+Gain [[permaValue+2]] Barrier. Permanently improve the Barrier gained by 2 after you play this. Unique.
+
+## Raw rules HTML
+
+```html
+Gain [[permaValue+2]] Barrier. Permanently improve the Barrier gained by 2 after you play this. Unique.
+```
+
+## Observed keyword / token leads
+
+`Barrier`, `Permanently`, `permaValue+2`
+
+## Design notes for SomberSoft
+
+- Preserve this record as source evidence, not final design guidance.
+- Use the observed terms to seed parsing, clustering, and the future keyword glossary.

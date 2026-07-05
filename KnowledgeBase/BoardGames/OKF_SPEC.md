@@ -11,7 +11,7 @@ Current version: **0.2**. Every document in the corpus carries `okf_version: 0.2
 ```yaml
 ---
 okf_version: 0.2
-type: game_index | sources | rule_category | reception | better_if | scout_report | pattern | operations
+type: game_index | sources | rule_category | reception | better_if | scout_report | pattern | operations | digital_card_game_index | digital_card_sources | digital_card_glossary | card_record
 game:
   title: ""
   slug: ""
@@ -42,6 +42,7 @@ Field rules:
 - `better_if_labels` is required on `reception` and `better_if` docs only; it lists the taxonomy labels the doc's body actually discusses.
 - `game.weight` is the BGG complexity weight, cited from the game's discovery source; `null` when unknown.
 - `pattern` and `operations` docs omit the `game` block, `scope`, and `sources` requirements where they do not apply (see the validator for the exact exemptions).
+- Digital card-game docs (`digital_card_game_index`, `digital_card_sources`, `digital_card_glossary`, `card_record`) are source-evidence records for large digital card corpora. They are exempt from board-game `mechanics` vocabulary requirements; `card_record` may use a `card:` frontmatter block instead of `game:`.
 
 ## Mechanics vocabulary (controlled)
 
