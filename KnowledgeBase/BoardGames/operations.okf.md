@@ -37,9 +37,13 @@ status: verified
 
 ## Summary
 
-The Board Game Knowledge Base is an active SomberSoft research corpus. It is housed at:
+The Board Game Knowledge Base is an active SomberSoft research corpus. It is isolated in its own repository and housed at:
 
-`/root/Workspace/SomberSoft/KnowledgeBase/BoardGames/`
+`/root/Workspace/game-knowledge-base/KnowledgeBase/BoardGames/`
+
+Remote:
+
+`https://github.com/no-trbl-2-u/game-knowledge-base`
 
 Its daily operator is **The Governor — SomberSoft Research Magistrate and Knowledge-Base Keeper**.
 
@@ -124,10 +128,12 @@ Cron job:
 - Job ID: `44c13742fca9`
 - Schedule: `0 6 * * *`
 - Next first run after setup: `2026-06-30T06:00:00+00:00`
-- Workdir: `/root/Workspace/SomberSoft`
+- Workdir: `/root/Workspace/game-knowledge-base`
 - Skill: `research-discovery-monitoring`
 - Toolsets: `web`, `file`, `terminal`
 - Delivery: origin Telegram thread
+- Commit/push: yes, to `no-trbl-2-u/game-knowledge-base` `main` after each successful scout run
+- Required gates: `node scripts/generate-index.mjs` then `node scripts/validate-okf.mjs`; any validator finding is a failed run and must not be pushed
 
 ## Selection doctrine (amended per OKF 0.2 §5)
 
