@@ -1,142 +1,142 @@
-keyword,type,description,functions
-Affliction,Effect,"A negative effect such as Poison, Bleeding or Dazed. Most Afflictions are additive. They can be prevented with a Ward, or removed by Cleansing",Various
-Ambush,Effect,Triggers if this card is the first card played of the round. (Reliable cards also trigger this effect),Deck Management
-Ancestral,Effect,Ancestral effects are active while you have 4 or more cards in your Discard Pile,Deck Management
-Anger,Blessing,"Increases the damage dealt by Actions by 1 per stack of Anger. (The damage bonus from Anger can, in turn, be doubled by Rampage)","Buff, Offense"
-Armor,Other,"When dealt damage, take 1 less damage per stack of Armor. Armor fades at the start of the turn",Defense
-Ascend,Effect,"Ascend to a higher form, gaining more powerful buffs for each Ascended level. You can Ascend up to 3 levels",Various
-Ascended,Effect,Ascended effects are active while you are currently in an Ascended form,Various
-Attune,Effect,"If you are not Attuned already, attune to a random Element. Attunements empower Actions that share their type",Deck Management
-Balance,Effect,The remaining number of cards in your deck and remaining Health are both even numbered,Deck Management
-Bane,Affliction,"Whenever you gain an Affliction (except Dazzled, Jinxed or Shocked), gain an additional stack of that Affliction for each point of Bane",Debuff
-Barrier,Blessing,"When dealt damage, take 1 less non-Piercing damage per stack of Barrier. Barrier does not fade, and can be Dispelled",Defense
-Basic Attack,Effect,"Play your Basic Weapon attack. You start the game with several copies of your class-specific Basic Weapon, which may be relatively weak compared to later cards. If you are Disarmed, you cannot play Basic Attack cards. You can pay the Blacksmith 50 Gold to Upgrade all of your Basic Attacks, or 30 Gold to permanently Remove a Basic Attack from your deck. Some rare cards allow you to Swap all your Basic Weapon cards for another",Offense
-Beastform,Effect,"4 possible Beastforms provide various powerful buffs (Bear, Cat, Raven, or Dragon). Only 1 Beastform can be active at a time: activating a new Beastform will replace the old one. As a Channeling card, Beastform can be extended by 1 round by having at least 1 Energy at the end of your turn, and ends when you get Interrupted",Various
-Bleeding,Affliction,"When dealt damage, take 1 additional damage per stack of Bleeding, then reduce Bleeding stacks by 1",Offense
-Blessing,Effect,"A beneficial effect such as Regenerate, Focus or Chain. Most Blessings are additive. They can be removed by Dispelling them",Various
-Blood,Effect,"Sacrifice your own blood instead of Energy in order to gain special powers. Goes hand in hand with Corruption, Darkness, Hexes, and Lifedrain","Blood Ritual, Energy Management"
-Bloodlust,Effect,"Bloodlust requires the enemy to have the Bleeding Affliction. (Reliable cards also trigger the Bloodlust effect, even when the enemy isn't Bleeding)",Offense
-Brittle,Affliction,"When dealt damage, remove Brittle. If the damage was dealt from a Melee Action, take 1 more damage per stack removed",Offense
-Burning,Affliction,"At the end of the turn, take 1 damage per stack of Burning",Offense
-Bury,Effect,Removes the top card of your deck from combat. Persistent cards cannot be Buried,Deck Management
-Cascade,Effect,Triggers when played after a card that costs 1 more or 1 less Energy. (Reliable cards also trigger this effect),"Deck Management, Energy Management"
-Chain,"Blessing, Effect",Increase the damage of the next action by 1 per stack. Chain fades if a played card did not increase Chain. Activating Chains plays a key role in raising the Tide,"Buff, Offense"
-Challenger,Effect,A Challenger has to be selected first. Opportunities return to the area deck when a Challenger is selected,-
-Channel,Effect,A channeling effect can be extended by 1 round by having at least 1 Energy at the end of your turn. Channeled cards end when you get Interrupted,Energy Management
-Chaos,Effect,Requires an odd number of cards remaining in your deck,Deck Management
-Charges,Effect,Cards with Charges can be played X number of times per combat before they become Depleted and are removed from combat,Deck Management
-Charmed,Affliction,"Lose the battle if your Health is less than your Charmed stack. When dealt non-Piercing damage, remove an equal amount of Charmed",Instakill
-Cleanse,Effect,Removes an Affliction,Healing
-Codes,Effect,"Codes provide a strict rule for your deck. If it is met at the Start of Combat, a code is put directly in play. If not, it gets removed. Codes are Unique and Grounded: only one Code with that name can be played per combat, and Codes can't be altered, copied or Imbued",Various
-Combat Fatigue,Effect,"Whenever your deck runs out of cards, you increase your Fatigue by 1, then take 10% of your Maximum Health per Fatigue in unpreventable damage",Offense
-Conjure,Effect,"Creates a temporary card that is always Removed from your deck after use or after the combat ends, even if it has non-Removable properties such as Cursed",Deck Management
-Continuity,Effect,"Triggers when played after a card of the same type (melee, magic, ranged, divine). (Reliable cards also trigger this effect)",Deck Management
-Corrupted,Effect,"4 or more Corruptions are present in your deck, hand and/or Discard Pile","Blood Ritual, Deck Management"
-Corruption,Effect,"Corruptions are cards with negative effects to their owner (Corruptions may have a negative effect when drawn, even if they are not played. Some Corruptions are unplayable (such as Envy, Greed, or Lust). If your deck contains 4 or more Corruptions, you become Corrupted, which unlocks special effects on many Blood Ritual cards.)",Blood Ritual
-Critical Hit,Effect,Critical Hits deal double damage. You can't inflict Critical Hits while Afflicted by Weakness. (Critical Hits can be buffed by the Ferocious Blessing),Offense
-Crushing,Effect,Crushing requires a card to deal 10 or more damage,Offense
-Cursed,Effect,"Cursed cards can't be Transmuted or Removed from your deck. However, they can be transformed into a card of equal rarity at a Shrine of Commerce. Conjured and One Use cards are always Removed from your deck after use or after the combat ends, even if they are Cursed",Deck Management
-Darkness,Other,"When dealt damage, take 1 less damage per stack of Darkness. When Darkness runs out, gain Stunned. Your Maximum Health is lowered by your total Darkness",Blood Ritual
-Dazed,Affliction,"When playing a card, decrease Dazed by 1. When Dazed reaches 0, gain Stunned. Dazed fades at the end of the turn","Deck Management, Defense"
-Dazzled,Affliction,"Draw one fewer card per stack of Dazzled, then decrease Dazzled stacks by 1 per skipped draw. Stacks of Dazzled cannot be increased","Deck Management, Defense"
-Deep Wound,Effect,Inflicts Bleeding every turn. A target who has sustained 5 or more Deep Wounds is instantly slain,"Offense, Instakill"
-Delirious,Affliction,"After playing a card, shuffle the costs of all cards in hand. Lasts 1 round per stack","Chaos, Energy Management"
-Delve,Effect,Select 1 of 3 randomly selected cards,Deck Management
-Deplete,Effect,"Depleted cards are removed from combat. Deplete triggers when the final Charge of a card with Charges is spent, or when Equipment has used up its Durability",Deck Management
-Disarmed,Affliction,"While Disarmed, Basic Attack cards can't be played. Lasts 1 round per stack","Deck Management, Defense"
-Discard,Effect,Removes a card from the hand,Deck Management
-Discard Pile,Effect,"After you play a card, it gets moved to the Discard Pile. Once your deck is empty, your Discard Pile is shuffled back into your deck",Deck Management
-Dispel,Effect,Removes a Blessing from the target,Debuff
-Dominated,Affliction,"While Dominated, you can only play the randomly selected card in your hand. Exception: Reliable cards can still be played","Chaos, Deck Management"
-Doom,Affliction,"At the end of your turn, take 1 damage for each stack of Doom. Increase Doom by 1 each time an Action is played",Offense
-Dragon,Effect,-,-
-Durability,Effect,The number of times Equipment can be activated before it's Depleted for the remainder of the combat,Deck Management
-Echo,Effect,Cards with Echo are cast twice when played from your hand,Deck Management
-Empower,Effect,Empower is active while you have 5 or more Energy,Energy Management
-Evasion,Blessing,"When dealt Melee damage, reduce the first damage taken to 0, then decrease Evasion by 1. Evasion fades at the start of the turn","Defense, Immunity"
-Execute,Effect,"Triggers if the card with Execute is active when you defeat your foe, including if you use this card to defeat your foe",Deck Management
-Ferocious,Blessing,Your next Critical Hit deals 1 additional damage and heals you for 1 Health per stack of Ferocious,"Buff, Healing, Offense"
-Figmented,Effect,Conjures a copy of the card when played.,Various
-Finale,Effect,"Triggers when played with 2 or fewer cards remaining in hand. (Reliable cards also trigger this effect, regardless of how many cards are left in hand)",Deck Management
-Firecast,Effect,A card with Firecast is played and moved into the discard pile whenever it gets Buried on your turn,Deck Management
-Flanking,Effect,"Triggers when this card is played from either the leftmost or the rightmost position in hand. (Reliable cards also trigger this effect, regardless of their position in hand)",Deck Management
-Flow,Effect,"Triggers when played after playing at least X number of cards during the turn. (Reliable cards also trigger this effect, regardless of how many cards have been played during the turn)",Deck Management
-Focus,Blessing,"At the start of the turn, draw an additional card if you have 5 or more Focus",Deck Management
-Foretell,Effect,"Look at the top X cards of your deck. Put 1 on top, and the others at the bottom of your deck",Deck Management
-Form,Effect,Forms transform your appearance. Only 1 Form can be active at a time: activating a new Form will replace the old one,Various
-Frenzy,Effect,"Triggers when you've taken damage during your turn. (Reliable cards also trigger this effect, regardless of whether you've taken damage on your turn)",Buff
-Frozen,Affliction,"Look at the top X cards of your deck. Put one on top, and the others at the bottom of your deck",Deck Management
-Grounded,Effect,"Grounded cards can't be altered, copied or Imbued",Deck Management
-Haste,Blessing,"Reduce the cost of the next drawn card by 1 Energy, then decrease Haste by 1",Energy Management
-Health,Effect,"If you lose all your Health, you lose the game! If your enemy loses all their Health, you win the battle! Some cards add or remove Health points, while others increase or decrease Maximum Health","Defense, Healing"
-Heavy,Effect,Heavy cards do not get Reshuffled after your deck reaches 0 cards,Deck Management
-Hex,Effect,Hexes are powerful effects that debilitate foes in different ways,"Blood Ritual, Debuff"
-Holy,Effect,Holy Energy can be spent on powerful Divine cards. Goes hand in hand with Zeal,"Holy Energy, Energy Management"
-Imbued,Other,"Imbuing an Enchantment Removes an Enchantment from your deck and activates it permanently, from the start of every combat. In order to be Imbued, the Enchantment card must already be present in your deck, and must last for the entire combat when activated. Grounded cards and Codes cannot be Imbued. Imbuing is expensive, often costing 100 Gold","Buff, Deck Management"
-Impervious,Blessing,"While Impervious, take no non-Piercing damage. When dealt damage on the enemy turn, take no non-Piercing damage and decrease Impervious by 1","Defense, Immunity"
-Imprint,Effect,Add a card to this card's memory,Deck Management
-Infected,Affliction,"Whenever you discard a card, take 1 damage for every point of Infected. Remove all Infected whenever you gain Health","Deck Management, Offense"
-Infuse,Other,"When you Infuse a card, you convert its energy cost to Neutral (colorless). Also, if the card is Upgradeable, Infusing it will Upgrade the card as many times as its cost in energy","Energy Management, Upgrade, Offense"
-Infusion,Effect,"When you add a card with Infusion to your deck, Upgrade all other cards with Infusion by 1","Deck Management, Upgrade, Offense"
-Insight,Blessing,"Whenever you are dealt an amount of non-Piercing damage exactly the same as your current Insight, prevent that damage","Defense, Immunity"
-Interrupt,Effect,"Removes the target's remaining Energy (and ends their Channeling effects, including Beastform). If it targets an enemy, it will force them to replace their Deadly attacks with their regular cards","Deck Management, Energy Management"
-Jinxed,Affliction,"The next Action card played has no effect and reduces Jinxed by 1. (Exception: Reliable cards still have an effect.) Jinxed stacks fade at the end of the turn, and cannot be increased by Bane.","Debuff, Deck Management"
-Ki,Affliction,"If you start the turn with more Ki than Health, remove all Ki and gain Stunned","Debuff, Deck Management"
-Lasting,Effect,The effects of Lasting cards are extended by 1 turn whenever the card is played again,"Buff, Deck Management"
-Lifedrain,Effect,Cards with Lifedrain restore Health equal to the damage they deal,"Blood Ritual, Healing"
-Memorized,Effect,This card always starts at the top of your deck,Deck Management
-Mergecraft,Effect,"When Mergecraft cards are added to the deck, they Upgrade all copies of that card by their Mergecraft value","Deck Management, Upgrade, Offense"
-Momentum,Blessing,"Whenever you have 5 or more Momentum, remove all stacks and draw a card","Buff, Deck Management"
-Monster Card,Effect,"All enemy cards are monster cards, and can be recognized by their deep red banner",Various
-On Draw,Effect,Triggers whenever this card is drawn from your deck,Deck Management
-On Hit,Effect,"Triggers when this attack hits the target, and deals damage",Buff
-One Use,Effect,"This card will be permanently Removed from your deck after playing it, even if it has non-Removable properties such as Cursed",Deck Management
-Order,Effect,Requires an even number of cards remaining in your deck,Deck Management
-Overkill,Effect,"Whenever a foe dies to damage, ""Overkill"" refers to their negative Health total. (For example, if you do 13 damage to an enemy who has 10 Health left with no defenses, they will die at –3 Health, which is the same as 3 Overkill)",Deck Management
-Perform,Effect,"Increase your current Performance by X, or start a new Performance",Buff
-Performance,Effect,"Performance counts the progress of your currently active song. While no song is active, your Performance is 0. Performance stacks are increased by Performing",Buff
-Persistent,Effect,Cards with Persistent don't get Discarded at the end of the turn and cannot be Buried,Deck Management
-Piercing,Effect,"Piercing damage ignores all effects that would reduce or prevent its damage (such as Charmed, Impervious, Insight, and Resilient)",Offense
-Pinned,Affliction,"While Pinned, only the leftmost and rightmost cards in hand can be played. (Exception: Reliable cards can still be played, regardless of their position in your hand.) Lasts 1 round per stack","Chaos, Deck Management"
-Poison,Affliction,"After playing a card, take 1 damage, then decrease Poison by 1. When gaining Health, prevent 1 Health per stack and reduce Poison by 1 for each Health prevented",Offense
-Precision,Effect,The target ends the attack at an amount of total Health ending in 0 or 5,Offense
-Rally,Blessing,"Whenever your opponent plays a card, gain Health equal to your Rally, then lower your Rally by 1","Deck Management, Healing"
-Rampage,Effect,Cards with Rampage gain double the damage bonus from Anger,"Buff, Offense"
-Reaping,Effect,"Reaping lowers the target's Maximum Health equal to the damage it deals. When used against creatures who benefit from Anima, it lowers Anima instead. When used by creatures who benefit from Anima, Reaping damage is added to the Anima instead",Offense
-Rebound,Effect,"Rebound counts the number of times you played the card, and triggers its special effect when the card has been played X number of times",Deck Management
-Reflect,Blessing,Return the next damage dealt to you to the attacker. Increase this damage by 1 for each stack of Reflect. Fades at the start of your turn,Offense
-Regenerate,Blessing,"At the start of your turn, gain 1 Health per stack and decrease Regenerate by 1",Healing
-Reliable,Effect,"The Ambush, Bloodlust, Cascade, Continuity, Finale, Flanking, Flow, and Frenzy conditions are always met. Reliable cards ignore disabling conditions like Crushing, Jinxed, Stunned, Pinned or Dominated",Deck Management
-Removed,Other,"Cards that are removed from your deck are permanently eliminated. You can Remove cards at Campfires, the Shrine of Potential, and some special events. (You can also pay the Blacksmith 30 Gold to Remove a Basic Attack.) Cursed cards cannot be removed from your deck. Generally, cards that are removed from your hand during combat are only Discarded, not Removed from your deck entirely. However, Conjured or One Use cards are always Removed after they are activated",Deck Management
-Reshuffle,Effect,"Whenever your deck runs out of cards, your Discard Pile and the cards you have played (except for Conjure or One Use cards) return to your deck in a random order","Chaos, Deck Management"
-Resilience,Blessing,"When dealt damage, take 1 less non-Piercing damage per stack of Resilience, then lower your Resilience by 1",Defense
-Revelation,Effect,Revelations offer incredibly powerful and Unique effects,Holy Energy
-Scholar,Effect,Triggers if your deck contained 20 or more cards at the start of combat,Deck Management
-Shift,Effect,Assume a new Form. Only one Form can be active at a time: activating a new Form will replace the old one,Deck Management
-Shocked,Affliction,"At the start of the turn, reduce Shocked by 1. When Shocked reaches 0, you are Stunned. The stacks of this Affliction cannot be increased",Deck Management
-Sickened,Affliction,"While Sickened, you lose 1 random Energy at the start of your turn. Lasts 1 round per stack",Energy Management
-Silenced,Affliction,"While Silenced, Magic Actions can't be played. Lasts 1 round per stack","Deck Management, Defense"
-Sinister,Effect,Sinister cards get more powerful for each other Sinister card you played during the entire combat,"Buff, Deck Management"
-Slay,Effect,Triggers when an enemy is reduced to exactly 0 Health (no Overkill),Offense
-Slow,Affliction,"Increase the cost of the next drawn card by 1 Neutral Energy, then decrease Slow by 1",Energy Management
-Souls,Effect,"Use the lingering essence of slain foes to empower Actions. When you die with over 100 souls collected, revive and lose all Souls","Blood Ritual, Healing"
-Stagger,Affliction,"At the start of your turn, take damage equal to half of your Stagger, then reduce your Stagger by an equal amount",Offense
-Stances,Effect,Stances are special fighting techniques that can be adopted through various cards. Only one Stance can be active at a time: activating a new Stance replaces the old one,Various
-Status Damage,Effect,"Status Damage is damage taken from effects like Poison, Burning, Doomed, and Brittle. This damage typically can't be prevented except by Impervious or Cleansing the condition",Offense
-Stunned,Other,"While Stunned, cards cannot be played. Stunned fades at the end of the turn. (Exception: Reliable cards can still be played)","Deck Management, Defense"
-Swap,Effect,This card changes into a different card when played,Deck Management
-Synergy,Effect,Triggers whenever you play a non-Conjured card of the same type while this card is in your hand. (The card's type is found at the bottom of the card),Deck Management
-Tides,Effect,"Tides shift the effects and power of certain Tidal cards. Generally speaking, Low Tide is the default state, but activating multiple Chains or a card that change the Tide can trigger High Tide, which unlocks more powerful effects. In a combat, only one side can enjoy the High Tide: if your opponent activates High Tide, you will go back to Low Tide.",Various
-Transmute,Effect,"Transmuting a card permanently converts it into a random card of the same color, with a higher rarity. For a list of what cards a card can Transmute into, see: https://blightbane.io/cards. However, Cursed cards can't be Transmuted","Chaos, Deck Management, Upgrade"
-Treasure,Effect,This card can be found through various events,-
-Unique,Effect,"You can only play one card with this name per combat. All Enchantments, Codes, and Revelations are Unique",Various
-Unplayable,Effect,"This card can't be played from your hand. However, you will still draw the card, and it may still have an effect",Deck Management
-Unscathed,Effect,You've taken no damage during the enemy turn. Inactive on your first turn,Defense
-Untempered,Effect,Untempered cards are removed from your deck at the end of combat.,Deck Management
-Upgrade,Effect,"Upgraded cards deal 1 additional damage per upgrade. Generally, only cards that deal damage can be Upgraded, as well as cards with the Upgradeable effect","Upgrade, Offense"
-Upgradeable,Effect,"This card can be Upgraded, which improves the card in unusual ways","Upgrade, Various"
-Valuable,Effect,This card adds double its merchant value to the final score,-
-Vulnerable,Affliction,Take 10% more damage from each Action for each stack of Vulnerable. Stacks up to 100% extra damage,Offense
-Ward,Blessing,"Whenever you gain an Affliction, prevent that Affliction and lower your Ward by 1 instead. Fades at the start of the turn","Defense, Immunity"
-Weakness,Affliction,The next damage you deal is reduced by 50%. You can't inflict Critical Hits while affected by Weakness,"Debuff, Defense, Immunity"
-Zeal,Blessing,"Your Divine actions deal additional damage for each Zeal. At the start of the turn, take damage equal to your Zeal","Holy Energy } ===Functions=== *Blood Ritual: Sacrifice your own blood instead of Energy in order to gain special powers. Goes hand in hand with Corruption, Darkness, Hexes, and Lifedrain. *Buff: This effect does not itself benefit the owner, but it boosts the effect of other cards that do. *Chaos: This card randomly reshuffles the target's available cards and/or their functions. *Debuff: This effect does not itself harm the target, but it boosts the effect of other cards that do, or removes effects that benefit the target. *Deck Management: This card relates to the removal or addition of cards, and/or the order in which they are played. *Defense: This card prevents damage, or adds Maximum Health. *Energy Management: This card changes the amount or type of available Energy. *Healing: This card adds Health, or removes an Affliction. *Holy Energy: Use Holy Energy to play powerful Divine cards. Goes hand in hand with Zeal *Immunity: This card prevents a negative effect, or causes an enemy attack to deal 0 non-Piercing damage. *Instakill: This card allows for an immediate victory, without needing to reduce the opponent's Health to 0. *Offense: This card causes damage, or reduces Maximum Health. *Upgrade: This card upgrades or transmutes other cards in the deck, and may not itself be playable. *Various: This card has many possible functions. __INDEX__"
+keyword,slug,type,description,functions,okf_path
+Affliction,affliction,Effect,"A negative effect such as Poison, Bleeding or Dazed. Most Afflictions are additive. They can be prevented with a Ward, or removed by Cleansing",Various,keywords/affliction.okf.md
+Ambush,ambush,Effect,Triggers if this card is the first card played of the round. (Reliable cards also trigger this effect),Deck Management,keywords/ambush.okf.md
+Ancestral,ancestral,Effect,Ancestral effects are active while you have 4 or more cards in your Discard Pile,Deck Management,keywords/ancestral.okf.md
+Anger,anger,Blessing,"Increases the damage dealt by Actions by 1 per stack of Anger. (The damage bonus from Anger can, in turn, be doubled by Rampage)","Buff, Offense",keywords/anger.okf.md
+Armor,armor,Other,"When dealt damage, take 1 less damage per stack of Armor. Armor fades at the start of the turn",Defense,keywords/armor.okf.md
+Ascend,ascend,Effect,"Ascend to a higher form, gaining more powerful buffs for each Ascended level. You can Ascend up to 3 levels",Various,keywords/ascend.okf.md
+Ascended,ascended,Effect,Ascended effects are active while you are currently in an Ascended form,Various,keywords/ascended.okf.md
+Attune,attune,Effect,"If you are not Attuned already, attune to a random Element. Attunements empower Actions that share their type",Deck Management,keywords/attune.okf.md
+Balance,balance,Effect,The remaining number of cards in your deck and remaining Health are both even numbered,Deck Management,keywords/balance.okf.md
+Bane,bane,Affliction,"Whenever you gain an Affliction (except Dazzled, Jinxed or Shocked), gain an additional stack of that Affliction for each point of Bane",Debuff,keywords/bane.okf.md
+Barrier,barrier,Blessing,"When dealt damage, take 1 less non-Piercing damage per stack of Barrier. Barrier does not fade, and can be Dispelled",Defense,keywords/barrier.okf.md
+Basic Attack,basic-attack,Effect,"Play your Basic Weapon attack. You start the game with several copies of your class-specific Basic Weapon, which may be relatively weak compared to later cards. If you are Disarmed, you cannot play Basic Attack cards. You can pay the Blacksmith 50 Gold to Upgrade all of your Basic Attacks, or 30 Gold to permanently Remove a Basic Attack from your deck. Some rare cards allow you to Swap all your Basic Weapon cards for another",Offense,keywords/basic-attack.okf.md
+Beastform,beastform,Effect,"4 possible Beastforms provide various powerful buffs (Bear, Cat, Raven, or Dragon). Only 1 Beastform can be active at a time: activating a new Beastform will replace the old one. As a Channeling card, Beastform can be extended by 1 round by having at least 1 Energy at the end of your turn, and ends when you get Interrupted",Various,keywords/beastform.okf.md
+Bleeding,bleeding,Affliction,"When dealt damage, take 1 additional damage per stack of Bleeding, then reduce Bleeding stacks by 1",Offense,keywords/bleeding.okf.md
+Blessing,blessing,Effect,"A beneficial effect such as Regenerate, Focus or Chain. Most Blessings are additive. They can be removed by Dispelling them",Various,keywords/blessing.okf.md
+Blood,blood,Effect,"Sacrifice your own blood instead of Energy in order to gain special powers. Goes hand in hand with Corruption, Darkness, Hexes, and Lifedrain","Blood Ritual, Energy Management",keywords/blood.okf.md
+Bloodlust,bloodlust,Effect,"Bloodlust requires the enemy to have the Bleeding Affliction. (Reliable cards also trigger the Bloodlust effect, even when the enemy isn't Bleeding)",Offense,keywords/bloodlust.okf.md
+Brittle,brittle,Affliction,"When dealt damage, remove Brittle. If the damage was dealt from a Melee Action, take 1 more damage per stack removed",Offense,keywords/brittle.okf.md
+Burning,burning,Affliction,"At the end of the turn, take 1 damage per stack of Burning",Offense,keywords/burning.okf.md
+Bury,bury,Effect,Removes the top card of your deck from combat. Persistent cards cannot be Buried,Deck Management,keywords/bury.okf.md
+Cascade,cascade,Effect,Triggers when played after a card that costs 1 more or 1 less Energy. (Reliable cards also trigger this effect),"Deck Management, Energy Management",keywords/cascade.okf.md
+Chain,chain,"Blessing, Effect",Increase the damage of the next action by 1 per stack. Chain fades if a played card did not increase Chain. Activating Chains plays a key role in raising the Tide,"Buff, Offense",keywords/chain.okf.md
+Challenger,challenger,Effect,A Challenger has to be selected first. Opportunities return to the area deck when a Challenger is selected,-,keywords/challenger.okf.md
+Channel,channel,Effect,A channeling effect can be extended by 1 round by having at least 1 Energy at the end of your turn. Channeled cards end when you get Interrupted,Energy Management,keywords/channel.okf.md
+Chaos,chaos,Effect,Requires an odd number of cards remaining in your deck,Deck Management,keywords/chaos.okf.md
+Charges,charges,Effect,Cards with Charges can be played X number of times per combat before they become Depleted and are removed from combat,Deck Management,keywords/charges.okf.md
+Charmed,charmed,Affliction,"Lose the battle if your Health is less than your Charmed stack. When dealt non-Piercing damage, remove an equal amount of Charmed",Instakill,keywords/charmed.okf.md
+Cleanse,cleanse,Effect,Removes an Affliction,Healing,keywords/cleanse.okf.md
+Codes,codes,Effect,"Codes provide a strict rule for your deck. If it is met at the Start of Combat, a code is put directly in play. If not, it gets removed. Codes are Unique and Grounded: only one Code with that name can be played per combat, and Codes can't be altered, copied or Imbued",Various,keywords/codes.okf.md
+Combat Fatigue,combat-fatigue,Effect,"Whenever your deck runs out of cards, you increase your Fatigue by 1, then take 10% of your Maximum Health per Fatigue in unpreventable damage",Offense,keywords/combat-fatigue.okf.md
+Conjure,conjure,Effect,"Creates a temporary card that is always Removed from your deck after use or after the combat ends, even if it has non-Removable properties such as Cursed",Deck Management,keywords/conjure.okf.md
+Continuity,continuity,Effect,"Triggers when played after a card of the same type (melee, magic, ranged, divine). (Reliable cards also trigger this effect)",Deck Management,keywords/continuity.okf.md
+Corrupted,corrupted,Effect,"4 or more Corruptions are present in your deck, hand and/or Discard Pile","Blood Ritual, Deck Management",keywords/corrupted.okf.md
+Corruption,corruption,Effect,"Corruptions are cards with negative effects to their owner (Corruptions may have a negative effect when drawn, even if they are not played. Some Corruptions are unplayable (such as Envy, Greed, or Lust). If your deck contains 4 or more Corruptions, you become Corrupted, which unlocks special effects on many Blood Ritual cards.)",Blood Ritual,keywords/corruption.okf.md
+Critical Hit,critical-hit,Effect,Critical Hits deal double damage. You can't inflict Critical Hits while Afflicted by Weakness. (Critical Hits can be buffed by the Ferocious Blessing),Offense,keywords/critical-hit.okf.md
+Crushing,crushing,Effect,Crushing requires a card to deal 10 or more damage,Offense,keywords/crushing.okf.md
+Cursed,cursed,Effect,"Cursed cards can't be Transmuted or Removed from your deck. However, they can be transformed into a card of equal rarity at a Shrine of Commerce. Conjured and One Use cards are always Removed from your deck after use or after the combat ends, even if they are Cursed",Deck Management,keywords/cursed.okf.md
+Darkness,darkness,Other,"When dealt damage, take 1 less damage per stack of Darkness. When Darkness runs out, gain Stunned. Your Maximum Health is lowered by your total Darkness",Blood Ritual,keywords/darkness.okf.md
+Dazed,dazed,Affliction,"When playing a card, decrease Dazed by 1. When Dazed reaches 0, gain Stunned. Dazed fades at the end of the turn","Deck Management, Defense",keywords/dazed.okf.md
+Dazzled,dazzled,Affliction,"Draw one fewer card per stack of Dazzled, then decrease Dazzled stacks by 1 per skipped draw. Stacks of Dazzled cannot be increased","Deck Management, Defense",keywords/dazzled.okf.md
+Deep Wound,deep-wound,Effect,Inflicts Bleeding every turn. A target who has sustained 5 or more Deep Wounds is instantly slain,"Offense, Instakill",keywords/deep-wound.okf.md
+Delirious,delirious,Affliction,"After playing a card, shuffle the costs of all cards in hand. Lasts 1 round per stack","Chaos, Energy Management",keywords/delirious.okf.md
+Delve,delve,Effect,Select 1 of 3 randomly selected cards,Deck Management,keywords/delve.okf.md
+Deplete,deplete,Effect,"Depleted cards are removed from combat. Deplete triggers when the final Charge of a card with Charges is spent, or when Equipment has used up its Durability",Deck Management,keywords/deplete.okf.md
+Disarmed,disarmed,Affliction,"While Disarmed, Basic Attack cards can't be played. Lasts 1 round per stack","Deck Management, Defense",keywords/disarmed.okf.md
+Discard,discard,Effect,Removes a card from the hand,Deck Management,keywords/discard.okf.md
+Discard Pile,discard-pile,Effect,"After you play a card, it gets moved to the Discard Pile. Once your deck is empty, your Discard Pile is shuffled back into your deck",Deck Management,keywords/discard-pile.okf.md
+Dispel,dispel,Effect,Removes a Blessing from the target,Debuff,keywords/dispel.okf.md
+Dominated,dominated,Affliction,"While Dominated, you can only play the randomly selected card in your hand. Exception: Reliable cards can still be played","Chaos, Deck Management",keywords/dominated.okf.md
+Doom,doom,Affliction,"At the end of your turn, take 1 damage for each stack of Doom. Increase Doom by 1 each time an Action is played",Offense,keywords/doom.okf.md
+Dragon,dragon,Effect,-,-,keywords/dragon.okf.md
+Durability,durability,Effect,The number of times Equipment can be activated before it's Depleted for the remainder of the combat,Deck Management,keywords/durability.okf.md
+Echo,echo,Effect,Cards with Echo are cast twice when played from your hand,Deck Management,keywords/echo.okf.md
+Empower,empower,Effect,Empower is active while you have 5 or more Energy,Energy Management,keywords/empower.okf.md
+Evasion,evasion,Blessing,"When dealt Melee damage, reduce the first damage taken to 0, then decrease Evasion by 1. Evasion fades at the start of the turn","Defense, Immunity",keywords/evasion.okf.md
+Execute,execute,Effect,"Triggers if the card with Execute is active when you defeat your foe, including if you use this card to defeat your foe",Deck Management,keywords/execute.okf.md
+Ferocious,ferocious,Blessing,Your next Critical Hit deals 1 additional damage and heals you for 1 Health per stack of Ferocious,"Buff, Healing, Offense",keywords/ferocious.okf.md
+Figmented,figmented,Effect,Conjures a copy of the card when played.,Various,keywords/figmented.okf.md
+Finale,finale,Effect,"Triggers when played with 2 or fewer cards remaining in hand. (Reliable cards also trigger this effect, regardless of how many cards are left in hand)",Deck Management,keywords/finale.okf.md
+Firecast,firecast,Effect,A card with Firecast is played and moved into the discard pile whenever it gets Buried on your turn,Deck Management,keywords/firecast.okf.md
+Flanking,flanking,Effect,"Triggers when this card is played from either the leftmost or the rightmost position in hand. (Reliable cards also trigger this effect, regardless of their position in hand)",Deck Management,keywords/flanking.okf.md
+Flow,flow,Effect,"Triggers when played after playing at least X number of cards during the turn. (Reliable cards also trigger this effect, regardless of how many cards have been played during the turn)",Deck Management,keywords/flow.okf.md
+Focus,focus,Blessing,"At the start of the turn, draw an additional card if you have 5 or more Focus",Deck Management,keywords/focus.okf.md
+Foretell,foretell,Effect,"Look at the top X cards of your deck. Put 1 on top, and the others at the bottom of your deck",Deck Management,keywords/foretell.okf.md
+Form,form,Effect,Forms transform your appearance. Only 1 Form can be active at a time: activating a new Form will replace the old one,Various,keywords/form.okf.md
+Frenzy,frenzy,Effect,"Triggers when you've taken damage during your turn. (Reliable cards also trigger this effect, regardless of whether you've taken damage on your turn)",Buff,keywords/frenzy.okf.md
+Frozen,frozen,Affliction,"Look at the top X cards of your deck. Put one on top, and the others at the bottom of your deck",Deck Management,keywords/frozen.okf.md
+Grounded,grounded,Effect,"Grounded cards can't be altered, copied or Imbued",Deck Management,keywords/grounded.okf.md
+Haste,haste,Blessing,"Reduce the cost of the next drawn card by 1 Energy, then decrease Haste by 1",Energy Management,keywords/haste.okf.md
+Health,health,Effect,"If you lose all your Health, you lose the game! If your enemy loses all their Health, you win the battle! Some cards add or remove Health points, while others increase or decrease Maximum Health","Defense, Healing",keywords/health.okf.md
+Heavy,heavy,Effect,Heavy cards do not get Reshuffled after your deck reaches 0 cards,Deck Management,keywords/heavy.okf.md
+Hex,hex,Effect,Hexes are powerful effects that debilitate foes in different ways,"Blood Ritual, Debuff",keywords/hex.okf.md
+Holy,holy,Effect,Holy Energy can be spent on powerful Divine cards. Goes hand in hand with Zeal,"Holy Energy, Energy Management",keywords/holy.okf.md
+Imbued,imbued,Other,"Imbuing an Enchantment Removes an Enchantment from your deck and activates it permanently, from the start of every combat. In order to be Imbued, the Enchantment card must already be present in your deck, and must last for the entire combat when activated. Grounded cards and Codes cannot be Imbued. Imbuing is expensive, often costing 100 Gold","Buff, Deck Management",keywords/imbued.okf.md
+Impervious,impervious,Blessing,"While Impervious, take no non-Piercing damage. When dealt damage on the enemy turn, take no non-Piercing damage and decrease Impervious by 1","Defense, Immunity",keywords/impervious.okf.md
+Imprint,imprint,Effect,Add a card to this card's memory,Deck Management,keywords/imprint.okf.md
+Infected,infected,Affliction,"Whenever you discard a card, take 1 damage for every point of Infected. Remove all Infected whenever you gain Health","Deck Management, Offense",keywords/infected.okf.md
+Infuse,infuse,Other,"When you Infuse a card, you convert its energy cost to Neutral (colorless). Also, if the card is Upgradeable, Infusing it will Upgrade the card as many times as its cost in energy","Energy Management, Upgrade, Offense",keywords/infuse.okf.md
+Infusion,infusion,Effect,"When you add a card with Infusion to your deck, Upgrade all other cards with Infusion by 1","Deck Management, Upgrade, Offense",keywords/infusion.okf.md
+Insight,insight,Blessing,"Whenever you are dealt an amount of non-Piercing damage exactly the same as your current Insight, prevent that damage","Defense, Immunity",keywords/insight.okf.md
+Interrupt,interrupt,Effect,"Removes the target's remaining Energy (and ends their Channeling effects, including Beastform). If it targets an enemy, it will force them to replace their Deadly attacks with their regular cards","Deck Management, Energy Management",keywords/interrupt.okf.md
+Jinxed,jinxed,Affliction,"The next Action card played has no effect and reduces Jinxed by 1. (Exception: Reliable cards still have an effect.) Jinxed stacks fade at the end of the turn, and cannot be increased by Bane.","Debuff, Deck Management",keywords/jinxed.okf.md
+Ki,ki,Affliction,"If you start the turn with more Ki than Health, remove all Ki and gain Stunned","Debuff, Deck Management",keywords/ki.okf.md
+Lasting,lasting,Effect,The effects of Lasting cards are extended by 1 turn whenever the card is played again,"Buff, Deck Management",keywords/lasting.okf.md
+Lifedrain,lifedrain,Effect,Cards with Lifedrain restore Health equal to the damage they deal,"Blood Ritual, Healing",keywords/lifedrain.okf.md
+Memorized,memorized,Effect,This card always starts at the top of your deck,Deck Management,keywords/memorized.okf.md
+Mergecraft,mergecraft,Effect,"When Mergecraft cards are added to the deck, they Upgrade all copies of that card by their Mergecraft value","Deck Management, Upgrade, Offense",keywords/mergecraft.okf.md
+Momentum,momentum,Blessing,"Whenever you have 5 or more Momentum, remove all stacks and draw a card","Buff, Deck Management",keywords/momentum.okf.md
+Monster Card,monster-card,Effect,"All enemy cards are monster cards, and can be recognized by their deep red banner",Various,keywords/monster-card.okf.md
+On Draw,on-draw,Effect,Triggers whenever this card is drawn from your deck,Deck Management,keywords/on-draw.okf.md
+On Hit,on-hit,Effect,"Triggers when this attack hits the target, and deals damage",Buff,keywords/on-hit.okf.md
+One Use,one-use,Effect,"This card will be permanently Removed from your deck after playing it, even if it has non-Removable properties such as Cursed",Deck Management,keywords/one-use.okf.md
+Order,order,Effect,Requires an even number of cards remaining in your deck,Deck Management,keywords/order.okf.md
+Overkill,overkill,Effect,"Whenever a foe dies to damage, ""Overkill"" refers to their negative Health total. (For example, if you do 13 damage to an enemy who has 10 Health left with no defenses, they will die at –3 Health, which is the same as 3 Overkill)",Deck Management,keywords/overkill.okf.md
+Perform,perform,Effect,"Increase your current Performance by X, or start a new Performance",Buff,keywords/perform.okf.md
+Performance,performance,Effect,"Performance counts the progress of your currently active song. While no song is active, your Performance is 0. Performance stacks are increased by Performing",Buff,keywords/performance.okf.md
+Persistent,persistent,Effect,Cards with Persistent don't get Discarded at the end of the turn and cannot be Buried,Deck Management,keywords/persistent.okf.md
+Piercing,piercing,Effect,"Piercing damage ignores all effects that would reduce or prevent its damage (such as Charmed, Impervious, Insight, and Resilient)",Offense,keywords/piercing.okf.md
+Pinned,pinned,Affliction,"While Pinned, only the leftmost and rightmost cards in hand can be played. (Exception: Reliable cards can still be played, regardless of their position in your hand.) Lasts 1 round per stack","Chaos, Deck Management",keywords/pinned.okf.md
+Poison,poison,Affliction,"After playing a card, take 1 damage, then decrease Poison by 1. When gaining Health, prevent 1 Health per stack and reduce Poison by 1 for each Health prevented",Offense,keywords/poison.okf.md
+Precision,precision,Effect,The target ends the attack at an amount of total Health ending in 0 or 5,Offense,keywords/precision.okf.md
+Rally,rally,Blessing,"Whenever your opponent plays a card, gain Health equal to your Rally, then lower your Rally by 1","Deck Management, Healing",keywords/rally.okf.md
+Rampage,rampage,Effect,Cards with Rampage gain double the damage bonus from Anger,"Buff, Offense",keywords/rampage.okf.md
+Reaping,reaping,Effect,"Reaping lowers the target's Maximum Health equal to the damage it deals. When used against creatures who benefit from Anima, it lowers Anima instead. When used by creatures who benefit from Anima, Reaping damage is added to the Anima instead",Offense,keywords/reaping.okf.md
+Rebound,rebound,Effect,"Rebound counts the number of times you played the card, and triggers its special effect when the card has been played X number of times",Deck Management,keywords/rebound.okf.md
+Reflect,reflect,Blessing,Return the next damage dealt to you to the attacker. Increase this damage by 1 for each stack of Reflect. Fades at the start of your turn,Offense,keywords/reflect.okf.md
+Regenerate,regenerate,Blessing,"At the start of your turn, gain 1 Health per stack and decrease Regenerate by 1",Healing,keywords/regenerate.okf.md
+Reliable,reliable,Effect,"The Ambush, Bloodlust, Cascade, Continuity, Finale, Flanking, Flow, and Frenzy conditions are always met. Reliable cards ignore disabling conditions like Crushing, Jinxed, Stunned, Pinned or Dominated",Deck Management,keywords/reliable.okf.md
+Removed,removed,Other,"Cards that are removed from your deck are permanently eliminated. You can Remove cards at Campfires, the Shrine of Potential, and some special events. (You can also pay the Blacksmith 30 Gold to Remove a Basic Attack.) Cursed cards cannot be removed from your deck. Generally, cards that are removed from your hand during combat are only Discarded, not Removed from your deck entirely. However, Conjured or One Use cards are always Removed after they are activated",Deck Management,keywords/removed.okf.md
+Reshuffle,reshuffle,Effect,"Whenever your deck runs out of cards, your Discard Pile and the cards you have played (except for Conjure or One Use cards) return to your deck in a random order","Chaos, Deck Management",keywords/reshuffle.okf.md
+Resilience,resilience,Blessing,"When dealt damage, take 1 less non-Piercing damage per stack of Resilience, then lower your Resilience by 1",Defense,keywords/resilience.okf.md
+Revelation,revelation,Effect,Revelations offer incredibly powerful and Unique effects,Holy Energy,keywords/revelation.okf.md
+Scholar,scholar,Effect,Triggers if your deck contained 20 or more cards at the start of combat,Deck Management,keywords/scholar.okf.md
+Shift,shift,Effect,Assume a new Form. Only one Form can be active at a time: activating a new Form will replace the old one,Deck Management,keywords/shift.okf.md
+Shocked,shocked,Affliction,"At the start of the turn, reduce Shocked by 1. When Shocked reaches 0, you are Stunned. The stacks of this Affliction cannot be increased",Deck Management,keywords/shocked.okf.md
+Sickened,sickened,Affliction,"While Sickened, you lose 1 random Energy at the start of your turn. Lasts 1 round per stack",Energy Management,keywords/sickened.okf.md
+Silenced,silenced,Affliction,"While Silenced, Magic Actions can't be played. Lasts 1 round per stack","Deck Management, Defense",keywords/silenced.okf.md
+Sinister,sinister,Effect,Sinister cards get more powerful for each other Sinister card you played during the entire combat,"Buff, Deck Management",keywords/sinister.okf.md
+Slay,slay,Effect,Triggers when an enemy is reduced to exactly 0 Health (no Overkill),Offense,keywords/slay.okf.md
+Slow,slow,Affliction,"Increase the cost of the next drawn card by 1 Neutral Energy, then decrease Slow by 1",Energy Management,keywords/slow.okf.md
+Souls,souls,Effect,"Use the lingering essence of slain foes to empower Actions. When you die with over 100 souls collected, revive and lose all Souls","Blood Ritual, Healing",keywords/souls.okf.md
+Stagger,stagger,Affliction,"At the start of your turn, take damage equal to half of your Stagger, then reduce your Stagger by an equal amount",Offense,keywords/stagger.okf.md
+Stances,stances,Effect,Stances are special fighting techniques that can be adopted through various cards. Only one Stance can be active at a time: activating a new Stance replaces the old one,Various,keywords/stances.okf.md
+Status Damage,status-damage,Effect,"Status Damage is damage taken from effects like Poison, Burning, Doomed, and Brittle. This damage typically can't be prevented except by Impervious or Cleansing the condition",Offense,keywords/status-damage.okf.md
+Stunned,stunned,Other,"While Stunned, cards cannot be played. Stunned fades at the end of the turn. (Exception: Reliable cards can still be played)","Deck Management, Defense",keywords/stunned.okf.md
+Swap,swap,Effect,This card changes into a different card when played,Deck Management,keywords/swap.okf.md
+Synergy,synergy,Effect,Triggers whenever you play a non-Conjured card of the same type while this card is in your hand. (The card's type is found at the bottom of the card),Deck Management,keywords/synergy.okf.md
+Tides,tides,Effect,"Tides shift the effects and power of certain Tidal cards. Generally speaking, Low Tide is the default state, but activating multiple Chains or a card that change the Tide can trigger High Tide, which unlocks more powerful effects. In a combat, only one side can enjoy the High Tide: if your opponent activates High Tide, you will go back to Low Tide.",Various,keywords/tides.okf.md
+Transmute,transmute,Effect,"Transmuting a card permanently converts it into a random card of the same color, with a higher rarity. For a list of what cards a card can Transmute into, see: https://blightbane.io/cards. However, Cursed cards can't be Transmuted","Chaos, Deck Management, Upgrade",keywords/transmute.okf.md
+Treasure,treasure,Effect,This card can be found through various events,-,keywords/treasure.okf.md
+Unique,unique,Effect,"You can only play one card with this name per combat. All Enchantments, Codes, and Revelations are Unique",Various,keywords/unique.okf.md
+Unplayable,unplayable,Effect,"This card can't be played from your hand. However, you will still draw the card, and it may still have an effect",Deck Management,keywords/unplayable.okf.md
+Unscathed,unscathed,Effect,You've taken no damage during the enemy turn. Inactive on your first turn,Defense,keywords/unscathed.okf.md
+Untempered,untempered,Effect,Untempered cards are removed from your deck at the end of combat.,Deck Management,keywords/untempered.okf.md
+Upgrade,upgrade,Effect,"Upgraded cards deal 1 additional damage per upgrade. Generally, only cards that deal damage can be Upgraded, as well as cards with the Upgradeable effect","Upgrade, Offense",keywords/upgrade.okf.md
+Upgradeable,upgradeable,Effect,"This card can be Upgraded, which improves the card in unusual ways","Upgrade, Various",keywords/upgradeable.okf.md
+Valuable,valuable,Effect,This card adds double its merchant value to the final score,-,keywords/valuable.okf.md
+Vulnerable,vulnerable,Affliction,Take 10% more damage from each Action for each stack of Vulnerable. Stacks up to 100% extra damage,Offense,keywords/vulnerable.okf.md
+Ward,ward,Blessing,"Whenever you gain an Affliction, prevent that Affliction and lower your Ward by 1 instead. Fades at the start of the turn","Defense, Immunity",keywords/ward.okf.md
+Weakness,weakness,Affliction,The next damage you deal is reduced by 50%. You can't inflict Critical Hits while affected by Weakness,"Debuff, Defense, Immunity",keywords/weakness.okf.md
+Zeal,zeal,Blessing,"Your Divine actions deal additional damage for each Zeal. At the start of the turn, take damage equal to your Zeal",Holy Energy,keywords/zeal.okf.md

@@ -22,7 +22,7 @@ const TYPES = [
   'pattern', 'operations',
   // Digital card-game corpus records. These are machine-generated source evidence,
   // not board-game rules summaries, so they do not require mechanics tags.
-  'digital_card_game_index', 'digital_card_sources', 'digital_card_glossary', 'card_record',
+  'digital_card_game_index', 'digital_card_sources', 'digital_card_glossary', 'digital_card_keyword', 'card_record',
 ]
 const GAME_TYPES = ['game_index', 'sources', 'rule_category', 'reception', 'better_if', 'scout_report']
 const CONFIDENCE = ['high', 'medium', 'low']
