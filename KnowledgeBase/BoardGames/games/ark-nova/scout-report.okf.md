@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: scout_report
 game:
   title: "Ark Nova"
@@ -9,6 +9,7 @@ game:
   year: 2021
   edition: "English base game, Capstone current web resources"
 scope: "base game"
+mechanics: [action-selection, hand-management, tableau-building, grid-coverage, tile-placement, set-collection, end-game-bonuses, income, solo-solitaire-game, variable-setup]
 sources:
   - id: "src-001"
     title: "Ark Nova | Board Game | BoardGameGeek"

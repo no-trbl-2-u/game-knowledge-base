@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: scout_report
 game:
   title: "Mage Knight Board Game"
@@ -9,6 +9,26 @@ game:
   year: 2011
   edition: "English base game / rules updated March 2012"
 scope: "base game"
+mechanics: [deck-building, hand-management, card-play-conflict-resolution, modular-board, grid-movement, dice-rolling, cooperative-game, solo-solitaire-game, variable-player-powers, campaign-game]
+followups:
+  - source_id: "src-003"
+    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
+    failure: http_error
+    fallback: "search snippets + UltraBoardGames secondary rules summary (src-006), honestly labeled"
+    retry_needs: wayback_snapshot
+    notes: "2026-07-03 extraction timed out, direct fetch hit TLS hostname mismatch; 2026-07-04 retry returned HTTP 500 on both wizkidsgames.com and wizkids.com hosts. Try a Wayback Machine snapshot or re-check wizkids.com/mage-knight for relocated links."
+  - source_id: "src-004"
+    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf"
+    failure: http_error
+    fallback: "not extracted; walkthrough facts omitted rather than guessed"
+    retry_needs: wayback_snapshot
+    notes: "Same WizKids host failure pattern as src-003 (HTTP 500 on 2026-07-04 retry)."
+  - source_id: "src-005"
+    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_FAQ_1.0v2.pdf"
+    failure: http_error
+    fallback: "community FAQ wiki (src-008) as secondary testimony"
+    retry_needs: wayback_snapshot
+    notes: "Same WizKids host failure pattern as src-003 (HTTP 500 on 2026-07-04 retry)."
 sources:
   - id: "src-001"
     title: "Mage Knight Board Game — BoardGameGeek"

@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: better_if
 game:
   title: "Slay the Spire: The Board Game"
@@ -9,6 +9,8 @@ game:
   year: 2024
   edition: "base game"
 scope: "base game"
+mechanics: [deck-building, cooperative-game, hand-management, campaign-game, point-to-point-movement, variable-player-powers, solo-solitaire-game]
+better_if_labels: [onboarding, setup-teardown, rules-ambiguity, component-clarity, campaign-progression, scoring-endgame, solo-coop-automation, player-interaction, turn-pacing, downtime]
 sources:
   - id: "src-007"
     title: "REVIEW: Slay the Spire: The Board Game"

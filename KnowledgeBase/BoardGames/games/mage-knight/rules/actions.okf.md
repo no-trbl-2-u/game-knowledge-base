@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: rule_category
 game:
   title: "Mage Knight Board Game"
@@ -9,6 +9,7 @@ game:
   year: 2011
   edition: "English base game / rules updated March 2012"
 scope: "base game"
+mechanics: [deck-building, hand-management, card-play-conflict-resolution, modular-board, grid-movement, dice-rolling, cooperative-game, solo-solitaire-game, variable-player-powers, campaign-game]
 sources:
   - id: "src-006"
     title: "How to play Mage Knight — UltraBoardGames"

@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: game_index
 game:
   title: "Mage Knight Board Game"
@@ -7,8 +7,10 @@ game:
   bgg_id: 96848
   publisher: "WizKids"
   year: 2011
+  weight: 4.38
   edition: "English base game / rules updated March 2012"
 scope: "base game"
+mechanics: [deck-building, hand-management, card-play-conflict-resolution, modular-board, grid-movement, dice-rolling, cooperative-game, solo-solitaire-game, variable-player-powers, campaign-game]
 sources:
   - id: "src-001"
     title: "Mage Knight Board Game — BoardGameGeek"

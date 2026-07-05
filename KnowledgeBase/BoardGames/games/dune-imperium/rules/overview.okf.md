@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: rule_category
 game:
   title: "Dune: Imperium"
@@ -9,6 +9,7 @@ game:
   year: 2020
   edition: "English base game"
 scope: "base game"
+mechanics: [deck-building, worker-placement, hand-management, multi-use-cards, force-commitment, race, variable-player-powers]
 sources:
   - id: "src-003"
     title: "DUNE_IMPERIUM_Rules_2020_10_26.pdf"

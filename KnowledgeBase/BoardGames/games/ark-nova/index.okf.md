@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: game_index
 game:
   title: "Ark Nova"
@@ -7,8 +7,10 @@ game:
   bgg_id: 342942
   publisher: "Feuerland Spiele / Capstone Games"
   year: 2021
+  weight: 3.80
   edition: "English base game, Capstone current web resources"
 scope: "base game"
+mechanics: [action-selection, hand-management, tableau-building, grid-coverage, tile-placement, set-collection, end-game-bonuses, income, solo-solitaire-game, variable-setup]
 sources:
   - id: "src-001"
     title: "Ark Nova | Board Game | BoardGameGeek"

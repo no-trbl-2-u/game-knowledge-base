@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: game_index
 game:
   title: "Spirit Island"
@@ -7,8 +7,10 @@ game:
   bgg_id: 162886
   publisher: "Greater Than Games"
   year: 2017
+  weight: 4.07
   edition: "core game"
 scope: "base game"
+mechanics: [cooperative-game, hand-management, simultaneous-action-selection, modular-board, variable-player-powers, solo-solitaire-game, variable-setup]
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Spirit Island"

@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: better_if
 game:
   title: "Spirit Island"
@@ -9,6 +9,8 @@ game:
   year: 2017
   edition: "core game"
 scope: "base game"
+mechanics: [cooperative-game, hand-management, simultaneous-action-selection, modular-board, variable-player-powers, solo-solitaire-game, variable-setup]
+better_if_labels: [onboarding, setup-teardown, rules-ambiguity, turn-pacing, downtime, randomness, strategic-depth, scoring-endgame, solo-coop-automation, accessibility]
 sources:
   - id: "src-005"
     title: "Gideon's Gaming — Spirit Island Board Game Review"

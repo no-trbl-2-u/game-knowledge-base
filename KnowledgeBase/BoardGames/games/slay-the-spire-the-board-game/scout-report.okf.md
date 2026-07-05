@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: scout_report
 game:
   title: "Slay the Spire: The Board Game"
@@ -9,6 +9,7 @@ game:
   year: 2024
   edition: "base game"
 scope: "base game"
+mechanics: [deck-building, cooperative-game, hand-management, campaign-game, point-to-point-movement, variable-player-powers, solo-solitaire-game]
 sources:
   - id: "src-005"
     title: "Slay the Spire: The Board Game"

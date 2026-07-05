@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: rule_category
 game:
   title: "Spirit Island"
@@ -9,6 +9,7 @@ game:
   year: 2017
   edition: "core game"
 scope: "base game"
+mechanics: [cooperative-game, hand-management, simultaneous-action-selection, modular-board, variable-player-powers, solo-solitaire-game, variable-setup]
 sources:
   - id: "src-004"
     title: "Spirit Island Wiki — Main Page"

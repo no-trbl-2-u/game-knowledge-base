@@ -1,5 +1,5 @@
 ---
-okf_version: 0.1
+okf_version: 0.2
 type: game_index
 game:
   title: "Dune: Imperium"
@@ -7,8 +7,10 @@ game:
   bgg_id: 316554
   publisher: "Dire Wolf"
   year: 2020
+  weight: 3.08
   edition: "English base game"
 scope: "base game"
+mechanics: [deck-building, worker-placement, hand-management, multi-use-cards, force-commitment, race, variable-player-powers]
 sources:
   - id: "src-001"
     title: "Dune: Imperium — BoardGameGeek"
