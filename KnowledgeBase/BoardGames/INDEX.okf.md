@@ -17,6 +17,7 @@ BGG complexity weight from the game's discovery source.
 | mage-knight | Mage Knight Board Game | 2011 | 4.38 | deck-building, hand-management, card-play-conflict-resolution, modular-board, grid-movement, dice-rolling, cooperative-game, solo-solitaire-game, variable-player-powers, campaign-game | rules-ambiguity, downtime, solo-coop-automation, player-interaction, onboarding | needs_followup:9 verified:2 | 11 |
 | slay-the-spire-the-board-game | Slay the Spire: The Board Game | 2024 | 2.90 | deck-building, cooperative-game, hand-management, campaign-game, point-to-point-movement, variable-player-powers, solo-solitaire-game | onboarding, setup-teardown, rules-ambiguity, component-clarity, campaign-progression | needs_followup:1 verified:10 | 11 |
 | spirit-island | Spirit Island | 2017 | 4.07 | cooperative-game, hand-management, simultaneous-action-selection, modular-board, variable-player-powers, solo-solitaire-game, variable-setup | onboarding, setup-teardown, rules-ambiguity, turn-pacing, downtime | needs_followup:1 verified:10 | 11 |
+| the-quacks-of-quedlinburg | The Quacks of Quedlinburg | 2018 | 1.94 | deck-bag-and-pool-building, push-your-luck, catch-up-mechanism, simultaneous-action-selection, dice-rolling, variable-setup | component-clarity, randomness, player-interaction, runaway-leader, setup-teardown | verified | 11 |
 
 ## Mechanics → games
 
@@ -25,9 +26,11 @@ BGG complexity weight from the game's discovery source.
 | action-selection | ark-nova |
 | campaign-game | mage-knight, slay-the-spire-the-board-game |
 | card-play-conflict-resolution | mage-knight |
+| catch-up-mechanism | the-quacks-of-quedlinburg |
 | cooperative-game | mage-knight, slay-the-spire-the-board-game, spirit-island |
+| deck-bag-and-pool-building | the-quacks-of-quedlinburg |
 | deck-building | dune-imperium, mage-knight, slay-the-spire-the-board-game |
-| dice-rolling | mage-knight |
+| dice-rolling | mage-knight, the-quacks-of-quedlinburg |
 | end-game-bonuses | ark-nova |
 | force-commitment | dune-imperium |
 | grid-coverage | ark-nova |
@@ -37,12 +40,13 @@ BGG complexity weight from the game's discovery source.
 | modular-board | mage-knight, spirit-island |
 | multi-use-cards | dune-imperium |
 | point-to-point-movement | slay-the-spire-the-board-game |
+| push-your-luck | the-quacks-of-quedlinburg |
 | race | dune-imperium |
 | set-collection | ark-nova |
-| simultaneous-action-selection | spirit-island |
+| simultaneous-action-selection | spirit-island, the-quacks-of-quedlinburg |
 | solo-solitaire-game | ark-nova, mage-knight, slay-the-spire-the-board-game, spirit-island |
 | tableau-building | ark-nova |
 | tile-placement | ark-nova |
 | variable-player-powers | dune-imperium, mage-knight, slay-the-spire-the-board-game, spirit-island |
-| variable-setup | ark-nova, spirit-island |
+| variable-setup | ark-nova, spirit-island, the-quacks-of-quedlinburg |
 | worker-placement | dune-imperium |
