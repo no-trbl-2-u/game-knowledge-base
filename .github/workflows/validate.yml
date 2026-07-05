@@ -3,11 +3,8 @@ name: validate
 # The corpus's type-checker: structural OKF validation on every change.
 # Plain script, no model, no tokens.
 #
-# NOTE: currently NON-BLOCKING (continue-on-error) because the corpus has
-# known pre-existing findings (a scout run drifted to an off-spec
-# frontmatter schema). Flip continue-on-error to false after the
-# librarian's first pass brings the corpus clean — from then on drift
-# fails CI the day it lands.
+# BLOCKING since 2026-07-04: the librarian's first pass brought the corpus
+# to 0 findings, so drift now fails CI the day it lands.
 
 on:
   push:
@@ -32,5 +29,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate OKF corpus
-        continue-on-error: true
         run: node scripts/validate-okf.mjs
