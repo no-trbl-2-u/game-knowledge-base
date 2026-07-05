@@ -13,15 +13,15 @@ card:
   expansion: "Eclypse"
   color: "Aqua"
   cost:
-  dex: 0
-  int: 0
-  str: 0
-  holy: 0
-  neutral: 0
-  dexint: 1
-  dexstr: 0
-  intstr: 0
-  blood: 2
+    dex: 0
+    int: 0
+    str: 0
+    holy: 0
+    neutral: 0
+    dexint: 1
+    dexstr: 0
+    intstr: 0
+    blood: 2
 observed_terms:
   - "damageBonus+1"
   - "Doom"
