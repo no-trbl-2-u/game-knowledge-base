@@ -14,6 +14,7 @@ BGG complexity weight from the game's discovery source.
 |---|---|---|---|---|---|---|---|
 | ark-nova | Ark Nova | 2021 | 3.80 | action-selection, hand-management, tableau-building, grid-coverage, tile-placement, set-collection, end-game-bonuses, income, solo-solitaire-game, variable-setup | randomness, strategic-depth, onboarding, scoring-endgame, rules-ambiguity | verified | 11 |
 | dune-imperium | Dune: Imperium | 2020 | 3.08 | deck-building, worker-placement, hand-management, multi-use-cards, force-commitment, race, variable-player-powers | onboarding, component-clarity, accessibility, rules-ambiguity, combat-resolution | verified | 11 |
+| heat-pedal-to-the-metal | Heat: Pedal to the Metal | 2022 | 2.20 | hand-management, deck-bag-and-pool-building, push-your-luck, catch-up-mechanism, simultaneous-action-selection, race, solo-solitaire-game, variable-setup | onboarding, component-clarity, turn-pacing, randomness, strategic-depth | verified | 11 |
 | mage-knight | Mage Knight Board Game | 2011 | 4.38 | deck-building, hand-management, card-play-conflict-resolution, modular-board, grid-movement, dice-rolling, cooperative-game, solo-solitaire-game, variable-player-powers, campaign-game | rules-ambiguity, downtime, solo-coop-automation, player-interaction, onboarding | needs_followup:9 verified:2 | 11 |
 | root | Root | 2018 | 3.84 | action-points, action-queue, action-retrieval, area-majority-influence, area-movement, dice-rolling, hand-management, multi-use-cards, negotiation, variable-player-powers, variable-setup | onboarding, rules-ambiguity, downtime, strategic-depth, balance-faction-asymmetry | needs_followup:1 verified:10 | 11 |
 | slay-the-spire-the-board-game | Slay the Spire: The Board Game | 2024 | 2.90 | deck-building, cooperative-game, hand-management, campaign-game, point-to-point-movement, variable-player-powers, solo-solitaire-game | onboarding, setup-teardown, rules-ambiguity, component-clarity, campaign-progression | needs_followup:1 verified:10 | 11 |
@@ -32,28 +33,28 @@ BGG complexity weight from the game's discovery source.
 | area-movement | root |
 | campaign-game | mage-knight, slay-the-spire-the-board-game |
 | card-play-conflict-resolution | mage-knight |
-| catch-up-mechanism | the-quacks-of-quedlinburg |
+| catch-up-mechanism | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
 | cooperative-game | mage-knight, slay-the-spire-the-board-game, spirit-island |
-| deck-bag-and-pool-building | the-quacks-of-quedlinburg |
+| deck-bag-and-pool-building | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
 | deck-building | dune-imperium, mage-knight, slay-the-spire-the-board-game |
 | dice-rolling | mage-knight, root, the-quacks-of-quedlinburg |
 | end-game-bonuses | ark-nova |
 | force-commitment | dune-imperium |
 | grid-coverage | ark-nova |
 | grid-movement | mage-knight |
-| hand-management | ark-nova, dune-imperium, mage-knight, root, slay-the-spire-the-board-game, spirit-island |
+| hand-management | ark-nova, dune-imperium, heat-pedal-to-the-metal, mage-knight, root, slay-the-spire-the-board-game, spirit-island |
 | income | ark-nova |
 | modular-board | mage-knight, spirit-island |
 | multi-use-cards | dune-imperium, root |
 | negotiation | root |
 | point-to-point-movement | slay-the-spire-the-board-game |
-| push-your-luck | the-quacks-of-quedlinburg |
-| race | dune-imperium |
+| push-your-luck | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
+| race | dune-imperium, heat-pedal-to-the-metal |
 | set-collection | ark-nova |
-| simultaneous-action-selection | spirit-island, the-quacks-of-quedlinburg |
-| solo-solitaire-game | ark-nova, mage-knight, slay-the-spire-the-board-game, spirit-island |
+| simultaneous-action-selection | heat-pedal-to-the-metal, spirit-island, the-quacks-of-quedlinburg |
+| solo-solitaire-game | ark-nova, heat-pedal-to-the-metal, mage-knight, slay-the-spire-the-board-game, spirit-island |
 | tableau-building | ark-nova |
 | tile-placement | ark-nova |
 | variable-player-powers | dune-imperium, mage-knight, root, slay-the-spire-the-board-game, spirit-island |
-| variable-setup | ark-nova, root, spirit-island, the-quacks-of-quedlinburg |
+| variable-setup | ark-nova, heat-pedal-to-the-metal, root, spirit-island, the-quacks-of-quedlinburg |
 | worker-placement | dune-imperium |
