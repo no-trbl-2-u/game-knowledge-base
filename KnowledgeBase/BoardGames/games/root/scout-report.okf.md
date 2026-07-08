@@ -11,19 +11,6 @@ game:
   edition: "base game / current Leder rules library"
 scope: "base game"
 mechanics: [action-points, action-queue, action-retrieval, area-majority-influence, area-movement, dice-rolling, hand-management, multi-use-cards, negotiation, variable-player-powers, variable-setup]
-followups:
-  - source_id: "src-002"
-    url: "https://ledergames.com/pages/resources"
-    failure: timeout
-    fallback: "Used web_search snippets identifying official Root rules resources and the live Leder Rules Library for rule text."
-    retry_needs: browser_fetch
-    notes: "web_extract timed out on 2026-07-06, though search results exposed official resource links."
-  - source_id: "src-004"
-    url: "https://www.dicebreaker.com/games/root-game/how-to/how-to-play-root-board-game"
-    failure: timeout
-    fallback: "Used web_search snippets for complexity, setup, and common-action summaries."
-    retry_needs: browser_fetch
-    notes: "web_extract timed out on 2026-07-06; search result contained relevant excerpts."
 sources:
   - id: "src-001"
     title: "Root | Board Game | BoardGameGeek"
@@ -37,8 +24,8 @@ sources:
     url: "https://ledergames.com/pages/resources"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-06"
-    notes: "Official resources page; extraction timed out but search result exposed links."
+    retrieved_at: "2026-07-08"
+    notes: "Retried with a browser-capable fetch; resolved. Page lists direct PDF links for Law of Root (Oct 2025), Learning to Play, Walking Through Root, Root Rules and Errata, and Root Update Kit."
   - id: "src-003"
     title: "Leder Rules Library — Root"
     url: "https://rules.ledergames.com/?product=root"
@@ -51,8 +38,15 @@ sources:
     url: "https://www.dicebreaker.com/games/root-game/how-to/how-to-play-root-board-game"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-06"
-    notes: "Secondary rules overview; extraction timed out, search excerpts used."
+    retrieved_at: "2026-07-08"
+    notes: "Retried via curl -L (the page is reachable; the earlier failure was a fetch-tool timeout, not a dead link) and cross-checked its quoted claims against the fetched text; all matched."
+  - id: "src-007"
+    title: "Law of Root (official rulebook PDF, Oct 2025 printing)"
+    url: "https://cdn.shopify.com/s/files/1/0106/0162/7706/files/Root_Base_Law_Oct_2025.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-08"
+    notes: "Direct PDF link surfaced by the browser-capable retry of src-002; retrieved via curl -L and text-extracted with pypdf, 32 pages. Confirms turn phases, 30-VP win condition, and dominance-card alternate wins with page references."
   - id: "src-005"
     title: "Root — Shut Up & Sit Down"
     url: "https://www.shutupandsitdown.com/games/root/"
@@ -67,8 +61,8 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-06"
     notes: "Search excerpts used for reception and better-if claims; extraction timed out."
-confidence: medium
-status: needs_followup
+confidence: high
+status: verified
 ---
 
 ## Scout objective
@@ -131,5 +125,7 @@ The first-play path and table aids reduced opponent-faction opacity, and low-pla
 
 ## Open questions
 
-- Direct PDF/page-citation pass against the October 2025 Law of Root.
 - Identify the most common live-table rules disputes from official FAQ, BGG rules forum, or Root community sources.
+
+## Retry notes
+- 2026-07-08 (librarian pass): Resolved. `src-002` (Leder resources page) and `src-004` (Dicebreaker how-to) both fetched successfully this time — `src-002` via a browser-capable fetch, `src-004` via `curl -L` (the earlier failures were fetch-tool timeouts, not dead links or blocks). The resources page exposed a direct link to the October 2025 Law of Root PDF (`src-007`), which was downloaded and text-extracted with pypdf (32 pages); `sources.okf.md` now cites it with page references for the turn-phase names and victory conditions. Dicebreaker's previously-cited quotes were cross-checked against the freshly fetched page text and all matched.

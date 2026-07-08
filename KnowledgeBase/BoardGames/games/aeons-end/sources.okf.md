@@ -53,14 +53,21 @@ sources:
     kind: rulebook_pdf
     provenance: community
     retrieved_at: "2026-07-08"
-    notes: "Located as a rulebook lead but direct file extraction was not completed in this run."
-confidence: medium
-status: needs_followup
+    notes: "Cloudflare-blocked (HTTP 403, challenge page) on retry; superseded by src-007, a mirror of the same official rulebook."
+  - id: "src-007"
+    title: "Aeon's End Rulebook (official, base game)"
+    url: "https://cdn.1j1ju.com/medias/3f/5c/9e-aeons-end-rulebook.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-08"
+    notes: "Official base-game rulebook (c 2016 Lone Oak Games), 20 pages, mirrored on 1j1ju.com's rules library; retrieved via curl -L and text-extracted with pypdf."
+confidence: high
+status: verified
 ---
 
 ## Summary
 
-The source base is adequate for a first OKF entry but not complete. The publisher page and BGG page establish the identity, selection signal, and focus fit. UltraBoardGames supplies a secondary rules presentation. The most important followup is direct inspection of a canonical official rulebook PDF.
+The publisher page and BGG page establish identity, selection signal, and focus fit. A 2026-07-08 retry found the BGG rulebook filepage still Cloudflare-blocked, but located and retrieved an equivalent official-rulebook mirror, resolving the run's main followup.
 
 ## Source-backed facts
 
@@ -72,12 +79,15 @@ The source base is adequate for a first OKF entry but not complete. The publishe
   Source: src-001
   Evidence: "BGG Rating 7.9"; "24K ratings"; "Overall Rank 108"; "Weight 2.80 / 5".
   Confidence: high
-- Claim: The rulebook file lead exists on BGG, but this run used secondary rules because direct rulebook extraction was not completed.
-  Source: src-006, src-003
-  Evidence: BGG filepage titled "Aeon's End Final Rulebook"; UltraBoardGames rules page extracted successfully.
-  Confidence: medium
+- Claim: The official base-game rulebook (Lone Oak Games, 2016) was retrieved in full and its text confirms the game's core structural claims (no-shuffle player decks, tiered non-reshuffled nemesis deck, turn-order deck composition).
+  Source: src-007
+  Evidence: Rulebook credits page: "© 2016 Lone Oak Games."; body text confirms deck/turn-order/nemesis mechanics also summarized by src-003.
+  Confidence: high
 
 ## Open questions
 
-- Whether the BGG filepage corresponds to first edition, second edition, or another canonical version.
-- Whether Indie Boards & Cards hosts a current rulebook at a URL not exposed by the product-page extraction.
+- Whether this rulebook mirror (src-007) reflects first-printing or a later-printing edition; no explicit printing/version date was found in the extracted text (unlike Mage Knight's dated PDFs).
+- Whether Indie Boards & Cards hosts a current rulebook at a URL not exposed by the product-page extraction, and whether a 2nd-edition errata document exists (BGG mentions one but it was not located this pass).
+
+## Retry notes
+- 2026-07-08: Resolved. `src-006` (BGG filepage) is Cloudflare-blocked; a web search surfaced `src-007`, an official-rulebook mirror on 1j1ju.com's rules library, successfully retrieved and text-extracted (20 pages, pypdf). Rule claims in `rules/edge-cases-faq.okf.md` were verified and upgraded against this text.

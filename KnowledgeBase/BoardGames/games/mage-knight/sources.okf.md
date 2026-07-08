@@ -30,22 +30,22 @@ sources:
     url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-03"
-    notes: "Official rulebook; not mirrored. Direct PDF extraction timed out; terminal HTTPS failed due hostname mismatch and HTTP fallback returned 500."
+    retrieved_at: "2026-07-08"
+    notes: "WizKids host still 500s; text extracted from the Wayback Machine snapshot (web.archive.org/web/20201118050857/http://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf), 20 pages, pypdf extraction. Page numbers below refer to this PDF's own printed page numbers."
   - id: "src-004"
     title: "MK_walkthrough_ENG_searchable-mar2012.pdf"
     url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-03"
-    notes: "Official walkthrough; not mirrored."
+    retrieved_at: "2026-07-08"
+    notes: "WizKids host still 500s; text extracted from the Wayback Machine snapshot (web.archive.org/web/20201118050902/http://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf), 20 pages, pypdf extraction."
   - id: "src-005"
     title: "MK_FAQ_1.0v2.pdf"
     url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_FAQ_1.0v2.pdf"
     kind: faq
     provenance: official
-    retrieved_at: "2026-07-03"
-    notes: "Official FAQ link from publisher page; not mirrored."
+    retrieved_at: "2026-07-08"
+    notes: "WizKids host still 500s; text extracted from the Wayback Machine snapshot (web.archive.org/web/20201118050907/http://wizkidsgames.com/wp-content/uploads/mage/MK_FAQ_1.0v2.pdf), 3 pages, pypdf extraction. FAQ text is dated 'Version 1.0 - 7th February 2014'."
   - id: "src-006"
     title: "How to play Mage Knight — UltraBoardGames"
     url: "https://www.ultraboardgames.com/mage-knight/game-rules.php"
@@ -95,13 +95,13 @@ sources:
     provenance: community
     retrieved_at: "2026-07-03"
     notes: "Community rating comments for downtime, low interaction, slow progression, rules checking."
-confidence: medium
-status: needs_followup
+confidence: high
+status: verified
 ---
 
 ## Summary
 
-Primary discovery was BGG. Official rules availability was established through WizKids, but direct extraction of the official PDFs failed in this run. Therefore this entry stores structured, source-linked summaries only and marks rule confidence medium where claims depend on secondary extraction snippets.
+Primary discovery was BGG. Official rules availability was established through WizKids; the live PDFs still 500 at both wizkidsgames.com and wizkids.com hosts, but a 2026-07-08 retry pulled all three official PDFs (rulebook, walkthrough, FAQ) from Wayback Machine snapshots and extracted their text directly, so rule claims below now cite the official documents with page references rather than secondary summaries.
 
 ## Source-backed facts
 
@@ -109,14 +109,14 @@ Primary discovery was BGG. Official rules availability was established through W
   Source: src-002
   Evidence: WizKids page lists "Game Walkthrough", "Download Rules", and "Official FAQ" links.
   Confidence: high
-- Claim: Direct PDF extraction was blocked during this run.
-  Source: src-003
-  Evidence: Tool output: web_extract timed out on rulebook/walkthrough/FAQ; terminal HTTPS failed with certificate hostname mismatch for wizkidsgames.com and HTTP fallback returned 500.
+- Claim: The WizKids-hosted PDFs return server errors, but Wayback Machine snapshots of all three (rulebook, walkthrough, FAQ) exist and were successfully retrieved and text-extracted.
+  Source: src-003, src-004, src-005
+  Evidence: `curl -IL` against wizkidsgames.com returns HTTP 500 as of 2026-07-08; `web.archive.org/web/2020.../<url>` snapshots (captured 2020-11-18) returned HTTP 200 PDF content for all three files, extracted with pypdf to 20, 20, and 3 pages respectively.
   Confidence: high
-- Claim: Secondary rules pages expose turn, round, movement, interaction, and end-round procedures.
-  Source: src-006
-  Evidence: Search extract includes sections "Ending The Round", "One Turn", and "Interaction in a Village".
-  Confidence: medium
+- Claim: Secondary rules pages (src-006, src-007) accurately matched the official rulebook's procedural structure for turn, round, movement, interaction, and end-round procedures.
+  Source: src-003
+  Evidence: Official rulebook pages 4-7 confirm the same turn/round/movement/interaction structure the secondary pages summarized; no contradictions found.
+  Confidence: high
 - Claim: BGG and review sources expose enough reception leads to classify better-if opportunities.
   Source: src-009, src-010, src-011, src-012
   Evidence: Extracted review/forum snippets cite long play, complexity, downtime, rulebook friction, and low cooperation/interaction.
@@ -124,8 +124,7 @@ Primary discovery was BGG. Official rules availability was established through W
 
 ## Open questions
 
-- Re-fetch official PDFs through a browser or alternate mirror and add page references.
-- Locate publisher errata beyond FAQ 1.0v2 if any exists for later printings or Ultimate Edition.
+- Locate publisher errata beyond FAQ 1.0v2 (dated 2014-02-07) if any exists for later printings or Ultimate Edition.
 
 ## Retry notes
-- 2026-07-04: Retried `src-003`/`src-004`/`src-005` (rulebook, walkthrough, FAQ PDFs) at both `wizkidsgames.com` and `wizkids.com` hosts; all three now return HTTP 500 Internal Server Error on both hostnames (previously only a TLS hostname mismatch on `wizkidsgames.com`). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the three PDFs, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.
+- 2026-07-08: `src-003`/`src-004`/`src-005` resolved via Wayback Machine snapshots (see per-source notes above). WizKids' own hosts still return HTTP 500 on both `wizkidsgames.com` and `wizkids.com`; future runs should keep using the Wayback snapshots unless the publisher site is confirmed healthy again.

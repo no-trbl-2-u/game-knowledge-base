@@ -23,8 +23,8 @@ sources:
     url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-03"
-    notes: "Official rulebook link; text extraction failed this run."
+    retrieved_at: "2026-07-08"
+    notes: "Official rulebook; WizKids host 500s, text extracted from Wayback Machine snapshot 2026-07-08."
   - id: "src-006"
     title: "How to play Mage Knight — UltraBoardGames"
     url: "https://www.ultraboardgames.com/mage-knight/game-rules.php"
@@ -32,13 +32,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-03"
     notes: "Secondary procedural summary."
-confidence: medium
-status: needs_followup
+confidence: high
+status: verified
 ---
 
 ## Summary
 
-Mage Knight is scenario-driven adventure optimization. Players use a personal Deed deck and mana to traverse a modular hex map, reveal new terrain, interact with sites, recruit units, fight enemies, and pursue scenario objectives. Official rules exist, but this overview remains medium-confidence until direct PDF page references are extracted.
+Mage Knight is scenario-driven adventure optimization. Players use a personal Deed deck and mana to traverse a modular hex map, reveal new terrain, interact with sites, recruit units, fight enemies, and pursue scenario objectives. Verified against the official rulebook (via 2026-07-08 Wayback Machine retrieval).
 
 ## Source-backed facts
 
@@ -54,6 +54,14 @@ Mage Knight is scenario-driven adventure optimization. Players use a personal De
   Source: src-006
   Evidence: UltraBoardGames extract: players play cards "to move around the map and explore it... to interact with the local inhabitants, or to combat enemies".
   Confidence: medium
+- Claim: Deed cards can be played for a basic effect, powered with mana for a stronger effect, or played sideways for a generic Move/Influence/Attack/Block 1; Units are recruited separately from the deck and activated via Command tokens.
+  Source: src-003
+  Evidence: Rulebook p.4, "DEED CARDS" and "USING UNITS": "An Action card... can be played to provide its basic effect, or it can be powered by one mana of the depicted color to provide its strong effect"; "Any non-Wound card can be played sideways into the Play area to provide either Move 1, Influence 1, Attack 1 or Block 1."
+  Confidence: high
+- Claim: Mana exists as pure mana (dice/tokens, lost if unused by end of turn) or crystals (stored in the Hero's Inventory, up to three per basic color); gold mana substitutes for any basic color by Day only, black mana powers Night effects only.
+  Source: src-003
+  Evidence: Rulebook p.5, "USING MANA": "During Day Rounds, gold mana can be used as mana of any basic color... Black mana can never be used during the Day"; "During Night Rounds, black mana can be used to power some effects. Gold mana can never be used at Night."
+  Confidence: high
 
 ## Rules / Mechanics
 
@@ -74,9 +82,5 @@ The same density that makes the game durable also raises lookup burden. New play
 
 The praised design is the conversion of adventure theme into deterministic resource algebra. The player is not waiting for a die to tell a story; the player is manufacturing the story from constraints.
 
-## Open questions
-
-- Add exact official rulebook page references for deck, mana, fame, reputation, wounds, and scenario setup.
-
 ## Retry notes
-- 2026-07-04: Retried the official rulebook PDF at both `wizkidsgames.com` and `wizkids.com` hosts; both now return HTTP 500 Internal Server Error (previously only a TLS hostname mismatch). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the PDF, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.
+- 2026-07-08: Resolved. Official rulebook text retrieved via Wayback Machine snapshot (WizKids' own host still returns HTTP 500); page references added above.

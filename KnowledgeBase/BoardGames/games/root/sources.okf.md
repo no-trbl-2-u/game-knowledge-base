@@ -54,6 +54,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-06"
     notes: "Long-form reception source on asymmetry, teachability, player count, and expansion pressure."
+  - id: "src-007"
+    title: "Law of Root (official rulebook PDF, Oct 2025 printing)"
+    url: "https://cdn.shopify.com/s/files/1/0106/0162/7706/files/Root_Base_Law_Oct_2025.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-08"
+    notes: "Direct PDF link surfaced by a browser-capable fetch of src-002 (ledergames.com/pages/resources), which had previously timed out; retrieved via curl -L and text-extracted with pypdf, 32 pages."
 confidence: high
 status: verified
 ---
@@ -80,7 +87,11 @@ This source registry separates Root’s official rules record from secondary rec
   Source: src-005
   Evidence: "Medium-Heavy"; "2 - 4"; "60 - 90"; "Each player in Root has unique capabilities and a different victory condition."
   Confidence: high
+- Claim: The official Law of Root PDF (Oct 2025 printing) confirms the turn phase names, the 30-victory-point win condition, and the four dominance-card alternate win conditions.
+  Source: src-007
+  Evidence: p.2, "Each player's turn has three phases: Birdsong, Daylight, and Evening"; p.3, "The first player to reach 30 victory points immediately [wins]"; p.3, "The deck has four dominance cards, which let you win the game without scoring 30 victory points."
+  Confidence: high
 
 ## Open questions
 
-- Whether a future pass should extract the October 2025 PDF directly for page-specific citations; the live rules library was sufficient for this scout.
+- None outstanding; the October 2025 Law of Root PDF was extracted directly this pass (src-007).

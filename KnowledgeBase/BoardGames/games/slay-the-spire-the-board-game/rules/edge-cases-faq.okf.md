@@ -16,8 +16,8 @@ sources:
     url: "https://contentiongames.com/_images/STS_KS_Rulebook.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-04"
-    notes: "Table of contents / FAQ page locations."
+    retrieved_at: "2026-07-08"
+    notes: "Full 24-page text extracted (pypdf) via curl -L on 2026-07-08, not just the table of contents. This hosted copy still lists 'Sequential Turns' as an optional rule on page 23 with no teardown section and no Ascension 7/A7 mention, so it predates the v2.30 change BGG (src-003) describes — likely v2.27 or earlier."
   - id: "src-003"
     title: "Slay the Spire - Official Rulebook"
     url: "https://boardgamegeek.com/filepage/276680/slay-the-spire-official-rulebook"
@@ -46,7 +46,7 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-04"
     notes: "Rulebook ambiguity assuming video-game knowledge."
-confidence: medium
+confidence: high
 status: needs_followup
 ---
 
@@ -55,6 +55,32 @@ status: needs_followup
 ## Official FAQ locations
 - **Source-backed fact [high][src-002]:** The rulebook table of contents includes FAQ pages 18-19, Triggered Abilities page 19, Unlocks & Ascension page 20, Achievements & Daily Climb page 21, Act IV & Quick Start Rules page 22, Optional Rules page 23, and Abilities & Keywords page 24.
 - **Source-backed fact [high][src-003]:** BGG file entry lists official rulebook v2.30 and v2.27; v2.27 is said to include the A7 sticker fix.
+
+## FAQ answers (official rulebook, pages 18-19)
+- **Source-backed fact [high][src-002]:** No maximum hand size. Block cannot prevent "Lose X HP" effects (only damage from hits/damage effects). If a token supply runs out, further gains of that token are ignored (gold, Strength, Poison, etc.), though a drawn Shiv can still be played for damage immediately. Cards have no memory once they leave hand, except self-referential cost effects (e.g. Streamline in the discard pile with 2 Powers in play still costs 0).
+  Evidence: "No, there is no maximum hand size."; "You can only block damage."; "If you run out of tokens, you can't gain or apply more tokens. The effect is ignored."; "Cards have no memory once they leave your hand... cards with an ability that changes their own cost still have an effect while in the discard pile."
+- **Source-backed fact [high][src-002]:** Summons do not flee combat when their summoner dies (unlike the video game); Buffer can be triggered separately by each hit of a multi-attack; an effect that tries to play an unplayable card (e.g. via Distilled Chaos/Mayhem) is ignored and the card is discarded instead.
+  Evidence: "Unlike the video game, Summons don't 'flee' combat when the enemy that summoned them is killed."; "HP loss from each hit in a multi-attack can trigger Buffer separately."; "If an effect tries to play a card that can't be played, ignore the effect and discard that card instead."
+- **Source-backed fact [high][src-002]:** Copies of a played card are separate cards that cost no Energy, use the original's X value, can have different targets, and cannot themselves be copied; only one effect that plays cards multiple times can apply to a given card at a time.
+  Evidence: "Copies do not cost Energy to play... Each copy can have different targets... Copies cannot also be copied."; "A card can only be affected by one effect that plays cards multiple times. Any additional effects that would play a card multiple times wait for the next valid card."
+
+## Triggered ability timing (official rulebook, page 19)
+- **Source-backed fact [high][src-002]:** "Start of turn"/"End of turn" abilities trigger only during the Player Turn (the Enemy Turn has neither phase); "Once per combat" and "Once per room" abilities flip face down when used and flip back up after combat/the Event.
+  Evidence: "Relics and Powers with this phrase trigger at the start of the Player Turn... Note that the Enemy Turn doesn't have a 'Start of Turn' phase."; "Once used, flip the item face down. Flip it face up after combat."
+
+## Ascension, Unlocks, and Act IV (official rulebook, pages 20-22)
+- **Source-backed fact [high][src-002]:** Ascension 1 unlocks after defeating an Act II Boss (Act III if solo); each higher Ascension requires playing with all previous Ascension modifiers active and defeating an Act II (or solo Act III) Boss again. Players don't have to play at their highest unlocked Ascension.
+  Evidence: "After you defeat an Act II Boss (Act III if you're playing solo), unlock Ascension 1. To unlock higher Ascensions, you must be playing with the modifiers of all previous Ascension levels and defeat an Act II Boss."
+- **Source-backed fact [high][src-002]:** Act IV requires unlocking via the Unlocks checklist and collecting all 3 keys (Ruby, Sapphire, Emerald) by the end of Act III; players heal at the start of Act IV the same way as at the start of Acts II/III.
+  Evidence: "Act IV must be unlocked... To enter Act IV you must obtain all 3 keys by the end of Act III."; "Players heal at the start of Act IV, just like they do at the start of Acts II and III."
+- **Source-backed fact [high][src-002]:** Quick Start Rules let a party begin directly in Act II, III, or IV by working down a rewards table (Neow Bonus, Gold, Card Rewards, dice-rolled Transform/Potion/Relic/Rare Rewards/Boss Relics, Upgrades) one reward at a time; a Catch Up variant lets only the joining players use the table.
+  Evidence: "To start the game in Act II or later, use the table below. Gain all rewards in the top row for the starting Act, then proceed down to the next row... Gain rewards one at a time, without seeing the next reward."; "Catch Up - These rules can be used to bring in new players at the start of an Act."
+
+## Optional rules (official rulebook, page 23)
+- **Source-backed fact [high][src-002]:** "The Last Stand" lets surviving players continue a Boss fight after a teammate dies (retargeting enemies toward the nearest populated row) and still counts as beating that Act/game if at least one player survives, but a dead player blocks advancing to the next Act. "Sequential Turns" is an optional alternative to simultaneous Player Turns, taken in lane order with the die rolled only on the first Player Turn of the round. The "Golden Rule": card text overrides the rules when they contradict.
+  Evidence: "If at least one player survives, treat this as beating that Act (or the game, if it's your final Act). If a player died, you cannot continue to the next Act."; "The player that starts the round in the bottom lane (Lane 1) takes their Player Turn, followed by the player to their left... The die is only rolled during the first Player Turn in a round."; "Whenever a card's text contradicts the rules, the card text takes precedence."
+- **Source-backed fact [high][src-002]:** This hosted rulebook copy (last-modified 2024-03-23) still presents "Sequential Turns" as an optional rule and has no teardown section or Ascension 7/A7 sticker-fix text, indicating it predates the v2.30 revision BGG (src-003) describes.
+  Evidence: No occurrence of "teardown", "Ascension 7", or "A7" anywhere in the extracted 24-page text; "Sequential Turns" appears intact under Optional Rules (page 23).
 
 ## Known clarifications / errata leads
 - **Source-backed fact [medium][src-003]:** A BGG comment identifies the A7 sticker fix as a misprint in the rules for Ascension 7; a designer/publisher comment says if a player lacks the sticker fix then they likely have wave 2 or later edition.
@@ -66,9 +92,10 @@ status: needs_followup
 - **Player friction [solo/co-op automation][medium][src-007]:** Solo play is considered weaker by Rolling In The Meep because it feels too close to the video game; cooperative play provides the tabletop justification.
 
 ## Open questions
-- [high] Obtain direct v2.30 PDF text if possible and record exact FAQ answers by page.
+- [high] Obtain direct v2.30 PDF text (this pass's copy of src-002 predates it) and record exact FAQ answers by page, especially the teardown section and Ascension 7/A7 sticker fix wording.
 - [medium] Track whether Downfall/reprint reset-game clarification supersedes base retail rulebook language.
 - [medium] Check official Discord/FAQ for living errata, if accessible.
 
 ## Retry notes
 - 2026-07-04: Retried `src-004` (Kickstarter FAQ) via WebFetch and `curl -L`; both returned HTTP 403 (Kickstarter's bot/verification wall blocks non-browser fetches). A future attempt needs either an authenticated/browser-based fetch or an archived mirror (e.g. Wayback Machine snapshot) of the FAQ page to confirm whether the reset-game clarification supersedes the base retail rulebook.
+- 2026-07-08 (librarian pass): `src-002` resolved — retried with `curl -L`, got HTTP 200 (no block this time), and extracted the full 24-page rulebook text with pypdf instead of just the table of contents; FAQ answers, triggered-ability timing, Ascension/Unlocks/Act IV, and Optional Rules sections added above with high confidence. `src-004` (Kickstarter FAQ) still unresolved: retried via Wayback Machine CDX search (`kickstarter.com/projects/contentiongames/sts-downfall/faqs*`) and found zero snapshots exist for that project's FAQ page. Next attempt needs an authenticated Kickstarter session or a different archival source (e.g. a BGG thread quoting the FAQ text) — Wayback has no copy to fall back on.

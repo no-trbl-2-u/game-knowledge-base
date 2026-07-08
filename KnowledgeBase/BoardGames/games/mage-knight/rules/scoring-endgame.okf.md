@@ -18,6 +18,20 @@ sources:
     provenance: official
     retrieved_at: "2026-07-03"
     notes: "Official mode/objective description."
+  - id: "src-003"
+    title: "MK_rulebook_ENG_searchable-mar2012.pdf"
+    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-08"
+    notes: "Official rulebook; WizKids host 500s, text extracted from Wayback Machine snapshot 2026-07-08."
+  - id: "src-004"
+    title: "MK_walkthrough_ENG_searchable-mar2012.pdf"
+    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-08"
+    notes: "Official walkthrough; WizKids host 500s, text extracted from Wayback Machine snapshot 2026-07-08. Covers 'The First Reconnaissance' starting scenario and its Final Scoring achievements."
   - id: "src-006"
     title: "How to play Mage Knight — UltraBoardGames"
     url: "https://www.ultraboardgames.com/mage-knight/game-rules.php"
@@ -32,8 +46,8 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-03"
     notes: "Secondary fame-reward reference for first-scenario exploration."
-confidence: medium
-status: needs_followup
+confidence: high
+status: verified
 ---
 
 ## Summary
@@ -50,14 +64,18 @@ Scoring and endgame are scenario-dependent. Across scenarios, players accumulate
   Source: src-002
   Evidence: "play both competitively or cooperatively"; BGG extract: "In cooperative scenarios, the players win or lose as a group."
   Confidence: high
-- Claim: The first scenario is limited to three rounds and has the goal of finding the city.
-  Source: src-006
-  Evidence: Extract: "The first scenario is limited to three Rounds... fulfill its goal (to find the City) before the end of the third Round."
-  Confidence: medium
-- Claim: Fame increases when specific scenario/rules rewards occur, including first-scenario exploration.
-  Source: src-007
-  Evidence: Extract: first scenario special rule gives "1 Fame" for each revealed tile.
-  Confidence: medium
+- Claim: The first scenario ("The First Reconnaissance") is limited to three Rounds, and ends when any player reveals a city tile — each player (including the revealer) then gets one final turn before the game concludes.
+  Source: src-004
+  Evidence: Walkthrough p.2: "The first scenario is limited to three Rounds, i.e. Day, Night and then Day. You should fulfill its goal (to find the City) before the end of the third Round."; walkthrough p.18: "The first scenario is almost over when the city tile is revealed. Each player (including the one who revealed the city) plays one more turn, and then the game is finished."
+  Confidence: high
+- Claim: In the first scenario only, players gain 1 Fame for each map tile they reveal; this reveal-Fame rule does not apply in other scenarios.
+  Source: src-004
+  Evidence: Walkthrough p.19, "No Fame for Revealing": "Note that the rule for receiving 1 Fame whenever you explore a new map tile is for the first scenario only. In the other scenarios, you have to really fight to get the Fame."
+  Confidence: high
+- Claim: At game end, players score extra Fame across five achievement categories (Greatest Knowledge, Greatest Loot, Greatest Leader, Greatest Conqueror, Greatest Adventurer) plus a Fame penalty for the Greatest Beating (most Wounds); the highest scorer in each category gets a bonus (ties reduce the bonus).
+  Source: src-004
+  Evidence: Walkthrough p.18-19: "The Greatest Knowledge... gets 3 extra Fame"; "The Greatest Loot... 3 extra Fame... (1 if tied)"; "The Greatest Leader... 3 extra Fame... (1 if tied)"; "The Greatest Conqueror... 3 extra Fame... (1 if tied)"; "The Greatest Adventurer... 3 extra Fame... (1 if tied)"; "The Greatest Beating... loses an additional 3 Fame... (-1 if tied...)".
+  Confidence: high
 
 ## Rules / Mechanics
 
@@ -69,7 +87,7 @@ Scenario-dependent scoring can create lookup friction and misplayed sessions if 
 
 ## Open questions
 
-- Extract the official Scenario Book text for base scenarios and build a scenario matrix.
+- Extract the official Scenario Book text for the remaining base scenarios (beyond "The First Reconnaissance") and build a full scenario matrix.
 
 ## Retry notes
-- 2026-07-04: Retried the official rulebook/walkthrough PDFs at both `wizkidsgames.com` and `wizkids.com` hosts; both now return HTTP 500 Internal Server Error (previously only a TLS hostname mismatch). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the PDFs, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.
+- 2026-07-08: Resolved for the starting scenario. Official rulebook/walkthrough text retrieved via Wayback Machine snapshot (WizKids' own host still returns HTTP 500); page references added above.

@@ -31,24 +31,24 @@ sources:
     url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-03"
-    notes: "Official rulebook linked by WizKids. Direct extraction timed out and TLS hostname failed in terminal; rules facts use extracted search snippets and secondary rule-page corroboration, not mirrored PDF text."
+    retrieved_at: "2026-07-08"
+    notes: "Official rulebook linked by WizKids. WizKids host still 500s; text extracted from a Wayback Machine snapshot on 2026-07-08 (20 pages, pypdf)."
   - id: "src-004"
     title: "MK_walkthrough_ENG_searchable-mar2012.pdf"
     url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-03"
-    notes: "Official walkthrough linked by WizKids; used as official availability evidence, not fully extracted."
+    retrieved_at: "2026-07-08"
+    notes: "Official walkthrough linked by WizKids. WizKids host still 500s; text extracted from a Wayback Machine snapshot on 2026-07-08 (20 pages, pypdf)."
   - id: "src-005"
     title: "MK_FAQ_1.0v2.pdf"
     url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_FAQ_1.0v2.pdf"
     kind: faq
     provenance: official
-    retrieved_at: "2026-07-03"
-    notes: "Official FAQ linked by WizKids; direct extraction failed, but BGG FAQ confirms active rules questions."
-confidence: medium
-status: needs_followup
+    retrieved_at: "2026-07-08"
+    notes: "Official FAQ linked by WizKids. WizKids host still 500s; text extracted from a Wayback Machine snapshot on 2026-07-08 (3 pages, pypdf); dated 'Version 1.0 - 7th February 2014'."
+confidence: high
+status: verified
 ---
 
 ## Summary
@@ -96,8 +96,7 @@ See `reception/better-if.okf.md`.
 
 ## Open questions
 
-- Direct PDF text extraction failed this run; verify page references from the official PDFs with a later browser/PDF-capable fetch.
 - Decide whether Ultimate Edition deserves a separate edition entry after base-game study is complete.
 
 ## Retry notes
-- 2026-07-04: Retried the official rulebook/walkthrough/FAQ PDFs at both `wizkidsgames.com` and `wizkids.com` hosts; all three now return HTTP 500 Internal Server Error on both hostnames (previously only a TLS hostname mismatch on `wizkidsgames.com`). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the three PDFs, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.
+- 2026-07-08: Resolved. WizKids' own hosts still return HTTP 500 for the rulebook/walkthrough/FAQ PDFs, but Wayback Machine snapshots of all three were fetched and text-extracted successfully; see `sources.okf.md` and the `rules/*` docs for page-referenced claims now sourced directly from official text.

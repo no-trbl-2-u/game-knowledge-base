@@ -23,8 +23,8 @@ sources:
     url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-03"
-    notes: "Official rulebook link; setup text not directly extracted."
+    retrieved_at: "2026-07-08"
+    notes: "Official rulebook; WizKids host 500s, text extracted from Wayback Machine snapshot 2026-07-08."
   - id: "src-006"
     title: "How to play Mage Knight — UltraBoardGames"
     url: "https://www.ultraboardgames.com/mage-knight/game-rules.php"
@@ -32,13 +32,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-03"
     notes: "Secondary setup/round summary."
-confidence: medium
-status: needs_followup
+confidence: high
+status: verified
 ---
 
 ## Summary
 
-Setup is scenario-led. Players choose a scenario, build the appropriate map tile stack/layout, prepare offers and decks, choose Mage Knights, set fame/reputation/player boards, roll the mana source, and begin the first round, usually Day.
+Setup is scenario-led. Players choose a scenario, build the appropriate map tile stack/layout, prepare offers and decks, choose Mage Knights, set fame/reputation/player boards, roll the mana source, and begin the first round, usually Day. Verified against the official rulebook's "Game Setup for the Full Game" section (via 2026-07-08 Wayback Machine retrieval).
 
 ## Source-backed facts
 
@@ -48,12 +48,20 @@ Setup is scenario-led. Players choose a scenario, build the appropriate map tile
   Confidence: high
 - Claim: A scenario determines setup and goals.
   Source: src-003
-  Evidence: Scribd/search extract of the rulebook says players "choose a scenario from the Scenario Book and set up the game board by laying out map tiles...".
-  Confidence: medium
-- Claim: At the start of a round, each player shuffles the Deed deck, draws five cards, and chooses a tactic.
-  Source: src-006
-  Evidence: UltraBoardGames extract: "At the start of each Round, each player shuffles his Deed deck and draws five cards... Then, they choose their Tactic".
-  Confidence: medium
+  Evidence: Rulebook p.1, Game Flow step 1: "Choose a scenario – Pick a scenario from the Scenario Book to play"; step 3: "Setup the Game – Follow the directions in the 'Game Setup' section... Check the scenario description for any exceptions or special rules that may modify the game setup."
+  Confidence: high
+- Claim: At the start of a round, each player shuffles the Deed deck, draws five cards (per Hand limit), and chooses a tactic.
+  Source: src-003
+  Evidence: Rulebook p.4, "Prepare the Round" step 2g: each player "Shuffles all his Deed cards to create a new Deed deck" and "Draws cards up to his Hand limit"; step 3: "Players choose Tactic cards for this Round."
+  Confidence: high
+- Claim: At setup, the Source is filled by rolling one mana die per player plus 2, at least half of which must show a basic color (rerolling black/gold dice otherwise); the Day/Night board starts Day side up.
+  Source: src-003
+  Evidence: Rulebook p.2: "Roll as many mana dice as there are actual players plus 2, and place them there. At least half of the dice have to show basic colors... If not, keep rerolling all the black and gold dice until this is true."; "At the start of the game, put it day side up."
+  Confidence: high
+- Claim: Each player's Deed deck starts as the 16 Basic Action cards of their Hero, and they draw 5 cards to their starting hand.
+  Source: src-003
+  Evidence: Rulebook p.3, player setup: "Each player shuffles the 16 Basic Action cards of his Hero... to create his Deed deck"; "At the start of the game, draw 5 cards from your Deed deck (according to your Hand limit depicted on your topmost Level token)."
+  Confidence: high
 
 ## Rules / Mechanics
 
@@ -66,9 +74,5 @@ Setup has two distinct burdens:
 
 The setup is not merely long; it is condition-heavy. Players must know which decks/offers/tile stacks are scenario dependent and which are global defaults.
 
-## Open questions
-
-- Verify exact base-game setup sequence against official rulebook pages.
-
 ## Retry notes
-- 2026-07-04: Retried the official rulebook PDF at both `wizkidsgames.com` and `wizkids.com` hosts; both now return HTTP 500 Internal Server Error (previously only a TLS hostname mismatch). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the PDF, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.
+- 2026-07-08: Resolved. Official rulebook setup sequence verified via Wayback Machine snapshot (WizKids' own host still returns HTTP 500); page references added above.

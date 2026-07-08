@@ -10,25 +10,6 @@ game:
   edition: "English base game / rules updated March 2012"
 scope: "base game"
 mechanics: [deck-building, hand-management, card-play-conflict-resolution, modular-board, grid-movement, dice-rolling, cooperative-game, solo-solitaire-game, variable-player-powers, campaign-game]
-followups:
-  - source_id: "src-003"
-    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
-    failure: http_error
-    fallback: "search snippets + UltraBoardGames secondary rules summary (src-006), honestly labeled"
-    retry_needs: wayback_snapshot
-    notes: "2026-07-03 extraction timed out, direct fetch hit TLS hostname mismatch; 2026-07-04 retry returned HTTP 500 on both wizkidsgames.com and wizkids.com hosts. Try a Wayback Machine snapshot or re-check wizkids.com/mage-knight for relocated links."
-  - source_id: "src-004"
-    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf"
-    failure: http_error
-    fallback: "not extracted; walkthrough facts omitted rather than guessed"
-    retry_needs: wayback_snapshot
-    notes: "Same WizKids host failure pattern as src-003 (HTTP 500 on 2026-07-04 retry)."
-  - source_id: "src-005"
-    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_FAQ_1.0v2.pdf"
-    failure: http_error
-    fallback: "community FAQ wiki (src-008) as secondary testimony"
-    retry_needs: wayback_snapshot
-    notes: "Same WizKids host failure pattern as src-003 (HTTP 500 on 2026-07-04 retry)."
 sources:
   - id: "src-001"
     title: "Mage Knight Board Game — BoardGameGeek"
@@ -79,8 +60,8 @@ sources:
     provenance: community
     retrieved_at: "2026-07-03"
     notes: "Complaint source."
-confidence: medium
-status: needs_followup
+confidence: high
+status: verified
 ---
 
 ## Summary
@@ -127,9 +108,8 @@ Top three:
 
 ## Open questions
 
-- Re-fetch official PDFs with a browser-capable path and add page references.
-- Build a scenario matrix from the Scenario Book/Walkthrough.
+- Build a full scenario matrix from the Scenario Book/Walkthrough beyond "The First Reconnaissance".
 - Compare base game with Ultimate Edition for component/rule remediation.
 
 ## Retry notes
-- 2026-07-04: Retried the official rulebook/walkthrough/FAQ PDFs at both `wizkidsgames.com` and `wizkids.com` hosts; all three now return HTTP 500 Internal Server Error on both hostnames (previously only a TLS hostname mismatch on `wizkidsgames.com`). This looks like a server-side outage/misconfiguration at WizKids, not a fetch-tool issue. A future attempt needs a Wayback Machine snapshot of the three PDFs, or to re-check `wizkids.com/mage-knight` for relocated download links once the WizKids site is healthy again.
+- 2026-07-08 (librarian pass): Resolved. WizKids' own hosts (`wizkidsgames.com`, `wizkids.com`) still return HTTP 500 for the rulebook/walkthrough/FAQ PDFs, but Wayback Machine snapshots of all three (captured 2020-11-18) were fetched via `curl -L` and text-extracted with pypdf. Rule claims across `rules/*.okf.md` and `sources.okf.md` were re-verified against the official text and upgraded to high confidence with page references; this doc's followups are cleared.

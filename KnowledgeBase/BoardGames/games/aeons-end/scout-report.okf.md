@@ -11,13 +11,6 @@ game:
   edition: "core game / second edition product page referenced"
 scope: "base game"
 mechanics: [cooperative-game, deck-bag-and-pool-building, deck-building, hand-management, variable-player-powers, solo-solitaire-game]
-followups:
-  - source_id: "src-006"
-    url: "https://boardgamegeek.com/filepage/141295/aeons-end-final-rulebook"
-    failure: blocked
-    fallback: "Used publisher product page plus UltraBoardGames secondary rules summary for first-pass categorized rules."
-    retry_needs: manual_review
-    notes: "Direct rulebook file extraction was not completed; verify canonical edition and official/publisher-hosted rulebook if available."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Aeon's End"
@@ -60,9 +53,16 @@ sources:
     kind: rulebook_pdf
     provenance: community
     retrieved_at: "2026-07-08"
-    notes: "Followup lead; direct extraction not completed."
-confidence: medium
-status: needs_followup
+    notes: "Cloudflare-blocked (HTTP 403, challenge page) on retry; superseded by src-007, a mirror of the same official rulebook."
+  - id: "src-007"
+    title: "Aeon's End Rulebook (official, base game)"
+    url: "https://cdn.1j1ju.com/medias/3f/5c/9e-aeons-end-rulebook.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-08"
+    notes: "Official base-game rulebook (c 2016 Lone Oak Games), 20 pages, mirrored on 1j1ju.com's rules library; retrieved via curl -L and text-extracted with pypdf."
+confidence: high
+status: verified
 ---
 
 ## Scout objective
@@ -125,5 +125,7 @@ It had faster setup support, a clearer first-game teaching path for deterministi
 
 ## Open questions
 
-- Which rulebook PDF is the canonical current base-game rulebook?
-- What official second-edition errata should be added to edge-case coverage?
+- What official second-edition errata should be added to edge-case coverage? (BGG mentions a lead; not yet located.)
+
+## Retry notes
+- 2026-07-08 (librarian pass): Resolved. The BGG filepage lead (src-006) is Cloudflare-blocked; a web search found an official-rulebook mirror on 1j1ju.com's rules library (src-007), retrieved and text-extracted successfully. `rules/edge-cases-faq.okf.md` and `sources.okf.md` were re-verified against the official text and upgraded to high confidence.
