@@ -12,6 +12,7 @@ BGG complexity weight from the game's discovery source.
 
 | slug | title | year | weight | mechanics | top better-if labels | status | docs |
 |---|---|---|---|---|---|---|---|
+| aeons-end | Aeon's End | 2016 | 2.80 | cooperative-game, deck-bag-and-pool-building, deck-building, hand-management, variable-player-powers, solo-solitaire-game | setup-teardown, onboarding, randomness, strategic-depth, accessibility | needs_followup:3 verified:8 | 11 |
 | ark-nova | Ark Nova | 2021 | 3.80 | action-selection, hand-management, tableau-building, grid-coverage, tile-placement, set-collection, end-game-bonuses, income, solo-solitaire-game, variable-setup | randomness, strategic-depth, onboarding, scoring-endgame, rules-ambiguity | verified | 11 |
 | dune-imperium | Dune: Imperium | 2020 | 3.08 | deck-building, worker-placement, hand-management, multi-use-cards, force-commitment, race, variable-player-powers | onboarding, component-clarity, accessibility, rules-ambiguity, combat-resolution | verified | 11 |
 | heat-pedal-to-the-metal | Heat: Pedal to the Metal | 2022 | 2.20 | hand-management, deck-bag-and-pool-building, push-your-luck, catch-up-mechanism, simultaneous-action-selection, race, solo-solitaire-game, variable-setup | onboarding, component-clarity, turn-pacing, randomness, strategic-depth | verified | 11 |
@@ -34,15 +35,15 @@ BGG complexity weight from the game's discovery source.
 | campaign-game | mage-knight, slay-the-spire-the-board-game |
 | card-play-conflict-resolution | mage-knight |
 | catch-up-mechanism | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
-| cooperative-game | mage-knight, slay-the-spire-the-board-game, spirit-island |
-| deck-bag-and-pool-building | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
-| deck-building | dune-imperium, mage-knight, slay-the-spire-the-board-game |
+| cooperative-game | aeons-end, mage-knight, slay-the-spire-the-board-game, spirit-island |
+| deck-bag-and-pool-building | aeons-end, heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
+| deck-building | aeons-end, dune-imperium, mage-knight, slay-the-spire-the-board-game |
 | dice-rolling | mage-knight, root, the-quacks-of-quedlinburg |
 | end-game-bonuses | ark-nova |
 | force-commitment | dune-imperium |
 | grid-coverage | ark-nova |
 | grid-movement | mage-knight |
-| hand-management | ark-nova, dune-imperium, heat-pedal-to-the-metal, mage-knight, root, slay-the-spire-the-board-game, spirit-island |
+| hand-management | aeons-end, ark-nova, dune-imperium, heat-pedal-to-the-metal, mage-knight, root, slay-the-spire-the-board-game, spirit-island |
 | income | ark-nova |
 | modular-board | mage-knight, spirit-island |
 | multi-use-cards | dune-imperium, root |
@@ -52,9 +53,9 @@ BGG complexity weight from the game's discovery source.
 | race | dune-imperium, heat-pedal-to-the-metal |
 | set-collection | ark-nova |
 | simultaneous-action-selection | heat-pedal-to-the-metal, spirit-island, the-quacks-of-quedlinburg |
-| solo-solitaire-game | ark-nova, heat-pedal-to-the-metal, mage-knight, slay-the-spire-the-board-game, spirit-island |
+| solo-solitaire-game | aeons-end, ark-nova, heat-pedal-to-the-metal, mage-knight, slay-the-spire-the-board-game, spirit-island |
 | tableau-building | ark-nova |
 | tile-placement | ark-nova |
-| variable-player-powers | dune-imperium, mage-knight, root, slay-the-spire-the-board-game, spirit-island |
+| variable-player-powers | aeons-end, dune-imperium, mage-knight, root, slay-the-spire-the-board-game, spirit-island |
 | variable-setup | ark-nova, heat-pedal-to-the-metal, root, spirit-island, the-quacks-of-quedlinburg |
 | worker-placement | dune-imperium |
