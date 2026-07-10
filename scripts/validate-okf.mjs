@@ -16,47 +16,22 @@ import { buildIndex } from './generate-index.mjs'
 import { buildSidecars } from './generate-dawncaster-card-sidecars.mjs'
 
 // --- controlled vocabularies -------------------------------------------
-// Extend here first (OKF_SPEC.md is the human copy; keep in sync).
-const OKF_VERSION = '0.2'
-const TYPES = [
-  'game_index', 'sources', 'rule_category', 'reception', 'better_if', 'scout_report',
-  'pattern', 'operations',
-  // Digital card-game corpus records. These are machine-generated source evidence,
-  // not board-game rules summaries, so they do not require mechanics tags.
-  'digital_card_game_index', 'digital_card_sources', 'digital_card_glossary', 'digital_card_keyword', 'card_record',
-]
-const GAME_TYPES = ['game_index', 'sources', 'rule_category', 'reception', 'better_if', 'scout_report']
-const CONFIDENCE = ['high', 'medium', 'low']
-const STATUS = ['draft', 'verified', 'needs_followup']
-const PROVENANCE = ['official', 'secondary', 'community', 'unknown']
-const SOURCE_KINDS = ['publisher_page', 'rulebook_pdf', 'bgg_page', 'bgg_forum', 'review', 'video', 'faq', 'errata', 'other']
-const BETTER_IF_LABELS = [
-  'onboarding', 'setup-teardown', 'component-clarity', 'rules-ambiguity',
-  'turn-pacing', 'downtime', 'randomness', 'strategic-depth', 'runaway-leader',
-  'kingmaking', 'player-interaction', 'combat-resolution', 'scoring-endgame',
-  'solo-coop-automation', 'campaign-progression', 'balance-faction-asymmetry',
-  'expansion-bloat', 'accessibility',
-]
-// OKF 0.2 §1: pinned mechanics vocabulary (kebab-cased, seeded from BGG
-// mechanism names). Keep in sync with OKF_SPEC.md.
-const MECHANICS = [
-  'action-points', 'action-queue', 'action-retrieval', 'action-selection',
-  'area-majority-influence', 'area-movement', 'auction-bidding', 'campaign-game',
-  'card-play-conflict-resolution', 'catch-up-mechanism', 'cooperative-game',
-  'deck-bag-and-pool-building', 'deck-building', 'dice-rolling', 'drafting',
-  'end-game-bonuses', 'engine-building', 'force-commitment', 'grid-coverage',
-  'grid-movement', 'hand-management', 'hidden-information', 'income',
-  'legacy-game', 'market', 'modular-board', 'multi-use-cards', 'negotiation',
-  'open-drafting', 'pick-up-and-deliver', 'point-to-point-movement',
-  'push-your-luck', 'race', 'resource-management', 'set-collection',
-  'simultaneous-action-selection', 'solo-solitaire-game', 'tableau-building',
-  'tech-trees-tech-tracks', 'tile-placement', 'trick-taking',
-  'turn-order-claim-action', 'variable-player-powers', 'variable-setup',
-  'worker-placement',
-]
-// OKF 0.2 §6: structured failure records in scout-report frontmatter.
-const FOLLOWUP_FAILURES = ['tls', 'timeout', 'http_error', 'pdf_extraction', 'paywall', 'not_found', 'blocked', 'other']
-const FOLLOWUP_RETRY_NEEDS = ['browser_fetch', 'pdf_tooling', 'wayback_snapshot', 'alternate_source', 'manual_review', 'other']
+// SINGLE SOURCE: KnowledgeBase/OKF_VOCAB.json (OKF_SPEC.md is the
+// human-readable mirror). Extend the JSON first; this script only loads it.
+const VOCAB = JSON.parse(
+  fs.readFileSync(new URL('../KnowledgeBase/OKF_VOCAB.json', import.meta.url), 'utf-8'),
+)
+const OKF_VERSION = VOCAB.okf_version
+const TYPES = VOCAB.types
+const GAME_TYPES = VOCAB.game_types
+const CONFIDENCE = VOCAB.confidence
+const STATUS = VOCAB.status
+const PROVENANCE = VOCAB.provenance
+const SOURCE_KINDS = VOCAB.source_kinds
+const BETTER_IF_LABELS = VOCAB.better_if_labels
+const MECHANICS = VOCAB.mechanics
+const FOLLOWUP_FAILURES = VOCAB.followup_failures
+const FOLLOWUP_RETRY_NEEDS = VOCAB.followup_retry_needs
 
 const INDEX_BASENAME = 'INDEX.okf.md' // generated; freshness-checked, not field-checked
 
@@ -133,7 +108,7 @@ function validate(file) {
   const mech = listItems('mechanics')
   if (mech === null && GAME_TYPES.includes(type)) flag(file, 'missing mechanics (required on game docs in 0.2)')
   if (mech) for (const m of mech) {
-    if (!MECHANICS.includes(m)) flag(file, `mechanics tag "${m}" not in controlled vocabulary — extend OKF_SPEC.md + this script first`)
+    if (!MECHANICS.includes(m)) flag(file, `mechanics tag "${m}" not in controlled vocabulary — extend KnowledgeBase/OKF_VOCAB.json (+ OKF_SPEC.md prose) first`)
   }
 
   const labels = listItems('better_if_labels')

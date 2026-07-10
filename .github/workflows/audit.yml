@@ -1,0 +1,42 @@
+name: audit
+
+# Monthly evidence audit (see .claude/commands/audit.md): remediate dead
+# source URLs filed by the weekly check-links sweep, drain the
+# needs_followup backlog, spot-check verified claims against their
+# sources, keep confidence labels honest. Commits to main. 15th at an
+# off-peak minute — clear of the daily 06:00 scout, Wed librarian, Sun
+# patterns, and Mon check-links cadences.
+
+on:
+  schedule:
+    - cron: '17 4 15 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: kb-maintenance
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Claude (evidence audit)
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GH_PAT || github.token }}
+          prompt: '/audit'
+          claude_args: |
+            --model claude-sonnet-5
+            --allowedTools "Bash,Edit,Write,Read,Glob,Grep,Task,TodoWrite,WebFetch,WebSearch"

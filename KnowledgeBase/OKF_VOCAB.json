@@ -1,0 +1,38 @@
+{
+  "__comment": "SINGLE SOURCE for the OKF controlled vocabularies. scripts/validate-okf.mjs loads this file; OKF_SPEC.md carries the human-readable mirror. Extend HERE first, then update the spec prose. Adding a value is a deliberate schema change — never freelance a tag to make one doc validate.",
+  "okf_version": "0.2",
+  "types": [
+    "game_index", "sources", "rule_category", "reception", "better_if", "scout_report",
+    "pattern", "operations",
+    "digital_card_game_index", "digital_card_sources", "digital_card_glossary", "digital_card_keyword", "card_record"
+  ],
+  "game_types": ["game_index", "sources", "rule_category", "reception", "better_if", "scout_report"],
+  "confidence": ["high", "medium", "low"],
+  "status": ["draft", "verified", "needs_followup"],
+  "provenance": ["official", "secondary", "community", "unknown"],
+  "source_kinds": ["publisher_page", "rulebook_pdf", "bgg_page", "bgg_forum", "review", "video", "faq", "errata", "other"],
+  "better_if_labels": [
+    "onboarding", "setup-teardown", "component-clarity", "rules-ambiguity",
+    "turn-pacing", "downtime", "randomness", "strategic-depth", "runaway-leader",
+    "kingmaking", "player-interaction", "combat-resolution", "scoring-endgame",
+    "solo-coop-automation", "campaign-progression", "balance-faction-asymmetry",
+    "expansion-bloat", "accessibility"
+  ],
+  "mechanics": [
+    "action-points", "action-queue", "action-retrieval", "action-selection",
+    "area-majority-influence", "area-movement", "auction-bidding", "campaign-game",
+    "card-play-conflict-resolution", "catch-up-mechanism", "cooperative-game",
+    "deck-bag-and-pool-building", "deck-building", "dice-rolling", "drafting",
+    "end-game-bonuses", "engine-building", "force-commitment", "grid-coverage",
+    "grid-movement", "hand-management", "hidden-information", "income",
+    "legacy-game", "market", "modular-board", "multi-use-cards", "negotiation",
+    "open-drafting", "pick-up-and-deliver", "point-to-point-movement",
+    "push-your-luck", "race", "resource-management", "set-collection",
+    "simultaneous-action-selection", "solo-solitaire-game", "tableau-building",
+    "tech-trees-tech-tracks", "tile-placement", "trick-taking",
+    "turn-order-claim-action", "variable-player-powers", "variable-setup",
+    "worker-placement"
+  ],
+  "followup_failures": ["tls", "timeout", "http_error", "pdf_extraction", "paywall", "not_found", "blocked", "other"],
+  "followup_retry_needs": ["browser_fetch", "pdf_tooling", "wayback_snapshot", "alternate_source", "manual_review", "other"]
+}

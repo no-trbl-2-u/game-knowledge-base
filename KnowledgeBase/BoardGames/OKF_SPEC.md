@@ -47,7 +47,12 @@ Field rules:
 
 ## Mechanics vocabulary (controlled)
 
-Kebab-cased, seeded from BGG mechanism names. **Extend this list first, then use the new slug** — never invent per-doc synonyms (`deckbuilding` vs `deck-building` splits retrieval). The validator enforces membership.
+Kebab-cased, seeded from BGG mechanism names. **Extend the vocabulary first, then use the new slug** — never invent per-doc synonyms (`deckbuilding` vs `deck-building` splits retrieval). The validator enforces membership.
+
+The machine-authoritative copy of ALL controlled vocabularies (this list,
+the better-if taxonomy, and every enum) is **`KnowledgeBase/OKF_VOCAB.json`**
+— the validator loads it directly. Extend the JSON first; the lists in this
+spec are the human-readable mirror.
 
 ```txt
 action-points          action-queue           action-retrieval       action-selection
@@ -64,7 +69,9 @@ tableau-building       tech-trees-tech-tracks tile-placement         trick-takin
 turn-order-claim-action variable-player-powers variable-setup        worker-placement
 ```
 
-Keep this list and the copy at the top of `scripts/validate-okf.mjs` in sync — a change to one without the other fails CI.
+(`scripts/validate-okf.mjs` no longer carries its own copy — it reads
+`KnowledgeBase/OKF_VOCAB.json`, so the JSON and this prose are the only
+two places to keep aligned.)
 
 ## Better-if taxonomy (controlled)
 
