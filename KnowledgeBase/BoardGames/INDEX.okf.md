@@ -16,6 +16,7 @@ BGG complexity weight from the game's discovery source.
 | ark-nova | Ark Nova | 2021 | 3.80 | action-selection, hand-management, tableau-building, grid-coverage, tile-placement, set-collection, end-game-bonuses, income, solo-solitaire-game, variable-setup | randomness, strategic-depth, onboarding, scoring-endgame, rules-ambiguity | verified | 11 |
 | arkham-horror-the-card-game | Arkham Horror: The Card Game | 2016 | null | action-points, campaign-game, cooperative-game, deck-bag-and-pool-building, deck-building, hand-management, solo-solitaire-game, variable-player-powers | onboarding, setup-teardown, strategic-depth, campaign-progression, expansion-bloat | needs_followup:2 verified:9 | 11 |
 | dune-imperium | Dune: Imperium | 2020 | 3.08 | deck-building, worker-placement, hand-management, multi-use-cards, force-commitment, race, variable-player-powers | onboarding, component-clarity, accessibility, rules-ambiguity, combat-resolution | verified | 11 |
+| gi-joe-deck-building-game | G.I. JOE Deck-Building Game | 2021 | 2.50 | cooperative-game, deck-building, hand-management, variable-player-powers, solo-solitaire-game, campaign-game | onboarding, setup-teardown, strategic-depth, component-clarity, campaign-progression | needs_followup:2 verified:9 | 11 |
 | heat-pedal-to-the-metal | Heat: Pedal to the Metal | 2022 | 2.20 | hand-management, deck-bag-and-pool-building, push-your-luck, catch-up-mechanism, simultaneous-action-selection, race, solo-solitaire-game, variable-setup | onboarding, component-clarity, turn-pacing, randomness, strategic-depth | verified | 11 |
 | hoplomachus-remastered | Hoplomachus: Remastered | 2022 | null | cooperative-game, deck-bag-and-pool-building, dice-rolling, hand-management, variable-player-powers, solo-solitaire-game | onboarding, setup-teardown, component-clarity, rules-ambiguity, strategic-depth | needs_followup:2 verified:9 | 11 |
 | legendary-encounters-an-alien-deck-building-game | Legendary Encounters: An Alien Deck Building Game | 2014 | 2.71 | cooperative-game, deck-bag-and-pool-building, deck-building, hand-management, open-drafting, solo-solitaire-game, variable-player-powers | onboarding, setup-teardown, rules-ambiguity, component-clarity, randomness | draft:5 needs_followup:2 verified:4 | 11 |
@@ -36,18 +37,18 @@ BGG complexity weight from the game's discovery source.
 | action-selection | ark-nova |
 | area-majority-influence | root |
 | area-movement | root |
-| campaign-game | arkham-horror-the-card-game, mage-knight, slay-the-spire-the-board-game |
+| campaign-game | arkham-horror-the-card-game, gi-joe-deck-building-game, mage-knight, slay-the-spire-the-board-game |
 | card-play-conflict-resolution | mage-knight |
 | catch-up-mechanism | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
-| cooperative-game | aeons-end, arkham-horror-the-card-game, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game, spirit-island |
+| cooperative-game | aeons-end, arkham-horror-the-card-game, gi-joe-deck-building-game, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game, spirit-island |
 | deck-bag-and-pool-building | aeons-end, arkham-horror-the-card-game, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, the-quacks-of-quedlinburg |
-| deck-building | aeons-end, arkham-horror-the-card-game, dune-imperium, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game |
+| deck-building | aeons-end, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game |
 | dice-rolling | hoplomachus-remastered, mage-knight, root, the-quacks-of-quedlinburg |
 | end-game-bonuses | ark-nova |
 | force-commitment | dune-imperium |
 | grid-coverage | ark-nova |
 | grid-movement | mage-knight |
-| hand-management | aeons-end, ark-nova, arkham-horror-the-card-game, dune-imperium, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, root, slay-the-spire-the-board-game, spirit-island |
+| hand-management | aeons-end, ark-nova, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, root, slay-the-spire-the-board-game, spirit-island |
 | income | ark-nova |
 | modular-board | mage-knight, spirit-island |
 | multi-use-cards | dune-imperium, root |
@@ -58,9 +59,9 @@ BGG complexity weight from the game's discovery source.
 | race | dune-imperium, heat-pedal-to-the-metal |
 | set-collection | ark-nova |
 | simultaneous-action-selection | heat-pedal-to-the-metal, spirit-island, the-quacks-of-quedlinburg |
-| solo-solitaire-game | aeons-end, ark-nova, arkham-horror-the-card-game, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game, spirit-island |
+| solo-solitaire-game | aeons-end, ark-nova, arkham-horror-the-card-game, gi-joe-deck-building-game, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game, spirit-island |
 | tableau-building | ark-nova |
 | tile-placement | ark-nova |
-| variable-player-powers | aeons-end, arkham-horror-the-card-game, dune-imperium, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, root, slay-the-spire-the-board-game, spirit-island |
+| variable-player-powers | aeons-end, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, root, slay-the-spire-the-board-game, spirit-island |
 | variable-setup | ark-nova, heat-pedal-to-the-metal, root, spirit-island, the-quacks-of-quedlinburg |
 | worker-placement | dune-imperium |
