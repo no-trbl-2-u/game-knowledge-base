@@ -43,7 +43,7 @@ Field rules:
 - `game.weight` is the BGG complexity weight, cited from the game's discovery source; `null` when unknown.
 - `pattern` and `operations` docs omit the `game` block, `scope`, and `sources` requirements where they do not apply (see the validator for the exact exemptions).
 - Digital card-game docs (`digital_card_game_index`, `digital_card_sources`, `digital_card_glossary`, `digital_card_keyword`, `card_record`) are source-evidence records for large digital card corpora. They are exempt from board-game `mechanics` vocabulary requirements; `card_record` may use a `card:` frontmatter block instead of `game:`.
-- A `card_record`'s `card:` block must carry `name`, `slug`, `source_id`, `ordinal`, and a `cost:` sub-block with all nine cost fields (`dex`, `int`, `str`, `holy`, `neutral`, `dexint`, `dexstr`, `intstr`, `blood`) nested one level below `cost:` (4-space indent). The validator enforces the nesting — cost fields indented level with `cost:` parse as its siblings and the cost block silently reads as null.
+- A `card_record`'s `card:` block must carry `name`, `slug`, `source_id`, `ordinal`, and a `cost:` field. Digital card schemas may use a scalar cost (for example `"1"`, `"X"`, or `"-"`) or a nested vector. The Dawncaster vector retains all nine fields (`dex`, `int`, `str`, `holy`, `neutral`, `dexint`, `dexstr`, `intstr`, `blood`) nested one level below `cost:` (4-space indent); the validator enforces that nesting when the vector form is used.
 
 ## Mechanics vocabulary (controlled)
 

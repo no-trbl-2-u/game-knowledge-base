@@ -1,0 +1,361 @@
+card_number,card_name,source_id,character,type,rarity,keywords_on_card,okf_path
+1,A Thousand Cuts,A_THOUSAND_CUTS,silent,Power,Rare,,cards/0001-a-thousand-cuts-a_thousand_cuts.okf.md
+2,Accuracy,ACCURACY,silent,Power,Uncommon,Shivs,cards/0002-accuracy-accuracy.okf.md
+3,Acrobatics,ACROBATICS,silent,Skill,Common,Discard; Draw,cards/0003-acrobatics-acrobatics.okf.md
+4,Adrenaline,ADRENALINE,silent,Skill,Rare,Draw; Exhaust,cards/0004-adrenaline-adrenaline.okf.md
+5,After Image,AFTER_IMAGE,silent,Power,Rare,Block; Innate,cards/0005-after-image-after_image.okf.md
+6,Aggregate,AGGREGATE,defect,Skill,Uncommon,draw,cards/0006-aggregate-aggregate.okf.md
+7,Alchemize,VENOMOLOGY,silent,Skill,Rare,Exhaust,cards/0007-alchemize-venomology.okf.md
+8,All for One,ALL_FOR_ONE,defect,Attack,Rare,discard,cards/0008-all-for-one-all_for_one.okf.md
+9,All-Out Attack,ALL_OUT_ATTACK,silent,Attack,Uncommon,Discard,cards/0009-all-out-attack-all_out_attack.okf.md
+10,Alpha,ALPHA,watcher,Skill,Rare,draw; Exhaust; Innate,cards/0010-alpha-alpha.okf.md
+11,Amplify,AMPLIFY,defect,Skill,Rare,,cards/0011-amplify-amplify.okf.md
+12,Anger,ANGER,ironclad,Attack,Common,discard,cards/0012-anger-anger.okf.md
+13,Apotheosis,APOTHEOSIS,colorless,Skill,Rare,Exhaust; Upgrade,cards/0013-apotheosis-apotheosis.okf.md
+14,Apparition,GHOSTLY,colorless,Skill,Special,Ethereal; Exhaust,cards/0014-apparition-ghostly.okf.md
+15,Armaments,ARMAMENTS,ironclad,Skill,Common,Block; Upgrade,cards/0015-armaments-armaments.okf.md
+16,Ascender's Bane,ASCENDERSBANE,curse,Curse,Special,Ethereal; Unplayable,cards/0016-ascender-s-bane-ascendersbane.okf.md
+17,Auto-Shields,AUTO_SHIELDS,defect,Skill,Uncommon,Block,cards/0017-auto-shields-auto_shields.okf.md
+18,Backflip,BACKFLIP,silent,Skill,Common,Block; Draw,cards/0018-backflip-backflip.okf.md
+19,Backstab,BACKSTAB,silent,Attack,Uncommon,Exhaust; Innate,cards/0019-backstab-backstab.okf.md
+20,Ball Lightning,BALL_LIGHTNING,defect,Attack,Common,Channel; Lightning,cards/0020-ball-lightning-ball_lightning.okf.md
+21,Bandage Up,BANDAGE_UP,colorless,Skill,Uncommon,Exhaust,cards/0021-bandage-up-bandage_up.okf.md
+22,Bane,BANE,silent,Attack,Common,Poison,cards/0022-bane-bane.okf.md
+23,Barrage,BARRAGE,defect,Attack,Common,Orb,cards/0023-barrage-barrage.okf.md
+24,Barricade,BARRICADE,ironclad,Power,Rare,Block,cards/0024-barricade-barricade.okf.md
+25,Bash,BASH,ironclad,Attack,Basic,Vulnerable,cards/0025-bash-bash.okf.md
+26,Battle Hymn,BATTLEHYMN,watcher,Power,Uncommon,Innate,cards/0026-battle-hymn-battlehymn.okf.md
+27,Battle Trance,BATTLE_TRANCE,ironclad,Skill,Uncommon,Draw; draw,cards/0027-battle-trance-battle_trance.okf.md
+28,Beam Cell,BEAM_CELL,defect,Attack,Common,Vulnerable,cards/0028-beam-cell-beam_cell.okf.md
+29,Berserk,BERSERK,ironclad,Power,Rare,Vulnerable,cards/0029-berserk-berserk.okf.md
+30,Biased Cognition,BIASED_COGNITION,defect,Power,Rare,Focus,cards/0030-biased-cognition-biased_cognition.okf.md
+31,Bite,BITE,colorless,Attack,Special,,cards/0031-bite-bite.okf.md
+32,Blade Dance,BLADE_DANCE,silent,Skill,Common,Shivs,cards/0032-blade-dance-blade_dance.okf.md
+33,Blasphemy,BLASPHEMY,watcher,Skill,Rare,Divinity; Exhaust; Retain,cards/0033-blasphemy-blasphemy.okf.md
+34,Blind,BLIND,colorless,Skill,Uncommon,Weak,cards/0034-blind-blind.okf.md
+35,Blizzard,BLIZZARD,defect,Attack,Uncommon,Frost,cards/0035-blizzard-blizzard.okf.md
+36,Blood for Blood,BLOOD_FOR_BLOOD,ironclad,Attack,Uncommon,,cards/0036-blood-for-blood-blood_for_blood.okf.md
+37,Bloodletting,BLOODLETTING,ironclad,Skill,Uncommon,,cards/0037-bloodletting-bloodletting.okf.md
+38,Bludgeon,BLUDGEON,ironclad,Attack,Rare,,cards/0038-bludgeon-bludgeon.okf.md
+39,Blur,BLUR,silent,Skill,Uncommon,Block,cards/0039-blur-blur.okf.md
+40,Body Slam,BODY_SLAM,ironclad,Attack,Common,Block,cards/0040-body-slam-body_slam.okf.md
+41,Boot Sequence,BOOTSEQUENCE,defect,Skill,Uncommon,Block; Exhaust; Innate,cards/0041-boot-sequence-bootsequence.okf.md
+42,Bouncing Flask,BOUNCING_FLASK,silent,Skill,Uncommon,Poison,cards/0042-bouncing-flask-bouncing_flask.okf.md
+43,Bowling Bash,BOWLINGBASH,watcher,Attack,Common,,cards/0043-bowling-bash-bowlingbash.okf.md
+44,Brilliance,BRILLIANCE,watcher,Attack,Rare,,cards/0044-brilliance-brilliance.okf.md
+45,Brutality,BRUTALITY,ironclad,Power,Rare,draw; Innate,cards/0045-brutality-brutality.okf.md
+46,Buffer,BUFFER,defect,Power,Rare,,cards/0046-buffer-buffer.okf.md
+47,Bullet Time,BULLET_TIME,silent,Skill,Rare,draw,cards/0047-bullet-time-bullet_time.okf.md
+48,Bullseye,LOCKON,defect,Attack,Uncommon,,cards/0048-bullseye-lockon.okf.md
+49,Burn,BURN,colorless,Status,Common,Unplayable,cards/0049-burn-burn.okf.md
+50,Burning Pact,BURNING_PACT,ironclad,Skill,Uncommon,Draw; Exhaust,cards/0050-burning-pact-burning_pact.okf.md
+51,Burst,BURST,silent,Skill,Rare,,cards/0051-burst-burst.okf.md
+52,Calculated Gamble,CALCULATED_GAMBLE,silent,Skill,Uncommon,Discard; draw; Exhaust,cards/0052-calculated-gamble-calculated_gamble.okf.md
+53,Caltrops,CALTROPS,silent,Power,Uncommon,,cards/0053-caltrops-caltrops.okf.md
+54,Capacitor,CAPACITOR,defect,Power,Uncommon,Orb,cards/0054-capacitor-capacitor.okf.md
+55,Carnage,CARNAGE,ironclad,Attack,Uncommon,Ethereal,cards/0055-carnage-carnage.okf.md
+56,Carve Reality,CARVEREALITY,watcher,Attack,Uncommon,,cards/0056-carve-reality-carvereality.okf.md
+57,Catalyst,CATALYST,silent,Skill,Uncommon,Exhaust; Poison,cards/0057-catalyst-catalyst.okf.md
+58,Chaos,CHAOS,defect,Skill,Uncommon,Channel; Orb,cards/0058-chaos-chaos.okf.md
+59,Charge Battery,CONSERVE_BATTERY,defect,Skill,Common,Block,cards/0059-charge-battery-conserve_battery.okf.md
+60,Chill,CHILL,defect,Skill,Uncommon,Channel; Exhaust; Frost; Innate,cards/0060-chill-chill.okf.md
+61,Choke,CHOKE,silent,Attack,Uncommon,,cards/0061-choke-choke.okf.md
+62,Chrysalis,CHRYSALIS,colorless,Skill,Rare,draw; Exhaust,cards/0062-chrysalis-chrysalis.okf.md
+63,Clash,CLASH,ironclad,Attack,Common,,cards/0063-clash-clash.okf.md
+64,Claw,GASH,defect,Attack,Common,,cards/0064-claw-gash.okf.md
+65,Cleave,CLEAVE,ironclad,Attack,Common,,cards/0065-cleave-cleave.okf.md
+66,Cloak and Dagger,CLOAK_AND_DAGGER,silent,Skill,Common,Block; Shiv; Shivs,cards/0066-cloak-and-dagger-cloak_and_dagger.okf.md
+67,Clothesline,CLOTHESLINE,ironclad,Attack,Common,Weak,cards/0067-clothesline-clothesline.okf.md
+68,Clumsy,CLUMSY,curse,Curse,Curse,Ethereal; Unplayable,cards/0068-clumsy-clumsy.okf.md
+69,Cold Snap,COLD_SNAP,defect,Attack,Common,Channel; Frost,cards/0069-cold-snap-cold_snap.okf.md
+70,Collect,COLLECT,watcher,Skill,Uncommon,Exhaust,cards/0070-collect-collect.okf.md
+71,Combust,COMBUST,ironclad,Power,Uncommon,,cards/0071-combust-combust.okf.md
+72,Compile Driver,COMPILE_DRIVER,defect,Attack,Common,Draw; Orb,cards/0072-compile-driver-compile_driver.okf.md
+73,Concentrate,CONCENTRATE,silent,Skill,Uncommon,Discard,cards/0073-concentrate-concentrate.okf.md
+74,Conclude,CONCLUDE,watcher,Attack,Uncommon,,cards/0074-conclude-conclude.okf.md
+75,Conjure Blade,CONJUREBLADE,watcher,Skill,Rare,draw; Exhaust,cards/0075-conjure-blade-conjureblade.okf.md
+76,Consecrate,CONSECRATE,watcher,Attack,Common,,cards/0076-consecrate-consecrate.okf.md
+77,Consume,CONSUME,defect,Skill,Uncommon,Focus; Orb,cards/0077-consume-consume.okf.md
+78,Coolheaded,COOLHEADED,defect,Skill,Common,Channel; Draw; Frost,cards/0078-coolheaded-coolheaded.okf.md
+79,Core Surge,CORE_SURGE,defect,Attack,Rare,Exhaust,cards/0079-core-surge-core_surge.okf.md
+80,Corpse Explosion,CORPSE_EXPLOSION,silent,Skill,Rare,Poison,cards/0080-corpse-explosion-corpse_explosion.okf.md
+81,Corruption,CORRUPTION,ironclad,Power,Rare,Exhaust,cards/0081-corruption-corruption.okf.md
+82,Creative AI,CREATIVE_AI,defect,Power,Rare,,cards/0082-creative-ai-creative_ai.okf.md
+83,Crescendo,CRESCENDO,watcher,Skill,Common,Exhaust; Retain; Wrath,cards/0083-crescendo-crescendo.okf.md
+84,Crippling Cloud,CRIPPLING_POISON,silent,Skill,Uncommon,Exhaust; Poison; Weak,cards/0084-crippling-cloud-crippling_poison.okf.md
+85,Crush Joints,CRUSHJOINTS,watcher,Attack,Common,Vulnerable,cards/0085-crush-joints-crushjoints.okf.md
+86,Curse of the Bell,CURSEOFTHEBELL,curse,Curse,Special,Unplayable,cards/0086-curse-of-the-bell-curseofthebell.okf.md
+87,Cut Through Fate,CUTTHROUGHFATE,watcher,Attack,Common,Draw; Scry,cards/0087-cut-through-fate-cutthroughfate.okf.md
+88,Dagger Spray,DAGGER_SPRAY,silent,Attack,Common,,cards/0088-dagger-spray-dagger_spray.okf.md
+89,Dagger Throw,DAGGER_THROW,silent,Attack,Common,Discard; Draw,cards/0089-dagger-throw-dagger_throw.okf.md
+90,Dark Embrace,DARK_EMBRACE,ironclad,Power,Uncommon,draw,cards/0090-dark-embrace-dark_embrace.okf.md
+91,Dark Shackles,DARK_SHACKLES,colorless,Skill,Uncommon,Exhaust; Strength,cards/0091-dark-shackles-dark_shackles.okf.md
+92,Darkness,DARKNESS,defect,Skill,Uncommon,Channel; Dark,cards/0092-darkness-darkness.okf.md
+93,Dash,DASH,silent,Attack,Uncommon,Block,cards/0093-dash-dash.okf.md
+94,Dazed,DAZED,colorless,Status,Common,Ethereal; Unplayable,cards/0094-dazed-dazed.okf.md
+95,Deadly Poison,DEADLY_POISON,silent,Skill,Common,Poison,cards/0095-deadly-poison-deadly_poison.okf.md
+96,Decay,DECAY,curse,Curse,Curse,Unplayable,cards/0096-decay-decay.okf.md
+97,Deceive Reality,DECEIVEREALITY,watcher,Skill,Uncommon,Block,cards/0097-deceive-reality-deceivereality.okf.md
+98,Deep Breath,DEEP_BREATH,colorless,Skill,Uncommon,discard; draw; Draw,cards/0098-deep-breath-deep_breath.okf.md
+99,Defend,DEFEND_B,defect,Skill,Basic,Block,cards/0099-defend-defend_b.okf.md
+100,Defend,DEFEND_G,silent,Skill,Basic,Block,cards/0100-defend-defend_g.okf.md
+101,Defend,DEFEND_P,watcher,Skill,Basic,Block,cards/0101-defend-defend_p.okf.md
+102,Defend,DEFEND_R,ironclad,Skill,Basic,Block,cards/0102-defend-defend_r.okf.md
+103,Deflect,DEFLECT,silent,Skill,Common,Block,cards/0103-deflect-deflect.okf.md
+104,Defragment,DEFRAGMENT,defect,Power,Uncommon,Focus,cards/0104-defragment-defragment.okf.md
+105,Demon Form,DEMON_FORM,ironclad,Power,Rare,Strength,cards/0105-demon-form-demon_form.okf.md
+106,Deus Ex Machina,DEUSEXMACHINA,watcher,Skill,Rare,draw; Exhaust; Unplayable,cards/0106-deus-ex-machina-deusexmachina.okf.md
+107,Deva Form,DEVAFORM,watcher,Power,Rare,Ethereal,cards/0107-deva-form-devaform.okf.md
+108,Devotion,DEVOTION,watcher,Power,Rare,,cards/0108-devotion-devotion.okf.md
+109,Die Die Die,DIE_DIE_DIE,silent,Attack,Rare,Exhaust,cards/0109-die-die-die-die_die_die.okf.md
+110,Disarm,DISARM,ironclad,Skill,Uncommon,Exhaust; Strength,cards/0110-disarm-disarm.okf.md
+111,Discovery,DISCOVERY,colorless,Skill,Uncommon,Exhaust,cards/0111-discovery-discovery.okf.md
+112,Distraction,DISTRACTION,silent,Skill,Uncommon,Exhaust,cards/0112-distraction-distraction.okf.md
+113,Dodge and Roll,DODGE_AND_ROLL,silent,Skill,Common,Block,cards/0113-dodge-and-roll-dodge_and_roll.okf.md
+114,Doom and Gloom,DOOM_AND_GLOOM,defect,Attack,Uncommon,Channel; Dark,cards/0114-doom-and-gloom-doom_and_gloom.okf.md
+115,Doppelganger,DOPPELGANGER,silent,Skill,Rare,draw; Exhaust,cards/0115-doppelganger-doppelganger.okf.md
+116,Double Energy,DOUBLE_ENERGY,defect,Skill,Uncommon,Exhaust,cards/0116-double-energy-double_energy.okf.md
+117,Double Tap,DOUBLE_TAP,ironclad,Skill,Rare,,cards/0117-double-tap-double_tap.okf.md
+118,Doubt,DOUBT,curse,Curse,Curse,Unplayable; Weak,cards/0118-doubt-doubt.okf.md
+119,Dramatic Entrance,DRAMATIC_ENTRANCE,colorless,Attack,Uncommon,Exhaust; Innate,cards/0119-dramatic-entrance-dramatic_entrance.okf.md
+120,Dropkick,DROPKICK,ironclad,Attack,Uncommon,draw; Vulnerable,cards/0120-dropkick-dropkick.okf.md
+121,Dual Wield,DUAL_WIELD,ironclad,Skill,Uncommon,,cards/0121-dual-wield-dual_wield.okf.md
+122,Dualcast,DUALCAST,defect,Skill,Basic,Evoke; Orb,cards/0122-dualcast-dualcast.okf.md
+123,Echo Form,ECHO_FORM,defect,Power,Rare,Ethereal,cards/0123-echo-form-echo_form.okf.md
+124,Electrodynamics,ELECTRODYNAMICS,defect,Power,Rare,Channel; Lightning,cards/0124-electrodynamics-electrodynamics.okf.md
+125,Empty Body,EMPTYBODY,watcher,Skill,Common,Block; Stance,cards/0125-empty-body-emptybody.okf.md
+126,Empty Fist,EMPTYFIST,watcher,Attack,Common,Stance,cards/0126-empty-fist-emptyfist.okf.md
+127,Empty Mind,EMPTYMIND,watcher,Skill,Uncommon,Draw; Stance,cards/0127-empty-mind-emptymind.okf.md
+128,Endless Agony,ENDLESS_AGONY,silent,Attack,Uncommon,draw; Exhaust,cards/0128-endless-agony-endless_agony.okf.md
+129,Enlightenment,ENLIGHTENMENT,colorless,Skill,Uncommon,,cards/0129-enlightenment-enlightenment.okf.md
+130,Entrench,ENTRENCH,ironclad,Skill,Uncommon,Block,cards/0130-entrench-entrench.okf.md
+131,Envenom,ENVENOM,silent,Power,Rare,Poison,cards/0131-envenom-envenom.okf.md
+132,Equilibrium,UNDO,defect,Skill,Uncommon,Block; Retain,cards/0132-equilibrium-undo.okf.md
+133,Eruption,ERUPTION,watcher,Attack,Basic,Wrath,cards/0133-eruption-eruption.okf.md
+134,Escape Plan,ESCAPE_PLAN,silent,Skill,Uncommon,Block; Draw; draw,cards/0134-escape-plan-escape_plan.okf.md
+135,Establishment,ESTABLISHMENT,watcher,Power,Rare,Innate,cards/0135-establishment-establishment.okf.md
+136,Evaluate,EVALUATE,watcher,Skill,Common,Block; draw,cards/0136-evaluate-evaluate.okf.md
+137,Eviscerate,EVISCERATE,silent,Attack,Uncommon,,cards/0137-eviscerate-eviscerate.okf.md
+138,Evolve,EVOLVE,ironclad,Power,Uncommon,draw,cards/0138-evolve-evolve.okf.md
+139,Exhume,EXHUME,ironclad,Skill,Rare,exhaust; Exhaust,cards/0139-exhume-exhume.okf.md
+140,Expertise,EXPERTISE,silent,Skill,Uncommon,Draw,cards/0140-expertise-expertise.okf.md
+141,Fasting,FASTING2,watcher,Power,Uncommon,Dexterity; Strength,cards/0141-fasting-fasting2.okf.md
+142,Fear No Evil,FEARNOEVIL,watcher,Attack,Uncommon,Calm,cards/0142-fear-no-evil-fearnoevil.okf.md
+143,Feed,FEED,ironclad,Attack,Rare,Exhaust,cards/0143-feed-feed.okf.md
+144,Feel No Pain,FEEL_NO_PAIN,ironclad,Power,Uncommon,Block,cards/0144-feel-no-pain-feel_no_pain.okf.md
+145,Fiend Fire,FIEND_FIRE,ironclad,Attack,Rare,Exhaust,cards/0145-fiend-fire-fiend_fire.okf.md
+146,Finesse,FINESSE,colorless,Skill,Uncommon,Block; Draw,cards/0146-finesse-finesse.okf.md
+147,Finisher,FINISHER,silent,Attack,Uncommon,,cards/0147-finisher-finisher.okf.md
+148,Fire Breathing,FIRE_BREATHING,ironclad,Power,Uncommon,draw,cards/0148-fire-breathing-fire_breathing.okf.md
+149,Fission,FISSION,defect,Skill,Rare,draw; Evoke; Exhaust; Orb,cards/0149-fission-fission.okf.md
+150,Flame Barrier,FLAME_BARRIER,ironclad,Skill,Uncommon,Block,cards/0150-flame-barrier-flame_barrier.okf.md
+151,Flash of Steel,FLASH_OF_STEEL,colorless,Attack,Uncommon,Draw,cards/0151-flash-of-steel-flash_of_steel.okf.md
+152,Flechettes,FLECHETTES,silent,Attack,Uncommon,,cards/0152-flechettes-flechettes.okf.md
+153,Flex,FLEX,ironclad,Skill,Common,Strength,cards/0153-flex-flex.okf.md
+154,Flurry of Blows,FLURRYOFBLOWS,watcher,Attack,Common,discard,cards/0154-flurry-of-blows-flurryofblows.okf.md
+155,Flying Knee,FLYING_KNEE,silent,Attack,Common,,cards/0155-flying-knee-flying_knee.okf.md
+156,Flying Sleeves,FLYINGSLEEVES,watcher,Attack,Common,Retain,cards/0156-flying-sleeves-flyingsleeves.okf.md
+157,Follow-Up,FOLLOWUP,watcher,Attack,Common,,cards/0157-follow-up-followup.okf.md
+158,Footwork,FOOTWORK,silent,Power,Uncommon,Dexterity,cards/0158-footwork-footwork.okf.md
+159,Force Field,FORCE_FIELD,defect,Skill,Uncommon,Block,cards/0159-force-field-force_field.okf.md
+160,Foreign Influence,FOREIGNINFLUENCE,watcher,Skill,Uncommon,Exhaust,cards/0160-foreign-influence-foreigninfluence.okf.md
+161,Foresight,WIREHEADING,watcher,Power,Uncommon,Scry,cards/0161-foresight-wireheading.okf.md
+162,Forethought,FORETHOUGHT,colorless,Skill,Uncommon,draw,cards/0162-forethought-forethought.okf.md
+163,FTL,FTL,defect,Attack,Uncommon,draw,cards/0163-ftl-ftl.okf.md
+164,Fusion,FUSION,defect,Skill,Uncommon,Channel,cards/0164-fusion-fusion.okf.md
+165,Genetic Algorithm,GENETIC_ALGORITHM,defect,Skill,Uncommon,Block; Exhaust,cards/0165-genetic-algorithm-genetic_algorithm.okf.md
+166,Ghostly Armor,GHOSTLY_ARMOR,ironclad,Skill,Uncommon,Block; Ethereal,cards/0166-ghostly-armor-ghostly_armor.okf.md
+167,Glacier,GLACIER,defect,Skill,Uncommon,Block; Channel; Frost,cards/0167-glacier-glacier.okf.md
+168,Glass Knife,GLASS_KNIFE,silent,Attack,Rare,,cards/0168-glass-knife-glass_knife.okf.md
+169,Go for the Eyes,GO_FOR_THE_EYES,defect,Attack,Common,Weak,cards/0169-go-for-the-eyes-go_for_the_eyes.okf.md
+170,Good Instincts,GOOD_INSTINCTS,colorless,Skill,Uncommon,Block,cards/0170-good-instincts-good_instincts.okf.md
+171,Grand Finale,GRAND_FINALE,silent,Attack,Rare,draw,cards/0171-grand-finale-grand_finale.okf.md
+172,Halt,HALT,watcher,Skill,Common,Block; Wrath,cards/0172-halt-halt.okf.md
+173,Hand of Greed,HANDOFGREED,colorless,Attack,Rare,,cards/0173-hand-of-greed-handofgreed.okf.md
+174,Havoc,HAVOC,ironclad,Skill,Common,draw; Exhaust,cards/0174-havoc-havoc.okf.md
+175,Headbutt,HEADBUTT,ironclad,Attack,Common,discard; draw,cards/0175-headbutt-headbutt.okf.md
+176,Heatsinks,HEATSINKS,defect,Power,Uncommon,draw,cards/0176-heatsinks-heatsinks.okf.md
+177,Heavy Blade,HEAVY_BLADE,ironclad,Attack,Common,Strength,cards/0177-heavy-blade-heavy_blade.okf.md
+178,Heel Hook,HEEL_HOOK,silent,Attack,Uncommon,draw; Weak,cards/0178-heel-hook-heel_hook.okf.md
+179,Hello World,HELLO_WORLD,defect,Power,Uncommon,Innate,cards/0179-hello-world-hello_world.okf.md
+180,Hemokinesis,HEMOKINESIS,ironclad,Attack,Uncommon,,cards/0180-hemokinesis-hemokinesis.okf.md
+181,Hologram,HOLOGRAM,defect,Skill,Common,Block; discard; Exhaust,cards/0181-hologram-hologram.okf.md
+182,Hyperbeam,HYPERBEAM,defect,Attack,Rare,Focus,cards/0182-hyperbeam-hyperbeam.okf.md
+183,Immolate,IMMOLATE,ironclad,Attack,Rare,Burn; discard,cards/0183-immolate-immolate.okf.md
+184,Impatience,IMPATIENCE,colorless,Skill,Uncommon,draw,cards/0184-impatience-impatience.okf.md
+185,Impervious,IMPERVIOUS,ironclad,Skill,Rare,Block; Exhaust,cards/0185-impervious-impervious.okf.md
+186,Impulse,IMPULSE,defect,Skill,Uncommon,,cards/0186-impulse-impulse.okf.md
+187,Indignation,INDIGNATION,watcher,Skill,Uncommon,Vulnerable; Wrath,cards/0187-indignation-indignation.okf.md
+188,Infernal Blade,INFERNAL_BLADE,ironclad,Skill,Uncommon,Exhaust,cards/0188-infernal-blade-infernal_blade.okf.md
+189,Infinite Blades,INFINITE_BLADES,silent,Power,Uncommon,Innate; Shiv,cards/0189-infinite-blades-infinite_blades.okf.md
+190,Inflame,INFLAME,ironclad,Power,Uncommon,Strength,cards/0190-inflame-inflame.okf.md
+191,Injury,INJURY,curse,Curse,Curse,Unplayable,cards/0191-injury-injury.okf.md
+192,Inner Peace,INNERPEACE,watcher,Skill,Uncommon,Calm; draw,cards/0192-inner-peace-innerpeace.okf.md
+193,Intimidate,INTIMIDATE,ironclad,Skill,Uncommon,Exhaust; Weak,cards/0193-intimidate-intimidate.okf.md
+194,Iron Wave,IRON_WAVE,ironclad,Attack,Common,Block,cards/0194-iron-wave-iron_wave.okf.md
+195,J.A.X.,J_A_X,colorless,Skill,Special,Strength,cards/0195-j-a-x-j_a_x.okf.md
+196,Jack of All Trades,JACK_OF_ALL_TRADES,colorless,Skill,Uncommon,Exhaust,cards/0196-jack-of-all-trades-jack_of_all_trades.okf.md
+197,Judgment,JUDGEMENT,watcher,Skill,Rare,,cards/0197-judgment-judgement.okf.md
+198,Juggernaut,JUGGERNAUT,ironclad,Power,Rare,Block,cards/0198-juggernaut-juggernaut.okf.md
+199,Just Lucky,JUSTLUCKY,watcher,Attack,Common,Block; Scry,cards/0199-just-lucky-justlucky.okf.md
+200,Leap,LEAP,defect,Skill,Common,Block,cards/0200-leap-leap.okf.md
+201,Leg Sweep,LEG_SWEEP,silent,Skill,Uncommon,Block; Weak,cards/0201-leg-sweep-leg_sweep.okf.md
+202,Lesson Learned,LESSONLEARNED,watcher,Attack,Rare,Exhaust; Upgrade,cards/0202-lesson-learned-lessonlearned.okf.md
+203,Like Water,LIKEWATER,watcher,Power,Uncommon,Block; Calm,cards/0203-like-water-likewater.okf.md
+204,Limit Break,LIMIT_BREAK,ironclad,Skill,Rare,Exhaust; Strength,cards/0204-limit-break-limit_break.okf.md
+205,Loop,LOOP,defect,Power,Uncommon,Orb,cards/0205-loop-loop.okf.md
+206,Machine Learning,MACHINE_LEARNING,defect,Power,Rare,draw; Innate,cards/0206-machine-learning-machine_learning.okf.md
+207,Madness,MADNESS,colorless,Skill,Uncommon,Exhaust,cards/0207-madness-madness.okf.md
+208,Magnetism,MAGNETISM,colorless,Power,Rare,,cards/0208-magnetism-magnetism.okf.md
+209,Malaise,MALAISE,silent,Skill,Rare,Exhaust; Strength; Weak,cards/0209-malaise-malaise.okf.md
+210,Master of Strategy,MASTER_OF_STRATEGY,colorless,Skill,Rare,Draw; Exhaust,cards/0210-master-of-strategy-master_of_strategy.okf.md
+211,Master Reality,MASTERREALITY,watcher,Power,Rare,Upgrade,cards/0211-master-reality-masterreality.okf.md
+212,Masterful Stab,MASTERFUL_STAB,silent,Attack,Uncommon,,cards/0212-masterful-stab-masterful_stab.okf.md
+213,Mayhem,MAYHEM,colorless,Power,Rare,draw,cards/0213-mayhem-mayhem.okf.md
+214,Meditate,MEDITATE,watcher,Skill,Uncommon,Calm; discard; Retain,cards/0214-meditate-meditate.okf.md
+215,Melter,MELTER,defect,Attack,Uncommon,Block,cards/0215-melter-melter.okf.md
+216,Mental Fortress,MENTALFORTRESS,watcher,Power,Uncommon,Block,cards/0216-mental-fortress-mentalfortress.okf.md
+217,Metallicize,METALLICIZE,ironclad,Power,Uncommon,Block,cards/0217-metallicize-metallicize.okf.md
+218,Metamorphosis,METAMORPHOSIS,colorless,Skill,Rare,draw; Exhaust,cards/0218-metamorphosis-metamorphosis.okf.md
+219,Meteor Strike,METEOR_STRIKE,defect,Attack,Rare,Channel,cards/0219-meteor-strike-meteor_strike.okf.md
+220,Mind Blast,MIND_BLAST,colorless,Attack,Uncommon,draw; Innate,cards/0220-mind-blast-mind_blast.okf.md
+221,Multi-Cast,MULTI_CAST,defect,Skill,Rare,Evoke; Orb,cards/0221-multi-cast-multi_cast.okf.md
+222,Necronomicurse,NECRONOMICURSE,curse,Curse,Special,Unplayable,cards/0222-necronomicurse-necronomicurse.okf.md
+223,Neutralize,NEUTRALIZE,silent,Attack,Basic,Weak,cards/0223-neutralize-neutralize.okf.md
+224,Nightmare,NIGHT_TERROR,silent,Skill,Rare,Exhaust,cards/0224-nightmare-night_terror.okf.md
+225,Nirvana,NIRVANA,watcher,Power,Uncommon,Block; Scry,cards/0225-nirvana-nirvana.okf.md
+226,Normality,NORMALITY,curse,Curse,Curse,Unplayable,cards/0226-normality-normality.okf.md
+227,Noxious Fumes,NOXIOUS_FUMES,silent,Power,Uncommon,Poison,cards/0227-noxious-fumes-noxious_fumes.okf.md
+228,Offering,OFFERING,ironclad,Skill,Rare,Draw; Exhaust,cards/0228-offering-offering.okf.md
+229,Omniscience,OMNISCIENCE,watcher,Skill,Rare,draw; exhaust; Exhaust,cards/0229-omniscience-omniscience.okf.md
+230,Outmaneuver,OUTMANEUVER,silent,Skill,Common,,cards/0230-outmaneuver-outmaneuver.okf.md
+231,Overclock,STEAM_POWER,defect,Skill,Uncommon,Burn; discard; Draw,cards/0231-overclock-steam_power.okf.md
+232,Pain,PAIN,curse,Curse,Curse,Unplayable,cards/0232-pain-pain.okf.md
+233,Panacea,PANACEA,colorless,Skill,Uncommon,Exhaust,cards/0233-panacea-panacea.okf.md
+234,Panache,PANACHE,colorless,Power,Rare,,cards/0234-panache-panache.okf.md
+235,Panic Button,PANICBUTTON,colorless,Skill,Uncommon,Block; Exhaust,cards/0235-panic-button-panicbutton.okf.md
+236,Parasite,PARASITE,curse,Curse,Curse,Unplayable,cards/0236-parasite-parasite.okf.md
+237,Perfected Strike,PERFECTED_STRIKE,ironclad,Attack,Common,,cards/0237-perfected-strike-perfected_strike.okf.md
+238,Perseverance,PERSEVERANCE,watcher,Skill,Uncommon,Block; Retain,cards/0238-perseverance-perseverance.okf.md
+239,Phantasmal Killer,PHANTASMAL_KILLER,silent,Skill,Rare,,cards/0239-phantasmal-killer-phantasmal_killer.okf.md
+240,Piercing Wail,PIERCINGWAIL,silent,Skill,Common,Exhaust; Strength,cards/0240-piercing-wail-piercingwail.okf.md
+241,Poisoned Stab,POISONED_STAB,silent,Attack,Common,Poison,cards/0241-poisoned-stab-poisoned_stab.okf.md
+242,Pommel Strike,POMMEL_STRIKE,ironclad,Attack,Common,Draw,cards/0242-pommel-strike-pommel_strike.okf.md
+243,Power Through,POWER_THROUGH,ironclad,Skill,Uncommon,Block,cards/0243-power-through-power_through.okf.md
+244,Pray,PRAY,watcher,Skill,Uncommon,draw,cards/0244-pray-pray.okf.md
+245,Predator,PREDATOR,silent,Attack,Uncommon,draw,cards/0245-predator-predator.okf.md
+246,Prepared,PREPARED,silent,Skill,Common,Discard; Draw,cards/0246-prepared-prepared.okf.md
+247,Pressure Points,PATHTOVICTORY,watcher,Skill,Common,,cards/0247-pressure-points-pathtovictory.okf.md
+248,Pride,PRIDE,curse,Curse,Special,draw; Exhaust; Innate,cards/0248-pride-pride.okf.md
+249,Prostrate,PROSTRATE,watcher,Skill,Common,Block,cards/0249-prostrate-prostrate.okf.md
+250,Protect,PROTECT,watcher,Skill,Common,Block; Retain,cards/0250-protect-protect.okf.md
+251,Pummel,PUMMEL,ironclad,Attack,Uncommon,Exhaust,cards/0251-pummel-pummel.okf.md
+252,Purity,PURITY,colorless,Skill,Uncommon,Exhaust,cards/0252-purity-purity.okf.md
+253,Quick Slash,QUICK_SLASH,silent,Attack,Common,Draw,cards/0253-quick-slash-quick_slash.okf.md
+254,Rage,RAGE,ironclad,Skill,Uncommon,Block,cards/0254-rage-rage.okf.md
+255,Ragnarok,RAGNAROK,watcher,Attack,Rare,,cards/0255-ragnarok-ragnarok.okf.md
+256,Rainbow,RAINBOW,defect,Skill,Rare,Channel; Dark; Exhaust; Frost; Lightning,cards/0256-rainbow-rainbow.okf.md
+257,Rampage,RAMPAGE,ironclad,Attack,Uncommon,,cards/0257-rampage-rampage.okf.md
+258,Reach Heaven,REACHHEAVEN,watcher,Attack,Uncommon,draw,cards/0258-reach-heaven-reachheaven.okf.md
+259,Reaper,REAPER,ironclad,Attack,Rare,Exhaust,cards/0259-reaper-reaper.okf.md
+260,Reboot,REBOOT,defect,Skill,Rare,draw; Draw; Exhaust,cards/0260-reboot-reboot.okf.md
+261,Rebound,REBOUND,defect,Attack,Common,draw,cards/0261-rebound-rebound.okf.md
+262,Reckless Charge,RECKLESS_CHARGE,ironclad,Attack,Uncommon,Dazed; draw,cards/0262-reckless-charge-reckless_charge.okf.md
+263,Recursion,REDO,defect,Skill,Common,Channel; Evoke; Orb,cards/0263-recursion-redo.okf.md
+264,Recycle,RECYCLE,defect,Skill,Uncommon,Exhaust,cards/0264-recycle-recycle.okf.md
+265,Reflex,REFLEX,silent,Skill,Uncommon,draw; Unplayable,cards/0265-reflex-reflex.okf.md
+266,Regret,REGRET,curse,Curse,Curse,Unplayable,cards/0266-regret-regret.okf.md
+267,Reinforced Body,REINFORCED_BODY,defect,Skill,Uncommon,Block,cards/0267-reinforced-body-reinforced_body.okf.md
+268,Reprogram,REPROGRAM,defect,Skill,Uncommon,Dexterity; Focus; Strength,cards/0268-reprogram-reprogram.okf.md
+269,Riddle with Holes,RIDDLE_WITH_HOLES,silent,Attack,Uncommon,,cards/0269-riddle-with-holes-riddle_with_holes.okf.md
+270,Rip and Tear,RIP_AND_TEAR,defect,Attack,Uncommon,,cards/0270-rip-and-tear-rip_and_tear.okf.md
+271,Ritual Dagger,RITUALDAGGER,colorless,Attack,Special,Exhaust,cards/0271-ritual-dagger-ritualdagger.okf.md
+272,Rupture,RUPTURE,ironclad,Power,Uncommon,Strength,cards/0272-rupture-rupture.okf.md
+273,Rushdown,ADAPTATION,watcher,Power,Uncommon,draw; Wrath,cards/0273-rushdown-adaptation.okf.md
+274,Sadistic Nature,SADISTIC_NATURE,colorless,Power,Rare,,cards/0274-sadistic-nature-sadistic_nature.okf.md
+275,Sanctity,SANCTITY,watcher,Skill,Uncommon,Block; draw,cards/0275-sanctity-sanctity.okf.md
+276,Sands of Time,SANDSOFTIME,watcher,Attack,Uncommon,Retain,cards/0276-sands-of-time-sandsoftime.okf.md
+277,Sash Whip,SASHWHIP,watcher,Attack,Common,Weak,cards/0277-sash-whip-sashwhip.okf.md
+278,Scrape,SCRAPE,defect,Attack,Uncommon,Discard; Draw,cards/0278-scrape-scrape.okf.md
+279,Scrawl,SCRAWL,watcher,Skill,Rare,Draw; Exhaust,cards/0279-scrawl-scrawl.okf.md
+280,Searing Blow,SEARING_BLOW,ironclad,Attack,Uncommon,,cards/0280-searing-blow-searing_blow.okf.md
+281,Second Wind,SECOND_WIND,ironclad,Skill,Uncommon,Block; Exhaust,cards/0281-second-wind-second_wind.okf.md
+282,Secret Technique,SECRET_TECHNIQUE,colorless,Skill,Rare,draw; Exhaust,cards/0282-secret-technique-secret_technique.okf.md
+283,Secret Weapon,SECRET_WEAPON,colorless,Skill,Rare,draw; Exhaust,cards/0283-secret-weapon-secret_weapon.okf.md
+284,Seeing Red,SEEING_RED,ironclad,Skill,Uncommon,Exhaust,cards/0284-seeing-red-seeing_red.okf.md
+285,Seek,SEEK,defect,Skill,Rare,draw; Exhaust,cards/0285-seek-seek.okf.md
+286,Self Repair,SELF_REPAIR,defect,Power,Uncommon,,cards/0286-self-repair-self_repair.okf.md
+287,Sentinel,SENTINEL,ironclad,Skill,Uncommon,Block,cards/0287-sentinel-sentinel.okf.md
+288,Setup,SETUP,silent,Skill,Uncommon,draw,cards/0288-setup-setup.okf.md
+289,Sever Soul,SEVER_SOUL,ironclad,Attack,Uncommon,Exhaust,cards/0289-sever-soul-sever_soul.okf.md
+290,Shame,SHAME,curse,Curse,Curse,Frail; Unplayable,cards/0290-shame-shame.okf.md
+291,Shockwave,SHOCKWAVE,ironclad,Skill,Uncommon,Exhaust; Vulnerable; Weak,cards/0291-shockwave-shockwave.okf.md
+292,Shrug It Off,SHRUG_IT_OFF,ironclad,Skill,Common,Block; Draw,cards/0292-shrug-it-off-shrug_it_off.okf.md
+293,Signature Move,SIGNATUREMOVE,watcher,Attack,Uncommon,,cards/0293-signature-move-signaturemove.okf.md
+294,Simmering Fury,VENGEANCE,watcher,Skill,Uncommon,draw; Wrath,cards/0294-simmering-fury-vengeance.okf.md
+295,Skewer,SKEWER,silent,Attack,Uncommon,,cards/0295-skewer-skewer.okf.md
+296,Skim,SKIM,defect,Skill,Uncommon,Draw,cards/0296-skim-skim.okf.md
+297,Slice,SLICE,silent,Attack,Common,,cards/0297-slice-slice.okf.md
+298,Slimed,SLIMED,colorless,Status,Common,Exhaust,cards/0298-slimed-slimed.okf.md
+299,Sneaky Strike,UNDERHANDED_STRIKE,silent,Attack,Common,,cards/0299-sneaky-strike-underhanded_strike.okf.md
+300,Spirit Shield,SPIRITSHIELD,watcher,Skill,Rare,Block,cards/0300-spirit-shield-spiritshield.okf.md
+301,Spot Weakness,SPOT_WEAKNESS,ironclad,Skill,Uncommon,Strength,cards/0301-spot-weakness-spot_weakness.okf.md
+302,Stack,STACK,defect,Skill,Common,Block; discard,cards/0302-stack-stack.okf.md
+303,Static Discharge,STATIC_DISCHARGE,defect,Power,Uncommon,Channel; Lightning,cards/0303-static-discharge-static_discharge.okf.md
+304,Steam Barrier,STEAM,defect,Skill,Common,Block,cards/0304-steam-barrier-steam.okf.md
+305,Storm,STORM,defect,Power,Uncommon,Channel; Innate; Lightning,cards/0305-storm-storm.okf.md
+306,Storm of Steel,STORM_OF_STEEL,silent,Skill,Rare,Discard; Shiv,cards/0306-storm-of-steel-storm_of_steel.okf.md
+307,Streamline,STREAMLINE,defect,Attack,Common,,cards/0307-streamline-streamline.okf.md
+308,Strike,STRIKE_B,defect,Attack,Basic,,cards/0308-strike-strike_b.okf.md
+309,Strike,STRIKE_G,silent,Attack,Basic,,cards/0309-strike-strike_g.okf.md
+310,Strike,STRIKE_P,watcher,Attack,Basic,,cards/0310-strike-strike_p.okf.md
+311,Strike,STRIKE_R,ironclad,Attack,Basic,,cards/0311-strike-strike_r.okf.md
+312,Study,STUDY,watcher,Power,Uncommon,draw,cards/0312-study-study.okf.md
+313,Sucker Punch,SUCKER_PUNCH,silent,Attack,Common,Weak,cards/0313-sucker-punch-sucker_punch.okf.md
+314,Sunder,SUNDER,defect,Attack,Uncommon,,cards/0314-sunder-sunder.okf.md
+315,Survivor,SURVIVOR,silent,Skill,Basic,Block; Discard,cards/0315-survivor-survivor.okf.md
+316,Sweeping Beam,SWEEPING_BEAM,defect,Attack,Common,Draw,cards/0316-sweeping-beam-sweeping_beam.okf.md
+317,Swift Strike,SWIFT_STRIKE,colorless,Attack,Uncommon,,cards/0317-swift-strike-swift_strike.okf.md
+318,Swivel,SWIVEL,watcher,Skill,Uncommon,Block,cards/0318-swivel-swivel.okf.md
+319,Sword Boomerang,SWORD_BOOMERANG,ironclad,Attack,Common,,cards/0319-sword-boomerang-sword_boomerang.okf.md
+320,Tactician,TACTICIAN,silent,Skill,Uncommon,Unplayable,cards/0320-tactician-tactician.okf.md
+321,Talk to the Hand,TALKTOTHEHAND,watcher,Attack,Uncommon,Block; Exhaust,cards/0321-talk-to-the-hand-talktothehand.okf.md
+322,Tantrum,TANTRUM,watcher,Attack,Uncommon,draw; Wrath,cards/0322-tantrum-tantrum.okf.md
+323,Tempest,TEMPEST,defect,Skill,Uncommon,Channel; Exhaust; Lightning,cards/0323-tempest-tempest.okf.md
+324,Terror,TERROR,silent,Skill,Uncommon,Exhaust; Vulnerable,cards/0324-terror-terror.okf.md
+325,The Bomb,THE_BOMB,colorless,Skill,Rare,,cards/0325-the-bomb-the_bomb.okf.md
+326,Thinking Ahead,THINKING_AHEAD,colorless,Skill,Rare,Draw; draw; Exhaust,cards/0326-thinking-ahead-thinking_ahead.okf.md
+327,Third Eye,THIRDEYE,watcher,Skill,Common,Block; Scry,cards/0327-third-eye-thirdeye.okf.md
+328,Thunder Strike,THUNDER_STRIKE,defect,Attack,Rare,Lightning,cards/0328-thunder-strike-thunder_strike.okf.md
+329,Thunderclap,THUNDERCLAP,ironclad,Attack,Common,Vulnerable,cards/0329-thunderclap-thunderclap.okf.md
+330,Tools of the Trade,TOOLS_OF_THE_TRADE,silent,Power,Rare,discard; draw,cards/0330-tools-of-the-trade-tools_of_the_trade.okf.md
+331,Tranquility,CLEARTHEMIND,watcher,Skill,Common,Calm; Exhaust; Retain,cards/0331-tranquility-clearthemind.okf.md
+332,Transmutation,TRANSMUTATION,colorless,Skill,Rare,Exhaust,cards/0332-transmutation-transmutation.okf.md
+333,Trip,TRIP,colorless,Skill,Uncommon,Vulnerable,cards/0333-trip-trip.okf.md
+334,True Grit,TRUE_GRIT,ironclad,Skill,Common,Block; Exhaust,cards/0334-true-grit-true_grit.okf.md
+335,TURBO,TURBO,defect,Skill,Common,discard,cards/0335-turbo-turbo.okf.md
+336,Twin Strike,TWIN_STRIKE,ironclad,Attack,Common,,cards/0336-twin-strike-twin_strike.okf.md
+337,Unload,UNLOAD,silent,Attack,Rare,Discard,cards/0337-unload-unload.okf.md
+338,Unraveling,UNRAVELING,watcher,Skill,Rare,Exhaust,cards/0338-unraveling-unraveling.okf.md
+339,Uppercut,UPPERCUT,ironclad,Attack,Uncommon,Vulnerable; Weak,cards/0339-uppercut-uppercut.okf.md
+340,Vault,VAULT,watcher,Skill,Rare,Exhaust,cards/0340-vault-vault.okf.md
+341,Vigilance,VIGILANCE,watcher,Skill,Basic,Block; Calm,cards/0341-vigilance-vigilance.okf.md
+342,Violence,VIOLENCE,colorless,Skill,Rare,draw; Exhaust,cards/0342-violence-violence.okf.md
+343,Void,VOID,colorless,Status,Common,Ethereal; Unplayable,cards/0343-void-void.okf.md
+344,Wallop,WALLOP,watcher,Attack,Uncommon,Block,cards/0344-wallop-wallop.okf.md
+345,Warcry,WARCRY,ironclad,Skill,Common,Draw; draw; Exhaust,cards/0345-warcry-warcry.okf.md
+346,Wave of the Hand,WAVEOFTHEHAND,watcher,Skill,Uncommon,Block; Weak,cards/0346-wave-of-the-hand-waveofthehand.okf.md
+347,Weave,WEAVE,watcher,Attack,Uncommon,discard; Scry,cards/0347-weave-weave.okf.md
+348,Well-Laid Plans,WELL_LAID_PLANS,silent,Power,Uncommon,Retain,cards/0348-well-laid-plans-well_laid_plans.okf.md
+349,Wheel Kick,WHEELKICK,watcher,Attack,Uncommon,Draw,cards/0349-wheel-kick-wheelkick.okf.md
+350,Whirlwind,WHIRLWIND,ironclad,Attack,Uncommon,,cards/0350-whirlwind-whirlwind.okf.md
+351,White Noise,WHITE_NOISE,defect,Skill,Uncommon,Exhaust,cards/0351-white-noise-white_noise.okf.md
+352,Wild Strike,WILD_STRIKE,ironclad,Attack,Common,draw; Wound,cards/0352-wild-strike-wild_strike.okf.md
+353,Windmill Strike,WINDMILLSTRIKE,watcher,Attack,Uncommon,Retain,cards/0353-windmill-strike-windmillstrike.okf.md
+354,Wish,WISH,watcher,Skill,Rare,Exhaust; Strength,cards/0354-wish-wish.okf.md
+355,Worship,WORSHIP,watcher,Skill,Uncommon,Retain,cards/0355-worship-worship.okf.md
+356,Wound,WOUND,colorless,Status,Common,Unplayable,cards/0356-wound-wound.okf.md
+357,Wraith Form,WRAITH_FORM_V2,silent,Power,Rare,Dexterity,cards/0357-wraith-form-wraith_form_v2.okf.md
+358,Wreath of Flame,WREATHOFFLAME,watcher,Skill,Uncommon,,cards/0358-wreath-of-flame-wreathofflame.okf.md
+359,Writhe,WRITHE,curse,Curse,Curse,Innate; Unplayable,cards/0359-writhe-writhe.okf.md
+360,Zap,ZAP,defect,Skill,Basic,Channel; Lightning,cards/0360-zap-zap.okf.md

@@ -124,8 +124,10 @@ function validate(file) {
     for (const key of ['name', 'slug', 'source_id', 'ordinal']) {
       if (!new RegExp(`^  ${key}: \\S`, 'm').test(head)) flag(file, `missing card.${key}`)
     }
-    if (!/^  cost:\s*$/m.test(head)) flag(file, 'missing card.cost block')
-    for (const key of ['dex', 'int', 'str', 'holy', 'neutral', 'dexint', 'dexstr', 'intstr', 'blood']) {
+    const scalarCost = /^  cost:\s+\S/m.test(head)
+    const vectorCost = /^  cost:\s*$/m.test(head)
+    if (!scalarCost && !vectorCost) flag(file, 'missing card.cost (scalar or nested cost vector)')
+    if (vectorCost) for (const key of ['dex', 'int', 'str', 'holy', 'neutral', 'dexint', 'dexstr', 'intstr', 'blood']) {
       if (!new RegExp(`^    ${key}: -?\\d+$`, 'm').test(head)) flag(file, `card.cost.${key} missing or not nested under cost (needs 4-space indent)`)
     }
   }
