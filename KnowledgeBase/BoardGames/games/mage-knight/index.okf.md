@@ -28,25 +28,25 @@ sources:
     notes: "Official product page; web search extraction exposed overview, details, component list, and official rule/FAQ links."
   - id: "src-003"
     title: "MK_rulebook_ENG_searchable-mar2012.pdf"
-    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
+    url: "https://web.archive.org/web/20201118050857/http://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-08"
-    notes: "Official rulebook linked by WizKids. WizKids host still 500s; text extracted from a Wayback Machine snapshot on 2026-07-08 (20 pages, pypdf)."
+    retrieved_at: "2026-07-15"
+    notes: "Official rulebook linked by WizKids. WizKids host still 500s; text extracted from a Wayback Machine snapshot on 2026-07-08 (20 pages, pypdf). Audit 2026-07-15: wizkidsgames.com host confirmed dead (ERR_TLS_CERT_ALTNAME_INVALID); url switched to the confirmed-live Wayback Machine snapshot (HTTP 200). See sources.okf.md src block for full remediation detail."
   - id: "src-004"
     title: "MK_walkthrough_ENG_searchable-mar2012.pdf"
-    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf"
+    url: "https://web.archive.org/web/20201118050902/http://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-08"
-    notes: "Official walkthrough linked by WizKids. WizKids host still 500s; text extracted from a Wayback Machine snapshot on 2026-07-08 (20 pages, pypdf)."
+    retrieved_at: "2026-07-15"
+    notes: "Official walkthrough linked by WizKids. WizKids host still 500s; text extracted from a Wayback Machine snapshot on 2026-07-08 (20 pages, pypdf). Audit 2026-07-15: wizkidsgames.com host confirmed dead (ERR_TLS_CERT_ALTNAME_INVALID); url switched to the confirmed-live Wayback Machine snapshot (HTTP 200). See sources.okf.md src block for full remediation detail."
   - id: "src-005"
     title: "MK_FAQ_1.0v2.pdf"
-    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_FAQ_1.0v2.pdf"
+    url: "https://web.archive.org/web/20201118050907/http://wizkidsgames.com/wp-content/uploads/mage/MK_FAQ_1.0v2.pdf"
     kind: faq
     provenance: official
-    retrieved_at: "2026-07-08"
-    notes: "Official FAQ linked by WizKids. WizKids host still 500s; text extracted from a Wayback Machine snapshot on 2026-07-08 (3 pages, pypdf); dated 'Version 1.0 - 7th February 2014'."
+    retrieved_at: "2026-07-15"
+    notes: "Official FAQ linked by WizKids. WizKids host still 500s; text extracted from a Wayback Machine snapshot on 2026-07-08 (3 pages, pypdf); dated 'Version 1.0 - 7th February 2014'. Audit 2026-07-15: wizkidsgames.com host confirmed dead (ERR_TLS_CERT_ALTNAME_INVALID); url switched to the confirmed-live Wayback Machine snapshot (HTTP 200). See sources.okf.md src block for full remediation detail."
 confidence: high
 status: verified
 ---

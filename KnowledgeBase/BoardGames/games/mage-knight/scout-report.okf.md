@@ -27,11 +27,11 @@ sources:
     notes: "Official product source and official rules/FAQ link source."
   - id: "src-003"
     title: "MK_rulebook_ENG_searchable-mar2012.pdf"
-    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
+    url: "https://web.archive.org/web/20201118050857/http://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-03"
-    notes: "Official rules link; direct extraction failed."
+    retrieved_at: "2026-07-15"
+    notes: "Official rules link; direct extraction failed. Audit 2026-07-15: wizkidsgames.com host confirmed dead (ERR_TLS_CERT_ALTNAME_INVALID); url switched to the confirmed-live Wayback Machine snapshot (HTTP 200). See sources.okf.md src block for full remediation detail."
   - id: "src-006"
     title: "How to play Mage Knight — UltraBoardGames"
     url: "https://www.ultraboardgames.com/mage-knight/game-rules.php"

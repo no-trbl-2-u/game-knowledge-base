@@ -29,8 +29,8 @@ sources:
     url: "https://github.com/no-trbl-2-u/game-knowledge-base/issues/1"
     kind: other
     provenance: official
-    retrieved_at: "2026-07-05"
-    notes: "Axiomancer integration proposal: mechanics tags, corpus index, patterns layer, librarian gate, wishlist consumption, failed-source policy."
+    retrieved_at: "2026-07-15"
+    notes: "Axiomancer integration proposal: mechanics tags, corpus index, patterns layer, librarian gate, wishlist consumption, failed-source policy. 2026-07-15 audit: check-links flags this URL 'dead' (404) because game-knowledge-base is a private repo — unauthenticated fetch always 404s on issue pages. Re-confirmed via `gh issue view 1` (state: closed, body/comments intact, content matches Evidence quotes below); not link rot, no remediation needed."
 confidence: high
 status: verified
 ---

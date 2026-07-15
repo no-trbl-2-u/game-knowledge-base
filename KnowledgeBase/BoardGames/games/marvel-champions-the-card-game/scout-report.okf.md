@@ -16,20 +16,8 @@ followups:
     url: "https://boardgamegeek.com/boardgame/285774/marvel-champions-the-card-game"
     failure: blocked
     fallback: "Search result snippet and BGG URL identity"
-    retry_needs: browser_fetch
-    notes: "Direct urllib request returned HTTP 403; exact live rating/rank/weight not captured."
-  - source_id: "src-003"
-    url: "https://images-cdn.fantasyflightgames.com/filer_public/b6/30/b630ddfe-e745-435b-a284-572dd510e15d/mc_rulesreference_v15-compressed.pdf"
-    failure: pdf_extraction
-    fallback: "Publisher product page and search result identifying the official Rules Reference"
-    retry_needs: pdf_tooling
-    notes: "Current publisher page advertises a newer January 2026 reference; inspect both versions."
-  - source_id: "src-004"
-    url: "https://www.meeplemountain.com/reviews/marvel-champions-the-card-game/"
-    failure: other
-    fallback: "Search result snippet"
-    retry_needs: browser_fetch
-    notes: "Full review text was not extracted in this run."
+    retry_needs: manual_review
+    notes: "2026-07-12: direct urllib request returned HTTP 403. Retried 2026-07-15 (audit) via WebFetch: still HTTP 403. This matches a systemic block on boardgamegeek.com pages seen across most games in this corpus (see weekly check-links 'suspect' list) — not a game-specific issue. Downgrading retry_needs to manual_review since two automated tool types (urllib, WebFetch) have both failed; a genuine interactive/authenticated browser session is needed next."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Marvel Champions: The Card Game"
@@ -50,16 +38,16 @@ sources:
     url: "https://images-cdn.fantasyflightgames.com/filer_public/b6/30/b630ddfe-e745-435b-a284-572dd510e15d/mc_rulesreference_v15-compressed.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-12"
-    notes: "Official PDF located; extraction failed."
+    retrieved_at: "2026-07-15"
+    notes: "Audit 2026-07-15: retried with WebFetch download + pypdf extraction (not available to the 2026-07-12 scout run's toolset); succeeded, 56 pages. Followup resolved."
   - id: "src-004"
     title: "Meeple Mountain — Marvel Champions review"
     url: "https://www.meeplemountain.com/reviews/marvel-champions-the-card-game/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-12"
-    notes: "Review lead."
-confidence: low
+    retrieved_at: "2026-07-15"
+    notes: "Audit 2026-07-15: full text retrieved via WebFetch. Followup resolved."
+confidence: medium
 status: needs_followup
 ---
 
@@ -84,9 +72,9 @@ Study one cooperative deck-building/card-construction game for rules structure, 
 ## Rulebook extraction status
 
 - Official rulebook found: yes
-- File inspected: no
-- Page count/version/date if known: v1.5 URL located; current v1.7 advertised, exact file not retrieved.
-- Text extraction quality: unavailable
+- File inspected: yes (audit 2026-07-15 retry)
+- Page count/version/date if known: v1.5, 56 pages; current v1.7 advertised by the publisher page but not yet retrieved/diffed.
+- Text extraction quality: good — WebFetch download + pypdf extraction produced clean, readable text across every sampled page (glossary entries, appendices, FAQ).
 
 ## Documents written
 
@@ -104,8 +92,8 @@ Study one cooperative deck-building/card-construction game for rules structure, 
 ## Run validation
 
 - `WISHLIST.md` entry checked off: n/a — wishlist had no unchecked entry.
-- `node scripts/generate-index.mjs` run after writing docs: pending
-- `node scripts/validate-okf.mjs` exit 0 before push: pending
+- `node scripts/generate-index.mjs` run after writing docs: done (audit 2026-07-15 pass)
+- `node scripts/validate-okf.mjs` exit 0 before push: done (audit 2026-07-15 pass)
 
 ## Strongest design lessons
 
@@ -113,13 +101,13 @@ The available evidence points to combinatorial replayability as the game's prima
 
 ## Strongest player complaints
 
-Not established in this run; review and rules extraction followups remain open.
+Established 2026-07-15 (audit) from the full Meeple Mountain review: occasional deck-driven bad luck can feel unfair, and post-game component sorting (resorting character-specific cards back to their owners) is a genuine chore. See `reception/reviews.okf.md`.
 
 ## This game would be better if...
 
-The first-play path exposed deck construction, card timing, and form switching through a guided scenario instead of requiring the card pool to teach itself.
+Post-game teardown/sorting were less manual — see `reception/better-if.okf.md` (corrected 2026-07-15: the doc's original onboarding/expansion-bloat opportunities were unsupported guesses from a search snippet; the full review actually praises both of those areas).
 
 ## Open questions
 
-- What is the current BGG score/rank/weight?
-- Which rules-reference revision is canonical for the core-game corpus?
+- What is the current BGG score/rank/weight? Still blocked as of 2026-07-15 (see `followups`).
+- Which rules-reference revision is canonical for the core-game corpus? v1.5 is now fully extracted and cited; v1.7 (advertised by the publisher page) has not been retrieved or diffed against it.

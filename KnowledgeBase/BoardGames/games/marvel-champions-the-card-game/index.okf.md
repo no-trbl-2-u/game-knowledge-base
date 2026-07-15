@@ -31,22 +31,22 @@ sources:
     url: "https://images-cdn.fantasyflightgames.com/filer_public/b6/30/b630ddfe-e745-435b-a284-572dd510e15d/mc_rulesreference_v15-compressed.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-12"
-    notes: "Official reference source located through search; current product page now advertises a newer January 2026 reference."
+    retrieved_at: "2026-07-15"
+    notes: "Official reference source located through search; current product page now advertises a newer January 2026 reference (v1.7), not yet diffed against v1.5. Audit 2026-07-15: extraction retried with pypdf (56 pages), succeeded — see rules/*.okf.md for cited claims."
   - id: "src-004"
     title: "Meeple Mountain — Marvel Champions review"
     url: "https://www.meeplemountain.com/reviews/marvel-champions-the-card-game/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-12"
-    notes: "Review lead for replayability and hero/villain combination praise."
+    retrieved_at: "2026-07-15"
+    notes: "Audit 2026-07-15: full review retrieved, replacing the 2026-07-12 search-snippet fallback. See reception/reviews.okf.md."
 confidence: medium
-status: needs_followup
+status: verified
 ---
 
 ## Summary
 
-*Marvel Champions* is a cooperative living card game in which heroes assemble decks and fight an automated villain. It was chosen as a high-profile eligible free-choice target because BGG identifies the title and its public description centers on cooperative hero-versus-villain play; the exact live score was not recoverable in this run.
+*Marvel Champions* is a cooperative living card game in which heroes assemble decks and fight an automated villain. It was chosen as a high-profile eligible free-choice target because BGG identifies the title and its public description centers on cooperative hero-versus-villain play. Audit 2026-07-15: the official Rules Reference PDF (src-003) is now fully extracted and cited across `rules/*.okf.md`; BGG's live score/rank/weight (src-001) remains blocked (see Open questions).
 
 ## Source-backed facts
 
@@ -57,6 +57,10 @@ status: needs_followup
 - Claim: Fantasy Flight Games provides official Learn to Play and Rules Reference downloads for the game.
   Source: src-002
   Evidence: Product page lists "Learn to Play" and "Marvel Champions Rules Reference" downloads.
+  Confidence: high
+- Claim: A round alternates a player phase (each player takes one turn) and a villain phase (threat, activation, encounter cards); setup is a fixed 16-step sequence; the team wins by defeating the villain's final stage and loses if the main scheme deck completes.
+  Source: src-003
+  Evidence: See `rules/overview.okf.md`, `rules/setup.okf.md`, `rules/turn-structure.okf.md`, and `rules/scoring-endgame.okf.md` for page-cited claims.
   Confidence: high
 
 ## Rules / Mechanics
@@ -77,5 +81,5 @@ status: needs_followup
 
 ## Open questions
 
-- Exact BGG rating, rank, and weight need a retry against BGG or an accessible metadata mirror.
-- Core-set versus revised-core deck lists should be separated in a future pass.
+- Exact BGG rating, rank, and weight remain unrecoverable: retried 2026-07-15 via WebFetch, still HTTP 403 (same systemic block hitting BGG pages across most games in this corpus — see the monthly link-rot issue's "suspect" list). Needs a genuine browser-session fetch or an alternate metadata mirror, not another automated retry.
+- Core-set versus revised-core (v1.7) deck lists should be separated in a future pass.

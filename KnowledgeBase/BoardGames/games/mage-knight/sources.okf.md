@@ -27,25 +27,25 @@ sources:
     notes: "Official overview and details; links to official rules, walkthrough, FAQ."
   - id: "src-003"
     title: "MK_rulebook_ENG_searchable-mar2012.pdf"
-    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
+    url: "https://web.archive.org/web/20201118050857/http://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-08"
-    notes: "WizKids host still 500s; text extracted from the Wayback Machine snapshot (web.archive.org/web/20201118050857/http://wizkidsgames.com/wp-content/uploads/mage/MK_rulebook_ENG_searchable-mar2012.pdf), 20 pages, pypdf extraction. Page numbers below refer to this PDF's own printed page numbers."
+    retrieved_at: "2026-07-15"
+    notes: "WizKids host still 500s; text extracted from the Wayback Machine snapshot, 20 pages, pypdf extraction. Page numbers below refer to this PDF's own printed page numbers. Audit 2026-07-15: check-links reports wizkidsgames.com dead with ERR_TLS_CERT_ALTNAME_INVALID (cert no longer covers the hostname); confirmed via curl. The `url` field above now points directly at the Wayback snapshot (re-confirmed HTTP 200 this pass) rather than the dead host, so future link checks resolve clean."
   - id: "src-004"
     title: "MK_walkthrough_ENG_searchable-mar2012.pdf"
-    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf"
+    url: "https://web.archive.org/web/20201118050902/http://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-08"
-    notes: "WizKids host still 500s; text extracted from the Wayback Machine snapshot (web.archive.org/web/20201118050902/http://wizkidsgames.com/wp-content/uploads/mage/MK_walkthrough_ENG_searchable-mar2012.pdf), 20 pages, pypdf extraction."
+    retrieved_at: "2026-07-15"
+    notes: "WizKids host still 500s; text extracted from the Wayback Machine snapshot, 20 pages, pypdf extraction. Audit 2026-07-15: `url` field switched from the dead wizkidsgames.com host (ERR_TLS_CERT_ALTNAME_INVALID) to the Wayback snapshot itself, re-confirmed HTTP 200 this pass."
   - id: "src-005"
     title: "MK_FAQ_1.0v2.pdf"
-    url: "https://wizkidsgames.com/wp-content/uploads/mage/MK_FAQ_1.0v2.pdf"
+    url: "https://web.archive.org/web/20201118050907/http://wizkidsgames.com/wp-content/uploads/mage/MK_FAQ_1.0v2.pdf"
     kind: faq
     provenance: official
-    retrieved_at: "2026-07-08"
-    notes: "WizKids host still 500s; text extracted from the Wayback Machine snapshot (web.archive.org/web/20201118050907/http://wizkidsgames.com/wp-content/uploads/mage/MK_FAQ_1.0v2.pdf), 3 pages, pypdf extraction. FAQ text is dated 'Version 1.0 - 7th February 2014'."
+    retrieved_at: "2026-07-15"
+    notes: "WizKids host still 500s; text extracted from the Wayback Machine snapshot, 3 pages, pypdf extraction. FAQ text is dated 'Version 1.0 - 7th February 2014'. Audit 2026-07-15: `url` field switched from the dead wizkidsgames.com host (ERR_TLS_CERT_ALTNAME_INVALID) to the Wayback snapshot itself, re-confirmed HTTP 200 this pass."
   - id: "src-006"
     title: "How to play Mage Knight — UltraBoardGames"
     url: "https://www.ultraboardgames.com/mage-knight/game-rules.php"
@@ -128,3 +128,4 @@ Primary discovery was BGG. Official rules availability was established through W
 
 ## Retry notes
 - 2026-07-08: `src-003`/`src-004`/`src-005` resolved via Wayback Machine snapshots (see per-source notes above). WizKids' own hosts still return HTTP 500 on both `wizkidsgames.com` and `wizkids.com`; future runs should keep using the Wayback snapshots unless the publisher site is confirmed healthy again.
+- 2026-07-15 (audit): weekly check-links flagged all three `wizkidsgames.com` PDF URLs as DEAD (`ERR_TLS_CERT_ALTNAME_INVALID`). Confirmed with `curl -IL`: the host's certificate no longer covers `wizkidsgames.com` at all (fails before reaching HTTP), and with `-k` still returns HTTP 500 underneath — same underlying outage as 2026-07-08, now compounded by a broken cert. Re-confirmed all three Wayback snapshots return HTTP 200. Remediated by pointing every citing doc's `url` field directly at the Wayback snapshot (was previously the dead wizkidsgames.com URL with the snapshot only mentioned in notes); `src-NNN` ids unchanged. No confidence downgrade — the official text itself is unaffected, only the origin host's availability.
