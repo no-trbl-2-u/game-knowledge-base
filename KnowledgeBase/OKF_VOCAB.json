@@ -3,14 +3,16 @@
   "okf_version": "0.2",
   "types": [
     "game_index", "sources", "rule_category", "reception", "better_if", "scout_report",
-    "pattern", "operations",
+    "pattern", "operations", "visual_reference",
     "digital_card_game_index", "digital_card_sources", "digital_card_glossary", "digital_card_keyword", "card_record"
   ],
-  "game_types": ["game_index", "sources", "rule_category", "reception", "better_if", "scout_report"],
+  "game_types": ["game_index", "sources", "rule_category", "reception", "better_if", "scout_report", "visual_reference"],
   "confidence": ["high", "medium", "low"],
   "status": ["draft", "verified", "needs_followup"],
   "provenance": ["official", "secondary", "community", "unknown"],
-  "source_kinds": ["publisher_page", "rulebook_pdf", "bgg_page", "bgg_forum", "review", "video", "faq", "errata", "other"],
+  "source_kinds": ["publisher_page", "rulebook_pdf", "bgg_page", "bgg_forum", "review", "video", "faq", "errata", "image", "other"],
+  "visual_subjects": ["box-cover", "components", "setup", "decision-state", "board-state", "cards", "player-aid", "iconography", "table-presence", "other"],
+  "visual_usage_bases": ["own-work", "permission", "open-license", "public-domain", "editorial-excerpt"],
   "better_if_labels": [
     "onboarding", "setup-teardown", "component-clarity", "rules-ambiguity",
     "turn-pacing", "downtime", "randomness", "strategic-depth", "runaway-leader",

@@ -11,7 +11,7 @@ Current version: **0.2**. Every document in the corpus carries `okf_version: 0.2
 ```yaml
 ---
 okf_version: 0.2
-type: game_index | sources | rule_category | reception | better_if | scout_report | pattern | operations | digital_card_game_index | digital_card_sources | digital_card_glossary | digital_card_keyword | card_record
+type: game_index | sources | rule_category | reception | better_if | scout_report | visual_reference | pattern | operations | digital_card_game_index | digital_card_sources | digital_card_glossary | digital_card_keyword | card_record
 game:
   title: ""
   slug: ""
@@ -42,6 +42,7 @@ Field rules:
 - `better_if_labels` is required on `reception` and `better_if` docs only; it lists the taxonomy labels the doc's body actually discusses.
 - `game.weight` is the BGG complexity weight, cited from the game's discovery source; `null` when unknown.
 - `pattern` and `operations` docs omit the `game` block, `scope`, and `sources` requirements where they do not apply (see the validator for the exact exemptions).
+- `visual_reference` is a game-scoped manifest at `games/<slug>/visuals/packet.okf.md`. It carries the game metadata and mechanics firewall plus the visual packet contract below.
 - Digital card-game docs (`digital_card_game_index`, `digital_card_sources`, `digital_card_glossary`, `digital_card_keyword`, `card_record`) are source-evidence records for large digital card corpora. They are exempt from board-game `mechanics` vocabulary requirements; `card_record` may use a `card:` frontmatter block instead of `game:`.
 - A `card_record`'s `card:` block must carry `name`, `slug`, `source_id`, `ordinal`, and a `cost:` field. Digital card schemas may use a scalar cost (for example `"1"`, `"X"`, or `"-"`) or a nested vector. The Dawncaster vector retains all nine fields (`dex`, `int`, `str`, `holy`, `neutral`, `dexint`, `dexstr`, `intstr`, `blood`) nested one level below `cost:` (4-space indent); the validator enforces that nesting when the vector form is used.
 
@@ -95,6 +96,48 @@ Kebab-cased labels for classifying improvement opportunities. Use these exact sl
 - balance-faction-asymmetry
 - expansion-bloat
 - accessibility
+
+## Visual reference packets
+
+Each game carries exactly one curated visual packet:
+
+```txt
+games/<slug>/visuals/
+  packet.okf.md
+  contact-sheet.webp
+  references/
+    01-box-cover.webp
+    02-components.webp
+    03-setup.webp
+    04-decision-state.webp
+```
+
+The manifest declares **4–8** `visual_references`. Every entry requires `id`,
+`source_id`, `file`, `subject`, `capture_type`, `creator`, `rights_holder`,
+`usage_basis`, `license`, `attribution`, `demonstrates`, `rationale`, and
+`sha256`. Paths are game-relative POSIX paths under `visuals/`; local assets
+are WebP only. `subject` is controlled by `visual_subjects` and `usage_basis`
+by `visual_usage_bases` in `KnowledgeBase/OKF_VOCAB.json`. A source used by a
+visual reference records its source locator as `url` and exact downloadable
+asset as `asset_url`; these may be the same when a stable direct asset URL is
+the only available locator. The packet declares `contact_sheet` and
+`contact_sheet_sha256`; agents should open that sheet before individual
+references.
+
+Public availability and `provenance: official` do not grant a license. Prefer
+own work, permission, open licenses, or public-domain material. A narrowly
+transformed `editorial-excerpt` is permitted only for private visual analysis:
+it must be materially reduced, attributed, linked to its source, and carry a
+specific rationale. Do not store complete rulebooks, complete card libraries,
+source-resolution promotional art, community photographs without permission,
+or images that substitute for cards, boards, player aids, or other game
+components. A reduced page-overview derivative is permitted when visual
+hierarchy is the analytical target, the text is not retained at practical
+replacement quality, and the packet contains only a few noncontiguous pages
+that cannot substitute for the source rulebook. Contact sheets inherit every
+source image's restrictions. Preserve
+license terms exactly; never infer Creative Commons status. Remove material on
+rights-holder request.
 
 ## Body structure
 

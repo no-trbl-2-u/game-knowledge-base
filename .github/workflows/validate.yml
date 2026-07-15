@@ -12,6 +12,7 @@ on:
     paths:
       - 'KnowledgeBase/**'
       - 'scripts/validate-okf.mjs'
+      - 'scripts/validate-okf-visuals.test.mjs'
       - 'scripts/generate-index.mjs'
       - 'scripts/generate-dawncaster-card-sidecars.mjs'
       - '.github/workflows/validate.yml'
@@ -19,6 +20,7 @@ on:
     paths:
       - 'KnowledgeBase/**'
       - 'scripts/validate-okf.mjs'
+      - 'scripts/validate-okf-visuals.test.mjs'
       - 'scripts/generate-index.mjs'
       - 'scripts/generate-dawncaster-card-sidecars.mjs'
       - '.github/workflows/validate.yml'
@@ -32,5 +34,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - name: Test visual packet validation
+        run: node --test scripts/validate-okf-visuals.test.mjs
       - name: Validate OKF corpus
         run: node scripts/validate-okf.mjs
