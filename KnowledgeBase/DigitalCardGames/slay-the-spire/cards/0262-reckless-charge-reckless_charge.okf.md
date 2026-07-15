@@ -11,7 +11,7 @@ card:
   rarity: "Uncommon"
   type: "Attack"
   cost: "0"
-  keywords: []
+  keywords: ["Dazed"]
 upgrade:
   cost: null
 sources:

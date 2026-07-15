@@ -11,7 +11,7 @@ card:
   rarity: "Rare"
   type: "Attack"
   cost: "1"
-  keywords: []
+  keywords: ["Attack", "Discard"]
 upgrade:
   cost: null
 sources:

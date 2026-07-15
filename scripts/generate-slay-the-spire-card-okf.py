@@ -28,9 +28,9 @@ def terms(card: dict) -> list[str]:
     raw = json.loads(card.get("keywords") or "[]")
     text = card["description"] + "\n" + card["upgrade_description"]
     observed = list(raw) if isinstance(raw, list) else []
-    for term in re.findall(r"\\b(?:[A-Z][a-z]+|ALL|X|[A-Z])\\b", text):
+    for term in re.findall(r"\b(?:[A-Z][a-z]+|ALL|X|[A-Z])\b", text):
         if term not in observed and term.lower() in {
-            "attack", "skill", "power", "status", "curse", "exhaust", "retain",
+            "attack", "skill", "power", "status", "curse", "exhaust", "retain", "all", "x",
             "ethereal", "innate", "vulnerable", "weak", "frail", "poison", "block",
             "strength", "dexterity", "focus", "wrath", "calm", "divinity", "stance",
             "scry", "shivs", "shiv", "lightning", "frost", "dark", "orb", "channel",

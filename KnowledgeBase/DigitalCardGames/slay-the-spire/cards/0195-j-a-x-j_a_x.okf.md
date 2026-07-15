@@ -11,7 +11,7 @@ card:
   rarity: "Special"
   type: "Skill"
   cost: "0"
-  keywords: []
+  keywords: ["Strength"]
 upgrade:
   cost: null
 sources:

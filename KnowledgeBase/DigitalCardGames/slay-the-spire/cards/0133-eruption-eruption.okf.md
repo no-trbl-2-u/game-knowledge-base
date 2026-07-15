@@ -11,7 +11,7 @@ card:
   rarity: "Basic"
   type: "Attack"
   cost: "2"
-  keywords: []
+  keywords: ["Wrath"]
 upgrade:
   cost: "1"
 sources:

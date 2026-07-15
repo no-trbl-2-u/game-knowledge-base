@@ -11,7 +11,7 @@ card:
   rarity: "Common"
   type: "Status"
   cost: "-2"
-  keywords: []
+  keywords: ["Ethereal", "Unplayable"]
 upgrade:
   cost: null
 sources:

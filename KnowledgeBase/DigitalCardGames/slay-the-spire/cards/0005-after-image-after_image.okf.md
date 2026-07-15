@@ -11,7 +11,7 @@ card:
   rarity: "Rare"
   type: "Power"
   cost: "1"
-  keywords: []
+  keywords: ["Block", "Innate"]
 upgrade:
   cost: null
 sources:

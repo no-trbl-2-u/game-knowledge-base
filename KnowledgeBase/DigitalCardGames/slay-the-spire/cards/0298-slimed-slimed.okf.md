@@ -11,7 +11,7 @@ card:
   rarity: "Common"
   type: "Status"
   cost: "1"
-  keywords: []
+  keywords: ["Exhaust"]
 upgrade:
   cost: null
 sources:

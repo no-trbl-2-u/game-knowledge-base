@@ -11,7 +11,7 @@ card:
   rarity: "Basic"
   type: "Attack"
   cost: "0"
-  keywords: []
+  keywords: ["Weak"]
 upgrade:
   cost: null
 sources:

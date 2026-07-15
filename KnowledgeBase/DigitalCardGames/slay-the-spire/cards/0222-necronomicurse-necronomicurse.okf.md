@@ -11,7 +11,7 @@ card:
   rarity: "Special"
   type: "Curse"
   cost: "-2"
-  keywords: []
+  keywords: ["Curse", "Unplayable"]
 upgrade:
   cost: null
 sources:

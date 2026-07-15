@@ -11,7 +11,7 @@ card:
   rarity: "Common"
   type: "Attack"
   cost: "0"
-  keywords: []
+  keywords: ["Block", "Scry"]
 upgrade:
   cost: null
 sources:

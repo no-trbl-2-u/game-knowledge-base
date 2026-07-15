@@ -11,7 +11,7 @@ card:
   rarity: "Uncommon"
   type: "Attack"
   cost: "1"
-  keywords: []
+  keywords: ["Block", "Exhaust"]
 upgrade:
   cost: null
 sources:

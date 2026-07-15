@@ -11,7 +11,7 @@ card:
   rarity: "Rare"
   type: "Skill"
   cost: "2"
-  keywords: []
+  keywords: ["Block", "Exhaust"]
 upgrade:
   cost: null
 sources:

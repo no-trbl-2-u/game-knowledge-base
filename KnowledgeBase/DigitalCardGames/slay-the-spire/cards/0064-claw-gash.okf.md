@@ -11,7 +11,7 @@ card:
   rarity: "Common"
   type: "Attack"
   cost: "0"
-  keywords: []
+  keywords: ["ALL"]
 upgrade:
   cost: null
 sources:

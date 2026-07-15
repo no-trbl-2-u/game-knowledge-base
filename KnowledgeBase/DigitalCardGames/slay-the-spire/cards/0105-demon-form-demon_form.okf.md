@@ -11,7 +11,7 @@ card:
   rarity: "Rare"
   type: "Power"
   cost: "3"
-  keywords: []
+  keywords: ["Strength"]
 upgrade:
   cost: null
 sources:

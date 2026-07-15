@@ -11,7 +11,7 @@ card:
   rarity: "Uncommon"
   type: "Attack"
   cost: "4"
-  keywords: []
+  keywords: ["Retain"]
 upgrade:
   cost: null
 sources:

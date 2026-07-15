@@ -11,7 +11,7 @@ card:
   rarity: "Uncommon"
   type: "Attack"
   cost: "2"
-  keywords: []
+  keywords: ["Innate"]
 upgrade:
   cost: "1"
 sources:

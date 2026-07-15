@@ -11,7 +11,7 @@ card:
   rarity: "Common"
   type: "Skill"
   cost: "2"
-  keywords: []
+  keywords: ["Block", "Retain"]
 upgrade:
   cost: null
 sources:
