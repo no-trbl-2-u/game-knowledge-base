@@ -12,6 +12,7 @@ on:
     paths:
       - 'KnowledgeBase/**'
       - 'scripts/validate-okf.mjs'
+      - 'scripts/validate-okf-visuals.test.mjs'
       - 'scripts/generate-index.mjs'
       - 'scripts/generate-dawncaster-card-sidecars.mjs'
       - 'scripts/telemetry-log.mjs'
@@ -21,6 +22,7 @@ on:
     paths:
       - 'KnowledgeBase/**'
       - 'scripts/validate-okf.mjs'
+      - 'scripts/validate-okf-visuals.test.mjs'
       - 'scripts/generate-index.mjs'
       - 'scripts/generate-dawncaster-card-sidecars.mjs'
       - 'scripts/telemetry-log.mjs'
@@ -36,6 +38,8 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - name: Test visual packet validation
+        run: node --test scripts/validate-okf-visuals.test.mjs
       - name: Validate OKF corpus
         run: node scripts/validate-okf.mjs
       # A broken edit to the (fail-open) hook would silently disable the

@@ -12,6 +12,7 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import crypto from 'node:crypto'
 import { buildIndex } from './generate-index.mjs'
 import { buildSidecars } from './generate-dawncaster-card-sidecars.mjs'
 import { logScan } from './telemetry-log.mjs'
@@ -33,11 +34,66 @@ const BETTER_IF_LABELS = VOCAB.better_if_labels
 const MECHANICS = VOCAB.mechanics
 const FOLLOWUP_FAILURES = VOCAB.followup_failures
 const FOLLOWUP_RETRY_NEEDS = VOCAB.followup_retry_needs
+const VISUAL_SUBJECTS = VOCAB.visual_subjects
+const VISUAL_USAGE_BASES = VOCAB.visual_usage_bases
 
 const INDEX_BASENAME = 'INDEX.okf.md' // generated; freshness-checked, not field-checked
 
 const findings = []
 const flag = (file, msg) => findings.push(`${file}: ${msg}`)
+
+function topLevelBlock(head, name) {
+  const start = head.match(new RegExp(`^${name}:\\s*\\r?\\n`, 'm'))
+  if (!start) return ''
+  const rest = head.slice(start.index + start[0].length)
+  const end = rest.search(/^[A-Za-z_][A-Za-z0-9_]*:/m)
+  return end === -1 ? rest : rest.slice(0, end)
+}
+
+function entries(block, idKey = 'id') {
+  return block.split(new RegExp(`(?=^  - ${idKey}:)`, 'm')).filter(s => new RegExp(`^  - ${idKey}:`, 'm').test(s))
+}
+
+function entryField(entry, name) {
+  const prefix = name === 'id' ? '  - ' : '    '
+  const match = entry.match(new RegExp(`^${prefix}${name}:\\s*(.*)$`, 'm'))
+  return match ? match[1].trim().replace(/^["']|["']$/g, '') : null
+}
+
+function safeVisualPath(file, gameDir, value, label, maxBytes) {
+  if (!value || path.isAbsolute(value) || value.includes('\\\\') || value.includes('\0') ||
+      value.split('/').some(part => !part || part === '..') || !value.startsWith('visuals/') || !value.endsWith('.webp')) {
+    flag(file, `${label} must be a game-relative POSIX .webp path under visuals/`)
+    return null
+  }
+  const resolved = path.resolve(gameDir, value)
+  const root = `${path.resolve(gameDir)}${path.sep}`
+  if (!resolved.startsWith(root)) {
+    flag(file, `${label} escapes the game directory`)
+    return null
+  }
+  if (!fs.existsSync(resolved)) {
+    flag(file, `${label} does not exist: ${value}`)
+    return null
+  }
+  const stat = fs.lstatSync(resolved)
+  if (!stat.isFile() || stat.isSymbolicLink()) {
+    flag(file, `${label} must be a regular, non-symlink file: ${value}`)
+    return null
+  }
+  const realRoot = `${fs.realpathSync(gameDir)}${path.sep}`
+  const realAsset = fs.realpathSync(resolved)
+  if (!realAsset.startsWith(realRoot)) {
+    flag(file, `${label} real path escapes the game directory: ${value}`)
+    return null
+  }
+  const bytes = fs.readFileSync(realAsset)
+  if (bytes.length < 12 || bytes.toString('ascii', 0, 4) !== 'RIFF' || bytes.toString('ascii', 8, 12) !== 'WEBP') {
+    flag(file, `${label} is not a WebP file: ${value}`)
+  }
+  if (bytes.length > maxBytes) flag(file, `${label} exceeds ${maxBytes} bytes: ${value}`)
+  return { resolved, bytes, hash: crypto.createHash('sha256').update(bytes).digest('hex') }
+}
 
 function* okfFiles(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -133,6 +189,87 @@ function validate(file) {
     }
   }
 
+  if (type === 'visual_reference') {
+    const gameSlug = head.match(/^\s+slug:\s*"?([^"\r\n]+)"?/m)?.[1]?.trim()
+    const gameDir = path.dirname(path.dirname(file))
+    const expected = path.join(gameDir, 'visuals', 'packet.okf.md')
+    if (path.resolve(file) !== path.resolve(expected)) flag(file, 'visual_reference must be games/<slug>/visuals/packet.okf.md')
+    if (gameSlug && path.basename(gameDir) !== gameSlug) flag(file, `game.slug "${gameSlug}" does not match directory "${path.basename(gameDir)}"`)
+
+    const sourceEntries = entries(topLevelBlock(head, 'sources'))
+    const sourceMap = new Map(sourceEntries.map(e => [entryField(e, 'id'), e]))
+    const refs = entries(topLevelBlock(head, 'visual_references'))
+    if (refs.length < 4 || refs.length > 8) flag(file, `visual_references must contain 4–8 entries, found ${refs.length}`)
+
+    const ids = new Set(), localFiles = new Set(), declared = new Set()
+    let aggregateBytes = 0
+    const required = ['id', 'source_id', 'file', 'subject', 'capture_type', 'creator', 'rights_holder', 'usage_basis', 'license', 'attribution', 'demonstrates', 'rationale', 'sha256']
+    for (const ref of refs) {
+      for (const key of required) {
+        const value = entryField(ref, key)
+        if (value === null) flag(file, `visual reference missing ${key}`)
+        else if (key !== 'license' && !value) flag(file, `visual reference ${entryField(ref, 'id') ?? '(unknown)'} has empty ${key}`)
+      }
+      const id = entryField(ref, 'id')
+      if (!/^vis-\d{3}$/.test(id ?? '')) flag(file, `visual id "${id}" must match vis-NNN`)
+      else if (ids.has(id)) flag(file, `duplicate visual id ${id}`)
+      else ids.add(id)
+
+      const sourceId = entryField(ref, 'source_id')
+      const source = sourceMap.get(sourceId)
+      if (!source) flag(file, `visual ${id} cites undeclared source ${sourceId}`)
+      else {
+        if (!entryField(source, 'url')) flag(file, `source ${sourceId} used by ${id} has no url`)
+        if (!entryField(source, 'asset_url')) flag(file, `source ${sourceId} used by ${id} has no asset_url`)
+        if (!entryField(source, 'retrieved_at')) flag(file, `source ${sourceId} used by ${id} has no retrieved_at`)
+      }
+
+      const subject = entryField(ref, 'subject')
+      if (!VISUAL_SUBJECTS.includes(subject)) flag(file, `visual subject "${subject}" not in controlled vocabulary`)
+      const usage = entryField(ref, 'usage_basis')
+      if (!VISUAL_USAGE_BASES.includes(usage)) flag(file, `visual usage_basis "${usage}" not in controlled vocabulary`)
+      if (usage === 'open-license' && !entryField(ref, 'license')) flag(file, `${id} uses open-license but license is empty`)
+      if (usage === 'editorial-excerpt' && !entryField(ref, 'rationale')) flag(file, `${id} uses editorial-excerpt but rationale is empty`)
+
+      const local = entryField(ref, 'file')
+      if (localFiles.has(local)) flag(file, `duplicate visual file ${local}`)
+      localFiles.add(local)
+      const asset = safeVisualPath(file, gameDir, local, `${id}.file`, 256 * 1024)
+      if (asset) {
+        declared.add(path.resolve(asset.resolved))
+        aggregateBytes += asset.bytes.length
+        const claimed = entryField(ref, 'sha256')
+        if (!/^[0-9a-f]{64}$/.test(claimed ?? '')) flag(file, `${id}.sha256 must be 64 lowercase hex characters`)
+        else if (claimed !== asset.hash) flag(file, `${id}.sha256 does not match ${local}`)
+      }
+    }
+
+    const sheetPath = field('contact_sheet')
+    const sheet = safeVisualPath(file, gameDir, sheetPath, 'contact_sheet', 512 * 1024)
+    if (sheet) {
+      declared.add(path.resolve(sheet.resolved))
+      aggregateBytes += sheet.bytes.length
+      const claimed = field('contact_sheet_sha256')
+      if (!/^[0-9a-f]{64}$/.test(claimed ?? '')) flag(file, 'contact_sheet_sha256 must be 64 lowercase hex characters')
+      else if (claimed !== sheet.hash) flag(file, 'contact_sheet_sha256 does not match contact_sheet')
+    }
+    if (aggregateBytes > 2 * 1024 * 1024) flag(file, 'visual packet exceeds 2 MiB aggregate limit')
+
+    const visualsDir = path.join(gameDir, 'visuals')
+    if (fs.existsSync(visualsDir)) {
+      const walk = dir => {
+        for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
+          const absolute = path.join(dir, item.name)
+          if (item.isDirectory()) walk(absolute)
+          else if (item.isFile() && item.name.endsWith('.webp') && !declared.has(path.resolve(absolute))) {
+            flag(file, `orphan WebP not declared by packet: ${path.relative(gameDir, absolute)}`)
+          }
+        }
+      }
+      walk(visualsDir)
+    }
+  }
+
   // OKF 0.2 §6: followups block (structured failure records)
   const hasFollowups = /^followups:\s*$/m.test(head) || /^followups:\s*\[/m.test(head)
   for (const m of head.matchAll(/^\s+failure:\s*(\S+)/gm)) {
@@ -154,6 +291,12 @@ files.forEach(validate)
 
 // INDEX freshness (full-corpus mode only): regenerate and diff
 if (fullCorpus) {
+  const gamesDir = path.join('KnowledgeBase', 'BoardGames', 'games')
+  for (const game of fs.readdirSync(gamesDir, { withFileTypes: true }).filter(e => e.isDirectory())) {
+    const packet = path.join(gamesDir, game.name, 'visuals', 'packet.okf.md')
+    if (!fs.existsSync(packet)) flag(packet, 'missing required visual reference packet')
+  }
+
   const indexFile = path.join('KnowledgeBase/BoardGames', INDEX_BASENAME)
   const actual = fs.existsSync(indexFile) ? fs.readFileSync(indexFile, 'utf-8') : null
   if (actual !== buildIndex()) flag(indexFile, 'stale or missing — run: node scripts/generate-index.mjs')

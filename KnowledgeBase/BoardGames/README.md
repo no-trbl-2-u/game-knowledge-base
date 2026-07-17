@@ -47,6 +47,14 @@ games/<slug>/
     reviews.okf.md
     better-if.okf.md
   scout-report.okf.md
+  visuals/
+    packet.okf.md
+    contact-sheet.webp
+    references/
+      01-box-cover.webp
+      02-components.webp
+      03-setup.webp
+      04-decision-state.webp
 ```
 
 If official rulebooks are unavailable, the scout must say so plainly, use secondary sources only as secondary testimony, and record each failure as a structured `followups:` entry in `scout-report.okf.md` (see `OKF_SPEC.md`) for the weekly librarian to retry.
@@ -74,6 +82,18 @@ Do not mirror whole copyrighted rulebooks into the KB. Store:
 - links back to official sources.
 
 The corpus is for private research and design analysis, not republication of rulebooks.
+
+Each game also carries a curated packet of 4–8 reduced WebP visual references
+and one contact sheet. Preserve the source page, exact asset URL, creator,
+rights holder, usage basis, attribution, analytical purpose, and SHA-256 for
+every local derivative. “Official” describes provenance, not permission.
+Prefer owned, permitted, openly licensed, or public-domain work; use a reduced
+editorial excerpt only when necessary for private analysis. Never store
+source-resolution art, complete rulebooks, complete card libraries, or an
+image that substitutes for a game component. Reduced page overviews are
+allowed only when visual hierarchy is the subject, text is below practical
+replacement quality, and a few noncontiguous pages cannot substitute for the
+source. Remove material on request.
 
 ## Selection doctrine
 

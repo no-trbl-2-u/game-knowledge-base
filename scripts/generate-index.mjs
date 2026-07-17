@@ -51,7 +51,7 @@ export function buildIndex(root = ROOT) {
     const dir = path.join(gamesDir, slug)
     const docs = [...okfFiles(dir)]
     const statuses = new Map()
-    let title = slug, year = '', weight = '', mechanics = []
+    let title = slug, year = '', weight = '', mechanics = [], visualRefs = 0
     const labelOrder = []
 
     for (const file of docs) {
@@ -63,6 +63,9 @@ export function buildIndex(root = ROOT) {
         year = gameField(head, 'year') ?? ''
         weight = gameField(head, 'weight') ?? ''
         mechanics = list(head, 'mechanics')
+      }
+      if (path.basename(file) === 'packet.okf.md' && path.basename(path.dirname(file)) === 'visuals') {
+        visualRefs = [...head.matchAll(/^\s+- id:\s*"?vis-\d{3}"?/gm)].length
       }
       for (const l of list(head, 'better_if_labels')) {
         if (!labelOrder.includes(l)) labelOrder.push(l)
@@ -78,7 +81,10 @@ export function buildIndex(root = ROOT) {
       ? 'verified'
       : [...statuses.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([s, n]) => `${s}:${n}`).join(' ')
 
-    rows.push(`| ${slug} | ${title} | ${year || '?'} | ${weight || '?'} | ${mechanics.join(', ')} | ${labelOrder.slice(0, 5).join(', ')} | ${status} | ${docs.length} |`)
+    const visuals = visualRefs
+      ? `[packet](games/${slug}/visuals/packet.okf.md) · [sheet](games/${slug}/visuals/contact-sheet.webp)`
+      : ''
+    rows.push(`| ${slug} | ${title} | ${year || '?'} | ${weight || '?'} | ${mechanics.join(', ')} | ${labelOrder.slice(0, 5).join(', ')} | ${visualRefs} | ${visuals} | ${status} | ${docs.length} |`)
   }
 
   const mechanicRows = [...byMechanic.entries()]
@@ -97,8 +103,8 @@ BGG complexity weight from the game's discovery source.
 
 ## Games
 
-| slug | title | year | weight | mechanics | top better-if labels | status | docs |
-|---|---|---|---|---|---|---|---|
+| slug | title | year | weight | mechanics | top better-if labels | visual refs | visual packet | status | docs |
+|---|---|---|---|---|---|---|---|---|---|
 ${rows.join('\n')}
 
 ## Mechanics → games

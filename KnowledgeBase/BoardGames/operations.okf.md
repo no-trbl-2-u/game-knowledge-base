@@ -162,6 +162,9 @@ Minimum expected files:
 - `reception/reviews.okf.md`
 - `reception/better-if.okf.md`
 - `scout-report.okf.md`
+- `visuals/packet.okf.md`
+- `visuals/contact-sheet.webp`
+- `visuals/references/*.webp` (4–8 reduced, source-linked references)
 
 Every doc uses **OKF 0.2 frontmatter exactly as written in `OKF_SPEC.md`** — the spec, not the scout's memory of it, is the output format. In particular: `okf_version: 0.2`, `mechanics` (controlled slugs, identical across the game's docs), `better_if_labels` on reception docs, and `src-NNN` source ids.
 
