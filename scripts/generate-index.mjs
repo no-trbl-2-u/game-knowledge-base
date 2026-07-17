@@ -11,6 +11,8 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { logScan } from './telemetry-log.mjs'
 
 const ROOT = 'KnowledgeBase/BoardGames'
 const INDEX_FILE = path.join(ROOT, 'INDEX.okf.md')
@@ -113,7 +115,9 @@ ${mechanicRows.join('\n')}
 `
 }
 
-const isMain = process.argv[1] && path.resolve(process.argv[1]) === new URL(import.meta.url).pathname
+// fileURLToPath, not URL.pathname: the pathname form ('/C:/...') never
+// equals path.resolve ('C:\...') on Windows, silently skipping main.
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
 if (isMain) {
   const expected = buildIndex()
   if (process.argv.includes('--check')) {
@@ -127,5 +131,14 @@ if (isMain) {
   else {
     fs.writeFileSync(INDEX_FILE, expected)
     console.log(`generate-index: wrote ${INDEX_FILE}`)
+    const games = expected.match(/^\| [^|]+ \|/gm)?.length ?? 0
+    logScan({
+      pass: 'generate-index',
+      scope: 'games/**/*.okf.md frontmatter',
+      scanned: `${games} table rows`,
+      findings: 0,
+      complete: true,
+      note: `wrote ${INDEX_FILE.replaceAll('\\', '/')}`,
+    })
   }
 }

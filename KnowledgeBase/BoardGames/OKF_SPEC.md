@@ -11,7 +11,7 @@ Current version: **0.2**. Every document in the corpus carries `okf_version: 0.2
 ```yaml
 ---
 okf_version: 0.2
-type: game_index | sources | rule_category | reception | better_if | scout_report | visual_reference | pattern | operations | digital_card_game_index | digital_card_sources | digital_card_glossary | digital_card_keyword | card_record
+type: game_index | sources | rule_category | reception | better_if | scout_report | visual_reference | pattern | operations | design_reference | digital_card_game_index | digital_card_sources | digital_card_glossary | digital_card_keyword | card_record
 game:
   title: ""
   slug: ""
@@ -45,6 +45,25 @@ Field rules:
 - `visual_reference` is a game-scoped manifest at `games/<slug>/visuals/packet.okf.md`. It carries the game metadata and mechanics firewall plus the visual packet contract below.
 - Digital card-game docs (`digital_card_game_index`, `digital_card_sources`, `digital_card_glossary`, `digital_card_keyword`, `card_record`) are source-evidence records for large digital card corpora. They are exempt from board-game `mechanics` vocabulary requirements; `card_record` may use a `card:` frontmatter block instead of `game:`.
 - A `card_record`'s `card:` block must carry `name`, `slug`, `source_id`, `ordinal`, and a `cost:` field. Digital card schemas may use a scalar cost (for example `"1"`, `"X"`, or `"-"`) or a nested vector. The Dawncaster vector retains all nine fields (`dex`, `int`, `str`, `holy`, `neutral`, `dexint`, `dexstr`, `intstr`, `blood`) nested one level below `cost:` (4-space indent); the validator enforces that nesting when the vector form is used.
+
+## Design references (`KnowledgeBase/References/`)
+
+`type: design_reference` records hold **outside design knowledge** — published
+guides, designer interviews, GDC talks, postmortems, community craft wisdom —
+converted into source-backed OKF form. They are not about any single game, so
+they omit the `game:` block and `scope`; the validator exempts them from the
+game-doc requirements. Discipline that still applies:
+
+- Full `sources` registry + `Claim / Source / Evidence / Confidence` triplets
+  in the body. Claims taken from search excerpts (body never fetched) must be
+  marked `Confidence: low` and listed under Open questions for a later audit.
+- `mechanics` tags are optional but encouraged (metadata firewall: tag the
+  mechanisms the reference is about, e.g. `[deck-building, market]`).
+- `better_if_labels` optional; tag them when the reference speaks to those
+  friction areas.
+
+Layout: topic folders under `KnowledgeBase/References/` (e.g.
+`References/deckbuilding/`). These docs are not part of the game INDEX.
 
 ## Mechanics vocabulary (controlled)
 

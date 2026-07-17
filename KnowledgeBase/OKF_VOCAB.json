@@ -3,7 +3,7 @@
   "okf_version": "0.2",
   "types": [
     "game_index", "sources", "rule_category", "reception", "better_if", "scout_report",
-    "pattern", "operations", "visual_reference",
+    "pattern", "operations", "visual_reference", "design_reference",
     "digital_card_game_index", "digital_card_sources", "digital_card_glossary", "digital_card_keyword", "card_record"
   ],
   "game_types": ["game_index", "sources", "rule_category", "reception", "better_if", "scout_report", "visual_reference"],

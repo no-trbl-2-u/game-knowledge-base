@@ -61,6 +61,16 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/okf-guard.mjs stop"
+          }
+        ]
+      }
     ]
   }
 }
