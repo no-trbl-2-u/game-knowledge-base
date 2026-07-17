@@ -20,6 +20,7 @@ BGG complexity weight from the game's discovery source.
 | gloomhaven | Gloomhaven | 2017 | 3.90 | campaign-game, cooperative-game, hand-management, point-to-point-movement, variable-player-powers | onboarding, setup-teardown, downtime, campaign-progression | needs_followup:1 verified:10 | 11 |
 | heat-pedal-to-the-metal | Heat: Pedal to the Metal | 2022 | 2.20 | hand-management, deck-bag-and-pool-building, push-your-luck, catch-up-mechanism, simultaneous-action-selection, race, solo-solitaire-game, variable-setup | onboarding, component-clarity, turn-pacing, randomness, strategic-depth | verified | 11 |
 | hoplomachus-remastered | Hoplomachus: Remastered | 2022 | null | cooperative-game, deck-bag-and-pool-building, dice-rolling, hand-management, variable-player-powers, solo-solitaire-game | onboarding, setup-teardown, component-clarity, rules-ambiguity, strategic-depth | needs_followup:2 verified:9 | 11 |
+| kingdom-death-monster | Kingdom Death: Monster | 2015 | null | campaign-game, cooperative-game, dice-rolling, grid-movement, variable-player-powers | onboarding, setup-teardown, randomness, campaign-progression, combat-resolution | needs_followup:11 | 11 |
 | legendary-encounters-an-alien-deck-building-game | Legendary Encounters: An Alien Deck Building Game | 2014 | 2.71 | cooperative-game, deck-bag-and-pool-building, deck-building, hand-management, open-drafting, solo-solitaire-game, variable-player-powers | onboarding, setup-teardown, rules-ambiguity, component-clarity, randomness | draft:5 needs_followup:2 verified:4 | 11 |
 | mage-knight | Mage Knight Board Game | 2011 | 4.38 | deck-building, hand-management, card-play-conflict-resolution, modular-board, grid-movement, dice-rolling, cooperative-game, solo-solitaire-game, variable-player-powers, campaign-game | rules-ambiguity, downtime, solo-coop-automation, player-interaction, onboarding | verified | 11 |
 | marvel-champions-the-card-game | Marvel Champions: The Card Game | 2019 | null | cooperative-game, deck-building, hand-management, solo-solitaire-game, variable-player-powers | setup-teardown, onboarding, strategic-depth, expansion-bloat | needs_followup:1 verified:10 | 11 |
@@ -39,17 +40,17 @@ BGG complexity weight from the game's discovery source.
 | action-selection | ark-nova |
 | area-majority-influence | root |
 | area-movement | root |
-| campaign-game | arkham-horror-the-card-game, gi-joe-deck-building-game, gloomhaven, mage-knight, oathsworn-into-the-deepwood, slay-the-spire-the-board-game |
+| campaign-game | arkham-horror-the-card-game, gi-joe-deck-building-game, gloomhaven, kingdom-death-monster, mage-knight, oathsworn-into-the-deepwood, slay-the-spire-the-board-game |
 | card-play-conflict-resolution | mage-knight |
 | catch-up-mechanism | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
-| cooperative-game | aeons-end, arkham-horror-the-card-game, gi-joe-deck-building-game, gloomhaven, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, spirit-island |
+| cooperative-game | aeons-end, arkham-horror-the-card-game, gi-joe-deck-building-game, gloomhaven, hoplomachus-remastered, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, spirit-island |
 | deck-bag-and-pool-building | aeons-end, arkham-horror-the-card-game, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, the-quacks-of-quedlinburg |
 | deck-building | aeons-end, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game |
-| dice-rolling | hoplomachus-remastered, mage-knight, oathsworn-into-the-deepwood, root, the-quacks-of-quedlinburg |
+| dice-rolling | hoplomachus-remastered, kingdom-death-monster, mage-knight, oathsworn-into-the-deepwood, root, the-quacks-of-quedlinburg |
 | end-game-bonuses | ark-nova |
 | force-commitment | dune-imperium |
 | grid-coverage | ark-nova |
-| grid-movement | mage-knight |
+| grid-movement | kingdom-death-monster, mage-knight |
 | hand-management | aeons-end, ark-nova, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, gloomhaven, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, root, slay-the-spire-the-board-game, spirit-island |
 | income | ark-nova |
 | modular-board | mage-knight, spirit-island |
@@ -64,6 +65,6 @@ BGG complexity weight from the game's discovery source.
 | solo-solitaire-game | aeons-end, ark-nova, arkham-horror-the-card-game, gi-joe-deck-building-game, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game, spirit-island |
 | tableau-building | ark-nova |
 | tile-placement | ark-nova |
-| variable-player-powers | aeons-end, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, gloomhaven, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, root, slay-the-spire-the-board-game, spirit-island |
+| variable-player-powers | aeons-end, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, gloomhaven, hoplomachus-remastered, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, root, slay-the-spire-the-board-game, spirit-island |
 | variable-setup | ark-nova, heat-pedal-to-the-metal, root, spirit-island, the-quacks-of-quedlinburg |
 | worker-placement | dune-imperium |
