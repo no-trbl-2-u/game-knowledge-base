@@ -5,3 +5,4 @@ consumes top-down: check off with the run that covers it.
 
 - [x] [The Quacks of Quedlinburg](KnowledgeBase/BoardGames/games/the-quacks-of-quedlinburg/) — push-your-luck bust economy and rubber-band catch-up reception (covered 2026-07-05)
 - [ ] card costing benchmarks (MTG mana curve + goldfish clock, Hearthstone vanilla test, Dominion Big Money baseline) — price-experiment needs costing prior art with reception evidence
+- [ ] Astrea: Six-Sided Oracles — dice-builder rules + reception (no-blank-faces design, corruption/purify economy); wanted for spec 33 dice-as-equipment prior art
