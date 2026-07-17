@@ -7,3 +7,4 @@ consumes top-down: check off with the run that covers it.
 - [ ] card costing benchmarks (MTG mana curve + goldfish clock, Hearthstone vanilla test, Dominion Big Money baseline) — price-experiment needs costing prior art with reception evidence
 - [ ] Astrea: Six-Sided Oracles — dice-builder rules + reception (no-blank-faces design, corruption/purify economy); wanted for spec 33 dice-as-equipment prior art
 - [ ] Dicey Dungeons — rules + reception (dice always usable: randomness decides what, not whether); wanted for spec 33 dice-as-equipment prior art
+- [ ] Slice & Dice — rules + reception (miss-heavy faces tolerated via reroll ritual + visible per-level die upgrades); wanted for spec 33 dice-as-equipment prior art
