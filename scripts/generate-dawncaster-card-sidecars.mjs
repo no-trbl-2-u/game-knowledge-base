@@ -22,6 +22,8 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { logScan } from './telemetry-log.mjs'
 
 const DIR = 'KnowledgeBase/DigitalCardGames/dawncaster'
 const CARDS_DIR = path.join(DIR, 'cards')
@@ -120,7 +122,9 @@ export function buildSidecars(cards = loadCards()) {
   }
 }
 
-const isMain = process.argv[1] && path.resolve(process.argv[1]) === new URL(import.meta.url).pathname
+// fileURLToPath, not URL.pathname: the pathname form ('/C:/...') never
+// equals path.resolve ('C:\...') on Windows, silently skipping main.
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
 if (isMain) {
   const artifacts = buildSidecars()
   if (process.argv.includes('--check')) {
@@ -140,5 +144,14 @@ if (isMain) {
       fs.writeFileSync(file, content)
       console.log(`generate-dawncaster-card-sidecars: wrote ${file}`)
     }
+    const cardCount = JSON.parse(artifacts[path.join(DIR, 'cards.json')]).card_count
+    logScan({
+      pass: 'generate-sidecars',
+      scope: 'dawncaster/cards/*.okf.md',
+      scanned: `${cardCount} cards`,
+      findings: 0,
+      complete: true,
+      note: `wrote ${Object.keys(artifacts).length} sidecar files`,
+    })
   }
 }

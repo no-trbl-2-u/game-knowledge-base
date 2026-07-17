@@ -5,6 +5,7 @@
 //
 //   node .claude/hooks/okf-guard.mjs pre-write    # PreToolUse (Write|Edit)
 //   node .claude/hooks/okf-guard.mjs post-write   # PostToolUse (Write|Edit)
+//   node .claude/hooks/okf-guard.mjs stop         # Stop
 //   node .claude/hooks/okf-guard.mjs self-test    # canned rule cases
 //
 // pre-write : blocks hand-edits to GENERATED files (exit 2 + reason on
@@ -14,11 +15,17 @@
 //             scripts/validate-okf.mjs on just that file and feeds findings
 //             back to the agent (exit 2 + findings on stderr). Instant
 //             schema feedback instead of a red validate job later.
+// stop      : warn when a turn ends with a dirty tree or unpushed commits
+//             (the corpus passes commit+push to main as one atomic act;
+//             leftover work is invisible to the next scheduled pass). With
+//             KB_STRICT_STOP=1 it blocks the stop instead — and breaks its
+//             own cycle after 3 consecutive blocks, so a genuinely wedged
+//             turn can still end. Ported from Axiomancer's guard.mjs.
 //
 // Exit codes (Claude Code hook contract):
 //   0 = allow / clean;  2 = block (pre) or report findings (post).
 
-import { spawnSync } from 'node:child_process'
+import { execSync, spawnSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -97,6 +104,68 @@ function postWrite(filePath) {
   return 0
 }
 
+// --- stop: commit+push discipline ---------------------------------------
+
+function git(args) {
+  return execSync(`git ${args}`, {
+    cwd: REPO_ROOT,
+    encoding: 'utf-8',
+    stdio: ['ignore', 'pipe', 'ignore'],
+  }).trim()
+}
+
+// Strict mode breaks its own cycle: 3 consecutive blocked stops →
+// warn-and-allow (blocking forever would wedge the pass; the underlying
+// failure is the real finding).
+const COUNTER = path.join(REPO_ROOT, '.git', 'okf-stop-blocks')
+
+function bumpBlockCounter() {
+  let n = 0
+  try { n = Number(fs.readFileSync(COUNTER, 'utf-8')) || 0 } catch { /* first block */ }
+  try { fs.writeFileSync(COUNTER, String(n + 1)) } catch { /* non-fatal */ }
+  return n
+}
+
+function resetBlockCounter() {
+  try { fs.rmSync(COUNTER, { force: true }) } catch { /* non-fatal */ }
+}
+
+function stopCheck(input) {
+  let dirty = ''
+  let unpushed = 0
+  try {
+    dirty = git('status --porcelain')
+  }
+  catch { return 0 } // not a git repo / git unavailable — nothing to enforce
+  try {
+    unpushed = Number(git('rev-list --count @{u}..HEAD')) || 0
+  }
+  catch { unpushed = 0 } // no upstream — push discipline can't apply
+  if (!dirty && unpushed === 0) {
+    resetBlockCounter()
+    return 0
+  }
+
+  const reason =
+    (dirty ? `dirty tree (${dirty.split('\n').length} paths)` : '')
+    + (dirty && unpushed ? ' + ' : '')
+    + (unpushed ? `${unpushed} unpushed commit(s)` : '')
+  const message =
+    `okf-guard: turn is ending with ${reason}. Corpus passes commit and `
+    + 'push to main as a single atomic act — the next scheduled pass '
+    + 'pulls from origin and will not see this work. Finish the '
+    + 'commit+push, or note the leftover in the pass\'s own log.'
+
+  const strict = process.env.KB_STRICT_STOP === '1'
+  const alreadyContinuing = input?.stop_hook_active === true
+  if (strict && !alreadyContinuing && bumpBlockCounter() < 3) {
+    console.error(message)
+    return 2
+  }
+  console.error(message + ' (warning only)')
+  return 0
+}
+
 function selfTest() {
   const cases = [
     ['pre-write blocks the generated index',
@@ -130,6 +199,15 @@ const mode = process.argv[2]
 if (mode === 'self-test') process.exit(selfTest())
 
 const input = readStdinJson()
+if (mode === 'stop') {
+  try { process.exit(stopCheck(input)) }
+  catch (err) {
+    // Fail-open: a guard bug must not wedge the pass.
+    console.error(`okf-guard: internal error (fail-open): ${err?.message}`)
+    process.exit(0)
+  }
+}
+
 const filePath = input?.tool_input?.file_path
 if (!filePath) process.exit(0) // fail-open: nothing to judge
 

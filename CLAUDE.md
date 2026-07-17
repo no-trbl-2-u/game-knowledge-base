@@ -33,7 +33,10 @@ node scripts/validate-okf.mjs <files...> # just those files
 
 A PostToolUse hook runs the single-file check after every write under
 `KnowledgeBase/` and reports findings immediately; the `validate` CI job
-blocks on the same findings. Controlled vocabularies (mechanics slugs,
+blocks on the same findings. A Stop hook warns when a turn ends with a
+dirty tree or unpushed commits (corpus passes commit+push atomically).
+Full-corpus scans log a row to `TELEMETRY.md` (what was scanned, when,
+complete or not) — data for the human, never a work queue. Controlled vocabularies (mechanics slugs,
 better-if labels, enums) are pinned — extend the vocabulary source +
 `OKF_SPEC.md` first, never freelance a new tag.
 

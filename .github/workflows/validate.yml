@@ -14,6 +14,8 @@ on:
       - 'scripts/validate-okf.mjs'
       - 'scripts/generate-index.mjs'
       - 'scripts/generate-dawncaster-card-sidecars.mjs'
+      - 'scripts/telemetry-log.mjs'
+      - '.claude/hooks/okf-guard.mjs'
       - '.github/workflows/validate.yml'
   pull_request:
     paths:
@@ -21,6 +23,8 @@ on:
       - 'scripts/validate-okf.mjs'
       - 'scripts/generate-index.mjs'
       - 'scripts/generate-dawncaster-card-sidecars.mjs'
+      - 'scripts/telemetry-log.mjs'
+      - '.claude/hooks/okf-guard.mjs'
       - '.github/workflows/validate.yml'
 
 permissions:
@@ -34,3 +38,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate OKF corpus
         run: node scripts/validate-okf.mjs
+      # A broken edit to the (fail-open) hook would silently disable the
+      # generated-file firewall; the self-test catches that the day it lands.
+      - name: okf-guard self-test
+        run: node .claude/hooks/okf-guard.mjs self-test

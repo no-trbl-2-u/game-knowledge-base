@@ -19,6 +19,7 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import { logScan } from './telemetry-log.mjs'
 
 const KB = 'KnowledgeBase'
 const TIMEOUT_MS = 12_000
@@ -99,5 +100,14 @@ else {
   }
   for (const r of suspect) console.log(`  suspect ${r.url} (${r.status}) — ${r.files.length} citing file(s)`)
 }
+
+logScan({
+  pass: 'check-links',
+  scope: 'all frontmatter url: in KnowledgeBase/',
+  scanned: `${results.length} unique urls`,
+  findings: dead.length + suspect.length,
+  complete: results.length === entries.length,
+  note: `${dead.length} dead, ${suspect.length} suspect`,
+})
 
 process.exit(dead.length ? 1 : 0)

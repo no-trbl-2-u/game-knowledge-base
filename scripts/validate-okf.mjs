@@ -14,6 +14,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { buildIndex } from './generate-index.mjs'
 import { buildSidecars } from './generate-dawncaster-card-sidecars.mjs'
+import { logScan } from './telemetry-log.mjs'
 
 // --- controlled vocabularies -------------------------------------------
 // SINGLE SOURCE: KnowledgeBase/OKF_VOCAB.json (OKF_SPEC.md is the
@@ -168,6 +169,18 @@ if (fullCorpus) {
   catch (err) {
     flag('KnowledgeBase/DigitalCardGames/dawncaster', `card sidecar generation failed: ${err.message}`)
   }
+}
+
+// Full-corpus runs log to TELEMETRY.md; single-file runs (the post-write
+// hook fires one per record written) would drown the log and are skipped.
+if (fullCorpus) {
+  logScan({
+    pass: 'validate-okf',
+    scope: 'full corpus + index/sidecar freshness',
+    scanned: `${files.length} files`,
+    findings: findings.length,
+    complete: true,
+  })
 }
 
 if (findings.length) {

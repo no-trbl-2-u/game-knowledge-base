@@ -29,6 +29,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Capture pre-run HEAD
+        id: pre
+        run: echo "head=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
       - name: Run Claude (patterns synthesis)
         uses: anthropics/claude-code-action@v1
         with:
@@ -40,3 +44,16 @@ jobs:
             --dangerously-skip-permissions
             --model claude-sonnet-5
             --allowedTools "Bash,Edit,Write,Read,Glob,Grep,Task,TodoWrite,WebFetch,WebSearch"
+
+      # Every patterns run must log to RUNLOG.md, even a no-op — the
+      # 2026-07-05 incident was a run that ended silently and left no
+      # evidence it had happened. Prose alone didn't hold; this does.
+      - name: Enforce RUNLOG rule
+        run: |
+          if git log "${{ steps.pre.outputs.head }}..HEAD" --name-only --format= \
+              | grep -q '^KnowledgeBase/BoardGames/patterns/RUNLOG.md$'; then
+            echo "RUNLOG row committed — rule satisfied."
+          else
+            echo "::error title=Silent patterns run::No commit between ${{ steps.pre.outputs.head }} and HEAD touched KnowledgeBase/BoardGames/patterns/RUNLOG.md. Every run logs, even no-ops (see the 2026-07-05 incident in RUNLOG.md)."
+            exit 1
+          fi
