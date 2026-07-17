@@ -15,3 +15,4 @@ deterministic tier's.
 | when (UTC) | pass | scope | scanned | findings | complete | note |
 |---|---|---|---|---|---|---|
 | 2026-07-17T04:10:05Z | validate-okf | full corpus + index/sidecar freshness | 1947 files | 0 | yes | - |
+| 2026-07-17T04:35:32Z | validate-okf | full corpus + index/sidecar freshness | 2392 files | 0 | yes | - |
