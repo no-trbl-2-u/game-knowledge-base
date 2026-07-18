@@ -19,6 +19,7 @@ BGG complexity weight from the game's discovery source.
 | gi-joe-deck-building-game | G.I. JOE Deck-Building Game | 2021 | 2.50 | cooperative-game, deck-building, hand-management, variable-player-powers, solo-solitaire-game, campaign-game | onboarding, setup-teardown, strategic-depth, component-clarity, campaign-progression | 4 | [packet](games/gi-joe-deck-building-game/visuals/packet.okf.md) · [sheet](games/gi-joe-deck-building-game/visuals/contact-sheet.webp) | needs_followup:2 verified:10 | 12 |
 | gloomhaven | Gloomhaven | 2017 | 3.90 | campaign-game, cooperative-game, hand-management, point-to-point-movement, variable-player-powers | onboarding, setup-teardown, downtime, campaign-progression | 4 | [packet](games/gloomhaven/visuals/packet.okf.md) · [sheet](games/gloomhaven/visuals/contact-sheet.webp) | needs_followup:1 verified:11 | 12 |
 | heat-pedal-to-the-metal | Heat: Pedal to the Metal | 2022 | 2.20 | hand-management, deck-bag-and-pool-building, push-your-luck, catch-up-mechanism, simultaneous-action-selection, race, solo-solitaire-game, variable-setup | onboarding, component-clarity, turn-pacing, randomness, strategic-depth | 4 | [packet](games/heat-pedal-to-the-metal/visuals/packet.okf.md) · [sheet](games/heat-pedal-to-the-metal/visuals/contact-sheet.webp) | verified | 12 |
+| heroes-of-terrinoth | Heroes of Terrinoth | 2018 | 2.50 | action-retrieval, cooperative-game, dice-rolling, solo-solitaire-game, variable-player-powers | turn-pacing, randomness, strategic-depth, campaign-progression, balance-faction-asymmetry | 4 | [packet](games/heroes-of-terrinoth/visuals/packet.okf.md) · [sheet](games/heroes-of-terrinoth/visuals/contact-sheet.webp) | needs_followup:1 verified:11 | 12 |
 | hoplomachus-remastered | Hoplomachus: Remastered | 2022 | null | cooperative-game, deck-bag-and-pool-building, dice-rolling, hand-management, variable-player-powers, solo-solitaire-game | onboarding, setup-teardown, component-clarity, rules-ambiguity, strategic-depth | 4 | [packet](games/hoplomachus-remastered/visuals/packet.okf.md) · [sheet](games/hoplomachus-remastered/visuals/contact-sheet.webp) | needs_followup:2 verified:10 | 12 |
 | kingdom-death-monster | Kingdom Death: Monster | 2015 | null | campaign-game, cooperative-game, dice-rolling, grid-movement, variable-player-powers | onboarding, setup-teardown, randomness, campaign-progression, combat-resolution | 4 | [packet](games/kingdom-death-monster/visuals/packet.okf.md) · [sheet](games/kingdom-death-monster/visuals/contact-sheet.webp) | needs_followup:11 verified:1 | 12 |
 | legendary-encounters-an-alien-deck-building-game | Legendary Encounters: An Alien Deck Building Game | 2014 | 2.71 | cooperative-game, deck-bag-and-pool-building, deck-building, hand-management, open-drafting, solo-solitaire-game, variable-player-powers | onboarding, setup-teardown, rules-ambiguity, component-clarity, randomness | 4 | [packet](games/legendary-encounters-an-alien-deck-building-game/visuals/packet.okf.md) · [sheet](games/legendary-encounters-an-alien-deck-building-game/visuals/contact-sheet.webp) | draft:5 needs_followup:2 verified:5 | 12 |
@@ -36,17 +37,17 @@ BGG complexity weight from the game's discovery source.
 |---|---|
 | action-points | arkham-horror-the-card-game, root |
 | action-queue | root |
-| action-retrieval | root |
+| action-retrieval | heroes-of-terrinoth, root |
 | action-selection | ark-nova |
 | area-majority-influence | root |
 | area-movement | root |
 | campaign-game | arkham-horror-the-card-game, gi-joe-deck-building-game, gloomhaven, kingdom-death-monster, mage-knight, oathsworn-into-the-deepwood, slay-the-spire-the-board-game |
 | card-play-conflict-resolution | mage-knight |
 | catch-up-mechanism | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
-| cooperative-game | aeons-end, arkham-horror-the-card-game, gi-joe-deck-building-game, gloomhaven, hoplomachus-remastered, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, spirit-island |
+| cooperative-game | aeons-end, arkham-horror-the-card-game, gi-joe-deck-building-game, gloomhaven, heroes-of-terrinoth, hoplomachus-remastered, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, spirit-island |
 | deck-bag-and-pool-building | aeons-end, arkham-horror-the-card-game, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, the-quacks-of-quedlinburg |
 | deck-building | aeons-end, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game |
-| dice-rolling | hoplomachus-remastered, kingdom-death-monster, mage-knight, oathsworn-into-the-deepwood, root, the-quacks-of-quedlinburg |
+| dice-rolling | heroes-of-terrinoth, hoplomachus-remastered, kingdom-death-monster, mage-knight, oathsworn-into-the-deepwood, root, the-quacks-of-quedlinburg |
 | end-game-bonuses | ark-nova |
 | force-commitment | dune-imperium |
 | grid-coverage | ark-nova |
@@ -62,9 +63,9 @@ BGG complexity weight from the game's discovery source.
 | race | dune-imperium, heat-pedal-to-the-metal |
 | set-collection | ark-nova |
 | simultaneous-action-selection | heat-pedal-to-the-metal, spirit-island, the-quacks-of-quedlinburg |
-| solo-solitaire-game | aeons-end, ark-nova, arkham-horror-the-card-game, gi-joe-deck-building-game, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game, spirit-island |
+| solo-solitaire-game | aeons-end, ark-nova, arkham-horror-the-card-game, gi-joe-deck-building-game, heat-pedal-to-the-metal, heroes-of-terrinoth, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game, spirit-island |
 | tableau-building | ark-nova |
 | tile-placement | ark-nova |
-| variable-player-powers | aeons-end, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, gloomhaven, hoplomachus-remastered, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, root, slay-the-spire-the-board-game, spirit-island |
+| variable-player-powers | aeons-end, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, gloomhaven, heroes-of-terrinoth, hoplomachus-remastered, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, root, slay-the-spire-the-board-game, spirit-island |
 | variable-setup | ark-nova, heat-pedal-to-the-metal, root, spirit-island, the-quacks-of-quedlinburg |
 | worker-placement | dune-imperium |

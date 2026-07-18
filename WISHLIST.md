@@ -10,3 +10,4 @@ consumes top-down: check off with the run that covers it.
 - [ ] Slice & Dice — rules + reception (miss-heavy faces tolerated via reroll ritual + visible per-level die upgrades); wanted for spec 33 dice-as-equipment prior art
 - [ ] Quarriors / Dice Masters — dice-pool builder rules + reception (dead-pool churn problem and its patches); wanted for spec 33 dice-as-equipment prior art
 - [ ] Elder Sign — rules + reception (uncompensated miss faces as the cautionary tale); wanted for spec 33 dice-as-equipment prior art
+- [x] [Heroes of Terrinoth](KnowledgeBase/BoardGames/games/heroes-of-terrinoth/) — direct T request; action-retrieval RPG combat, mixed hero/enemy dice, peril clock, and in-quest class upgrades (covered 2026-07-18)
