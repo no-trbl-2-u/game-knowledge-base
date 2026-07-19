@@ -11,3 +11,6 @@ consumes top-down: check off with the run that covers it.
 - [ ] Quarriors / Dice Masters — dice-pool builder rules + reception (dead-pool churn problem and its patches); wanted for spec 33 dice-as-equipment prior art
 - [ ] Elder Sign — rules + reception (uncompensated miss faces as the cautionary tale); wanted for spec 33 dice-as-equipment prior art
 - [x] [Heroes of Terrinoth](KnowledgeBase/BoardGames/games/heroes-of-terrinoth/) — direct T request; action-retrieval RPG combat, mixed hero/enemy dice, peril clock, and in-quest class upgrades (covered 2026-07-18)
+- [ ] A competitive area-control or engine-building game with reviewer-documented runaway-leader/snowballing complaints and no catch-up mechanism — patterns/runaway-leader.okf.md currently synthesizes from a single game (Quacks of Quedlinburg); wanted 2026-07-19 patterns pass
+- [ ] A classic market-centric competitive deckbuilder (Dominion/Clank!-style) — patterns/deck-building.okf.md corpus is entirely cooperative or campaign-LCG deckbuilders, no competitive-market angle; wanted 2026-07-19 patterns pass
+- [ ] A verified (non-needs_followup), combat-heavy skirmish/wargame — patterns/combat-resolution.okf.md has only 2 games and one (Kingdom Death: Monster) is still needs_followup; wanted 2026-07-19 patterns pass
