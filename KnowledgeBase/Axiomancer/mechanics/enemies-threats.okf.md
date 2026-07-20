@@ -7,7 +7,7 @@ sources:
     url: "file:///root/Workspace/SomberSoft/Axiomancer/devlog/data/enemies.json"
     kind: other
     provenance: official
-    retrieved_at: "2026-07-13"
+    retrieved_at: "2026-07-20"
     notes: "56 generated enemy records."
   - id: "src-002"
     title: "Threat sequence resolver"

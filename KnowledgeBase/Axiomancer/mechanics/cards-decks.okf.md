@@ -7,7 +7,7 @@ sources:
     url: "file:///root/Workspace/SomberSoft/Axiomancer/axiomancer-mechanics/src/Cards/types.ts"
     kind: other
     provenance: official
-    retrieved_at: "2026-07-13"
+    retrieved_at: "2026-07-20"
     notes: "Card categories, ranks, rarities, types, and special mechanics."
   - id: "src-002"
     title: "Combat deck presets"
@@ -46,6 +46,11 @@ Cards are fallacies and paradoxes in a five-resource resonance economy. The live
 - Claim: Focused seeded drafts weight focus-fitting verb classes at 4x and guarantee defend plus status coverage when possible.
   Source: src-002
   Evidence: `FOCUS_WEIGHT`, `STATUS_VERB_CLASSES`, and draft contract in `combat.deck-draft.ts`.
+  Confidence: high
+
+- Claim: The card contract treats the paid line as a broad verb surface including die manipulation, DoT conversion/payoffs, alternate-win pressure, and replay/recall operations rather than raw strike damage.
+  Source: src-001
+  Evidence: `CardSpecialMechanic` and `CardRider` unions include RUPTURE, REAP, SWAY, PERORATION, OMEN, ECHO, REPLAY, and die-bank/forge operations; the `Card` contract documents that the damage step is removed.
   Confidence: high
 
 ## Catalog link

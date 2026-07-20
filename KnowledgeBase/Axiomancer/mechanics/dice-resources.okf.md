@@ -7,7 +7,7 @@ sources:
     url: "file:///root/Workspace/SomberSoft/Axiomancer/axiomancer-mechanics/src/Combat/combat.dice.ts"
     kind: other
     provenance: official
-    retrieved_at: "2026-07-13"
+    retrieved_at: "2026-07-20"
     notes: "Seeded stance dice, reserve, and floating dice."
   - id: "src-002"
     title: "Cards system types"

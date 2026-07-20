@@ -17,7 +17,7 @@ sources:
     url: "file:///root/Workspace/SomberSoft/Axiomancer/AGENTS.md"
     kind: other
     provenance: official
-    retrieved_at: "2026-07-13"
+    retrieved_at: "2026-07-20"
     notes: "Defines package ownership and live engine-data surfaces."
   - id: "src-002"
     title: "Axiomancer combat types"
@@ -50,7 +50,7 @@ Axiomancer is a philosophy-themed RPG whose current engine centers on Hazard-pat
 
 - Claim: The current catalog contains 70 cards, 24 effects, and 56 enemies.
   Source: src-003
-  Evidence: generated JSON arrays at retrieval time.
+  Evidence: generated JSON arrays at 2026-07-20 retrieval; SHA-256 cards `0145cb2588548d7aeec7b6c185f6085660f42c9ac822363fb0c714b492211360`, effects `41add8400bae0e8939ffda9ae358930c3653b5f78d741886227998f3aa6dac35`, enemies `e896356b35adafb199b77831ac778388d26c79f2b5f537708c98a79e0d4b8078`.
   Confidence: high
 
 - Claim: Combat uses heart/body/mind stances and action phases including attack, defend, item, flee, spare, and exploit.

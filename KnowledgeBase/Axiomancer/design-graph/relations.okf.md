@@ -32,6 +32,16 @@ status: verified
   Evidence: each preset carries 5 body / 5 mind / 5 heart cards.
   Confidence: high
 
+- `befriend` --opens--> `mercy-choice` --branches-to--> `spare | exploit`.
+  Source: `axiomancer-mechanics/src/Combat/types.ts`
+  Evidence: explicit mercy phase and actions in the combat contract.
+  Confidence: high
+
+- `card-paid-line` --routes-through--> `die-ledgers + status-payoffs + alternate-win meters`.
+  Source: `axiomancer-mechanics/src/Cards/types.ts`
+  Evidence: special mechanics and rider unions include RUPTURE, REAP, SWAY, PERORATION, OMEN, ECHO, REPLAY, and die-bank/forge operations.
+  Confidence: high
+
 ## Comparison-ready archetypes
 
 - Hazard-pattern combat: persistent board objects, full-information threat patterns, and pressure from future phases.

@@ -7,7 +7,7 @@ sources:
     url: "file:///root/Workspace/SomberSoft/Axiomancer/axiomancer-mechanics/src/Combat/types.ts"
     kind: other
     provenance: official
-    retrieved_at: "2026-07-13"
+    retrieved_at: "2026-07-20"
     notes: "Stance/action/phase contract."
   - id: "src-002"
     title: "Combat threat resolver"
@@ -39,6 +39,11 @@ Combat is a simultaneous-read encounter. The player selects a heart/body/mind st
 - Claim: Conditional threat branches commit from observable phase-start state without RNG.
   Source: src-002
   Evidence: `evaluateThreatBranchCondition` and `commitThreatBranch`.
+  Confidence: high
+
+- Claim: Mercy is an explicit combat phase and `spare`/`exploit` actions, not an implicit victory side effect.
+  Source: src-001
+  Evidence: `CombatPhase` includes `mercy_choice`; `Action` includes `spare` and `exploit`; state carries `mercyChoiceActive` and `friendshipResolutionAuthorized`.
   Confidence: high
 
 ## Design pressure

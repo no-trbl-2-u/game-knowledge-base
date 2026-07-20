@@ -7,7 +7,7 @@ sources:
     url: "file:///root/Workspace/SomberSoft/Axiomancer/axiomancer-mechanics/src/Effects/types.ts"
     kind: other
     provenance: official
-    retrieved_at: "2026-07-13"
+    retrieved_at: "2026-07-20"
     notes: "Effect payload and stacking contract."
   - id: "src-002"
     title: "Generated effect catalog"
@@ -39,6 +39,11 @@ Effects are runtime buffs and debuffs. The current catalog contains 24 entries: 
 - Claim: DoTs support round-start, round-end, card-played, damage-instance, and payoff trigger clocks.
   Source: src-001
   Evidence: `DotTriggerClock`.
+  Confidence: high
+
+- Claim: The effect payload exposes first-class surfaces for vulnerability, stance-keyed vulnerability, stance revelation/blur/lock, threat-rider suppression, and alternate DoT growth/decay behavior.
+  Source: src-001
+  Evidence: `EffectPayload` fields `damageTakenMult`, `damageTakenMultForStance`, `revealsStance`, `blursStanceHints`, `lockedStance`, `suppressesThreatRiders`, `dotModifiers`, and `tickAmplifyFlat`.
   Confidence: high
 
 ## Design pressure
