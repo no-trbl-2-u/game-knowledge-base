@@ -14,3 +14,4 @@ consumes top-down: check off with the run that covers it.
 - [ ] A competitive area-control or engine-building game with reviewer-documented runaway-leader/snowballing complaints and no catch-up mechanism — patterns/runaway-leader.okf.md currently synthesizes from a single game (Quacks of Quedlinburg); wanted 2026-07-19 patterns pass
 - [ ] A classic market-centric competitive deckbuilder (Dominion/Clank!-style) — patterns/deck-building.okf.md corpus is entirely cooperative or campaign-LCG deckbuilders, no competitive-market angle; wanted 2026-07-19 patterns pass
 - [ ] A verified (non-needs_followup), combat-heavy skirmish/wargame — patterns/combat-resolution.okf.md has only 2 games and one (Kingdom Death: Monster) is still needs_followup; wanted 2026-07-19 patterns pass
+- [ ] Gloomhaven monster ability decks — per-monster deck size, shuffle-icon reshuffle rule, and reception on card-driven enemy AI; corpus currently has only initiative + a visuals panel
