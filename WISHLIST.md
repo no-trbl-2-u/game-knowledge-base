@@ -15,3 +15,4 @@ consumes top-down: check off with the run that covers it.
 - [ ] A classic market-centric competitive deckbuilder (Dominion/Clank!-style) — patterns/deck-building.okf.md corpus is entirely cooperative or campaign-LCG deckbuilders, no competitive-market angle; wanted 2026-07-19 patterns pass
 - [ ] A verified (non-needs_followup), combat-heavy skirmish/wargame — patterns/combat-resolution.okf.md has only 2 games and one (Kingdom Death: Monster) is still needs_followup; wanted 2026-07-19 patterns pass
 - [ ] Gloomhaven monster ability decks — per-monster deck size, shuffle-icon reshuffle rule, and reception on card-driven enemy AI; corpus currently has only initiative + a visuals panel
+- [ ] Kingdom Death: Monster AI deck + hit-location deck — deck-as-boss-HP structure and telegraph/interfere reception; current KDM docs flag showdown timing as unverified
