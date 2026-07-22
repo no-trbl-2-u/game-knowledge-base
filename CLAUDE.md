@@ -55,6 +55,10 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 Commit style: single-purpose commits to `main`, message prefix per pass
 (`kb:`, `librarian:`, `patterns:`, `audit:`). No emojis, no
 `Co-Authored-By` trailers. Validator green before every commit.
+`TELEMETRY.md` travels with every commit that changes it: the tracked
+`.githooks/pre-commit` auto-stages it, `.githooks/pre-push` blocks a push
+when newer rows remain uncommitted, and session startup installs both through
+`core.hooksPath`.
 
 ## Downstream consumer
 
