@@ -26,6 +26,7 @@ BGG complexity weight from the game's discovery source.
 | legendary-encounters-an-alien-deck-building-game | Legendary Encounters: An Alien Deck Building Game | 2014 | 2.71 | cooperative-game, deck-bag-and-pool-building, deck-building, hand-management, open-drafting, solo-solitaire-game, variable-player-powers | onboarding, setup-teardown, rules-ambiguity, component-clarity, randomness | 4 | [packet](games/legendary-encounters-an-alien-deck-building-game/visuals/packet.okf.md) · [sheet](games/legendary-encounters-an-alien-deck-building-game/visuals/contact-sheet.webp) | draft:5 needs_followup:2 verified:5 | 12 |
 | mage-knight | Mage Knight Board Game | 2011 | 4.38 | deck-building, hand-management, card-play-conflict-resolution, modular-board, grid-movement, dice-rolling, cooperative-game, solo-solitaire-game, variable-player-powers, campaign-game | rules-ambiguity, downtime, solo-coop-automation, player-interaction, onboarding | 4 | [packet](games/mage-knight/visuals/packet.okf.md) · [sheet](games/mage-knight/visuals/contact-sheet.webp) | verified | 12 |
 | marvel-champions-the-card-game | Marvel Champions: The Card Game | 2019 | null | cooperative-game, deck-building, hand-management, solo-solitaire-game, variable-player-powers | setup-teardown, onboarding, strategic-depth, expansion-bloat | 4 | [packet](games/marvel-champions-the-card-game/visuals/packet.okf.md) · [sheet](games/marvel-champions-the-card-game/visuals/contact-sheet.webp) | needs_followup:1 verified:11 | 12 |
+| nemesis | Nemesis | 2018 | null | cooperative-game, dice-rolling, hand-management, hidden-information, modular-board, negotiation, solo-solitaire-game, variable-player-powers, variable-setup | onboarding, setup-teardown, component-clarity, rules-ambiguity, turn-pacing | 5 | [packet](games/nemesis/visuals/packet.okf.md) · [sheet](games/nemesis/visuals/contact-sheet.webp) | verified | 13 |
 | oathsworn-into-the-deepwood | Oathsworn: Into the Deepwood | 2022 | 3.70 | campaign-game, cooperative-game, dice-rolling, hand-management, point-to-point-movement, variable-player-powers | onboarding, setup-teardown, downtime, randomness, campaign-progression | 4 | [packet](games/oathsworn-into-the-deepwood/visuals/packet.okf.md) · [sheet](games/oathsworn-into-the-deepwood/visuals/contact-sheet.webp) | needs_followup:2 verified:10 | 12 |
 | root | Root | 2018 | 3.84 | action-points, action-queue, action-retrieval, area-majority-influence, area-movement, dice-rolling, hand-management, multi-use-cards, negotiation, variable-player-powers, variable-setup | onboarding, rules-ambiguity, downtime, strategic-depth, balance-faction-asymmetry | 4 | [packet](games/root/visuals/packet.okf.md) · [sheet](games/root/visuals/contact-sheet.webp) | verified | 12 |
 | slay-the-spire-the-board-game | Slay the Spire: The Board Game | 2024 | 2.90 | deck-building, cooperative-game, hand-management, campaign-game, point-to-point-movement, variable-player-powers, solo-solitaire-game | onboarding, setup-teardown, rules-ambiguity, component-clarity, campaign-progression | 4 | [packet](games/slay-the-spire-the-board-game/visuals/packet.okf.md) · [sheet](games/slay-the-spire-the-board-game/visuals/contact-sheet.webp) | needs_followup:1 verified:11 | 12 |
@@ -47,20 +48,21 @@ BGG complexity weight from the game's discovery source.
 | campaign-game | arkham-horror-the-card-game, gi-joe-deck-building-game, gloomhaven, kingdom-death-monster, mage-knight, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, tainted-grail-the-fall-of-avalon, too-many-bones |
 | card-play-conflict-resolution | mage-knight |
 | catch-up-mechanism | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
-| cooperative-game | aeons-end, arkham-horror-the-card-game, gi-joe-deck-building-game, gloomhaven, heroes-of-terrinoth, hoplomachus-remastered, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, spirit-island, tainted-grail-the-fall-of-avalon, too-many-bones |
+| cooperative-game | aeons-end, arkham-horror-the-card-game, gi-joe-deck-building-game, gloomhaven, heroes-of-terrinoth, hoplomachus-remastered, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, spirit-island, tainted-grail-the-fall-of-avalon, too-many-bones |
 | deck-bag-and-pool-building | aeons-end, arkham-horror-the-card-game, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, the-quacks-of-quedlinburg |
 | deck-building | aeons-end, arkham-horror-the-card-game, dark-pact, dune-imperium, gi-joe-deck-building-game, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game |
-| dice-rolling | heroes-of-terrinoth, hoplomachus-remastered, kingdom-death-monster, mage-knight, oathsworn-into-the-deepwood, root, the-quacks-of-quedlinburg, too-many-bones |
+| dice-rolling | heroes-of-terrinoth, hoplomachus-remastered, kingdom-death-monster, mage-knight, nemesis, oathsworn-into-the-deepwood, root, the-quacks-of-quedlinburg, too-many-bones |
 | end-game-bonuses | ark-nova |
 | force-commitment | dune-imperium |
 | grid-coverage | ark-nova |
 | grid-movement | kingdom-death-monster, mage-knight |
-| hand-management | aeons-end, ark-nova, arkham-horror-the-card-game, dark-pact, dune-imperium, gi-joe-deck-building-game, gloomhaven, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, root, slay-the-spire-the-board-game, spirit-island, tainted-grail-the-fall-of-avalon, too-many-bones |
+| hand-management | aeons-end, ark-nova, arkham-horror-the-card-game, dark-pact, dune-imperium, gi-joe-deck-building-game, gloomhaven, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, oathsworn-into-the-deepwood, root, slay-the-spire-the-board-game, spirit-island, tainted-grail-the-fall-of-avalon, too-many-bones |
+| hidden-information | nemesis |
 | income | ark-nova |
 | market | dark-pact |
-| modular-board | mage-knight, spirit-island |
+| modular-board | mage-knight, nemesis, spirit-island |
 | multi-use-cards | dune-imperium, root |
-| negotiation | root |
+| negotiation | nemesis, root |
 | open-drafting | legendary-encounters-an-alien-deck-building-game |
 | point-to-point-movement | gloomhaven, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, tainted-grail-the-fall-of-avalon |
 | push-your-luck | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
@@ -68,9 +70,9 @@ BGG complexity weight from the game's discovery source.
 | resource-management | tainted-grail-the-fall-of-avalon |
 | set-collection | ark-nova, dark-pact |
 | simultaneous-action-selection | heat-pedal-to-the-metal, spirit-island, the-quacks-of-quedlinburg |
-| solo-solitaire-game | aeons-end, ark-nova, arkham-horror-the-card-game, dark-pact, gi-joe-deck-building-game, heat-pedal-to-the-metal, heroes-of-terrinoth, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game, spirit-island, too-many-bones |
+| solo-solitaire-game | aeons-end, ark-nova, arkham-horror-the-card-game, dark-pact, gi-joe-deck-building-game, heat-pedal-to-the-metal, heroes-of-terrinoth, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, slay-the-spire-the-board-game, spirit-island, too-many-bones |
 | tableau-building | ark-nova |
 | tile-placement | ark-nova |
-| variable-player-powers | aeons-end, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, gloomhaven, heroes-of-terrinoth, hoplomachus-remastered, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, oathsworn-into-the-deepwood, root, slay-the-spire-the-board-game, spirit-island, tainted-grail-the-fall-of-avalon, too-many-bones |
-| variable-setup | ark-nova, dark-pact, heat-pedal-to-the-metal, root, spirit-island, the-quacks-of-quedlinburg |
+| variable-player-powers | aeons-end, arkham-horror-the-card-game, dune-imperium, gi-joe-deck-building-game, gloomhaven, heroes-of-terrinoth, hoplomachus-remastered, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, oathsworn-into-the-deepwood, root, slay-the-spire-the-board-game, spirit-island, tainted-grail-the-fall-of-avalon, too-many-bones |
+| variable-setup | ark-nova, dark-pact, heat-pedal-to-the-metal, nemesis, root, spirit-island, the-quacks-of-quedlinburg |
 | worker-placement | dune-imperium |
