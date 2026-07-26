@@ -55,10 +55,13 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 Commit style: single-purpose commits to `main`, message prefix per pass
 (`kb:`, `librarian:`, `patterns:`, `audit:`). No emojis, no
 `Co-Authored-By` trailers. Validator green before every commit.
-`TELEMETRY.md` travels with every commit that changes it: the tracked
-`.githooks/pre-commit` auto-stages it, `.githooks/pre-push` blocks a push
-when newer rows remain uncommitted, and session startup installs both through
-`core.hooksPath`.
+`TELEMETRY.md` travels with every delivery: the tracked `.githooks/pre-commit`
+auto-stages it with ordinary commits, and `.githooks/pre-push` automatically
+creates a telemetry-only finalization commit when a newer scan row appears
+between the last commit and a `main` push, then pushes the updated ref. The hook
+commits only `TELEMETRY.md`; unrelated staged or unstaged work is preserved.
+Session startup installs both hooks through `core.hooksPath`. Do not run a
+telemetry-writing validator after the final push verification.
 
 ## Downstream consumer
 

@@ -4,9 +4,41 @@ set -eu
 repo_root=$(git rev-parse --show-toplevel)
 cd "$repo_root"
 
-# A telemetry row written after the last commit must not be stranded by push.
+# An inner push created by this hook must not recurse.
+if [ "${KB_TELEMETRY_INNER_PUSH:-0}" = "1" ]; then
+  exit 0
+fi
+
+remote_name=${1:-origin}
+pushes_main=false
+while read -r local_ref local_sha remote_ref remote_sha; do
+  if [ "$local_ref" = "refs/heads/main" ] && [ "$remote_ref" = "refs/heads/main" ]; then
+    pushes_main=true
+  fi
+done
+
+# Only main delivery owns automatic telemetry finalization.
+if [ "$pushes_main" != "true" ]; then
+  exit 0
+fi
+
 if [ -n "$(git status --porcelain -- TELEMETRY.md)" ]; then
-  printf '%s\n' 'pre-push: TELEMETRY.md has uncommitted changes.' >&2
-  printf '%s\n' 'Commit normally; the pre-commit hook will stage it automatically.' >&2
-  exit 1
+  branch=$(git branch --show-current)
+  if [ "$branch" != "main" ]; then
+    printf '%s\n' 'pre-push: TELEMETRY.md is dirty, but HEAD is not main; refusing automatic commit.' >&2
+    exit 1
+  fi
+
+  # Commit only TELEMETRY.md. Preserve every unrelated staged/unstaged path.
+  git add -A -- TELEMETRY.md
+  git commit --only -m 'telemetry: finalize scan log' -- TELEMETRY.md
+
+  printf '%s\n' 'pre-push: committed TELEMETRY.md; pushing the updated main ref.' >&2
+  KB_TELEMETRY_INNER_PUSH=1 git push "$remote_name" refs/heads/main:refs/heads/main
+
+  # Refresh the ordinary remote-tracking ref when the hook received a named
+  # remote (rather than a URL), so the outer push leaves status synchronized.
+  if git remote get-url "$remote_name" >/dev/null 2>&1; then
+    git fetch --quiet "$remote_name" "refs/heads/main:refs/remotes/$remote_name/main"
+  fi
 fi
