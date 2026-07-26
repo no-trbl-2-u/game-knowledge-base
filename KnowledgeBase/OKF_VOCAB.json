@@ -30,7 +30,7 @@
     "legacy-game", "market", "modular-board", "multi-use-cards", "negotiation",
     "open-drafting", "pick-up-and-deliver", "point-to-point-movement",
     "push-your-luck", "race", "resource-management", "set-collection",
-    "simultaneous-action-selection", "solo-solitaire-game", "tableau-building",
+    "semi-cooperative-game", "simultaneous-action-selection", "solo-solitaire-game", "tableau-building",
     "tech-trees-tech-tracks", "tile-placement", "trick-taking",
     "turn-order-claim-action", "variable-player-powers", "variable-setup",
     "worker-placement"
