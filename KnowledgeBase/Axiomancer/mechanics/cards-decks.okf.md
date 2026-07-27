@@ -29,7 +29,7 @@ status: verified
 
 ## Summary
 
-Cards are fallacies and paradoxes in a five-resource resonance economy. The live library has 70 catalog records. Card ranks map to common, uncommon, and rare bands; card types are spell, enchantment, and disenchant.
+Cards are philosophical arguments in a five-resource resonance economy. The generated catalog has 79 projections, while the themed source library describes 70 unique cards. Card ranks map to common, uncommon, and rare bands; card types are spell, enchantment, and disenchant.
 
 ## Source-backed facts
 
@@ -51,6 +51,11 @@ Cards are fallacies and paradoxes in a five-resource resonance economy. The live
 - Claim: The card contract treats the paid line as a broad verb surface including die manipulation, DoT conversion/payoffs, alternate-win pressure, and replay/recall operations rather than raw strike damage.
   Source: src-001
   Evidence: `CardSpecialMechanic` and `CardRider` unions include RUPTURE, REAP, SWAY, PERORATION, OMEN, ECHO, REPLAY, and die-bank/forge operations; the `Card` contract documents that the damage step is removed.
+  Confidence: high
+
+- Claim: The current catalog separates starter and reward-origin records and distributes cards across ten named themes, with Bulwark the largest theme and Harvest the smallest.
+  Source: src-003
+  Evidence: generated `cards.json` chip counts at 2026-07-27 retrieval.
   Confidence: high
 
 ## Catalog link

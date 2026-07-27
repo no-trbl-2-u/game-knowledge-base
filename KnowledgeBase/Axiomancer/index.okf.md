@@ -48,14 +48,19 @@ Axiomancer is a philosophy-themed RPG whose current engine centers on Hazard-pat
   Evidence: `AGENTS.md` package table and hard rules.
   Confidence: high
 
-- Claim: The current catalog contains 70 cards, 24 effects, and 56 enemies.
+- Claim: The generated catalog currently contains 79 card projections, 24 effects, and 56 enemies.
   Source: src-003
-  Evidence: generated JSON arrays at 2026-07-20 retrieval; SHA-256 cards `0145cb2588548d7aeec7b6c185f6085660f42c9ac822363fb0c714b492211360`, effects `41add8400bae0e8939ffda9ae358930c3653b5f78d741886227998f3aa6dac35`, enemies `e896356b35adafb199b77831ac778388d26c79f2b5f537708c98a79e0d4b8078`.
+  Evidence: generated JSON array lengths at 2026-07-27 retrieval; SHA-256 cards `90147e3c4172a0872f87e8570243d1dc149f254149aedf1366a71f8d330628e7`, effects `41add8400bae0e8939ffda9ae358930c3653b5f78d741886227998f3aa6dac35`, enemies `e896356b35adafb199b77831ac778388d26c79f2b5f537708c98a79e0d4b8078`.
   Confidence: high
 
 - Claim: Combat uses heart/body/mind stances and action phases including attack, defend, item, flee, spare, and exploit.
   Source: src-002
   Evidence: `Stance`, `Action`, and `CombatPhase` declarations.
+  Confidence: high
+
+- Claim: The current mechanics work includes a player-cracked GLYPHS pilot, Upgradeable Dice as the default playtest witness, and preserved persistent-keyword contracts.
+  Source: src-001
+  Evidence: Axiomancer commits `ac1853b2` (GLYPHS pilot), `afd26600` (Upgradeable Dice witness default), and `53bc4050` (persistent keyword contracts), inspected 2026-07-27.
   Confidence: high
 
 ## Linked records

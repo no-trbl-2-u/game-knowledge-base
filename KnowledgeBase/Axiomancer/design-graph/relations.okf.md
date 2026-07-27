@@ -42,6 +42,21 @@ status: verified
   Evidence: special mechanics and rider unions include RUPTURE, REAP, SWAY, PERORATION, OMEN, ECHO, REPLAY, and die-bank/forge operations.
   Confidence: high
 
+- `card-catalog` --contains--> `starter-and-reward-projections`.
+  Source: `/root/Workspace/SomberSoft/Axiomancer/devlog/data/cards.json`
+  Evidence: 61 starter and 18 reward records at 2026-07-27 retrieval.
+  Confidence: high
+
+- `glyphs-pilot` --adds--> `player-cracked-charging-seals`.
+  Source: `/root/Workspace/SomberSoft/Axiomancer` commit `ac1853b2`
+  Evidence: commit title and mechanics history inspected 2026-07-27.
+  Confidence: high
+
+- `playtest-witness` --defaults-to--> `upgradeable-dice`.
+  Source: `/root/Workspace/SomberSoft/Axiomancer` commit `afd26600`
+  Evidence: commit title inspected 2026-07-27.
+  Confidence: high
+
 ## Comparison-ready archetypes
 
 - Hazard-pattern combat: persistent board objects, full-information threat patterns, and pressure from future phases.

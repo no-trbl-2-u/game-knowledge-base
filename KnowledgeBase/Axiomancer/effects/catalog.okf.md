@@ -17,7 +17,7 @@ status: verified
 
 - Claim: The effect catalog contains 24 entries: 14 buffs and 10 debuffs.
   Source: src-001
-  Evidence: JSON array length and `type` counts at 2026-07-20 retrieval; SHA-256 `41add8400bae0e8939ffda9ae358930c3653b5f78d741886227998f3aa6dac35`.
+  Evidence: JSON array length and `type` counts at 2026-07-27 retrieval; SHA-256 `41add8400bae0e8939ffda9ae358930c3653b5f78d741886227998f3aa6dac35`.
   Confidence: high
 
 - Claim: Catalog records expose id, name, type, glyph, color, kind, chips, and lines.

@@ -17,7 +17,7 @@ status: verified
 
 - Claim: The enemy catalog contains 56 records.
   Source: src-001
-  Evidence: JSON array length at 2026-07-20 retrieval; SHA-256 `e896356b35adafb199b77831ac778388d26c79f2b5f537708c98a79e0d4b8078`.
+  Evidence: JSON array length at 2026-07-27 retrieval; SHA-256 `e896356b35adafb199b77831ac778388d26c79f2b5f537708c98a79e0d4b8078`.
   Confidence: high
 
 - Claim: Catalog records expose id, name, level, difficulty, maxHealth, body/mind/heart stats, logic, stance hint, and card list.

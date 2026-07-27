@@ -7,7 +7,7 @@ sources:
     url: "file:///root/Workspace/SomberSoft/Axiomancer/axiomancer-mechanics/src/Combat/types.ts"
     kind: other
     provenance: official
-    retrieved_at: "2026-07-20"
+    retrieved_at: "2026-07-27"
     notes: "Stance/action/phase contract."
   - id: "src-002"
     title: "Combat threat resolver"

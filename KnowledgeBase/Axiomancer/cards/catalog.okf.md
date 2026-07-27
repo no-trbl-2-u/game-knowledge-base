@@ -15,9 +15,9 @@ status: verified
 
 ## Generated card index
 
-- Claim: The generated card catalog contains 70 cards.
+- Claim: The generated card catalog contains 79 card projections.
   Source: src-001
-  Evidence: JSON array length at 2026-07-20 retrieval; SHA-256 `0145cb2588548d7aeec7b6c185f6085660f42c9ac822363fb0c714b492211360`.
+  Evidence: JSON array length at 2026-07-27 retrieval; SHA-256 `90147e3c4172a0872f87e8570243d1dc149f254149aedf1366a71f8d330628e7`.
   Confidence: high
 
 - Claim: The catalog exposes stable id, name, printed chip metadata, pricing, and lines for each card.
@@ -27,7 +27,7 @@ status: verified
 
 ## Retrieval fields
 
-`id`, `name`, `pricing`, `chips`, and `lines` are the compact query surface. Current rank counts are Doxa 10, Lemma 10, Thesis 10, Theorem 10, Axiom 20, and Aporia 10. The live card library also exposes explicit paid summaries for die/state interactions such as rerolling spent dice, converting DoTs, and firing recalled FREE lines; the generated projection preserves those lines without duplicating the full library here. Raw records remain in the Axiomancer source tree; this KB record preserves the source trail rather than mirroring every printed face.
+`id`, `name`, `pricing`, `chips`, and `lines` are the compact query surface. Current rank counts are Doxa 12, Lemma 12, Thesis 16, Theorem 13, Axiom 18, and Aporia 8. Theme counts are bulwark 10; akrasia, forge, oracle, charm, echo, affliction, and peroration 8 each; control 7; harvest 6. The projection contains 64 spells, 9 enchantments, and 6 disenchants, with 61 starter and 18 reward records. Raw records remain in the Axiomancer source tree; this KB record preserves the source trail rather than mirroring every printed face.
 
 ## Current content delta
 
