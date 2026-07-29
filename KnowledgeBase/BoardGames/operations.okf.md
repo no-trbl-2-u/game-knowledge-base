@@ -31,6 +31,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-15"
     notes: "Axiomancer integration proposal: mechanics tags, corpus index, patterns layer, librarian gate, wishlist consumption, failed-source policy. 2026-07-15 audit: check-links flags this URL 'dead' (404) because game-knowledge-base is a private repo — unauthenticated fetch always 404s on issue pages. Re-confirmed via `gh issue view 1` (state: closed, body/comments intact, content matches Evidence quotes below); not link rot, no remediation needed."
+  - id: "src-004"
+    title: "T instruction: expand Bathcat daily scout to 60 games"
+    url: "local-session"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-07-29"
+    notes: "T replaced the single-game daily run with 20 cooperative games, 20 solo RPG board games, and 20 games under a rotating mechanic focus: campaign, deck/bag/dicebuilder, or semi-cooperative. Every report must ask for the next mechanic focus and recommend one."
 confidence: high
 status: verified
 ---
@@ -61,9 +68,9 @@ The current purpose is knowledge gathering only. Full integration into downstrea
   Evidence: T specified "Everyday, once a day at 6am"; cron job `44c13742fca9` is scheduled as `0 6 * * *`.
   Confidence: high
 
-- Claim: The scout should focus on one game per run.
-  Source: src-001
-  Evidence: T specified the daily scout/research agent should "focus on one game."
+- Claim: The current scout contract is 60 unique games per run across three cohorts.
+  Source: src-004
+  Evidence: T replaced the former single-game run with 20 cooperative games, 20 solo RPG board games, and 20 games matching the active rotating mechanic focus.
   Confidence: high
 
 - Claim: BoardGameGeek is a primary discovery source, but publisher websites are preferred for actual rulebooks.
@@ -98,7 +105,7 @@ The current purpose is knowledge gathering only. Full integration into downstrea
 
 ## Specialist assignment
 
-**The Governor** owns the daily scout function.
+**Bathcat** owns the daily scout function.
 
 Role:
 
@@ -145,9 +152,11 @@ This turns daily growth from "whatever the scout felt like" into demand-driven c
 
 ## Daily output contract
 
-Each successful scout run writes one game directory:
+Each successful scout run writes or enriches 60 unique canonical game directories: 20 cooperative games, 20 solo RPG board games, and 20 games matching the active mechanic focus. The mechanic focus rotates through `campaign`, `deck/bag/dicebuilder`, and `semi-cooperative` unless T chooses a new focus after the report.
 
 `KnowledgeBase/BoardGames/games/<slug>/`
+
+No title may fill more than one cohort slot in the same run. Existing KB games and overlaps are replaced by the next eligible candidate unless the run explicitly enriches an incomplete record. Each final report asks exactly `What should be the new mechanic focus?` and includes Bathcat's evidence-backed recommendation.
 
 Minimum expected files:
 

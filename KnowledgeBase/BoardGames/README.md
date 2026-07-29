@@ -4,7 +4,7 @@ Daily research corpus for board-game rules, player reception, and design-improve
 
 ## Purpose
 
-This directory is for gathering structured knowledge before integration. The daily scout studies one board game, finds official rules where possible, gathers review/forum reception, and writes OKF-formatted documents that preserve source provenance.
+This directory is for gathering structured knowledge before integration. The daily scout studies 60 unique board games in three 20-game cohorts, finds official rules where possible, gathers review/forum reception, and writes OKF-formatted documents that preserve source provenance.
 
 Primary uses:
 
@@ -15,7 +15,7 @@ Primary uses:
 
 ## Daily cadence
 
-A Hermes cron job runs once per day at 06:00 UTC. It selects one board game, researches sources, and writes a new game directory under:
+A Hermes cron job runs once per day at 06:00 UTC. It selects 20 cooperative games, 20 solo RPG board games, and 20 games matching the day's mechanic focus, then writes or enriches canonical game directories under:
 
 ```txt
 KnowledgeBase/BoardGames/games/<slug>/
@@ -30,7 +30,7 @@ Retrieval entry points:
 - `INDEX.okf.md` — **generated** corpus index (one row per game + mechanics → games table). The first file an agent should read; regenerate with `node scripts/generate-index.mjs`, never hand-edit.
 - `index.html` — the human dashboard twin.
 
-Each run should produce, at minimum:
+Each covered game should produce, at minimum:
 
 ```txt
 games/<slug>/
@@ -98,6 +98,8 @@ source. Remove material on request.
 ## Selection doctrine
 
 **Wishlist first:** take the topmost unchecked entry in `WISHLIST.md` (repo root) and check it off in the run that covers it, linking the game dir. Free choice applies only when the wishlist is empty.
+
+Each run targets 60 unique games. A title may satisfy only one cohort slot per run; replace overlaps and already-complete KB games with the next eligible candidate. The 20-game mechanic cohort rotates among campaign, deck/bag/dicebuilder, and semi-cooperative until T changes the focus after a report.
 
 When choosing freely, prefer games with:
 
