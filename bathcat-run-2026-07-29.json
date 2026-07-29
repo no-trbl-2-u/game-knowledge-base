@@ -1,0 +1,952 @@
+{
+  "run_date": "2026-07-29",
+  "focus": "deck/bag/dicebuilder",
+  "cohorts": {
+    "A": [
+      {
+        "title": "Pandemic",
+        "bggId": 30549,
+        "year": 2008,
+        "mechanics": [
+          "cooperative-game",
+          "action-points",
+          "hand-management",
+          "set-collection",
+          "variable-player-powers"
+        ],
+        "slug": "pandemic",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 1
+      },
+      {
+        "title": "The Crew: The Quest for Planet Nine",
+        "bggId": 284083,
+        "year": 2019,
+        "mechanics": [
+          "cooperative-game",
+          "trick-taking",
+          "hand-management"
+        ],
+        "slug": "the-crew-the-quest-for-planet-nine",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 2
+      },
+      {
+        "title": "Hanabi",
+        "bggId": 98778,
+        "year": 2010,
+        "mechanics": [
+          "cooperative-game",
+          "hand-management",
+          "set-collection",
+          "hidden-information"
+        ],
+        "slug": "hanabi",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 3
+      },
+      {
+        "title": "Horrified",
+        "bggId": 282524,
+        "year": 2019,
+        "mechanics": [
+          "cooperative-game",
+          "dice-rolling",
+          "modular-board",
+          "variable-player-powers"
+        ],
+        "slug": "horrified",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 4
+      },
+      {
+        "title": "Flash Point: Fire Rescue",
+        "bggId": 100901,
+        "year": 2011,
+        "mechanics": [
+          "cooperative-game",
+          "action-points",
+          "area-movement",
+          "dice-rolling",
+          "variable-player-powers"
+        ],
+        "slug": "flash-point-fire-rescue",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 5
+      },
+      {
+        "title": "Forbidden Island",
+        "bggId": 65244,
+        "year": 2010,
+        "mechanics": [
+          "cooperative-game",
+          "hand-management",
+          "set-collection",
+          "modular-board"
+        ],
+        "slug": "forbidden-island",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 6
+      },
+      {
+        "title": "Forbidden Desert",
+        "bggId": 136592,
+        "year": 2013,
+        "mechanics": [
+          "cooperative-game",
+          "action-points",
+          "grid-movement",
+          "set-collection"
+        ],
+        "slug": "forbidden-desert",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 7
+      },
+      {
+        "title": "Burgle Bros.",
+        "bggId": 172081,
+        "year": 2015,
+        "mechanics": [
+          "cooperative-game",
+          "grid-movement",
+          "hidden-information",
+          "variable-player-powers"
+        ],
+        "slug": "burgle-bros",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 8
+      },
+      {
+        "title": "Paleo",
+        "bggId": 300531,
+        "year": 2020,
+        "mechanics": [
+          "cooperative-game",
+          "hand-management",
+          "variable-player-powers"
+        ],
+        "slug": "paleo",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 9
+      },
+      {
+        "title": "Sky Team",
+        "bggId": 373106,
+        "year": 2023,
+        "mechanics": [
+          "cooperative-game",
+          "dice-rolling",
+          "simultaneous-action-selection",
+          "variable-setup"
+        ],
+        "slug": "sky-team",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 10
+      },
+      {
+        "title": "The Loop",
+        "bggId": 316412,
+        "year": 2020,
+        "mechanics": [
+          "cooperative-game",
+          "action-points",
+          "hand-management",
+          "modular-board"
+        ],
+        "slug": "the-loop",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 11
+      },
+      {
+        "title": "Atlantis Rising",
+        "bggId": 248490,
+        "year": 2019,
+        "mechanics": [
+          "cooperative-game",
+          "worker-placement",
+          "resource-management",
+          "variable-player-powers"
+        ],
+        "slug": "atlantis-rising",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 12
+      },
+      {
+        "title": "Tiny Epic Defenders",
+        "bggId": 163967,
+        "year": 2014,
+        "mechanics": [
+          "cooperative-game",
+          "action-points",
+          "area-movement",
+          "variable-player-powers"
+        ],
+        "slug": "tiny-epic-defenders",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 13
+      },
+      {
+        "title": "Harry Potter: Hogwarts Battle",
+        "bggId": 199042,
+        "year": 2016,
+        "mechanics": [
+          "cooperative-game",
+          "deck-building",
+          "hand-management",
+          "campaign-game"
+        ],
+        "slug": "harry-potter-hogwarts-battle",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 14
+      },
+      {
+        "title": "The Mind",
+        "bggId": 244992,
+        "year": 2018,
+        "mechanics": [
+          "cooperative-game",
+          "hand-management",
+          "simultaneous-action-selection"
+        ],
+        "slug": "the-mind",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 15
+      },
+      {
+        "title": "Marvel United",
+        "bggId": 298047,
+        "year": 2020,
+        "mechanics": [
+          "cooperative-game",
+          "hand-management",
+          "variable-player-powers"
+        ],
+        "slug": "marvel-united",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 16
+      },
+      {
+        "title": "Castle Panic",
+        "bggId": 43443,
+        "year": 2009,
+        "mechanics": [
+          "cooperative-game",
+          "hand-management",
+          "variable-player-powers"
+        ],
+        "slug": "castle-panic",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 17
+      },
+      {
+        "title": "The Captain Is Dead",
+        "bggId": 172547,
+        "year": 2017,
+        "mechanics": [
+          "cooperative-game",
+          "action-points",
+          "hand-management",
+          "variable-player-powers"
+        ],
+        "slug": "the-captain-is-dead",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 18
+      },
+      {
+        "title": "Menara",
+        "bggId": 201825,
+        "year": 2018,
+        "mechanics": [
+          "cooperative-game",
+          "push-your-luck",
+          "variable-setup"
+        ],
+        "slug": "menara",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 19
+      },
+      {
+        "title": "Horrified: American Monsters",
+        "bggId": 321858,
+        "year": 2021,
+        "mechanics": [
+          "cooperative-game",
+          "modular-board",
+          "variable-player-powers",
+          "hand-management"
+        ],
+        "slug": "horrified-american-monsters",
+        "cohort": "A",
+        "ranked": 0,
+        "rank": 20
+      }
+    ],
+    "B": [
+      {
+        "title": "Final Girl",
+        "bggId": 277659,
+        "year": 2021,
+        "mechanics": [
+          "solo-solitaire-game",
+          "hand-management",
+          "dice-rolling",
+          "push-your-luck"
+        ],
+        "slug": "final-girl",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 1
+      },
+      {
+        "title": "One Deck Dungeon",
+        "bggId": 179275,
+        "year": 2016,
+        "mechanics": [
+          "solo-solitaire-game",
+          "dice-rolling",
+          "deck-bag-and-pool-building",
+          "campaign-game"
+        ],
+        "slug": "one-deck-dungeon",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 2
+      },
+      {
+        "title": "Set a Watch",
+        "bggId": 228855,
+        "year": 2019,
+        "mechanics": [
+          "solo-solitaire-game",
+          "dice-rolling",
+          "hand-management",
+          "variable-player-powers"
+        ],
+        "slug": "set-a-watch",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 3
+      },
+      {
+        "title": "Roll Player",
+        "bggId": 169426,
+        "year": 2016,
+        "mechanics": [
+          "solo-solitaire-game",
+          "dice-rolling",
+          "set-collection",
+          "tableau-building"
+        ],
+        "slug": "roll-player",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 4
+      },
+      {
+        "title": "Dungeon Degenerates: Hand of Doom",
+        "bggId": 210232,
+        "year": 2017,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "hand-management",
+          "dice-rolling"
+        ],
+        "slug": "dungeon-degenerates-hand-of-doom",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 5
+      },
+      {
+        "title": "The Isofarian Guard",
+        "bggId": 281201,
+        "year": 2022,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "deck-building",
+          "variable-player-powers"
+        ],
+        "slug": "the-isofarian-guard",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 6
+      },
+      {
+        "title": "Lands of Galzyr",
+        "bggId": 281474,
+        "year": 2022,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "hand-management",
+          "variable-setup"
+        ],
+        "slug": "lands-of-galzyr",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 7
+      },
+      {
+        "title": "Destinies",
+        "bggId": 285192,
+        "year": 2021,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "hidden-information",
+          "variable-player-powers"
+        ],
+        "slug": "destinies",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 8
+      },
+      {
+        "title": "Folklore: The Affliction",
+        "bggId": 194626,
+        "year": 2017,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "dice-rolling",
+          "variable-player-powers"
+        ],
+        "slug": "folklore-the-affliction",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 9
+      },
+      {
+        "title": "Machina Arcana",
+        "bggId": 172047,
+        "year": 2013,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "dice-rolling",
+          "grid-movement"
+        ],
+        "slug": "machina-arcana",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 10
+      },
+      {
+        "title": "Tales from the Red Dragon Inn",
+        "bggId": 345976,
+        "year": 2023,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "grid-movement",
+          "variable-player-powers"
+        ],
+        "slug": "tales-from-the-red-dragon-inn",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 11
+      },
+      {
+        "title": "Tamashi: Chronicles of Ascend",
+        "bggId": 330078,
+        "year": 2023,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "grid-movement",
+          "hand-management"
+        ],
+        "slug": "tamashi-chronicles-of-ascend",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 12
+      },
+      {
+        "title": "League of Dungeoneers",
+        "bggId": 298742,
+        "year": 2023,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "grid-movement",
+          "dice-rolling"
+        ],
+        "slug": "league-of-dungeoneers",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 13
+      },
+      {
+        "title": "Maximum Apocalypse",
+        "bggId": 180020,
+        "year": 2018,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "deck-building",
+          "hand-management"
+        ],
+        "slug": "maximum-apocalypse",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 14
+      },
+      {
+        "title": "Shadows of Brimstone: City of the Ancients",
+        "bggId": 146791,
+        "year": 2014,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "dice-rolling",
+          "grid-movement"
+        ],
+        "slug": "shadows-of-brimstone-city-of-the-ancients",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 15
+      },
+      {
+        "title": "Dungeon Alliance",
+        "bggId": 209660,
+        "year": 2019,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "deck-building",
+          "grid-movement"
+        ],
+        "slug": "dungeon-alliance",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 16
+      },
+      {
+        "title": "Dungeon Universalis",
+        "bggId": 261393,
+        "year": 2018,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "grid-movement",
+          "variable-player-powers"
+        ],
+        "slug": "dungeon-universalis",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 17
+      },
+      {
+        "title": "The Night Cage",
+        "bggId": 306481,
+        "year": 2021,
+        "mechanics": [
+          "solo-solitaire-game",
+          "hidden-information",
+          "modular-board",
+          "variable-setup"
+        ],
+        "slug": "the-night-cage",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 18
+      },
+      {
+        "title": "Cloudspire",
+        "bggId": 262211,
+        "year": 2019,
+        "mechanics": [
+          "solo-solitaire-game",
+          "campaign-game",
+          "dice-rolling",
+          "variable-player-powers"
+        ],
+        "slug": "cloudspire",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 19
+      },
+      {
+        "title": "Warp's Edge",
+        "bggId": 296057,
+        "year": 2020,
+        "mechanics": [
+          "solo-solitaire-game",
+          "deck-building",
+          "push-your-luck",
+          "variable-setup"
+        ],
+        "slug": "warps-edge",
+        "cohort": "B",
+        "ranked": 0,
+        "rank": 20
+      }
+    ],
+    "C": [
+      {
+        "title": "Dominion",
+        "bggId": 36218,
+        "year": 2008,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "market"
+        ],
+        "slug": "dominion",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 1
+      },
+      {
+        "title": "Clank!: A Deck-Building Adventure",
+        "bggId": 201808,
+        "year": 2016,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "push-your-luck",
+          "race"
+        ],
+        "slug": "clank-a-deck-building-adventure",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 2
+      },
+      {
+        "title": "Star Realms",
+        "bggId": 147020,
+        "year": 2014,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "race"
+        ],
+        "slug": "star-realms",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 3
+      },
+      {
+        "title": "Tyrants of the Underdark",
+        "bggId": 189932,
+        "year": 2016,
+        "mechanics": [
+          "deck-building",
+          "area-majority-influence",
+          "hand-management"
+        ],
+        "slug": "tyrants-of-the-underdark",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 4
+      },
+      {
+        "title": "The Quest for El Dorado",
+        "bggId": 217372,
+        "year": 2017,
+        "mechanics": [
+          "deck-building",
+          "race",
+          "hand-management",
+          "modular-board"
+        ],
+        "slug": "the-quest-for-el-dorado",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 5
+      },
+      {
+        "title": "Paperback",
+        "bggId": 141572,
+        "year": 2014,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "set-collection"
+        ],
+        "slug": "paperback",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 6
+      },
+      {
+        "title": "Fort",
+        "bggId": 296912,
+        "year": 2020,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "tableau-building"
+        ],
+        "slug": "fort",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 7
+      },
+      {
+        "title": "Mystic Vale",
+        "bggId": 194607,
+        "year": 2016,
+        "mechanics": [
+          "deck-building",
+          "drafting",
+          "tableau-building"
+        ],
+        "slug": "mystic-vale",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 8
+      },
+      {
+        "title": "Orléans",
+        "bggId": 164928,
+        "year": 2014,
+        "mechanics": [
+          "deck-bag-and-pool-building",
+          "worker-placement",
+          "set-collection"
+        ],
+        "slug": "orl-ans",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 9
+      },
+      {
+        "title": "Dice Forge",
+        "bggId": 194880,
+        "year": 2017,
+        "mechanics": [
+          "deck-bag-and-pool-building",
+          "dice-rolling",
+          "engine-building"
+        ],
+        "slug": "dice-forge",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 10
+      },
+      {
+        "title": "Ascension: Deckbuilding Game",
+        "bggId": 69789,
+        "year": 2010,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "market"
+        ],
+        "slug": "ascension-deckbuilding-game",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 11
+      },
+      {
+        "title": "Legendary: A Marvel Deck Building Game",
+        "bggId": 129437,
+        "year": 2012,
+        "mechanics": [
+          "deck-building",
+          "cooperative-game",
+          "hand-management"
+        ],
+        "slug": "legendary-a-marvel-deck-building-game",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 12
+      },
+      {
+        "title": "DC Deck-Building Game",
+        "bggId": 125508,
+        "year": 2012,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "set-collection"
+        ],
+        "slug": "dc-deck-building-game",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 13
+      },
+      {
+        "title": "XenoShyft: Onslaught",
+        "bggId": 146014,
+        "year": 2014,
+        "mechanics": [
+          "deck-building",
+          "cooperative-game",
+          "hand-management"
+        ],
+        "slug": "xenoshyft-onslaught",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 14
+      },
+      {
+        "title": "Thunderstone Quest",
+        "bggId": 215341,
+        "year": 2017,
+        "mechanics": [
+          "deck-building",
+          "campaign-game",
+          "cooperative-game"
+        ],
+        "slug": "thunderstone-quest",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 15
+      },
+      {
+        "title": "Valley of the Kings",
+        "bggId": 150999,
+        "year": 2014,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "set-collection"
+        ],
+        "slug": "valley-of-the-kings",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 16
+      },
+      {
+        "title": "Shards of Infinity",
+        "bggId": 244115,
+        "year": 2018,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "race"
+        ],
+        "slug": "shards-of-infinity",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 17
+      },
+      {
+        "title": "Nightfall",
+        "bggId": 98527,
+        "year": 2011,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "variable-player-powers"
+        ],
+        "slug": "nightfall",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 18
+      },
+      {
+        "title": "Arctic Scavengers",
+        "bggId": 70919,
+        "year": 2009,
+        "mechanics": [
+          "deck-building",
+          "hand-management",
+          "market"
+        ],
+        "slug": "arctic-scavengers",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 19
+      },
+      {
+        "title": "Eminent Domain",
+        "bggId": 68448,
+        "year": 2011,
+        "mechanics": [
+          "deck-building",
+          "variable-player-powers",
+          "hand-management"
+        ],
+        "slug": "eminent-domain",
+        "cohort": "C",
+        "ranked": 0,
+        "rank": 20
+      }
+    ]
+  },
+  "unique_slugs": [
+    "pandemic",
+    "the-crew-the-quest-for-planet-nine",
+    "hanabi",
+    "horrified",
+    "flash-point-fire-rescue",
+    "forbidden-island",
+    "forbidden-desert",
+    "burgle-bros",
+    "paleo",
+    "sky-team",
+    "the-loop",
+    "atlantis-rising",
+    "tiny-epic-defenders",
+    "harry-potter-hogwarts-battle",
+    "the-mind",
+    "marvel-united",
+    "castle-panic",
+    "the-captain-is-dead",
+    "menara",
+    "horrified-american-monsters",
+    "final-girl",
+    "one-deck-dungeon",
+    "set-a-watch",
+    "roll-player",
+    "dungeon-degenerates-hand-of-doom",
+    "the-isofarian-guard",
+    "lands-of-galzyr",
+    "destinies",
+    "folklore-the-affliction",
+    "machina-arcana",
+    "tales-from-the-red-dragon-inn",
+    "tamashi-chronicles-of-ascend",
+    "league-of-dungeoneers",
+    "maximum-apocalypse",
+    "shadows-of-brimstone-city-of-the-ancients",
+    "dungeon-alliance",
+    "dungeon-universalis",
+    "the-night-cage",
+    "cloudspire",
+    "warps-edge",
+    "dominion",
+    "clank-a-deck-building-adventure",
+    "star-realms",
+    "tyrants-of-the-underdark",
+    "the-quest-for-el-dorado",
+    "paperback",
+    "fort",
+    "mystic-vale",
+    "orl-ans",
+    "dice-forge",
+    "ascension-deckbuilding-game",
+    "legendary-a-marvel-deck-building-game",
+    "dc-deck-building-game",
+    "xenoshyft-onslaught",
+    "thunderstone-quest",
+    "valley-of-the-kings",
+    "shards-of-infinity",
+    "nightfall",
+    "arctic-scavengers",
+    "eminent-domain"
+  ]
+}
