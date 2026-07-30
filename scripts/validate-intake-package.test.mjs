@@ -178,6 +178,15 @@ test('audit decision requires a later audit-only PR over a ready base packet', (
   assert.match(auditTransitionFindings([{ status: 'A', file: approval }, { status: 'A', file: packet }, { status: 'M', file: manifest }], callbacks).join('\n'), /later PR without packet\/evidence changes/)
 })
 
+test('committed rejection is immutable and repair requires a new run', () => {
+  const rejection = 'intake/runs/2026-07-30-rejected/candidates/good-game/rejection.json'
+  const findings = auditTransitionFindings(
+    [{ status: 'D', file: rejection }],
+    { pathExists: () => true, statusAt: () => 'rejected' },
+  )
+  assert.match(findings.join('\n'), /audit decisions are immutable once committed/)
+})
+
 test('emit deterministic promotion fixture when requested', { skip: !process.env.INTAKE_FIXTURE_OUT }, t => {
   const root = makePackage(t, path.resolve(process.env.INTAKE_FIXTURE_OUT))
   assert.deepEqual(validateCandidatePackage(root, candidate), [])

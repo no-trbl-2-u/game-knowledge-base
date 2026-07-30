@@ -192,9 +192,11 @@ committed.
 The auditor must reject rather than repair the scout's packet. Rejection is
 recorded in `rejection.json` with `decision: rejected`, the Mennonite identity,
 `reviewed_at`, `packet_sha256`, and one or more concrete `reasons` of at least
-20 characters. Repairs return to Bathcat; Bathcat removes the old rejection,
-revises the packet, returns the state to `ready_for_audit`, and submits a new
-hash for a fresh audit.
+20 characters. A rejected run is permanent audit evidence: neither its packet
+nor `rejection.json` may be revised or deleted. Repairs return to Bathcat under
+a new run ID and a new candidate tree. The replacement packet starts at
+`ready_for_audit`, receives a new immutable hash, and crosses the ordinary
+audit-only PR boundary again. The prior rejected run remains intact.
 
 ## Deterministic promotion
 
