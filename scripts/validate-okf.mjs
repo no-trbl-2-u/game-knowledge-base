@@ -16,6 +16,7 @@ import crypto from 'node:crypto'
 import { buildIndex } from './generate-index.mjs'
 import { buildSidecars } from './generate-dawncaster-card-sidecars.mjs'
 import { logScan } from './telemetry-log.mjs'
+import { claimTripletFindings } from './intake-lib.mjs'
 
 // --- controlled vocabularies -------------------------------------------
 // SINGLE SOURCE: KnowledgeBase/OKF_VOCAB.json (OKF_SPEC.md is the
@@ -148,9 +149,19 @@ function validate(file) {
     if (!PROVENANCE.includes(m[1])) flag(file, `provenance "${m[1]}" not in spec`)
   }
 
-  // body claims must cite declared sources
-  for (const m of body.matchAll(/^\s*Source:\s*(src-\d{3})/gm)) {
-    if (!srcIds.includes(m[1])) flag(file, `body cites ${m[1]} but frontmatter does not declare it`)
+  // Every source token on a citation line must resolve locally. The earlier
+  // single-capture regex silently accepted undeclared second/third citations.
+  for (const m of body.matchAll(/^\s*(?:-\s*)?Source:\s*([^\r\n]+)/gm)) {
+    for (const id of m[1].match(/src-\d{3}/g) ?? []) {
+      if (!srcIds.includes(id)) flag(file, `body cites ${id} but frontmatter does not declare it`)
+    }
+  }
+
+  // Whenever a canonical Claim exists it must carry nonempty provenance
+  // siblings. Both indented fields and the five legacy sibling-list triplets
+  // are accepted; minimum claim counts remain a new-intake-only requirement.
+  for (const finding of claimTripletFindings(body, 'body', { requireSourceId: true }).findings) {
+    flag(file, finding)
   }
 
   // OKF 0.2 fields

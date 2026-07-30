@@ -70,7 +70,7 @@ The game is admired, not acquitted. Its best opportunities are in teaching, phys
 ### 3. Reduce handling overhead and table friction
 - Labels: setup/teardown, component clarity, accessibility
 - Claim: The game would be better if setup, teardown, cube movement, and effect tracking were lighter or better distributed.
-- Source: src-007; src-010
+- Source: src-007, src-010
 - Evidence: Rolling In The Meep dislikes include fiddly tracking, many cubes/effects, and a massive box/table footprint; Miniature Market snippets call setup "a little lengthy" and "a bit heavy".
 - Confidence: high
 - Design implication: Complex co-op systems should assign table jobs or provide app/player-aid support before fatigue becomes the hidden enemy.
@@ -86,7 +86,7 @@ The game is admired, not acquitted. Its best opportunities are in teaching, phys
 ### 5. Preserve flexible action order while teaching it explicitly
 - Labels: turn pacing, downtime, player interaction
 - Claim: The game is better because of simultaneous/free-order player action, but that strength needs clear teaching and examples.
-- Source: src-008; src-003
+- Source: src-008, src-003
 - Evidence: coopgestalt praises the rulebook line allowing players to play cards/use potions/activate abilities in any order; BGG file notes v2.30 cut optional sequential-turn rules.
 - Confidence: medium
 - Design implication: Free-order co-op phases must be presented as a feature, not an exception.

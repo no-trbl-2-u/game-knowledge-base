@@ -1,0 +1,11 @@
+# Canonical board-game admissions and audit decisions are owned by T's
+# authenticated repository account. GitHub cannot distinguish two Hermes
+# personas that use this same account, so CI enforces three protected-branch
+# transitions: scout packet, audit-only decision, then deterministic promotion.
+# Required PR review supplies the authenticated human key at each transition.
+/KnowledgeBase/BoardGames/games/ @no-trbl-2-u
+/intake/runs/ @no-trbl-2-u
+/scripts/validate-intake.mjs @no-trbl-2-u
+/scripts/intake-lib.mjs @no-trbl-2-u
+/scripts/promote-intake.mjs @no-trbl-2-u
+/.github/workflows/validate.yml @no-trbl-2-u

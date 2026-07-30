@@ -20,6 +20,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-27"
     notes: "BGG discovery and broad reception signal."
+  - id: "src-003"
+    title: "Fantasy Flight Games — Descent: Journeys in the Dark Second Edition"
+    url: "https://www.fantasyflightgames.com/en/products/descent-journeys-in-the-dark-second-edition/"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-07-27"
+    notes: "Publisher product description and feature summary; source record synchronized from the game index."
   - id: "src-004"
     title: "Polyhedron Collider — Descent: Journeys in the Dark Second Edition Review"
     url: "https://www.polyhedroncollider.com/2013/10/descent-journeys-in-dark-second-edition.html"

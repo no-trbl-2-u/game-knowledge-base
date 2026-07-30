@@ -1,6 +1,21 @@
 ---
 okf_version: 0.2
 type: pattern
+sources:
+  - id: "src-001"
+    title: "Axiomancer combat dice and threat contracts"
+    url: "repo://axiomancer-mechanics/src/Combat"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-07-30"
+    notes: "Repo-local combat.dice.ts and combat.threat.ts source records."
+  - id: "src-002"
+    title: "Axiomancer card theme registry"
+    url: "repo://axiomancer-mechanics/src/Cards/card-themes.ts"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-07-30"
+    notes: "Repo-local theme and keyword family registry."
 confidence: medium
 status: verified
 ---
@@ -8,12 +23,12 @@ status: verified
 ## Distilled design questions
 
 - Claim: The central graph tension is honest randomness versus authored legibility: X faces and dice scarcity create uncertainty, while full threat sequences and stance tells preserve agency.
-  Source: `axiomancer-mechanics/src/Combat/combat.dice.ts`; `axiomancer-mechanics/src/Combat/combat.threat.ts`
+  Source: src-001
   Evidence: die-face law and full-information threat contract.
   Confidence: high
 
 - Claim: Theme identity is carried by keyword families and payoff verbs rather than isolated card names.
-  Source: `axiomancer-mechanics/src/Cards/card-themes.ts`
+  Source: src-002
   Evidence: ten themes with shared utility keyword families.
   Confidence: high
 

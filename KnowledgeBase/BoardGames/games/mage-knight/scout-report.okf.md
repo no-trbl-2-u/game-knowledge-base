@@ -70,10 +70,6 @@ Selected game: Mage Knight Board Game. Reason: not already present; official Wiz
 
 ## Source-backed facts
 
-- Claim: The game was absent before this run.
-  Source: local filesystem verification
-  Evidence: Existing `games/` entries found before writing were `spirit-island`, `ark-nova`, and `dune-imperium`.
-  Confidence: high
 - Claim: Official rulebook status is available but not fully extracted.
   Source: src-002, src-003
   Evidence: WizKids links "Download Rules" to `MK_rulebook_ENG_searchable-mar2012.pdf`; extraction timed out and direct terminal fetch failed due certificate/HTTP errors.

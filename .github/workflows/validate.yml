@@ -1,33 +1,15 @@
 name: validate
 
-# The corpus's type-checker: structural OKF validation on every change.
-# Plain script, no model, no tokens.
-#
-# BLOCKING since 2026-07-04: the librarian's first pass brought the corpus
-# to 0 findings, so drift now fails CI the day it lands.
+# Structural OKF validation plus the fail-closed two-key intake boundary.
+# Plain scripts, no model and no token spend. This workflow runs on every PR
+# because main requires its status; path filtering would leave unrelated PRs
+# permanently waiting for a check that never starts.
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'KnowledgeBase/**'
-      - 'scripts/validate-okf.mjs'
-      - 'scripts/validate-okf-visuals.test.mjs'
-      - 'scripts/generate-index.mjs'
-      - 'scripts/generate-dawncaster-card-sidecars.mjs'
-      - 'scripts/telemetry-log.mjs'
-      - '.claude/hooks/okf-guard.mjs'
-      - '.github/workflows/validate.yml'
   pull_request:
-    paths:
-      - 'KnowledgeBase/**'
-      - 'scripts/validate-okf.mjs'
-      - 'scripts/validate-okf-visuals.test.mjs'
-      - 'scripts/generate-index.mjs'
-      - 'scripts/generate-dawncaster-card-sidecars.mjs'
-      - 'scripts/telemetry-log.mjs'
-      - '.claude/hooks/okf-guard.mjs'
-      - '.github/workflows/validate.yml'
+    branches: [main]
 
 permissions:
   contents: read
@@ -35,14 +17,27 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Test visual packet validation
-        run: node --test scripts/validate-okf-visuals.test.mjs
-      - name: Validate OKF corpus
+        with:
+          fetch-depth: 0
+      - name: Install visual-gate dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+      - name: Verify visual-gate dependency
+        run: ffmpeg -version
+      - name: Test intake provenance and visual gates
+        run: node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs
+      - name: Validate intake diff (pull request)
+        if: github.event_name == 'pull_request'
+        run: node scripts/validate-intake.mjs --base "${{ github.event.pull_request.base.sha }}"
+      - name: Validate intake diff (push)
+        if: github.event_name == 'push'
+        run: node scripts/validate-intake.mjs --base "${{ github.event.before }}"
+      - name: Validate OKF
         run: node scripts/validate-okf.mjs
-      # A broken edit to the (fail-open) hook would silently disable the
-      # generated-file firewall; the self-test catches that the day it lands.
-      - name: okf-guard self-test
+      - name: Test OKF visual validator
+        run: node --test scripts/validate-okf-visuals.test.mjs
+      - name: Self-test write guard
         run: node .claude/hooks/okf-guard.mjs self-test

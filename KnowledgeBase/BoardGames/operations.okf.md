@@ -38,6 +38,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-30"
     notes: "T reduced the daily target to five cooperative candidates, five solo RPG candidates, and five rotating-focus candidates after rejecting count-driven generated filler. Canonical records require actual rulebooks, real reviews, factual evidence, and meaningful visuals."
+  - id: "src-005"
+    title: "T instruction: six-game external-source two-key intake"
+    url: "local-session"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-07-30"
+    notes: "T approved the full prevention stack, reduced the target to two cooperative, two solo RPG, and two rotating-focus candidates, and explicitly allowed research beyond BoardGameGeek. Bathcat scouts and assembles evidence; an independent Mennonite audit and deterministic promotion are required before canonical entry."
 confidence: high
 status: verified
 ---
@@ -68,9 +75,9 @@ The current purpose is knowledge gathering only. Full integration into downstrea
   Evidence: T specified "Everyday, once a day at 6am"; cron job `44c13742fca9` is scheduled as `0 6 * * *`.
   Confidence: high
 
-- Claim: The original scout focused on one game per run; the current target is three disjoint five-game candidate cohorts.
-  Source: src-001, src-004
-  Evidence: T superseded the original single-game instruction with five cooperative candidates, five solo RPG candidates, and five rotating-focus candidates.
+- Claim: The original scout focused on one game per run; the current target is three disjoint two-game candidate cohorts.
+  Source: src-001, src-004, src-005
+  Evidence: T first moved to 5/5/5, then reduced the active target to two cooperative candidates, two solo RPG candidates, and two rotating-focus candidates so the agent has more room for research.
   Confidence: high
 
 - Claim: Candidate selection is not canonical coverage.
@@ -79,8 +86,13 @@ The current purpose is knowledge gathering only. Full integration into downstrea
   Confidence: high
 
 - Claim: BoardGameGeek is a primary discovery source, but publisher websites are preferred for actual rulebooks.
-  Source: src-001
-  Evidence: T identified BoardGameGeek.com as "a great place to decide which board game to focus on" and the board-game company website as a great source to find rulebooks.
+  Source: src-001, src-005
+  Evidence: T identified BoardGameGeek as a candidate source while explicitly directing that factual research may come from outside BGG; official publisher material remains rules authority and independent outside sources supply reception.
+  Confidence: high
+
+- Claim: Bathcat may not certify or canonically promote its own research packet.
+  Source: src-005
+  Evidence: T approved the complete prevention plan, including separate scouting, independent evidence audit, immutable packet approval, and deterministic promotion.
   Confidence: high
 
 - Claim: The corpus should preserve both rules and reception.
@@ -116,7 +128,7 @@ Role:
 
 - field intelligence scout
 - knowledge-base researcher
-- source-provenance auditor
+- source-receipt assembler
 - rulebook categorizer
 - review/reception extractor
 - better-if opportunity classifier
@@ -136,18 +148,27 @@ Danger:
 
 Cron job:
 
-- Name: `board-game-knowledgebase-daily-scout`
+- Name: `board-game-kb-bathcat-scout-quarantine`
 - Job ID: `44c13742fca9`
 - Schedule: `0 6 * * *`
-- Next first run after setup: `2026-06-30T06:00:00+00:00`
+- Next scheduled run if re-enabled: `2026-07-31T06:00:00+00:00`
 - Workdir: `/root/Workspace/SomberSoft/game-knowledge-base`
 - Skill: `research-discovery-monitoring`
 - Toolsets: `web`, `file`, `terminal`, `delegation`
-- Delivery: origin Telegram thread
-- Commit/push: yes, to `no-trbl-2-u/game-knowledge-base` `main` after each successful scout run
-- Required gates: `node scripts/generate-index.mjs` then `node scripts/validate-okf.mjs`; any validator finding is a failed run and must not be pushed
-- Candidate target: 5 cooperative + 5 solo RPG + 5 rotating-focus, with honest shortfalls allowed
-- Canonical promotion: no quota; only evidence-complete packets may produce game trees
+- Report delivery: origin Telegram thread
+- Git delivery: dedicated scout branch and pull request; protected `main` requires current green `validate` CI before squash merge
+- Required scout gate: `node scripts/validate-intake.mjs --run <run-id>`; any finding is a failed run and must not be pushed
+- Candidate target: 2 cooperative + 2 solo RPG + 2 rotating-focus, with honest shortfalls allowed
+- Canonical promotion: no quota; Bathcat cannot approve or promote. The Mennonite audits immutable packets and `scripts/promote-intake.mjs` copies approved trees byte-for-byte.
+
+Independent audit job:
+
+- Name: `board-game-kb-mennonite-intake-audit`
+- Job ID: `b0bf3fa19896`
+- Schedule: `0 9 * * *`
+- Scope: reopen receipt sources, record hash-bound approval or rejection, and promote each approved packet through a separate CI-gated pull request
+- Fail-closed threshold: two rejections in one run or rejection of more than half its ready packets pauses Bathcat before the next scout
+- Current state: paused until the prevention-stack change is merged and remote CI is verified
 
 ## Selection doctrine (amended per OKF 0.2 §5)
 
@@ -159,9 +180,9 @@ This turns daily growth from "whatever the scout felt like" into demand-driven c
 
 ## Daily output contract
 
-Each scout run selects up to fifteen unique candidates in three disjoint 5/5/5 cohorts. It may promote zero to fifteen canonical game directories. Selection manifests must keep `selected`, `promoted`, and `blocked` games distinct.
+Each scout run selects up to six unique candidates in three disjoint 2/2/2 cohorts. Bathcat may promote none. Selection manifests must keep `blocked`, `ready_for_audit`, `rejected`, `approved`, and `promoted` states distinct under `intake/runs/`.
 
-Each promoted game writes one directory:
+Each independently approved, deterministically promoted game writes one directory:
 
 `KnowledgeBase/BoardGames/games/<slug>/`
 
@@ -186,11 +207,13 @@ Every doc uses **OKF 0.2 frontmatter exactly as written in `OKF_SPEC.md`** — t
 
 Before pushing, the run must:
 
-1. Prove that every promoted game has an inspected official rules source, inspected independent reception, dated rating evidence when claimed, claim-level citations, and meaningful source-linked visuals.
-2. Leave blocked candidates outside the canonical `games/` tree and report the missing evidence honestly.
+1. Capture retrieval receipts for official rules outside BGG, independent reception outside BGG and the publisher domain, dated rating evidence when claimed, claim-level citations, and meaningful source-linked visuals. At least two distinct non-BGG domains are required.
+2. Leave every Bathcat packet outside the canonical `games/` tree. Only a Mennonite approval bound to the exact packet SHA-256 may authorize deterministic promotion.
 3. Record every failed source fetch/extraction as a structured blocker — never replace it with model knowledge or raw stashed documents.
-4. Regenerate the corpus index: `node scripts/generate-index.mjs`.
-5. Run `node scripts/validate-okf.mjs` and treat **any finding as a failed run** — fix before pushing. Validation is necessary but does not substitute for evidence review.
+4. Run `node scripts/validate-intake.mjs --base origin/main`; the hard gate enforces cohort volume, receipts, source diversity, claims, duplication, visual meaning, immutable approval, and exact promotion.
+5. After approved promotion, regenerate the corpus index and run `node scripts/validate-okf.mjs`. Treat **any finding as a failed run**. Validation is necessary but does not substitute for independent evidence review.
+
+Protected-main law: all scout packets, audit decisions, and canonical promotions travel through pull requests. `main` requires the `validate` status check, up-to-date branches, resolved conversations, and denies force-push/deletion. CODEOWNERS records T's authenticated repository account. Because both Hermes profiles use that one GitHub account, persona independence is enforced by separate jobs, immutable packet hashes, write jurisdictions, and CI—not by pretending they are separate GitHub identities.
 
 ## Open questions
 

@@ -84,10 +84,6 @@ Chosen game: Ark Nova. Reason: not already present in the BoardGames KB, extreme
 
 ## Source-backed facts
 
-- Claim: Ark Nova was not already present before this run; existing game directory discovered was Dune: Imperium.
-  Source: local filesystem
-  Evidence: Initial file search under `KnowledgeBase/BoardGames/games` returned only `dune-imperium` files.
-  Confidence: high
 - Claim: Official rulebook was found and verified.
   Source: src-003
   Evidence: HTTP check returned `200 application/pdf 9526618`; `pdftotext` extracted 1234 lines.
