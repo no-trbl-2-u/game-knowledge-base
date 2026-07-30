@@ -55,13 +55,14 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 Commit style: single-purpose commits to `main`, message prefix per pass
 (`kb:`, `librarian:`, `patterns:`, `audit:`). No emojis, no
 `Co-Authored-By` trailers. Validator green before every commit.
-`TELEMETRY.md` travels with every delivery: the tracked `.githooks/pre-commit`
-auto-stages it with ordinary commits, and `.githooks/pre-push` automatically
-creates a telemetry-only finalization commit when a newer scan row appears
-between the last commit and a `main` push, then pushes the updated ref. The hook
-commits only `TELEMETRY.md`; unrelated staged or unstaged work is preserved.
-Session startup installs both hooks through `core.hooksPath`. Do not run a
-telemetry-writing validator after the final push verification.
+`TELEMETRY.md` travels with every delivery. The tracked
+`.githooks/pre-commit` auto-stages its current state with ordinary commits;
+`.githooks/pre-push` refuses delivery whenever telemetry remains uncommitted.
+Every writer environment—including Hermes cron—must set
+`core.hooksPath=.githooks` before work. Run all telemetry-writing generators
+and validators before the final commit. After push, verify only with read-only
+Git status and local/remote SHA checks; never rerun a telemetry-writing
+validator.
 
 ## Downstream consumer
 
