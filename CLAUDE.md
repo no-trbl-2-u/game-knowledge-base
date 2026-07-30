@@ -71,8 +71,10 @@ and resolved conversations; force-push and deletion are disabled. Scout,
 audit, and promotion are separate protected-branch PRs, enforced by diff-state
 transitions: audit cannot arrive with packet bytes, and promotion requires an
 approval already on the base branch. CODEOWNERS names T's authenticated
-repository account; required review supplies the human key while separate jobs,
-disjoint write jurisdictions, and immutable packet hashes preserve role separation.
+repository account for ownership only: a single-account repository cannot
+satisfy a required self-review, so required approving reviews stay at zero and
+the human key is T merging each PR. Separate jobs, disjoint write
+jurisdictions, and immutable packet hashes preserve role separation.
 `TELEMETRY.md` travels with every delivery. The tracked
 `.githooks/pre-commit` auto-stages its current state with ordinary commits;
 `.githooks/pre-push` refuses delivery whenever telemetry remains uncommitted.

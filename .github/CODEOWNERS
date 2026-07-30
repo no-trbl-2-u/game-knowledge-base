@@ -2,7 +2,10 @@
 # authenticated repository account. GitHub cannot distinguish two Hermes
 # personas that use this same account, so CI enforces three protected-branch
 # transitions: scout packet, audit-only decision, then deterministic promotion.
-# Required PR review supplies the authenticated human key at each transition.
+# This is a single-account repository: GitHub forbids approving your own PR,
+# so required approving reviews stay at zero by design and this file cannot
+# gate merges. It documents ownership; the human key is T's authenticated
+# account merging each PR behind the required green `validate` check.
 /KnowledgeBase/BoardGames/games/ @no-trbl-2-u
 /intake/runs/ @no-trbl-2-u
 /scripts/validate-intake.mjs @no-trbl-2-u
