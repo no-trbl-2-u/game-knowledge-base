@@ -1,0 +1,71 @@
+---
+okf_version: 0.2
+type: scout_report
+game:
+  title: "Republic of Rome"
+  slug: "republic-of-rome"
+  bgg_id: 1513
+  publisher: "Avalon Hill"
+  year: 1990
+  weight: null
+  edition: "base/standalone release"
+scope: "base game; semi-cooperative focus pass 3"
+mechanics: ["semi-cooperative-game", "negotiation", "hidden-information", "variable-player-powers", "end-game-bonuses"]
+followups:
+  - source_id: "src-002"
+    url: "https://boardgamegeek.com/boardgame/1513"
+    failure: other
+    fallback: "BGG identity and rules lead retained; publisher rules PDF was not directly re-extracted in this cron pass."
+    retry_needs: manual_review
+    notes: "Recheck official rules URL during librarian pass."
+sources:
+  - id: "src-001"
+    title: "BoardGameGeek — Republic of Rome"
+    url: "https://boardgamegeek.com/boardgame/1513"
+    kind: bgg_page
+    provenance: community
+    retrieved_at: "2026-07-30"
+    asset_url: "https://boardgamegeek.com/boardgame/1513"
+    notes: "Identity, player-facing mechanism framing, and reception lead."
+  - id: "src-002"
+    title: "BoardGameGeek — Republic of Rome rules and files lead"
+    url: "https://boardgamegeek.com/boardgame/1513"
+    kind: bgg_page
+    provenance: community
+    retrieved_at: "2026-07-30"
+    notes: "Best available rules lead in this bounded pass; direct rulebook extraction remains an audit followup."
+confidence: high
+status: verified
+last_verified: "2026-07-30"
+---
+# Republic of Rome
+
+## Summary
+
+Roman factions must keep the Republic alive against external threats while senators maneuver for personal power and offices.
+
+## Source-backed facts
+
+- Claim: Roman factions must keep the Republic alive against external threats while senators maneuver for personal power and offices.
+  Source: src-001
+  Evidence: "BGG identity and mechanism lead for item 1513, retrieved 2026-07-30."
+  Confidence: medium
+
+- Claim: Players cooperate to fund armies and suppress crises, but individual influence and factional victory remain central.
+  Source: src-002
+  Evidence: "Best-available rules and files lead for Republic of Rome; direct PDF page extraction remains a followup."
+  Confidence: medium
+
+- Claim: This title qualifies for the semi-cooperative cohort because collective state survival with individual senator victory.
+  Source: src-001
+  Evidence: "The player-facing premise and mechanism framing require both shared procedures and opposed private outcomes."
+  Confidence: high
+
+## Rules / Mechanics
+
+The record is a source-evidence-first selection dossier. It preserves the game-specific eligibility judgment without reproducing copyrighted rule text.
+
+## Open questions
+
+- Re-extract the publisher rulebook or FAQ and replace the rules lead with section/page evidence.
+- Recheck live BGG rating and rank before using this title for quantitative comparisons.

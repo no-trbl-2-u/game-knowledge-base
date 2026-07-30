@@ -1,0 +1,81 @@
+{
+  "run_date": "2026-07-30",
+  "focus": "semi-cooperative",
+  "cohort_target": 20,
+  "added": [
+    {
+      "rank": 1,
+      "title": "Archipelago",
+      "slug": "archipelago",
+      "bgg_id": 105551
+    },
+    {
+      "rank": 2,
+      "title": "New Angeles",
+      "slug": "new-angeles",
+      "bgg_id": 205218
+    },
+    {
+      "rank": 3,
+      "title": "The King's Dilemma",
+      "slug": "the-kings-dilemma",
+      "bgg_id": 245655
+    },
+    {
+      "rank": 4,
+      "title": "Republic of Rome",
+      "slug": "republic-of-rome",
+      "bgg_id": 1513
+    },
+    {
+      "rank": 5,
+      "title": "Junta",
+      "slug": "junta",
+      "bgg_id": 242
+    },
+    {
+      "rank": 6,
+      "title": "The Resistance",
+      "slug": "the-resistance",
+      "bgg_id": 41114
+    },
+    {
+      "rank": 7,
+      "title": "The Resistance: Avalon",
+      "slug": "the-resistance-avalon",
+      "bgg_id": 128882
+    },
+    {
+      "rank": 8,
+      "title": "Dark Moon",
+      "slug": "dark-moon",
+      "bgg_id": 111341
+    },
+    {
+      "rank": 9,
+      "title": "Mantis Falls",
+      "slug": "mantis-falls",
+      "bgg_id": 283796
+    },
+    {
+      "rank": 10,
+      "title": "Feed the Kraken",
+      "slug": "feed-the-kraken",
+      "bgg_id": 271601
+    }
+  ],
+  "existing_semi_coop": 10,
+  "total_semi_coop": 20,
+  "unique_bgg_ids": [
+    105551,
+    205218,
+    245655,
+    1513,
+    242,
+    41114,
+    128882,
+    111341,
+    283796,
+    271601
+  ]
+}
