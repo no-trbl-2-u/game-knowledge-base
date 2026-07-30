@@ -4,7 +4,7 @@ Evidence-gated research corpus for board-game rules, player reception, and desig
 
 ## Purpose
 
-This directory is for gathering structured knowledge before integration. The daily scout selects up to fifteen candidates in three disjoint 5/5/5 cohorts, then promotes only evidence-complete games to OKF-formatted canonical records.
+This directory is for gathering structured knowledge before integration. The daily scout selects up to six candidates in three disjoint 2/2/2 cohorts, writes evidence packets under `intake/runs/`, and never promotes its own work. Only independently approved, evidence-complete packets become OKF-formatted canonical records.
 
 Primary uses:
 
@@ -15,7 +15,7 @@ Primary uses:
 
 ## Daily cadence
 
-A Hermes cron job runs once per day at 06:00 UTC. It selects up to five cooperative games, five solo RPG board games, and five games matching the rotating mechanic focus. Selection is not canonical coverage: a game directory is written only after the pre-authoring evidence gate passes.
+A Hermes cron job runs once per day at 06:00 UTC. It selects up to two cooperative games, two solo RPG board games, and two games matching the rotating mechanic focus. Selection is not canonical coverage: Bathcat writes only noncanonical candidate packets; a game directory is written only after independent Mennonite audit and deterministic promotion.
 
 ```txt
 KnowledgeBase/BoardGames/games/<slug>/
@@ -66,10 +66,11 @@ Every writing run ends by regenerating `INDEX.okf.md` (`node scripts/generate-in
 1. Publisher/product page
 2. Publisher-hosted rulebook / downloads / FAQ / errata
 3. Official links to CDN/Dropbox/Drive rulebook files
-4. BoardGameGeek metadata, files, forums, ratings, comments, and review leads
-5. Retail pages, fan summaries, videos, and third-party reviews only when official sources fail
+4. Independent reviews, videos, forums, designer commentary, and other credible reception sources outside the publisher domain
+5. BoardGameGeek metadata, files, forums, ratings, comments, and discovery leads
+6. Retail pages, archives, and fan summaries when their secondary role is explicit
 
-BoardGameGeek is a scout tower, not the court record.
+BoardGameGeek is a scout tower, not the research boundary. It may identify a candidate and support identity, rating, or community claims; it cannot satisfy the official-rules role. Every promotable packet requires official rules and an independent review from outside BGG, with at least two distinct non-BGG source domains overall.
 
 ## Copyright and extraction law
 

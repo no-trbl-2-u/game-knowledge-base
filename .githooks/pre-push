@@ -13,3 +13,19 @@ if [ -n "$(git status --porcelain -- TELEMETRY.md)" ]; then
   printf '%s\n' 'Commit normally; the pre-commit hook will stage it automatically.' >&2
   exit 1
 fi
+
+# Research intake is a two-key boundary. These zero/model-token checks run on
+# every push: regression fixtures first, then the actual diff against the
+# remote canonical baseline. Missing ffmpeg is fail-closed because the visual
+# anomaly gate cannot otherwise distinguish source imagery from label cards.
+if ! command -v ffmpeg >/dev/null 2>&1; then
+  printf '%s\n' 'pre-push: ffmpeg is required by the intake visual gate.' >&2
+  exit 1
+fi
+node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs
+
+base=origin/main
+if ! git rev-parse --verify --quiet "$base" >/dev/null; then
+  base=HEAD^
+fi
+node scripts/validate-intake.mjs --base "$base"

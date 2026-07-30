@@ -6,7 +6,7 @@ strict YAML frontmatter. **`KnowledgeBase/BoardGames/OKF_SPEC.md` is the
 contract; read it before writing any record.** The operating mandate (who
 writes what, on what cadence) is `KnowledgeBase/BoardGames/operations.okf.md`.
 
-## The three rules that prevent most damage
+## The four rules that prevent most damage
 
 1. **Metadata firewall — grep frontmatter before opening bodies.** Every
    game doc carries the game's full `mechanics` and (on reception docs)
@@ -23,12 +23,20 @@ writes what, on what cadence) is `KnowledgeBase/BoardGames/operations.okf.md`.
    `Source: src-NNN` / `Evidence: "quote"` / `Confidence:` triplet citing a
    source declared in frontmatter. Never mirror copyrighted rulebook text —
    summarize and cite. Don't invent claims a source doesn't support.
+4. **Scouting is not promotion.** Bathcat writes only under `intake/runs/`,
+   at most 2 cooperative + 2 solo RPG + 2 rotating-focus candidates. BGG may
+   discover candidates, but official rules and independent review must come
+   from outside BGG. Bathcat cannot create `approval.json` or write canonical
+   `games/`. The Mennonite independently approves an immutable packet hash;
+   only `scripts/promote-intake.mjs` may copy that packet into the corpus.
 
 ## Validation
 
 ```
 node scripts/validate-okf.mjs            # full corpus + index/sidecar freshness
 node scripts/validate-okf.mjs <files...> # just those files
+node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs
+node scripts/validate-intake.mjs --base origin/main # diff-aware hard gate
 ```
 
 A PostToolUse hook runs the single-file check after every write under
@@ -42,8 +50,11 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 
 ## Who writes here (the automation map)
 
-- **Daily scout** (external Hermes cron, "The Governor") — new game
-  coverage, wishlist-first. `WISHLIST.md` is the demand queue.
+- **Bathcat scout** (external Hermes cron) — wishlist-first discovery and
+  noncanonical evidence packets only; target 2/2/2, honest shortfalls allowed.
+- **Mennonite intake audit** (separate external Hermes cron) — independently
+  reopens sources, verifies claims and visuals, binds approval to the packet
+  SHA-256, and invokes deterministic promotion only after approval is committed.
 - **`/librarian`** (weekly Wed action) — schema drift, `needs_followup`
   retries, wishlist checkoffs, dedupe.
 - **`/synthesize-patterns`** (weekly Sun action) — cross-game synthesis
@@ -52,12 +63,23 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 - **`/audit`** (monthly action) — source re-verification and confidence
   hygiene; the weekly `check-links` job feeds it.
 
-Commit style: single-purpose commits to `main`, message prefix per pass
+Commit style: single-purpose commits on dedicated branches, message prefix per pass
 (`kb:`, `librarian:`, `patterns:`, `audit:`). No emojis, no
 `Co-Authored-By` trailers. Validator green before every commit.
+Protected `main` requires pull requests, an up-to-date green `validate` check,
+and resolved conversations; force-push and deletion are disabled. Scout,
+audit, and promotion are separate protected-branch PRs, enforced by diff-state
+transitions: audit cannot arrive with packet bytes, and promotion requires an
+approval already on the base branch. CODEOWNERS names T's authenticated
+repository account for ownership only: a single-account repository cannot
+satisfy a required self-review, so required approving reviews stay at zero and
+the human key is T merging each PR. Separate jobs, disjoint write
+jurisdictions, and immutable packet hashes preserve role separation.
 `TELEMETRY.md` travels with every delivery. The tracked
 `.githooks/pre-commit` auto-stages its current state with ordinary commits;
 `.githooks/pre-push` refuses delivery whenever telemetry remains uncommitted.
+It also runs the intake regression suite and diff-aware hard gate; canonical
+additions without an exact approved packet cannot leave the machine.
 Every writer environment—including Hermes cron—must set
 `core.hooksPath=.githooks` before work. Run all telemetry-writing generators
 and validators before the final commit. After push, verify only with read-only

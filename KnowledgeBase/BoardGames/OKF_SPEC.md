@@ -229,21 +229,18 @@ followups:
 
 A `scout_report` doc with `status: needs_followup` must carry a non-empty `followups` block — the weekly librarian pass consumes exactly this. Prose failure notes remain welcome but do not replace the block.
 
-## Minimum daily scout output
+## Daily scout and canonical-promotion boundary
 
-A valid daily run must write:
+The six-candidate scout target is 2 cooperative, 2 solo RPG, and 2 rotating-focus games. It is a ceiling, not a canonical-output quota. Bathcat writes noncanonical packets under `intake/runs/` according to `intake/README.md`; it does not write directly to `games/` and may not approve its own packet.
 
-- `index.okf.md`
-- `sources.okf.md`
-- at least three categorized rule docs if rules are found
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
-- `scout-report.okf.md` (with a `followups` block for any failed source)
+A packet eligible for independent audit stages the complete canonical tree, including `index.okf.md`, `sources.okf.md`, the six standard rule-category records (`overview`, `setup`, `turn-structure`, `actions`, `scoring-endgame`, and `edge-cases-faq`), both reception records, `scout-report.okf.md`, and a 4–8-image visual packet plus contact sheet. It also preserves machine-verifiable retrieval receipts for official rules, independent reception, ratings when claimed, and visual sources. BGG is permitted for discovery, identity, ratings, and community testimony; official rules and independent review must come from separate non-BGG organizational domains, and the packet must span at least two distinct non-BGG organizational domains.
 
-If rules are not found, write a `scout-report.okf.md` with the failed search path, next source leads, and structured `followups`.
+Missing evidence produces a `blocked` manifest entry with no staged canonical tree. Only the Mennonite may approve an immutable packet hash. The ready packet, audit-only decision, and deterministic promotion cross protected `main` in three separate reviewed PRs; CI rejects a decision introduced with packet bytes and rejects promotion unless approval already exists on the base branch. `scripts/promote-intake.mjs` then copies the approved tree byte-for-byte; it authors no semantic content.
 
-Before pushing, every run must also:
+Before pushing any intake or promotion change:
 
-1. **Select from the wishlist first**: take the topmost unchecked `WISHLIST.md` entry; check it off in the same run (linking the new game dir). Free-choice selection applies only when the wishlist is empty.
-2. **Regenerate the corpus index**: `node scripts/generate-index.mjs`.
-3. **Validate its own output**: `node scripts/validate-okf.mjs` — any finding means the run failed; fix before pushing. This spec, not the scout's memory of it, is the output format.
+1. Run `node --test scripts/intake-lib.test.mjs`.
+2. Run `node scripts/validate-intake.mjs --base origin/main`.
+3. After canonical promotion, regenerate `INDEX.okf.md` and run `node scripts/validate-okf.mjs`.
+
+Any finding is a failed run. Do not weaken a gate, fill a cohort with model knowledge, or create a partial canonical tree.

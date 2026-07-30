@@ -93,7 +93,7 @@ Sources were selected according to the required hierarchy. BoardGameGeek was use
   Evidence: "Welcome to the Official Spirit Island wiki".
   Confidence: high
 - Claim: Review evidence comes from multiple source types and outlets: specialty co-op review, solo review, general board game reviews, and BGG discovery data.
-  Source: src-005; src-006; src-007; src-008; src-009
+  Source: src-005, src-006, src-007, src-008, src-009
   Evidence: Source pages extracted and archived by URL/title above.
   Confidence: high
 

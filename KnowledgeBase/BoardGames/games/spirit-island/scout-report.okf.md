@@ -97,7 +97,7 @@ Daily scout selected *Spirit Island* because it was not already present in the l
   Evidence: "Spirit Island is a cooperative game for 1-4 players"; "all Spirits act simultaneously"; loss and setup sections extracted.
   Confidence: high
 - Claim: Reception praise and complaints were gathered from multiple review sources.
-  Source: src-005; src-006; src-007; src-008; src-009
+  Source: src-005, src-006, src-007, src-008, src-009
   Evidence: Reviews cited in `reception/reviews.okf.md` and `reception/better-if.okf.md`.
   Confidence: high
 

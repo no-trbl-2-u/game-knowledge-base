@@ -19,7 +19,7 @@ status: draft
 
 ## Scout objective
 
-Study one board game for rules structure, reception, and better-if design opportunities.
+Assemble one noncanonical candidate packet for rules structure, reception, and better-if design opportunities. This template does not authorize canonical promotion.
 
 ## Why this game
 
@@ -30,12 +30,14 @@ Study one board game for rules structure, reception, and better-if design opport
 
 ## Source search path
 
-- BoardGameGeek:
+- Discovery source (BGG optional):
 - Publisher page:
-- Official rulebook:
+- Official rulebook outside BGG:
 - FAQ/errata:
-- Review sources:
+- Independent review outside BGG and outside publisher domain:
 - Forum/community sources:
+- Other credible sources (video, designer commentary, archive, retailer):
+- Retrieval receipt files:
 
 ## Rulebook extraction status
 
@@ -43,6 +45,8 @@ Study one board game for rules structure, reception, and better-if design opport
 - File inspected: yes/no
 - Page count/version/date if known:
 - Text extraction quality:
+- Retrieved byte count and SHA-256 verified:
+- Exact page/section/timestamp locators recorded:
 
 ## Documents written
 
@@ -59,9 +63,11 @@ Study one board game for rules structure, reception, and better-if design opport
 
 ## Run validation
 
-- `WISHLIST.md` entry checked off (link the game dir): yes/no/n-a
-- `node scripts/generate-index.mjs` run after writing docs: yes/no
-- `node scripts/validate-okf.mjs` exit 0 before push: yes/no (findings = failed run)
+- Candidate cohort: cooperative / solo_rpg / rotating_focus
+- Candidate status: blocked / ready_for_audit
+- `node scripts/validate-intake.mjs --run <run-id>` exit 0: required
+- Independent approval: forbidden in Bathcat pass
+- Canonical `games/` write: forbidden in Bathcat pass
 
 ## Strongest design lessons
 

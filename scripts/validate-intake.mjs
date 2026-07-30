@@ -1,0 +1,500 @@
+#!/usr/bin/env node
+import fs from 'node:fs'
+import os from 'node:os'
+import path from 'node:path'
+import { execFileSync, spawnSync } from 'node:child_process'
+import { fileURLToPath } from 'node:url'
+import {
+  approvalFindings,
+  claimTripletFindings,
+  duplicateParagraphFindings,
+  hashTree,
+  packetHash,
+  placeholderFindings,
+  readJson,
+  rejectionFindings,
+  semanticGeneratorFindings,
+  sha256,
+  symlinkFindings,
+  validateEvidence,
+  validateManifest,
+  visualAnomalyFindings,
+  walkFiles,
+} from './intake-lib.mjs'
+
+const REPO = path.resolve(new URL('..', import.meta.url).pathname)
+const RUNS = path.join(REPO, 'intake', 'runs')
+const GAMES = path.join(REPO, 'KnowledgeBase', 'BoardGames', 'games')
+const REQUIRED_DOCS = [
+  'index.okf.md',
+  'sources.okf.md',
+  'scout-report.okf.md',
+  'rules/overview.okf.md',
+  'rules/setup.okf.md',
+  'rules/turn-structure.okf.md',
+  'rules/actions.okf.md',
+  'rules/scoring-endgame.okf.md',
+  'rules/edge-cases-faq.okf.md',
+  'reception/reviews.okf.md',
+  'reception/better-if.okf.md',
+  'visuals/packet.okf.md',
+]
+
+function rel(file) { return path.relative(REPO, file).replaceAll('\\', '/') }
+function flag(findings, file, message) { findings.push(`${rel(file)}: ${message}`) }
+
+function frontmatter(text) { return text.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '' }
+function unquote(value) { return String(value ?? '').trim().replace(/^["']|["']$/g, '') }
+function canonicalMeta(text) {
+  const head = frontmatter(text)
+  const value = (pattern) => unquote(head.match(pattern)?.[1])
+  return {
+    title: value(/^\s{2}title:\s*([^\r\n]+)/m),
+    slug: value(/^\s{2}slug:\s*([^\r\n]+)/m),
+    bgg_id: value(/^\s{2}bgg_id:\s*([^\r\n]+)/m),
+    publisher: value(/^\s{2}publisher:\s*([^\r\n]+)/m),
+    year: value(/^\s{2}year:\s*([^\r\n]+)/m),
+    edition: value(/^\s{2}edition:\s*([^\r\n]+)/m),
+    scope: value(/^scope:\s*([^\r\n]+)/m),
+    mechanics: value(/^mechanics:\s*([^\r\n]+)/m).replace(/\s+/g, ''),
+    status: value(/^status:\s*([^\r\n]+)/m),
+  }
+}
+
+function sourceEntries(text) {
+  const head = frontmatter(text)
+  const block = head.match(/^sources:\s*\r?\n([\s\S]*?)(?=^\S|(?![\s\S]))/m)?.[1] ?? ''
+  const entries = []
+  for (const match of block.matchAll(/^\s{2}- id:\s*["']?(src-[0-9]{3})["']?\s*\r?\n([\s\S]*?)(?=^\s{2}- id:|(?![\s\S]))/gm)) {
+    const field = name => unquote(match[2].match(new RegExp(`^\\s{4}${name}:\\s*([^\\r\\n]+)`, 'm'))?.[1])
+    entries.push({ id: match[1], title: field('title'), url: field('url'), asset_url: field('asset_url'), kind: field('kind'), provenance: field('provenance'), retrieved_at: field('retrieved_at') })
+  }
+  return entries
+}
+
+function visualReferences(text) {
+  const head = frontmatter(text)
+  const block = head.match(/^visual_references:\s*\r?\n([\s\S]*?)(?=^\S|(?![\s\S]))/m)?.[1] ?? ''
+  const refs = []
+  for (const match of block.matchAll(/^\s{2}- id:\s*["']?([^"'\r\n]+)["']?\s*\r?\n([\s\S]*?)(?=^\s{2}- id:|(?![\s\S]))/gm)) {
+    const field = name => unquote(match[2].match(new RegExp(`^\\s{4}${name}:\\s*([^\\r\\n]+)`, 'm'))?.[1])
+    refs.push({ id: unquote(match[1]), file: field('file'), source_id: field('source_id'), sha256: field('sha256'), subject: field('subject'), capture_type: field('capture_type'), creator: field('creator'), rights_holder: field('rights_holder'), usage_basis: field('usage_basis'), license: field('license'), attribution: field('attribution'), demonstrates: field('demonstrates'), rationale: field('rationale') })
+  }
+  return refs
+}
+
+function canonicalSchemaFindings(canonical, slug) {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'intake-canonical-schema-'))
+  try {
+    const mirror = path.join(root, slug)
+    fs.cpSync(canonical, mirror, { recursive: true })
+    const files = walkFiles(mirror).filter(file => file.endsWith('.okf.md'))
+    const result = spawnSync(process.execPath, [path.join(REPO, 'scripts/validate-okf.mjs'), ...files], {
+      encoding: 'utf8',
+      maxBuffer: 4 * 1024 * 1024,
+    })
+    if (result.status === 0) return []
+    const detail = `${result.stdout ?? ''}${result.stderr ?? ''}`.trim().replaceAll(root, rel(canonical))
+    return [`${rel(canonical)}: staged canonical schema validation failed\n${detail}`]
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true })
+  }
+}
+
+export function validateCandidatePackage(candidateDir, candidate) {
+  const findings = []
+  const evidenceFile = path.join(candidateDir, 'evidence.json')
+  const canonical = path.join(candidateDir, 'canonical')
+  if (!fs.existsSync(evidenceFile)) {
+    flag(findings, evidenceFile, 'missing evidence.json')
+    return findings
+  }
+  if (!fs.existsSync(canonical)) {
+    flag(findings, canonical, 'missing canonical staging tree')
+    return findings
+  }
+  const links = symlinkFindings(canonical, rel(canonical))
+  if (links.length) return [...findings, ...links]
+  const evidence = readJson(evidenceFile)
+  const indexFile = path.join(canonical, 'index.okf.md')
+  const indexText = fs.existsSync(indexFile) ? fs.readFileSync(indexFile, 'utf8') : ''
+  findings.push(...validateEvidence(evidence, rel(evidenceFile), { indexText }))
+  if (evidence.slug !== candidate.slug) flag(findings, evidenceFile, `slug ${evidence.slug} does not match manifest candidate ${candidate.slug}`)
+
+  for (const required of REQUIRED_DOCS) {
+    const file = path.join(canonical, required)
+    if (!fs.existsSync(file) || !fs.statSync(file).isFile()) flag(findings, file, 'required canonical document is missing or not a regular file')
+  }
+  findings.push(...canonicalSchemaFindings(canonical, candidate.slug))
+  const ruleDocs = walkFiles(path.join(canonical, 'rules')).filter(f => f.endsWith('.okf.md'))
+  if (ruleDocs.length < 3) flag(findings, path.join(canonical, 'rules'), `at least three categorized rule documents are required, found ${ruleDocs.length}`)
+
+  const documents = []
+  const okfFiles = walkFiles(canonical).filter(f => f.endsWith('.okf.md'))
+  const exactBodies = new Map()
+  const baselineMeta = canonicalMeta(indexText)
+  const evidenceSources = new Map((evidence.sources ?? []).map(source => [source.id, source]))
+  const resolvedSources = new Map()
+  for (const file of okfFiles) {
+    const text = fs.readFileSync(file, 'utf8')
+    findings.push(...placeholderFindings(text, rel(file)))
+    if (/^##\s+(?:SomberSoft implications|Design notes for SomberSoft)\s*$/mi.test(text)) flag(findings, file, 'canonical source-evidence records may not contain generic SomberSoft design-note sections')
+    const needsClaims = file === indexFile || file.includes(`${path.sep}rules${path.sep}`) || file.includes(`${path.sep}reception${path.sep}`)
+    const claims = claimTripletFindings(text, rel(file), { requireClaim: needsClaims })
+    findings.push(...claims.findings)
+    const meta = canonicalMeta(text)
+    for (const key of ['title', 'slug', 'bgg_id', 'publisher', 'year', 'edition', 'scope', 'mechanics']) {
+      if (!meta[key]) flag(findings, file, `missing canonical metadata ${key}`)
+      else if (meta[key] !== baselineMeta[key]) flag(findings, file, `${key} differs from index.okf.md (${meta[key]} != ${baselineMeta[key]})`)
+    }
+    if (meta.slug !== candidate.slug) flag(findings, file, `game.slug ${meta.slug} does not match candidate directory ${candidate.slug}`)
+    if (meta.status !== 'verified') flag(findings, file, `new canonical records must be verified, found ${meta.status || 'missing status'}`)
+    if (/^followups:\s*$/m.test(frontmatter(text))) flag(findings, file, 'new canonical packet must not contain unresolved followups')
+
+    const localSources = sourceEntries(text)
+    const localIds = new Set(localSources.map(source => source.id))
+    for (const source of localSources) {
+      const receipt = evidenceSources.get(source.id)
+      if (!receipt) flag(findings, file, `declares ${source.id} without a retrieval receipt`)
+      else {
+        if (source.title !== receipt.title) flag(findings, file, `${source.id} title does not match its retrieval receipt`)
+        if (![receipt.url, receipt.final_url].includes(source.url)) flag(findings, file, `${source.id} URL does not match its retrieval receipt`)
+        if (source.provenance !== receipt.provenance) flag(findings, file, `${source.id} provenance does not match its retrieval receipt`)
+      }
+      for (const key of ['title', 'url', 'kind', 'provenance']) if (!source[key]) flag(findings, file, `${source.id} is missing ${key}`)
+      const signature = JSON.stringify([source.title, source.url, source.kind, source.provenance])
+      if (resolvedSources.has(source.id) && resolvedSources.get(source.id) !== signature) flag(findings, file, `${source.id} resolves inconsistently across candidate documents`)
+      else resolvedSources.set(source.id, signature)
+    }
+    for (const sourceLine of text.matchAll(/^\s*(?:-\s*)?Source:\s*([^\r\n]+)/gm)) {
+      for (const id of sourceLine[1].match(/src-[0-9]{3}/g) ?? []) if (!localIds.has(id)) flag(findings, file, `body cites ${id} but this document does not declare it`)
+    }
+    documents.push({ slug: candidate.slug, file: rel(file), text })
+    const body = text.replace(/^---\r?\n[\s\S]*?\r?\n---/, '').replace(/\s+/g, ' ').trim().toLowerCase()
+    if (body.length >= 120) {
+      const hash = sha256(body)
+      const previous = exactBodies.get(hash)
+      if (previous) flag(findings, file, `body duplicates ${previous}`)
+      else exactBodies.set(hash, rel(file))
+    }
+  }
+
+  const sourceLedger = path.join(canonical, 'sources.okf.md')
+  if (fs.existsSync(sourceLedger)) {
+    const ledger = fs.readFileSync(sourceLedger, 'utf8')
+    for (const source of evidence.sources ?? []) {
+      if (!ledger.includes(source.id)) flag(findings, sourceLedger, `does not declare evidence receipt ${source.id}`)
+      if (!ledger.includes(source.url) && !ledger.includes(source.final_url)) flag(findings, sourceLedger, `does not preserve URL for ${source.id}`)
+    }
+  }
+  if (baselineMeta.slug !== candidate.slug) flag(findings, indexFile, `index game.slug ${baselineMeta.slug} does not match ${candidate.slug}`)
+  if (candidate.title && baselineMeta.title !== candidate.title) flag(findings, indexFile, `index game.title does not match manifest title ${candidate.title}`)
+  if (candidate.bgg_id !== null && candidate.bgg_id !== undefined && baselineMeta.bgg_id !== String(candidate.bgg_id)) flag(findings, indexFile, `index game.bgg_id does not match manifest bgg_id ${candidate.bgg_id}`)
+
+  const packet = path.join(canonical, 'visuals', 'packet.okf.md')
+  if (fs.existsSync(packet)) {
+    const text = fs.readFileSync(packet, 'utf8')
+    const refs = visualReferences(text)
+    const packetSources = new Map(sourceEntries(text).map(source => [source.id, source]))
+    const files = refs.map(ref => ref.file)
+    const assetUrls = refs.map(ref => packetSources.get(ref.source_id)?.asset_url).filter(Boolean)
+    if (files.length < 4 || files.length > 8) flag(findings, packet, `must declare 4–8 visual files, found ${files.length}`)
+    if (new Set(assetUrls).size < 4) flag(findings, packet, `must preserve at least four distinct source asset URLs, found ${new Set(assetUrls).size}`)
+    if (new Set(refs.map(ref => ref.id)).size !== refs.length) flag(findings, packet, 'visual reference ids must be unique')
+    if (new Set(refs.map(ref => ref.rationale)).size !== refs.length) flag(findings, packet, 'every new visual reference requires a distinct analytical rationale')
+    const imageFiles = []
+    for (const ref of refs) {
+      for (const key of ['id', 'file', 'source_id', 'sha256', 'subject', 'capture_type', 'creator', 'rights_holder', 'usage_basis', 'attribution', 'demonstrates', 'rationale']) if (!ref[key]) flag(findings, packet, `visual reference ${ref.id || '(missing id)'} lacks ${key}`)
+      if (!/^vis-[0-9]{3}$/.test(ref.id)) flag(findings, packet, `visual reference id ${ref.id} must match vis-NNN`)
+      const source = packetSources.get(ref.source_id)
+      if (!source) flag(findings, packet, `visual reference ${ref.id} cites undeclared source ${ref.source_id}`)
+      else {
+        if (!/^https?:\/\//.test(source.asset_url)) flag(findings, packet, `visual source ${ref.source_id} has invalid asset_url`)
+        const receipt = evidenceSources.get(ref.source_id)
+        if (!receipt || !receipt.roles?.includes('visual')) flag(findings, packet, `visual reference ${ref.id} source_id lacks a visual retrieval receipt`)
+        else if (![receipt.url, receipt.final_url].includes(source.asset_url)) flag(findings, packet, `visual source ${ref.source_id} asset_url does not match its retrieval receipt`)
+      }
+      const absolute = path.resolve(canonical, ref.file)
+      const referencesRoot = path.join(canonical, 'visuals', 'references')
+      if (!absolute.startsWith(`${referencesRoot}${path.sep}`)) flag(findings, packet, `visual reference ${ref.id} must live under visuals/references/`)
+      if (!absolute.startsWith(`${canonical}${path.sep}`) || !fs.existsSync(absolute) || !fs.statSync(absolute).isFile()) flag(findings, packet, `visual file is missing, non-regular, or escapes candidate tree: ${ref.file}`)
+      else {
+        imageFiles.push(absolute)
+        if (path.extname(absolute).toLowerCase() !== '.webp') flag(findings, packet, `visual reference ${ref.id} must be WebP`)
+        if (ref.sha256 !== sha256(fs.readFileSync(absolute))) flag(findings, packet, `visual reference ${ref.id} sha256 does not match ${ref.file}`)
+      }
+    }
+    findings.push(...visualAnomalyFindings(imageFiles).map(message => message.replaceAll(REPO, '.')))
+    const packetHead = frontmatter(text)
+    const sheetFile = unquote(packetHead.match(/^contact_sheet:\s*([^\r\n]+)/m)?.[1])
+    const sheetHash = unquote(packetHead.match(/^contact_sheet_sha256:\s*([^\r\n]+)/m)?.[1])
+    if (sheetFile !== 'visuals/contact-sheet.webp') flag(findings, packet, 'contact_sheet must be visuals/contact-sheet.webp')
+    const sheet = path.join(canonical, 'visuals', 'contact-sheet.webp')
+    if (fs.existsSync(sheet) && sheetHash !== sha256(fs.readFileSync(sheet))) flag(findings, packet, 'contact_sheet_sha256 does not match contact sheet')
+  }
+  const contactSheet = path.join(canonical, 'visuals', 'contact-sheet.webp')
+  if (!fs.existsSync(contactSheet) || !fs.statSync(contactSheet).isFile()) flag(findings, contactSheet, 'required contact sheet is missing or not a regular file')
+  findings.push(...duplicateParagraphFindings(documents))
+  return findings
+}
+
+export function validateRunDirectory(runDir) {
+  const findings = []
+  const manifestFile = path.join(runDir, 'manifest.json')
+  if (!fs.existsSync(manifestFile)) return [`${rel(manifestFile)}: missing manifest.json`]
+  const manifest = readJson(manifestFile)
+  findings.push(...validateManifest(manifest, rel(manifestFile)))
+  if (path.basename(runDir) !== manifest.run_id) flag(findings, manifestFile, `run_id ${manifest.run_id} does not match directory ${path.basename(runDir)}`)
+  const declared = new Set((manifest.candidates ?? []).map(c => c.slug))
+  const candidatesRoot = path.join(runDir, 'candidates')
+  if (fs.existsSync(candidatesRoot)) {
+    for (const entry of fs.readdirSync(candidatesRoot, { withFileTypes: true }).filter(e => e.isDirectory())) {
+      if (!declared.has(entry.name)) flag(findings, path.join(candidatesRoot, entry.name), 'candidate directory is not declared in manifest')
+    }
+  }
+  for (const candidate of manifest.candidates ?? []) {
+    const dir = path.join(candidatesRoot, candidate.slug)
+    const hasCanonical = fs.existsSync(path.join(dir, 'canonical'))
+    const hasApproval = fs.existsSync(path.join(dir, 'approval.json'))
+    const hasRejection = fs.existsSync(path.join(dir, 'rejection.json'))
+    if (candidate.status === 'blocked') {
+      if (hasCanonical) flag(findings, dir, 'blocked candidate must not contain a canonical staging tree')
+      if (hasApproval) flag(findings, dir, 'blocked candidate must not contain approval')
+      if (hasRejection) flag(findings, dir, 'blocked candidate must not contain rejection; blockers belong in manifest')
+      continue
+    }
+    findings.push(...validateCandidatePackage(dir, candidate))
+    if (candidate.status === 'ready_for_audit' && (hasApproval || hasRejection)) flag(findings, dir, 'ready_for_audit candidate must not self-carry an audit decision')
+    if (candidate.status === 'rejected') {
+      if (hasApproval) flag(findings, dir, 'rejected candidate must not contain approval')
+      if (!hasRejection) flag(findings, path.join(dir, 'rejection.json'), 'rejected candidate requires independent rejection record')
+      else {
+        const evidence = readJson(path.join(dir, 'evidence.json'))
+        findings.push(...rejectionFindings(readJson(path.join(dir, 'rejection.json')), dir, evidence, rel(path.join(dir, 'rejection.json'))))
+      }
+    }
+    if (['approved', 'promoted'].includes(candidate.status)) {
+      if (hasRejection) flag(findings, dir, `${candidate.status} candidate must not retain rejection.json`)
+      if (!hasApproval) flag(findings, path.join(dir, 'approval.json'), `${candidate.status} candidate requires independent approval`)
+      else {
+        const evidence = readJson(path.join(dir, 'evidence.json'))
+        findings.push(...approvalFindings(readJson(path.join(dir, 'approval.json')), dir, evidence, rel(path.join(dir, 'approval.json'))))
+      }
+    }
+  }
+  return findings
+}
+
+function git(args) { return execFileSync('git', args, { cwd: REPO, encoding: 'utf8' }).trim() }
+
+function changedAgainst(base) {
+  const raw = git(['diff', '--name-status', `${base}...HEAD`])
+  if (!raw) return []
+  return raw.split('\n').map(line => {
+    const columns = line.split('\t')
+    return { status: columns[0], oldFile: /^[RC]/.test(columns[0]) ? columns[1] : null, file: columns.at(-1) }
+  })
+}
+
+function gameExistsAt(ref, slug) {
+  return Boolean(git(['ls-tree', '-d', '--name-only', ref, `KnowledgeBase/BoardGames/games/${slug}`]))
+}
+
+function pathExistsAt(ref, file) {
+  try {
+    execFileSync('git', ['cat-file', '-e', `${ref}:${file}`], { cwd: REPO, stdio: 'ignore' })
+    return true
+  } catch { return false }
+}
+
+function candidateStatusAt(ref, runId, slug) {
+  try {
+    const text = execFileSync('git', ['show', `${ref}:intake/runs/${runId}/manifest.json`], { cwd: REPO, encoding: 'utf8' })
+    return readJsonText(text)?.candidates?.find(candidate => candidate.slug === slug)?.status ?? null
+  } catch { return null }
+}
+
+function readJsonText(text) {
+  try { return JSON.parse(text) }
+  catch { return null }
+}
+
+export function auditTransitionFindings(changes, { pathExists, statusAt }) {
+  const findings = []
+  const decisionPattern = /^intake\/runs\/([^/]+)\/candidates\/([^/]+)\/(approval|rejection)\.json$/
+  for (const change of changes) {
+    const match = change.file.match(decisionPattern)
+    if (!match) continue
+    const [, runId, slug, decision] = match
+    if (!change.status.startsWith('A')) {
+      findings.push(`${change.file}: audit decisions are immutable once committed`)
+      continue
+    }
+    const candidatePrefix = `intake/runs/${runId}/candidates/${slug}/`
+    const immutableChanges = changes.filter(item => item.file.startsWith(candidatePrefix) && item.file !== change.file)
+    if (immutableChanges.length) findings.push(`${change.file}: audit decision must be added in a later PR without packet/evidence changes`)
+    if (!pathExists(`${candidatePrefix}evidence.json`) || !pathExists(`${candidatePrefix}canonical/index.okf.md`)) {
+      findings.push(`${change.file}: audited packet must already exist on the protected base branch`)
+    }
+    if (statusAt(runId, slug) !== 'ready_for_audit') findings.push(`${change.file}: protected-base candidate status must be ready_for_audit`)
+    const manifest = `intake/runs/${runId}/manifest.json`
+    if (!changes.some(item => item.file === manifest)) findings.push(`${change.file}: audit decision must transition the manifest in the same audit-only PR`)
+    const opposite = `${candidatePrefix}${decision === 'approval' ? 'rejection' : 'approval'}.json`
+    if (pathExists(opposite)) findings.push(`${change.file}: protected base already contains the opposite audit decision`)
+  }
+  return findings
+}
+
+export function newGameSlugs(changes, existsAtBase) {
+  const slugs = new Set()
+  for (const change of changes) {
+    if (change.status.startsWith('D')) continue
+    const match = change.file.match(/^KnowledgeBase\/BoardGames\/games\/([^/]+)\//)
+    if (match && !existsAtBase(match[1])) slugs.add(match[1])
+  }
+  return slugs
+}
+
+function runDirs() {
+  if (!fs.existsSync(RUNS)) return []
+  return fs.readdirSync(RUNS, { withFileTypes: true }).filter(e => e.isDirectory()).map(e => path.join(RUNS, e.name)).sort()
+}
+
+function candidateRecords() {
+  const out = []
+  for (const runDir of runDirs()) {
+    const manifestFile = path.join(runDir, 'manifest.json')
+    if (!fs.existsSync(manifestFile)) continue
+    const manifest = readJson(manifestFile)
+    for (const candidate of manifest.candidates ?? []) out.push({ runDir, manifest, candidate, dir: path.join(runDir, 'candidates', candidate.slug) })
+  }
+  return out
+}
+
+function validateDiff(base) {
+  const findings = []
+  let changes
+  try { changes = changedAgainst(base) }
+  catch (err) { return [`cannot compare intake against ${base}: ${err.message}`] }
+  const changedFiles = changes.map(c => c.file)
+  findings.push(...semanticGeneratorFindings(REPO, changedFiles))
+  findings.push(...auditTransitionFindings(changes, {
+    pathExists: file => pathExistsAt(base, file),
+    statusAt: (runId, slug) => candidateStatusAt(base, runId, slug),
+  }))
+
+  for (const change of changes) {
+    if (change.status.startsWith('D') && change.file.startsWith('KnowledgeBase/BoardGames/games/')) {
+      findings.push(`${change.file}: canonical game deletion is not an intake operation and requires an explicit separate policy change`)
+    }
+    if (change.oldFile?.startsWith('KnowledgeBase/BoardGames/games/')) {
+      const oldSlug = change.oldFile.split('/')[3]
+      const newSlug = change.file.split('/')[3]
+      if (oldSlug !== newSlug) findings.push(`${change.oldFile}: canonical game relocation to ${newSlug} is prohibited; admit a new slug through intake instead`)
+    }
+  }
+
+  const changedCanonicalDocs = []
+  const changedCanonicalVisuals = []
+  for (const file of changedFiles) {
+    if (!file.startsWith('KnowledgeBase/BoardGames/games/')) continue
+    const absolute = path.join(REPO, file)
+    if (!fs.existsSync(absolute)) continue
+    const slug = file.split('/')[3]
+    if (file.endsWith('.okf.md')) {
+      const text = fs.readFileSync(absolute, 'utf8')
+      findings.push(...placeholderFindings(text, file))
+      changedCanonicalDocs.push({ slug, file, text })
+    }
+    if (file.endsWith('.webp')) changedCanonicalVisuals.push(absolute)
+  }
+
+  if (changedCanonicalDocs.length) {
+    const changedDocPaths = new Set(changedCanonicalDocs.map(doc => doc.file))
+    const legacyDocs = walkFiles(GAMES)
+      .filter(file => file.endsWith('.okf.md') && !changedDocPaths.has(rel(file)))
+      .map(file => ({ slug: path.relative(GAMES, file).split(path.sep)[0], file: rel(file), text: fs.readFileSync(file, 'utf8') }))
+    findings.push(...duplicateParagraphFindings([...legacyDocs, ...changedCanonicalDocs]).filter(message => changedDocPaths.has(message.split(': duplicates ')[0])))
+  }
+
+  if (changedCanonicalVisuals.length) {
+    const changedVisualPaths = new Set(changedCanonicalVisuals.map(file => path.resolve(file)))
+    const legacyHashes = new Map()
+    for (const file of walkFiles(GAMES).filter(file => file.endsWith('.webp') && !changedVisualPaths.has(path.resolve(file)))) legacyHashes.set(sha256(fs.readFileSync(file)), rel(file))
+    for (const file of changedCanonicalVisuals) {
+      const duplicate = legacyHashes.get(sha256(fs.readFileSync(file)))
+      if (duplicate) findings.push(`${rel(file)}: duplicates existing visual ${duplicate}`)
+    }
+    findings.push(...visualAnomalyFindings(changedCanonicalVisuals).map(message => message.replaceAll(REPO, '.')))
+  }
+
+  const changedRuns = new Set()
+  for (const file of changedFiles) {
+    const match = file.match(/^intake\/runs\/([^/]+)\//)
+    if (match) changedRuns.add(match[1])
+  }
+  for (const id of changedRuns) findings.push(...validateRunDirectory(path.join(RUNS, id)))
+
+  const newSlugs = newGameSlugs(changes, slug => gameExistsAt(base, slug))
+  if (newSlugs.size > 6) findings.push(`intake diff adds ${newSlugs.size} canonical games; hard ceiling is 6`)
+
+  const records = candidateRecords()
+  const docs = []
+  const newVisuals = []
+  const legacyVisualHashes = new Map()
+  for (const file of walkFiles(GAMES).filter(f => f.endsWith('.webp'))) {
+    const slug = path.relative(GAMES, file).split(path.sep)[0]
+    if (!newSlugs.has(slug)) legacyVisualHashes.set(sha256(fs.readFileSync(file)), rel(file))
+  }
+
+  for (const slug of newSlugs) {
+    const matches = records.filter(r => r.candidate.slug === slug && r.candidate.status === 'promoted')
+    if (matches.length !== 1) {
+      findings.push(`canonical game ${slug}: expected exactly one promoted intake record, found ${matches.length}`)
+      continue
+    }
+    const record = matches[0]
+    const runId = path.basename(record.runDir)
+    const approvalRel = `intake/runs/${runId}/candidates/${slug}/approval.json`
+    if (!pathExistsAt(base, approvalRel) || candidateStatusAt(base, runId, slug) !== 'approved') {
+      findings.push(`canonical game ${slug}: approval and approved manifest status must already exist on the protected base branch before promotion`)
+    }
+    findings.push(...validateRunDirectory(record.runDir))
+    const staged = path.join(record.dir, 'canonical')
+    const canonical = path.join(GAMES, slug)
+    if (hashTree(staged) !== hashTree(canonical)) findings.push(`canonical game ${slug}: destination differs from independently approved staging tree`)
+    for (const file of walkFiles(staged).filter(f => f.endsWith('.okf.md'))) docs.push({ slug, file: rel(file), text: fs.readFileSync(file, 'utf8') })
+    for (const file of walkFiles(staged).filter(f => f.endsWith('.webp') && f.includes(`${path.sep}references${path.sep}`))) {
+      const hash = sha256(fs.readFileSync(file))
+      if (legacyVisualHashes.has(hash)) findings.push(`${rel(file)}: duplicates legacy visual ${legacyVisualHashes.get(hash)}`)
+      newVisuals.push(file)
+    }
+  }
+  findings.push(...duplicateParagraphFindings(docs))
+  findings.push(...visualAnomalyFindings(newVisuals).map(message => message.replaceAll(REPO, '.')))
+  return [...new Set(findings)]
+}
+
+function usage() {
+  console.error('usage: node scripts/validate-intake.mjs [--base <git-ref> | --all | --run <run-id>]')
+  process.exit(2)
+}
+
+if (path.resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) {
+  const args = process.argv.slice(2)
+  let findings = []
+  if (!args.length) findings = validateDiff(process.env.GITHUB_BASE_SHA || 'origin/main')
+  else if (args[0] === '--base' && args[1] && args.length === 2) findings = validateDiff(args[1])
+  else if (args[0] === '--all' && args.length === 1) {
+    for (const runDir of runDirs()) findings.push(...validateRunDirectory(runDir))
+  }
+  else if (args[0] === '--run' && args[1] && args.length === 2) findings = validateRunDirectory(path.join(RUNS, args[1]))
+  else usage()
+
+  if (findings.length) {
+    console.error(`validate-intake: ${findings.length} finding(s):`)
+    for (const finding of findings) console.error(`  ${finding}`)
+    process.exit(1)
+  }
+  console.log(`validate-intake: clean${args[0] === '--all' ? ` (${runDirs().length} run directories)` : ''}`)
+}
