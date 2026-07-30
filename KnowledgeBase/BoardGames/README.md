@@ -1,10 +1,10 @@
 # SomberSoft Board Game Knowledge Base
 
-Daily research corpus for board-game rules, player reception, and design-improvement opportunities.
+Evidence-gated research corpus for board-game rules, player reception, and design-improvement opportunities.
 
 ## Purpose
 
-This directory is for gathering structured knowledge before integration. The daily scout studies 60 unique board games in three 20-game cohorts, finds official rules where possible, gathers review/forum reception, and writes OKF-formatted documents that preserve source provenance.
+This directory is for gathering structured knowledge before integration. The daily scout selects up to fifteen candidates in three disjoint 5/5/5 cohorts, then promotes only evidence-complete games to OKF-formatted canonical records.
 
 Primary uses:
 
@@ -15,7 +15,7 @@ Primary uses:
 
 ## Daily cadence
 
-A Hermes cron job runs once per day at 06:00 UTC. It selects 20 cooperative games, 20 solo RPG board games, and 20 games matching the day's mechanic focus, then writes or enriches canonical game directories under:
+A Hermes cron job runs once per day at 06:00 UTC. It selects up to five cooperative games, five solo RPG board games, and five games matching the rotating mechanic focus. Selection is not canonical coverage: a game directory is written only after the pre-authoring evidence gate passes.
 
 ```txt
 KnowledgeBase/BoardGames/games/<slug>/
@@ -30,7 +30,7 @@ Retrieval entry points:
 - `INDEX.okf.md` — **generated** corpus index (one row per game + mechanics → games table). The first file an agent should read; regenerate with `node scripts/generate-index.mjs`, never hand-edit.
 - `index.html` — the human dashboard twin.
 
-Each covered game should produce, at minimum:
+Each promoted game should contain, at minimum:
 
 ```txt
 games/<slug>/
@@ -57,9 +57,9 @@ games/<slug>/
       04-decision-state.webp
 ```
 
-If official rulebooks are unavailable, the scout must say so plainly, use secondary sources only as secondary testimony, and record each failure as a structured `followups:` entry in `scout-report.okf.md` (see `OKF_SPEC.md`) for the weekly librarian to retry.
+If an official rulebook, independent review, rating snapshot, or meaningful visual packet cannot be retrieved and inspected, the game remains in the noncanonical candidate manifest. The scout must report the evidence shortfall plainly and must not create a partial canonical tree.
 
-Every run ends by regenerating `INDEX.okf.md` (`node scripts/generate-index.mjs`) and running `node scripts/validate-okf.mjs`; any validator finding means the run failed.
+Every writing run ends by regenerating `INDEX.okf.md` (`node scripts/generate-index.mjs`) and running `node scripts/validate-okf.mjs`; any validator finding means the run failed. A green validator proves schema integrity, not factual truth; source retrieval and claim support are separate mandatory gates.
 
 ## Source hierarchy
 
@@ -98,8 +98,6 @@ source. Remove material on request.
 ## Selection doctrine
 
 **Wishlist first:** take the topmost unchecked entry in `WISHLIST.md` (repo root) and check it off in the run that covers it, linking the game dir. Free choice applies only when the wishlist is empty.
-
-Each run targets 60 unique games. A title may satisfy only one cohort slot per run; replace overlaps and already-complete KB games with the next eligible candidate. The 20-game mechanic cohort rotates among campaign, deck/bag/dicebuilder, and semi-cooperative until T changes the focus after a report.
 
 When choosing freely, prefer games with:
 

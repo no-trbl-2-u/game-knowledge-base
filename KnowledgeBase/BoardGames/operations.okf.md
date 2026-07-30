@@ -32,12 +32,12 @@ sources:
     retrieved_at: "2026-07-15"
     notes: "Axiomancer integration proposal: mechanics tags, corpus index, patterns layer, librarian gate, wishlist consumption, failed-source policy. 2026-07-15 audit: check-links flags this URL 'dead' (404) because game-knowledge-base is a private repo — unauthenticated fetch always 404s on issue pages. Re-confirmed via `gh issue view 1` (state: closed, body/comments intact, content matches Evidence quotes below); not link rot, no remediation needed."
   - id: "src-004"
-    title: "T instruction: expand Bathcat daily scout to 60 games"
+    title: "T instruction: evidence-gated 5/5/5 scout"
     url: "local-session"
     kind: other
     provenance: official
-    retrieved_at: "2026-07-29"
-    notes: "T replaced the single-game daily run with 20 cooperative games, 20 solo RPG board games, and 20 games under a rotating mechanic focus: campaign, deck/bag/dicebuilder, or semi-cooperative. Every report must ask for the next mechanic focus and recommend one."
+    retrieved_at: "2026-07-30"
+    notes: "T reduced the daily target to five cooperative candidates, five solo RPG candidates, and five rotating-focus candidates after rejecting count-driven generated filler. Canonical records require actual rulebooks, real reviews, factual evidence, and meaningful visuals."
 confidence: high
 status: verified
 ---
@@ -46,13 +46,13 @@ status: verified
 
 The Board Game Knowledge Base is an active SomberSoft research corpus. It is isolated in its own repository and housed at:
 
-`/root/Workspace/game-knowledge-base/KnowledgeBase/BoardGames/`
+`/root/Workspace/SomberSoft/game-knowledge-base/KnowledgeBase/BoardGames/`
 
 Remote:
 
 `https://github.com/no-trbl-2-u/game-knowledge-base`
 
-Its daily operator is **The Governor — SomberSoft Research Magistrate and Knowledge-Base Keeper**.
+Its daily operator is **Bathcat — SomberSoft Field Intelligence and Knowledge Scout**.
 
 The current purpose is knowledge gathering only. Full integration into downstream agents, tools, or game systems is deferred.
 
@@ -68,9 +68,14 @@ The current purpose is knowledge gathering only. Full integration into downstrea
   Evidence: T specified "Everyday, once a day at 6am"; cron job `44c13742fca9` is scheduled as `0 6 * * *`.
   Confidence: high
 
-- Claim: The current scout contract is 60 unique games per run across three cohorts.
+- Claim: The original scout focused on one game per run; the current target is three disjoint five-game candidate cohorts.
+  Source: src-001, src-004
+  Evidence: T superseded the original single-game instruction with five cooperative candidates, five solo RPG candidates, and five rotating-focus candidates.
+  Confidence: high
+
+- Claim: Candidate selection is not canonical coverage.
   Source: src-004
-  Evidence: T replaced the former single-game run with 20 cooperative games, 20 solo RPG board games, and 20 games matching the active rotating mechanic focus.
+  Evidence: T rejected model-filled blanks because actual rulebooks, real reviews, and factual information are available; only evidence-complete games may be promoted.
   Confidence: high
 
 - Claim: BoardGameGeek is a primary discovery source, but publisher websites are preferred for actual rulebooks.
@@ -109,8 +114,8 @@ The current purpose is knowledge gathering only. Full integration into downstrea
 
 Role:
 
-- research magistrate
-- knowledge-base keeper
+- field intelligence scout
+- knowledge-base researcher
 - source-provenance auditor
 - rulebook categorizer
 - review/reception extractor
@@ -135,12 +140,14 @@ Cron job:
 - Job ID: `44c13742fca9`
 - Schedule: `0 6 * * *`
 - Next first run after setup: `2026-06-30T06:00:00+00:00`
-- Workdir: `/root/Workspace/game-knowledge-base`
+- Workdir: `/root/Workspace/SomberSoft/game-knowledge-base`
 - Skill: `research-discovery-monitoring`
-- Toolsets: `web`, `file`, `terminal`
+- Toolsets: `web`, `file`, `terminal`, `delegation`
 - Delivery: origin Telegram thread
 - Commit/push: yes, to `no-trbl-2-u/game-knowledge-base` `main` after each successful scout run
 - Required gates: `node scripts/generate-index.mjs` then `node scripts/validate-okf.mjs`; any validator finding is a failed run and must not be pushed
+- Candidate target: 5 cooperative + 5 solo RPG + 5 rotating-focus, with honest shortfalls allowed
+- Canonical promotion: no quota; only evidence-complete packets may produce game trees
 
 ## Selection doctrine (amended per OKF 0.2 §5)
 
@@ -152,11 +159,11 @@ This turns daily growth from "whatever the scout felt like" into demand-driven c
 
 ## Daily output contract
 
-Each successful scout run writes or enriches 60 unique canonical game directories: 20 cooperative games, 20 solo RPG board games, and 20 games matching the active mechanic focus. The mechanic focus rotates through `campaign`, `deck/bag/dicebuilder`, and `semi-cooperative` unless T chooses a new focus after the report.
+Each scout run selects up to fifteen unique candidates in three disjoint 5/5/5 cohorts. It may promote zero to fifteen canonical game directories. Selection manifests must keep `selected`, `promoted`, and `blocked` games distinct.
+
+Each promoted game writes one directory:
 
 `KnowledgeBase/BoardGames/games/<slug>/`
-
-No title may fill more than one cohort slot in the same run. Existing KB games and overlaps are replaced by the next eligible candidate unless the run explicitly enriches an incomplete record. Each final report asks exactly `What should be the new mechanic focus?` and includes Bathcat's evidence-backed recommendation.
 
 Minimum expected files:
 
@@ -179,12 +186,14 @@ Every doc uses **OKF 0.2 frontmatter exactly as written in `OKF_SPEC.md`** — t
 
 Before pushing, the run must:
 
-1. Record every failed source fetch/extraction as a structured `followups:` entry in `scout-report.okf.md` (OKF 0.2 §6) — never stash raw fetched documents in the repo.
-2. Regenerate the corpus index: `node scripts/generate-index.mjs`.
-3. Run `node scripts/validate-okf.mjs` and treat **any finding as a failed run** — fix before pushing.
+1. Prove that every promoted game has an inspected official rules source, inspected independent reception, dated rating evidence when claimed, claim-level citations, and meaningful source-linked visuals.
+2. Leave blocked candidates outside the canonical `games/` tree and report the missing evidence honestly.
+3. Record every failed source fetch/extraction as a structured blocker — never replace it with model knowledge or raw stashed documents.
+4. Regenerate the corpus index: `node scripts/generate-index.mjs`.
+5. Run `node scripts/validate-okf.mjs` and treat **any finding as a failed run** — fix before pushing. Validation is necessary but does not substitute for evidence review.
 
 ## Open questions
 
 - Whether 6am should be interpreted as UTC permanently or later moved to T's local timezone.
-- Whether The Governor should commit/push each daily KB addition automatically after verification.
+- Whether future volume should change only after observed evidence-complete throughput supports it.
 - Whether future entries should produce visual HTML indexes for each game in addition to OKF markdown.
