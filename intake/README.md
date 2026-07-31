@@ -234,7 +234,9 @@ committed blocked packets are rejected by CI.
 After the approval commit, promotion occurs in a third commit on the same PR.
 CI requires the promotion commit's parent to contain the immutable approval and
 `approved` status, permits only the destination game tree, run manifest,
-generated board-game index, and telemetry, and rejects later mutation. With the
+generated board-game index, and telemetry, and rejects later mutation. The
+manifest transition may change only `approved` to `promoted` and add the valid
+`promoted_at` timestamp written by the promotion tool. With the
 worktree clean:
 
 ```sh

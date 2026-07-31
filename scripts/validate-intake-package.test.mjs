@@ -246,7 +246,7 @@ test('promotion may share the PR only from an approved parent commit', () => {
   assert.deepEqual(promotionBoundaryFindings('good-game', good), [])
   assert.match(promotionBoundaryFindings('good-game', { ...good, parentHasApproval: false }).join('\n'), /parent commit must contain Mennonite approval/)
   assert.match(promotionBoundaryFindings('good-game', { ...good, parentStatus: 'ready_for_audit' }).join('\n'), /parent commit status must be approved/)
-  assert.match(promotionBoundaryFindings('good-game', { ...good, manifestOnlyStatusTransition: false }).join('\n'), /manifest may change only candidate status/)
+  assert.match(promotionBoundaryFindings('good-game', { ...good, manifestOnlyStatusTransition: false }).join('\n'), /add a valid promoted_at timestamp/)
   assert.match(promotionBoundaryFindings('good-game', { ...good, unexpectedPromotionChanges: ['README.md'] }).join('\n'), /deterministic promotion commit changed unexpected paths/)
 })
 

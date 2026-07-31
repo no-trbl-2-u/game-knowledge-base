@@ -329,14 +329,19 @@ function normalizedJson(value) {
   return value
 }
 
-function manifestStatusOnlyTransition(fromRef, toRef, runId, slug, fromStatus, toStatus) {
+function manifestStatusOnlyTransition(fromRef, toRef, runId, slug, fromStatus, toStatus, { allowPromotedAt = false } = {}) {
   const before = manifestAt(fromRef, runId)
   const after = manifestAt(toRef, runId)
   if (!before || !after) return false
   const expected = JSON.parse(JSON.stringify(before))
   const candidate = expected.candidates?.find(item => item.slug === slug)
+  const actualCandidate = after.candidates?.find(item => item.slug === slug)
   if (!candidate || candidate.status !== fromStatus) return false
   candidate.status = toStatus
+  if (allowPromotedAt) {
+    if (!/^20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\.[0-9]+)?Z$/.test(actualCandidate?.promoted_at ?? '')) return false
+    candidate.promoted_at = actualCandidate.promoted_at
+  }
   return JSON.stringify(normalizedJson(expected)) === JSON.stringify(normalizedJson(after))
 }
 
@@ -423,7 +428,7 @@ export function promotionBoundaryFindings(slug, boundary) {
   if (!boundary.parentHasApproval) findings.push(`${label}: promotion parent commit must contain Mennonite approval`)
   if (boundary.parentStatus !== 'approved') findings.push(`${label}: promotion parent commit status must be approved`)
   if (boundary.promotionStatus !== 'promoted') findings.push(`${label}: promotion commit must transition candidate status to promoted`)
-  if (!boundary.manifestOnlyStatusTransition) findings.push(`${label}: promotion commit manifest may change only candidate status approved -> promoted`)
+  if (!boundary.manifestOnlyStatusTransition) findings.push(`${label}: promotion commit manifest may change only candidate status approved -> promoted and add a valid promoted_at timestamp`)
   if (boundary.unexpectedPromotionChanges?.length) findings.push(`${label}: deterministic promotion commit changed unexpected paths: ${boundary.unexpectedPromotionChanges.join(', ')}`)
   if (boundary.postPromotionChanges?.length) findings.push(`${label}: protected intake or canonical bytes changed after promotion: ${boundary.postPromotionChanges.join(', ')}`)
   return findings
@@ -452,7 +457,7 @@ function promotionBoundaryAt(base, runId, slug) {
     parentHasApproval: pathExistsAt(parent, approval),
     parentStatus: candidateStatusAt(parent, runId, slug),
     promotionStatus: candidateStatusAt(promotionCommit, runId, slug),
-    manifestOnlyStatusTransition: manifestStatusOnlyTransition(parent, promotionCommit, runId, slug, 'approved', 'promoted'),
+    manifestOnlyStatusTransition: manifestStatusOnlyTransition(parent, promotionCommit, runId, slug, 'approved', 'promoted', { allowPromotedAt: true }),
     unexpectedPromotionChanges,
     postPromotionChanges: [...new Set(protectedChanges)],
   }
