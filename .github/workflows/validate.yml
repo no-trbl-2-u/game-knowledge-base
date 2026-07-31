@@ -1,6 +1,6 @@
 name: validate
 
-# Structural OKF validation plus the fail-closed two-key intake boundary.
+# Structural OKF validation plus the fail-closed one-PR/two-role intake boundary.
 # Plain scripts, no model and no token spend. This workflow runs on every PR
 # because main requires its status; path filtering would leave unrelated PRs
 # permanently waiting for a check that never starts.

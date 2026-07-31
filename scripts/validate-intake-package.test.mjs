@@ -5,7 +5,14 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
-import { auditTransitionFindings, dailyBatchFindings, newGameSlugs, validateCandidatePackage } from './validate-intake.mjs'
+import {
+  auditTransitionFindings,
+  blockedRunDiffFindings,
+  dailyBatchFindings,
+  newGameSlugs,
+  promotionBoundaryFindings,
+  validateCandidatePackage,
+} from './validate-intake.mjs'
 import { packetHash } from './intake-lib.mjs'
 
 const VALIDATOR = path.resolve(new URL('./validate-okf.mjs', import.meta.url).pathname)
@@ -181,26 +188,65 @@ test('split run directories still enforce one candidate per daily cohort', () =>
   assert.match(dailyBatchFindings(records).join('\n'), /2 cooperative candidates; hard ceiling is 1/)
 })
 
-test('audit decision requires a later audit-only PR over a ready base packet', () => {
+test('approval may share one PR only after a frozen ready packet commit', () => {
   const approval = 'intake/runs/2026-07-30-test/candidates/good-game/approval.json'
   const manifest = 'intake/runs/2026-07-30-test/manifest.json'
   const packet = 'intake/runs/2026-07-30-test/candidates/good-game/canonical/index.okf.md'
-  const baseFiles = new Set([
-    'intake/runs/2026-07-30-test/candidates/good-game/evidence.json',
-    packet,
-  ])
-  const callbacks = { pathExists: file => baseFiles.has(file), statusAt: () => 'ready_for_audit' }
-  assert.deepEqual(auditTransitionFindings([{ status: 'A', file: approval }, { status: 'M', file: manifest }], callbacks), [])
-  assert.match(auditTransitionFindings([{ status: 'A', file: approval }, { status: 'A', file: packet }, { status: 'M', file: manifest }], callbacks).join('\n'), /later PR without packet\/evidence changes/)
+  const good = {
+    decisionCommit: 'a'.repeat(40),
+    parentHasEvidence: true,
+    parentHasCanonical: true,
+    parentStatus: 'ready_for_audit',
+    decisionStatus: 'approved',
+    oppositeAtParent: false,
+    unexpectedDecisionChanges: [],
+    postDecisionPacketChanges: [],
+  }
+  const changes = [{ status: 'A', file: approval }, { status: 'A', file: packet }, { status: 'A', file: manifest }]
+  assert.deepEqual(auditTransitionFindings(changes, { boundaryFor: () => good }), [])
+  assert.match(auditTransitionFindings(changes, {
+    boundaryFor: () => ({ ...good, parentStatus: null }),
+  }).join('\n'), /parent commit status must be ready_for_audit/)
+  assert.match(auditTransitionFindings(changes, {
+    boundaryFor: () => ({ ...good, postDecisionPacketChanges: [packet] }),
+  }).join('\n'), /packet changed after approval/)
+  assert.match(auditTransitionFindings(changes, {
+    boundaryFor: () => ({ ...good, unexpectedDecisionChanges: ['README.md'] }),
+  }).join('\n'), /approval commit may change only approval.json and its manifest/)
 })
 
-test('committed rejection is immutable and repair requires a new run', () => {
+test('new rejection records are forbidden because REVISE returns the same PR', () => {
   const rejection = 'intake/runs/2026-07-30-rejected/candidates/good-game/rejection.json'
   const findings = auditTransitionFindings(
-    [{ status: 'D', file: rejection }],
-    { pathExists: () => true, statusAt: () => 'rejected' },
+    [{ status: 'A', file: rejection }],
+    { boundaryFor: () => null },
   )
+  assert.match(findings.join('\n'), /record REVISE on the PR instead/)
+})
+
+test('committed decisions remain immutable', () => {
+  const approval = 'intake/runs/2026-07-30-test/candidates/good-game/approval.json'
+  const findings = auditTransitionFindings([{ status: 'M', file: approval }], { boundaryFor: () => null })
   assert.match(findings.join('\n'), /audit decisions are immutable once committed/)
+})
+
+test('promotion may share the PR only from an approved parent commit', () => {
+  const good = {
+    promotionCommit: 'b'.repeat(40),
+    parentHasApproval: true,
+    parentStatus: 'approved',
+    promotionStatus: 'promoted',
+    unexpectedPromotionChanges: [],
+  }
+  assert.deepEqual(promotionBoundaryFindings('good-game', good), [])
+  assert.match(promotionBoundaryFindings('good-game', { ...good, parentHasApproval: false }).join('\n'), /parent commit must contain Mennonite approval/)
+  assert.match(promotionBoundaryFindings('good-game', { ...good, parentStatus: 'ready_for_audit' }).join('\n'), /parent commit status must be approved/)
+  assert.match(promotionBoundaryFindings('good-game', { ...good, unexpectedPromotionChanges: ['README.md'] }).join('\n'), /deterministic promotion commit changed unexpected paths/)
+})
+
+test('new blocked packets are rejected from Git and redirected to issues', () => {
+  assert.deepEqual(blockedRunDiffFindings([{ runId: '2026-07-30-good', candidates: [{ slug: 'good-game', status: 'ready_for_audit' }] }]), [])
+  assert.match(blockedRunDiffFindings([{ runId: '2026-07-30-gap', candidates: [{ slug: 'gap-game', status: 'blocked' }] }]).join('\n'), /blocked research belongs in a GitHub issue/)
 })
 
 test('emit deterministic promotion fixture when requested', { skip: !process.env.INTAKE_FIXTURE_OUT }, t => {

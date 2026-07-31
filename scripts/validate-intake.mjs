@@ -321,7 +321,43 @@ function readJsonText(text) {
   catch { return null }
 }
 
-export function auditTransitionFindings(changes, { pathExists, statusAt }) {
+function lines(text) { return text ? text.split('\n').map(line => line.trim()).filter(Boolean) : [] }
+
+function commitsAddingPath(base, file) {
+  return lines(git(['log', '--format=%H', '--diff-filter=A', '--reverse', `${base}..HEAD`, '--', file]))
+}
+
+function filesChangedInCommit(commit) {
+  return lines(git(['diff-tree', '--no-commit-id', '--name-only', '-r', commit]))
+}
+
+function filesChangedBetween(from, to, pathspec) {
+  return lines(git(['diff', '--name-only', `${from}..${to}`, '--', pathspec]))
+}
+
+function auditBoundaryAt(base, runId, slug, decision, decisionFile) {
+  const commits = commitsAddingPath(base, decisionFile)
+  if (commits.length !== 1) return { decisionCommit: null, additionCount: commits.length }
+  const decisionCommit = commits[0]
+  const parent = `${decisionCommit}^`
+  const candidatePrefix = `intake/runs/${runId}/candidates/${slug}/`
+  const manifest = `intake/runs/${runId}/manifest.json`
+  const opposite = `${candidatePrefix}${decision === 'approval' ? 'rejection' : 'approval'}.json`
+  const allowed = new Set([decisionFile, manifest])
+  return {
+    decisionCommit,
+    additionCount: 1,
+    parentHasEvidence: pathExistsAt(parent, `${candidatePrefix}evidence.json`),
+    parentHasCanonical: pathExistsAt(parent, `${candidatePrefix}canonical/index.okf.md`),
+    parentStatus: candidateStatusAt(parent, runId, slug),
+    decisionStatus: candidateStatusAt(decisionCommit, runId, slug),
+    oppositeAtParent: pathExistsAt(parent, opposite),
+    unexpectedDecisionChanges: filesChangedInCommit(decisionCommit).filter(file => !allowed.has(file)),
+    postDecisionPacketChanges: filesChangedBetween(decisionCommit, 'HEAD', candidatePrefix),
+  }
+}
+
+export function auditTransitionFindings(changes, { boundaryFor }) {
   const findings = []
   const decisionPattern = /^intake\/runs\/([^/]+)\/candidates\/([^/]+)\/(approval|rejection)\.json$/
   for (const change of changes) {
@@ -332,17 +368,74 @@ export function auditTransitionFindings(changes, { pathExists, statusAt }) {
       findings.push(`${change.file}: audit decisions are immutable once committed`)
       continue
     }
-    const candidatePrefix = `intake/runs/${runId}/candidates/${slug}/`
-    const immutableChanges = changes.filter(item => item.file.startsWith(candidatePrefix) && item.file !== change.file)
-    if (immutableChanges.length) findings.push(`${change.file}: audit decision must be added in a later PR without packet/evidence changes`)
-    if (!pathExists(`${candidatePrefix}evidence.json`) || !pathExists(`${candidatePrefix}canonical/index.okf.md`)) {
-      findings.push(`${change.file}: audited packet must already exist on the protected base branch`)
+    if (decision === 'rejection') {
+      findings.push(`${change.file}: new rejection records are prohibited; record REVISE on the PR instead and return the same branch to a fresh Bathcat`)
+      continue
     }
-    if (statusAt(runId, slug) !== 'ready_for_audit') findings.push(`${change.file}: protected-base candidate status must be ready_for_audit`)
-    const manifest = `intake/runs/${runId}/manifest.json`
-    if (!changes.some(item => item.file === manifest)) findings.push(`${change.file}: audit decision must transition the manifest in the same audit-only PR`)
-    const opposite = `${candidatePrefix}${decision === 'approval' ? 'rejection' : 'approval'}.json`
-    if (pathExists(opposite)) findings.push(`${change.file}: protected base already contains the opposite audit decision`)
+    const boundary = boundaryFor(runId, slug, decision, change.file)
+    if (!boundary?.decisionCommit || (boundary.additionCount ?? 1) !== 1) {
+      findings.push(`${change.file}: approval must be introduced exactly once in a commit after the Bathcat packet commit`)
+      continue
+    }
+    if (!boundary.parentHasEvidence || !boundary.parentHasCanonical) findings.push(`${change.file}: approval parent commit must contain the complete evidence and canonical staging packet`)
+    if (boundary.parentStatus !== 'ready_for_audit') findings.push(`${change.file}: approval parent commit status must be ready_for_audit`)
+    if (boundary.decisionStatus !== 'approved') findings.push(`${change.file}: approval commit must transition candidate status to approved`)
+    if (boundary.oppositeAtParent) findings.push(`${change.file}: approval parent already contains rejection.json`)
+    if (boundary.unexpectedDecisionChanges?.length) findings.push(`${change.file}: approval commit may change only approval.json and its manifest; also changed ${boundary.unexpectedDecisionChanges.join(', ')}`)
+    if (boundary.postDecisionPacketChanges?.length) findings.push(`${change.file}: packet changed after approval: ${boundary.postDecisionPacketChanges.join(', ')}`)
+  }
+  return findings
+}
+
+export function promotionBoundaryFindings(slug, boundary) {
+  const findings = []
+  const label = `canonical game ${slug}`
+  if (!boundary?.promotionCommit || (boundary.additionCount ?? 1) !== 1) {
+    findings.push(`${label}: canonical tree must be introduced exactly once by a deterministic promotion commit`)
+    return findings
+  }
+  if (!boundary.parentHasApproval) findings.push(`${label}: promotion parent commit must contain Mennonite approval`)
+  if (boundary.parentStatus !== 'approved') findings.push(`${label}: promotion parent commit status must be approved`)
+  if (boundary.promotionStatus !== 'promoted') findings.push(`${label}: promotion commit must transition candidate status to promoted`)
+  if (boundary.unexpectedPromotionChanges?.length) findings.push(`${label}: deterministic promotion commit changed unexpected paths: ${boundary.unexpectedPromotionChanges.join(', ')}`)
+  if (boundary.postPromotionChanges?.length) findings.push(`${label}: protected intake or canonical bytes changed after promotion: ${boundary.postPromotionChanges.join(', ')}`)
+  return findings
+}
+
+function promotionBoundaryAt(base, runId, slug) {
+  const canonicalPrefix = `KnowledgeBase/BoardGames/games/${slug}/`
+  const canonicalIndex = `${canonicalPrefix}index.okf.md`
+  const commits = commitsAddingPath(base, canonicalIndex)
+  if (commits.length !== 1) return { promotionCommit: null, additionCount: commits.length }
+  const promotionCommit = commits[0]
+  const parent = `${promotionCommit}^`
+  const candidatePrefix = `intake/runs/${runId}/candidates/${slug}/`
+  const manifest = `intake/runs/${runId}/manifest.json`
+  const approval = `${candidatePrefix}approval.json`
+  const allowedExact = new Set([manifest, 'KnowledgeBase/BoardGames/INDEX.okf.md', 'TELEMETRY.md'])
+  const unexpectedPromotionChanges = filesChangedInCommit(promotionCommit).filter(file => !file.startsWith(canonicalPrefix) && !allowedExact.has(file))
+  const protectedChanges = [
+    ...filesChangedBetween(promotionCommit, 'HEAD', candidatePrefix),
+    ...filesChangedBetween(promotionCommit, 'HEAD', canonicalPrefix),
+    ...filesChangedBetween(promotionCommit, 'HEAD', manifest),
+  ]
+  return {
+    promotionCommit,
+    additionCount: 1,
+    parentHasApproval: pathExistsAt(parent, approval),
+    parentStatus: candidateStatusAt(parent, runId, slug),
+    promotionStatus: candidateStatusAt(promotionCommit, runId, slug),
+    unexpectedPromotionChanges,
+    postPromotionChanges: [...new Set(protectedChanges)],
+  }
+}
+
+export function blockedRunDiffFindings(records) {
+  const findings = []
+  for (const record of records) {
+    for (const candidate of record.candidates ?? []) {
+      if (candidate.status === 'blocked') findings.push(`intake run ${record.runId}/${candidate.slug}: blocked research belongs in a GitHub issue, not a committed packet or PR`)
+    }
   }
   return findings
 }
@@ -404,8 +497,7 @@ function validateDiff(base) {
   const changedFiles = changes.map(c => c.file)
   findings.push(...semanticGeneratorFindings(REPO, changedFiles))
   findings.push(...auditTransitionFindings(changes, {
-    pathExists: file => pathExistsAt(base, file),
-    statusAt: (runId, slug) => candidateStatusAt(base, runId, slug),
+    boundaryFor: (runId, slug, decision, file) => auditBoundaryAt(base, runId, slug, decision, file),
   }))
 
   for (const change of changes) {
@@ -458,7 +550,17 @@ function validateDiff(base) {
     const match = file.match(/^intake\/runs\/([^/]+)\//)
     if (match) changedRuns.add(match[1])
   }
-  for (const id of changedRuns) findings.push(...validateRunDirectory(path.join(RUNS, id)))
+  const changedRunRecords = []
+  for (const id of changedRuns) {
+    const runDir = path.join(RUNS, id)
+    findings.push(...validateRunDirectory(runDir))
+    const manifestFile = path.join(runDir, 'manifest.json')
+    if (fs.existsSync(manifestFile)) {
+      const manifest = readJson(manifestFile)
+      changedRunRecords.push({ runId: id, candidates: manifest.candidates ?? [] })
+    }
+  }
+  findings.push(...blockedRunDiffFindings(changedRunRecords))
 
   const records = candidateRecords()
   findings.push(...dailyBatchFindings(records))
@@ -480,10 +582,7 @@ function validateDiff(base) {
     }
     const record = matches[0]
     const runId = path.basename(record.runDir)
-    const approvalRel = `intake/runs/${runId}/candidates/${slug}/approval.json`
-    if (!pathExistsAt(base, approvalRel) || candidateStatusAt(base, runId, slug) !== 'approved') {
-      findings.push(`canonical game ${slug}: approval and approved manifest status must already exist on the protected base branch before promotion`)
-    }
+    findings.push(...promotionBoundaryFindings(slug, promotionBoundaryAt(base, runId, slug)))
     findings.push(...validateRunDirectory(record.runDir))
     const staged = path.join(record.dir, 'canonical')
     const canonical = path.join(GAMES, slug)
