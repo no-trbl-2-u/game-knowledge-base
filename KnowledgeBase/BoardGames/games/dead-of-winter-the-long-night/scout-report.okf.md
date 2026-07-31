@@ -7,73 +7,69 @@ game:
   bgg_id: 193037
   publisher: "Plaid Hat Games"
   year: 2016
-  players:
-    min: 2
-    max: 5
-  complexity: expert
   weight: 3.33
-  edition: "base/standalone release"
-scope: "rating-led semi-cooperative RPG/adventure selection dossier"
+  edition: "English 2016 first/release printing"
+scope: "edition-specific remediation and open governing ledger"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
-better_if_labels: []
 sources:
   - id: "src-001"
-    title: "BoardGameGeek \u2014 Dead of Winter: The Long Night"
-    url: "https://boardgamegeek.com/boardgame/193037"
-    kind: bgg_page
-    provenance: community
-    retrieved_at: "2026-07-26"
-    notes: "Identity and mechanic evidence."
+    title: "Dead of Winter: The Long Night rulebook"
+    url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/rules-tln.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Release PDF verified against Wayback capture."
   - id: "src-002"
-    title: "Plaid Hat Games \u2014 official product or rules page"
-    url: "https://www.plaidhatgames.com/news/652/"
+    title: "Plaid Hat release announcement"
+    url: "https://web.archive.org/web/20160320090013id_/http://www.plaidhatgames.com/news/652"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-26"
-    notes: "Identity and mechanic evidence."
-  - id: "src-003"
-    title: "BGG ranking snapshot mirror"
-    url: "https://raw.githubusercontent.com/5h-am/Board_Game_Store/b018bd937292fc41a2297ce868bf2938b45244da/boardgameDatabase/boardgames_ranks.csv"
-    kind: other
-    provenance: secondary
-    retrieved_at: "2026-07-26"
-    notes: "Rating snapshot used for this batch ordering."
+    retrieved_at: "2026-07-31"
+    notes: "Release-era standalone/compatibility evidence."
+followups:
+  - source_id: null
+    url: "physical://dead-of-winter-the-long-night-2016-first-printing"
+    failure: other
+    fallback: "Official aggregate inventory and rulebook diagrams only."
+    retry_needs: manual_review
+    notes: "Inspect a confirmed 2016 English copy to close every card/board/reference identity and rule-bearing text class without reproducing full text."
+  - source_id: null
+    url: "https://web.archive.org/cdx/search/cdx?url=media.plaidhatgames.com/old_images/games/dead-of-winter/*"
+    failure: other
+    fallback: "Bounded CDX inventory found rules-tln.pdf, pre-target dow-faq.pdf, base rules, and Warring Colonies rules."
+    retry_needs: manual_review
+    notes: "Need independent authority-inventory confirmation that no target FAQ/errata/module sheet is omitted."
+  - source_id: null
+    url: "https://www.fantasyflightgames.com/en/products/dead-of-winter-the-long-night/"
+    failure: blocked
+    fallback: "Plaid Hat live and archived primary sources."
+    retry_needs: browser_fetch
+    notes: "HTTP 403 Cloudflare is not evidence of absence."
 confidence: high
-status: verified
-last_verified: "2026-07-26"
-summary: "Why Dead of Winter: The Long Night qualifies for this ten-game intake."
+status: needs_followup
 ---
 
-# Scout Report — Dead of Winter: The Long Night
+# Remediation report
 
-## Rating signal
+## Disposition
 
-- **Source:** src-001, src-003
-- **Evidence:** Snapshot average **7.51/10**; BGG rank 421. Batch position **#6** applies only after semi-cooperative and RPG/adventure relevance screening.
-- **Confidence:** medium-high; BGG values drift over time
+`BLOCKED / needs_followup / DO NOT MERGE.` The release rulebook boundary is strong, but the governing denominator remains open because card-local exceptions override the rulebook and the full target-printing card/board/reference identity/text corpus was not lawfully acquired.
 
-## Why it qualifies
+- Claim: Card text outranks the rulebook.
+  Source: src-001
+  Evidence: Rulebook p.15: when a card effect contradicts the rulebook, the card effect takes precedence.
+  Confidence: high
 
-Standalone survival-RPG with survivor parties, equipment, wounds, narrative interruptions, and scenario-specific colony goals.
+## Ledger
 
-- **Source:** src-001, src-002
-- **Evidence:** A standalone Crossroads survival game adds bandits, improvements, graveyard pressure, and the Raxxon facility to the colony crisis.
-- **Confidence:** high
+Acquired authority groups: target rulebook; release-era product announcement; official aggregate component inventory; module setup/rules for Improvements, Bandits, and Raxxon; instructional Raxxon and Bandit scenarios; two independent reviews; four source-derived visual excerpts.
 
-## Core loop
+Open rule-bearing classes: 8 dual-sided main objectives (including scenario chain sides), 40 secret/betrayal/exiled objectives, 20 survivor abilities, 165 starting/location item cards, 22 crises, 10 improvements, 12 Raxxon experiments, 6 pill side effects, 70 Crossroads cards, 5 reference sheets, colony board, and 9 location cards. Quantities are known; complete distinct face/side/text identities are not. No governing percentage is lawful.
 
-The base Dead of Winter round remains: action dice drive survivor actions before crisis and colony upkeep. Optional modules add hostile survivors, experimental threats, and longer-term construction decisions.
+## Component arithmetic
 
-- **Source:** src-002
-- **Evidence:** Publisher rules/product framing establishes the shared threat, player-role structure, and individual or traitor incentives summarized above.
-- **Confidence:** medium-high
+Counting convention: 42 printed inventory rows; grouped names are preserved exactly. Physical-piece sum is 757. Category arithmetic by printed noun: 362 cards, 5 reference sheets, 168 tokens/markers, 89 standees, 100 stands, 1 board, 1 rulebook, and 31 dice; `362+5+168+89+100+1+1+31=757`. This proves aggregate quantity only, not face/text completeness.
 
-## Design signal
+## Exact help requested
 
-**Praise:** Modular threats provide more strategic texture and replayable campaign-like arcs than the original box alone.
-
-**Friction:** Added systems increase setup, table load, teach time, and the risk that a long session ends through abrupt randomness.
-
-## Scope boundary
-
-This is a verified intake dossier, not a substitute for a full setup/turn/endgame transcription or visual evidence packet. No unsupported component counts, card text, or strategy claims are asserted.
+T/manual: provide or inspect a confirmed English 2016 first-printing box and record identity/semantics (not replacement-quality text) for every rule-bearing card, board side, location, and reference sheet; confirm SKU/lot/printing markers from box and rulebook; and retrieve current FFG support through an authenticated/manual browser. A fresh Mennonite must audit the exact PR head after repair.
