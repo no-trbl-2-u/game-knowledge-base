@@ -70,7 +70,7 @@
           },
           {
             "url": "https://orangenebula.com/sitemap_pages_1.xml?from=122794770715&to=181908570395",
-            "result": "Observed 2026-07-31T20:37:33Z; final URL unchanged; HTTP 200; MIME application/xml; charset=utf-8; 6,284 bytes; SHA-256 6d5a074cde9f4e696886f58b6e7ac64ec227e22f5d1c1eb8bedc1e745cc0af6. It listed two Unsettled page locators: /pages/unsettled-board-game and /pages/unsettled-db."
+            "result": "Observed 2026-07-31T20:37:33Z; final URL unchanged; HTTP 200; MIME application/xml; charset=utf-8; 6,284 bytes; SHA-256 6d5a074cde9f4e696886f58b6e7ac64ec227e22f5d1c1eb8bedc1e745cc0af6c. It listed two Unsettled page locators: /pages/unsettled-board-game and /pages/unsettled-db."
           },
           {
             "url": "https://orangenebula.com/sitemap_products_1.xml?from=8248430199067&to=10353100325147",
