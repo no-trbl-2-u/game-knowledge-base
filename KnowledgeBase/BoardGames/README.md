@@ -4,7 +4,7 @@ Evidence-gated research corpus for board-game rules, player reception, and desig
 
 ## Purpose
 
-This directory is for gathering structured knowledge before integration. The daily scout selects up to six candidates in three disjoint 2/2/2 cohorts, writes evidence packets under `intake/runs/`, and never promotes its own work. Only independently approved, evidence-complete packets become OKF-formatted canonical records.
+This directory is for gathering structured knowledge before integration. The daily scout selects up to three candidates in disjoint cooperative, solo-RPG, and rotating-focus cohorts, writes evidence packets under `intake/runs/`, and never promotes its own work. Only independently approved, evidence-complete packets become OKF-formatted canonical records.
 
 Primary uses:
 
@@ -15,7 +15,7 @@ Primary uses:
 
 ## Daily cadence
 
-A Hermes cron job runs once per day at 06:00 UTC. It selects up to two cooperative games, two solo RPG board games, and two games matching the rotating mechanic focus. Selection is not canonical coverage: Bathcat writes only noncanonical candidate packets; a game directory is written only after independent Mennonite audit and deterministic promotion.
+A Hermes cron job runs once per day at 06:00 UTC. It selects one cooperative game, one solo RPG board game, and one game matching the rotating mechanic focus when eligible candidates exist. Selection is not canonical coverage: Bathcat writes only noncanonical candidate packets; a game directory is written only after independent Mennonite audit and deterministic promotion. Ready packets require 100% governing-rules coverage; non-deckbuilders additionally require at least 60% measured factual coverage.
 
 ```txt
 KnowledgeBase/BoardGames/games/<slug>/

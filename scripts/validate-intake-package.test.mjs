@@ -129,11 +129,19 @@ function makePackage(t, rootOverride = null) {
   assert.equal(sheet.status, 0, sheet.stderr)
   const sheetHash = crypto.createHash('sha256').update(fs.readFileSync(sheetFile)).digest('hex')
   fs.writeFileSync(path.join(canonical, 'visuals/packet.okf.md'), document('visual_reference', '## Visual packet\n\nRetrieved references preserve distinct inspected subjects.', `visual_references:\n${refs.join('\n')}\ncontact_sheet: "visuals/contact-sheet.webp"\ncontact_sheet_sha256: "${sheetHash}"\n`))
-  fs.writeFileSync(path.join(root, 'evidence.json'), `${JSON.stringify({ schema_version: 1, slug: 'good-game', researcher: { name: 'Bathcat', role: 'Field Intelligence and Knowledge Scout' }, researched_at: NOW, sources: sourceData.map(receipt) }, null, 2)}\n`)
+  fs.writeFileSync(path.join(root, 'evidence.json'), `${JSON.stringify({ schema_version: 2, slug: 'good-game', researcher: { name: 'Bathcat', role: 'Field Intelligence and Knowledge Scout' }, researched_at: NOW, sources: sourceData.map(receipt) }, null, 2)}\n`)
   return root
 }
 
-const candidate = { slug: 'good-game', title: 'Good Game', bgg_id: 123, cohort: 'cooperative', status: 'ready_for_audit', blockers: [] }
+const candidate = {
+  slug: 'good-game', title: 'Good Game', bgg_id: 123, cohort: 'cooperative', status: 'ready_for_audit', blockers: [],
+  coverage: {
+    deckbuilder: true,
+    methodology: 'All governing rules documents are counted; the card denominator is unavailable.',
+    rules: { recorded: 1, known_total: 1, percent: 100 },
+    factual: { recorded: 7, known_total: null, percent: null },
+  },
+}
 
 test('complete factual staged package passes the admission gate', t => {
   const root = makePackage(t)

@@ -3,9 +3,9 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
 
-export const COHORT_LIMITS = Object.freeze({ cooperative: 2, solo_rpg: 2, rotating_focus: 2 })
-export const MAX_CANDIDATES = 6
-export const INTAKE_SCHEMA_VERSION = 1
+export const COHORT_LIMITS = Object.freeze({ cooperative: 1, solo_rpg: 1, rotating_focus: 1 })
+export const MAX_CANDIDATES = 3
+export const INTAKE_SCHEMA_VERSION = 2
 export const CANDIDATE_STATUSES = new Set(['blocked', 'ready_for_audit', 'rejected', 'approved', 'promoted'])
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 export const SOURCE_ROLES = new Set(['identity', 'official_rules', 'independent_review', 'rating', 'visual', 'faq', 'errata', 'designer_commentary', 'community'])
@@ -149,6 +149,38 @@ export function placeholderFindings(text, label = 'content') {
   return findings
 }
 
+function coverageMetricFindings(metric, label) {
+  const findings = []
+  const recorded = metric?.recorded
+  const knownTotal = metric?.known_total
+  const percent = metric?.percent
+  if (!Number.isInteger(recorded) || recorded < 0) findings.push(`${label}.recorded must be a non-negative integer`)
+  if (knownTotal !== null && (!Number.isInteger(knownTotal) || knownTotal <= 0)) findings.push(`${label}.known_total must be null or a positive integer`)
+  if (knownTotal === null) {
+    if (percent !== null) findings.push(`${label}.percent must be null when known_total is null`)
+    return findings
+  }
+  if (Number.isInteger(recorded) && recorded > knownTotal) findings.push(`${label}.recorded cannot exceed known_total`)
+  const expected = Number.isInteger(recorded) ? Math.round((recorded / knownTotal) * 1000) / 10 : null
+  if (typeof percent !== 'number' || !Number.isFinite(percent) || Math.abs(percent - expected) > 0.0001) findings.push(`${label}.percent must equal the recorded/known_total percentage rounded to one decimal (${expected})`)
+  return findings
+}
+
+export function coverageFindings(candidate, label = 'candidate') {
+  const findings = []
+  const coverage = candidate?.coverage
+  if (!coverage || typeof coverage !== 'object' || Array.isArray(coverage)) return [`${label}.coverage is required`]
+  if (typeof coverage.deckbuilder !== 'boolean') findings.push(`${label}.coverage.deckbuilder must be boolean`)
+  if (String(coverage.methodology ?? '').trim().length < 20) findings.push(`${label}.coverage.methodology must explain the denominator in at least 20 characters`)
+  findings.push(...coverageMetricFindings(coverage.rules, `${label}.coverage.rules`))
+  findings.push(...coverageMetricFindings(coverage.factual, `${label}.coverage.factual`))
+  if (candidate?.status !== 'blocked') {
+    if (coverage?.rules?.percent !== 100) findings.push(`${label}.coverage.rules.percent must be 100 for ${candidate.status}`)
+    if (coverage?.deckbuilder === false && !(coverage?.factual?.percent >= 60)) findings.push(`${label}.coverage.factual.percent must be at least 60 for a non-deckbuilder ${candidate.status} packet`)
+  }
+  return findings
+}
+
 export function validateManifest(manifest, label = 'manifest.json') {
   const findings = []
   const flag = msg => findings.push(`${label}: ${msg}`)
@@ -187,6 +219,7 @@ export function validateManifest(manifest, label = 'manifest.json') {
     }
     if (candidate?.status === 'blocked' && (!Array.isArray(candidate.blockers) || !candidate.blockers.length)) flag(`${where}.blockers must explain a blocked candidate`)
     if (candidate?.status !== 'blocked' && candidate?.blockers?.length) flag(`${where} is ${candidate.status} but still has manifest blockers`)
+    findings.push(...coverageFindings(candidate, `${label}: ${where}`))
   }
   for (const [cohort, count] of Object.entries(counts)) {
     if (count > COHORT_LIMITS[cohort]) flag(`${cohort} count ${count} exceeds ${COHORT_LIMITS[cohort]}`)

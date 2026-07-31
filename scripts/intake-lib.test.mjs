@@ -23,11 +23,11 @@ const NOW = '2026-07-30T12:00:00.000Z'
 
 function manifest(candidates = []) {
   return {
-    schema_version: 1,
+    schema_version: 2,
     run_id: '2026-07-30-test',
     created_at: NOW,
     scout: { name: 'Bathcat', role: 'Field Intelligence and Knowledge Scout' },
-    target: { cooperative: 2, solo_rpg: 2, rotating_focus: 2, total: 6 },
+    target: { cooperative: 1, solo_rpg: 1, rotating_focus: 1, total: 3 },
     focus: { mechanic: 'deck-building' },
     candidates,
   }
@@ -43,6 +43,12 @@ function candidate(slug, cohort, status = 'blocked') {
     status,
     discovery_sources: [`https://boardgamegeek.com/boardgame/${slug.length}/${slug}`],
     blockers: status === 'blocked' ? ['official rulebook not yet retrieved'] : [],
+    coverage: {
+      deckbuilder: false,
+      methodology: 'Counts retrieved governing documents and source-backed factual ledger entries.',
+      rules: { recorded: status === 'blocked' ? 0 : 1, known_total: 1, percent: status === 'blocked' ? 0 : 100 },
+      factual: { recorded: status === 'blocked' ? 0 : 3, known_total: 5, percent: status === 'blocked' ? 0 : 60 },
+    },
   }
 }
 
@@ -66,7 +72,7 @@ function receipt(id, roles, url, provenance) {
 
 function evidence(overrides = {}) {
   return {
-    schema_version: 1,
+    schema_version: 2,
     slug: 'good-game',
     researcher: { name: 'Bathcat', role: 'Field Intelligence and Knowledge Scout' },
     researched_at: NOW,
@@ -80,7 +86,7 @@ function evidence(overrides = {}) {
   }
 }
 
-test('2/2/2 manifest accepts honest shortfalls', () => {
+test('1/1/1 manifest accepts honest shortfalls', () => {
   const value = manifest([
     candidate('one', 'cooperative'),
     candidate('two', 'solo_rpg'),
@@ -88,13 +94,29 @@ test('2/2/2 manifest accepts honest shortfalls', () => {
   assert.deepEqual(validateManifest(value), [])
 })
 
-test('manifest rejects more than two candidates in a cohort', () => {
+test('manifest rejects more than one candidate in a cohort', () => {
   const value = manifest([
     candidate('one', 'cooperative'),
     candidate('two', 'cooperative'),
     candidate('three', 'cooperative'),
   ])
-  assert.match(validateManifest(value).join('\n'), /cooperative count 3 exceeds 2/)
+  assert.match(validateManifest(value).join('\n'), /cooperative count 3 exceeds 1/)
+})
+
+test('ready non-deckbuilder requires complete rules and at least sixty percent factual coverage', () => {
+  const value = candidate('one', 'cooperative', 'ready_for_audit')
+  value.coverage.rules = { recorded: 3, known_total: 4, percent: 75 }
+  value.coverage.factual = { recorded: 5, known_total: 10, percent: 50 }
+  const findings = validateManifest(manifest([value])).join('\n')
+  assert.match(findings, /rules.percent must be 100/)
+  assert.match(findings, /factual.percent must be at least 60/)
+})
+
+test('ready deckbuilder requires complete rules but may declare an unknown factual denominator', () => {
+  const value = candidate('one', 'cooperative', 'ready_for_audit')
+  value.coverage.deckbuilder = true
+  value.coverage.factual = { recorded: 81, known_total: null, percent: null }
+  assert.deepEqual(validateManifest(manifest([value])), [])
 })
 
 test('manifest rejects duplicate BGG ids and unexplained rotating-focus picks', () => {
@@ -175,7 +197,7 @@ test('approval is bound to immutable candidate packet and independent auditor', 
   fs.writeFileSync(path.join(root, 'canonical', 'index.okf.md'), 'record\n')
   fs.writeFileSync(path.join(root, 'evidence.json'), `${JSON.stringify(evidence())}\n`)
   const approval = {
-    schema_version: 1,
+    schema_version: 2,
     decision: 'approved',
     auditor: { name: 'The Mennonite', role: 'Requirements and Risk Examiner' },
     reviewed_at: NOW,
@@ -205,7 +227,7 @@ test('rejection preserves the failed packet hash and concrete reasons', t => {
   fs.writeFileSync(path.join(root, 'canonical', 'index.okf.md'), 'record\n')
   fs.writeFileSync(path.join(root, 'evidence.json'), `${JSON.stringify(evidence())}\n`)
   const rejection = {
-    schema_version: 1,
+    schema_version: 2,
     decision: 'rejected',
     auditor: { name: 'The Mennonite', role: 'Requirements and Risk Examiner' },
     reviewed_at: NOW,
