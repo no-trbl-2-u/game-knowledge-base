@@ -316,6 +316,30 @@ function candidateStatusAt(ref, runId, slug) {
   } catch { return null }
 }
 
+function manifestAt(ref, runId) {
+  try {
+    const text = execFileSync('git', ['show', `${ref}:intake/runs/${runId}/manifest.json`], { cwd: REPO, encoding: 'utf8' })
+    return readJsonText(text)
+  } catch { return null }
+}
+
+function normalizedJson(value) {
+  if (Array.isArray(value)) return value.map(normalizedJson)
+  if (value && typeof value === 'object') return Object.fromEntries(Object.keys(value).sort().map(key => [key, normalizedJson(value[key])]))
+  return value
+}
+
+function manifestStatusOnlyTransition(fromRef, toRef, runId, slug, fromStatus, toStatus) {
+  const before = manifestAt(fromRef, runId)
+  const after = manifestAt(toRef, runId)
+  if (!before || !after) return false
+  const expected = JSON.parse(JSON.stringify(before))
+  const candidate = expected.candidates?.find(item => item.slug === slug)
+  if (!candidate || candidate.status !== fromStatus) return false
+  candidate.status = toStatus
+  return JSON.stringify(normalizedJson(expected)) === JSON.stringify(normalizedJson(after))
+}
+
 function readJsonText(text) {
   try { return JSON.parse(text) }
   catch { return null }
@@ -351,6 +375,7 @@ function auditBoundaryAt(base, runId, slug, decision, decisionFile) {
     parentHasCanonical: pathExistsAt(parent, `${candidatePrefix}canonical/index.okf.md`),
     parentStatus: candidateStatusAt(parent, runId, slug),
     decisionStatus: candidateStatusAt(decisionCommit, runId, slug),
+    manifestOnlyStatusTransition: manifestStatusOnlyTransition(parent, decisionCommit, runId, slug, 'ready_for_audit', 'approved'),
     oppositeAtParent: pathExistsAt(parent, opposite),
     unexpectedDecisionChanges: filesChangedInCommit(decisionCommit).filter(file => !allowed.has(file)),
     postDecisionPacketChanges: filesChangedBetween(decisionCommit, 'HEAD', candidatePrefix),
@@ -380,6 +405,7 @@ export function auditTransitionFindings(changes, { boundaryFor }) {
     if (!boundary.parentHasEvidence || !boundary.parentHasCanonical) findings.push(`${change.file}: approval parent commit must contain the complete evidence and canonical staging packet`)
     if (boundary.parentStatus !== 'ready_for_audit') findings.push(`${change.file}: approval parent commit status must be ready_for_audit`)
     if (boundary.decisionStatus !== 'approved') findings.push(`${change.file}: approval commit must transition candidate status to approved`)
+    if (!boundary.manifestOnlyStatusTransition) findings.push(`${change.file}: approval commit manifest may change only candidate status ready_for_audit -> approved`)
     if (boundary.oppositeAtParent) findings.push(`${change.file}: approval parent already contains rejection.json`)
     if (boundary.unexpectedDecisionChanges?.length) findings.push(`${change.file}: approval commit may change only approval.json and its manifest; also changed ${boundary.unexpectedDecisionChanges.join(', ')}`)
     if (boundary.postDecisionPacketChanges?.length) findings.push(`${change.file}: packet changed after approval: ${boundary.postDecisionPacketChanges.join(', ')}`)
@@ -397,6 +423,7 @@ export function promotionBoundaryFindings(slug, boundary) {
   if (!boundary.parentHasApproval) findings.push(`${label}: promotion parent commit must contain Mennonite approval`)
   if (boundary.parentStatus !== 'approved') findings.push(`${label}: promotion parent commit status must be approved`)
   if (boundary.promotionStatus !== 'promoted') findings.push(`${label}: promotion commit must transition candidate status to promoted`)
+  if (!boundary.manifestOnlyStatusTransition) findings.push(`${label}: promotion commit manifest may change only candidate status approved -> promoted`)
   if (boundary.unexpectedPromotionChanges?.length) findings.push(`${label}: deterministic promotion commit changed unexpected paths: ${boundary.unexpectedPromotionChanges.join(', ')}`)
   if (boundary.postPromotionChanges?.length) findings.push(`${label}: protected intake or canonical bytes changed after promotion: ${boundary.postPromotionChanges.join(', ')}`)
   return findings
@@ -425,6 +452,7 @@ function promotionBoundaryAt(base, runId, slug) {
     parentHasApproval: pathExistsAt(parent, approval),
     parentStatus: candidateStatusAt(parent, runId, slug),
     promotionStatus: candidateStatusAt(promotionCommit, runId, slug),
+    manifestOnlyStatusTransition: manifestStatusOnlyTransition(parent, promotionCommit, runId, slug, 'approved', 'promoted'),
     unexpectedPromotionChanges,
     postPromotionChanges: [...new Set(protectedChanges)],
   }

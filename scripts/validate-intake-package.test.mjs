@@ -198,6 +198,7 @@ test('approval may share one PR only after a frozen ready packet commit', () => 
     parentHasCanonical: true,
     parentStatus: 'ready_for_audit',
     decisionStatus: 'approved',
+    manifestOnlyStatusTransition: true,
     oppositeAtParent: false,
     unexpectedDecisionChanges: [],
     postDecisionPacketChanges: [],
@@ -213,6 +214,9 @@ test('approval may share one PR only after a frozen ready packet commit', () => 
   assert.match(auditTransitionFindings(changes, {
     boundaryFor: () => ({ ...good, unexpectedDecisionChanges: ['README.md'] }),
   }).join('\n'), /approval commit may change only approval.json and its manifest/)
+  assert.match(auditTransitionFindings(changes, {
+    boundaryFor: () => ({ ...good, manifestOnlyStatusTransition: false }),
+  }).join('\n'), /manifest may change only candidate status/)
 })
 
 test('new rejection records are forbidden because REVISE returns the same PR', () => {
@@ -236,11 +240,13 @@ test('promotion may share the PR only from an approved parent commit', () => {
     parentHasApproval: true,
     parentStatus: 'approved',
     promotionStatus: 'promoted',
+    manifestOnlyStatusTransition: true,
     unexpectedPromotionChanges: [],
   }
   assert.deepEqual(promotionBoundaryFindings('good-game', good), [])
   assert.match(promotionBoundaryFindings('good-game', { ...good, parentHasApproval: false }).join('\n'), /parent commit must contain Mennonite approval/)
   assert.match(promotionBoundaryFindings('good-game', { ...good, parentStatus: 'ready_for_audit' }).join('\n'), /parent commit status must be approved/)
+  assert.match(promotionBoundaryFindings('good-game', { ...good, manifestOnlyStatusTransition: false }).join('\n'), /manifest may change only candidate status/)
   assert.match(promotionBoundaryFindings('good-game', { ...good, unexpectedPromotionChanges: ['README.md'] }).join('\n'), /deterministic promotion commit changed unexpected paths/)
 })
 
