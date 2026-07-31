@@ -34,6 +34,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "HTTP 200; application/pdf; 11,278,257 bytes; 84 PDF pages; SHA-256 5c558dacdc495c13ff5ae7d36db4a2dc8ced0e02e39b156d0075c9de4b4a60c9. PDF contains Rules (PDF pp.1-13), Secrets of Survival (14-45), Traitor's Tome (46-67), and Bleak Journal (68-84); footer includes 2021 Hasbro text while internal art carries 2018 Wizards notices."
+  - id: "src-007"
+    title: "Official 2018 Wizards Betrayal Legacy rulebook"
+    url: "https://media.wizards.com/2018/downloads/rules/BLY-Rulebook-web.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "HTTP 200; application/pdf; 5,358,358 bytes; 23 pages; SHA-256 ab30782170e8e8d6c794486385422517aad54e0b2ae2781126bfae30bc11ad5e; 2018 Wizards footer; code 300C4595000001 EN."
   - id: "src-004"
     title: "BGG current rating and weight endpoint for item 240196"
     url: "https://api.geekdo.com/api/dynamicinfo?objecttype=thing&objectid=240196"
@@ -44,12 +51,17 @@ sources:
 confidence: medium
 status: needs_followup
 last_verified: "2026-07-31"
-summary: "A spoiler-bounded, source-backed maintenance record whose general and haunt books are acquired, but whose exact 2018 printing equivalence and concealed campaign-control materials remain unproven."
+summary: "A spoiler-bounded, source-backed maintenance record with official release-era general rules and F3147 books acquired, but exact first-print applicability of F3147-only books and concealed campaign-control materials remains unproven."
 ---
 
 # Betrayal Legacy
 
-Betrayal Legacy is a standalone campaign implementation of the Betrayal system. This record is intentionally **not verified**: Hasbro currently serves a complete 84-page F3147 book bundle, but its product metadata and footer conflict with the 2018 BGG edition on player count and apparent printing date, while the Legacy decks, Purgatory deck, Folium Infernum rule stickers, sealed box, and sealed envelope are not exposed as complete official digital readouts.
+Betrayal Legacy is a standalone campaign implementation of the Betrayal system. This record is intentionally **not verified**: the official 2018 Wizards rulebook supplies release-era general rules and starting inventory, and Hasbro currently serves a complete 84-page F3147 book bundle. However, no evidence maps F3147's haunt books, Bleak Journal, or concealed materials to a particular first printing, while the Legacy decks, Purgatory deck, Folium Infernum rule stickers, sealed box, and sealed envelope are not exposed as complete official digital readouts.
+
+- Claim: The official 2018 Wizards rulebook independently records the release-era general rules and starting inventory.
+  Source: src-007
+  Evidence: The 23-page rulebook carries the 2018 Wizards footer and product code 300C4595000001 EN.
+  Confidence: high
 
 - Claim: BGG item 240196 identifies Betrayal Legacy as a 2018 game for 3-5 players.
   Source: src-001

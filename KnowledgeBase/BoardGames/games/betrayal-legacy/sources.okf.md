@@ -34,6 +34,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "HTTP 200; application/pdf; 11,278,257 bytes; 84 pages; SHA-256 5c558dacdc495c13ff5ae7d36db4a2dc8ced0e02e39b156d0075c9de4b4a60c9."
+  - id: "src-007"
+    title: "Official 2018 Wizards Betrayal Legacy rulebook"
+    url: "https://media.wizards.com/2018/downloads/rules/BLY-Rulebook-web.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "HTTP 200; application/pdf; 5,358,358 bytes; 23 pages; SHA-256 ab30782170e8e8d6c794486385422517aad54e0b2ae2781126bfae30bc11ad5e. Created/modified in 2018; footer TM & ©2018 Wizards of the Coast LLC; code 300C4595000001 EN."
   - id: "src-004"
     title: "BGG current rating and weight endpoint"
     url: "https://api.geekdo.com/api/dynamicinfo?objecttype=thing&objectid=240196"
@@ -70,6 +77,7 @@ summary: "Exact retrieval receipts for official support, BGG identity telemetry,
 | src-001 | 2018 identity | BGG API exact URL | 200 JSON, 22,212 bytes, hash recorded |
 | src-002 | official product/component support | Hasbro exact detail URL | 200 HTML, 1,376,834 bytes, hash recorded |
 | src-003 | official available book corpus | Hasbro exact PDF URL | 200 PDF, 11,278,257 bytes, 84 pages, hash recorded |
+| src-007 | release-era general rules and starting inventory | Wizards exact PDF URL | 200 PDF, 5,358,358 bytes, 23 pages, hash recorded |
 | src-004 | dated rating/weight snapshot | BGG API exact URL | 200 JSON, 1,320 bytes, hash recorded |
 | src-005 | independent reception | original SUSD URL; Jina retrieval aid | original browser Error 1005; proxy 200 text, 12,498 bytes, hash recorded |
 | src-006 | independent reception | original Polygon URL; Jina retrieval aid | proxy 200 text, 8,704 bytes, hash recorded |
@@ -84,6 +92,11 @@ summary: "Exact retrieval receipts for official support, BGG identity telemetry,
   Evidence: "minplayers: 3; maxplayers: 5" versus "For 3 to 6 Players" and "© 2021 Hasbro."
   Confidence: high
 
+- Claim: Wizards published an official 2018 rulebook that independently supplies the release-era general rules and starting inventory, but it does not establish that F3147's haunt books, Bleak Journal, or concealed materials match a particular first printing.
+  Source: src-007
+  Evidence: The 23-page PDF carries the footer "TM & ©2018 Wizards of the Coast LLC" and code "300C4595000001 EN"; its scope is the rulebook and starting-game components.
+  Confidence: high
+
 ## Authority boundary
 
-BGG supplies identity and community telemetry only. Reviews supply reception only. Rule claims in this tree rely on the Hasbro-hosted PDF, and all such claims remain provisionally applicable to the target until printing equivalence is independently established.
+BGG supplies identity and community telemetry only. Reviews supply reception only. The official 2018 Wizards PDF independently supports release-era general rules and starting inventory. Claims unique to F3147's haunt books, Bleak Journal, or concealed materials remain provisionally applicable to the target until printing equivalence is independently established.
