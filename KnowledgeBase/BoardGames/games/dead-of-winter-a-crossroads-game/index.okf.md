@@ -7,56 +7,50 @@ game:
   bgg_id: 150376
   publisher: "Plaid Hat Games"
   year: 2014
-  players:
-    min: 2
-    max: 5
-  complexity: expert
   weight: 3.01
-  edition: "base/standalone release"
-scope: "selection dossier; standalone/base game"
+  edition: "English 2014 standalone/base game; exact printing mapping unresolved"
+scope: "2014 English base game only; later printings, expansions, promos, translations, and digital adaptations excluded"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
 better_if_labels: []
 sources:
   - id: "src-001"
-    title: "BoardGameGeek \u2014 Dead of Winter: A Crossroads Game"
-    url: "https://boardgamegeek.com/boardgame/150376"
-    kind: bgg_page
-    provenance: community
-    retrieved_at: "2026-07-26"
-    notes: "Identity and mechanic evidence."
-  - id: "src-002"
-    title: "Plaid Hat Games \u2014 official product or rules page"
-    url: "https://www.plaidhatgames.com/games/dead-of-winter"
+    title: "Dead of Winter rulebook (PH1000)"
+    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Official CDN copy; 20 pages; 2020 PDF metadata; printing applicability unresolved."
+  - id: "src-004"
+    title: "Plaid Hat Games — Can't find a game?"
+    url: "https://www.plaidhatgames.com/cant-find-game/"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-26"
-    notes: "Identity and mechanic evidence."
-  - id: "src-003"
-    title: "BGG ranking snapshot mirror"
-    url: "https://raw.githubusercontent.com/strobelt/bgg-scraper/e9a91dc2ad2c0c5b0729c54b251b6aa33a1dba7a/boardgames_ranks.csv"
-    kind: other
-    provenance: secondary
-    retrieved_at: "2026-07-26"
-    notes: "Rating snapshot used for this batch ordering."
+    retrieved_at: "2026-07-31"
+    notes: "Current Plaid Hat page says Dead of Winter and expansions are now managed by Fantasy Flight Games."
 confidence: high
-status: verified
-last_verified: "2026-07-26"
-summary: "Survivors defend a winter colony under a shared crisis while secret personal goals and a possible betrayer deform every contribution."
+status: needs_followup
+last_verified: "2026-07-31"
+summary: "Substantial official-rulebook and FAQ remediation, blocked from verification by unresolved 2014-printing/card-local/visual authority denominators."
 ---
 
 # Dead of Winter: A Crossroads Game
 
-Survivors defend a winter colony under a shared crisis while secret personal goals and a possible betrayer deform every contribution.
+This record targets the English 2014 standalone/base game. The retrieved official rulebook and FAQ support a substantial rules corpus, but the 2020-created PH1000 PDF is not yet mapped conclusively to the first 2014 printing and no closed, inspectable source inventory for all rule-bearing card faces was acquired.
 
-## Batch position
+- Claim: The base game is governed by main and secret objectives as well as rule-bearing survivor, item, crisis, and Crossroads cards, so the rulebook alone cannot close the governing denominator.
+  Source: src-001
+  Evidence: Rulebook pp. 2–4 inventories and diagrams each card class; p. 15 states that card text takes precedence over the rulebook.
+  Confidence: high
 
-**#7** in the 2026-07-26 semi-cooperative RPG/adventure intake, ordered by the cited BGG average-rating signal after the fit screen.
+## Records
 
-- [Sources](sources.okf.md)
-- [Scout report](scout-report.okf.md)
-
-## Identity evidence
-
-- **Source:** src-001
-- **Evidence:** BGG item `150376` identifies the 2014 release, player range, weight signal, and community rating context.
-- **Confidence:** high
+- [Sources and retrieval ledger](sources.okf.md)
+- [Setup and components](rules/setup-components.okf.md)
+- [Round, turn, and actions](rules/round-turn-actions.okf.md)
+- [Movement, search, combat, and exposure](rules/movement-search-combat.okf.md)
+- [Colony, crisis, and Crossroads](rules/colony-crisis-crossroads.okf.md)
+- [Objectives, betrayal, exile, and endgame](rules/objectives-exile-endgame.okf.md)
+- [FAQ and hierarchy](rules/edge-cases-faq.okf.md)
+- [Independent reception](reception/reviews.okf.md)
+- [Evidence-based better-if notes](reception/better-if.okf.md)
+- [Gap report](scout-report.okf.md)
