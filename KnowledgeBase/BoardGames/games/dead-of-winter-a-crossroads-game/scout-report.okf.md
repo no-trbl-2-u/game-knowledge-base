@@ -107,7 +107,7 @@ summary: "Target-print repair complete; governing face/support denominators rema
 
 - Physical inventory-line transcription: **32/32 = 100%**, treating each printed component bullet as one category; exact 2014 mechanical quantity sum **637**.
 - Rulebook-order arithmetic: `10+24+10+10+30+5+1+25+20+20+20+20+20+20+20+80+25+20+20+20+20+6+2+30+30+30+60+1+6+1+30+1=637`.
-- Card/board/reference allocation: **341/341 physical surfaces represented by class and quantity**, explicitly including the colony board: `10+24+10+10+30+5+25+(6×20)+20+80+6+1=341`.
+- Card/board/reference allocation: **341/341 physical card/board/reference components represented by class and quantity**, explicitly including the colony board: `10+24+10+10+30+5+25+(6×20)+20+80+6+1=341`.
 - Item-card corpus: **145** (`25 + 6×20`), not 170.
 - Distinct identity/text coverage: **UNKNOWN**; no authoritative complete face readout was acquired.
 - Governing source coverage: **UNKNOWN**; denominator open.
