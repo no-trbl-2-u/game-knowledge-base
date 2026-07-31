@@ -20,7 +20,7 @@
       { "claim_group": "framework plus planet modular structure", "recorded": true, "source_ids": ["src-002", "src-003"] },
       { "claim_group": "three-die action economy", "recorded": true, "source_ids": ["src-003"] },
       { "claim_group": "time and endurance pressure", "recorded": true, "source_ids": ["src-003"] },
-      { "claim_group": "exact updated framework component manifest", "recorded": false, "source_ids": [] },
+      { "claim_group": "exact updated framework component manifest", "recorded": true, "source_ids": ["src-002"] },
       { "claim_group": "exact Planet 001 component and rules manifest", "recorded": false, "source_ids": [] },
       { "claim_group": "exact Planet 002 component and rules manifest", "recorded": false, "source_ids": [] },
       { "claim_group": "official FAQ and errata applicability to this printing", "recorded": false, "source_ids": [] }
@@ -57,7 +57,7 @@
       "content_type": "application/pdf",
       "byte_length": 69217668,
       "sha256": "2cc105d5430e176b2bb45265809c5adf0ea7f7e3dcde1b3546a3f66ab4f47a59",
-      "locator": "48-page PDF; pages 3-48 inspected with pdfinfo and pdftotext",
+      "locator": "48-page PDF; pages 4-5, Component List / Base Framework (complete updated framework component manifest); pages 3-48 inspected with pdfinfo and pdftotext",
       "evidence": "The rulebook states that each game requires the base framework and one planet box, and that each world has its own environment, special rules, and challenges."
     },
     {

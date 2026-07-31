@@ -24,6 +24,7 @@
       "status": "blocked",
       "discovery_sources": [
         "https://orangenebula.com/pages/unsettled-board-game",
+        "https://www.orangenebula.com/creations/unsettled/",
         "https://gamefound.com/en/projects/orange-nebula/unsettled-/products/details/25486",
         "https://boardgamegeek.com/boardgame/290484/unsettled"
       ],
@@ -41,35 +42,75 @@
           "percent": 33.3
         },
         "factual": {
-          "recorded": 6,
+          "recorded": 7,
           "known_total": 10,
-          "percent": 60
+          "percent": 70
         }
       },
       "gap": {
-        "threshold_summary": "Rules coverage is 33.3% (1 of 3 governing authorities) versus the required 100%; factual coverage is 60% (6 of 10 declared claim groups) versus the required 60%, but official provenance and visual gates also remain unmet.",
+        "threshold_summary": "Rules coverage is 33.3% (1 of 3 governing authorities) versus the required 100%; factual coverage is 70.0% (7 of 10 declared claim groups) versus the required 60%, but official provenance and visual gates also remain unmet.",
         "missing_evidence": [
           "An official publisher-hosted copy of the complete updated framework rulebook, not merely the receipted campaign product description and retailer mirror.",
           "The complete rules-bearing content for Planet 001 Wenora and Planet 002 Grakkis, including their planet-specific special rules and survival tasks.",
           "Four to eight licensable or narrowly transformed, meaningful visual references with receipts, distinct subjects, hashes, and a contact sheet.",
-          "Authoritative exact component manifests for the updated framework, Planet 001, and Planet 002."
+          "Authoritative exact component and rules manifests for Planet 001 and Planet 002."
         ],
         "attempted_sources": [
           {
-            "url": "https://orangenebula.com/pages/unsettled-board-game",
-            "result": "The official Orange Nebula page returned HTTP 429 local_rate_limited to scripted retrieval and an empty browser document during this run."
-          },
-          {
             "url": "https://gamefound.com/en/projects/orange-nebula/unsettled-/products/details/25486",
-            "result": "Retrieved successfully; it identifies an Updated Rulebook included in every framework printed for that campaign, but the linked document itself was not exposed as a retrievable official file."
+            "result": "Retrieved successfully; it identifies an Updated Rulebook included in every framework printed for that campaign and exposes the official Orange Nebula locator https://www.orangenebula.com/creations/unsettled/, but no official rulebook file was successfully retrieved."
           },
           {
-            "url": "https://gamers-hq.de/media/pdf/g0/91/9d/Unsettled_Rulebook.pdf",
-            "result": "Retrieved and inspected all 48 pages of the 2023-03-14 updated framework rulebook, but this is a retailer-hosted mirror and it does not contain the complete Planet 001 or Planet 002 rules-bearing corpora."
+            "url": "https://www.orangenebula.com/creations/unsettled/",
+            "result": "Observed 2026-07-31T20:38:15Z; redirected to final URL https://orangenebula.com/collections/unsettled; HTTP 429; MIME text/plain; 18 bytes; SHA-256 fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3. The official location was exposed, but no official file was retrieved."
+          },
+          {
+            "url": "https://orangenebula.com/sitemap.xml",
+            "result": "Observed 2026-07-31T20:37:33Z; final URL unchanged; HTTP 200; MIME application/xml; charset=utf-8; 6,769 bytes; SHA-256 1a585c058a0828816ab781dd2e798d5d1f6e537083801990a87479cf54f4c309. It listed parameterized English child sitemaps for products, pages, and collections."
+          },
+          {
+            "url": "https://orangenebula.com/sitemap_pages_1.xml?from=122794770715&to=181908570395",
+            "result": "Observed 2026-07-31T20:37:33Z; final URL unchanged; HTTP 200; MIME application/xml; charset=utf-8; 6,284 bytes; SHA-256 6d5a074cde9f4e696886f58b6e7ac64ec227e22f5d1c1eb8bedc1e745cc0af6. It listed two Unsettled page locators: /pages/unsettled-board-game and /pages/unsettled-db."
+          },
+          {
+            "url": "https://orangenebula.com/sitemap_products_1.xml?from=8248430199067&to=10353100325147",
+            "result": "Observed 2026-07-31T20:37:33Z; final URL unchanged; HTTP 200; MIME application/xml; charset=utf-8; 62,326 bytes; SHA-256 7ee0fdc8b854955a31e9f947720a16dd3f84d7d17ff6afbab927ab48a69a0bf2. It listed 17 Unsettled product locators; the scoped framework/Planets 001-002 and Survival Task Pack 1-2 endpoints were selected for one bounded inspection each."
+          },
+          {
+            "url": "https://orangenebula.com/sitemap_collections_1.xml?from=436751630619&to=512344031515",
+            "result": "Observed 2026-07-31T20:37:56Z; final URL unchanged; HTTP 200; MIME application/xml; charset=utf-8; 6,596 bytes; SHA-256 dfe6050532b61ac18085b25711a54f3fb3b1e8271e18350fc25135a5f743a635. It listed /collections/unsettled and /collections/unsettled-planets."
           },
           {
             "url": "https://orangenebula.com/sitemap_pages_1.xml",
-            "result": "The official sitemap request returned no bytes during the rate-limited retrieval window, so it could not close the publisher document inventory."
+            "result": "The prior auditor independently reproduced HTTP 400 with zero bytes for this bare, non-parameterized child URL. It is not evidence about the parameterized child sitemap, which returned HTTP 200 above."
+          },
+          {
+            "url": "https://orangenebula.com/pages/unsettled-board-game",
+            "result": "Observed 2026-07-31T20:38:17Z; final URL unchanged; HTTP 429; MIME text/plain; 18 bytes; SHA-256 fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3. One bounded request; no absence inference."
+          },
+          {
+            "url": "https://orangenebula.com/pages/unsettled-db",
+            "result": "Observed 2026-07-31T20:38:19Z; final URL unchanged; HTTP 429; MIME text/plain; 18 bytes; SHA-256 fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3. One bounded request; no absence inference."
+          },
+          {
+            "url": "https://orangenebula.com/products/unsettled%C2%AE-framework-and-planets-001-2",
+            "result": "Observed 2026-07-31T20:38:21Z; final URL unchanged; HTTP 429; MIME text/plain; 18 bytes; SHA-256 fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3. One bounded request to the scoped framework/Planets 001-002 product; no absence inference."
+          },
+          {
+            "url": "https://orangenebula.com/products/unsettled%C2%AE-survival-task-pack-1-2",
+            "result": "Observed 2026-07-31T20:38:23Z; final URL unchanged; HTTP 429; MIME text/plain; 18 bytes; SHA-256 fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3. One bounded request to the scoped survival-task product; no absence inference."
+          },
+          {
+            "url": "https://orangenebula.com/collections/unsettled",
+            "result": "Observed 2026-07-31T20:38:25Z; final URL unchanged; HTTP 429; MIME text/plain; 18 bytes; SHA-256 fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3. One bounded request; no absence inference."
+          },
+          {
+            "url": "https://orangenebula.com/collections/unsettled-planets",
+            "result": "Observed 2026-07-31T20:38:27Z; final URL unchanged; HTTP 429; MIME text/plain; 18 bytes; SHA-256 fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3. One bounded request; no absence inference."
+          },
+          {
+            "url": "https://gamers-hq.de/media/pdf/g0/91/9d/Unsettled_Rulebook.pdf",
+            "result": "Retrieved and inspected all 48 pages of the 2023-03-14 updated framework rulebook. Pages 4-5, Component List / Base Framework, close the exact updated framework component manifest; the retailer-hosted mirror still does not contain the complete Planet 001 or Planet 002 rules-bearing corpora or exact planet manifests."
           },
           {
             "url": "https://gamingwithsidekicks.com/2022/02/24/game-review-unsettled/",
