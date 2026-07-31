@@ -40,4 +40,4 @@ status: needs_followup
   Evidence: Rulebook p.17.
   Confidence: high
 
-The ten improvement identities, thresholds, and ongoing effects remain unacquired card-local authority.
+The ten improvement identities, thresholds, ongoing effects, token identities, and one-to-one card/token mapping remain unacquired card-local/physical authority and therefore `UNKNOWN`.

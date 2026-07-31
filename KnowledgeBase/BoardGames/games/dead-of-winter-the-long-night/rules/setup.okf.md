@@ -45,3 +45,5 @@ status: needs_followup
   Confidence: high
 
 Quantity coverage is not face/text coverage. The 8 dual-sided objectives represent at least 16 printed sides, but no complete distinct-face denominator is claimed.
+
+The governing semantic-component disposition is itemized in `../scout-report.okf.md`: shared rulebook framework is distinguished from still-`UNKNOWN` physical faces, target-printing identities, and card/token/standee mappings.

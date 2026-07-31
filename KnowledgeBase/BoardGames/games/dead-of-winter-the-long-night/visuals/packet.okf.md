@@ -32,8 +32,8 @@ visual_references:
     license: "All rights reserved; no reuse license identified"
     attribution: "Reduced excerpt from official 2016 rulebook p.2."
     demonstrates: "official inventory and objective-card visual hierarchy"
-    rationale: "600x788 private analytical excerpt; one noncontiguous page cannot substitute for the source or components."
-    sha256: "73d91c02b632bad82aafd2035a90328b645e5a366a1eba3b709345453023948b"
+    rationale: "300x394, 18,464-byte private analytical excerpt; hierarchy remains visible while ordinary body text is not practically readable."
+    sha256: "400db1ce0942b9696100635a2920025e767d89747fad1b389ade5a7a0c8d2c59"
   - id: "vis-002"
     source_id: "src-001"
     file: "visuals/references/02-loop.webp"
@@ -45,8 +45,8 @@ visual_references:
     license: "All rights reserved; no reuse license identified"
     attribution: "Reduced excerpt from official 2016 rulebook p.6."
     demonstrates: "standalone setup sequence and board/survivor placement"
-    rationale: "600x788 private analytical excerpt; text is reduced and the image cannot substitute for the rulebook."
-    sha256: "8768ef7518b9f7c7381aaabbc0db90220254f1fa52a52af684e282c121cdfb73"
+    rationale: "300x394, 19,978-byte private analytical excerpt; setup structure remains visible while ordinary body text is not practically readable."
+    sha256: "c42ab3cd8e5259e32dc1ac8f210ba77d4486d0927400ce97a3eea7294a1aff29"
   - id: "vis-003"
     source_id: "src-001"
     file: "visuals/references/03-tension.webp"
@@ -58,8 +58,8 @@ visual_references:
     license: "All rights reserved; no reuse license identified"
     attribution: "Reduced excerpt from official 2016 rulebook p.16."
     demonstrates: "core Long Night/module selection boundary and always-on rules"
-    rationale: "600x788 private analytical excerpt selected for edition/module analysis, not decoration."
-    sha256: "66615732d0b9dd45147c40ab1a2729730c1c6cf95d7b1bb523bc46e451cfb26e"
+    rationale: "300x394, 22,444-byte private analytical excerpt; section hierarchy remains visible while ordinary body text is not practically readable."
+    sha256: "16b0a70ece02040fee8cdd5a8d8b1e221d9fe3f3f70f836c537f75713621e6e6"
   - id: "vis-004"
     source_id: "src-001"
     file: "visuals/references/04-endgame.webp"
@@ -71,19 +71,19 @@ visual_references:
     license: "All rights reserved; no reuse license identified"
     attribution: "Reduced excerpt from official 2016 rulebook p.18."
     demonstrates: "Raxxon setup, containment vote, search risk, and special-zombie resolution"
-    rationale: "600x788 private analytical excerpt; one module page cannot replace cards, location, or rulebook."
-    sha256: "c38550df38654ada034b7557a1f9789724d666d38fcc52b414c5f6457d32c2aa"
+    rationale: "300x394, 22,174-byte private analytical excerpt; module layout remains visible while ordinary body text is not practically readable."
+    sha256: "e72d903d803fc5cd61524a8351de73760d6f6fb7d95700f7c15d2383a48e64d6"
 contact_sheet: "visuals/contact-sheet.webp"
-contact_sheet_sha256: "030ebed2cfa6b1d0f51d0a434ae7457e764e0416b3f25429be78e717f70d6087"
+contact_sheet_sha256: "0a3fcb28ac5eeaf815651bfbc071a842d375a04826ed77ae2bc266431e844e0f"
 confidence: high
 status: needs_followup
 ---
 
 # Visual provenance
 
-Deterministic recipe: Poppler `pdftoppm` at 72 DPI with width 600, then FFmpeg `libwebp` quality 55 and metadata stripping; pages 2, 6, 16, and 18. Contact sheet scales each panel to width 450 and uses FFmpeg `xstack` in a 2x2 layout, WebP quality 60, metadata stripped. Derivatives are 600x788; contact sheet is 900x1184.
+Deterministic recipe from the verified `dc900254...0190e6` PDF: for pages 2, 6, 16, and 18, Poppler 25.03.0 `pdftoppm -f PAGE -l PAGE -singlefile -r 72 -scale-to-x 300 -scale-to-y -1 -png`; then FFmpeg 7.1.5 `-map_metadata -1 -frames:v 1 -c:v libwebp -lossless 0 -quality 45 -compression_level 6 -preset picture`. Contact sheet: feed the four installed WebPs in manifest order to FFmpeg `xstack=inputs=4:layout=0_0|w0_0|0_h0|w0_h0:fill=black`, then `-map_metadata -1 -frames:v 1 -c:v libwebp -lossless 0 -quality 50 -compression_level 6 -preset picture`. Panels are 300x394; the 2x2 sheet is 600x788 and 83,696 bytes. `ffprobe` reports no format tags on any derivative.
 
-- Claim: All four panels derive from the byte-verified 2016 target rulebook and show distinct analytical subjects without other-product leakage.
+- Claim: All four panels derive from the byte-verified 2016 target rulebook and show distinct analytical subjects without other-product, promo, or adult-content leakage; no panel is corrupted or cropped, and ordinary body text is not practically readable at installed size.
   Source: src-001
-  Evidence: Visual inspection of the contact sheet on 2026-07-31 found inventory/objectives, setup, Long Night core rules, and Raxxon module pages; no corruption or cropping.
+  Evidence: Independent inspection of all four 300x394 panels and the 600x788 contact sheet on 2026-07-31 found inventory/objectives, setup, Long Night core rules, and Raxxon module pages; hierarchy remains analytically useful but body copy is nonreplacement quality.
   Confidence: high

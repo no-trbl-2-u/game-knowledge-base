@@ -44,3 +44,28 @@ status: needs_followup
   Source: src-001
   Evidence: Rulebook pp.13 and 16.
   Confidence: high
+
+- Claim: Food demand is one token per two colony survivors, rounded up and counting helpless survivors; if the supply is short, no food is removed, one starvation token is added, and morale falls by the total starvation-token count.
+  Source: src-001
+  Evidence: Rulebook p.12, Colony Phase step 1, "Pay Food."
+  Confidence: high
+
+- Claim: Waste lowers morale by one for each complete group of ten cards in the waste pile.
+  Source: src-001
+  Evidence: Rulebook p.12, Colony Phase step 2, "Check Waste."
+  Confidence: high
+
+- Claim: Crisis contributions are shuffled and revealed: each matching-symbol card scores one, each nonmatching card subtracts one, and the threshold is the number of non-exiled players. Below threshold resolves the printed failure; meeting it prevents the crisis; exceeding it by at least two also raises morale by one, then all contributions leave play.
+  Source: src-001
+  Evidence: Rulebook p.12, Colony Phase step 3, "Resolve Crisis." Printed crisis-specific consequences remain card-local `UNKNOWN`.
+  Confidence: high
+
+- Claim: Zombie demand is one per two colony survivors rounded up, plus one per survivor at each non-colony location; unruly helpless survivors can modify those counts. Each noise token is flipped and adds a zombie only on its marked result.
+  Source: src-001
+  Evidence: Rulebook pp.12-13, Colony Phase step 4, plus p.16 for unruly counting.
+  Confidence: high
+
+- Claim: Zombies enter one at a time; at a full entrance they first destroy a barricade and cancel that zombie, otherwise overrun and kill the lowest-influence survivor (or a helpless survivor if no ordinary survivor is present), reducing morale for the death.
+  Source: src-001
+  Evidence: Rulebook p.13, "Adding Zombies."
+  Confidence: high

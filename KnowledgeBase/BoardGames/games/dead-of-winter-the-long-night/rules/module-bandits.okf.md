@@ -35,6 +35,16 @@ status: needs_followup
   Evidence: Rulebook p.17.
   Confidence: high
 
+- Claim: A crisis-directed bandit is not placed when its chosen location has no available survivor space.
+  Source: src-001
+  Evidence: Rulebook p.17, "Placing Bandits."
+  Confidence: high
+
+- Claim: If zombie addition overruns a location containing bandits but no survivors, all bandits there are removed.
+  Source: src-001
+  Evidence: Rulebook p.17, Bandits "Adding Zombies."
+  Confidence: high
+
 - Claim: A survivor attacks a bandit using survivor-attack rules against attack value 4.
   Source: src-001
   Evidence: Rulebook p.17.
@@ -50,4 +60,9 @@ status: needs_followup
   Evidence: Rulebook pp.22-23.
   Confidence: high
 
-Exact Bandit-tagged card identities and Hideout text remain open.
+- Claim: The Hideout has no search deck, and all interaction instructions are delegated to its location card.
+  Source: src-001
+  Evidence: Rulebook p.17, setup step 2 and "Bandits' Hideout."
+  Confidence: high
+
+Exact Bandit-tagged card identities and the Hideout's card-local interaction text remain `UNKNOWN`.

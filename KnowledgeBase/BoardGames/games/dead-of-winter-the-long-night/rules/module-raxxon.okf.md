@@ -45,9 +45,24 @@ status: needs_followup
   Evidence: Rulebook p.18.
   Confidence: high
 
+- Claim: During a turn, a player with a survivor at Raxxon may place unused action dice there. At the beginning of the colony phase, two dice matching the top Audio Log's code trigger a thumbs-up/thumbs-down vote: thumbs up discards that experiment without placement, while thumbs down grants a three-zombie reduction at one first-player-chosen location and still follows failure placement.
+  Source: src-001
+  Evidence: Rulebook p.18, "The Containment Code" and the two vote options.
+  Confidence: high
+
+- Claim: If the two-die code is absent, or thumbs down wins, the Audio Log's listed special zombies are placed one at a time using matching standees; any placement blocked by a full entrance resolves traps, barricades, or overrun normally, does not place that zombie, and discards the experiment instead. A successful placement flips the card to its encounter side near the colony.
+  Source: src-001
+  Evidence: Rulebook p.18, "Containment Code Failure or Thumbs Down."
+  Confidence: high
+
 - Claim: Special zombies generally require regular attacks, can constrain attack target order, and resolve attack effects from their encounter card.
   Source: src-001
   Evidence: Rulebook pp.18-19.
+  Confidence: high
+
+- Claim: Special zombies cannot be killed by non-attack effects or explosive traps and cannot be moved except by their encounter cards; where one shares the attacker's location it must be targeted before standard zombies, survivors, or bandits. The attacker resolves normal exposure, then if alive rolls for the encounter-card attack effect; the encounter is discarded after the last special zombie of that type leaves play.
+  Source: src-001
+  Evidence: Rulebook pp.18-19, special-zombie attack and removal framework.
   Confidence: high
 
 - Claim: The Chimp and the Code instructional scenario introduces Raxxon across objectives R1-R3.
@@ -55,4 +70,9 @@ status: needs_followup
   Evidence: Rulebook pp.20-21.
   Confidence: high
 
-Experiment, side-effect, Raxxon item, and Raxxon location full text remain open.
+- Claim: The instructional scenario deliberately stages activation: R1 begins with Raxxon inaccessible and both pill and containment rules off; after R1, searching and pills activate while containment stays off; after R2, containment activates for the remaining game and initial experiment placements scale by non-exiled player count.
+  Source: src-001
+  Evidence: Rulebook pp.20-21, R1-R3 transition instructions.
+  Confidence: high
+
+Experiment identities and card/standee mappings, encounter results, pill and side-effect text, Raxxon item text, objectives, and Raxxon location text remain `UNKNOWN`.

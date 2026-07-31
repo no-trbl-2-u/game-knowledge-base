@@ -40,6 +40,26 @@ status: needs_followup
   Evidence: Rulebook p.16, "New Rules for Every Game."
   Confidence: high
 
+- Claim: At round end any player may call a vote to retain the current first player; a passing vote keeps the token, otherwise it passes normally.
+  Source: src-001
+  Evidence: Rulebook p.16, "First Player Vote."
+  Confidence: high
+
+- Claim: Random-location instructions roll a six-sided action die and choose the matching numbered location, so the colony and locations numbered above six cannot be selected that way.
+  Source: src-001
+  Evidence: Rulebook pp.15-16, "Random Locations."
+  Confidence: high
+
+- Claim: Despair counts as a wound but only despair-specific effects remove it; unruly helpless-survivor tokens count as two during Pay Food and Add Zombies and may be flipped to normal by discarding a medicine card without its effect.
+  Source: src-001
+  Evidence: Rulebook p.16, "Despair" and "Unruly Helpless Survivors."
+  Confidence: high
+
+- Claim: An explosive trap otherwise follows barricade law, but when zombie placement destroys it the trap also removes every zombie already at that entrance.
+  Source: src-001
+  Evidence: Rulebook p.16, "Explosive Traps."
+  Confidence: high
+
 - Claim: Base-game cards/components may be mixed in as desired; combined location decks are shuffled and cut to 20 cards, but difficulty may change.
   Source: src-001
   Evidence: Rulebook p.16.
