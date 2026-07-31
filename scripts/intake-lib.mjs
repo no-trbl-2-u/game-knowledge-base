@@ -5,7 +5,7 @@ import { spawnSync } from 'node:child_process'
 
 export const COHORT_LIMITS = Object.freeze({ cooperative: 1, solo_rpg: 1, rotating_focus: 1 })
 export const MAX_CANDIDATES = 3
-export const INTAKE_SCHEMA_VERSION = 2
+export const INTAKE_SCHEMA_VERSION = 3
 export const CANDIDATE_STATUSES = new Set(['blocked', 'ready_for_audit', 'rejected', 'approved', 'promoted'])
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 export const SOURCE_ROLES = new Set(['identity', 'official_rules', 'independent_review', 'rating', 'visual', 'faq', 'errata', 'designer_commentary', 'community'])
@@ -181,6 +181,27 @@ export function coverageFindings(candidate, label = 'candidate') {
   return findings
 }
 
+export function gapFindings(candidate, label = 'candidate') {
+  const findings = []
+  const gap = candidate?.gap
+  if (candidate?.status !== 'blocked') {
+    if (gap !== undefined) findings.push(`${label}.gap is permitted only for blocked candidates`)
+    return findings
+  }
+  if (!gap || typeof gap !== 'object' || Array.isArray(gap)) return [`${label}.gap is required for a blocked candidate`]
+  if (String(gap.threshold_summary ?? '').trim().length < 40) findings.push(`${label}.gap.threshold_summary must state achieved and required thresholds in at least 40 characters`)
+  for (const key of ['missing_evidence', 'help_requested']) {
+    if (!Array.isArray(gap[key]) || !gap[key].length) findings.push(`${label}.gap.${key} must be a non-empty array`)
+    else for (const [i, value] of gap[key].entries()) if (String(value ?? '').trim().length < 20) findings.push(`${label}.gap.${key}[${i}] must contain at least 20 characters`)
+  }
+  if (!Array.isArray(gap.attempted_sources) || !gap.attempted_sources.length) findings.push(`${label}.gap.attempted_sources must be a non-empty array`)
+  else for (const [i, attempt] of gap.attempted_sources.entries()) {
+    if (!sourceDomain(attempt?.url)) findings.push(`${label}.gap.attempted_sources[${i}].url must be an absolute HTTP(S) URL`)
+    if (String(attempt?.result ?? '').trim().length < 20) findings.push(`${label}.gap.attempted_sources[${i}].result must contain at least 20 characters`)
+  }
+  return findings
+}
+
 export function validateManifest(manifest, label = 'manifest.json') {
   const findings = []
   const flag = msg => findings.push(`${label}: ${msg}`)
@@ -194,6 +215,7 @@ export function validateManifest(manifest, label = 'manifest.json') {
   }
   if (target.total !== MAX_CANDIDATES) flag(`target.total must be ${MAX_CANDIDATES}`)
   if (!Array.isArray(manifest?.candidates)) return [...findings, `${label}: candidates must be an array`]
+  if (manifest.candidates.length > 1) flag(`split-disposition runs may contain at most one candidate, found ${manifest.candidates.length}`)
   if (manifest.candidates.length > MAX_CANDIDATES) flag(`candidate count ${manifest.candidates.length} exceeds ${MAX_CANDIDATES}`)
   const slugs = new Set()
   const bggIds = new Set()
@@ -220,6 +242,7 @@ export function validateManifest(manifest, label = 'manifest.json') {
     if (candidate?.status === 'blocked' && (!Array.isArray(candidate.blockers) || !candidate.blockers.length)) flag(`${where}.blockers must explain a blocked candidate`)
     if (candidate?.status !== 'blocked' && candidate?.blockers?.length) flag(`${where} is ${candidate.status} but still has manifest blockers`)
     findings.push(...coverageFindings(candidate, `${label}: ${where}`))
+    findings.push(...gapFindings(candidate, `${label}: ${where}`))
   }
   for (const [cohort, count] of Object.entries(counts)) {
     if (count > COHORT_LIMITS[cohort]) flag(`${cohort} count ${count} exceeds ${COHORT_LIMITS[cohort]}`)

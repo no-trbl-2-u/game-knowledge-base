@@ -23,7 +23,7 @@ const NOW = '2026-07-30T12:00:00.000Z'
 
 function manifest(candidates = []) {
   return {
-    schema_version: 2,
+    schema_version: 3,
     run_id: '2026-07-30-test',
     created_at: NOW,
     scout: { name: 'Bathcat', role: 'Field Intelligence and Knowledge Scout' },
@@ -49,6 +49,12 @@ function candidate(slug, cohort, status = 'blocked') {
       rules: { recorded: status === 'blocked' ? 0 : 1, known_total: 1, percent: status === 'blocked' ? 0 : 100 },
       factual: { recorded: status === 'blocked' ? 0 : 3, known_total: 5, percent: status === 'blocked' ? 0 : 60 },
     },
+    ...(status === 'blocked' ? { gap: {
+      threshold_summary: 'Rules coverage is 0% of required 100%; factual coverage is 0% of required 60%.',
+      missing_evidence: ['The complete official governing rulebook remains unavailable.'],
+      attempted_sources: [{ url: `https://publisher.test/${slug}/rules`, result: 'The publisher endpoint returned no retrievable rules document.' }],
+      help_requested: ['Provide a publisher-hosted rulebook or an authorized rules mirror.'],
+    } } : {}),
   }
 }
 
@@ -72,7 +78,7 @@ function receipt(id, roles, url, provenance) {
 
 function evidence(overrides = {}) {
   return {
-    schema_version: 2,
+    schema_version: 3,
     slug: 'good-game',
     researcher: { name: 'Bathcat', role: 'Field Intelligence and Knowledge Scout' },
     researched_at: NOW,
@@ -86,12 +92,20 @@ function evidence(overrides = {}) {
   }
 }
 
-test('1/1/1 manifest accepts honest shortfalls', () => {
-  const value = manifest([
-    candidate('one', 'cooperative'),
-    candidate('two', 'solo_rpg'),
-  ])
+test('split-disposition manifest accepts one honest candidate packet', () => {
+  const value = manifest([candidate('one', 'cooperative')])
   assert.deepEqual(validateManifest(value), [])
+})
+
+test('split-disposition manifest rejects multiple candidates in one run', () => {
+  const value = manifest([candidate('one', 'cooperative'), candidate('two', 'solo_rpg')])
+  assert.match(validateManifest(value).join('\n'), /at most one candidate/)
+})
+
+test('blocked candidate requires an actionable gap report', () => {
+  const value = candidate('one', 'cooperative')
+  delete value.gap
+  assert.match(validateManifest(manifest([value])).join('\n'), /gap is required/)
 })
 
 test('manifest rejects more than one candidate in a cohort', () => {
@@ -197,7 +211,7 @@ test('approval is bound to immutable candidate packet and independent auditor', 
   fs.writeFileSync(path.join(root, 'canonical', 'index.okf.md'), 'record\n')
   fs.writeFileSync(path.join(root, 'evidence.json'), `${JSON.stringify(evidence())}\n`)
   const approval = {
-    schema_version: 2,
+    schema_version: 3,
     decision: 'approved',
     auditor: { name: 'The Mennonite', role: 'Requirements and Risk Examiner' },
     reviewed_at: NOW,
@@ -227,7 +241,7 @@ test('rejection preserves the failed packet hash and concrete reasons', t => {
   fs.writeFileSync(path.join(root, 'canonical', 'index.okf.md'), 'record\n')
   fs.writeFileSync(path.join(root, 'evidence.json'), `${JSON.stringify(evidence())}\n`)
   const rejection = {
-    schema_version: 2,
+    schema_version: 3,
     decision: 'rejected',
     auditor: { name: 'The Mennonite', role: 'Requirements and Risk Examiner' },
     reviewed_at: NOW,
