@@ -10,7 +10,7 @@ game:
   weight: null
   edition: "English 2020 first/release base game (PH2900); release-era app build unresolved"
 scope: "English 2020 first/release base game (PH2900); release-era app build unresolved"
-mechanics: [cooperative-game, dice-rolling, push-your-luck, variable-player-powers, worker-placement]
+mechanics: [cooperative-game, dice-rolling, push-your-luck, semi-cooperative-game, variable-player-powers, worker-placement]
 sources:
   - id: "src-001"
     title: "Forgotten Waters Rulebook"
@@ -95,7 +95,7 @@ sources:
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-31"
-    notes: "HTTP 200; text/html; 111,272 bytes; SHA-256 17364997dcc94b4ef552cfcd2a99b1dbab4fb8720caefef26e04a46c101eeaf4; Mark Wilson."
+    notes: "HTTP 200; text/html; 111,272 bytes; SHA-256 17364997dcc94b4ef552cfcd2a99b1dbab4fb8720caefef26e04a46c101eeaf4; Mark Wilson; published 2021-01-12, modified 2021-06-14."
 confidence: medium
 status: needs_followup
 ---
