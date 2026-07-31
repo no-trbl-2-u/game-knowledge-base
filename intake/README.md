@@ -8,15 +8,18 @@ the exact packet hash.
 
 ## Three-game coverage doctrine
 
-A Bathcat run selects up to three unique candidates:
+A Bathcat daily batch selects up to three unique candidates:
 
 - 1 cooperative;
 - 1 solo RPG;
 - 1 matching the rotating focus.
 
-These are ceilings, not quotas. Honest shortfalls and zero-promotion runs are
-valid. A candidate with missing evidence is `blocked`; it has no `canonical/`
-staging tree and records its blockers in `manifest.json`.
+These are ceilings, not quotas. Each selected game gets its own
+`YYYY-MM-DD-<slug>` run so passing and failing games have independent Git and
+PR disposition. Passing `ready_for_audit` packets are committed, CI-gated, and
+merged one at a time. A candidate with missing evidence is `blocked`; it has no
+`canonical/` staging tree and travels on an open draft gap PR that is not
+merged until the threshold is met. One weak game never withholds sound packets.
 
 Every candidate records a reproducible coverage ledger. Any non-blocked packet
 must cover 100% of the governing rules corpus for the identified edition.
@@ -68,14 +71,14 @@ intake/runs/<run-id>/
     rejection.json             # Mennonite only; exact failed packet preserved
 ```
 
-`run-id` is `YYYY-MM-DD` or `YYYY-MM-DD-slug`. The run manifest uses schema
-version 2. Version 2 adds the mandatory coverage ledger and replaces the former
-2/2/2 ceiling with 1/1/1:
+`run-id` is `YYYY-MM-DD-<slug>` for ordinary scout output. The run manifest
+uses schema version 3. Version 3 adds independently mergeable one-candidate
+runs and a mandatory actionable gap report for blocked candidates:
 
 ```json
 {
-  "schema_version": 2,
-  "run_id": "2026-07-31",
+  "schema_version": 3,
+  "run_id": "2026-07-31-example-game",
   "created_at": "2026-07-31T06:00:00.000Z",
   "scout": {
     "name": "Bathcat",
@@ -102,14 +105,26 @@ version 2. Version 2 adds the mandatory coverage ledger and replaces the former
         "methodology": "Counts governing documents and source-backed factual ledger entries.",
         "rules": { "recorded": 0, "known_total": 1, "percent": 0 },
         "factual": { "recorded": 0, "known_total": 10, "percent": 0 }
+      },
+      "gap": {
+        "threshold_summary": "Rules coverage is 0% of required 100%; factual coverage is 0% of required 60%.",
+        "missing_evidence": ["The complete official governing rulebook remains unavailable."],
+        "attempted_sources": [
+          {
+            "url": "https://publisher.example/example-game/rules",
+            "result": "The publisher endpoint exposed no retrievable rules document."
+          }
+        ],
+        "help_requested": ["Provide a publisher-hosted rulebook or an authorized rules mirror."]
       }
     }
   ]
 }
 ```
 
-`bgg_id` is nullable, not mandatory. Non-null IDs must be unique within the
-run. A `rotating_focus` candidate also requires a concrete `focus_fit` sentence
+Each run contains at most one candidate. Across all runs created in one UTC
+day, the validator enforces no more than three candidates and no more than one
+per cohort. `bgg_id` is nullable, not mandatory. A `rotating_focus` candidate also requires a concrete `focus_fit` sentence
 of at least twenty characters. All staged canonical records must agree on game
 identity, scope, mechanics, and source definitions and must carry
 `status: verified`; unresolved followups cannot enter a promotable packet.
@@ -146,7 +161,7 @@ An evidence packet contains:
 
 ```json
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "slug": "example-game",
   "researcher": {
     "name": "Bathcat",
@@ -174,7 +189,7 @@ Approval schema:
 
 ```json
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "decision": "approved",
   "auditor": {
     "name": "The Mennonite",
@@ -237,8 +252,9 @@ node scripts/generate-index.mjs
 node scripts/validate-okf.mjs
 ```
 
-The intake gate also blocks more than three new game directories, more than one
-candidates per cohort, unsupported claims, placeholder markers, duplicate
+The intake gate also blocks more than three daily candidates, more than one
+candidate per cohort per UTC day, multi-candidate run directories, blocked
+candidates without an actionable gap report, unsupported claims, placeholder markers, duplicate
 long-form prose, duplicate visual bytes, low-information label images,
 semantic generator scripts targeting `games/`, symlinked packet content,
 canonical directory rename/relocation bypasses, packet mutation after audit,
@@ -247,11 +263,11 @@ coverage, and non-deckbuilder factual coverage below 60%.
 
 ## Failure law
 
-Any hard-gate failure stops promotion and places the recurring pipeline in
-fail-closed state. Do not retry by weakening a check. Record the blocked
-candidate and reason, pause further writing, and deliver the validator output
-to T. Resume only after the fault is corrected and the entire gate suite is
-green.
+An honest evidence or coverage shortfall is not an infrastructure failure. It
+produces a valid blocked packet and an open draft gap PR while passing packets
+continue through their own merge path. A malformed packet, failed validator,
+failed CI, unsafe Git state, or delivery failure remains fail-closed: pause the
+coupled jobs, preserve exact evidence, and never weaken a check.
 
 Cron workers wrap every hard gate and push with `scripts/fail-closed.mjs`.
 When a wrapped command fails, the wrapper invokes `hermes cron pause` for the

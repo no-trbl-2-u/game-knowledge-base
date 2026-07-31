@@ -5,7 +5,7 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
-import { auditTransitionFindings, newGameSlugs, validateCandidatePackage } from './validate-intake.mjs'
+import { auditTransitionFindings, dailyBatchFindings, newGameSlugs, validateCandidatePackage } from './validate-intake.mjs'
 import { packetHash } from './intake-lib.mjs'
 
 const VALIDATOR = path.resolve(new URL('./validate-okf.mjs', import.meta.url).pathname)
@@ -129,7 +129,7 @@ function makePackage(t, rootOverride = null) {
   assert.equal(sheet.status, 0, sheet.stderr)
   const sheetHash = crypto.createHash('sha256').update(fs.readFileSync(sheetFile)).digest('hex')
   fs.writeFileSync(path.join(canonical, 'visuals/packet.okf.md'), document('visual_reference', '## Visual packet\n\nRetrieved references preserve distinct inspected subjects.', `visual_references:\n${refs.join('\n')}\ncontact_sheet: "visuals/contact-sheet.webp"\ncontact_sheet_sha256: "${sheetHash}"\n`))
-  fs.writeFileSync(path.join(root, 'evidence.json'), `${JSON.stringify({ schema_version: 2, slug: 'good-game', researcher: { name: 'Bathcat', role: 'Field Intelligence and Knowledge Scout' }, researched_at: NOW, sources: sourceData.map(receipt) }, null, 2)}\n`)
+  fs.writeFileSync(path.join(root, 'evidence.json'), `${JSON.stringify({ schema_version: 3, slug: 'good-game', researcher: { name: 'Bathcat', role: 'Field Intelligence and Knowledge Scout' }, researched_at: NOW, sources: sourceData.map(receipt) }, null, 2)}\n`)
   return root
 }
 
@@ -171,6 +171,14 @@ test('symlinked staged content is rejected and cannot be packet-hashed', t => {
 test('renamed legacy directory is classified as a new canonical slug', () => {
   const changes = [{ status: 'R100', oldFile: 'KnowledgeBase/BoardGames/games/old/index.okf.md', file: 'KnowledgeBase/BoardGames/games/new/index.okf.md' }]
   assert.deepEqual([...newGameSlugs(changes, slug => slug === 'old')], ['new'])
+})
+
+test('split run directories still enforce one candidate per daily cohort', () => {
+  const records = [
+    { manifest: { created_at: NOW }, candidate: { slug: 'one', bgg_id: 1, cohort: 'cooperative' } },
+    { manifest: { created_at: NOW }, candidate: { slug: 'two', bgg_id: 2, cohort: 'cooperative' } },
+  ]
+  assert.match(dailyBatchFindings(records).join('\n'), /2 cooperative candidates; hard ceiling is 1/)
 })
 
 test('audit decision requires a later audit-only PR over a ready base packet', () => {

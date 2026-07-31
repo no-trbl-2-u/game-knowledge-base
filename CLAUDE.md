@@ -53,7 +53,9 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 - **Bathcat scout** (external Hermes cron) — wishlist-first discovery and
   noncanonical evidence packets only; target 1/1/1, honest eligibility shortfalls
   allowed. Ready packets require 100% rules coverage and non-deckbuilders require
-  at least 60% measured factual coverage.
+  at least 60% measured factual coverage. Each candidate uses its own run and PR:
+  passing packets merge independently; blocked packets remain open as draft gap
+  PRs with exact missing evidence and help requested from T.
 - **Mennonite intake audit** (separate external Hermes cron) — independently
   reopens sources, verifies claims and visuals, binds approval to the packet
   SHA-256, and invokes deterministic promotion only after approval is committed.

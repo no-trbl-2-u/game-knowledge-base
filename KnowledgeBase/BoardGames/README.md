@@ -15,7 +15,7 @@ Primary uses:
 
 ## Daily cadence
 
-A Hermes cron job runs once per day at 06:00 UTC. It selects one cooperative game, one solo RPG board game, and one game matching the rotating mechanic focus when eligible candidates exist. Selection is not canonical coverage: Bathcat writes only noncanonical candidate packets; a game directory is written only after independent Mennonite audit and deterministic promotion. Ready packets require 100% governing-rules coverage; non-deckbuilders additionally require at least 60% measured factual coverage.
+A Hermes cron job runs once per day at 06:00 UTC. It selects one cooperative game, one solo RPG board game, and one game matching the rotating mechanic focus when eligible candidates exist. Each candidate gets an independent run and PR: ready packets merge separately, while below-threshold packets remain open as draft gap PRs explaining exact evidence failures and requested help. Selection is not canonical coverage: Bathcat writes only noncanonical candidate packets; a game directory is written only after independent Mennonite audit and deterministic promotion. Ready packets require 100% governing-rules coverage; non-deckbuilders additionally require at least 60% measured factual coverage.
 
 ```txt
 KnowledgeBase/BoardGames/games/<slug>/

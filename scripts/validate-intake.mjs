@@ -373,6 +373,29 @@ function candidateRecords() {
   return out
 }
 
+export function dailyBatchFindings(records) {
+  const findings = []
+  const batches = new Map()
+  for (const record of records) {
+    const day = String(record.manifest?.created_at ?? '').slice(0, 10)
+    if (!/^20[0-9]{2}-[0-9]{2}-[0-9]{2}$/.test(day)) continue
+    if (!batches.has(day)) batches.set(day, [])
+    batches.get(day).push(record.candidate)
+  }
+  for (const [day, candidates] of batches) {
+    if (candidates.length > 3) findings.push(`intake daily batch ${day} contains ${candidates.length} candidates; hard ceiling is 3`)
+    for (const cohort of ['cooperative', 'solo_rpg', 'rotating_focus']) {
+      const count = candidates.filter(candidate => candidate.cohort === cohort).length
+      if (count > 1) findings.push(`intake daily batch ${day} contains ${count} ${cohort} candidates; hard ceiling is 1`)
+    }
+    const slugs = candidates.map(candidate => candidate.slug)
+    if (new Set(slugs).size !== slugs.length) findings.push(`intake daily batch ${day} contains duplicate candidate slugs`)
+    const bggIds = candidates.map(candidate => candidate.bgg_id).filter(value => value !== null && value !== undefined)
+    if (new Set(bggIds).size !== bggIds.length) findings.push(`intake daily batch ${day} contains duplicate non-null BGG ids`)
+  }
+  return findings
+}
+
 function validateDiff(base) {
   const findings = []
   let changes
@@ -437,10 +460,10 @@ function validateDiff(base) {
   }
   for (const id of changedRuns) findings.push(...validateRunDirectory(path.join(RUNS, id)))
 
-  const newSlugs = newGameSlugs(changes, slug => gameExistsAt(base, slug))
-  if (newSlugs.size > 6) findings.push(`intake diff adds ${newSlugs.size} canonical games; hard ceiling is 6`)
-
   const records = candidateRecords()
+  findings.push(...dailyBatchFindings(records))
+  const newSlugs = newGameSlugs(changes, slug => gameExistsAt(base, slug))
+  if (newSlugs.size > 3) findings.push(`intake diff adds ${newSlugs.size} canonical games; hard ceiling is 3`)
   const docs = []
   const newVisuals = []
   const legacyVisualHashes = new Map()
@@ -489,8 +512,9 @@ if (path.resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) {
   else if (args[0] === '--base' && args[1] && args.length === 2) findings = validateDiff(args[1])
   else if (args[0] === '--all' && args.length === 1) {
     for (const runDir of runDirs()) findings.push(...validateRunDirectory(runDir))
+    findings.push(...dailyBatchFindings(candidateRecords()))
   }
-  else if (args[0] === '--run' && args[1] && args.length === 2) findings = validateRunDirectory(path.join(RUNS, args[1]))
+  else if (args[0] === '--run' && args[1] && args.length === 2) findings = [...validateRunDirectory(path.join(RUNS, args[1])), ...dailyBatchFindings(candidateRecords())]
   else usage()
 
   if (findings.length) {

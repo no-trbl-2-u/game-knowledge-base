@@ -52,6 +52,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "T replaced the 2/2/2 breadth target with one cooperative, one solo RPG, and one rotating-focus game per run; every game requires complete governing-rules coverage, and non-deckbuilders target at least 60 percent measured factual coverage."
+  - id: "src-007"
+    title: "T instruction: split passing packets from open gap PRs"
+    url: "local-session"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "T directed Bathcat to merge games that meet threshold independently and leave each below-threshold game on an open PR whose description states exactly why the gate was missed so T can help fill the evidence gap."
 confidence: high
 status: verified
 ---
@@ -90,6 +97,11 @@ The current purpose is knowledge gathering only. Full integration into downstrea
 - Claim: Audit readiness requires complete governing-rules coverage for every game and at least 60 percent measured factual coverage for non-deckbuilders.
   Source: src-006
   Evidence: T explicitly set 100 percent rules coverage for all three games and a minimum 60 percent factual-coverage target for non-deckbuilders.
+  Confidence: high
+
+- Claim: Passing and blocked candidates must have independent PR disposition.
+  Source: src-007
+  Evidence: T directed that qualifying games be committed and merged while every below-threshold game remains on an open PR explaining the exact shortfall so he can help close it.
   Confidence: high
 
 - Claim: Candidate selection is not canonical coverage.
@@ -193,7 +205,7 @@ This turns daily growth from "whatever the scout felt like" into demand-driven c
 
 ## Daily output contract
 
-Each scout run selects up to three unique candidates in disjoint 1/1/1 cohorts. Bathcat may promote none. Every candidate carries a reproducible coverage ledger; failed thresholds remain blocked. Selection manifests must keep `blocked`, `ready_for_audit`, `rejected`, `approved`, and `promoted` states distinct under `intake/runs/`.
+Each daily batch selects up to three unique candidates in disjoint 1/1/1 cohorts, with one independently mergeable run and PR per candidate. Bathcat may promote none. Every candidate carries a reproducible coverage ledger. Passing packets merge after green CI. Failed thresholds remain blocked on open draft gap PRs containing exact achieved/required coverage, missing evidence, attempted sources, and help requested. Selection manifests must keep `blocked`, `ready_for_audit`, `rejected`, `approved`, and `promoted` states distinct under `intake/runs/`.
 
 Each independently approved, deterministically promoted game writes one directory:
 
