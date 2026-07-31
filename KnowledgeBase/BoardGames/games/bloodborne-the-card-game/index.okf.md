@@ -21,14 +21,14 @@ sources:
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Live page inspected through a text retrieval proxy after direct HTTP returned 403; official image assets were retrieved directly."
+    notes: "Dated dynamic proxy receipt returned HTTP 200 and displayed Rules & More → Rulebook → 79.01 MB; direct HTML remained Cloudflare-blocked."
   - id: "src-002"
-    title: "Bloodborne: The Card Game Rulebook — verified third-party copy"
-    url: "https://cdn.1j1ju.com/medias/66/14/bb-bloodborne-the-card-game-rulebook.pdf"
+    title: "CMON — Bloodborne: The Card Game Rulebook"
+    url: "https://cmon-files.s3.amazonaws.com/pdf/assets_item/resource/43/Bloodborne_Rulebook__2_.pdf"
     kind: rulebook_pdf
-    provenance: secondary
+    provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Complete 16-page English rulebook copy; PDF metadata was rewritten by the mirror, so it is not treated as an official CMON retrieval."
+    notes: "Official CMON S3 object; HTTP 200; 92,484,273 bytes; 16 pages; SHA-256 e5010bc06faf0a4fc05b70228836401825a123c4dad0459233edcd318b664b38."
   - id: "src-003"
     title: "BoardGameGeek live item and rating data — BGG ID 195856"
     url: "https://api.geekdo.com/api/dynamicinfo?objecttype=thing&objectid=195856"
@@ -51,9 +51,9 @@ summary: "A fast competitive hunt with shared monsters, simultaneous commitments
   Evidence: "The CMON product line identifies the standalone title and its 3–5-player component manifest; BGG item 195856 identifies the 2016 release."
   Confidence: high
 
-- Claim: The record is not verified because an actual CMON-hosted rulebook/support document and a closed inventory of rule-bearing card text were not retrieved.
+- Claim: The official CMON-hosted rulebook is acquired, but the record remains `needs_followup` because complete text for five rule-bearing card classes and a closed publisher-wide FAQ, errata, clarification, and support inventory are not acquired.
   Source: src-001, src-002
-  Evidence: "The live CMON page's Rules & More area exposes no downloadable rules, while the inspected 16-page copy is hosted and metadata-stamped by a third party."
+  Evidence: "The exact 16-page CMON S3 rulebook is verified and the current Rules & More surface lists it; neither source supplies an exhaustive base-game card-text corpus or publisher-wide support inventory."
   Confidence: high
 
 - Claim: This is not treated as a deck-building game for coverage arithmetic.

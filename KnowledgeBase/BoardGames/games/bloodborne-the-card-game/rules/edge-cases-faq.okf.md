@@ -18,15 +18,15 @@ sources:
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Live support area inspected; no downloadable FAQ or errata appeared."
+    notes: "Dynamic proxy receipt: HTTP 200, 4,979 bytes, SHA-256 fc29588d8a3474e2d817ef081bc84ba9d14b57b17cdbd38c288f644d1ba6e43c; current Rules & More lists Rulebook, 79.01 MB."
   - id: "src-002"
-    title: "Bloodborne: The Card Game Rulebook — verified third-party copy"
-    url: "https://cdn.1j1ju.com/medias/66/14/bb-bloodborne-the-card-game-rulebook.pdf"
+    title: "CMON — Bloodborne: The Card Game Rulebook"
+    url: "https://cmon-files.s3.amazonaws.com/pdf/assets_item/resource/43/Bloodborne_Rulebook__2_.pdf"
     kind: rulebook_pdf
-    provenance: secondary
+    provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Complete 16-page English copy; provisional until matched to official CMON authority."
-confidence: medium
+    notes: "Official 2016 CMON S3 object; 92,484,273 bytes; 16 pages; SHA-256 e5010bc06faf0a4fc05b70228836401825a123c4dad0459233edcd318b664b38."
+confidence: high
 status: needs_followup
 ---
 
@@ -62,9 +62,9 @@ status: needs_followup
   Evidence: "Rulebook pp. 12 and 14 under Hunter's Dream, Dead Hunters, and Hunter Death."
   Confidence: high
 
-- Claim: No official FAQ, errata, or card-clarification document was verified from the live CMON support surface in this pass.
+- Claim: The current dynamic CMON page proxy exposes the official Rulebook at 79.01 MB, while a closed publisher-wide FAQ, errata, clarification, and support inventory remains unverified.
   Source: src-001
-  Evidence: "The retrieved live page displayed a Rules & More heading but no document link; direct page access was Cloudflare-blocked, so this is not proof that no support document exists elsewhere."
+  Evidence: "The dated proxy receipt shows Rules & More → Rulebook → 79.01 MB; this changing product-page surface is not an exhaustive publisher-wide support index and does not prove universal FAQ/errata absence."
   Confidence: medium
 
 ## Open authority questions

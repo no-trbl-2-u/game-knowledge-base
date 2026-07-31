@@ -19,21 +19,21 @@ sources:
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-31"
-    notes: "Independent reception evidence."
+    notes: "Independent reception evidence; dated current text-proxy observation: 12,115 bytes, SHA-256 6ad513136c240bf91fbe952e4a5fd22acc4011aaf8cbfe722734cc3bbf01dd4b; live bytes may drift."
   - id: "src-005"
     title: "RPGFan — Bloodborne: The Card Game Review"
     url: "https://www.rpgfan.com/feature/bloodborne-the-card-game-review/"
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-31"
-    notes: "Independent reception evidence."
+    notes: "Independent reception evidence; dated current text-proxy observation: 7,258 bytes, SHA-256 4f61500647ffd4f5df40dcfc575b992644ae8b52915e62007c176f8cae9879fd; live bytes may drift."
   - id: "src-006"
     title: "Meeple Mountain — Bloodborne the Card Game Review"
     url: "https://www.meeplemountain.com/reviews/bloodborne-the-card-game/"
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-31"
-    notes: "Independent reception evidence."
+    notes: "Independent reception evidence; dated current text-proxy observation: 10,382 bytes, SHA-256 08e7e6bd376c482a3e72056a60eb1836f187683a2eeeb3322292bdb28960f4f0; live bytes may drift."
 confidence: high
 status: needs_followup
 ---

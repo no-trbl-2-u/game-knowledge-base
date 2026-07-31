@@ -13,13 +13,13 @@ scope: "English 2016 standalone base game; The Hunter's Nightmare expansion and 
 mechanics: ["hand-management", "push-your-luck", "semi-cooperative-game", "set-collection", "simultaneous-action-selection"]
 sources:
   - id: "src-002"
-    title: "Bloodborne: The Card Game Rulebook — verified third-party copy"
-    url: "https://cdn.1j1ju.com/medias/66/14/bb-bloodborne-the-card-game-rulebook.pdf"
+    title: "CMON — Bloodborne: The Card Game Rulebook"
+    url: "https://cmon-files.s3.amazonaws.com/pdf/assets_item/resource/43/Bloodborne_Rulebook__2_.pdf"
     kind: rulebook_pdf
-    provenance: secondary
+    provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Complete 16-page English copy; provisional until matched to official CMON authority."
-confidence: medium
+    notes: "Official 2016 CMON S3 object; 92,484,273 bytes; 16 pages; SHA-256 e5010bc06faf0a4fc05b70228836401825a123c4dad0459233edcd318b664b38."
+confidence: high
 status: needs_followup
 ---
 

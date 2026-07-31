@@ -18,14 +18,14 @@ sources:
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Official live product page; direct HTML blocked, original-URL proxy and direct assets retrieved."
+    notes: "Direct HTML blocked; dated dynamic proxy returned HTTP 200 and displayed Rules & More → Rulebook → 79.01 MB."
   - id: "src-002"
-    title: "Bloodborne: The Card Game Rulebook — verified third-party copy"
-    url: "https://cdn.1j1ju.com/medias/66/14/bb-bloodborne-the-card-game-rulebook.pdf"
+    title: "CMON — Bloodborne: The Card Game Rulebook"
+    url: "https://cmon-files.s3.amazonaws.com/pdf/assets_item/resource/43/Bloodborne_Rulebook__2_.pdf"
     kind: rulebook_pdf
-    provenance: secondary
+    provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Complete rules copy, but not an official CMON-hosted retrieval."
+    notes: "Official 2016 CMON S3 object; 92,484,273 bytes; 16 pages; SHA-256 e5010bc06faf0a4fc05b70228836401825a123c4dad0459233edcd318b664b38."
   - id: "src-004"
     title: "Ars Technica — Bloodborne: The Card Game is actually pretty great"
     url: "https://arstechnica.com/gaming/2016/09/bloodborne-the-card-game-is-actually-pretty-great/"
@@ -34,24 +34,12 @@ sources:
     retrieved_at: "2026-07-31"
     notes: "Independent review."
 followups:
-  - source_id: null
-    url: "https://resources.cmon.com/Bloodborne-The-Card-Game-Rulebook.pdf"
-    failure: not_found
-    fallback: "Complete third-party 16-page rules copy src-002 used provisionally."
-    retry_needs: alternate_source
-    notes: "HTTP 404 on 2026-07-31. Need CMON's exact final rules URL or publisher-supplied file."
-  - source_id: null
-    url: "https://resources.cmon.com/Bloodborne-Card-Game-Rulebook.pdf"
-    failure: not_found
-    fallback: "Complete third-party 16-page rules copy src-002 used provisionally."
-    retry_needs: alternate_source
-    notes: "HTTP 404 on 2026-07-31."
   - source_id: "src-001"
     url: "https://www.cmon.com/product/bloodborne-the-card-game/bloodborne-the-card-game"
     failure: blocked
-    fallback: "Original-URL text proxy and direct wp-content image assets returned HTTP 200; no rules link appeared under Rules & More."
+    fallback: "Dated original-URL proxy and direct assets returned HTTP 200; proxy currently lists Rulebook 79.01 MB."
     retry_needs: manual_review
-    notes: "Direct automated request and browser both met Cloudflare/HTTP 403 on 2026-07-31."
+    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it."
 confidence: high
 status: needs_followup
 ---
@@ -62,7 +50,7 @@ status: needs_followup
 
 - Claim: This existing canonical record must remain `needs_followup`, not `verified`.
   Source: src-001, src-002
-  Evidence: "The only complete rulebook retrieved is third-party hosted; CMON's live support area did not expose a final rulebook, FAQ, errata, or card-clarification index."
+  Evidence: "The official CMON rulebook is now acquired, but complete local text for five card classes and a closed publisher-wide FAQ/errata/clarification/support inventory remain unproved."
   Confidence: high
 
 ## What is acquired
@@ -72,7 +60,7 @@ status: needs_followup
   Evidence: "87 cards, 5 Hunter Boards, 5 Hunter Health Dials, 75 Blood Echo plastic tokens, 16 cardboard tokens, 3 custom Monster dice, and 1 rulebook."
   Confidence: high
 
-- Claim: The inspected rules copy covers setup, eight round steps, combat and death, Hunter's Dream upgrades, trophies, Final Boss resolution, scoring, and ties.
+- Claim: The official rulebook covers setup, eight round steps, combat and death, Hunter's Dream upgrades, trophies, Final Boss resolution, scoring, and ties.
   Source: src-002
   Evidence: "Rulebook table of contents and pp. 5–15."
   Confidence: high
@@ -84,13 +72,14 @@ status: needs_followup
 
 ## Why the governing denominator is open
 
-The complete official support/document index is unknown. Five card classes are proven to carry local rules: Starter Actions, Upgrades, Monsters, Chalice Bosses, and Final Bosses. Their physical quantities are known, but their complete identity/text corpus was not acquired. Official FAQ/errata absence was not proven from a closed publisher support index. Therefore an achieved governing percentage would be fabricated; the correct value is **unknown**.
+The official rulebook row is closed. The Hunter Boards/player aids and Monster dice are rule-bearing surfaces, and the official rulebook sufficiently governs their printed round/track/zone and damage/combo functions. Dials and tokens are governed state/value markers. Five card classes still carry local rules: Starter Actions, Upgrades, Monsters, Chalice Bosses, and Final Bosses. Their quantities are known, but their complete identity/text corpus is not acquired. A closed publisher-wide FAQ/errata/clarification/support inventory is also unproved. Therefore the governing denominator remains **OPEN / UNKNOWN**, with no percentage or composite score.
 
 ## Exact help requested from T
 
-Please provide one of:
+Residual HOLD request:
 
-1. the exact CMON-hosted final English 2016 rulebook URL or publisher-supplied file, plus any official FAQ/errata/card-clarification link; and
-2. an authoritative complete base-game card list/readout (or permission to use a specifically identified, immutable secondary card corpus) covering all five rule-bearing card classes.
+1. provide a complete immutable base-game card-local corpus covering Starter Actions, Upgrades, Monsters, Chalice Dungeon Bosses, and Final Bosses;
+2. provide a closed official FAQ/errata/clarification/support inventory, or authoritative evidence that none exists; and
+3. only if an official card corpus remains unavailable, T may approve a named immutable secondary card corpus.
 
 With those authorities, Bathcat can close the denominator and a fresh Mennonite can audit the repaired PR head. This draft must not be marked ready or merged meanwhile.
