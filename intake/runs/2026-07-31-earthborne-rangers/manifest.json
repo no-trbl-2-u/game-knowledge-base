@@ -1,0 +1,79 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-07-31-earthborne-rangers",
+  "created_at": "2026-07-31T16:42:30.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "deck-building"
+  },
+  "candidates": [
+    {
+      "slug": "earthborne-rangers",
+      "title": "Earthborne Rangers",
+      "bgg_id": null,
+      "cohort": "solo_rpg",
+      "status": "blocked",
+      "discovery_sources": [
+        "https://earthbornegames.com/resources/",
+        "https://boardgamegeek.com/boardgame/342900/earthborne-rangers"
+      ],
+      "blockers": [
+        "The complete Lure of the Valley campaign guide, rules glossary entries, and core-set errata entries were inventoried but not retrieved and inspected page by page.",
+        "The rulebook makes rules-bearing card text controlling over the basic rules, but no authoritative distinct-card identity and text corpus was acquired."
+      ],
+      "coverage": {
+        "deckbuilder": true,
+        "methodology": "Rules coverage counts six identified governing source groups for the scoped English core set: rulebook, Lure of the Valley campaign guide, rules glossary, FAQ, updates/errata, and rules-bearing card text. A group counts only when completely retrieved and inspected; only the 48-page rulebook closed. Factual distinct-record coverage remains unscored because the official source exposes physical card totals but no authoritative distinct-card denominator.",
+        "rules": {
+          "recorded": 1,
+          "known_total": 6,
+          "percent": 16.7
+        },
+        "factual": {
+          "recorded": 0,
+          "known_total": null,
+          "percent": null
+        }
+      },
+      "gap": {
+        "threshold_summary": "Governing-source-group coverage is 1/6 (16.7%) against the required 6/6 (100%); distinct factual-record coverage is unscored because its authoritative denominator is unavailable.",
+        "missing_evidence": [
+          "Retrieve and inspect all 96 Lure of the Valley campaign-guide items rather than only the official category inventory.",
+          "Retrieve and inspect every core-applicable rules-glossary entry, all 16 card-errata items, all 35 Lure campaign-guide errata items, and the first-printing rulebook update.",
+          "Acquire an authoritative core-set distinct-card identity and rules-text inventory, or obtain an explicit T-level ruling that physical-card representation is sufficient despite duplicate copies."
+        ],
+        "attempted_sources": [
+          {
+            "url": "https://thelivingvalley.earthbornegames.com/docs/category/campaign-guides/",
+            "result": "Retrieved the official inventory, which exposes 96 Lure of the Valley items, but the bounded run did not inspect every linked item."
+          },
+          {
+            "url": "https://thelivingvalley.earthbornegames.com/docs/rules_glossary/",
+            "result": "Retrieved the glossary landing page and its 22 alphabetical categories, but did not close the full entry-level denominator."
+          },
+          {
+            "url": "https://thelivingvalley.earthbornegames.com/docs/category/updates/",
+            "result": "Retrieved the updates inventory showing 16 card errata and 35 campaign-guide errata items, but did not inspect every core-applicable item."
+          },
+          {
+            "url": "https://boardgamegeek.com/xmlapi2/thing?id=342900&stats=1",
+            "result": "The unauthenticated BGG XML API returned HTTP 401, so no rating, rank, or complexity claim is included in this packet."
+          }
+        ],
+        "help_requested": [
+          "Provide or authorize a machine-readable, authoritative core-set card identity and rules-text inventory if one exists outside the public resources index.",
+          "Confirm whether a future packet should scope only the current corrected English core set or separately account for first-printing rulebook and card errata applicability."
+        ]
+      }
+    }
+  ]
+}
