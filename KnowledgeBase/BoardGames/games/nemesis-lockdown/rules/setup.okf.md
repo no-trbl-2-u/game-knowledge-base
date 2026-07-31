@@ -58,9 +58,9 @@ status: needs_followup
 
 ## Publisher line inventory and arithmetic
 
-- Claim: The core-rulebook component spread has 374 cards, 26 miniatures, and 281 other listed physical units after applying the official 15-marker erratum, for a convention-bound **681 physical units**; using the misprinted 18 would yield 684. Each card/token/miniature is one unit, each holder/sheet/board/bag/die is one unit, and unlisted inserts/trays/multipart assembly are excluded.
+- Claim: The core-rulebook component spread has **68 printed inventory rows**: 23 card rows totaling 374 cards, 6 miniature rows totaling 26 miniatures, and 39 other-component rows totaling 282 listed physical units after applying the official 15-marker correction. The declared convention therefore yields **682 listed physical units**; the printed rulebook typo of 18 Status markers would yield 685. Each card/token/miniature is one unit, each holder/sheet/board/bag/scanner/die is one unit, and faces, sides, surfaces, text, unlisted inserts/trays, multipart assembly, and hidden identity denominators are excluded.
   Source: src-001, src-003
-  Evidence: Rulebook pp. 4-5 line inventory; FAQ p. 2 corrects Status markers from 18 to 15. Arithmetic: 374 + 26 + 281 = 681.
+  Evidence: Rulebook pp. 4-5 has 68 printed rows; FAQ p. 2 corrects Status markers from 18 to 15. Arithmetic: 23 + 6 + 39 rows; 374 + 26 + 282 = 682 corrected, versus 685 with the printed typo.
   Confidence: medium
 
 ### Cards — 374
@@ -103,9 +103,9 @@ status: needs_followup
   Evidence: Rulebook p. 5, Miniatures.
   Confidence: high
 
-### Other listed units — 281
+### Other listed units — 282
 
-- Claim: Other rows are: board 1; Character boards 6; Night Stalker board 1; Room sheets 2; Room I/II/Special tiles 10/9/3; holder 5; rings 6; bag 1; scanner 1; Underground/Surface Exploration 20/10; Contingency 7; Power 4; CSS 7; Knowledge 6; Night Stalker 27; Carcass 8; Corpse 5; Egg 8; Status **15 corrected**; Ammo/Injury 30; Noise 30; Fire 12; Malfunction 10; Doors 11; Main Gate 1; small/large Injury counters 10/3; First Player/Rover/Time/Alert/Venting/Autodestruction tokens 1 each; D10 Noise dice 2; D6 Combat/Advantage dice 4; D12 Surface die 1. These sum to **281**.
+- Claim: The 39 other-component rows are: 1 board + 6 Character boards + 1 Night Stalker board + 2 Room sheets + 2 D10 Noise dice + 5 holders + 6 rings + 1 bag + 1 scanner + 3 Special Rooms + 10 Room I + 9 Room II + 1 First Player + 1 Rover + 15 Status + 4 D6 dice + 20 Underground Exploration + 7 Contingency + 4 Power + 7 CSS + 6 Knowledge + 8 Carcass + 10 small Injury + 3 large Injury + 8 Egg + 30 Ammo/Injury + 30 Noise + 12 Fire + 27 Night Stalker + 5 Corpse + 1 Time + 1 Alert + 1 Venting + 1 Autodestruction + 10 Malfunction + 11 Doors + 1 Main Gate + 10 Surface Exploration + 1 D12 = **282** after the FAQ correction.
   Source: src-001, src-003
   Evidence: Rulebook pp. 4-5; FAQ p. 2 status-marker erratum.
   Confidence: medium

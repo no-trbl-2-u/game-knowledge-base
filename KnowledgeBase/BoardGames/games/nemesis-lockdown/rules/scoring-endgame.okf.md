@@ -58,3 +58,23 @@ status: needs_followup
   Source: src-003
   Evidence: FAQ p. 2, Rules question 1.
   Confidence: high
+
+- Claim: Contingency tokens begin as one secret Active token, player-held information, and a Neutral Pool; only non-Active tokens may be inspected or acquired during play, dead Characters return held tokens, and the Active token is revealed and applied first in the Victory Check. Alert places its token at half the current Time number rounded down and opens Isolation immediately; its ending follows the FAQ treatment above.
+  Source: src-001, src-002, src-003
+  Evidence: Rulebook pp. 11-12, Contingency, Acquiring Information, Alert Procedure, and Victory Check; Room Sheet p. 4; FAQ p. 2, Rooms question 3 and Rules question 1.
+  Confidence: high
+
+- Claim: A Character enters an empty matching CSS pod only while Time shares a slot with a CSS token, discards their hand and passes; at the Event launch step the revealed token evacuates the named pod(s), while failed occupants return to their Cargo Sending System Room and suffer a Serious Wound. CSS Control may inspect and shift an eligible CSS token one slot, and the FAQ permits a pod to launch again on its letter or Launch ALL.
+  Source: src-001, src-002, src-003
+  Evidence: Rulebook pp. 11 and 13; Room Sheet pp. 1-2; FAQ p. 2, Rules question 3.
+  Confidence: high
+
+- Claim: Venting selects a Room with a Technical Corridor Entrance and no destroyed connected Door, closes those Doors, removes one Fire, and places Venting; opening or destroying a connected Door cancels it, otherwise every Character and Intruder there dies at Player-Phase end. Fire wounds Characters at turn end, injures Intruders during Event Fire damage, and destroys the Facility when a thirteenth marker is required; Malfunction disables Room Actions/computers and destroys the Facility when an eleventh is required. Closed Doors block movement, Intruders destroy rather than cross them, destroyed Doors cannot close again, and Doors do not alter Noise or Encounters.
+  Source: src-001, src-002
+  Evidence: Rulebook pp. 19 and 27-28, Fire, Malfunction, Doors, and Vent Control Room; Room Sheet p. 3.
+  Confidence: high
+
+- Claim: Cooling System initiates Autodestruction three Time slots ahead on yellow; Power Generator may stop it while yellow. On the marked Event Phase it advances another three slots and turns red, opening the Main Gate and becoming irreversible; reaching the red token destroys the Facility, with end-of-track placement bounded to the final slot.
+  Source: src-001, src-002
+  Evidence: Rulebook pp. 10, 12-13; Room Sheet pp. 1-2, Cooling System and Power Generator.
+  Confidence: high

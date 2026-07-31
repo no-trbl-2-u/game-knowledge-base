@@ -47,7 +47,7 @@ sources:
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "HTTP 200 text/html; 21,102 bytes; SHA-256 6dabed72478beef7a86100684e14290e8f3d3d0ab23e8f0e6abda2e2bc4d6f56; six current articles listed."
+    notes: "HTTP 200 text/html; observed receipt 21,102 bytes, SHA-256 6dabed72478beef7a86100684e14290e8f3d3d0ab23e8f0e6abda2e2bc4d6f56; the complete current folder has six stable article titles, while dynamic Freshdesk wrapper bytes/hashes may drift by nonce without semantic change."
   - id: "src-006"
     title: "I'm missing Status Markers in my copy"
     url: "https://support.awakenrealms.com/support/solutions/articles/42000110136-i-m-missing-status-markers-in-my-copy-"
@@ -82,7 +82,7 @@ sources:
     kind: other
     provenance: secondary
     retrieved_at: "2026-07-31"
-    notes: "HTTP 200 JSON; captures begin 2023-11 and show two digests each for rulebook and room sheet; oldest replay downloads truncated at 1,048,576 bytes in this run."
+    notes: "HTTP 200 JSON; captures begin 2023-11 and show two digests each for rulebook and Room Sheet. The 2023-11-29 rulebook object reports x-archive-orig-content-length 1048576 and x-archive-orig-x-crawler-content-length 6075325; its captured prefix matches current. Beyond-prefix Range requests fall forward to the complete 2024-02-20 capture by Memento-Datetime/x-archive-src. The Room Sheet has the same capture-truncation condition."
   - id: "src-011"
     title: "BoardGameGeek Nemesis: Lockdown"
     url: "https://boardgamegeek.com/boardgame/310100"
@@ -103,10 +103,15 @@ status: needs_followup
   Evidence: JSON rows for game `Nemesis Lockdown` with UK flag list those four titles and direct URLs.
   Confidence: high
 
-- Claim: The base rules hierarchy used here is printed/local component text, then the 2021-dated core rulebook and Room Sheet, with the 2022-03-25 FAQ controlling its explicit errata and clarifications; later support articles are current support evidence only.
+- Claim: The acquired Corebox Rulebook supplies the base framework and the Room Sheet supplies local Room instructions. The 2022-03-25 FAQ controls only its explicit named corrections and clarifications—Queen bag, 15 Status markers, item-on-others restriction, Careful Movement/Danger, Archive versus Alert, Repository order, repeat CSS launch, and Alert ending—and the later marker article repeats only the 15-marker correction as current support. No broad card-versus-rulebook precedence rule was found, so contradictions outside those named rulings remain UNKNOWN/followup.
   Source: src-001, src-002, src-003, src-005, src-006
-  Evidence: FAQ identifies a page-13 Queen misprint, the 15-not-18 Status-marker correction, Danger/Careful Movement, Archive, CSS, and item-use rulings; support repeats the marker correction in 2024.
+  Evidence: FAQ p. 2 contains the eight bounded rulings; the 2024 support article repeats 15-not-18 only.
   Confidence: medium
+
+- Claim: The complete current support folder contains six articles. Only the Status-marker article contributes target-core correction law; the other five concern Constructs Pack/Retaliation shipping, pledge/order administration, shipping status, late pledge, and missing/broken-component contact instructions, and provide no base-core rules, component denominator, or first-retail version bridge. Dynamic Freshdesk wrapper hash drift is not semantic drift.
+  Source: src-005, src-006
+  Evidence: Current folder article IDs/titles are 42000110782 Constructs Pack, 42000110136 Status Markers, 42000081309 pledge/order upgrade, 42000081310 shipping, 42000081311 late pledge, and 42000110137 missing/broken component.
+  Confidence: high
 
 - Claim: Gamefound distinguishes crowdfunding delivery from retail publication: it calls Lockdown standalone, says it needs no Nemesis core box, and describes May/September 2021 pledge waves that could include bundles and Stretch Goals.
   Source: src-007
@@ -124,5 +129,5 @@ status: needs_followup
 
 - Claim: Current rulebook and Room Sheet bytes cannot yet be proven immutable release-era retail bytes.
   Source: src-001, src-002, src-010
-  Evidence: CDX first captures are in late 2023 and show multiple archived digests; the attempted oldest replays truncated at 1 MiB, while current bytes match complete 2024 captures.
+  Evidence: The oldest 2023-11-29 rulebook replay is a genuine archive capture truncated to a 1 MiB prefix (`x-archive-orig-content-length: 1048576`, crawler length 6075325) that is byte-identical to current; alternate modifiers expose the same prefix, and a Range beyond it redirects to the complete 2024-02-20 object proven by Memento-Datetime/x-archive-src. The Room Sheet behaves likewise. Chunking cannot recover either missing 2023 tail; current bytes equal the later complete captures, and the two CDX digests do not prove a revision.
   Confidence: high

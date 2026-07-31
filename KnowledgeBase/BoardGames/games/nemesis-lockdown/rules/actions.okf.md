@@ -44,9 +44,9 @@ status: needs_followup
   Evidence: Rulebook pp. 14-15.
   Confidence: high
 
-- Claim: Entering an unexplored Room flips its tile and Exploration token; entering an otherwise empty Room then rolls Noise. Careful Movement chooses a connected corridor for Noise but costs more and cannot be used in combat.
+- Claim: Movement enters a neighboring Room through an unblocked Corridor; an unexplored Room is revealed with its Exploration token, the Item Counter is set except for the Nest, and its one-time Silence, Danger, Slime, Fire, Malfunction, or Door effect is resolved before any remaining Noise step. An empty destination then rolls Noise; 1-4 places Noise in the numbered Corridor, an occupied Corridor triggers an Encounter, Danger moves eligible neighboring Intruders or fills empty connected Corridors, and Silence does nothing unless Slime converts it to Danger.
   Source: src-001
-  Evidence: Rulebook pp. 14, 16-17.
+  Evidence: Rulebook pp. 16-17, Movement Action, Exploration Tokens, and Noise Roll.
   Confidence: high
 
 - Claim: The FAQ controls the apparent Careful Movement contradiction: revealing Danger through Careful Movement still resolves Danger.
@@ -54,12 +54,32 @@ status: needs_followup
   Evidence: FAQ p. 2, Errata question 3.
   Confidence: high
 
-- Claim: Computer Actions need a powered Section and working computer; Room Actions require the matching Room, no combat, and no Malfunction unless local text says otherwise. Archive, Knowledge, Search, crafting, CSS, elevators, power, and surface rules remain local to their Room/card/board sections rather than general permission.
+- Claim: Technical Corridor Entrances and the shared Corridor space are normally inaccessible to Characters; numbered Noise is placed in the shared space, encounters can trigger there, Doors cannot be placed there, and an Intruder entering returns its token to the bag while its miniature and injuries leave the board. Only the expressly named Vents card, Cave Entrance Room Action, and Cave Plans item permit Character use; Cave Entrance moves to an explored Entrance Room and resolves an Adult-in-Darkness Attack card.
   Source: src-001, src-002
-  Evidence: Rulebook pp. 15, 23-26, 30-31; Room Sheet pp. 1-4.
+  Evidence: Rulebook p. 18, Technical Corridors; Room Sheet p. 1, Cave Entrance.
   Confidence: high
 
-- Claim: Shooting spends Ammo and rolls Combat, with Advantage dice in powered Sections; melee adds Contamination and risks a Serious Wound on a miss. Intruder Injury checks, retreats, Attack-card targeting, Wounds, contamination/infection, and Slime resolve under pp. 20-23.
+- Claim: On the alternate board, underground movement remains standard, while Surface setup uses Surface Exploration tokens and the Mars Surface deck. Crossroads connect by Paths, Areas act as Building-specific Technical Corridors but reject Technical-Corridor effects, surface Noise uses the D12, and on-foot movement reveals/resolves Surface Exploration before Noise; the Rover instead moves a non-combat Character between Exit Rooms without Noise and can carry that Character to the Bunker.
   Source: src-001
-  Evidence: Rulebook pp. 20-23 and rules summary p. 32.
+  Evidence: Rulebook pp. 30-32, Alternative side, Crossroads & Areas, Mars Surface, Rover, Buildings, and Mars Surface die & deck.
+  Confidence: high
+
+- Claim: Elevator use requires elevator Power and no combat. A Character may call the Elevator token to their Section's Elevator Room, or—when the token is already there—move it and their Character to another Section's Elevator Room, optionally carrying consenting Characters from the same Room; this movement makes no Noise roll. A Malfunction disables the Elevator Room action under the normal Room rule.
+  Source: src-001, src-002
+  Evidence: Rulebook pp. 19 and 24; Room Sheet p. 4, Elevator Rooms S-01 through S-03.
+  Confidence: high
+
+- Claim: Computer Actions require a powered Section and a working computer; Room Actions require the matching Room, no combat, and no Malfunction unless local text says otherwise. Hidden card effects and Room/component-local instructions are not reconstructed beyond the acquired framework.
+  Source: src-001, src-002
+  Evidence: Rulebook pp. 15 and 27-31; Room Sheet pp. 1-4.
+  Confidence: high
+
+- Claim: An Encounter clears connected Noise, draws one bag token, places its matching miniature, and compares hand size with the powered/unpowered token number; a short hand causes a Surprise Attack against the triggering Character. A normal Intruder Attack targets the same-Room Character with the fewest Action cards (turn-order tie-break), then draws an Attack card: matching Intruder symbol resolves its effect plus any applicable Darkness effect, while no match misses; exact Attack-card text remains UNKNOWN.
+  Source: src-001
+  Evidence: Rulebook pp. 20 and 22, Encounter, Surprise Attack, Night Stalker tokens, and Intruder Attack.
+  Confidence: high
+
+- Claim: Shooting spends Ammo and uses the Advantage die only in powered Sections; melee adds Contamination and risks a Serious Wound on a miss. Injury checks kill Larvae/Eggs at one Injury, test Creepers/Adults against one Attack-card blood value and Breeders/Queen against two summed values, or retreat on a drawn retreat symbol by Event-card direction; Character death occurs upon any further Wound while holding three Serious Wounds.
+  Source: src-001
+  Evidence: Rulebook pp. 20-23, Character Attacks, Intruder Injuries and Death, Intruder Retreat, and Character Wounds and Death.
   Confidence: high

@@ -47,7 +47,7 @@ sources:
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "HTTP 200 text/html; 21,102 bytes; SHA-256 6dabed72478beef7a86100684e14290e8f3d3d0ab23e8f0e6abda2e2bc4d6f56; six current articles listed."
+    notes: "HTTP 200 text/html; observed receipt 21,102 bytes, SHA-256 6dabed72478beef7a86100684e14290e8f3d3d0ab23e8f0e6abda2e2bc4d6f56; complete current six-article folder, with dynamic wrapper hash drift treated as nonsemantic."
   - id: "src-006"
     title: "I'm missing Status Markers in my copy"
     url: "https://support.awakenrealms.com/support/solutions/articles/42000110136-i-m-missing-status-markers-in-my-copy-"
@@ -82,7 +82,7 @@ sources:
     kind: other
     provenance: secondary
     retrieved_at: "2026-07-31"
-    notes: "HTTP 200 JSON; captures begin 2023-11 and show two digests each for rulebook and room sheet; oldest replay downloads truncated at 1,048,576 bytes in this run."
+    notes: "HTTP 200 JSON; captures begin 2023-11. Oldest rulebook and Room Sheet objects are archive-capture-truncated to 1 MiB prefixes; later ranges fall forward to complete 2024 captures. Prefixes and complete 2024 objects match current; digest differences alone do not prove revision."
   - id: "src-011"
     title: "BoardGameGeek Nemesis: Lockdown"
     url: "https://boardgamegeek.com/boardgame/310100"
@@ -93,22 +93,22 @@ sources:
 followups:
   - source_id: "src-001"
     url: "https://web.archive.org/web/20231129181753id_/https://awakenrealms.com/images/download/Nemesis_Lockdown/ENG/Nemesis_LD_Rulebook_280x280mm_bleed3mm-32-pages.pdf"
-    failure: pdf_extraction
-    fallback: "Current official PDF and complete 2024 archive capture matched; oldest replay truncated at 1,048,576 bytes."
+    failure: other
+    fallback: "The captured 1 MiB prefix is byte-identical to current, and current equals the complete 2024-02-20 archive object."
     retry_needs: wayback_snapshot
-    notes: "Need immutable complete release-era bytes and comparison."
+    notes: "The 2023 object itself is capture-truncated: x-archive-orig-content-length 1048576 versus crawler length 6075325. Alternate modifiers expose the same prefix; beyond-prefix Range falls forward to the 2024 object by Memento-Datetime/x-archive-src, so chunking cannot recover the missing 2023 tail. Need immutable first-retail bytes or publisher bridge."
   - source_id: "src-002"
     url: "https://web.archive.org/web/20231129182438id_/https://awakenrealms.com/images/download/Nemesis_Lockdown/ENG/Nemesis_LD_Room_Sheet_280x280mm_bleed3mm-4-pages.pdf"
-    failure: pdf_extraction
-    fallback: "Current official Room Sheet and complete 2024 archive capture matched; oldest replay truncated."
+    failure: other
+    fallback: "The captured 1 MiB prefix and complete later archive object match current."
     retry_needs: wayback_snapshot
-    notes: "Need complete release-era aid snapshot/version bridge."
+    notes: "Same genuine archive capture-truncation condition as the rulebook; chunking cannot recover the 2023 tail. Need complete first-retail aid bytes or publisher bridge."
   - source_id: "src-005"
     url: "https://support.awakenrealms.com/support/solutions/folders/42000113456"
     failure: other
-    fallback: "Current six-article folder and dated FAQ PDF inventoried."
+    fallback: "The current folder is fully enumerated at six articles; only the Status-marker article supplies target-core correction law."
     retry_needs: wayback_snapshot
-    notes: "Current support inventory is not an immutable complete historical FAQ/article inventory."
+    notes: "Current accessible inventory is closed. Need historical FAQ/support history beyond the complete current folder; wrapper hash drift is not semantic drift."
   - source_id: null
     url: "https://shop.asmodee.com/nemesis-lockdown-nemld01"
     failure: blocked
@@ -129,9 +129,9 @@ status: needs_followup
 
 ## Disposition
 
-- Claim: This remediation is **needs_followup** and must remain OPEN, DRAFT, and DO NOT MERGE because revision, physical-piece, and governing identity/face/text denominators are open.
+- Claim: This remediation is **needs_followup** and must remain OPEN, DRAFT, and DO NOT MERGE because the first-retail version bridge, physical-piece inspection, historical support history, and governing identity/face/text denominators remain open.
   Source: src-001, src-002, src-003, src-005, src-010
-  Evidence: Current official rules are acquired, but first archive captures postdate release, archived digest changes exist, current support is mutable, and no physical retail copy or complete licensed face manifest was inspected.
+  Evidence: Current official rules and the complete current six-article support folder are acquired; oldest archive objects are capture-truncated and digest differences do not prove revision, while no physical first-retail copy, historical support archive, or licensed face manifest was inspected.
   Confidence: high
 
 ## Governing-class ledger
@@ -160,7 +160,7 @@ status: needs_followup
 
 ## Exact residual help
 
-- Claim: Closure requires (1) an inspected English 2022 first-retail copy with SKU/UPC/lot/printing markers and nonreplacement component/card/face inventory; (2) immutable release-era rulebook, Room Sheet/recap and support snapshots or publisher version bridge; (3) complete authoritative FAQ/support-article history; and (4) licensed nonreplacement identity/text/face denominators for hidden cards, Rooms, Contingencies, tokens, dice, and board surfaces.
+- Claim: Closure requires (1) an inspected English 2022 first-retail copy with SKU/UPC/lot/printing markers and nonreplacement component/card/face inventory; (2) immutable first-retail rulebook/aid bytes or a publisher bridge beyond the capture-truncated archive; (3) historical FAQ/support history beyond the complete current folder; and (4) licensed nonreplacement identity/text/face denominators for hidden cards, objectives, Rooms, Contingencies, tokens, dice, and board surfaces.
   Source: src-001, src-002, src-003, src-005, src-010
   Evidence: These are precisely the unresolved authority classes above.
   Confidence: high

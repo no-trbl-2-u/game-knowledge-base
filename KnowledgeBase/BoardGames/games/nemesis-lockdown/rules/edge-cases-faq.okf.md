@@ -37,11 +37,11 @@ confidence: medium
 status: needs_followup
 ---
 
-# Edge Cases, FAQ, and Authority
+# Edge Cases, FAQ, and Bounded Source Roles
 
-- Claim: FAQ 2022-03-25 overrides the rulebook where explicit: Queen bag development is a conditional-return paragraph, Status markers are 15, items cannot affect another Character unless specified, and Danger still resolves after Careful Movement.
-  Source: src-003
-  Evidence: FAQ pp. 2-3, Errata items 1-4.
+- Claim: The acquired Corebox Rulebook supplies the base framework and the Room Sheet supplies local Room instructions. The 2022-03-25 FAQ controls only its named corrections and clarifications: Queen bag development, 15 Status markers, item-on-others restriction, Careful Movement/Danger, Archive versus Alert, Repository order, repeat CSS launch, and Alert ending. No broad card-versus-rulebook precedence rule was found; contradictions outside those named rulings remain UNKNOWN/followup.
+  Source: src-001, src-002, src-003
+  Evidence: Rulebook framework sections and Room Sheet pp. 1-4; FAQ p. 2, Errata items 1-4, Rooms questions 3-4, and Rules questions 1 and 3.
   Confidence: high
 
 - Claim: Archive permits one inactive-Knowledge Character use, gaining two Knowledge, activating the token, and peeking any non-Active Contingency; Alert Room instead takes one Neutral Pool Contingency.
@@ -59,7 +59,7 @@ status: needs_followup
   Evidence: FAQ p. 3 headings Chytrids and SG and compatibility list.
   Confidence: high
 
-- Claim: Exact identities/text for hidden objectives, action/item/event/attack/weakness/contamination/serious-wound/contingency cards and complete token/die face maps remain unknown; local component text governs when encountered and is not reconstructed from object counts.
+- Claim: Exact identities/text for hidden objectives, action/item/event/attack/weakness/contamination/serious-wound/contingency cards and complete token/die face maps remain unknown; acquired local instructions are cited where available, but no universal precedence doctrine or unacquired component text is reconstructed from object counts.
   Source: src-001, src-002, src-003
   Evidence: Rulebook delegates many effects to cards, Rooms, dice, and tokens; acquired authorities do not enumerate every licensed face.
   Confidence: high

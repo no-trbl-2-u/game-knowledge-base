@@ -44,9 +44,19 @@ status: needs_followup
   Evidence: Rulebook pp. 8, 10, and 12, crew setup, Player Goals, First Encounter, and Victory Check.
   Confidence: high
 
-- Claim: The governing system spans a two-sided facility board, modular Rooms and exploration, three powered Sections plus elevator power, CSS pods/Bunker/Isolation escape, Night Stalker bag/event/combat systems, hidden Contingency, Knowledge/Weakness, contamination, and facility-destruction tracks.
+- Claim: Each of three Facility Sections, plus elevator power as a separate fourth Section, is powered when its Power token is blue. Powered Sections use the Advantage die for shooting, permit Computer Actions, remove eligible Noise during the Event Phase, and keep Characters out of Darkness; unpowered Sections impose Darkness card/token effects and the higher Encounter number. Backup Power resets active capacity to the two lowest tokens when fewer than three are active, then allows all Power tokens to be reassigned and activates the Time token; Time-track thresholds subsequently flip the highest active Power token off according to red/blue threshold rules. Power Generator may flip the current Section locally.
   Source: src-001, src-002
-  Evidence: Rulebook pp. 6-30 and Room Sheet pp. 1-4.
+  Evidence: Rulebook pp. 13 and 24, Power and Power Thresholds; Room Sheet pp. 2 and 4, Power Generator and Backup Power Supply.
+  Confidence: high
+
+- Claim: Knowledge is gained through the listed Laboratory/object, Computer, Nest, Archive, and local card effects; discovered Weaknesses modify Night Stalker rules only for Characters meeting their printed Knowledge thresholds of 3, 5, or 8. Research consumes a Character Corpse, Carcass, or Egg, places a new object in the next Laboratory slot, and reveals its Weakness; exact Weakness-card effects remain UNKNOWN.
+  Source: src-001, src-002
+  Evidence: Rulebook p. 23, Knowledge and Weaknesses; Room Sheet p. 1, Laboratory.
+  Confidence: high
+
+- Claim: Archive is a once-per-Character action requiring an inactive Knowledge token: gain 2 Knowledge, activate it, and inspect any non-Active Contingency. The FAQ distinguishes this from Alert, whose alternate action instead takes one Contingency from the Neutral Pool.
+  Source: src-001, src-002, src-003
+  Evidence: Rulebook p. 23; Room Sheet pp. 1 and 4; FAQ p. 2, Rooms question 3.
   Confidence: high
 
 - Claim: Cards are hand-management/action-payment resources, but play does not purchase or permanently acquire cards into a growing personal deck; contamination is inserted and discards reshuffle. Therefore this edition is not a deckbuilder.

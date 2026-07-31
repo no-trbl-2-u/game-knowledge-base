@@ -49,6 +49,16 @@ status: needs_followup
   Evidence: Rulebook p. 13, Event steps 4-10.
   Confidence: high
 
+- Claim: At Noise removal, only powered Sections clear Noise not connected to a Room with a Character, and the shared Technical Corridors Noise is never removed. Event movement affects the card's named non-combat Intruder types by numbered Corridors; reaching Technical Corridors returns the Intruder token to the bag, while a Closed Door is destroyed instead of crossed.
+  Source: src-001
+  Evidence: Rulebook p. 13, Event steps 6 and 9; p. 18, Technical Corridors.
+  Confidence: high
+
+- Claim: Bag development draws one token: Larva and Creeper are removed and upgrade the bag to Adult and Breeder respectively; Adult and Breeder return and force ordered non-combat Characters to roll Noise; Blank returns and adds an Adult; Queen follows only the FAQ-corrected conditional framework—place her and resolve an Encounter only when a Character is in the discovered Nest, otherwise add an Egg and return the token. The round ends only after resulting Encounters and Surprise Attacks finish.
+  Source: src-001, src-003
+  Evidence: Rulebook p. 13, Intruder Bag Development and End of Round; FAQ p. 2, Errata item 1.
+  Confidence: high
+
 - Claim: Passing is an action; a player who takes only one action passes as the second and cannot act again that Player Phase.
   Source: src-001
   Evidence: Rulebook p. 13, Player Turns.
