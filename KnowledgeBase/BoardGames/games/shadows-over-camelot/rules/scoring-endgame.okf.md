@@ -42,6 +42,11 @@ status: needs_followup
   Evidence: Book of Quests pp. 5-10; FAQ section III.
   Confidence: high
 
+- Claim: A Quest may be won with no Knight present only on Dragon or Excalibur. Its White swords are still placed, no Life is gained, award cards are drawn and discarded, and the remote Excalibur completer receives the relic.
+  Source: src-002
+  Evidence: FAQ section III no-Knight Quest-completion ruling.
+  Confidence: high
+
 - Claim: Loyal Knights lose immediately at the twelfth Siege Engine, seventh Black sword, or death of the last Loyal Knight. These triggers outrank simultaneously arriving sword totals.
   Source: src-001, src-002
   Evidence: Book of Quests p. 12 and Appendix I; FAQ section VIII gives twelfth-Siege and last-Loyal simultaneous cases.

@@ -26,6 +26,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "2012/2015 comparison only; SHA-256 1e3f5abb3938be9c7ede217405f96b750a92234c2e2ad962d9fff77408a3d950."
+  - id: "src-002"
+    title: "2005 FAQ 1.0"
+    url: "https://cdn.svc.asmodee.net/production-daysofwonder/uploads/2024/07/sc_faq_en.pdf"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "SHA-256 2f4ab8d1756e5743dd7cf12802bebb371dcf08141b448d9867adce5ca7a90709; Sir Bedivere paragraph excluded."
 confidence: medium
 status: needs_followup
 ---
@@ -46,3 +53,8 @@ status: needs_followup
   Source: src-003
   Evidence: Later rulebook pp. 9-17.
   Confidence: medium
+
+- Claim: Kay cannot assist another Knight's individual Siege-Engine fight. At a Combat Quest's resolution where Kay is present, he may add any one Fight-card value without matching the Quest's White-card pattern.
+  Source: src-002
+  Evidence: FAQ section IV Sir Kay rulings.
+  Confidence: high

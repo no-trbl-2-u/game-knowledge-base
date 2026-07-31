@@ -51,3 +51,13 @@ status: needs_followup
   Source: src-002, src-003
   Evidence: FAQ section II Merlin/Morgan rulings; later rulebook pp. 10-11.
   Confidence: high
+
+- Claim: Arthur may exchange only during his own turn after Progression of Evil. The exchange is face-down and simultaneous, may be forced, and cannot target a Knight who has no card to return.
+  Source: src-002
+  Evidence: FAQ section IV King Arthur ruling.
+  Confidence: high
+
+- Claim: Percival with Lancelot's Armor inspects two Black cards before choosing his Progression of Evil action, puts one beneath the Black pile and the other on top, then decides whether to draw that top card or choose another Evil action.
+  Source: src-002
+  Evidence: FAQ section IV Percival ruling.
+  Confidence: high

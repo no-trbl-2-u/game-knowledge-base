@@ -44,19 +44,39 @@ status: needs_followup
   Evidence: FAQ section I departure ruling; later rulebook pp. 12-13.
   Confidence: medium
 
-- Claim: Holy Grail play adds one Grail nearest the relic or removes the closest Black obstruction when full; seven Grails win. Excalibur advances toward the Knights when a present Knight discards any White card face down and toward defeat under its Black cards.
-  Source: src-001
-  Evidence: Book of Quests pp. 8-9.
-  Confidence: high
-
-- Claim: Black Knight uses two pairs against four Black combat cards; Lancelot uses a full house against five; after Lancelot resolves, that board flips to the permanent Dragon Quest, where the Knights build three triples against five Dragon values. Greater White sum wins; ties lose.
-  Source: src-001
-  Evidence: Book of Quests pp. 5-7 and p. 4 tie rule.
-  Confidence: high
-
-- Claim: Pict and Saxon Wars each require Fight 1-2-3-4-5 in order before a fourth matching warrior arrives; losing adds a Siege Engine, and these repeatable Wars reset after resolution.
+- Claim: A played Grail card occupies the empty Grail-Quest spot nearest the Holy Grail relic. Only if no empty spot remains, discard the played Grail together with the closest Despair or Desolation card; seven Grails win, while seven occupied spots made up of Despair and Desolation cards lose. Dark Forest is laid beside the Quest, not in a spot.
   Source: src-001, src-002
-  Evidence: Book of Quests p. 10; FAQ section I confirms increasing sequential order.
+  Evidence: Book of Quests p. 9 Win/Loss Conditions and p. 14 Grail-card procedure; FAQ section II Dark Forest ruling.
+  Confidence: high
+
+- Claim: Excalibur advances toward the Knights when a Knight present on its Quest discards any White card face down, and toward defeat when an Excalibur Black card is drawn.
+  Source: src-001
+  Evidence: Book of Quests p. 8 Progression of Evil and Heroic Action.
+  Confidence: high
+
+- Claim: Each Combat Quest ends immediately when its required White pattern is completed or its final Black-card spot fills. Resolve by comparing the White total with the total of however many Black cards are then present; White must be strictly greater, so ties lose.
+  Source: src-001
+  Evidence: Book of Quests p. 3 Combat Quests; pp. 5-7 Progression of Evil, Heroic Action, and Win/Loss Conditions.
+  Confidence: high
+
+- Claim: Black Knight requires two distinct pairs and has four Black-card spots; Lancelot requires a full house and has five Black-card spots; after Lancelot resolves its board flips to the one-time Dragon Quest, which requires three distinct triples and has five Black-card spots.
+  Source: src-001
+  Evidence: Book of Quests pp. 5-7 Object, Progression of Evil, and Heroic Action sections.
+  Confidence: high
+
+- Claim: Pict and Saxon Wars each require Fight 1-2-3-4-5 in order before a fourth matching warrior arrives. A lost War adds two Siege Engines and one Black sword; every Knight present loses one Life and returns to Camelot. Each War is perpetual and resets after either resolution.
+  Source: src-001, src-002
+  Evidence: Book of Quests p. 10 Object, Win/Loss, and Consequences of Defeat; FAQ section I confirms increasing sequential order.
+  Confidence: high
+
+- Claim: Convocation is optional for each Knight. Heroism may be placed on a Quest remotely. Dark Forest stays beside the Grail board without occupying a Grail spot or preventing Grail-card discards for Excalibur or healing; if drawn after the Grail Quest ends, it is discarded and adds one Siege Engine.
+  Source: src-002
+  Evidence: FAQ section II Convocation, Heroism, and Dark Forest rulings.
+  Confidence: high
+
+- Claim: Playing one Merlin as a Special White Heroic Action removes the latest Standard Black card still present on a chosen Quest. This distinct one-card use cannot remotely move Excalibur and cannot undo the instant loss caused when the twelfth Siege Engine appears.
+  Source: src-002
+  Evidence: FAQ section II Merlin rulings.
   Confidence: high
 
 - Claim: In Camelot, later comparison permits drawing two White cards if beginning below twelve cards or fighting one Siege Engine by committing Fight cards then rolling the D8; committed total must exceed the die or the Knight loses one Life, and all committed cards discard.

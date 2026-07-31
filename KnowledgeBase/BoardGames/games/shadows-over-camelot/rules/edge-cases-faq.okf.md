@@ -37,6 +37,11 @@ status: needs_followup
   Evidence: Book of Quests Appendix I; FAQ section VI.
   Confidence: high
 
+- Claim: If the board falls below both six swords and six Siege Engines, accusation eligibility turns off until either threshold is restored.
+  Source: src-002
+  Evidence: FAQ section VI falling-below-threshold ruling.
+  Confidence: high
+
 - Claim: A dead Knight cannot accuse or be accused and never reveals Loyalty; a dead unrevealed Traitor gets no two-sword end conversion.
   Source: src-002
   Evidence: FAQ section VI.
@@ -47,12 +52,17 @@ status: needs_followup
   Evidence: Book of Quests Appendix I; FAQ section VII fixes the sequence with THEN.
   Confidence: high
 
+- Claim: An unmasked Traitor is specifically unaffected by Fate and Reinforcements: while off the board, the Traitor receives neither White cards nor those cards' consequences.
+  Source: src-002
+  Evidence: FAQ section VII Fate/Reinforcements ruling.
+  Confidence: high
+
 - Claim: Healing requires three identical White cards discarded face down—three Grails or three equal Fight values qualify, mixed Fight values do not—and hidden disposal never permits cheating.
   Source: src-002
   Evidence: FAQ section I healing ruling.
   Confidence: high
 
-- Claim: Lady of the Lake can complete Excalibur remotely; its player receives Excalibur, but only present Knights gain Life/share cards. Three Merlin cards cannot cancel Special Black cards drawn inside an unresolved three-card Morgan chain.
+- Claim: Lady of the Lake can complete Excalibur remotely; its player receives Excalibur, but only present Knights gain Life and share awards. If no Knight is present, no Life is gained and the White-card award is drawn and discarded. Three Merlin cards cannot cancel Special Black cards drawn inside an unresolved three-card Morgan chain.
   Source: src-002
   Evidence: FAQ section II Lady of the Lake and Morgan rulings.
   Confidence: high
