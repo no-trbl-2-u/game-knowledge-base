@@ -27,16 +27,15 @@
         "https://boardgamegeek.com/boardgame/342900/earthborne-rangers"
       ],
       "blockers": [
-        "The complete Lure of the Valley campaign guide, rules glossary entries, and core-set errata entries were inventoried but not retrieved and inspected page by page.",
-        "The rulebook makes rules-bearing card text controlling over the basic rules, but no authoritative distinct-card identity and text corpus was acquired."
+        "The current corrected English digital core plus Lure public rules surface is item-classified, but the rulebook makes rules-bearing card text controlling and no authoritative complete distinct-card identity/rules-text corpus was acquired."
       ],
       "coverage": {
         "deckbuilder": true,
-        "methodology": "Rules coverage counts six identified governing source groups for the scoped English core set: rulebook, Lure of the Valley campaign guide, rules glossary, FAQ, updates/errata, and rules-bearing card text. A group counts only when completely retrieved and inspected; only the 48-page rulebook closed. Factual distinct-record coverage remains unscored because the official source exposes physical card totals but no authoritative distinct-card denominator.",
+        "methodology": "The exact edition boundary is the current corrected English digital core plus Lure of the Valley, represented by the official 2024 rulebook and current living guide. The acquired bounded public governing ledger has 274 deduplicated target-applicable rows: 1 rulebook, 96 Lure guide items, 131 target-applicable or mixed glossary leaves, 32 target-applicable or mixed FAQ Q&As, and 14 core/Lure card updates. The 35 historical Lure guide updates and first-print rulebook update are acquired comparison rows but excluded because their corrections are integrated; the printable errata PDF duplicates the 16 card-update identities. Total governing coverage remains unscored because an authoritative complete rules-bearing distinct-card denominator is unavailable.",
         "rules": {
-          "recorded": 1,
-          "known_total": 6,
-          "percent": 16.7
+          "recorded": 274,
+          "known_total": null,
+          "percent": null
         },
         "factual": {
           "recorded": 0,
@@ -45,33 +44,42 @@
         }
       },
       "gap": {
-        "threshold_summary": "Governing-source-group coverage is 1/6 (16.7%) against the required 6/6 (100%); distinct factual-record coverage is unscored because its authoritative denominator is unavailable.",
+        "threshold_summary": "All 274 deduplicated target-applicable public governing rows are acquired and classified, but total rules coverage remains UNKNOWN against the required 100% because the authoritative complete distinct-card rules-text denominator is unavailable; factual distinct-record coverage is also UNKNOWN and unscored.",
         "missing_evidence": [
-          "Retrieve and inspect all 96 Lure of the Valley campaign-guide items rather than only the official category inventory.",
-          "Retrieve and inspect every core-applicable rules-glossary entry, all 16 card-errata items, all 35 Lure campaign-guide errata items, and the first-printing rulebook update.",
-          "Acquire an authoritative core-set distinct-card identity and rules-text inventory, or obtain an explicit T-level ruling that physical-card representation is sufficient despite duplicate copies."
+          "Acquire an authoritative complete current corrected English core-plus-Lure distinct-card identity and rules-text corpus; card text controls contradictions, and the official physical count does not identify distinct rules-bearing cards."
         ],
         "attempted_sources": [
           {
-            "url": "https://thelivingvalley.earthbornegames.com/docs/category/campaign-guides/",
-            "result": "Retrieved the official inventory, which exposes 96 Lure of the Valley items, but the bounded run did not inspect every linked item."
+            "url": "https://thelivingvalley.earthbornegames.com/docs/category/lure-of-the-valley/",
+            "result": "Retrieved and classified all 96 immediate Lure guide items with item-level HTTP, byte-length, and SHA-256 receipts."
           },
           {
             "url": "https://thelivingvalley.earthbornegames.com/docs/rules_glossary/",
-            "result": "Retrieved the glossary landing page and its 22 alphabetical categories, but did not close the full entry-level denominator."
+            "result": "Retrieved all 22 alphabetical categories and classified 148 unique leaf URLs as core/Lure, later-product, or mixed."
           },
           {
-            "url": "https://thelivingvalley.earthbornegames.com/docs/category/updates/",
-            "result": "Retrieved the updates inventory showing 16 card errata and 35 campaign-guide errata items, but did not inspect every core-applicable item."
+            "url": "https://thelivingvalley.earthbornegames.com/docs/faq/",
+            "result": "Acquired the complete FAQ source and classified all 33 Q&As across its 11 section headings for target applicability."
+          },
+          {
+            "url": "https://thelivingvalley.earthbornegames.com/docs/updates/card_errata/",
+            "result": "Retrieved all 16 card-update pages; classified 14 as core/Lure and excluded two explicitly labelled LoA mission cards."
+          },
+          {
+            "url": "https://thelivingvalley.earthbornegames.com/docs/updates/lure_of_the_valley_errata/",
+            "result": "Retrieved all 35 historical Lure guide update pages and excluded them from the current denominator because the living guide integrates their corrections."
+          },
+          {
+            "url": "https://earthbornegames.com/wp-content/uploads/Card_Errata_eng_web.pdf",
+            "result": "Retrieved the official two-page printable errata PDF at 1,328,433 bytes and SHA-256 395142fb44dc5ff6daffe3541effea96bedb30d5cbd61ce7d94ac5f00b9f7036; it duplicates the 16 update-page card identities."
           },
           {
             "url": "https://boardgamegeek.com/xmlapi2/thing?id=342900&stats=1",
-            "result": "The unauthenticated BGG XML API returned HTTP 401, so no rating, rank, or complexity claim is included in this packet."
+            "result": "The unauthenticated BGG XML API returned HTTP 401, so no rating, rank, weight, or numerical complexity claim is included."
           }
         ],
         "help_requested": [
-          "Provide or authorize a machine-readable, authoritative core-set card identity and rules-text inventory if one exists outside the public resources index.",
-          "Confirm whether a future packet should scope only the current corrected English core set or separately account for first-printing rulebook and card errata applicability."
+          "Provide or authorize an authoritative complete current corrected English core-plus-Lure distinct-card identity and rules-text inventory if one exists outside the public resources surface."
         ]
       }
     }
