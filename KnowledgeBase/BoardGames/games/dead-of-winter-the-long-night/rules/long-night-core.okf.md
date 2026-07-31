@@ -40,6 +40,11 @@ status: needs_followup
   Evidence: Rulebook p.16, "New Rules for Every Game."
   Confidence: high
 
+- Claim: The Graveyard organizes and stores the survivor cards and matching standees of survivors killed during the game; it has no gameplay effect except that some Crossroads cards may refer to it.
+  Source: src-001
+  Evidence: Rulebook p.16, "Graveyard."
+  Confidence: high
+
 - Claim: At round end any player may call a vote to retain the current first player; a passing vote keeps the token, otherwise it passes normally.
   Source: src-001
   Evidence: Rulebook p.16, "First Player Vote."
