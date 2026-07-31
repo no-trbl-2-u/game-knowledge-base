@@ -1,0 +1,86 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-07-31-unsettled",
+  "created_at": "2026-07-31T16:42:56.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "cooperative-game"
+  },
+  "candidates": [
+    {
+      "slug": "unsettled",
+      "title": "Unsettled",
+      "bgg_id": 290484,
+      "cohort": "cooperative",
+      "status": "blocked",
+      "discovery_sources": [
+        "https://orangenebula.com/pages/unsettled-board-game",
+        "https://gamefound.com/en/projects/orange-nebula/unsettled-/products/details/25486",
+        "https://boardgamegeek.com/boardgame/290484/unsettled"
+      ],
+      "blockers": [
+        "The complete governing official rules corpus for the updated framework plus Planets 001 and 002 was not retrievable from an official Orange Nebula-controlled endpoint.",
+        "Only one of three governing rule authorities was acquired, and that updated framework rulebook came from a retailer mirror rather than an official publisher endpoint.",
+        "Only one meaningful source-linked visual was receipted; a promotable visual packet requires four to eight distinct reduced references and a contact sheet."
+      ],
+      "coverage": {
+        "deckbuilder": false,
+        "methodology": "Edition scope is the updated Unsettled framework printed for the 2023 campaign with the retail bundle's Planets 001 and 002. Rules denominator counts three required governing authorities: the complete updated framework rulebook, the complete Planet 001 rules-bearing corpus, and the complete Planet 002 rules-bearing corpus. Factual denominator counts ten declared claim groups in evidence.json; reviews and opinions carry zero factual weight.",
+        "rules": {
+          "recorded": 1,
+          "known_total": 3,
+          "percent": 33.3
+        },
+        "factual": {
+          "recorded": 6,
+          "known_total": 10,
+          "percent": 60
+        }
+      },
+      "gap": {
+        "threshold_summary": "Rules coverage is 33.3% (1 of 3 governing authorities) versus the required 100%; factual coverage is 60% (6 of 10 declared claim groups) versus the required 60%, but official provenance and visual gates also remain unmet.",
+        "missing_evidence": [
+          "An official publisher-hosted copy of the complete updated framework rulebook, not merely the receipted campaign product description and retailer mirror.",
+          "The complete rules-bearing content for Planet 001 Wenora and Planet 002 Grakkis, including their planet-specific special rules and survival tasks.",
+          "Four to eight licensable or narrowly transformed, meaningful visual references with receipts, distinct subjects, hashes, and a contact sheet.",
+          "Authoritative exact component manifests for the updated framework, Planet 001, and Planet 002."
+        ],
+        "attempted_sources": [
+          {
+            "url": "https://orangenebula.com/pages/unsettled-board-game",
+            "result": "The official Orange Nebula page returned HTTP 429 local_rate_limited to scripted retrieval and an empty browser document during this run."
+          },
+          {
+            "url": "https://gamefound.com/en/projects/orange-nebula/unsettled-/products/details/25486",
+            "result": "Retrieved successfully; it identifies an Updated Rulebook included in every framework printed for that campaign, but the linked document itself was not exposed as a retrievable official file."
+          },
+          {
+            "url": "https://gamers-hq.de/media/pdf/g0/91/9d/Unsettled_Rulebook.pdf",
+            "result": "Retrieved and inspected all 48 pages of the 2023-03-14 updated framework rulebook, but this is a retailer-hosted mirror and it does not contain the complete Planet 001 or Planet 002 rules-bearing corpora."
+          },
+          {
+            "url": "https://orangenebula.com/sitemap_pages_1.xml",
+            "result": "The official sitemap request returned no bytes during the rate-limited retrieval window, so it could not close the publisher document inventory."
+          },
+          {
+            "url": "https://gamingwithsidekicks.com/2022/02/24/game-review-unsettled/",
+            "result": "The review rendered in the browser and supplied a meaningful gameplay photograph, but scripted HTML retrieval was blocked by Mod_Security."
+          }
+        ],
+        "help_requested": [
+          "T, please provide or authorize a publisher-hosted updated framework rulebook URL and complete Planet 001 Wenora and Planet 002 Grakkis rules-bearing materials for this edition.",
+          "T, please provide permission-cleared official component and gameplay images, or approve exact official asset URLs suitable for four distinct reduced editorial references."
+        ]
+      }
+    }
+  ]
+}

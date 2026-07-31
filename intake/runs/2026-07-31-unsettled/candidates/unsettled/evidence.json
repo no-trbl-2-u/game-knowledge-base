@@ -1,0 +1,109 @@
+{
+  "schema_version": 3,
+  "slug": "unsettled",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-07-31T16:42:56.000Z",
+  "edition_scope": "Updated Unsettled framework printed for the 2023 Orange Nebula campaign, scoped to the retail framework bundle with Planets 001 Wenora and 002 Grakkis.",
+  "coverage_ledger": {
+    "rules_denominator": [
+      { "authority": "Updated framework rulebook", "acquired": true, "official_endpoint": false, "notes": "Complete 48-page PDF inspected from a retailer mirror; official publisher file remained unavailable." },
+      { "authority": "Planet 001 Wenora complete rules-bearing corpus", "acquired": false, "official_endpoint": false, "notes": "Planet-specific special rules and survival-task content were not retrieved." },
+      { "authority": "Planet 002 Grakkis complete rules-bearing corpus", "acquired": false, "official_endpoint": false, "notes": "Planet-specific special rules and survival-task content were not retrieved." }
+    ],
+    "factual_denominator": [
+      { "claim_group": "updated campaign printing identity", "recorded": true, "source_ids": ["src-001"] },
+      { "claim_group": "cooperative format", "recorded": true, "source_ids": ["src-003", "src-004"] },
+      { "claim_group": "player count", "recorded": true, "source_ids": ["src-004"] },
+      { "claim_group": "framework plus planet modular structure", "recorded": true, "source_ids": ["src-002", "src-003"] },
+      { "claim_group": "three-die action economy", "recorded": true, "source_ids": ["src-003"] },
+      { "claim_group": "time and endurance pressure", "recorded": true, "source_ids": ["src-003"] },
+      { "claim_group": "exact updated framework component manifest", "recorded": false, "source_ids": [] },
+      { "claim_group": "exact Planet 001 component and rules manifest", "recorded": false, "source_ids": [] },
+      { "claim_group": "exact Planet 002 component and rules manifest", "recorded": false, "source_ids": [] },
+      { "claim_group": "official FAQ and errata applicability to this printing", "recorded": false, "source_ids": [] }
+    ],
+    "exclusions": [
+      "Reviews, ratings, opinions, accessories, translations, additional planet products, and unreleased products have zero weight in this bounded factual denominator."
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Orange Nebula Unsettled updated rulebook product",
+      "roles": ["identity"],
+      "provenance": "official",
+      "url": "https://gamefound.com/en/projects/orange-nebula/unsettled-/products/details/25486",
+      "final_url": "https://gamefound.com/en/projects/orange-nebula/unsettled-/products/details/25486",
+      "retrieved_at": "2026-07-31T16:42:30.873Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 58709,
+      "sha256": "eee368c647adeff883b1d0b541e5d7220a8c3c96b84559e9ca205022c374490c",
+      "locator": "Product description",
+      "evidence": "This item is already included in every copy of the Unsettled framework printed for this campaign."
+    },
+    {
+      "id": "src-002",
+      "title": "Unsettled Rulebook Final Web 230314 retailer mirror",
+      "roles": ["official_rules"],
+      "provenance": "secondary",
+      "url": "https://gamers-hq.de/media/pdf/g0/91/9d/Unsettled_Rulebook.pdf",
+      "final_url": "https://gamers-hq.de/media/pdf/g0/91/9d/Unsettled_Rulebook.pdf",
+      "retrieved_at": "2026-07-31T16:40:52.000Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 69217668,
+      "sha256": "2cc105d5430e176b2bb45265809c5adf0ea7f7e3dcde1b3546a3f66ab4f47a59",
+      "locator": "48-page PDF; pages 3-48 inspected with pdfinfo and pdftotext",
+      "evidence": "The rulebook states that each game requires the base framework and one planet box, and that each world has its own environment, special rules, and challenges."
+    },
+    {
+      "id": "src-003",
+      "title": "Board Game Review: Unsettled",
+      "roles": ["independent_review"],
+      "provenance": "secondary",
+      "url": "https://thomaspking.com/2022/11/27/board-game-review-unsettled/",
+      "final_url": "https://thomaspking.com/2022/11/27/board-game-review-unsettled/",
+      "retrieved_at": "2026-07-31T16:42:32.509Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 167735,
+      "sha256": "ce03401912338576c3b616034b617ab26086fe6802333410d000f8fbd4bed282",
+      "locator": "Overview section",
+      "evidence": "Unsettled is a cooperative puzzle game where you choose and play one planet and one scenario during a game"
+    },
+    {
+      "id": "src-004",
+      "title": "Tabletop Review: Unsettled",
+      "roles": ["independent_review"],
+      "provenance": "secondary",
+      "url": "https://www.stackup.org/post/ttrpg-review-unsettled",
+      "final_url": "https://www.stackup.org/post/ttrpg-review-unsettled",
+      "retrieved_at": "2026-07-31T16:42:33.969Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 1210388,
+      "sha256": "bc0f66ba9151a2e329ef3f74d1bd9dfeec7670455ad5d6cdc43ea8560559f3a3",
+      "locator": "Review body",
+      "evidence": "a cooperative sci-fi game for 2-4 players meant to test your survival skills in the uncharted regions of space"
+    },
+    {
+      "id": "src-005",
+      "title": "Unsettled gameplay photograph from independent review",
+      "roles": ["visual"],
+      "provenance": "secondary",
+      "url": "https://i0.wp.com/gamingwithsidekicks.com/wp-content/uploads/2022/02/IMG_3141-1.jpeg?w=678",
+      "final_url": "https://i0.wp.com/gamingwithsidekicks.com/wp-content/uploads/2022/02/IMG_3141-1.jpeg?w=678",
+      "retrieved_at": "2026-07-31T16:41:56.904Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 84328,
+      "sha256": "d64fff94a0fccff9e88bba3b9077d6ba656621992bb7027bddd151d2c2513805",
+      "locator": "review image IMG_3141-1",
+      "evidence": "Source-linked gameplay photograph retrieved from the Gaming With Sidekicks review."
+    }
+  ]
+}
