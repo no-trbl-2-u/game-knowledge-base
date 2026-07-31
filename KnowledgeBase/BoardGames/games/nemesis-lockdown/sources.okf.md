@@ -103,9 +103,9 @@ status: needs_followup
   Evidence: JSON rows for game `Nemesis Lockdown` with UK flag list those four titles and direct URLs.
   Confidence: high
 
-- Claim: The acquired Corebox Rulebook supplies the base framework and the Room Sheet supplies local Room instructions. The 2022-03-25 FAQ controls only its explicit named corrections and clarifications—Queen bag, 15 Status markers, item-on-others restriction, Careful Movement/Danger, Archive versus Alert, Repository order, repeat CSS launch, and Alert ending—and the later marker article repeats only the 15-marker correction as current support. No broad card-versus-rulebook precedence rule was found, so contradictions outside those named rulings remain UNKNOWN/followup.
+- Claim: The acquired Corebox Rulebook supplies the base framework and the Room Sheet supplies local Room instructions. The 2022-03-25 FAQ controls only its twelve explicit target-core page-2 rulings: Queen bag development, item-on-others restriction, Careful Movement/Danger, 15 Status markers, Alert ending, Knee Serious Wound timing, repeat CSS launch, computer-Room Action-card Power, Injury-dealing Items against Eggs, multiple Characters using Isolation, Archive versus Alert, and Repository order. The later marker article repeats only the 15-marker correction as current support. No broad card-versus-rulebook precedence rule was found, so contradictions outside those twelve rulings remain UNKNOWN/followup.
   Source: src-001, src-002, src-003, src-005, src-006
-  Evidence: FAQ p. 2 contains the eight bounded rulings; the 2024 support article repeats 15-not-18 only.
+  Evidence: FAQ p. 2 contains four Errata, three Rules, one Actions, and four Rooms Q&As; the 2024 support article repeats 15-not-18 only.
   Confidence: medium
 
 - Claim: The complete current support folder contains six articles. Only the Status-marker article contributes target-core correction law; the other five concern Constructs Pack/Retaliation shipping, pledge/order administration, shipping status, late pledge, and missing/broken-component contact instructions, and provide no base-core rules, component denominator, or first-retail version bridge. Dynamic Freshdesk wrapper hash drift is not semantic drift.

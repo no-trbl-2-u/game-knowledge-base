@@ -39,9 +39,29 @@ status: needs_followup
 
 # Edge Cases, FAQ, and Bounded Source Roles
 
-- Claim: The acquired Corebox Rulebook supplies the base framework and the Room Sheet supplies local Room instructions. The 2022-03-25 FAQ controls only its named corrections and clarifications: Queen bag development, 15 Status markers, item-on-others restriction, Careful Movement/Danger, Archive versus Alert, Repository order, repeat CSS launch, and Alert ending. No broad card-versus-rulebook precedence rule was found; contradictions outside those named rulings remain UNKNOWN/followup.
+- Claim: The acquired Corebox Rulebook supplies the base framework and the Room Sheet supplies local Room instructions. The 2022-03-25 FAQ controls only its twelve explicit target-core page-2 rulings: Queen bag development, item-on-others restriction, Careful Movement/Danger, 15 Status markers, Alert ending, Knee Serious Wound timing, repeat CSS launch, computer-Room Action-card Power, Injury-dealing Items against Eggs, multiple Characters using Isolation, Archive versus Alert, and Repository order. No broad card-versus-rulebook precedence rule was found; contradictions outside those rulings remain UNKNOWN/followup.
   Source: src-001, src-002, src-003
-  Evidence: Rulebook framework sections and Room Sheet pp. 1-4; FAQ p. 2, Errata items 1-4, Rooms questions 3-4, and Rules questions 1 and 3.
+  Evidence: Rulebook framework sections and Room Sheet pp. 1-4; FAQ p. 2, all four Errata, three Rules, one Actions, and four Rooms Q&As.
+  Confidence: high
+
+- Claim: The Knee Serious Wound's extra Movement cost applies only to the Character's first Movement Action on their first turn; doing something else first and moving later avoids that penalty.
+  Source: src-003
+  Evidence: FAQ p. 2, Rules question 2.
+  Confidence: high
+
+- Claim: An Action card that merely requires the Character to be in a Room with a computer does not inherently require that Section to have Power unless the card says so.
+  Source: src-003
+  Evidence: FAQ p. 2, Actions question 1.
+  Confidence: high
+
+- Claim: An Item that deals Injuries may damage and destroy Eggs at one Egg per Injury; Vent Control does not do so because it deals no Injuries.
+  Source: src-003
+  Evidence: FAQ p. 2, Rooms question 1.
+  Confidence: high
+
+- Claim: Locking one Character into the Isolation Room does not prevent other Characters from locking themselves there; the Room has multiple chambers.
+  Source: src-003
+  Evidence: FAQ p. 2, Rooms question 2.
   Confidence: high
 
 - Claim: Archive permits one inactive-Knowledge Character use, gaining two Knowledge, activating the token, and peeking any non-Active Contingency; Alert Room instead takes one Neutral Pool Contingency.

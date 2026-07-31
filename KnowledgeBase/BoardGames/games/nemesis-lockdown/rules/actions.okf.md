@@ -59,9 +59,34 @@ status: needs_followup
   Evidence: Rulebook p. 18, Technical Corridors; Room Sheet p. 1, Cave Entrance.
   Confidence: high
 
-- Claim: On the alternate board, underground movement remains standard, while Surface setup uses Surface Exploration tokens and the Mars Surface deck. Crossroads connect by Paths, Areas act as Building-specific Technical Corridors but reject Technical-Corridor effects, surface Noise uses the D12, and on-foot movement reveals/resolves Surface Exploration before Noise; the Rover instead moves a non-combat Character between Exit Rooms without Noise and can carry that Character to the Bunker.
+- Claim: On the alternate board, Paths connect neighboring Crossroads (or a Crossroads and Exit Room), never hold Noise, and allow Character and eligible Intruder movement; every Crossroads is also connected to every numbered Area.
   Source: src-001
-  Evidence: Rulebook pp. 30-32, Alternative side, Crossroads & Areas, Mars Surface, Rover, Buildings, and Mars Surface die & deck.
+  Evidence: Rulebook p. 31, Crossroads & Areas.
+  Confidence: high
+
+- Claim: Each Area is Technical-Corridor-like only for its particular surrounding Building, except Area 3 is connected to no Building. Effects that name Technical Corridors do not apply to Areas.
+  Source: src-001
+  Evidence: Rulebook p. 31, Crossroads & Areas.
+  Confidence: high
+
+- Claim: Buildings are Room clusters entered through Exit Rooms. On-foot surface movement follows the normal Movement sequence: enter a connected Crossroads, reveal and resolve any Surface Exploration token, then roll Noise unless another Character or Intruder is there.
+  Source: src-001
+  Evidence: Rulebook pp. 30-32, Surface Exploration tokens, Moving on the Mars Surface, and Buildings.
+  Confidence: high
+
+- Claim: Mars Surface D12 results 1-4 and Silence use their normal branches. Danger in a Building uses its surrounding Area under normal rules; Danger at a Crossroads moves every eligible surface Intruder there, or, if none can move, fills every empty Area with Noise. The Mars symbol draws and resolves one Mars Surface card; exact card-local effects remain UNKNOWN.
+  Source: src-001
+  Evidence: Rulebook pp. 30 and 32, Mars Surface and Mars Surface die & deck.
+  Confidence: high
+
+- Claim: Escape to the Bunker is impossible while the Main Gate is closed. It opens upon the first Character death, red Autodestruction, or an explicit qualifying effect and cannot close again; ordinary Door-opening effects do not affect it.
+  Source: src-001
+  Evidence: Rulebook pp. 10-11, First Dead Character, Autodestruction sequence, and The Main Gate.
+  Confidence: high
+
+- Claim: On the alternate side, the on-foot Bunker route requires a Crossroads connected to the Bunker, an Enviro-Suit, and a Noise roll that produces no Intruder. Rover use is a separate route: a non-combat Character with the Rover in an Exit Room may move it between Exit Rooms without Noise or use it to escape under the stated Main Gate rules.
+  Source: src-001
+  Evidence: Rulebook pp. 11 and 31-32, Escape the Facility Action, The Main Gate, Rover, and Buildings.
   Confidence: high
 
 - Claim: Elevator use requires elevator Power and no combat. A Character may call the Elevator token to their Section's Elevator Room, or—when the token is already there—move it and their Character to another Section's Elevator Room, optionally carrying consenting Characters from the same Room; this movement makes no Noise roll. A Malfunction disables the Elevator Room action under the normal Room rule.
@@ -74,9 +99,19 @@ status: needs_followup
   Evidence: Rulebook pp. 15 and 27-31; Room Sheet pp. 1-4.
   Confidence: high
 
-- Claim: An Encounter clears connected Noise, draws one bag token, places its matching miniature, and compares hand size with the powered/unpowered token number; a short hand causes a Surprise Attack against the triggering Character. A normal Intruder Attack targets the same-Room Character with the fewest Action cards (turn-order tie-break), then draws an Attack card: matching Intruder symbol resolves its effect plus any applicable Darkness effect, while no match misses; exact Attack-card text remains UNKNOWN.
+- Claim: An Encounter first clears Noise from every connected Corridor, including a connected Technical Corridor, then draws one bag token. If it is an Intruder token, place the matching miniature and compare the triggering Character's hand with the token's lower number when that Character is not in Darkness or higher number when in Darkness; a short hand causes a Surprise Attack against that Character.
   Source: src-001
-  Evidence: Rulebook pp. 20 and 22, Encounter, Surprise Attack, Night Stalker tokens, and Intruder Attack.
+  Evidence: Rulebook p. 20, Encounter, Surprise Attack, and Night Stalker tokens.
+  Confidence: high
+
+- Claim: If the Encounter draws the Blank token, place Noise in every Corridor connected to the triggering Room; if Blank was the bag's last token, add one Adult token when available; return Blank to the bag and end the Encounter. This branch places no miniature and makes no Surprise comparison.
+  Source: src-001
+  Evidence: Rulebook p. 20, Blank Token.
+  Confidence: high
+
+- Claim: A normal Intruder Attack targets the same-Room Character with the fewest Action cards (turn-order tie-break), then draws an Attack card: a matching Intruder symbol resolves its effect plus any applicable Darkness effect, while no match misses; exact Attack-card text remains UNKNOWN.
+  Source: src-001
+  Evidence: Rulebook p. 22, Intruder Attack.
   Confidence: high
 
 - Claim: Shooting spends Ammo and uses the Advantage die only in powered Sections; melee adds Contamination and risks a Serious Wound on a miss. Injury checks kill Larvae/Eggs at one Injury, test Creepers/Adults against one Attack-card blood value and Breeders/Queen against two summed values, or retreat on a drawn retreat symbol by Event-card direction; Character death occurs upon any further Wound while holding three Serious Wounds.

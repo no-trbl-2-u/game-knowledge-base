@@ -49,7 +49,12 @@ status: needs_followup
   Evidence: Rulebook pp. 13 and 24, Power and Power Thresholds; Room Sheet pp. 2 and 4, Power Generator and Backup Power Supply.
   Confidence: high
 
-- Claim: Knowledge is gained through the listed Laboratory/object, Computer, Nest, Archive, and local card effects; discovered Weaknesses modify Night Stalker rules only for Characters meeting their printed Knowledge thresholds of 3, 5, or 8. Research consumes a Character Corpse, Carcass, or Egg, places a new object in the next Laboratory slot, and reveals its Weakness; exact Weakness-card effects remain UNKNOWN.
+- Claim: The first Weakness begins discovered. Discovered Weaknesses modify Night Stalker rules only for Characters meeting their printed Knowledge thresholds of 3, 5, or 8; exact Weakness-card effects remain UNKNOWN.
+  Source: src-001
+  Evidence: Rulebook p. 23, Knowledge and Weaknesses.
+  Confidence: high
+
+- Claim: Laboratory research uses a Character Corpse, Intruder Carcass, or Egg and grants the Character 3 Knowledge. Each Object type can discover a Weakness only once: a new type is placed in the first empty Laboratory slot and reveals the Weakness below it, while an Object type used previously is discarded instead and reveals no additional Weakness. The same type may still be analyzed again for Knowledge.
   Source: src-001, src-002
   Evidence: Rulebook p. 23, Knowledge and Weaknesses; Room Sheet p. 1, Laboratory.
   Confidence: high
