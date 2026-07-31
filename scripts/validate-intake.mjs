@@ -339,8 +339,9 @@ function manifestStatusOnlyTransition(fromRef, toRef, runId, slug, fromStatus, t
   if (!candidate || candidate.status !== fromStatus) return false
   candidate.status = toStatus
   if (allowPromotedAt) {
-    if (!/^20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\.[0-9]+)?Z$/.test(actualCandidate?.promoted_at ?? '')) return false
-    candidate.promoted_at = actualCandidate.promoted_at
+    const promotedAt = actualCandidate?.promoted_at ?? ''
+    if (!/^20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$/.test(promotedAt) || new Date(promotedAt).toISOString() !== promotedAt) return false
+    candidate.promoted_at = promotedAt
   }
   return JSON.stringify(normalizedJson(expected)) === JSON.stringify(normalizedJson(after))
 }
