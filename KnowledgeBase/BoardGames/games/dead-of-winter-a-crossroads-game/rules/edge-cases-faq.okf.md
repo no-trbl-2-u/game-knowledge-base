@@ -8,14 +8,14 @@ game:
   publisher: "Plaid Hat Games"
   year: 2014
   weight: 3.01
-  edition: "English 2014 standalone/base game; exact printing mapping unresolved"
+  edition: "English 2014 first/release printing"
 scope: "card hierarchy, official FAQ v1.1, and edition-sensitive edge cases"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
 better_if_labels: []
 sources:
   - id: "src-001"
-    title: "Dead of Winter rulebook (PH1000)"
-    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    title: "Dead of Winter rulebook (English 2014 release printing)"
+    url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/rules.pdf"
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-31"
@@ -34,6 +34,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "Official 2015 announcement."
+  - id: "src-009"
+    title: "Dead of Winter rulebook PH1000 (2020 revised printing comparison)"
+    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Comparison only; not authority for the 2014 target."
 confidence: high
 status: needs_followup
 ---
@@ -70,9 +77,14 @@ status: needs_followup
   Evidence: FAQ v1.1 §6.2.1.
   Confidence: high
 
+- Claim: PH1000 adds a general “Roll a Die” rule that does not appear in the target 2014 rulebook; it is retained only as a revised-print comparison and not as target law.
+  Source: src-001, src-009
+  Evidence: PH1000 p. 15 contains a “Roll a Die” section and index entry; the byte-verified 2014 rulebook has neither.
+  Confidence: high
+
 ## Variant boundary
 
-Rulebook p. 15 contains cooperative, two-player, betrayer, hardcore, and player-elimination variants. They are documented official options, not silently blended into the standard 3–5-player setup. The target metadata retains the publisher's 2–5 range while the two-player branch uses the cooperative variant with seven starting items and three survivors kept from four.
+Rulebook p. 15 contains cooperative, two-player, betrayer, hardcore, and player-elimination variants. They are documented official options, not silently blended into the standard setup. The two-player branch uses the cooperative variant with seven starting items and three survivors kept from four; this record does not claim that frontmatter stores a player-range field, because the current OKF game schema has no such field.
 
 ## Open support question
 

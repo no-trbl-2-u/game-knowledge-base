@@ -8,25 +8,25 @@ game:
   publisher: "Plaid Hat Games"
   year: 2014
   weight: 3.01
-  edition: "English 2014 standalone/base game; exact printing mapping unresolved"
+  edition: "English 2014 first/release printing"
 scope: "existing-corpus remediation and honest authority-gap ledger"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
 better_if_labels: []
 sources:
   - id: "src-001"
-    title: "Dead of Winter rulebook (PH1000)"
-    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    title: "Dead of Winter rulebook (English 2014 release printing)"
+    url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/rules.pdf"
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Official CDN copy; 20 pages; 2020 PDF metadata."
+    notes: "Target authority; 24,044,267 bytes; 20 pages; SHA-256 41f37d18f07bf04303c364916dcc0bab62d379b85373661650b0118be5812ca7."
   - id: "src-002"
     title: "Dead of Winter FAQ version 1.1"
     url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/dow-faq.pdf"
     kind: faq
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Official four-page FAQ."
+    notes: "Target-applicable official four-page FAQ."
   - id: "src-004"
     title: "Plaid Hat Games — Can't find a game?"
     url: "https://www.plaidhatgames.com/cant-find-game/"
@@ -40,36 +40,45 @@ sources:
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-31"
-    notes: "Independent review."
+    notes: "Independent contemporaneous base-game review."
+  - id: "src-007"
+    title: "Archived Dead of Winter rulebook (2014-04-24)"
+    url: "https://web.archive.org/web/20140424225416id_/http://www.plaidhatgames.com/images/games/dead-of-winter/rules.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Byte-identical immutable target witness."
+  - id: "src-008"
+    title: "Archived Plaid Hat Dead of Winter product page (2014-09-30)"
+    url: "https://web.archive.org/web/20140930140125if_/http://www.plaidhatgames.com/games/dead-of-winter/"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Links the target rules path as 'download the game rules.'"
+  - id: "src-009"
+    title: "Dead of Winter rulebook PH1000 (2020 revised printing comparison)"
+    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Later revised-print comparison only; never target authority."
 followups:
   - source_id: "src-004"
     url: "https://www.fantasyflightgames.com/en/products/dead-of-winter/"
     failure: blocked
-    fallback: "Official Plaid Hat transfer page plus directly retrieved FFG CDN rulebook."
+    fallback: "Target Plaid Hat rulebook/FAQ, transfer page, known archived FFG capture, and direct PH1000 comparison receipt."
     retry_needs: manual_review
-    notes: "Cloudflare challenge prevented a bounded current support-file inventory on 2026-07-31."
+    notes: "Need an authoritative bounded live/archived FFG support inventory beyond inspected captures; no absence claim."
   - source_id: null
-    url: "https://www.plaidhatgames.com/board-games/dead-of-winter/"
+    url: "lawful immutable complete 2014 base-game card/board/reference face corpus or physical-copy inspection"
     failure: not_found
-    fallback: "Legacy /games/dead-of-winter redirect and archived FAQ announcement."
-    retry_needs: wayback_snapshot
-    notes: "Modern-style guessed product path returned Plaid Hat's 404 page."
-  - source_id: "src-001"
-    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
-    failure: other
-    fallback: "The document was acquired and used provisionally, but its 2020 PDF metadata is not conclusive proof of first-printing identity."
-    retry_needs: alternate_source
-    notes: "Need a 2014 box/printing identifier or immutable archived publisher witness mapping this file to the target printing."
-  - source_id: null
-    url: "official face-level component/card corpus for PH1000"
-    failure: not_found
-    fallback: "Rulebook class quantities and framework rules only; no card text inferred."
+    fallback: "2014 rulebook class quantities and framework rules plus FAQ cases; no missing face text inferred."
     retry_needs: manual_review
-    notes: "Need authoritative coverage of every rule-bearing card/board/reference face or a provably complete immutable source-level ledger."
+    notes: "Need authoritative coverage of all rule-bearing faces/surfaces without publishing replacement-quality content."
 confidence: high
 status: needs_followup
 last_verified: "2026-07-31"
-summary: "Blocked remediation: substantial rules/components/reception acquired, but governing, printing, and visual denominators remain open."
+summary: "Target-print repair complete; governing face/support denominators remain open, so all target records remain needs_followup."
 ---
 
 # Gap report — do not merge
@@ -78,61 +87,58 @@ summary: "Blocked remediation: substantial rules/components/reception acquired, 
 
 | Source/component class | Acquired | Target applicability | Authority/disposition |
 |---|---|---|---|
-| PH1000 rulebook | yes | unresolved exact 2014 printing mapping | Official framework authority, inspected in full. |
-| FAQ v1.1 | yes | base game; published 2015 | Official clarification/errata authority, inspected in full. |
-| Current FFG support inventory / later FAQ or errata | no | unknown | Cloudflare blocked; absence not proved. |
-| 10 dual-sided main objectives | quantity/framework only | base class confirmed | Setup, victory, timing, and hardcore overrides are governing; face corpus missing. |
-| 24 ordinary + 10 betrayal + 10 exiled objectives | quantity/framework only | base classes confirmed | Individual victory conditions are governing; face corpus missing. |
-| 30 survivor cards | quantity plus a few FAQ cases | base class confirmed | Unique abilities govern play; full face corpus missing. |
-| 25 starting + 120 location item cards | quantity/framework only | base classes confirmed | Abilities and symbols govern actions/objectives/crises; full face corpus missing. |
-| 20 crisis cards | quantity/framework only | base class confirmed | Prevention symbols and pass/fail effects govern each round; face corpus missing. |
-| 80 Crossroads cards | quantity/framework plus three FAQ cases | base class confirmed | Private triggers, choices, votes, and persistent effects govern play; face corpus missing. |
-| 5 player references, colony board, 6 location surfaces | diagrams in rulebook only | base classes confirmed | Rule-bearing surfaces not independently captured/verified. |
-| Tokens, dice, standees | quantities and framework semantics acquired | base classes confirmed | Physical semantics covered at category level. |
+| 2014 release rulebook | yes, live plus byte-identical 2014 archive witness | exact target | Primary framework and inventory authority, inspected in full. |
+| FAQ v1.1 + official announcement | yes | target base game | Official clarification/errata authority, inspected in full. |
+| PH1000 | yes | later revised printing only | Comparison segregated; never target authority. |
+| Current/archived FFG support inventory beyond known captures | no | unknown | Boundedness remains open; absence not proved. |
+| 10 dual-sided main objectives | quantity/framework only | target class confirmed | Standard/hardcore setup, victory, timing, and story text govern; face corpus missing. |
+| 24 ordinary + 10 betrayal + 10 exiled objectives | quantity/framework only | target classes confirmed | Individual victory conditions govern; face corpus missing. |
+| 30 survivor abilities | quantity plus FAQ cases | target class confirmed | Full face corpus missing. |
+| 145 item cards (25 starting + 6×20 location) | quantity/framework only | target classes confirmed | Abilities and symbols govern actions/objectives/crises; full face corpus missing. |
+| 20 crisis cards | quantity/framework only | target class confirmed | Prevention symbols and pass/fail effects govern each round; face corpus missing. |
+| 80 Crossroads cards | quantity/framework plus FAQ cases | target class confirmed | Private triggers, choices, votes, and persistent effects govern; face corpus missing. |
+| 5 player references, colony board, 6 location surfaces | rulebook diagrams only | target classes confirmed | Full rule-bearing surfaces not independently captured. |
+| Tokens/markers, action/exposure dice, standees/stands, first-player framework | category quantities and framework semantics acquired | target classes confirmed | Semantically resolved only to the extent the 2014 rulebook/FAQ governs them; no bag is listed. |
+| Any other rule-bearing surface | unknown | unknown | Open until a lawful complete face/surface inspection closes the inventory. |
 
-**Governing completeness: UNKNOWN.** Two official documents and ten provisional component/source groups are identified, but a closed denominator cannot be asserted until the current support inventory, exact printing mapping, and all card/surface authorities are bounded. No percentage is reported.
+**Governing completeness: UNKNOWN.** The target rulebook and FAQ are acquired, but the support inventory and card/board/reference face corpus are not closed. No governing percentage or composite is reported.
 
 ## Factual/component arithmetic
 
-- Physical inventory-line transcription: **32/32 = 100%**, using each printed component bullet as one category; mechanical quantity sum **627**.
-- Card/sheet class allocation: **341/341 physical cards/sheets represented by category and quantity**, counting 5 references and 6 location cards; this is not face-text coverage.
-- Distinct identity/text coverage: **UNKNOWN**; no authoritative unique-face denominator or complete readout was acquired.
+- Physical inventory-line transcription: **32/32 = 100%**, treating each printed component bullet as one category; exact 2014 mechanical quantity sum **637**.
+- Rulebook-order arithmetic: `10+24+10+10+30+5+1+25+20+20+20+20+20+20+20+80+25+20+20+20+20+6+2+30+30+30+60+1+6+1+30+1=637`.
+- Card/board/reference allocation: **341/341 physical surfaces represented by class and quantity**, explicitly including the colony board: `10+24+10+10+30+5+25+(6×20)+20+80+6+1=341`.
+- Item-card corpus: **145** (`25 + 6×20`), not 170.
+- Distinct identity/text coverage: **UNKNOWN**; no authoritative complete face readout was acquired.
 - Governing source coverage: **UNKNOWN**; denominator open.
-- Composite factual coverage: **not calculated** because material denominators are open. The game is treated as a non-deckbuilder: cards are drawn/searched/played from fixed scenario decks, but players do not conventionally construct or improve personal draw decks.
+- Composite factual coverage: **not calculated**. This is a non-deckbuilder; fixed scenario/location decks do not establish player deck construction or improvement.
 
-## Representative acquired rules
+## Target/revision binding
 
-- Claim: Standard rounds resolve player turns before colony upkeep, with action dice based on survivors and a mix of die-spending and free actions.
-  Source: src-001
-  Evidence: Rulebook pp. 8–12.
+- Claim: The 2014 release rulebook is the target primary authority and PH1000 is a later revised-print comparison only.
+  Source: src-001, src-007, src-008, src-009
+  Evidence: Live/archive target PDFs are byte-identical; the archived product page links their path as the game rules; PH1000 differs in component count and substantive rule text.
   Confidence: high
 
-- Claim: Crossroads triggers are read privately by the right-hand player and only revealed/resolved when their condition occurs.
-  Source: src-001
-  Evidence: Rulebook p. 12.
-  Confidence: high
-
-- Claim: Endgame can produce multiple winners, mixed winners/losers, or universal loss according to secret objectives.
-  Source: src-001
-  Evidence: Rulebook p. 14.
+- Claim: Target crisis law compares the contribution total with the number of players, while PH1000 later says non-exiled players and FAQ v1.1 supplies no target-applicable correction.
+  Source: src-001, src-002, src-009
+  Evidence: Compared p. 12 texts and full FAQ v1.1 inspection.
   Confidence: high
 
 ## Reception disposition
 
-- Claim: A contemporaneous independent review praises Crossroads-driven narrative and private-goal tension while identifying abrupt exposure deaths and finite event novelty as group-fit pressures.
+- Claim: One contemporaneous review praises Crossroads and combined private-goal/co-op tension while identifying first-turn bite volatility and finite event novelty as bounded group-fit pressures.
   Source: src-005
-  Evidence: Review sections on Crossroads, exposure, and final assessment.
+  Evidence: Review sections on Crossroads, exposure, and final assessment; no consensus claim.
   Confidence: high
 
 ## Visual disposition
 
-The four pre-existing WebPs and contact sheet were synthetic SomberSoft analytical diagrams, not source-linked visual evidence, and were replaced rather than retained. The replacement packet contains four noncontiguous, lossy 458×600 page-overview derivatives from official rulebook pp. 2, 4, 6, and 12 plus a deterministic 2×2 contact sheet. The manifest records the exact PDF locator/hash, page locators, creator/rights language, editorial-excerpt basis, derivative hashes, and analytical purpose. Visual inspection found four distinct, uncorrupted panels covering components/objectives, crisis/Crossroads anatomy, setup, and colony/crisis flow. These reduced excerpts do not close the missing official product-photography or complete card-face authority gaps.
+Four noncontiguous pages (2, 4, 6, 12) from the byte-verified 2014 target PDF were deterministically rasterized into reduced 458×600 lossy WebP editorial excerpts, then assembled from the retained derivatives into a 458×600 2×2 contact sheet. The manifest records source hash, page locators, tools, exact transform, output dimensions/bytes/hashes, rights basis, and analytical purpose. Same-turn visual inspection confirmed four distinct uncorrupted panels, no expansion/promo/PH1000 leakage, and **30 zombie tokens** on p. 2. No additional photography is needed for this packet.
 
-## Exact help requested from T
+## Exact residual help requested from T
 
-1. Provide or authorize manual access to the current Fantasy Flight Games Dead of Winter support page/file inventory.
-2. Provide a first-printing 2014 rulebook/box identifier or archived official witness mapping the acquired 2020-created PH1000 PDF to the target edition.
-3. Provide a lawful, authoritative complete base-game card/board/reference face corpus, or a physical copy for independent inventory without publishing replacement-quality card text.
-4. Provide rights-cleared official product/component photography or authorize narrowly reduced rulebook excerpts for a four-image analytical packet.
+1. Provide or authorize an authoritative bounded live/archived Fantasy Flight Games support inventory beyond the inspected captures.
+2. Provide a lawful immutable complete 2014 base-game card/board/reference face corpus, or a physical copy for independent inspection without publishing replacement-quality text.
 
 Disposition: **OPEN DRAFT / needs_followup / no readiness claim / do not merge.**

@@ -8,39 +8,39 @@ game:
   publisher: "Plaid Hat Games"
   year: 2014
   weight: 3.01
-  edition: "English 2014 standalone/base game; exact printing mapping unresolved"
-scope: "official rules/support, independent reception, and bounded failed-source inventory"
+  edition: "English 2014 first/release printing"
+scope: "target-print official rules/support, segregated revised-print comparison, independent reception, and bounded support inventory"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
 better_if_labels: []
 sources:
   - id: "src-001"
-    title: "Dead of Winter rulebook (PH1000)"
-    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    title: "Dead of Winter rulebook (English 2014 release printing)"
+    url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/rules.pdf"
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "HTTP 200; application/pdf; 9,006,551 bytes; 20 pages; SHA-256 0d7389eb286e454ff3fc431efc68fd87f5aceaba939e02bab55664e6183af9b9."
+    notes: "Target primary authority; HTTP 200; application/pdf; 24,044,267 bytes; 20 pages; SHA-256 41f37d18f07bf04303c364916dcc0bab62d379b85373661650b0118be5812ca7."
   - id: "src-002"
     title: "Dead of Winter FAQ version 1.1"
     url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/dow-faq.pdf"
     kind: faq
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "HTTP 200; application/pdf; 2,684,037 bytes; 4 pages; SHA-256 331e65dc07240857405d595592e8320e61ac6649def735b3cb8c7659ba13bcee."
+    notes: "Target-applicable official FAQ; HTTP 200; application/pdf; 2,684,037 bytes; 4 pages; SHA-256 331e65dc07240857405d595592e8320e61ac6649def735b3cb8c7659ba13bcee."
   - id: "src-003"
     title: "Dead of Winter FAQ Available"
     url: "https://www.plaidhatgames.com/news/463/"
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Archived official announcement dated 2015-02-05 linking FAQ as support material."
+    notes: "Official announcement dated 2015-02-05 linking FAQ v1.1; dynamic HTML receipt remains date-bounded."
   - id: "src-004"
     title: "Plaid Hat Games — Can't find a game?"
     url: "https://www.plaidhatgames.com/cant-find-game/"
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Final redirect target from legacy /games/dead-of-winter; identifies Fantasy Flight Games as current manager."
+    notes: "Current Plaid Hat page identifies Fantasy Flight Games as current manager."
   - id: "src-005"
     title: "Dead of Winter Review — Board Game Reviews by Josh"
     url: "https://www.boardgamereviewsbyjosh.com/2014/09/dead-of-winter-review.html"
@@ -55,45 +55,79 @@ sources:
     provenance: community
     retrieved_at: "2026-07-26"
     notes: "Identity and historical selection metadata only; not rules or reception authority."
+  - id: "src-007"
+    title: "Archived Dead of Winter rulebook (2014-04-24)"
+    url: "https://web.archive.org/web/20140424225416id_/http://www.plaidhatgames.com/images/games/dead-of-winter/rules.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "HTTP 200; application/pdf; 24,044,267 bytes; SHA-256 41f37d18f07bf04303c364916dcc0bab62d379b85373661650b0118be5812ca7; byte-identical to src-001."
+  - id: "src-008"
+    title: "Archived Plaid Hat Dead of Winter product page (2014-09-30)"
+    url: "https://web.archive.org/web/20140930140125if_/http://www.plaidhatgames.com/games/dead-of-winter/"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "HTTP 200 capture; 33,532 served bytes; SHA-256 5ce72862a372daaea1d4684d6b2cbe71247b5926155bffa790f5fd35db72893f; links /images/games/dead-of-winter/rules.pdf as 'download the game rules.'"
+  - id: "src-009"
+    title: "Dead of Winter rulebook PH1000 (2020 revised printing comparison)"
+    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Later revised-print comparison only; HTTP 200; application/pdf; 9,006,551 bytes; 20 pages; SHA-256 0d7389eb286e454ff3fc431efc68fd87f5aceaba939e02bab55664e6183af9b9. Never target authority."
 confidence: high
 status: needs_followup
 last_verified: "2026-07-31"
-summary: "Receipted official rules/FAQ and independent reception; support and printing inventory remain open."
+summary: "The byte-verified 2014 release rulebook is target authority; PH1000 is segregated as a later revised-print comparison; card-face and support inventories remain open."
 ---
 
 # Source and retrieval ledger
 
 | ID | Retrieval UTC | Final URL / outcome | Type | Bytes | Pages | SHA-256 |
 |---|---|---|---|---:|---:|---|
-| src-001 | 2026-07-31T08:57:54Z | exact URL above; HTTP 200 | application/pdf | 9,006,551 | 20 | `0d7389eb286e454ff3fc431efc68fd87f5aceaba939e02bab55664e6183af9b9` |
-| src-002 | 2026-07-31T08:59:00Z | exact URL above; HTTP 200 | application/pdf | 2,684,037 | 4 | `331e65dc07240857405d595592e8320e61ac6649def735b3cb8c7659ba13bcee` |
-| src-003 | 2026-07-31T08:59:00Z | exact URL above; HTTP 200 in browser | text/html | not retained | — | — |
-| src-004 | 2026-07-31T08:58:45Z | legacy URL redirected twice to exact URL above; HTTP 200 | text/html | 24,189 | — | `a3fd3527ba9ae7e1c220c5ac30df295013fa91e1f14820e692073ae451366eeb` |
-| src-005 | 2026-07-31T08:58:22Z | exact URL above; HTTP 200 | text/html | 114,724 | — | `5b5cf232779f576a064fe4017c9b6f06f25539784258226ef2cb7f9d2aba61c3` |
+| src-001 | 2026-07-31 | exact URL above; HTTP 200 | application/pdf | 24,044,267 | 20 | `41f37d18f07bf04303c364916dcc0bab62d379b85373661650b0118be5812ca7` |
+| src-007 | 2026-07-31 | exact archive URL above; HTTP 200 | application/pdf | 24,044,267 | 20 | `41f37d18f07bf04303c364916dcc0bab62d379b85373661650b0118be5812ca7` |
+| src-008 | 2026-07-31 | 2014-09-30 archive capture; HTTP 200 | text/html | 33,532 | — | `5ce72862a372daaea1d4684d6b2cbe71247b5926155bffa790f5fd35db72893f` |
+| src-009 | 2026-07-31 | exact URL above; HTTP 200 | application/pdf | 9,006,551 | 20 | `0d7389eb286e454ff3fc431efc68fd87f5aceaba939e02bab55664e6183af9b9` |
+| src-002 | 2026-07-31 | exact URL above; HTTP 200 | application/pdf | 2,684,037 | 4 | `331e65dc07240857405d595592e8320e61ac6649def735b3cb8c7659ba13bcee` |
+| src-003 | 2026-07-31 | exact URL above; dynamic HTML | text/html | date-bounded | — | date-bounded |
+| src-004 | 2026-07-31 | exact URL above; HTTP 200 | text/html | 24,189 | — | `a3fd3527ba9ae7e1c220c5ac30df295013fa91e1f14820e692073ae451366eeb` |
+| src-005 | 2026-07-31 | exact URL above; HTTP 200 | text/html | 114,724 | — | `5b5cf232779f576a064fe4017c9b6f06f25539784258226ef2cb7f9d2aba61c3` |
 
-## Document identity
+## Target document identity
 
-- Claim: The downloaded PH1000 rulebook is a 20-page official CDN document, but its PDF was created and modified on 2020-03-10 rather than in 2014.
-  Source: src-001
-  Evidence: `pdfinfo` reports creator Adobe InDesign 15.0, creation 2020-03-10 19:51:43 UTC, modification 19:55:37 UTC, PDF 1.4, 20 pages.
+- Claim: The live Plaid Hat PDF and immutable 2014 archive witness are byte-identical official copies of the target release rulebook.
+  Source: src-001, src-007, src-008
+  Evidence: Both PDFs are 24,044,267 bytes with SHA-256 `41f37d18…12ca7`; the archived 2014 product page labels the captured rules path “download the game rules.”
   Confidence: high
 
-- Claim: FAQ v1.1 is an official four-page support document published after the base game's release.
+- Claim: The target PDF is a 20-page 2014 InDesign CS6 document, not the later PH1000 revision.
+  Source: src-001
+  Evidence: `pdfinfo` reports Adobe InDesign CS6 / PDF Library 10.0.1; created 2014-01-29 04:54:29 UTC; modified 04:55:24 UTC; PDF 1.7; 576×756 pt.
+  Confidence: high
+
+- Claim: FAQ v1.1 and its official announcement remain target-applicable support authorities.
   Source: src-002, src-003
-  Evidence: PDF metadata reports creation 2015-02-04; Plaid Hat's archived 2015-02-05 news post announces the download in the game's support section.
+  Evidence: The four-page FAQ is dated 2015-02-04 in PDF metadata; the 2015-02-05 Plaid Hat announcement links it for Dead of Winter.
+  Confidence: high
+
+## Revised-print segregation
+
+- Claim: PH1000 is a later revised printing and is not target authority.
+  Source: src-001, src-009
+  Evidence: Compared PDFs differ materially: 30→20 zombie tokens; removal of the 2014 turn-only card-play sentence plus added event-item removal text; crisis threshold “number of players”→“number of non-exiled players”; and an added general “Roll a Die” rule.
   Confidence: high
 
 ## Bounded failed and incomplete searches
 
 | Attempt | Outcome | Evidentiary meaning |
 |---|---|---|
-| `https://www.plaidhatgames.com/games/dead-of-winter` | 301 → `/games/dead-of-winter/` → 301 → `/cant-find-game/` → 200 | Current Plaid Hat support page retired; not proof that no other support files exist. |
-| `https://www.plaidhatgames.com/board-games/dead-of-winter/` | 404 page in browser | Exact attempted modern-style product URL absent. |
-| `https://www.fantasyflightgames.com/en/products/dead-of-winter/` | Cloudflare verification challenge | Current manager's product/support inventory could not be bounded automatically. |
-| Plaid Hat/FFG web searches for Dead of Winter FAQ/errata | Located FAQ v1.1 and official announcement; no dated official index enumerating all support files | Search is bounded reconnaissance, not proof of absence of later FAQ/errata. |
-| Official component/card gallery search | No complete official source located for all 10 main-objective faces, 44 secret-objective faces, 30 survivor faces, 170 item faces, 20 crisis faces, 80 Crossroads faces, 5 reference sheets, and board/location surfaces | Card-local governing denominator remains open. |
+| Current FFG product/support page | Cloudflare challenge during bounded retrieval | Current support inventory remains unknown; no absence claim. |
+| Archived 2020 FFG product capture | Known capture exposes PH1000 rules listing | Bounded historical capture only; does not prove the complete current/archive inventory. |
+| Official component/card gallery search | No complete official source located for 10 dual-sided main objectives, 24 ordinary/10 betrayal/10 exiled objectives, 30 survivor abilities, 145 item cards, 20 crises, 80 Crossroads, 5 references, colony board, 6 locations, or other rule-bearing surfaces | Distinct identity/text and governing completeness remain UNKNOWN. |
 
 - Claim: Plaid Hat currently directs Dead of Winter support to Fantasy Flight Games.
   Source: src-004
-  Evidence: The page says Dead of Winter and its expansions are now published and managed by Fantasy Flight Games.
+  Evidence: The current page says Dead of Winter and its expansions are now published and managed by Fantasy Flight Games.
   Confidence: high

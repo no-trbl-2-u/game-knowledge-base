@@ -8,14 +8,14 @@ game:
   publisher: "Plaid Hat Games"
   year: 2014
   weight: 3.01
-  edition: "English 2014 standalone/base game; exact printing mapping unresolved"
+  edition: "English 2014 first/release printing"
 scope: "round, turn, action-dice economy, item handling, and transfers"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
 better_if_labels: []
 sources:
   - id: "src-001"
-    title: "Dead of Winter rulebook (PH1000)"
-    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    title: "Dead of Winter rulebook (English 2014 release printing)"
+    url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/rules.pdf"
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-31"
@@ -27,6 +27,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "Actions section."
+  - id: "src-009"
+    title: "Dead of Winter rulebook PH1000 (2020 revised printing comparison)"
+    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Comparison only; not authority for the 2014 target."
 confidence: high
 status: needs_followup
 ---
@@ -63,7 +70,17 @@ status: needs_followup
   Evidence: Rulebook p. 11, Request and Hand Off; FAQ v1.1 §5.2.1.
   Confidence: high
 
-- Claim: The retrieved rulebook states no general hand-size limit.
+- Claim: The target 2014 rulebook limits card plays to the acting player's turn.
   Source: src-001
-  Evidence: Rules for item cards, requests, hand-offs, crises, and endgame contain no hand-cap procedure; absence is limited to the inspected 20-page document.
+  Evidence: 2014 rulebook p. 10, Play a Card: “A player can only play cards during his turn.”
+  Confidence: high
+
+- Claim: PH1000 removes that target-only card-play sentence and adds event-item removal text; those later-print changes are not imported into the 2014 target rules.
+  Source: src-001, src-009
+  Evidence: Text comparison of p. 10 in the two receipted PDFs: only the 2014 source contains the general turn limit, while PH1000 adds event-item removal-from-game wording.
+  Confidence: high
+
+- Claim: The inspected target 2014 rulebook states no general hand-size limit.
+  Source: src-001
+  Evidence: Rules for item cards, requests, hand-offs, crises, and endgame contain no hand-cap procedure; absence is limited to the inspected 20-page 2014 document.
   Confidence: medium

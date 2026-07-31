@@ -8,14 +8,14 @@ game:
   publisher: "Plaid Hat Games"
   year: 2014
   weight: 3.01
-  edition: "English 2014 standalone/base game; exact printing mapping unresolved"
+  edition: "English 2014 first/release printing"
 scope: "colony upkeep, food, waste, crisis, zombies, morale, and Crossroads timing"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
 better_if_labels: []
 sources:
   - id: "src-001"
-    title: "Dead of Winter rulebook (PH1000)"
-    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    title: "Dead of Winter rulebook (English 2014 release printing)"
+    url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/rules.pdf"
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-31"
@@ -27,6 +27,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "Crossroads and colony-phase sections."
+  - id: "src-009"
+    title: "Dead of Winter rulebook PH1000 (2020 revised printing comparison)"
+    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Comparison only; not authority for the 2014 target."
 confidence: high
 status: needs_followup
 ---
@@ -48,9 +55,14 @@ status: needs_followup
   Evidence: Rulebook pp. 10 and 12, Clean Waste and Check Waste.
   Confidence: high
 
-- Claim: Crisis contributions are made face down and shuffled; matching symbols add positive points while any nonmatching symbol subtracts one, preventing the crisis when the resulting total reaches the number of non-exiled players.
+- Claim: Under the target 2014 rulebook, crisis contributions are made face down and shuffled; matching symbols add positive points while any nonmatching symbol subtracts one, preventing the crisis when the resulting total reaches the number of players.
   Source: src-001
-  Evidence: Rulebook pp. 11–12, Add a Card to the Crisis and Resolve Crisis.
+  Evidence: 2014 rulebook pp. 11–12, Add a Card to the Crisis and Resolve Crisis; p. 12 says “number of players.”
+  Confidence: high
+
+- Claim: PH1000 later revises the crisis threshold to the number of non-exiled players; FAQ v1.1 does not make that revision, so it is recorded only as a segregated printing difference and is not imported into target law.
+  Source: src-001, src-002, src-009
+  Evidence: 2014 rulebook p. 12 says “number of players”; PH1000 p. 12 says “number of non-exiled players”; the inspected four-page FAQ v1.1 contains no crisis-threshold correction.
   Confidence: high
 
 - Claim: Zombie demand is one per two survivors at the colony, rounded up, plus one per survivor at each non-colony location; overfull entrances break barricades first or kill the lowest-influence survivor when overrun.

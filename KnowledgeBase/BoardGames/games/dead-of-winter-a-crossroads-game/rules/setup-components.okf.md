@@ -8,14 +8,14 @@ game:
   publisher: "Plaid Hat Games"
   year: 2014
   weight: 3.01
-  edition: "English 2014 standalone/base game; exact printing mapping unresolved"
-scope: "setup and physical inventory in the retrieved PH1000 rulebook"
+  edition: "English 2014 first/release printing"
+scope: "setup and physical inventory in the official 2014 release rulebook"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
 better_if_labels: []
 sources:
   - id: "src-001"
-    title: "Dead of Winter rulebook (PH1000)"
-    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    title: "Dead of Winter rulebook (English 2014 release printing)"
+    url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/rules.pdf"
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-31"
@@ -56,7 +56,7 @@ Convention: each bullet printed in the rulebook's component list is one category
 | starvation tokens | 6 |
 | track markers | 2 |
 | zombie standees | 30 |
-| zombie tokens | 20 |
+| zombie tokens | 30 |
 | survivor standees | 30 |
 | plastic standee stands | 60 |
 | colony board | 1 |
@@ -65,9 +65,9 @@ Convention: each bullet printed in the rulebook's component list is one category
 | action dice | 30 |
 | exposure die | 1 |
 
-- Claim: All 32 printed component-list categories and quantities are transcribed above, totaling 627 physical pieces under the declared line convention.
+- Claim: All 32 printed component-list categories and quantities are transcribed above, totaling 637 physical pieces under the declared line convention.
   Source: src-001
-  Evidence: Rulebook p. 2 component list; mechanical sum of its 32 quantities is 627.
+  Evidence: 2014 rulebook p. 2 component list; `10+24+10+10+30+5+1+25+20+20+20+20+20+20+20+80+25+20+20+20+20+6+2+30+30+30+60+1+6+1+30+1=637`.
   Confidence: high
 
 ## Standard setup
@@ -89,4 +89,4 @@ Convention: each bullet printed in the rulebook's component list is one category
 
 ## Coverage boundary
 
-The component inventory line measure is **32/32 = 100%**. Card-class physical allocation is **341 cards/sheets represented by class quantity / 341 printed cards/sheets**, counting 5 reference sheets and 6 location cards. Distinct identity/text coverage is **UNKNOWN** because no authoritative face-level catalog was acquired; the physical count cannot prove unique names, duplicate allocation, or full text.
+The component inventory line measure is **32/32 = 100%**. Card/board/reference allocation is **341/341 physical surfaces represented by class quantity**, explicitly counting 5 player references, 6 location cards, and the colony board: `10+24+10+10+30+5+25+(6×20)+20+80+6+1=341`. Of these, the item-card corpus is **145** (`25 + 6×20`). Distinct identity/text coverage and the governing denominator are **UNKNOWN** because no authoritative face-level catalog was acquired; physical arithmetic cannot prove unique names, duplicates, or full text.

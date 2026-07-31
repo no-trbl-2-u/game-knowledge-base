@@ -8,14 +8,14 @@ game:
   publisher: "Plaid Hat Games"
   year: 2014
   weight: 3.01
-  edition: "English 2014 standalone/base game; exact printing mapping unresolved"
+  edition: "English 2014 first/release printing"
 scope: "objectives, voting, exile, betrayer incentives, and endgame"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
 better_if_labels: []
 sources:
   - id: "src-001"
-    title: "Dead of Winter rulebook (PH1000)"
-    url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
+    title: "Dead of Winter rulebook (English 2014 release printing)"
+    url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/rules.pdf"
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-31"
@@ -48,10 +48,10 @@ status: needs_followup
   Evidence: Rulebook pp. 2 and 15, Secret Objective Cards and Roleplaying, Secret Objectives and Game Balance.
   Confidence: high
 
-- Claim: A non-exiled player may once per turn call a vote to exile another player, and voting is simultaneous after deliberation; the rules do not give a tied exile vote enough affirmative votes to pass.
+- Claim: A non-exiled player may once per turn call a vote to exile another player, voting is simultaneous after deliberation, and the first player breaks a tied exile vote.
   Source: src-001
   Evidence: Rulebook pp. 11 and 15, Vote to Exile and Voting.
-  Confidence: medium
+  Confidence: high
 
 - Claim: Exile gives the player an exiled secret objective, moves colony survivors to non-colony locations, and removes crisis contribution, voting, colony-food-token spending, and normal morale-loss-on-death privileges while preserving a modified personal game.
   Source: src-001

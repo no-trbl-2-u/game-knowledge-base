@@ -26,7 +26,7 @@ status: needs_followup
 
 # Better-if pressures
 
-- Claim: The game would better preserve long-run narrative novelty if its Crossroads supply felt less visibly finite to repeat players.
+- Claim: Under the `strategic-depth` taxonomy, the game would better preserve repeated-play discovery and planning uncertainty if its Crossroads supply felt less visibly finite to repeat players; this is an explicit mapping from one reviewer's finite-narrative-supply concern, not a consensus judgment about strategy quality.
   Source: src-005
   Evidence: The reviewer praises the 80-card deck yet identifies knowing that the story supply is limited as one of the few disliked aspects.
   Confidence: medium
