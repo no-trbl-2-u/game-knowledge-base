@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url'
 import {
   approvalFindings,
   claimTripletFindings,
+  coverageFindings,
   duplicateParagraphFindings,
   hashTree,
   packetHash,
@@ -103,6 +104,7 @@ function canonicalSchemaFindings(canonical, slug) {
 
 export function validateCandidatePackage(candidateDir, candidate) {
   const findings = []
+  findings.push(...coverageFindings(candidate, rel(candidateDir)))
   const evidenceFile = path.join(candidateDir, 'evidence.json')
   const canonical = path.join(candidateDir, 'canonical')
   if (!fs.existsSync(evidenceFile)) {

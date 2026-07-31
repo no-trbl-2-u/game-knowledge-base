@@ -24,7 +24,7 @@ writes what, on what cadence) is `KnowledgeBase/BoardGames/operations.okf.md`.
    source declared in frontmatter. Never mirror copyrighted rulebook text —
    summarize and cite. Don't invent claims a source doesn't support.
 4. **Scouting is not promotion.** Bathcat writes only under `intake/runs/`,
-   at most 2 cooperative + 2 solo RPG + 2 rotating-focus candidates. BGG may
+   at most 1 cooperative + 1 solo RPG + 1 rotating-focus candidate. BGG may
    discover candidates, but official rules and independent review must come
    from outside BGG. Bathcat cannot create `approval.json` or write canonical
    `games/`. The Mennonite independently approves an immutable packet hash;
@@ -51,7 +51,9 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 ## Who writes here (the automation map)
 
 - **Bathcat scout** (external Hermes cron) — wishlist-first discovery and
-  noncanonical evidence packets only; target 2/2/2, honest shortfalls allowed.
+  noncanonical evidence packets only; target 1/1/1, honest eligibility shortfalls
+  allowed. Ready packets require 100% rules coverage and non-deckbuilders require
+  at least 60% measured factual coverage.
 - **Mennonite intake audit** (separate external Hermes cron) — independently
   reopens sources, verifies claims and visuals, binds approval to the packet
   SHA-256, and invokes deterministic promotion only after approval is committed.

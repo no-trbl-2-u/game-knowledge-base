@@ -231,7 +231,7 @@ A `scout_report` doc with `status: needs_followup` must carry a non-empty `follo
 
 ## Daily scout and canonical-promotion boundary
 
-The six-candidate scout target is 2 cooperative, 2 solo RPG, and 2 rotating-focus games. It is a ceiling, not a canonical-output quota. Bathcat writes noncanonical packets under `intake/runs/` according to `intake/README.md`; it does not write directly to `games/` and may not approve its own packet.
+The three-game scout target is 1 cooperative, 1 solo RPG, and 1 rotating-focus game. It is a research target, not a canonical-output quota; honest eligibility shortfalls remain lawful. Bathcat writes noncanonical packets under `intake/runs/` according to `intake/README.md`; it does not write directly to `games/` and may not approve its own packet. Every candidate carries a reproducible coverage ledger. Ready packets require 100% governing-rules coverage for the identified edition, and non-deckbuilders additionally require at least 60% measured factual coverage.
 
 A packet eligible for independent audit stages the complete canonical tree, including `index.okf.md`, `sources.okf.md`, the six standard rule-category records (`overview`, `setup`, `turn-structure`, `actions`, `scoring-endgame`, and `edge-cases-faq`), both reception records, `scout-report.okf.md`, and a 4–8-image visual packet plus contact sheet. It also preserves machine-verifiable retrieval receipts for official rules, independent reception, ratings when claimed, and visual sources. BGG is permitted for discovery, identity, ratings, and community testimony; official rules and independent review must come from separate non-BGG organizational domains, and the packet must span at least two distinct non-BGG organizational domains.
 

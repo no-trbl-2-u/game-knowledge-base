@@ -45,6 +45,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-30"
     notes: "T approved the full prevention stack, reduced the target to two cooperative, two solo RPG, and two rotating-focus candidates, and explicitly allowed research beyond BoardGameGeek. Bathcat scouts and assembles evidence; an independent Mennonite audit and deterministic promotion are required before canonical entry."
+  - id: "src-006"
+    title: "T instruction: three-game depth and coverage gates"
+    url: "local-session"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "T replaced the 2/2/2 breadth target with one cooperative, one solo RPG, and one rotating-focus game per run; every game requires complete governing-rules coverage, and non-deckbuilders target at least 60 percent measured factual coverage."
 confidence: high
 status: verified
 ---
@@ -75,9 +82,14 @@ The current purpose is knowledge gathering only. Full integration into downstrea
   Evidence: T specified "Everyday, once a day at 6am"; cron job `44c13742fca9` is scheduled as `0 6 * * *`.
   Confidence: high
 
-- Claim: The original scout focused on one game per run; the current target is three disjoint two-game candidate cohorts.
-  Source: src-001, src-004, src-005
-  Evidence: T first moved to 5/5/5, then reduced the active target to two cooperative candidates, two solo RPG candidates, and two rotating-focus candidates so the agent has more room for research.
+- Claim: The current scout target is one cooperative, one solo RPG, and one rotating-focus game per run.
+  Source: src-001, src-004, src-005, src-006
+  Evidence: T first moved from one game to broader cohorts, then replaced the 2/2/2 breadth target with a 1/1/1 depth target and explicit coverage gates.
+  Confidence: high
+
+- Claim: Audit readiness requires complete governing-rules coverage for every game and at least 60 percent measured factual coverage for non-deckbuilders.
+  Source: src-006
+  Evidence: T explicitly set 100 percent rules coverage for all three games and a minimum 60 percent factual-coverage target for non-deckbuilders.
   Confidence: high
 
 - Claim: Candidate selection is not canonical coverage.
@@ -158,7 +170,8 @@ Cron job:
 - Report delivery: origin Telegram thread
 - Git delivery: dedicated scout branch and pull request; protected `main` requires current green `validate` CI before squash merge
 - Required scout gate: `node scripts/validate-intake.mjs --run <run-id>`; any finding is a failed run and must not be pushed
-- Candidate target: 2 cooperative + 2 solo RPG + 2 rotating-focus, with honest shortfalls allowed
+- Candidate target: 1 cooperative + 1 solo RPG + 1 rotating-focus, with honest eligibility shortfalls allowed
+- Coverage gate: 100% governing-rules coverage for every ready packet; non-deckbuilders also require at least 60% measured factual coverage
 - Canonical promotion: no quota; Bathcat cannot approve or promote. The Mennonite audits immutable packets and `scripts/promote-intake.mjs` copies approved trees byte-for-byte.
 
 Independent audit job:
@@ -180,7 +193,7 @@ This turns daily growth from "whatever the scout felt like" into demand-driven c
 
 ## Daily output contract
 
-Each scout run selects up to six unique candidates in three disjoint 2/2/2 cohorts. Bathcat may promote none. Selection manifests must keep `blocked`, `ready_for_audit`, `rejected`, `approved`, and `promoted` states distinct under `intake/runs/`.
+Each scout run selects up to three unique candidates in disjoint 1/1/1 cohorts. Bathcat may promote none. Every candidate carries a reproducible coverage ledger; failed thresholds remain blocked. Selection manifests must keep `blocked`, `ready_for_audit`, `rejected`, `approved`, and `promoted` states distinct under `intake/runs/`.
 
 Each independently approved, deterministically promoted game writes one directory:
 

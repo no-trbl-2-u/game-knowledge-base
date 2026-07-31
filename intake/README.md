@@ -6,17 +6,24 @@ index or KB MCP server. A candidate becomes canonical only through
 `scripts/promote-intake.mjs` after an independent Mennonite approval bound to
 the exact packet hash.
 
-## Six-candidate doctrine
+## Three-game coverage doctrine
 
-A Bathcat run may select at most six unique candidates:
+A Bathcat run selects up to three unique candidates:
 
-- 2 cooperative;
-- 2 solo RPG;
-- 2 matching the rotating focus.
+- 1 cooperative;
+- 1 solo RPG;
+- 1 matching the rotating focus.
 
 These are ceilings, not quotas. Honest shortfalls and zero-promotion runs are
 valid. A candidate with missing evidence is `blocked`; it has no `canonical/`
 staging tree and records its blockers in `manifest.json`.
+
+Every candidate records a reproducible coverage ledger. Any non-blocked packet
+must cover 100% of the governing rules corpus for the identified edition.
+Non-deckbuilders must also reach at least 60% factual coverage. Deckbuilders
+still report factual coverage, but may use `known_total: null` and
+`percent: null` when no authoritative distinct-card denominator exists.
+Unknown denominators must never be inferred from assumed duplicate patterns.
 
 BGG is optional discovery, identity, rating, and community evidence. It is not
 the research boundary and cannot satisfy `official_rules`. Each promotable
@@ -62,11 +69,12 @@ intake/runs/<run-id>/
 ```
 
 `run-id` is `YYYY-MM-DD` or `YYYY-MM-DD-slug`. The run manifest uses schema
-version 1:
+version 2. Version 2 adds the mandatory coverage ledger and replaces the former
+2/2/2 ceiling with 1/1/1:
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "run_id": "2026-07-31",
   "created_at": "2026-07-31T06:00:00.000Z",
   "scout": {
@@ -74,10 +82,10 @@ version 1:
     "role": "Field Intelligence and Knowledge Scout"
   },
   "target": {
-    "cooperative": 2,
-    "solo_rpg": 2,
-    "rotating_focus": 2,
-    "total": 6
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
   },
   "focus": { "mechanic": "deck-building" },
   "candidates": [
@@ -88,7 +96,13 @@ version 1:
       "cohort": "cooperative",
       "status": "blocked",
       "discovery_sources": ["https://boardgamegeek.com/boardgame/1/example-game"],
-      "blockers": ["official rulebook not yet retrieved"]
+      "blockers": ["official rulebook not yet retrieved"],
+      "coverage": {
+        "deckbuilder": false,
+        "methodology": "Counts governing documents and source-backed factual ledger entries.",
+        "rules": { "recorded": 0, "known_total": 1, "percent": 0 },
+        "factual": { "recorded": 0, "known_total": 10, "percent": 0 }
+      }
     }
   ]
 }
@@ -132,7 +146,7 @@ An evidence packet contains:
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "slug": "example-game",
   "researcher": {
     "name": "Bathcat",
@@ -160,7 +174,7 @@ Approval schema:
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "decision": "approved",
   "auditor": {
     "name": "The Mennonite",
@@ -223,12 +237,13 @@ node scripts/generate-index.mjs
 node scripts/validate-okf.mjs
 ```
 
-The intake gate also blocks more than six new game directories, more than two
+The intake gate also blocks more than three new game directories, more than one
 candidates per cohort, unsupported claims, placeholder markers, duplicate
 long-form prose, duplicate visual bytes, low-information label images,
 semantic generator scripts targeting `games/`, symlinked packet content,
 canonical directory rename/relocation bypasses, packet mutation after audit,
-and canonical trees that differ from the approved staging tree.
+canonical trees that differ from the approved staging tree, incomplete rules
+coverage, and non-deckbuilder factual coverage below 60%.
 
 ## Failure law
 
