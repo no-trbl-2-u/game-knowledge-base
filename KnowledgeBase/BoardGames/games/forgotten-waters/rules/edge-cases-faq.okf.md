@@ -1,6 +1,6 @@
 ---
 okf_version: 0.2
-type: game_index
+type: rule_category
 game:
   title: "Forgotten Waters"
   slug: "forgotten-waters"
@@ -100,27 +100,28 @@ confidence: medium
 status: needs_followup
 ---
 
-# Forgotten Waters — bounded 2020 base-game record
-
-## Disposition
-- Claim: This record covers English SKU PH2900 as released in 2020; the integral release-era app corpus is not closed, so no percentage or composite coverage score is asserted.
-  Source: src-001, src-004, src-007
-  Evidence: The rulebook requires the web app; the dated FAQ defines its release-era function, while the release announcement identifies the physical product and first-print context.
+# Edge cases and unresolved FAQ
+- Claim: Ties are broken in infamy order, with higher infamy treated as higher.
+  Source: src-001
+  Evidence: Rulebook p.7 Breaking Ties.
+  Confidence: high
+- Claim: A new location-book page clears tokens first; if it has a warning, read it and begin planning without pre-reading resolution text. Turning to the same page still clears tokens; “begin a new round on this page” does not.
+  Source: src-001
+  Evidence: Rulebook p.5 Turning to a New Page and note.
+  Confidence: high
+- Claim: Ship stats cannot exceed their track maximum or fall below zero; treasure hand/tableau limit is four, with specified discard conversion.
+  Source: src-001
+  Evidence: Rulebook p.7 ship-stat and treasure sections.
+  Confidence: high
+- Claim: Built-in midpoint save writes physical state to the ship log; resumed setup comes from the selected scenario's View Setup.
+  Source: src-001, src-004
+  Evidence: Rulebook p.5; FAQ says app itself does not track save state.
+  Confidence: high
+- Claim: Retrieved target authority does not establish dropout/rejoin scaling beyond initial player-count setup; those semantics are UNKNOWN.
+  Source: src-001, src-004
+  Evidence: Rulebook/FAQ inspected with no authoritative dropout procedure identified.
   Confidence: medium
-- Claim: Current app v1.12.0, the 2024 Entry Book, Kraken's Eye, remote play, solo/low-count variants, translations, promos, and other later additions are not silently folded into the 2020 target.
-  Source: src-005, src-006, src-007, src-008, src-010
-  Evidence: These authorities carry different dates, versions, SKUs, or explicit additive roles.
-  Confidence: high
-
-## System summary
-- Claim: Players cooperate to complete a captain's adventure while filling personal constellations that determine individual outcomes.
-  Source: src-001
-  Evidence: Rulebook p.2, Object of the Game.
-  Confidence: high
-- Claim: This is not a deckbuilder: the rules provide fixed treasure/story/objective decks, but no acquire-to-personal-draw-pile cycle or personal deck construction.
-  Source: src-001
-  Evidence: Rulebook pp.2, 4, and 7 describe shared decks and face-up treasure holdings, not deck building.
-  Confidence: high
-
-## Records
-Rules: [overview](rules/overview.okf.md), [setup](rules/setup.okf.md), [turn structure](rules/turn-structure.okf.md), [actions](rules/actions.okf.md), [endgame](rules/scoring-endgame.okf.md), [edge cases](rules/edge-cases-faq.okf.md). Reception: [reviews](reception/reviews.okf.md), [better-if](reception/better-if.okf.md). Evidence: [sources](sources.okf.md), [scout report](scout-report.okf.md), [visuals](visuals/packet.okf.md).
+- Claim: No complete errata/FAQ corpus or explicit conflict-priority hierarchy was retrieved.
+  Source: src-003, src-004
+  Evidence: Product support surface and dated app FAQ are incomplete for those roles.
+  Confidence: medium

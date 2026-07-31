@@ -1,6 +1,6 @@
 ---
 okf_version: 0.2
-type: game_index
+type: rule_category
 game:
   title: "Forgotten Waters"
   slug: "forgotten-waters"
@@ -100,27 +100,20 @@ confidence: medium
 status: needs_followup
 ---
 
-# Forgotten Waters — bounded 2020 base-game record
-
-## Disposition
-- Claim: This record covers English SKU PH2900 as released in 2020; the integral release-era app corpus is not closed, so no percentage or composite coverage score is asserted.
-  Source: src-001, src-004, src-007
-  Evidence: The rulebook requires the web app; the dated FAQ defines its release-era function, while the release announcement identifies the physical product and first-print context.
+# Rules overview
+- Claim: The shared objective is to complete the captain's adventure; personal stars determine each pirate's fate.
+  Source: src-001
+  Evidence: Rulebook p.2 Object of the Game.
+  Confidence: high
+- Claim: Play is app-required in the 2020 rules, with entries keyed into the app and physical ship/player state remaining on table/logs.
+  Source: src-001, src-004
+  Evidence: Rulebook p.2 and App FAQ save-state boundary.
+  Confidence: high
+- Claim: The governing hierarchy is general rulebook procedure, scenario/app directions, then local location/card/sheet effects; exact conflict priority is not expressly closed by retrieved authority.
+  Source: src-001
+  Evidence: Rulebook repeatedly delegates setup/action/entry outcomes to those local surfaces without a complete conflict hierarchy.
   Confidence: medium
-- Claim: Current app v1.12.0, the 2024 Entry Book, Kraken's Eye, remote play, solo/low-count variants, translations, promos, and other later additions are not silently folded into the 2020 target.
-  Source: src-005, src-006, src-007, src-008, src-010
-  Evidence: These authorities carry different dates, versions, SKUs, or explicit additive roles.
-  Confidence: high
-
-## System summary
-- Claim: Players cooperate to complete a captain's adventure while filling personal constellations that determine individual outcomes.
+- Claim: This is not deck-building.
   Source: src-001
-  Evidence: Rulebook p.2, Object of the Game.
+  Evidence: Shared card supplies and face-up treasure holdings lack personal draw/discard/deck acquisition loops.
   Confidence: high
-- Claim: This is not a deckbuilder: the rules provide fixed treasure/story/objective decks, but no acquire-to-personal-draw-pile cycle or personal deck construction.
-  Source: src-001
-  Evidence: Rulebook pp.2, 4, and 7 describe shared decks and face-up treasure holdings, not deck building.
-  Confidence: high
-
-## Records
-Rules: [overview](rules/overview.okf.md), [setup](rules/setup.okf.md), [turn structure](rules/turn-structure.okf.md), [actions](rules/actions.okf.md), [endgame](rules/scoring-endgame.okf.md), [edge cases](rules/edge-cases-faq.okf.md). Reception: [reviews](reception/reviews.okf.md), [better-if](reception/better-if.okf.md). Evidence: [sources](sources.okf.md), [scout report](scout-report.okf.md), [visuals](visuals/packet.okf.md).

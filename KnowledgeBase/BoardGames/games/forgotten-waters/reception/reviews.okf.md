@@ -1,6 +1,6 @@
 ---
 okf_version: 0.2
-type: game_index
+type: reception
 game:
   title: "Forgotten Waters"
   slug: "forgotten-waters"
@@ -11,6 +11,7 @@ game:
   edition: "English 2020 first/release base game (PH2900); release-era app build unresolved"
 scope: "English 2020 first/release base game (PH2900); release-era app build unresolved"
 mechanics: [cooperative-game, dice-rolling, push-your-luck, variable-player-powers, worker-placement]
+better_if_labels: [accessibility, downtime, strategic-depth, turn-pacing]
 sources:
   - id: "src-001"
     title: "Forgotten Waters Rulebook"
@@ -100,27 +101,16 @@ confidence: medium
 status: needs_followup
 ---
 
-# Forgotten Waters — bounded 2020 base-game record
-
-## Disposition
-- Claim: This record covers English SKU PH2900 as released in 2020; the integral release-era app corpus is not closed, so no percentage or composite coverage score is asserted.
-  Source: src-001, src-004, src-007
-  Evidence: The rulebook requires the web app; the dated FAQ defines its release-era function, while the release announcement identifies the physical product and first-print context.
+# Independent reception witnesses
+- Claim: Dicebreaker praised the synthesis of physical board, location book, sheets, and unobtrusive narrated app, while warning that five scenarios, device reliance, component handling, and procedural play limit fit.
+  Source: src-011
+  Evidence: Review paras. around “blends a physical board...” and closing criticism/content-limit sections.
+  Confidence: high
+- Claim: Bumbling Through Dungeons praised stories, character customization, and emergent humor, but reported long voiceovers, repetitive/light checks, modest strategy, and 3-4 hour session friction.
+  Source: src-012
+  Evidence: Review sections Storytelling and CYOA, Waves and Rolls, and Length and Player Count.
+  Confidence: high
+- Claim: Both witnesses frame narrative experience as the principal strength and mechanical/content cadence as the principal fit boundary; this is a bounded convergence of two reviews, not market consensus.
+  Source: src-011, src-012
+  Evidence: Both articles explicitly contrast strong storytelling with repetition/content/device/time limits.
   Confidence: medium
-- Claim: Current app v1.12.0, the 2024 Entry Book, Kraken's Eye, remote play, solo/low-count variants, translations, promos, and other later additions are not silently folded into the 2020 target.
-  Source: src-005, src-006, src-007, src-008, src-010
-  Evidence: These authorities carry different dates, versions, SKUs, or explicit additive roles.
-  Confidence: high
-
-## System summary
-- Claim: Players cooperate to complete a captain's adventure while filling personal constellations that determine individual outcomes.
-  Source: src-001
-  Evidence: Rulebook p.2, Object of the Game.
-  Confidence: high
-- Claim: This is not a deckbuilder: the rules provide fixed treasure/story/objective decks, but no acquire-to-personal-draw-pile cycle or personal deck construction.
-  Source: src-001
-  Evidence: Rulebook pp.2, 4, and 7 describe shared decks and face-up treasure holdings, not deck building.
-  Confidence: high
-
-## Records
-Rules: [overview](rules/overview.okf.md), [setup](rules/setup.okf.md), [turn structure](rules/turn-structure.okf.md), [actions](rules/actions.okf.md), [endgame](rules/scoring-endgame.okf.md), [edge cases](rules/edge-cases-faq.okf.md). Reception: [reviews](reception/reviews.okf.md), [better-if](reception/better-if.okf.md). Evidence: [sources](sources.okf.md), [scout report](scout-report.okf.md), [visuals](visuals/packet.okf.md).
