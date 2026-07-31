@@ -44,7 +44,7 @@ status: needs_followup
   Evidence: Rulebook framework sections and Room Sheet pp. 1-4; FAQ p. 2, all four Errata, three Rules, one Actions, and four Rooms Q&As.
   Confidence: high
 
-- Claim: The Knee Serious Wound's extra Movement cost applies only to the Character's first Movement Action on their first turn; doing something else first and moving later avoids that penalty.
+- Claim: The Knee Serious Wound's extra Movement cost applies to the Character's first Movement Action only if that Movement Action occurs during their first turn. If the Character performs no Movement Action during the entire first turn, a Movement Action on a later turn does not pay the extra cost.
   Source: src-003
   Evidence: FAQ p. 2, Rules question 2.
   Confidence: high
