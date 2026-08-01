@@ -248,12 +248,14 @@ test('promotion may share the PR only from an approved parent commit', () => {
     promotionStatus: 'promoted',
     manifestOnlyStatusTransition: true,
     unexpectedPromotionChanges: [],
+    prePromotionCanonicalChanges: [],
   }
   assert.deepEqual(promotionBoundaryFindings('good-game', good), [])
   assert.match(promotionBoundaryFindings('good-game', { ...good, parentHasApproval: false }).join('\n'), /parent commit must contain Mennonite approval/)
   assert.match(promotionBoundaryFindings('good-game', { ...good, parentStatus: 'ready_for_audit' }).join('\n'), /parent commit status must be approved/)
   assert.match(promotionBoundaryFindings('good-game', { ...good, manifestOnlyStatusTransition: false }).join('\n'), /add a valid promoted_at timestamp/)
   assert.match(promotionBoundaryFindings('good-game', { ...good, unexpectedPromotionChanges: ['README.md'] }).join('\n'), /deterministic promotion commit changed unexpected paths/)
+  assert.match(promotionBoundaryFindings('good-game', { ...good, prePromotionCanonicalChanges: ['KnowledgeBase/BoardGames/games/good-game/rules/setup.okf.md'] }).join('\n'), /canonical destination changed before promotion/)
 })
 
 test('new-game protected-base updates require an exact-base merge commit', () => {
@@ -276,6 +278,91 @@ test('changed intake runs must finish promoted and canonicalized in the same PR'
   assert.match(intakeCompletionFindings(run('approved'), new Set()).join('\n'), /must end promoted in the same PR/)
   assert.match(intakeCompletionFindings(run('promoted'), new Set()).join('\n'), /must add its canonical game in the same PR/)
   assert.deepEqual(intakeCompletionFindings(run('promoted'), new Set(['good-game'])), [])
+})
+
+test('partial canonical writes before promotion are rejected end to end', { timeout: 60_000 }, t => {
+  const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'intake-history-'))
+  const repo = path.join(sandbox, 'repo')
+  const cleanEnv = { ...process.env }
+  for (const key of Object.keys(cleanEnv)) if (key.startsWith('GIT_')) delete cleanEnv[key]
+  t.after(() => fs.rmSync(sandbox, { recursive: true, force: true }))
+  const run = (command, args, options = {}) => {
+    const result = spawnSync(command, args, { cwd: repo, encoding: 'utf8', env: cleanEnv, ...options })
+    assert.equal(result.status, 0, `${command} ${args.join(' ')}\n${result.stdout}${result.stderr}`)
+    return result.stdout.trim()
+  }
+
+  const sourceHead = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  const cloned = spawnSync('git', ['clone', '--no-local', '--quiet', process.cwd(), repo], { encoding: 'utf8', env: cleanEnv })
+  assert.equal(cloned.status, 0, cloned.stderr)
+  const base = run('git', ['rev-parse', 'HEAD'])
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  run('git', ['config', 'user.name', 'Intake History Test'])
+  run('git', ['config', 'user.email', 'intake-history@test.invalid'])
+
+  const runId = '2026-08-02-good-game'
+  const runDir = path.join(repo, 'intake/runs', runId)
+  const candidateDir = path.join(runDir, 'candidates/good-game')
+  const manifestFile = path.join(runDir, 'manifest.json')
+  makePackage(t, candidateDir)
+  const manifest = {
+    schema_version: 3,
+    run_id: runId,
+    created_at: '2026-08-02T12:00:00.000Z',
+    scout: { name: 'Bathcat', role: 'Field Intelligence and Knowledge Scout' },
+    target: { cooperative: 1, solo_rpg: 1, rotating_focus: 1, total: 3 },
+    focus: { mechanic: 'cooperative-game' },
+    candidates: [{ ...candidate, discovery_sources: ['https://publisher.test/good-game'] }],
+  }
+  fs.mkdirSync(runDir, { recursive: true })
+  fs.writeFileSync(manifestFile, `${JSON.stringify(manifest, null, 2)}\n`)
+  run('git', ['add', `intake/runs/${runId}`])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: ready packet'])
+
+  const approval = {
+    schema_version: 3,
+    decision: 'approved',
+    auditor: { name: 'The Mennonite', role: 'Independent Intake Auditor' },
+    reviewed_at: '2026-08-02T13:00:00.000Z',
+    packet_sha256: packetHash(candidateDir),
+    checks: {
+      official_rules_inspected: true,
+      independent_review_inspected: true,
+      claims_supported: true,
+      source_roles_distinct: true,
+      rating_evidence_checked: true,
+      visuals_meaningful: true,
+      no_placeholders: true,
+      no_generated_semantic_content: true,
+    },
+    reviewed_source_ids: sourceData.map(([id]) => id),
+    notes: 'Independent audit fixture reviewed every source and staged packet byte.',
+  }
+  fs.writeFileSync(path.join(candidateDir, 'approval.json'), `${JSON.stringify(approval, null, 2)}\n`)
+  manifest.candidates[0].status = 'approved'
+  fs.writeFileSync(manifestFile, `${JSON.stringify(manifest, null, 2)}\n`)
+  run('git', ['add', `intake/runs/${runId}`])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: approve packet'])
+
+  const canonical = path.join(repo, 'KnowledgeBase/BoardGames/games/good-game')
+  fs.mkdirSync(path.join(canonical, 'rules'), { recursive: true })
+  fs.copyFileSync(path.join(candidateDir, 'canonical/rules/setup.okf.md'), path.join(canonical, 'rules/setup.okf.md'))
+  run('git', ['add', 'KnowledgeBase/BoardGames/games/good-game/rules/setup.okf.md'])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: plant canonical fragment'])
+
+  fs.cpSync(path.join(candidateDir, 'canonical'), canonical, { recursive: true })
+  manifest.candidates[0].status = 'promoted'
+  manifest.candidates[0].promoted_at = '2026-08-02T14:00:00.000Z'
+  fs.writeFileSync(manifestFile, `${JSON.stringify(manifest, null, 2)}\n`)
+  run(process.execPath, ['scripts/generate-index.mjs'])
+  run('git', ['add', `intake/runs/${runId}/manifest.json`, 'KnowledgeBase/BoardGames/games/good-game', 'KnowledgeBase/BoardGames/INDEX.okf.md'])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: apparent promotion'])
+
+  const validation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+  assert.notEqual(validation.status, 0, validation.stdout + validation.stderr)
+  assert.match(validation.stdout + validation.stderr, /canonical destination changed before promotion/)
+  const sourceHeadAfter = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  assert.equal(sourceHeadAfter, sourceHead, 'history fixture must not mutate the source repository ref')
 })
 
 test('emit deterministic promotion fixture when requested', { skip: !process.env.INTAKE_FIXTURE_OUT }, t => {

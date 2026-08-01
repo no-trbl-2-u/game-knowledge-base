@@ -455,6 +455,7 @@ export function promotionBoundaryFindings(slug, boundary) {
   if (boundary.parentStatus !== 'approved') findings.push(`${label}: promotion parent commit status must be approved`)
   if (boundary.promotionStatus !== 'promoted') findings.push(`${label}: promotion commit must transition candidate status to promoted`)
   if (!boundary.manifestOnlyStatusTransition) findings.push(`${label}: promotion commit manifest may change only candidate status approved -> promoted and add a valid promoted_at timestamp`)
+  if (boundary.prePromotionCanonicalChanges?.length) findings.push(`${label}: canonical destination changed before promotion: ${boundary.prePromotionCanonicalChanges.join(', ')}`)
   if (boundary.unexpectedPromotionChanges?.length) findings.push(`${label}: deterministic promotion commit changed unexpected paths: ${boundary.unexpectedPromotionChanges.join(', ')}`)
   if (boundary.postPromotionChanges?.length) findings.push(`${label}: protected intake or canonical bytes changed after promotion: ${boundary.postPromotionChanges.join(', ')}`)
   return findings
@@ -484,6 +485,7 @@ function promotionBoundaryAt(base, runId, slug, head = 'HEAD') {
     parentStatus: candidateStatusAt(parent, runId, slug),
     promotionStatus: candidateStatusAt(promotionCommit, runId, slug),
     manifestOnlyStatusTransition: manifestStatusOnlyTransition(parent, promotionCommit, runId, slug, 'approved', 'promoted', { allowPromotedAt: true }),
+    prePromotionCanonicalChanges: filesTouchedByCommits(base, parent, canonicalPrefix),
     unexpectedPromotionChanges,
     postPromotionChanges: [...new Set(protectedChanges)],
   }
