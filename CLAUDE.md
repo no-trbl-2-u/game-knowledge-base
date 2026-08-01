@@ -76,8 +76,9 @@ and resolved conversations; force-push and deletion are disabled. New-game
 intake preserves three commits inside one PR: Bathcat's frozen packet,
 Mennonite's approval-only transition, and deterministic promotion. CI verifies
 the parent state and allowed paths at each boundary and forbids packet mutation
-after approval. These PRs must use a merge commit; squash or rebase would destroy
-the auditable transition history. Existing-game maintenance may still squash.
+after approval. This repository is merge-commit only: squash and rebase are disabled so the
+protected-base history always preserves the reviewed branch ancestry. New-game intake
+specifically depends on its Bathcat, approval, and promotion commit boundaries.
 CODEOWNERS names T's authenticated repository account for ownership only: a
 single-account repository cannot satisfy a required self-review, so required
 approving reviews stay at zero. Separate agent contexts, disjoint write

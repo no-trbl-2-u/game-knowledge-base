@@ -9,6 +9,7 @@ import {
   auditTransitionFindings,
   blockedRunDiffFindings,
   dailyBatchFindings,
+  mergeCommitTopologyFindings,
   newGameSlugs,
   promotionBoundaryFindings,
   validateCandidatePackage,
@@ -248,6 +249,15 @@ test('promotion may share the PR only from an approved parent commit', () => {
   assert.match(promotionBoundaryFindings('good-game', { ...good, parentStatus: 'ready_for_audit' }).join('\n'), /parent commit status must be approved/)
   assert.match(promotionBoundaryFindings('good-game', { ...good, manifestOnlyStatusTransition: false }).join('\n'), /add a valid promoted_at timestamp/)
   assert.match(promotionBoundaryFindings('good-game', { ...good, unexpectedPromotionChanges: ['README.md'] }).join('\n'), /deterministic promotion commit changed unexpected paths/)
+})
+
+test('new-game protected-base updates require an exact-base merge commit', () => {
+  const base = 'a'.repeat(40)
+  const branch = 'b'.repeat(40)
+  assert.deepEqual(mergeCommitTopologyFindings(0, { parents: [], baseSha: base }), [])
+  assert.deepEqual(mergeCommitTopologyFindings(1, { parents: [base, branch], baseSha: base }), [])
+  assert.match(mergeCommitTopologyFindings(1, { parents: [branch], baseSha: base }).join('\n'), /squash, rebase, and direct pushes are forbidden/)
+  assert.match(mergeCommitTopologyFindings(1, { parents: [branch, base], baseSha: base }).join('\n'), /previous protected-base head/)
 })
 
 test('new blocked packets are rejected from Git and redirected to issues', () => {
