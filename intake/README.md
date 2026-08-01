@@ -22,6 +22,21 @@ the measured shortfall, attempted sources, and help requested from T. Once the
 issue is closed by retrieved evidence, Bathcat builds a fresh
 `ready_for_audit` packet. One weak game never withholds sound candidates.
 
+Gap deduplication is mechanical. Normalize the candidate to its lowercase
+kebab-case slug and known numeric BGG ID (or `none`), then search all issue
+states before creating anything:
+
+```bash
+gh issue list --state all --search '"[intake-gap] <slug> [bgg:<id-or-none>]" in:title' \
+  --json number,state,title,url
+```
+
+The canonical title/key is exactly
+`[intake-gap] <slug> [bgg:<id-or-none>]`. Update an open match or reopen a
+closed match when the same evidence gap recurs. Create a new issue only when
+the exact key has no match. The required `Stable intake slug` and `BGG ID or
+none` fields must repeat the title key so reviewers can detect drift.
+
 Every candidate records a reproducible coverage ledger. Any non-blocked packet
 must cover 100% of the governing rules corpus for the identified edition.
 Non-deckbuilders must also reach at least 60% factual coverage. Deckbuilders

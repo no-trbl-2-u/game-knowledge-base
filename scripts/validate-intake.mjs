@@ -392,6 +392,9 @@ function auditBoundaryAt(base, runId, slug, decision, decisionFile, head = 'HEAD
   const manifest = `intake/runs/${runId}/manifest.json`
   const opposite = `${candidatePrefix}${decision === 'approval' ? 'rejection' : 'approval'}.json`
   const allowed = new Set([decisionFile, manifest])
+  const promotionCommits = commitsAddingPath(base, `KnowledgeBase/BoardGames/games/${slug}/index.okf.md`, head)
+  const postDecisionManifestCommits = lines(git(['rev-list', '--reverse', `${decisionCommit}..${head}`]))
+    .filter(commit => filesChangedInCommit(commit).includes(manifest))
   return {
     decisionCommit,
     additionCount: 1,
@@ -403,6 +406,9 @@ function auditBoundaryAt(base, runId, slug, decision, decisionFile, head = 'HEAD
     oppositeAtParent: pathExistsAt(parent, opposite),
     unexpectedDecisionChanges: filesChangedInCommit(decisionCommit).filter(file => !allowed.has(file)),
     postDecisionPacketChanges: filesTouchedByCommits(decisionCommit, head, candidatePrefix),
+    manifestChangedOnlyAtPromotion: postDecisionManifestCommits.length === 1
+      && promotionCommits.length === 1
+      && postDecisionManifestCommits[0] === promotionCommits[0],
   }
 }
 
@@ -433,6 +439,7 @@ export function auditTransitionFindings(changes, { boundaryFor }) {
     if (boundary.oppositeAtParent) findings.push(`${change.file}: approval parent already contains rejection.json`)
     if (boundary.unexpectedDecisionChanges?.length) findings.push(`${change.file}: approval commit may change only approval.json and its manifest; also changed ${boundary.unexpectedDecisionChanges.join(', ')}`)
     if (boundary.postDecisionPacketChanges?.length) findings.push(`${change.file}: packet changed after approval: ${boundary.postDecisionPacketChanges.join(', ')}`)
+    if (!boundary.manifestChangedOnlyAtPromotion) findings.push(`${change.file}: manifest changed after approval outside the promotion commit`)
   }
   return findings
 }
@@ -495,6 +502,21 @@ export function blockedRunDiffFindings(records) {
   for (const record of records) {
     for (const candidate of record.candidates ?? []) {
       if (candidate.status === 'blocked') findings.push(`intake run ${record.runId}/${candidate.slug}: blocked research belongs in a GitHub issue, not a committed packet or PR`)
+    }
+  }
+  return findings
+}
+
+export function intakeCompletionFindings(records, newSlugs) {
+  const findings = []
+  for (const record of records) {
+    for (const candidate of record.candidates ?? []) {
+      if (candidate.status === 'blocked') continue
+      if (candidate.status !== 'promoted') {
+        findings.push(`intake run ${record.runId}/${candidate.slug}: intake PR must end promoted in the same PR; ${candidate.status} is an intermediate commit state`)
+      } else if (!newSlugs.has(candidate.slug)) {
+        findings.push(`intake run ${record.runId}/${candidate.slug}: promoted intake must add its canonical game in the same PR`)
+      }
     }
   }
   return findings
@@ -626,6 +648,7 @@ function validateDiff(base, { requireMergeCommit = false } = {}) {
   const records = candidateRecords()
   findings.push(...dailyBatchFindings(records))
   const newSlugs = newGameSlugs(changes, slug => gameExistsAt(base, slug))
+  findings.push(...intakeCompletionFindings(changedRunRecords, newSlugs))
   if (requireMergeCommit) findings.push(...mergeCommitTopologyFindings(newSlugs.size, { parents: commitParents('HEAD'), baseSha: git(['rev-parse', base]) }))
   if (newSlugs.size > 3) findings.push(`intake diff adds ${newSlugs.size} canonical games; hard ceiling is 3`)
   const docs = []

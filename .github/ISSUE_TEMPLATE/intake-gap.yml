@@ -1,11 +1,27 @@
 name: Board-game intake evidence gap
 description: Record blocked research without opening a report PR
-title: "[intake-gap] "
+title: "[intake-gap] <slug> [bgg:<id-or-none>]"
 body:
   - type: markdown
     attributes:
       value: |
-        Use this only when a candidate cannot reach `ready_for_audit`. Do not commit a blocked intake packet. Update and close this issue when the missing evidence is retrieved.
+        Use this only when a candidate cannot reach `ready_for_audit`. Before creating it, search all open and closed issues for the exact normalized slug and BGG ID. Update or reopen the matching issue instead of creating a duplicate. Replace both placeholders in the title. Do not commit a blocked intake packet. Update and close this issue when the missing evidence is retrieved.
+  - type: input
+    id: slug
+    attributes:
+      label: Stable intake slug
+      description: Lowercase kebab-case slug used as the deduplication key; it must match the title.
+      placeholder: mage-knight
+    validations:
+      required: true
+  - type: input
+    id: bgg_id
+    attributes:
+      label: BGG ID or none
+      description: Numeric BoardGameGeek ID when known; otherwise write `none`. It must match the title.
+      placeholder: "96848"
+    validations:
+      required: true
   - type: input
     id: game
     attributes:

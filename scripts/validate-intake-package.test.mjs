@@ -9,6 +9,7 @@ import {
   auditTransitionFindings,
   blockedRunDiffFindings,
   dailyBatchFindings,
+  intakeCompletionFindings,
   mergeCommitTopologyFindings,
   newGameSlugs,
   promotionBoundaryFindings,
@@ -203,6 +204,7 @@ test('approval may share one PR only after a frozen ready packet commit', () => 
     oppositeAtParent: false,
     unexpectedDecisionChanges: [],
     postDecisionPacketChanges: [],
+    manifestChangedOnlyAtPromotion: true,
   }
   const changes = [{ status: 'A', file: approval }, { status: 'A', file: packet }, { status: 'A', file: manifest }]
   assert.deepEqual(auditTransitionFindings(changes, { boundaryFor: () => good }), [])
@@ -212,6 +214,9 @@ test('approval may share one PR only after a frozen ready packet commit', () => 
   assert.match(auditTransitionFindings(changes, {
     boundaryFor: () => ({ ...good, postDecisionPacketChanges: [packet] }),
   }).join('\n'), /packet changed after approval/)
+  assert.match(auditTransitionFindings(changes, {
+    boundaryFor: () => ({ ...good, manifestChangedOnlyAtPromotion: false }),
+  }).join('\n'), /manifest changed after approval outside the promotion commit/)
   assert.match(auditTransitionFindings(changes, {
     boundaryFor: () => ({ ...good, unexpectedDecisionChanges: ['README.md'] }),
   }).join('\n'), /approval commit may change only approval.json and its manifest/)
@@ -263,6 +268,14 @@ test('new-game protected-base updates require an exact-base merge commit', () =>
 test('new blocked packets are rejected from Git and redirected to issues', () => {
   assert.deepEqual(blockedRunDiffFindings([{ runId: '2026-07-30-good', candidates: [{ slug: 'good-game', status: 'ready_for_audit' }] }]), [])
   assert.match(blockedRunDiffFindings([{ runId: '2026-07-30-gap', candidates: [{ slug: 'gap-game', status: 'blocked' }] }]).join('\n'), /blocked research belongs in a GitHub issue/)
+})
+
+test('changed intake runs must finish promoted and canonicalized in the same PR', () => {
+  const run = status => [{ runId: '2026-07-30-good', candidates: [{ slug: 'good-game', status }] }]
+  assert.match(intakeCompletionFindings(run('ready_for_audit'), new Set()).join('\n'), /must end promoted in the same PR/)
+  assert.match(intakeCompletionFindings(run('approved'), new Set()).join('\n'), /must end promoted in the same PR/)
+  assert.match(intakeCompletionFindings(run('promoted'), new Set()).join('\n'), /must add its canonical game in the same PR/)
+  assert.deepEqual(intakeCompletionFindings(run('promoted'), new Set(['good-game'])), [])
 })
 
 test('emit deterministic promotion fixture when requested', { skip: !process.env.INTAKE_FIXTURE_OUT }, t => {
