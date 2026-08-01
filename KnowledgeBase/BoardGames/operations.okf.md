@@ -190,7 +190,7 @@ Cron job:
 - Git delivery: one dedicated branch and PR per ready game; protected `main` requires current green `validate` CI and a merge commit preserving Bathcat, approval, and promotion commits
 - Required scout gate: `node scripts/validate-intake.mjs --run <run-id>`; any finding is a failed run and must not be pushed
 - Candidate target: 1 cooperative + 1 solo RPG + 1 rotating-focus, with honest eligibility shortfalls allowed
-- Coverage gate: 100% governing-rules coverage for every ready packet; non-deckbuilders also require at least 60% measured factual coverage
+- Coverage gate: 100% of the bounded governing-document inventory needed for published claims; no exhaustive card-library or arbitrary factual-percentage admission gate
 - Canonical promotion: no quota; Bathcat cannot approve or promote. The Mennonite audits immutable packets and `scripts/promote-intake.mjs` copies approved trees byte-for-byte.
 
 Independent audit job:
@@ -233,7 +233,7 @@ Minimum expected files:
 - `scout-report.okf.md`
 - `visuals/packet.okf.md`
 - `visuals/contact-sheet.webp`
-- `visuals/references/*.webp` (4–8 reduced, source-linked references)
+- `visuals/references/*.webp` (2–8 reduced, source-linked references)
 
 Every doc uses **OKF 0.2 frontmatter exactly as written in `OKF_SPEC.md`** — the spec, not the scout's memory of it, is the output format. In particular: `okf_version: 0.2`, `mechanics` (controlled slugs, identical across the game's docs), `better_if_labels` on reception docs, and `src-NNN` source ids.
 

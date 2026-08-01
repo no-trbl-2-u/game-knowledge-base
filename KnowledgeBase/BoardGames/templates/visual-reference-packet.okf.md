@@ -21,7 +21,7 @@ sources:
     retrieved_at: "YYYY-MM-DD"
     notes: "Where the image came from and why it is retained."
 visual_references:
-  # Real packets require 4–8 entries. This template shows one entry shape.
+  # Real packets require 2–8 entries. This template shows one entry shape.
   - id: "vis-001"
     source_id: "src-001"
     file: "visuals/references/01-subject.webp"

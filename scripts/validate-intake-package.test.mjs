@@ -37,8 +37,7 @@ const sourceData = [
   ['src-003', 'Rating snapshot', 'https://boardgamegeek.com/boardgame/123/good-game', 'bgg_page', 'community', ['identity', 'rating']],
   ['src-004', 'Publisher visual one', 'https://assets.publisher.test/good-game/asset-1.png', 'image', 'official', ['visual']],
   ['src-005', 'Publisher visual two', 'https://assets.publisher.test/good-game/asset-2.png', 'image', 'official', ['visual']],
-  ['src-006', 'Publisher visual three', 'https://assets.publisher.test/good-game/asset-3.png', 'image', 'official', ['visual']],
-  ['src-007', 'Publisher visual four', 'https://assets.publisher.test/good-game/asset-4.png', 'image', 'official', ['visual']],
+
 ]
 
 function sourcesYaml() {
@@ -106,7 +105,7 @@ function makePackage(t, rootOverride = null) {
     fs.writeFileSync(file, document(type, needsClaim ? claim(rel) : `## ${rel}\n\nThis verified fixture record preserves source-backed package metadata.`, extra))
   }
   fs.mkdirSync(path.join(canonical, 'visuals', 'references'), { recursive: true })
-  const filters = ['testsrc2=s=320x240', 'smptebars=s=320x240', 'rgbtestsrc=s=320x240', 'mandelbrot=s=320x240']
+  const filters = ['testsrc2=s=320x240', 'smptebars=s=320x240']
   const refs = []
   for (let i = 0; i < filters.length; i += 1) {
     const rel = `visuals/references/ref-${i + 1}.webp`
@@ -137,9 +136,7 @@ function makePackage(t, rootOverride = null) {
     '-hide_banner', '-loglevel', 'error',
     '-i', path.join(canonical, 'visuals/references/ref-1.webp'),
     '-i', path.join(canonical, 'visuals/references/ref-2.webp'),
-    '-i', path.join(canonical, 'visuals/references/ref-3.webp'),
-    '-i', path.join(canonical, 'visuals/references/ref-4.webp'),
-    '-filter_complex', 'xstack=inputs=4:layout=0_0|w0_0|0_h0|w0_h0',
+    '-filter_complex', 'hstack=inputs=2',
     '-frames:v', '1', '-y', sheetFile,
   ], { encoding: 'utf8' })
   assert.equal(sheet.status, 0, sheet.stderr)
