@@ -13,6 +13,7 @@ import {
   mergeCommitTopologyFindings,
   newGameSlugs,
   promotionBoundaryFindings,
+  transientProtectedHistoryFindings,
   validateCandidatePackage,
 } from './validate-intake.mjs'
 import { packetHash } from './intake-lib.mjs'
@@ -278,6 +279,60 @@ test('changed intake runs must finish promoted and canonicalized in the same PR'
   assert.match(intakeCompletionFindings(run('approved'), new Set()).join('\n'), /must end promoted in the same PR/)
   assert.match(intakeCompletionFindings(run('promoted'), new Set()).join('\n'), /must add its canonical game in the same PR/)
   assert.deepEqual(intakeCompletionFindings(run('promoted'), new Set(['good-game'])), [])
+})
+
+test('protected history cannot disappear from the endpoint diff', () => {
+  const manifest = 'intake/runs/2026-08-02-good-game/manifest.json'
+  const canonical = 'KnowledgeBase/BoardGames/games/good-game/rules/setup.okf.md'
+  assert.deepEqual(transientProtectedHistoryFindings([{ status: 'A', oldFile: null, file: manifest }], [manifest]), [])
+  assert.match(transientProtectedHistoryFindings([], [manifest, canonical]).join('\n'), /transient protected path/)
+})
+
+test('ready packet deleted before the endpoint is rejected end to end', { timeout: 60_000 }, t => {
+  const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'intake-transient-history-'))
+  const repo = path.join(sandbox, 'repo')
+  const cleanEnv = { ...process.env }
+  for (const key of Object.keys(cleanEnv)) if (key.startsWith('GIT_')) delete cleanEnv[key]
+  t.after(() => fs.rmSync(sandbox, { recursive: true, force: true }))
+  const run = (command, args) => {
+    const result = spawnSync(command, args, { cwd: repo, encoding: 'utf8', env: cleanEnv })
+    assert.equal(result.status, 0, `${command} ${args.join(' ')}\n${result.stdout}${result.stderr}`)
+    return result.stdout.trim()
+  }
+
+  const sourceHead = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  const cloned = spawnSync('git', ['clone', '--no-local', '--quiet', process.cwd(), repo], { encoding: 'utf8', env: cleanEnv })
+  assert.equal(cloned.status, 0, cloned.stderr)
+  const base = run('git', ['rev-parse', 'HEAD'])
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  run('git', ['config', 'user.name', 'Intake History Test'])
+  run('git', ['config', 'user.email', 'intake-history@test.invalid'])
+
+  const runId = '2026-08-02-transient-game'
+  const runDir = path.join(repo, 'intake/runs', runId)
+  makePackage(t, path.join(runDir, 'candidates/good-game'))
+  const manifest = {
+    schema_version: 3,
+    run_id: runId,
+    created_at: '2026-08-02T12:00:00.000Z',
+    scout: { name: 'Bathcat', role: 'Field Intelligence and Knowledge Scout' },
+    target: { cooperative: 1, solo_rpg: 1, rotating_focus: 1, total: 3 },
+    focus: { mechanic: 'cooperative-game' },
+    candidates: [{ ...candidate, discovery_sources: ['https://publisher.test/good-game'] }],
+  }
+  fs.mkdirSync(runDir, { recursive: true })
+  fs.writeFileSync(path.join(runDir, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`)
+  run('git', ['add', `intake/runs/${runId}`])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: transient ready packet'])
+  fs.rmSync(runDir, { recursive: true, force: true })
+  run('git', ['add', '-A', `intake/runs/${runId}`])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: erase transient packet'])
+
+  const validation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+  assert.notEqual(validation.status, 0, validation.stdout + validation.stderr)
+  assert.match(validation.stdout + validation.stderr, /transient protected path/)
+  const sourceHeadAfter = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  assert.equal(sourceHeadAfter, sourceHead, 'history fixture must not mutate the source repository ref')
 })
 
 test('partial canonical writes before promotion are rejected end to end', { timeout: 60_000 }, t => {

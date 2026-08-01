@@ -509,6 +509,13 @@ export function blockedRunDiffFindings(records) {
   return findings
 }
 
+export function transientProtectedHistoryFindings(changes, historyFiles) {
+  const endpointPaths = new Set(changes.flatMap(change => [change.oldFile, change.file]).filter(Boolean))
+  return [...new Set(historyFiles)]
+    .filter(file => !endpointPaths.has(file))
+    .map(file => `${file}: transient protected path was touched in PR history but erased from the endpoint diff`)
+}
+
 export function intakeCompletionFindings(records, newSlugs) {
   const findings = []
   for (const record of records) {
@@ -581,6 +588,11 @@ function validateDiff(base, { requireMergeCommit = false } = {}) {
   const changedFiles = changes.map(c => c.file)
   findings.push(...semanticGeneratorFindings(REPO, changedFiles))
   const historyHead = historyHeadFor(base)
+  const protectedHistoryFiles = [
+    ...filesTouchedByCommits(base, historyHead, 'intake/runs/'),
+    ...filesTouchedByCommits(base, historyHead, 'KnowledgeBase/BoardGames/games/'),
+  ]
+  findings.push(...transientProtectedHistoryFindings(changes, protectedHistoryFiles))
   findings.push(...auditTransitionFindings(changes, {
     boundaryFor: (runId, slug, decision, file) => auditBoundaryAt(base, runId, slug, decision, file, historyHead),
   }))
