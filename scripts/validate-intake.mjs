@@ -316,12 +316,107 @@ function candidateStatusAt(ref, runId, slug) {
   } catch { return null }
 }
 
+function manifestAt(ref, runId) {
+  try {
+    const text = execFileSync('git', ['show', `${ref}:intake/runs/${runId}/manifest.json`], { cwd: REPO, encoding: 'utf8' })
+    return readJsonText(text)
+  } catch { return null }
+}
+
+function normalizedJson(value) {
+  if (Array.isArray(value)) return value.map(normalizedJson)
+  if (value && typeof value === 'object') return Object.fromEntries(Object.keys(value).sort().map(key => [key, normalizedJson(value[key])]))
+  return value
+}
+
+function manifestStatusOnlyTransition(fromRef, toRef, runId, slug, fromStatus, toStatus, { allowPromotedAt = false } = {}) {
+  const before = manifestAt(fromRef, runId)
+  const after = manifestAt(toRef, runId)
+  if (!before || !after) return false
+  const expected = JSON.parse(JSON.stringify(before))
+  const candidate = expected.candidates?.find(item => item.slug === slug)
+  const actualCandidate = after.candidates?.find(item => item.slug === slug)
+  if (!candidate || candidate.status !== fromStatus) return false
+  candidate.status = toStatus
+  if (allowPromotedAt) {
+    const promotedAt = actualCandidate?.promoted_at ?? ''
+    if (Object.prototype.hasOwnProperty.call(candidate, 'promoted_at')) return false
+    if (!/^20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$/.test(promotedAt) || new Date(promotedAt).toISOString() !== promotedAt) return false
+    candidate.promoted_at = promotedAt
+  }
+  return JSON.stringify(normalizedJson(expected)) === JSON.stringify(normalizedJson(after))
+}
+
 function readJsonText(text) {
   try { return JSON.parse(text) }
   catch { return null }
 }
 
-export function auditTransitionFindings(changes, { pathExists, statusAt }) {
+function lines(text) { return text ? text.split('\n').map(line => line.trim()).filter(Boolean) : [] }
+
+function commitParents(ref = 'HEAD') {
+  return git(['show', '-s', '--format=%P', ref]).split(/\s+/).filter(Boolean)
+}
+
+function historyHeadFor(base, syntheticMerge = false) {
+  if (!syntheticMerge) return 'HEAD'
+  const baseSha = git(['rev-parse', base])
+  const parents = commitParents('HEAD')
+  if (parents.length !== 2 || parents[0] !== baseSha) {
+    throw new Error('declared synthetic merge must have exactly two parents and the validated base as its first parent')
+  }
+  return parents[1]
+}
+
+function commitsAddingPath(base, file, head = 'HEAD') {
+  return lines(git(['log', '--format=%H', '--diff-filter=A', '--reverse', `${base}..${head}`, '--', file]))
+}
+
+function filesChangedInCommit(commit) {
+  return lines(git(['diff-tree', '--root', '-m', '--no-commit-id', '--name-only', '-r', commit]))
+}
+
+function filesTouchedByCommits(from, to, pathspec) {
+  const prefix = pathspec.endsWith('/') ? pathspec : null
+  const touched = []
+  for (const commit of lines(git(['rev-list', '--reverse', `${from}..${to}`]))) {
+    for (const file of filesChangedInCommit(commit)) {
+      if (file === pathspec || (prefix && file.startsWith(prefix))) touched.push(file)
+    }
+  }
+  return [...new Set(touched)]
+}
+
+function auditBoundaryAt(base, runId, slug, decision, decisionFile, head = 'HEAD') {
+  const commits = commitsAddingPath(base, decisionFile, head)
+  if (commits.length !== 1) return { decisionCommit: null, additionCount: commits.length }
+  const decisionCommit = commits[0]
+  const parent = `${decisionCommit}^`
+  const candidatePrefix = `intake/runs/${runId}/candidates/${slug}/`
+  const manifest = `intake/runs/${runId}/manifest.json`
+  const opposite = `${candidatePrefix}${decision === 'approval' ? 'rejection' : 'approval'}.json`
+  const allowed = new Set([decisionFile, manifest])
+  const promotionCommits = commitsAddingPath(base, `KnowledgeBase/BoardGames/games/${slug}/index.okf.md`, head)
+  const postDecisionManifestCommits = lines(git(['rev-list', '--reverse', `${decisionCommit}..${head}`]))
+    .filter(commit => filesChangedInCommit(commit).includes(manifest))
+  return {
+    decisionCommit,
+    additionCount: 1,
+    parentHasEvidence: pathExistsAt(parent, `${candidatePrefix}evidence.json`),
+    parentHasCanonical: pathExistsAt(parent, `${candidatePrefix}canonical/index.okf.md`),
+    parentStatus: candidateStatusAt(parent, runId, slug),
+    decisionStatus: candidateStatusAt(decisionCommit, runId, slug),
+    manifestOnlyStatusTransition: manifestStatusOnlyTransition(parent, decisionCommit, runId, slug, 'ready_for_audit', 'approved'),
+    oppositeAtParent: pathExistsAt(parent, opposite),
+    unexpectedDecisionChanges: filesChangedInCommit(decisionCommit).filter(file => !allowed.has(file)),
+    postDecisionPacketChanges: filesTouchedByCommits(decisionCommit, head, candidatePrefix),
+    manifestChangedOnlyAtPromotion: postDecisionManifestCommits.length === 1
+      && promotionCommits.length === 1
+      && postDecisionManifestCommits[0] === promotionCommits[0],
+  }
+}
+
+export function auditTransitionFindings(changes, { boundaryFor }) {
   const findings = []
   const decisionPattern = /^intake\/runs\/([^/]+)\/candidates\/([^/]+)\/(approval|rejection)\.json$/
   for (const change of changes) {
@@ -332,17 +427,164 @@ export function auditTransitionFindings(changes, { pathExists, statusAt }) {
       findings.push(`${change.file}: audit decisions are immutable once committed`)
       continue
     }
-    const candidatePrefix = `intake/runs/${runId}/candidates/${slug}/`
-    const immutableChanges = changes.filter(item => item.file.startsWith(candidatePrefix) && item.file !== change.file)
-    if (immutableChanges.length) findings.push(`${change.file}: audit decision must be added in a later PR without packet/evidence changes`)
-    if (!pathExists(`${candidatePrefix}evidence.json`) || !pathExists(`${candidatePrefix}canonical/index.okf.md`)) {
-      findings.push(`${change.file}: audited packet must already exist on the protected base branch`)
+    if (decision === 'rejection') {
+      findings.push(`${change.file}: new rejection records are prohibited; record REVISE on the PR instead and return the same branch to a fresh Bathcat`)
+      continue
     }
-    if (statusAt(runId, slug) !== 'ready_for_audit') findings.push(`${change.file}: protected-base candidate status must be ready_for_audit`)
-    const manifest = `intake/runs/${runId}/manifest.json`
-    if (!changes.some(item => item.file === manifest)) findings.push(`${change.file}: audit decision must transition the manifest in the same audit-only PR`)
-    const opposite = `${candidatePrefix}${decision === 'approval' ? 'rejection' : 'approval'}.json`
-    if (pathExists(opposite)) findings.push(`${change.file}: protected base already contains the opposite audit decision`)
+    const boundary = boundaryFor(runId, slug, decision, change.file)
+    if (!boundary?.decisionCommit || (boundary.additionCount ?? 1) !== 1) {
+      findings.push(`${change.file}: approval must be introduced exactly once in a commit after the Bathcat packet commit`)
+      continue
+    }
+    if (!boundary.parentHasEvidence || !boundary.parentHasCanonical) findings.push(`${change.file}: approval parent commit must contain the complete evidence and canonical staging packet`)
+    if (boundary.parentStatus !== 'ready_for_audit') findings.push(`${change.file}: approval parent commit status must be ready_for_audit`)
+    if (boundary.decisionStatus !== 'approved') findings.push(`${change.file}: approval commit must transition candidate status to approved`)
+    if (!boundary.manifestOnlyStatusTransition) findings.push(`${change.file}: approval commit manifest may change only candidate status ready_for_audit -> approved`)
+    if (boundary.oppositeAtParent) findings.push(`${change.file}: approval parent already contains rejection.json`)
+    if (boundary.unexpectedDecisionChanges?.length) findings.push(`${change.file}: approval commit may change only approval.json and its manifest; also changed ${boundary.unexpectedDecisionChanges.join(', ')}`)
+    if (boundary.postDecisionPacketChanges?.length) findings.push(`${change.file}: packet changed after approval: ${boundary.postDecisionPacketChanges.join(', ')}`)
+    if (!boundary.manifestChangedOnlyAtPromotion) findings.push(`${change.file}: manifest changed after approval outside the promotion commit`)
+  }
+  return findings
+}
+
+export function promotionBoundaryFindings(slug, boundary) {
+  const findings = []
+  const label = `canonical game ${slug}`
+  if (!boundary?.promotionCommit || (boundary.additionCount ?? 1) !== 1) {
+    findings.push(`${label}: canonical tree must be introduced exactly once by a deterministic promotion commit`)
+    return findings
+  }
+  if (!boundary.parentHasApproval) findings.push(`${label}: promotion parent commit must contain Mennonite approval`)
+  if (boundary.parentStatus !== 'approved') findings.push(`${label}: promotion parent commit status must be approved`)
+  if (boundary.promotionStatus !== 'promoted') findings.push(`${label}: promotion commit must transition candidate status to promoted`)
+  if (!boundary.manifestOnlyStatusTransition) findings.push(`${label}: promotion commit manifest may change only candidate status approved -> promoted and add a valid promoted_at timestamp`)
+  if (boundary.prePromotionCanonicalChanges?.length) findings.push(`${label}: canonical destination changed before promotion: ${boundary.prePromotionCanonicalChanges.join(', ')}`)
+  if (boundary.unexpectedPromotionChanges?.length) findings.push(`${label}: deterministic promotion commit changed unexpected paths: ${boundary.unexpectedPromotionChanges.join(', ')}`)
+  if (boundary.postPromotionChanges?.length) findings.push(`${label}: protected intake or canonical bytes changed after promotion: ${boundary.postPromotionChanges.join(', ')}`)
+  return findings
+}
+
+function promotionBoundaryAt(base, runId, slug, head = 'HEAD') {
+  const canonicalPrefix = `KnowledgeBase/BoardGames/games/${slug}/`
+  const canonicalIndex = `${canonicalPrefix}index.okf.md`
+  const commits = commitsAddingPath(base, canonicalIndex, head)
+  if (commits.length !== 1) return { promotionCommit: null, additionCount: commits.length }
+  const promotionCommit = commits[0]
+  const parent = `${promotionCommit}^`
+  const candidatePrefix = `intake/runs/${runId}/candidates/${slug}/`
+  const manifest = `intake/runs/${runId}/manifest.json`
+  const approval = `${candidatePrefix}approval.json`
+  const allowedExact = new Set([manifest, 'KnowledgeBase/BoardGames/INDEX.okf.md', 'TELEMETRY.md'])
+  const unexpectedPromotionChanges = filesChangedInCommit(promotionCommit).filter(file => !file.startsWith(canonicalPrefix) && !allowedExact.has(file))
+  const protectedChanges = [
+    ...filesTouchedByCommits(promotionCommit, head, candidatePrefix),
+    ...filesTouchedByCommits(promotionCommit, head, canonicalPrefix),
+    ...filesTouchedByCommits(promotionCommit, head, manifest),
+  ]
+  return {
+    promotionCommit,
+    additionCount: 1,
+    parentHasApproval: pathExistsAt(parent, approval),
+    parentStatus: candidateStatusAt(parent, runId, slug),
+    promotionStatus: candidateStatusAt(promotionCommit, runId, slug),
+    manifestOnlyStatusTransition: manifestStatusOnlyTransition(parent, promotionCommit, runId, slug, 'approved', 'promoted', { allowPromotedAt: true }),
+    prePromotionCanonicalChanges: filesTouchedByCommits(base, parent, canonicalPrefix),
+    unexpectedPromotionChanges,
+    postPromotionChanges: [...new Set(protectedChanges)],
+  }
+}
+
+export function mergeCommitTopologyFindings(newGameCount, { parents, baseSha }) {
+  if (!newGameCount) return []
+  if (parents.length !== 2 || parents[0] !== baseSha) {
+    return ['new-game intake must reach main through one merge commit whose first parent is the previous protected-base head; squash, rebase, and direct pushes are forbidden']
+  }
+  return []
+}
+
+export function blockedRunDiffFindings(records) {
+  const findings = []
+  for (const record of records) {
+    for (const candidate of record.candidates ?? []) {
+      if (candidate.status === 'blocked') findings.push(`intake run ${record.runId}/${candidate.slug}: blocked research belongs in a GitHub issue, not a committed packet or PR`)
+    }
+  }
+  return findings
+}
+
+const ABSENT_PROTECTED_STATE = '<absent>'
+
+function protectedStateAt(treesByRef, ref, file) {
+  return treesByRef.get(ref)?.get(file) ?? ABSENT_PROTECTED_STATE
+}
+
+export function protectedHistoryStateFindings({ base, commits, parentsByCommit, treesByRef, files }) {
+  const findings = []
+  const seenByRef = new Map([[base, new Map(files.map(file => [file, new Set([protectedStateAt(treesByRef, base, file)])]))]])
+  for (const commit of commits) {
+    const parents = parentsByCommit.get(commit) ?? []
+    const currentSeen = new Map()
+    for (const file of files) {
+      const nextState = protectedStateAt(treesByRef, commit, file)
+      const accumulated = new Set()
+      for (const parent of parents) {
+        const parentSeen = seenByRef.get(parent)
+        if (!parentSeen) {
+          findings.push(`${file}: protected history parent ${parent} falls outside the validated base ancestry`)
+          continue
+        }
+        const priorStates = parentSeen.get(file) ?? new Set([protectedStateAt(treesByRef, parent, file)])
+        const parentState = protectedStateAt(treesByRef, parent, file)
+        if (parentState !== nextState && priorStates.has(nextState)) {
+          findings.push(`${file}: protected path restores an earlier content state in commit ${commit}`)
+        }
+        for (const state of priorStates) accumulated.add(state)
+      }
+      accumulated.add(nextState)
+      currentSeen.set(file, accumulated)
+    }
+    seenByRef.set(commit, currentSeen)
+  }
+  return [...new Set(findings)]
+}
+
+function protectedTreeAt(ref) {
+  const raw = git(['ls-tree', '-r', ref, '--', 'intake/runs/', 'KnowledgeBase/BoardGames/games/'])
+  const tree = new Map()
+  for (const line of lines(raw)) {
+    const [metadata, file] = line.split('\t')
+    const oid = metadata?.split(/\s+/)[2]
+    if (file && oid) tree.set(file, oid)
+  }
+  return tree
+}
+
+function protectedHistoryFindings(base, head) {
+  const rows = lines(git(['rev-list', '--reverse', '--topo-order', '--parents', `${base}..${head}`])).map(line => line.split(/\s+/))
+  const commits = rows.map(parts => parts[0])
+  const parentsByCommit = new Map(rows.map(parts => [parts[0], parts.slice(1)]))
+  const files = [
+    ...filesTouchedByCommits(base, head, 'intake/runs/'),
+    ...filesTouchedByCommits(base, head, 'KnowledgeBase/BoardGames/games/'),
+  ]
+  if (!files.length) return []
+  const refs = new Set([git(['rev-parse', base]), ...commits, ...rows.flatMap(parts => parts.slice(1))])
+  const treesByRef = new Map([...refs].map(ref => [ref, protectedTreeAt(ref)]))
+  return protectedHistoryStateFindings({ base: git(['rev-parse', base]), commits, parentsByCommit, treesByRef, files })
+}
+
+export function intakeCompletionFindings(records, newSlugs) {
+  const findings = []
+  for (const record of records) {
+    for (const candidate of record.candidates ?? []) {
+      if (candidate.status === 'blocked') continue
+      if (candidate.status !== 'promoted') {
+        findings.push(`intake run ${record.runId}/${candidate.slug}: intake PR must end promoted in the same PR; ${candidate.status} is an intermediate commit state`)
+      } else if (!newSlugs.has(candidate.slug)) {
+        findings.push(`intake run ${record.runId}/${candidate.slug}: promoted intake must add its canonical game in the same PR`)
+      }
+    }
   }
   return findings
 }
@@ -396,16 +638,19 @@ export function dailyBatchFindings(records) {
   return findings
 }
 
-function validateDiff(base) {
+function validateDiff(base, { requireMergeCommit = false, syntheticMerge = false } = {}) {
   const findings = []
   let changes
   try { changes = changedAgainst(base) }
   catch (err) { return [`cannot compare intake against ${base}: ${err.message}`] }
   const changedFiles = changes.map(c => c.file)
   findings.push(...semanticGeneratorFindings(REPO, changedFiles))
+  let historyHead = 'HEAD'
+  try { historyHead = historyHeadFor(base, syntheticMerge) }
+  catch (err) { findings.push(err.message) }
+  findings.push(...protectedHistoryFindings(base, historyHead))
   findings.push(...auditTransitionFindings(changes, {
-    pathExists: file => pathExistsAt(base, file),
-    statusAt: (runId, slug) => candidateStatusAt(base, runId, slug),
+    boundaryFor: (runId, slug, decision, file) => auditBoundaryAt(base, runId, slug, decision, file, historyHead),
   }))
 
   for (const change of changes) {
@@ -458,11 +703,23 @@ function validateDiff(base) {
     const match = file.match(/^intake\/runs\/([^/]+)\//)
     if (match) changedRuns.add(match[1])
   }
-  for (const id of changedRuns) findings.push(...validateRunDirectory(path.join(RUNS, id)))
+  const changedRunRecords = []
+  for (const id of changedRuns) {
+    const runDir = path.join(RUNS, id)
+    findings.push(...validateRunDirectory(runDir))
+    const manifestFile = path.join(runDir, 'manifest.json')
+    if (fs.existsSync(manifestFile)) {
+      const manifest = readJson(manifestFile)
+      changedRunRecords.push({ runId: id, candidates: manifest.candidates ?? [] })
+    }
+  }
+  findings.push(...blockedRunDiffFindings(changedRunRecords))
 
   const records = candidateRecords()
   findings.push(...dailyBatchFindings(records))
   const newSlugs = newGameSlugs(changes, slug => gameExistsAt(base, slug))
+  findings.push(...intakeCompletionFindings(changedRunRecords, newSlugs))
+  if (requireMergeCommit) findings.push(...mergeCommitTopologyFindings(newSlugs.size, { parents: commitParents('HEAD'), baseSha: git(['rev-parse', base]) }))
   if (newSlugs.size > 3) findings.push(`intake diff adds ${newSlugs.size} canonical games; hard ceiling is 3`)
   const docs = []
   const newVisuals = []
@@ -480,10 +737,7 @@ function validateDiff(base) {
     }
     const record = matches[0]
     const runId = path.basename(record.runDir)
-    const approvalRel = `intake/runs/${runId}/candidates/${slug}/approval.json`
-    if (!pathExistsAt(base, approvalRel) || candidateStatusAt(base, runId, slug) !== 'approved') {
-      findings.push(`canonical game ${slug}: approval and approved manifest status must already exist on the protected base branch before promotion`)
-    }
+    findings.push(...promotionBoundaryFindings(slug, promotionBoundaryAt(base, runId, slug, historyHead)))
     findings.push(...validateRunDirectory(record.runDir))
     const staged = path.join(record.dir, 'canonical')
     const canonical = path.join(GAMES, slug)
@@ -501,20 +755,24 @@ function validateDiff(base) {
 }
 
 function usage() {
-  console.error('usage: node scripts/validate-intake.mjs [--base <git-ref> | --all | --run <run-id>]')
+  console.error('usage: node scripts/validate-intake.mjs [--base <git-ref> [--require-merge-commit | --synthetic-merge] | --all | --run <run-id>]')
   process.exit(2)
 }
 
 if (path.resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2)
+  const requireMergeCommit = args.includes('--require-merge-commit')
+  const syntheticMerge = args.includes('--synthetic-merge')
+  if (requireMergeCommit && syntheticMerge) usage()
+  const filteredArgs = args.filter(arg => arg !== '--require-merge-commit' && arg !== '--synthetic-merge')
   let findings = []
-  if (!args.length) findings = validateDiff(process.env.GITHUB_BASE_SHA || 'origin/main')
-  else if (args[0] === '--base' && args[1] && args.length === 2) findings = validateDiff(args[1])
-  else if (args[0] === '--all' && args.length === 1) {
+  if (!filteredArgs.length) findings = validateDiff(process.env.GITHUB_BASE_SHA || 'origin/main', { requireMergeCommit, syntheticMerge })
+  else if (filteredArgs[0] === '--base' && filteredArgs[1] && filteredArgs.length === 2) findings = validateDiff(filteredArgs[1], { requireMergeCommit, syntheticMerge })
+  else if (filteredArgs[0] === '--all' && filteredArgs.length === 1 && !requireMergeCommit && !syntheticMerge) {
     for (const runDir of runDirs()) findings.push(...validateRunDirectory(runDir))
     findings.push(...dailyBatchFindings(candidateRecords()))
   }
-  else if (args[0] === '--run' && args[1] && args.length === 2) findings = [...validateRunDirectory(path.join(RUNS, args[1])), ...dailyBatchFindings(candidateRecords())]
+  else if (filteredArgs[0] === '--run' && filteredArgs[1] && filteredArgs.length === 2 && !requireMergeCommit && !syntheticMerge) findings = [...validateRunDirectory(path.join(RUNS, filteredArgs[1])), ...dailyBatchFindings(candidateRecords())]
   else usage()
 
   if (findings.length) {
@@ -522,5 +780,5 @@ if (path.resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) {
     for (const finding of findings) console.error(`  ${finding}`)
     process.exit(1)
   }
-  console.log(`validate-intake: clean${args[0] === '--all' ? ` (${runDirs().length} run directories)` : ''}`)
+  console.log(`validate-intake: clean${filteredArgs[0] === '--all' ? ` (${runDirs().length} run directories)` : ''}`)
 }
