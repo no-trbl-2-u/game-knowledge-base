@@ -59,6 +59,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "T directed Bathcat to merge games that meet threshold independently and leave each below-threshold game on an open PR whose description states exactly why the gate was missed so T can help fill the evidence gap."
+  - id: "src-008"
+    title: "T instruction: one-game one-PR intake with issue-based gaps"
+    url: "local-session"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "T replaced report-style blocked PRs with GitHub issues and selected one PR per ready game: Bathcat authors the packet, a fresh Mennonite audits, approves and deterministically promotes on that branch, and merges on GO."
 confidence: high
 status: verified
 ---
@@ -99,9 +106,9 @@ The current purpose is knowledge gathering only. Full integration into downstrea
   Evidence: T explicitly set 100 percent rules coverage for all three games and a minimum 60 percent factual-coverage target for non-deckbuilders.
   Confidence: high
 
-- Claim: Passing and blocked candidates must have independent PR disposition.
-  Source: src-007
-  Evidence: T directed that qualifying games be committed and merged while every below-threshold game remains on an open PR explaining the exact shortfall so he can help close it.
+- Claim: Every ready game uses one PR, while blocked research uses an issue rather than Git content.
+  Source: src-008
+  Evidence: T selected the one-game/one-PR model and directed that blocked evidence gaps become issues. This supersedes src-007's open-gap-PR disposition.
   Confidence: high
 
 - Claim: Candidate selection is not canonical coverage.
@@ -180,7 +187,7 @@ Cron job:
 - Skill: `research-discovery-monitoring`
 - Toolsets: `web`, `file`, `terminal`, `delegation`
 - Report delivery: origin Telegram thread
-- Git delivery: dedicated scout branch and pull request; protected `main` requires current green `validate` CI before squash merge
+- Git delivery: one dedicated branch and PR per ready game; protected `main` requires current green `validate` CI and a merge commit preserving Bathcat, approval, and promotion commits
 - Required scout gate: `node scripts/validate-intake.mjs --run <run-id>`; any finding is a failed run and must not be pushed
 - Candidate target: 1 cooperative + 1 solo RPG + 1 rotating-focus, with honest eligibility shortfalls allowed
 - Coverage gate: 100% governing-rules coverage for every ready packet; non-deckbuilders also require at least 60% measured factual coverage
@@ -191,7 +198,7 @@ Independent audit job:
 - Name: `board-game-kb-mennonite-intake-audit`
 - Job ID: `b0bf3fa19896`
 - Schedule: `0 9 * * *`
-- Scope: reopen receipt sources, record hash-bound approval or rejection, and promote each approved packet through a separate CI-gated pull request
+- Scope: reopen receipt sources, record hash-bound approval in a second commit, deterministically promote in a third commit on the same PR, and merge-commit only after final green CI; failures are PR `REVISE` verdicts
 - Fail-closed threshold: two rejections in one run or rejection of more than half its ready packets pauses Bathcat before the next scout
 - Current state: paused until the prevention-stack change is merged and remote CI is verified
 
@@ -205,7 +212,7 @@ This turns daily growth from "whatever the scout felt like" into demand-driven c
 
 ## Daily output contract
 
-Each daily batch selects up to three unique candidates in disjoint 1/1/1 cohorts, with one independently mergeable run and PR per candidate. Bathcat may promote none. Every candidate carries a reproducible coverage ledger. Passing packets merge after green CI. Failed thresholds remain blocked on open draft gap PRs containing exact achieved/required coverage, missing evidence, attempted sources, and help requested. Selection manifests must keep `blocked`, `ready_for_audit`, `rejected`, `approved`, and `promoted` states distinct under `intake/runs/`.
+Each daily batch selects up to three unique candidates in disjoint 1/1/1 cohorts. Every complete candidate gets one independently mergeable run and PR. Bathcat may promote none. Every candidate carries a reproducible coverage ledger. Failed thresholds create or update `intake-gap` issues containing exact achieved/required coverage, missing evidence, attempted sources, and help requested; they do not create run directories or PRs. New committed runs begin `ready_for_audit`, then move to `approved` and `promoted` through ordered Mennonite commits on the same branch. Historical `blocked` and `rejected` states remain readable but are not valid new diffs.
 
 Each independently approved, deterministically promoted game writes one directory:
 
@@ -238,7 +245,7 @@ Before pushing, the run must:
 4. Run `node scripts/validate-intake.mjs --base origin/main`; the hard gate enforces cohort volume, receipts, source diversity, claims, duplication, visual meaning, immutable approval, and exact promotion.
 5. After approved promotion, regenerate the corpus index and run `node scripts/validate-okf.mjs`. Treat **any finding as a failed run**. Validation is necessary but does not substitute for independent evidence review.
 
-Protected-main law: all scout packets, audit decisions, and canonical promotions travel through pull requests. `main` requires the `validate` status check, up-to-date branches, resolved conversations, and denies force-push/deletion. CODEOWNERS records T's authenticated repository account. Because both Hermes profiles use that one GitHub account, persona independence is enforced by separate jobs, immutable packet hashes, write jurisdictions, and CI—not by pretending they are separate GitHub identities.
+Protected-main law: each ready game's scout packet, audit decision, and canonical promotion travel in three ordered commits within one PR. `main` requires the `validate` status check, up-to-date branches, resolved conversations, and denies force-push/deletion. New-game intake uses merge commits; squash/rebase would erase the parent-state evidence. CODEOWNERS records T's authenticated repository account. Because both Hermes profiles use that one GitHub account, persona independence is enforced by fresh contexts, immutable packet hashes, write jurisdictions, preserved commit history, and CI—not by pretending they are separate GitHub identities.
 
 ## Open questions
 
