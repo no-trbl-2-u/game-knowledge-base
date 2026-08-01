@@ -1,0 +1,47 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-08-01-onirim-second-edition",
+  "created_at": "2026-08-01T09:54:18.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "solo-solitaire-game"
+  },
+  "candidates": [
+    {
+      "slug": "onirim-second-edition",
+      "title": "Onirim (Second Edition)",
+      "bgg_id": 156336,
+      "cohort": "cooperative",
+      "status": "ready_for_audit",
+      "discovery_sources": [
+        "https://boardgamegeek.com/boardgame/156336/onirim-second-edition",
+        "https://d3sr78rmtg4mfy.cloudfront.net/filer_public/fd/0e/fd0ef6a2-c019-47a2-910a-a556f03a3d02/zm4900_onirim_rules.pdf",
+        "https://coopboardgames.com/cooperative-board-game-reviews/onirim-second-edition-review/"
+      ],
+      "blockers": [],
+      "coverage": {
+        "deckbuilder": false,
+        "methodology": "Scope is the released 2014 Z-Man Games second edition, basic game only. The governing-document denominator contains the one exact-edition official core-rules PDF required for every published rules claim. Included expansions are inventoried only as excluded content. No separate public FAQ or errata authority was found in the bounded official-domain and exact-title checks, and no FAQ/errata-dependent claim is published. Factual coverage counts the twelve declared claim groups in evidence.json; reception opinions and excluded expansions carry zero factual weight.",
+        "rules": {
+          "recorded": 1,
+          "known_total": 1,
+          "percent": 100
+        },
+        "factual": {
+          "recorded": 12,
+          "known_total": 12,
+          "percent": 100
+        }
+      }
+    }
+  ]
+}
