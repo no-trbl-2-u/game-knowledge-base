@@ -13,7 +13,7 @@ import {
   mergeCommitTopologyFindings,
   newGameSlugs,
   promotionBoundaryFindings,
-  transientProtectedHistoryFindings,
+  protectedHistoryStateFindings,
   validateCandidatePackage,
 } from './validate-intake.mjs'
 import { packetHash } from './intake-lib.mjs'
@@ -281,11 +281,60 @@ test('changed intake runs must finish promoted and canonicalized in the same PR'
   assert.deepEqual(intakeCompletionFindings(run('promoted'), new Set(['good-game'])), [])
 })
 
-test('protected history cannot disappear from the endpoint diff', () => {
-  const manifest = 'intake/runs/2026-08-02-good-game/manifest.json'
-  const canonical = 'KnowledgeBase/BoardGames/games/good-game/rules/setup.okf.md'
-  assert.deepEqual(transientProtectedHistoryFindings([{ status: 'A', oldFile: null, file: manifest }], [manifest]), [])
-  assert.match(transientProtectedHistoryFindings([], [manifest, canonical]).join('\n'), /transient protected path/)
+test('protected history rejects every repeated ancestral content state', () => {
+  const file = 'KnowledgeBase/BoardGames/games/good-game/rules/setup.okf.md'
+  const commits = ['c1', 'c2', 'c3']
+  const parentsByCommit = new Map([['c1', ['base']], ['c2', ['c1']], ['c3', ['c2']]])
+  const treesByRef = new Map([
+    ['base', new Map([[file, 'original']])],
+    ['c1', new Map([[file, 'hidden-mutation']])],
+    ['c2', new Map([[file, 'original']])],
+    ['c3', new Map([[file, 'final-edit']])],
+  ])
+  const findings = protectedHistoryStateFindings({ base: 'base', commits, parentsByCommit, treesByRef, files: [file] })
+  assert.match(findings.join('\n'), /restores an earlier content state/)
+  treesByRef.set('c2', new Map([[file, 'second-lawful-edit']]))
+  assert.deepEqual(protectedHistoryStateFindings({ base: 'base', commits, parentsByCommit, treesByRef, files: [file] }), [])
+})
+
+test('restored protected content remains rejected when the endpoint also changes', { timeout: 60_000 }, t => {
+  const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'intake-restored-state-'))
+  const repo = path.join(sandbox, 'repo')
+  const cleanEnv = { ...process.env }
+  for (const key of Object.keys(cleanEnv)) if (key.startsWith('GIT_')) delete cleanEnv[key]
+  t.after(() => fs.rmSync(sandbox, { recursive: true, force: true }))
+  const run = (command, args) => {
+    const result = spawnSync(command, args, { cwd: repo, encoding: 'utf8', env: cleanEnv })
+    assert.equal(result.status, 0, `${command} ${args.join(' ')}\n${result.stdout}${result.stderr}`)
+    return result.stdout.trim()
+  }
+
+  const sourceHead = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  const cloned = spawnSync('git', ['clone', '--no-local', '--quiet', process.cwd(), repo], { encoding: 'utf8', env: cleanEnv })
+  assert.equal(cloned.status, 0, cloned.stderr)
+  const base = run('git', ['rev-parse', 'HEAD'])
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  run('git', ['config', 'user.name', 'Intake History Test'])
+  run('git', ['config', 'user.email', 'intake-history@test.invalid'])
+
+  const relative = 'KnowledgeBase/BoardGames/games/unfathomable/index.okf.md'
+  const file = path.join(repo, relative)
+  const original = fs.readFileSync(file, 'utf8')
+  fs.writeFileSync(file, `${original}\n<!-- hidden transient mutation -->\n`)
+  run('git', ['add', relative])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: hidden canonical mutation'])
+  fs.writeFileSync(file, original)
+  run('git', ['add', relative])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: restore canonical content'])
+  fs.writeFileSync(file, `${original}\n<!-- final ordinary edit -->\n`)
+  run('git', ['add', relative])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: final canonical edit'])
+
+  const validation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+  assert.notEqual(validation.status, 0, validation.stdout + validation.stderr)
+  assert.match(validation.stdout + validation.stderr, /restores an earlier content state/)
+  const sourceHeadAfter = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  assert.equal(sourceHeadAfter, sourceHead, 'history fixture must not mutate the source repository ref')
 })
 
 test('ready packet deleted before the endpoint is rejected end to end', { timeout: 60_000 }, t => {
@@ -330,7 +379,7 @@ test('ready packet deleted before the endpoint is rejected end to end', { timeou
 
   const validation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base], { cwd: repo, encoding: 'utf8', env: cleanEnv })
   assert.notEqual(validation.status, 0, validation.stdout + validation.stderr)
-  assert.match(validation.stdout + validation.stderr, /transient protected path/)
+  assert.match(validation.stdout + validation.stderr, /restores an earlier content state/)
   const sourceHeadAfter = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
   assert.equal(sourceHeadAfter, sourceHead, 'history fixture must not mutate the source repository ref')
 })

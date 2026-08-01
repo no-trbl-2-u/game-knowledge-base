@@ -509,11 +509,65 @@ export function blockedRunDiffFindings(records) {
   return findings
 }
 
-export function transientProtectedHistoryFindings(changes, historyFiles) {
-  const endpointPaths = new Set(changes.flatMap(change => [change.oldFile, change.file]).filter(Boolean))
-  return [...new Set(historyFiles)]
-    .filter(file => !endpointPaths.has(file))
-    .map(file => `${file}: transient protected path was touched in PR history but erased from the endpoint diff`)
+const ABSENT_PROTECTED_STATE = '<absent>'
+
+function protectedStateAt(treesByRef, ref, file) {
+  return treesByRef.get(ref)?.get(file) ?? ABSENT_PROTECTED_STATE
+}
+
+export function protectedHistoryStateFindings({ base, commits, parentsByCommit, treesByRef, files }) {
+  const findings = []
+  const seenByRef = new Map([[base, new Map(files.map(file => [file, new Set([protectedStateAt(treesByRef, base, file)])]))]])
+  for (const commit of commits) {
+    const parents = parentsByCommit.get(commit) ?? []
+    const currentSeen = new Map()
+    for (const file of files) {
+      const nextState = protectedStateAt(treesByRef, commit, file)
+      const accumulated = new Set()
+      for (const parent of parents) {
+        const parentSeen = seenByRef.get(parent)
+        if (!parentSeen) {
+          findings.push(`${file}: protected history parent ${parent} falls outside the validated base ancestry`)
+          continue
+        }
+        const priorStates = parentSeen.get(file) ?? new Set([protectedStateAt(treesByRef, parent, file)])
+        const parentState = protectedStateAt(treesByRef, parent, file)
+        if (parentState !== nextState && priorStates.has(nextState)) {
+          findings.push(`${file}: protected path restores an earlier content state in commit ${commit}`)
+        }
+        for (const state of priorStates) accumulated.add(state)
+      }
+      accumulated.add(nextState)
+      currentSeen.set(file, accumulated)
+    }
+    seenByRef.set(commit, currentSeen)
+  }
+  return [...new Set(findings)]
+}
+
+function protectedTreeAt(ref) {
+  const raw = git(['ls-tree', '-r', ref, '--', 'intake/runs/', 'KnowledgeBase/BoardGames/games/'])
+  const tree = new Map()
+  for (const line of lines(raw)) {
+    const [metadata, file] = line.split('\t')
+    const oid = metadata?.split(/\s+/)[2]
+    if (file && oid) tree.set(file, oid)
+  }
+  return tree
+}
+
+function protectedHistoryFindings(base, head) {
+  const rows = lines(git(['rev-list', '--reverse', '--topo-order', '--parents', `${base}..${head}`])).map(line => line.split(/\s+/))
+  const commits = rows.map(parts => parts[0])
+  const parentsByCommit = new Map(rows.map(parts => [parts[0], parts.slice(1)]))
+  const files = [
+    ...filesTouchedByCommits(base, head, 'intake/runs/'),
+    ...filesTouchedByCommits(base, head, 'KnowledgeBase/BoardGames/games/'),
+  ]
+  if (!files.length) return []
+  const refs = new Set([git(['rev-parse', base]), ...commits, ...rows.flatMap(parts => parts.slice(1))])
+  const treesByRef = new Map([...refs].map(ref => [ref, protectedTreeAt(ref)]))
+  return protectedHistoryStateFindings({ base: git(['rev-parse', base]), commits, parentsByCommit, treesByRef, files })
 }
 
 export function intakeCompletionFindings(records, newSlugs) {
@@ -588,11 +642,7 @@ function validateDiff(base, { requireMergeCommit = false } = {}) {
   const changedFiles = changes.map(c => c.file)
   findings.push(...semanticGeneratorFindings(REPO, changedFiles))
   const historyHead = historyHeadFor(base)
-  const protectedHistoryFiles = [
-    ...filesTouchedByCommits(base, historyHead, 'intake/runs/'),
-    ...filesTouchedByCommits(base, historyHead, 'KnowledgeBase/BoardGames/games/'),
-  ]
-  findings.push(...transientProtectedHistoryFindings(changes, protectedHistoryFiles))
+  findings.push(...protectedHistoryFindings(base, historyHead))
   findings.push(...auditTransitionFindings(changes, {
     boundaryFor: (runId, slug, decision, file) => auditBoundaryAt(base, runId, slug, decision, file, historyHead),
   }))
