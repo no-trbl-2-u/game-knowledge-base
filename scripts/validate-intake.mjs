@@ -291,6 +291,16 @@ export function validateRunDirectory(runDir) {
 
 function git(args) { return execFileSync('git', args, { cwd: REPO, encoding: 'utf8' }).trim() }
 
+function isAncestor(ancestor, descendant) {
+  const result = spawnSync('git', ['merge-base', '--is-ancestor', ancestor, descendant], {
+    cwd: REPO,
+    encoding: 'utf8',
+  })
+  if (result.status === 0) return true
+  if (result.status === 1) return false
+  throw new Error(`cannot compare Git ancestry for ${ancestor} and ${descendant}: ${result.stderr.trim()}`)
+}
+
 function changedAgainst(base) {
   const raw = git(['diff', '--name-status', `${base}...HEAD`])
   if (!raw) return []
@@ -521,9 +531,13 @@ function protectedStateAt(treesByRef, ref, file) {
   return treesByRef.get(ref)?.get(file) ?? ABSENT_PROTECTED_STATE
 }
 
-export function protectedHistoryStateFindings({ base, commits, parentsByCommit, treesByRef, files }) {
+export function protectedHistoryStateFindings({ base, commits, parentsByCommit, treesByRef, files, boundaryAncestors = [] }) {
   const findings = []
-  const seenByRef = new Map([[base, new Map(files.map(file => [file, new Set([protectedStateAt(treesByRef, base, file)])]))]])
+  const seedRefs = [...new Set([base, ...boundaryAncestors])]
+  const seenByRef = new Map(seedRefs.map(ref => [
+    ref,
+    new Map(files.map(file => [file, new Set([protectedStateAt(treesByRef, ref, file)])])),
+  ]))
   for (const commit of commits) {
     const parents = parentsByCommit.get(commit) ?? []
     const currentSeen = new Map()
@@ -563,6 +577,7 @@ function protectedTreeAt(ref) {
 }
 
 function protectedHistoryFindings(base, head) {
+  const baseSha = git(['rev-parse', base])
   const rows = lines(git(['rev-list', '--reverse', '--topo-order', '--parents', `${base}..${head}`])).map(line => line.split(/\s+/))
   const commits = rows.map(parts => parts[0])
   const parentsByCommit = new Map(rows.map(parts => [parts[0], parts.slice(1)]))
@@ -571,9 +586,16 @@ function protectedHistoryFindings(base, head) {
     ...filesTouchedByCommits(base, head, 'KnowledgeBase/BoardGames/games/'),
   ]
   if (!files.length) return []
-  const refs = new Set([git(['rev-parse', base]), ...commits, ...rows.flatMap(parts => parts.slice(1))])
+  const commitSet = new Set(commits)
+  // A legacy branch may begin at an older commit that is already an ancestor of
+  // the validated base. Seed that boundary at its observed state so preserved
+  // branch history can be checked without reclassifying protected-base history.
+  // Parents outside the base ancestry remain unknown and fail closed below.
+  const boundaryAncestors = [...new Set(rows.flatMap(parts => parts.slice(1)))]
+    .filter(parent => parent !== baseSha && !commitSet.has(parent) && isAncestor(parent, baseSha))
+  const refs = new Set([baseSha, ...commits, ...rows.flatMap(parts => parts.slice(1))])
   const treesByRef = new Map([...refs].map(ref => [ref, protectedTreeAt(ref)]))
-  return protectedHistoryStateFindings({ base: git(['rev-parse', base]), commits, parentsByCommit, treesByRef, files })
+  return protectedHistoryStateFindings({ base: baseSha, commits, parentsByCommit, treesByRef, files, boundaryAncestors })
 }
 
 export function intakeCompletionFindings(records, newSlugs) {

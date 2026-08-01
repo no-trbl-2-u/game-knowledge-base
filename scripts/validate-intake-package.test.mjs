@@ -317,6 +317,78 @@ test('protected history rejects every repeated ancestral content state', () => {
   assert.deepEqual(protectedHistoryStateFindings({ base: 'base', commits, parentsByCommit, treesByRef, files: [file] }), [])
 })
 
+test('legacy remediation can merge a newer base with grandfathered intake history', { timeout: 60_000 }, t => {
+  const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'intake-legacy-sync-'))
+  const repo = path.join(sandbox, 'repo')
+  const cleanEnv = { ...process.env }
+  for (const key of Object.keys(cleanEnv)) if (key.startsWith('GIT_')) delete cleanEnv[key]
+  t.after(() => fs.rmSync(sandbox, { recursive: true, force: true }))
+  const run = (command, args) => {
+    const result = spawnSync(command, args, { cwd: repo, encoding: 'utf8', env: cleanEnv })
+    assert.equal(result.status, 0, `${command} ${args.join(' ')}\n${result.stdout}${result.stderr}`)
+    return result.stdout.trim()
+  }
+
+  const sourceHead = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  const cloned = spawnSync('git', ['clone', '--no-local', '--quiet', process.cwd(), repo], { encoding: 'utf8', env: cleanEnv })
+  assert.equal(cloned.status, 0, cloned.stderr)
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  run('git', ['config', 'user.name', 'Intake History Test'])
+  run('git', ['config', 'user.email', 'intake-history@test.invalid'])
+  const legacyBase = run('git', ['rev-parse', 'HEAD'])
+
+  run('git', ['checkout', '-b', 'legacy-remediation'])
+  const relative = 'KnowledgeBase/BoardGames/games/unfathomable/index.okf.md'
+  const file = path.join(repo, relative)
+  fs.appendFileSync(file, '\n<!-- legacy remediation witness -->\n')
+  run('git', ['add', relative])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: legacy canonical remediation'])
+
+  run('git', ['checkout', '-b', 'protected-main', legacyBase])
+  const runId = '2026-08-02-grandfathered-gap'
+  const runDir = path.join(repo, 'intake/runs', runId)
+  fs.mkdirSync(runDir, { recursive: true })
+  fs.writeFileSync(path.join(runDir, 'manifest.json'), `${JSON.stringify({
+    schema_version: 3,
+    run_id: runId,
+    created_at: '2026-08-02T12:00:00.000Z',
+    candidates: [{ slug: 'grandfathered-gap', status: 'blocked' }],
+  }, null, 2)}\n`)
+  run('git', ['add', `intake/runs/${runId}`])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: grandfather blocked intake on protected base'])
+  const currentBase = run('git', ['rev-parse', 'HEAD'])
+
+  run('git', ['checkout', 'legacy-remediation'])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'merge', '--no-ff', 'protected-main', '-m', 'test: sync current protected base'])
+  const branchValidation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', currentBase], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+  assert.equal(branchValidation.status, 0, branchValidation.stdout + branchValidation.stderr)
+
+  const remediationHead = run('git', ['rev-parse', 'HEAD'])
+  run('git', ['checkout', '-b', 'synthetic-checkout', currentBase])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'merge', '--no-ff', remediationHead, '-m', 'test: GitHub synthetic merge'])
+  const syntheticValidation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', currentBase, '--synthetic-merge'], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+  assert.equal(syntheticValidation.status, 0, syntheticValidation.stdout + syntheticValidation.stderr)
+
+  run('git', ['checkout', '-b', 'new-blocked-packet', currentBase])
+  const newRunId = '2026-08-03-new-gap'
+  const newRunDir = path.join(repo, 'intake/runs', newRunId)
+  fs.mkdirSync(newRunDir, { recursive: true })
+  fs.writeFileSync(path.join(newRunDir, 'manifest.json'), `${JSON.stringify({
+    schema_version: 3,
+    run_id: newRunId,
+    created_at: '2026-08-03T12:00:00.000Z',
+    candidates: [{ slug: 'new-gap', status: 'blocked' }],
+  }, null, 2)}\n`)
+  run('git', ['add', `intake/runs/${newRunId}`])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: newly commit blocked intake'])
+  const blockedValidation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', currentBase], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+  assert.notEqual(blockedValidation.status, 0, blockedValidation.stdout + blockedValidation.stderr)
+  assert.match(blockedValidation.stdout + blockedValidation.stderr, /blocked research belongs in a GitHub issue/)
+
+  const sourceHeadAfter = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  assert.equal(sourceHeadAfter, sourceHead, 'history fixture must not mutate the source repository ref')
+})
+
 test('restored protected content remains rejected when the endpoint also changes', { timeout: 60_000 }, t => {
   const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'intake-restored-state-'))
   const repo = path.join(sandbox, 'repo')
