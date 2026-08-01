@@ -374,10 +374,9 @@ function historyHeadFor(base, syntheticMerge = false, requireMergeCommit = false
   if (!syntheticMerge && !requireMergeCommit) return 'HEAD'
   const baseSha = git(['rev-parse', base])
   const parents = commitParents('HEAD')
-  if (parents.length !== 2 || parents[0] !== baseSha) {
-    throw new Error('declared merge validation must have exactly two parents and the validated base as its first parent')
-  }
-  return parents[1]
+  if (parents.length === 2 && parents[0] === baseSha) return parents[1]
+  if (syntheticMerge) throw new Error('declared synthetic merge must have exactly two parents and the validated base as its first parent')
+  return 'HEAD'
 }
 
 function commitsAddingPath(base, file, head = 'HEAD') {

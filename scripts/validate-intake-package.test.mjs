@@ -338,8 +338,16 @@ test('golden-path approval and protected merge checkpoints validate end to end',
   fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
   const mergeValidation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base, '--require-merge-commit'], { cwd: repo, encoding: 'utf8', env: cleanEnv })
 
+  run('git', ['checkout', '-B', 'direct-maintenance', base])
+  fs.appendFileSync(path.join(repo, 'README.md'), '\n<!-- direct maintenance control -->\n')
+  run('git', ['add', 'README.md'])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: direct maintenance control'])
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  const directMaintenanceValidation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base, '--require-merge-commit'], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+
   assert.equal(approvedValidation.status, 0, approvedValidation.stdout + approvedValidation.stderr)
   assert.equal(mergeValidation.status, 0, mergeValidation.stdout + mergeValidation.stderr)
+  assert.equal(directMaintenanceValidation.status, 0, directMaintenanceValidation.stdout + directMaintenanceValidation.stderr)
   const sourceHeadAfter = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
   assert.equal(sourceHeadAfter, sourceHead, 'golden-path fixture must not mutate the source repository ref')
 })
