@@ -31,7 +31,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          policy="$(gh api "repos/${GITHUB_REPOSITORY}" --jq '[.allow_merge_commit,.allow_squash_merge,.allow_rebase_merge] | @csv')"
+          policy="$(gh api "repos/${GITHUB_REPOSITORY}" --jq '[.allow_merge_commit,.allow_squash_merge,.allow_rebase_merge] | map(tostring) | join(",")')"
           test "$policy" = 'true,false,false'
       - name: Test intake provenance and visual gates
         run: node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs
