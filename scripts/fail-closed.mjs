@@ -29,7 +29,8 @@ if (result.status === 0) process.exit(0)
 const hermes = process.env.HERMES_BIN || 'hermes'
 const pauses = []
 for (const job of [...new Set(jobs)]) {
-  const paused = spawnSync(hermes, ['cron', 'pause', job], { encoding: 'utf8' })
+  // shell on Windows only: Node cannot spawn .cmd/.bat shims directly.
+  const paused = spawnSync(hermes, ['cron', 'pause', job], { encoding: 'utf8', shell: process.platform === 'win32' })
   pauses.push({
     job_id: job,
     paused: paused.status === 0,

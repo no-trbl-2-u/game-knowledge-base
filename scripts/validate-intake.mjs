@@ -23,7 +23,9 @@ import {
   walkFiles,
 } from './intake-lib.mjs'
 
-const REPO = path.resolve(new URL('..', import.meta.url).pathname)
+// fileURLToPath, not URL.pathname: the pathname form ('/C:/...') never
+// resolves to a real directory on Windows.
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const RUNS = path.join(REPO, 'intake', 'runs')
 const GAMES = path.join(REPO, 'KnowledgeBase', 'BoardGames', 'games')
 const REQUIRED_DOCS = [
