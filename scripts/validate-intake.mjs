@@ -613,6 +613,11 @@ export function intakeCompletionFindings(records, newSlugs) {
   return findings
 }
 
+export function intakeCompletionGateFindings(records, newSlugs, { requireMergeCommit = false, syntheticMerge = false } = {}) {
+  if (!requireMergeCommit && !syntheticMerge) return []
+  return intakeCompletionFindings(records, newSlugs)
+}
+
 export function newGameSlugs(changes, existsAtBase) {
   const slugs = new Set()
   for (const change of changes) {
@@ -742,7 +747,7 @@ function validateDiff(base, { requireMergeCommit = false, syntheticMerge = false
   const records = candidateRecords()
   findings.push(...dailyBatchFindings(records))
   const newSlugs = newGameSlugs(changes, slug => gameExistsAt(base, slug))
-  findings.push(...intakeCompletionFindings(changedRunRecords, newSlugs))
+  findings.push(...intakeCompletionGateFindings(changedRunRecords, newSlugs, { requireMergeCommit, syntheticMerge }))
   if (requireMergeCommit) findings.push(...mergeCommitTopologyFindings(newSlugs.size, { parents: commitParents('HEAD'), baseSha: git(['rev-parse', base]) }))
   if (newSlugs.size > 3) findings.push(`intake diff adds ${newSlugs.size} canonical games; hard ceiling is 3`)
   const docs = []

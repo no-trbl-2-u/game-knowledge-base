@@ -10,6 +10,7 @@ import {
   auditTransitionFindings,
   blockedRunDiffFindings,
   dailyBatchFindings,
+  intakeCompletionGateFindings,
   intakeCompletionFindings,
   mergeCommitTopologyFindings,
   newGameSlugs,
@@ -296,6 +297,13 @@ test('changed intake runs must finish promoted and canonicalized in the same PR'
   assert.match(intakeCompletionFindings(run('approved'), new Set()).join('\n'), /must end promoted in the same PR/)
   assert.match(intakeCompletionFindings(run('promoted'), new Set()).join('\n'), /must add its canonical game in the same PR/)
   assert.deepEqual(intakeCompletionFindings(run('promoted'), new Set(['good-game'])), [])
+})
+
+test('ordinary branch delivery permits intermediate intake heads while merge validation requires completion', () => {
+  const records = [{ runId: '2026-07-30-good', candidates: [{ slug: 'good-game', status: 'ready_for_audit' }] }]
+  assert.deepEqual(intakeCompletionGateFindings(records, new Set()), [])
+  assert.match(intakeCompletionGateFindings(records, new Set(), { syntheticMerge: true }).join('\n'), /must end promoted in the same PR/)
+  assert.match(intakeCompletionGateFindings(records, new Set(), { requireMergeCommit: true }).join('\n'), /must end promoted in the same PR/)
 })
 
 test('protected history rejects every repeated ancestral content state', () => {
