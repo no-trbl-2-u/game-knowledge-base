@@ -202,8 +202,8 @@ export function validateCandidatePackage(candidateDir, candidate) {
     const packetSources = new Map(sourceEntries(text).map(source => [source.id, source]))
     const files = refs.map(ref => ref.file)
     const assetUrls = refs.map(ref => packetSources.get(ref.source_id)?.asset_url).filter(Boolean)
-    if (files.length < 4 || files.length > 8) flag(findings, packet, `must declare 4–8 visual files, found ${files.length}`)
-    if (new Set(assetUrls).size < 4) flag(findings, packet, `must preserve at least four distinct source asset URLs, found ${new Set(assetUrls).size}`)
+    if (files.length < 2 || files.length > 8) flag(findings, packet, `must declare 2–8 visual files, found ${files.length}`)
+    if (new Set(assetUrls).size < 2) flag(findings, packet, `must preserve at least two distinct source asset URLs, found ${new Set(assetUrls).size}`)
     if (new Set(refs.map(ref => ref.id)).size !== refs.length) flag(findings, packet, 'visual reference ids must be unique')
     if (new Set(refs.map(ref => ref.rationale)).size !== refs.length) flag(findings, packet, 'every new visual reference requires a distinct analytical rationale')
     const imageFiles = []

@@ -52,8 +52,9 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 
 - **Bathcat scout** (external Hermes cron) — wishlist-first discovery and
   noncanonical evidence packets only; target 1/1/1, honest eligibility shortfalls
-  allowed. Ready packets require 100% rules coverage and non-deckbuilders require
-  at least 60% measured factual coverage. Bathcat opens one PR only for a complete
+  allowed. Ready packets require 100% coverage of the bounded governing-document
+  inventory declared for the claims actually published; exhaustive card-library
+  coverage and arbitrary factual percentages are not admission gates. Bathcat opens one PR only for a complete
   `ready_for_audit` packet. Below-threshold research becomes an actionable GitHub
   issue and must not add a blocked packet or report PR to Git.
 - **Mennonite intake audit** (separate external Hermes cron) — independently
