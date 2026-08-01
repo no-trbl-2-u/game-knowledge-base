@@ -5,6 +5,7 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
+import { fileURLToPath } from 'node:url'
 import {
   auditTransitionFindings,
   blockedRunDiffFindings,
@@ -18,7 +19,9 @@ import {
 } from './validate-intake.mjs'
 import { packetHash } from './intake-lib.mjs'
 
-const VALIDATOR = path.resolve(new URL('./validate-okf.mjs', import.meta.url).pathname)
+// fileURLToPath, not URL.pathname: the pathname form ('/C:/...') never
+// resolves to a real file on Windows.
+const VALIDATOR = fileURLToPath(new URL('./validate-okf.mjs', import.meta.url))
 
 const NOW = '2026-07-30T12:00:00.000Z'
 const DOCS = [
@@ -108,7 +111,10 @@ function makePackage(t, rootOverride = null) {
   for (let i = 0; i < filters.length; i += 1) {
     const rel = `visuals/references/ref-${i + 1}.webp`
     const file = path.join(canonical, rel)
-    const made = spawnSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-f', 'lavfi', '-i', filters[i], '-frames:v', '1', '-y', file], { encoding: 'utf8' })
+    // -pix_fmt yuv420p forces lossy VP8: ffmpeg 8's libwebp wrapper otherwise
+    // auto-picks lossless VP8X for flat test sources, which ffmpeg's own
+    // native webp decoder cannot read back when building the contact sheet.
+    const made = spawnSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-f', 'lavfi', '-i', filters[i], '-frames:v', '1', '-pix_fmt', 'yuv420p', '-y', file], { encoding: 'utf8' })
     assert.equal(made.status, 0, made.stderr)
     const hash = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
     refs.push(`  - id: "vis-${String(i + 1).padStart(3, '0')}"
@@ -169,7 +175,21 @@ test('unverified staged record is rejected before audit', t => {
   assert.match(validateCandidatePackage(root, candidate).join('\n'), /new canonical records must be verified/)
 })
 
-test('symlinked staged content is rejected and cannot be packet-hashed', t => {
+// Windows denies symlink creation without Developer Mode; probe once and
+// skip there rather than fail — Linux CI always exercises this gate.
+const canSymlink = (() => {
+  const probeDir = fs.mkdtempSync(path.join(os.tmpdir(), 'symlink-probe-'))
+  try {
+    fs.symlinkSync(path.join(probeDir, 'target'), path.join(probeDir, 'link'))
+    return true
+  } catch {
+    return false
+  } finally {
+    fs.rmSync(probeDir, { recursive: true, force: true })
+  }
+})()
+
+test('symlinked staged content is rejected and cannot be packet-hashed', { skip: !canSymlink && 'symlink creation unavailable on this platform' }, t => {
   const root = makePackage(t)
   const external = path.join(root, 'external.txt')
   fs.writeFileSync(external, 'mutable external content')
