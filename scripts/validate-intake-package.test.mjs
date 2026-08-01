@@ -306,6 +306,44 @@ test('ordinary branch delivery permits intermediate intake heads while merge val
   assert.match(intakeCompletionGateFindings(records, new Set(), { requireMergeCommit: true }).join('\n'), /must end promoted in the same PR/)
 })
 
+test('golden-path approval and protected merge checkpoints validate end to end', { timeout: 60_000 }, t => {
+  const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'intake-golden-path-'))
+  const repo = path.join(sandbox, 'repo')
+  const cleanEnv = { ...process.env }
+  for (const key of Object.keys(cleanEnv)) if (key.startsWith('GIT_')) delete cleanEnv[key]
+  t.after(() => fs.rmSync(sandbox, { recursive: true, force: true }))
+  const run = (command, args) => {
+    const result = spawnSync(command, args, { cwd: repo, encoding: 'utf8', env: cleanEnv })
+    assert.equal(result.status, 0, `${command} ${args.join(' ')}\n${result.stdout}${result.stderr}`)
+    return result.stdout.trim()
+  }
+
+  const sourceHead = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  const cloned = spawnSync('git', ['clone', '--no-local', '--quiet', process.cwd(), repo], { encoding: 'utf8', env: cleanEnv })
+  assert.equal(cloned.status, 0, cloned.stderr)
+  run('git', ['config', 'user.name', 'Intake Golden Path Test'])
+  run('git', ['config', 'user.email', 'intake-golden-path@test.invalid'])
+
+  const base = 'c73e4be1bf88672e29996f3932bcc263fe0cc235'
+  const approval = 'bdd0fb408c1f5c847f399007653a72253166d799'
+  const promotion = 'ce43955920b72c075c722ec00ef38bc8e9a711dd'
+  for (const ref of [base, approval, promotion]) run('git', ['cat-file', '-e', `${ref}^{commit}`])
+
+  run('git', ['checkout', '--detach', approval])
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  const approvedValidation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+
+  run('git', ['checkout', '-B', 'protected-merge', base])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'merge', '--no-ff', promotion, '-m', 'test: protected golden-path merge'])
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  const mergeValidation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base, '--require-merge-commit'], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+
+  assert.equal(approvedValidation.status, 0, approvedValidation.stdout + approvedValidation.stderr)
+  assert.equal(mergeValidation.status, 0, mergeValidation.stdout + mergeValidation.stderr)
+  const sourceHeadAfter = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  assert.equal(sourceHeadAfter, sourceHead, 'golden-path fixture must not mutate the source repository ref')
+})
+
 test('protected history rejects every repeated ancestral content state', () => {
   const file = 'KnowledgeBase/BoardGames/games/good-game/rules/setup.okf.md'
   const commits = ['c1', 'c2', 'c3']
