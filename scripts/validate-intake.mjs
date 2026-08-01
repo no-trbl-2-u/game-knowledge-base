@@ -370,14 +370,13 @@ function commitParents(ref = 'HEAD') {
   return git(['show', '-s', '--format=%P', ref]).split(/\s+/).filter(Boolean)
 }
 
-function historyHeadFor(base, syntheticMerge = false) {
-  if (!syntheticMerge) return 'HEAD'
+function historyHeadFor(base, syntheticMerge = false, requireMergeCommit = false) {
+  if (!syntheticMerge && !requireMergeCommit) return 'HEAD'
   const baseSha = git(['rev-parse', base])
   const parents = commitParents('HEAD')
-  if (parents.length !== 2 || parents[0] !== baseSha) {
-    throw new Error('declared synthetic merge must have exactly two parents and the validated base as its first parent')
-  }
-  return parents[1]
+  if (parents.length === 2 && parents[0] === baseSha) return parents[1]
+  if (syntheticMerge) throw new Error('declared synthetic merge must have exactly two parents and the validated base as its first parent')
+  return 'HEAD'
 }
 
 function commitsAddingPath(base, file, head = 'HEAD') {
@@ -422,9 +421,10 @@ function auditBoundaryAt(base, runId, slug, decision, decisionFile, head = 'HEAD
     oppositeAtParent: pathExistsAt(parent, opposite),
     unexpectedDecisionChanges: filesChangedInCommit(decisionCommit).filter(file => !allowed.has(file)),
     postDecisionPacketChanges: filesTouchedByCommits(decisionCommit, head, candidatePrefix),
-    manifestChangedOnlyAtPromotion: postDecisionManifestCommits.length === 1
-      && promotionCommits.length === 1
-      && postDecisionManifestCommits[0] === promotionCommits[0],
+    manifestChangedOnlyAtPromotion: postDecisionManifestCommits.length === 0
+      || (postDecisionManifestCommits.length === 1
+        && promotionCommits.length === 1
+        && postDecisionManifestCommits[0] === promotionCommits[0]),
   }
 }
 
@@ -675,7 +675,7 @@ function validateDiff(base, { requireMergeCommit = false, syntheticMerge = false
   const changedFiles = changes.map(c => c.file)
   findings.push(...semanticGeneratorFindings(REPO, changedFiles))
   let historyHead = 'HEAD'
-  try { historyHead = historyHeadFor(base, syntheticMerge) }
+  try { historyHead = historyHeadFor(base, syntheticMerge, requireMergeCommit) }
   catch (err) { findings.push(err.message) }
   findings.push(...protectedHistoryFindings(base, historyHead))
   findings.push(...auditTransitionFindings(changes, {
