@@ -358,10 +358,14 @@ function commitParents(ref = 'HEAD') {
   return git(['show', '-s', '--format=%P', ref]).split(/\s+/).filter(Boolean)
 }
 
-function historyHeadFor(base) {
+function historyHeadFor(base, syntheticMerge = false) {
+  if (!syntheticMerge) return 'HEAD'
   const baseSha = git(['rev-parse', base])
   const parents = commitParents('HEAD')
-  return parents.length === 2 && parents[0] === baseSha ? parents[1] : 'HEAD'
+  if (parents.length !== 2 || parents[0] !== baseSha) {
+    throw new Error('declared synthetic merge must have exactly two parents and the validated base as its first parent')
+  }
+  return parents[1]
 }
 
 function commitsAddingPath(base, file, head = 'HEAD') {
@@ -634,14 +638,16 @@ export function dailyBatchFindings(records) {
   return findings
 }
 
-function validateDiff(base, { requireMergeCommit = false } = {}) {
+function validateDiff(base, { requireMergeCommit = false, syntheticMerge = false } = {}) {
   const findings = []
   let changes
   try { changes = changedAgainst(base) }
   catch (err) { return [`cannot compare intake against ${base}: ${err.message}`] }
   const changedFiles = changes.map(c => c.file)
   findings.push(...semanticGeneratorFindings(REPO, changedFiles))
-  const historyHead = historyHeadFor(base)
+  let historyHead = 'HEAD'
+  try { historyHead = historyHeadFor(base, syntheticMerge) }
+  catch (err) { findings.push(err.message) }
   findings.push(...protectedHistoryFindings(base, historyHead))
   findings.push(...auditTransitionFindings(changes, {
     boundaryFor: (runId, slug, decision, file) => auditBoundaryAt(base, runId, slug, decision, file, historyHead),
@@ -749,22 +755,24 @@ function validateDiff(base, { requireMergeCommit = false } = {}) {
 }
 
 function usage() {
-  console.error('usage: node scripts/validate-intake.mjs [--base <git-ref> [--require-merge-commit] | --all | --run <run-id>]')
+  console.error('usage: node scripts/validate-intake.mjs [--base <git-ref> [--require-merge-commit | --synthetic-merge] | --all | --run <run-id>]')
   process.exit(2)
 }
 
 if (path.resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2)
   const requireMergeCommit = args.includes('--require-merge-commit')
-  const filteredArgs = args.filter(arg => arg !== '--require-merge-commit')
+  const syntheticMerge = args.includes('--synthetic-merge')
+  if (requireMergeCommit && syntheticMerge) usage()
+  const filteredArgs = args.filter(arg => arg !== '--require-merge-commit' && arg !== '--synthetic-merge')
   let findings = []
-  if (!filteredArgs.length) findings = validateDiff(process.env.GITHUB_BASE_SHA || 'origin/main', { requireMergeCommit })
-  else if (filteredArgs[0] === '--base' && filteredArgs[1] && filteredArgs.length === 2) findings = validateDiff(filteredArgs[1], { requireMergeCommit })
-  else if (filteredArgs[0] === '--all' && filteredArgs.length === 1 && !requireMergeCommit) {
+  if (!filteredArgs.length) findings = validateDiff(process.env.GITHUB_BASE_SHA || 'origin/main', { requireMergeCommit, syntheticMerge })
+  else if (filteredArgs[0] === '--base' && filteredArgs[1] && filteredArgs.length === 2) findings = validateDiff(filteredArgs[1], { requireMergeCommit, syntheticMerge })
+  else if (filteredArgs[0] === '--all' && filteredArgs.length === 1 && !requireMergeCommit && !syntheticMerge) {
     for (const runDir of runDirs()) findings.push(...validateRunDirectory(runDir))
     findings.push(...dailyBatchFindings(candidateRecords()))
   }
-  else if (filteredArgs[0] === '--run' && filteredArgs[1] && filteredArgs.length === 2 && !requireMergeCommit) findings = [...validateRunDirectory(path.join(RUNS, filteredArgs[1])), ...dailyBatchFindings(candidateRecords())]
+  else if (filteredArgs[0] === '--run' && filteredArgs[1] && filteredArgs.length === 2 && !requireMergeCommit && !syntheticMerge) findings = [...validateRunDirectory(path.join(RUNS, filteredArgs[1])), ...dailyBatchFindings(candidateRecords())]
   else usage()
 
   if (findings.length) {

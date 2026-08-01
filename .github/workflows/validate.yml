@@ -31,7 +31,7 @@ jobs:
         run: node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs
       - name: Validate intake diff (pull request)
         if: github.event_name == 'pull_request'
-        run: node scripts/validate-intake.mjs --base "${{ github.event.pull_request.base.sha }}"
+        run: node scripts/validate-intake.mjs --base "${{ github.event.pull_request.base.sha }}" --synthetic-merge
       - name: Validate intake diff (push)
         if: github.event_name == 'push'
         run: node scripts/validate-intake.mjs --base "${{ github.event.before }}" --require-merge-commit

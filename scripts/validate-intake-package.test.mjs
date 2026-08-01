@@ -337,6 +337,46 @@ test('restored protected content remains rejected when the endpoint also changes
   assert.equal(sourceHeadAfter, sourceHead, 'history fixture must not mutate the source repository ref')
 })
 
+test('ordinary internal merge restoration is not mistaken for a synthetic checkout', { timeout: 60_000 }, t => {
+  const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'intake-internal-merge-'))
+  const repo = path.join(sandbox, 'repo')
+  const cleanEnv = { ...process.env }
+  for (const key of Object.keys(cleanEnv)) if (key.startsWith('GIT_')) delete cleanEnv[key]
+  t.after(() => fs.rmSync(sandbox, { recursive: true, force: true }))
+  const run = (command, args) => {
+    const result = spawnSync(command, args, { cwd: repo, encoding: 'utf8', env: cleanEnv })
+    assert.equal(result.status, 0, `${command} ${args.join(' ')}\n${result.stdout}${result.stderr}`)
+    return result.stdout.trim()
+  }
+
+  const sourceHead = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  const cloned = spawnSync('git', ['clone', '--no-local', '--quiet', process.cwd(), repo], { encoding: 'utf8', env: cleanEnv })
+  assert.equal(cloned.status, 0, cloned.stderr)
+  const base = run('git', ['rev-parse', 'HEAD'])
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  run('git', ['config', 'user.name', 'Intake History Test'])
+  run('git', ['config', 'user.email', 'intake-history@test.invalid'])
+
+  const relative = 'KnowledgeBase/BoardGames/games/unfathomable/index.okf.md'
+  const file = path.join(repo, relative)
+  const original = fs.readFileSync(file, 'utf8')
+  run('git', ['checkout', '-b', 'mutation-side'])
+  fs.writeFileSync(file, `${original}\n<!-- side-branch mutation -->\n`)
+  run('git', ['add', relative])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: side mutation'])
+  run('git', ['checkout', '-b', 'integration', base])
+  run('git', ['merge', '--no-ff', '--no-commit', 'mutation-side'])
+  fs.writeFileSync(file, original)
+  run('git', ['add', relative])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: internal restoration merge'])
+
+  const validation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+  assert.notEqual(validation.status, 0, validation.stdout + validation.stderr)
+  assert.match(validation.stdout + validation.stderr, /restores an earlier content state/)
+  const sourceHeadAfter = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  assert.equal(sourceHeadAfter, sourceHead, 'history fixture must not mutate the source repository ref')
+})
+
 test('ready packet deleted before the endpoint is rejected end to end', { timeout: 60_000 }, t => {
   const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'intake-transient-history-'))
   const repo = path.join(sandbox, 'repo')
