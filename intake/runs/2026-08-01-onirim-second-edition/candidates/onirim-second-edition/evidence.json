@@ -1,0 +1,114 @@
+{
+  "schema_version": 3,
+  "slug": "onirim-second-edition",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-08-01T09:54:18.000Z",
+  "edition_scope": "Released 2014 Z-Man Games second edition (product code ZM4900), restricted to the 76-card basic game for one or two players. All seven included expansions are excluded from operative rules and reception claims except explicit inventory and exclusion notes.",
+  "coverage_ledger": {
+    "rules_denominator": [
+      {
+        "authority": "Z-Man Games Onirim Rules (ZM4900), basic-game sections",
+        "acquired": true,
+        "official_endpoint": true,
+        "source_ids": ["src-001"],
+        "notes": "Complete 7-page PDF retrieved from the HTTPS CloudFront distribution to which images.zmangames.com resolves; printed pages 4-12 inspect the basic game. The legacy custom hostname currently presents a CloudFront certificate-name mismatch, so the same distribution was retrieved through its certificate-valid CloudFront hostname."
+      }
+    ],
+    "faq_errata_inventory": {
+      "scope": "Public English FAQ or errata applicable to Z-Man product ZM4900 and needed by claims in this packet.",
+      "checks": [
+        "Exact-title web searches for Onirim with FAQ and errata produced no retrieved official FAQ or errata document.",
+        "The current Z-Man sitemap, products, games, resources, and news endpoints each returned HTTP 403 during bounded inspection; that block is not treated as proof of absence.",
+        "The exact ZM4900 PDF and independent second-edition review disclosed no separate base-game FAQ or errata authority."
+      ],
+      "applicable_acquired": 0,
+      "applicable_known_total": 0,
+      "notes": "No claim of publisher-wide nonexistence is made. The packet publishes only claims resolved by the complete core rulebook, so no inaccessible or uncited FAQ/errata document is needed in the governing denominator."
+    },
+    "factual_denominator": [
+      {"claim_group": "2014 Z-Man/F2Z edition identity", "recorded": true, "source_ids": ["src-001", "src-002"]},
+      {"claim_group": "one-to-two-player solo/cooperative format", "recorded": true, "source_ids": ["src-001", "src-002"]},
+      {"claim_group": "76-card basic-game component inventory", "recorded": true, "source_ids": ["src-001"]},
+      {"claim_group": "basic-game setup and expansion exclusion", "recorded": true, "source_ids": ["src-001"]},
+      {"claim_group": "three-phase turn structure and Limbo", "recorded": true, "source_ids": ["src-001"]},
+      {"claim_group": "location-play restriction and door discovery", "recorded": true, "source_ids": ["src-001"]},
+      {"claim_group": "Prophecy procedure", "recorded": true, "source_ids": ["src-001"]},
+      {"claim_group": "Door draw and Nightmare resolution", "recorded": true, "source_ids": ["src-001"]},
+      {"claim_group": "solo victory and defeat", "recorded": true, "source_ids": ["src-001"]},
+      {"claim_group": "two-player setup, resources, and victory", "recorded": true, "source_ids": ["src-001"]},
+      {"claim_group": "independent praise for compact solo play and included variety", "recorded": true, "source_ids": ["src-002"]},
+      {"claim_group": "independent friction on shuffling and limited cooperation", "recorded": true, "source_ids": ["src-002"]}
+    ],
+    "exclusions": [
+      "All seven included expansions, their cards, setup changes, and rules are outside operative scope.",
+      "The later inPatience SKU INPAON12 and its current product imagery are not used to establish ZM4900 identity.",
+      "Ratings, rank, and complexity weight are not claimed; game.weight is null.",
+      "Search snippets, inaccessible pages, and BGG bot challenges are discovery leads rather than evidence."
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Z-Man Games — Onirim Rules (ZM4900)",
+      "roles": ["identity", "official_rules"],
+      "provenance": "official",
+      "url": "https://d3sr78rmtg4mfy.cloudfront.net/filer_public/fd/0e/fd0ef6a2-c019-47a2-910a-a556f03a3d02/zm4900_onirim_rules.pdf",
+      "final_url": "https://d3sr78rmtg4mfy.cloudfront.net/filer_public/fd/0e/fd0ef6a2-c019-47a2-910a-a556f03a3d02/zm4900_onirim_rules.pdf",
+      "retrieved_at": "2026-08-01T09:52:17.929Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 3667165,
+      "sha256": "f146783bc8f5e39b97382a04f610615b05aab4306303cca8312d235c64638579",
+      "locator": "7-page PDF; printed pages 4-12; basic-game rules on printed pages 4-12; credits on printed page 12",
+      "evidence": "The PDF identifies Onirim, a 76-card basic game for one or two players, and carries a 2014 F2Z Entertainment copyright."
+    },
+    {
+      "id": "src-002",
+      "title": "Co-op Board Games — Onirim (Second Edition) Review",
+      "roles": ["identity", "independent_review"],
+      "provenance": "secondary",
+      "url": "https://coopboardgames.com/cooperative-board-game-reviews/onirim-second-edition-review/",
+      "final_url": "https://coopboardgames.com/cooperative-board-game-reviews/onirim-second-edition-review/",
+      "retrieved_at": "2026-08-01T09:52:51.321Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 114174,
+      "sha256": "b1ebeeaaee9de184f45cbddfb4bd4ba8b53475b058d8190ab612f22180d9c520",
+      "locator": "What Is Onirim, Gameplay, Pros and Cons, and Final Thoughts",
+      "evidence": "is a solo or two-player cooperative card game in which you play as Dreamwalkers"
+    },
+    {
+      "id": "src-003",
+      "title": "Co-op Board Games — Onirim second-edition box photograph",
+      "roles": ["visual"],
+      "provenance": "secondary",
+      "url": "https://coopboardgames.com/wp-content/uploads/2016/05/onirim-review-300x300.png",
+      "final_url": "https://coopboardgames.com/wp-content/uploads/2016/05/onirim-review-300x300.png",
+      "retrieved_at": "2026-08-01T09:52:51.449Z",
+      "http_status": 200,
+      "content_type": "image/png",
+      "byte_length": 44087,
+      "sha256": "6e5613621b86b0ebf4e38960c8ebc18f63ff3ca74356d6dcc9c79a093d3c9568",
+      "locator": "Lead image in the Onirim (Second Edition) review",
+      "evidence": "Source-linked photograph of the reviewed Onirim second-edition box."
+    },
+    {
+      "id": "src-004",
+      "title": "Co-op Board Games — Onirim completed base-game tableau photograph",
+      "roles": ["visual"],
+      "provenance": "secondary",
+      "url": "https://coopboardgames.com/wp-content/uploads/2017/10/Onirim-review-completed-game.jpg",
+      "final_url": "https://coopboardgames.com/wp-content/uploads/2017/10/Onirim-review-completed-game.jpg",
+      "retrieved_at": "2026-08-01T09:52:51.678Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 44306,
+      "sha256": "7bfe18f88ce32dc1f462bd3105f8b6eab8dfd8c71cc369191bd966dc93a08d0a",
+      "locator": "Gameplay image under Onirim Gameplay",
+      "evidence": "Source-linked photograph of a completed Onirim base-game labyrinth and doors."
+    }
+  ]
+}

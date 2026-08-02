@@ -2,8 +2,11 @@
 // Deterministically generate Slay the Spire card sidecars and corpus index.
 import fs from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const root = path.resolve(new URL('..', import.meta.url).pathname)
+// fileURLToPath, not URL.pathname: the pathname form ('/C:/...') never
+// resolves to a real directory on Windows.
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dir = path.join(root, 'KnowledgeBase/DigitalCardGames/slay-the-spire')
 const input = path.join(root, 'scripts/data/slay-the-spire-1-cards.json')
 const cardsDir = path.join(dir, 'cards')
