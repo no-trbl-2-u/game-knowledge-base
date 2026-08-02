@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-08-01T10:18:39.000Z",
+  "packet_sha256": "a358b9d42036c28be1c9389f113ded706f9384a89c58e35df2a87299327ef1e0",
+  "reviewed_source_ids": [
+    "src-001",
+    "src-002",
+    "src-003",
+    "src-004"
+  ],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Independently reopened and exactly re-hashed the ZM4900 rules PDF, review, and both visual sources; verified all basic-game claims, reception inferences, visual rights metadata, bounded FAQ/errata wording, and the no-rating/no-expansion boundary."
+}

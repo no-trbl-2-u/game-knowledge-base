@@ -117,13 +117,13 @@ test('manifest rejects more than one candidate in a cohort', () => {
   assert.match(validateManifest(value).join('\n'), /cooperative count 3 exceeds 1/)
 })
 
-test('ready non-deckbuilder requires complete rules and at least sixty percent factual coverage', () => {
+test('ready packets require complete bounded rules but no arbitrary factual quota', () => {
   const value = candidate('one', 'cooperative', 'ready_for_audit')
   value.coverage.rules = { recorded: 3, known_total: 4, percent: 75 }
   value.coverage.factual = { recorded: 5, known_total: 10, percent: 50 }
   const findings = validateManifest(manifest([value])).join('\n')
   assert.match(findings, /rules.percent must be 100/)
-  assert.match(findings, /factual.percent must be at least 60/)
+  assert.doesNotMatch(findings, /factual.percent must be at least 60/)
 })
 
 test('ready deckbuilder requires complete rules but may declare an unknown factual denominator', () => {

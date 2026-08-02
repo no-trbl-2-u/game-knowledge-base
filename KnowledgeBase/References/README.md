@@ -23,5 +23,17 @@ queued in each doc's Open questions for a later fetch-and-regrade pass.
     win-correlation), playtest cadence, when breaking the game is fine
   - `player-experience-and-interaction.okf.md` — controlled luck,
     interaction budget, genre criticisms, risk legibility
+- `mtg/` — Magic: The Gathering design canon (Rosewater / Making Magic
+  primary sources)
+  - `new-world-order-complexity-budget.okf.md` — the complexity budget at
+    common; comprehension vs board vs strategic complexity
+  - `color-pie-as-permission-system.okf.md` — color as graded permissions
+    (primary/secondary/tertiary), weaknesses as identity
+  - `keywords-and-reminder-text.okf.md` — keyword craft; the keyword +
+    italic-gloss convention as text compression
+  - `lenticular-design.okf.md` — cards simple to novices, deep to experts;
+    hiding complexity instead of removing it
+  - `storm-scale.okf.md` — the five-criterion rubric for keyword vs
+    one-off decisions
 - `communities-and-playtesting.okf.md` — playtest networks and designer
   forums (Protospiel, Break My Game, BGG design forum, BGDF, reddit)
