@@ -66,6 +66,20 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "T replaced report-style blocked PRs with GitHub issues and selected one PR per ready game: Bathcat authors the packet, a fresh Mennonite audits, approves and deterministically promotes on that branch, and merges on GO."
+  - id: "src-009"
+    title: "T instruction: bounded-authority intake law supersedes factual quota"
+    url: "local-session"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-08-01"
+    notes: "T directed correction of the stale 60 percent factual-coverage doctrine. Current readiness requires complete bounded governing-document coverage for published claims plus claim-level Source/Evidence/Confidence support; no arbitrary factual-percentage admission quota remains."
+  - id: "src-010"
+    title: "Hermes cron job: board-game-kb-mennonite-intake-audit"
+    url: "cronjob:b0bf3fa19896"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-08-01"
+    notes: "Live scheduler state verified enabled at 09:00 UTC in the isolated Mennonite checkout. Fail-closed runs preserve evidence and future retries; only T may order cron state changes."
 confidence: high
 status: verified
 ---
@@ -101,9 +115,9 @@ The current purpose is knowledge gathering only. Full integration into downstrea
   Evidence: T first moved from one game to broader cohorts, then replaced the 2/2/2 breadth target with a 1/1/1 depth target and explicit coverage gates.
   Confidence: high
 
-- Claim: Audit readiness requires complete governing-rules coverage for every game and at least 60 percent measured factual coverage for non-deckbuilders.
-  Source: src-006
-  Evidence: T explicitly set 100 percent rules coverage for all three games and a minimum 60 percent factual-coverage target for non-deckbuilders.
+- Claim: Audit readiness requires complete coverage of the bounded governing-document inventory needed for published claims plus complete claim-level evidence; no arbitrary factual-percentage admission quota remains.
+  Source: src-009
+  Evidence: T explicitly replaced the stale 60 percent factual threshold with bounded governing-authority completeness and Source/Evidence/Confidence support for every published claim.
   Confidence: high
 
 - Claim: Every ready game uses one PR, while blocked research uses an issue rather than Git content.
@@ -182,8 +196,8 @@ Cron job:
 - Name: `board-game-kb-bathcat-scout-quarantine`
 - Job ID: `44c13742fca9`
 - Schedule: `0 6 * * *`
-- Next scheduled run if re-enabled: `2026-07-31T06:00:00+00:00`
-- Workdir: `/root/Workspace/SomberSoft/game-knowledge-base`
+- Current state: enabled and scheduled
+- Workdir: `/root/Workspace/SomberSoft/game-knowledge-base-bathcat`
 - Skill: `research-discovery-monitoring`
 - Toolsets: `web`, `file`, `terminal`, `delegation`
 - Report delivery: origin Telegram thread
@@ -199,8 +213,8 @@ Independent audit job:
 - Job ID: `b0bf3fa19896`
 - Schedule: `0 9 * * *`
 - Scope: reopen receipt sources, record hash-bound approval in a second commit, deterministically promote in a third commit on the same PR, and merge-commit only after final green CI; failures are PR `REVISE` verdicts
-- Fail-closed threshold: two rejections in one run or rejection of more than half its ready packets pauses Bathcat before the next scout
-- Current state: paused until the prevention-stack change is merged and remote CI is verified
+- Failure law: infrastructure failures write durable evidence and leave future scheduled retries enabled; ordinary `REVISE` verdicts do not pause either job, and cron state changes require T's explicit order
+- Current state: enabled and scheduled in `/root/Workspace/SomberSoft/game-knowledge-base-mennonite`
 
 ## Selection doctrine (amended per OKF 0.2 §5)
 
