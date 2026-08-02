@@ -212,7 +212,7 @@ This turns daily growth from "whatever the scout felt like" into demand-driven c
 
 ## Daily output contract
 
-Each daily batch selects up to three unique candidates in disjoint 1/1/1 cohorts. Every complete candidate gets one independently mergeable run and PR. Bathcat may promote none. Every candidate carries a reproducible coverage ledger. Failed thresholds create or update `intake-gap` issues containing exact achieved/required coverage, missing evidence, attempted sources, and help requested; they do not create run directories or PRs. New committed runs begin `ready_for_audit`, then move to `approved` and `promoted` through ordered Mennonite commits on the same branch. Historical `blocked` and `rejected` states remain readable but are not valid new diffs.
+Each daily batch selects up to three unique candidates in disjoint 1/1/1 cohorts. Every complete candidate gets one independently mergeable run and PR. Bathcat may promote none. Every candidate carries a reproducible coverage ledger. Failed thresholds create or update `intake-gap` issues containing exact achieved/required coverage, missing evidence, attempted sources, and help requested; they do not create run directories or PRs. "Help requested" means document sources only — physical-copy acquisition and box/SKU/lot inspection may never be requested of a human, in an issue or anywhere else (`OKF_SPEC.md`, "No physical-acquisition followups"). New committed runs begin `ready_for_audit`, then move to `approved` and `promoted` through ordered Mennonite commits on the same branch. Historical `blocked` and `rejected` states remain readable but are not valid new diffs.
 
 Each independently approved, deterministically promoted game writes one directory:
 
