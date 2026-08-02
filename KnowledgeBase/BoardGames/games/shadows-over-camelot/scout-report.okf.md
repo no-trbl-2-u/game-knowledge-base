@@ -55,11 +55,11 @@ followups:
     retry_needs: wayback_snapshot
     notes: "Direct/browser Access Denied; text-proxy retrieval aid reports current 404. Need complete historical official web FAQ/support inventory and explicit version bridge."
   - source_id: null
-    url: "physical://english-2005-first-retail-copy"
-    failure: other
+    url: "lawful immutable English 2005 first-retail component inventory document"
+    failure: not_found
     fallback: "Later 2015 inventory is retained only as a provisional lead; 2005 review supplies secondary observations."
-    retry_needs: manual_review
-    notes: "Need SKU/UPC/copyright/lot/printing markers and line-by-line nonreplacement first-retail component inventory."
+    retry_needs: alternate_source
+    notes: "Need a lawful line-by-line nonreplacement first-retail component inventory document. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; absent such a document source the first-print denominator stays permanently UNKNOWN."
   - source_id: null
     url: "authority://licensed-base-component-face-manifest"
     failure: other
@@ -103,7 +103,7 @@ status: needs_followup
 
 ## Exact residual help
 
-- Claim: Closure requires an inspected English 2005 first-retail copy with SKU/UPC/lot/printing and nonreplacement inventory; immutable original Rules/Book of Quests/aids with publisher chain; complete historical official FAQ/web support inventory and version bridge; and licensed base-only card/loyalty/quest/board/die identity/text/face denominators.
+- Claim: Closure requires document sources only — a lawful nonreplacement English 2005 first-retail component inventory document; immutable original Rules/Book of Quests/aids with publisher chain; complete historical official FAQ/web support inventory and version bridge; and licensed base-only card/loyalty/quest/board/die identity/text/face denominators. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; where no lawful document source exists, the denominator stays permanently `UNKNOWN` and these records stay `needs_followup` as an accepted terminal state.
   Source: src-001, src-002, src-003, src-004
   Evidence: These are the open authority classes above.
   Confidence: high
