@@ -4,7 +4,7 @@ type: pattern
 mechanics: [dice-rolling, deck-bag-and-pool-building, push-your-luck]
 better_if_labels: [randomness]
 confidence: medium
-status: verified
+status: draft
 ---
 
 ## Summary
@@ -15,7 +15,10 @@ the game overriding player skill; too little variance (a thin card pool that rep
 reads as predictable and stale. The recurring mitigation reviewers reward is giving
 players a lever over the randomness — deterministic ordering, a dice-or-card choice,
 or a catch-up tool framed as earned rather than free — so a bad outcome still traces
-back to a legible decision.
+back to a legible decision. Nemesis and Betrayal Legacy sharpen the "too much variance"
+side: both are praised for the same randomness that produces memorable emergent stories,
+while the same reviewers flag it as domino-effect swinginess or a run of card draws that
+can sideline a player entirely — the same variance is both the appeal and the complaint.
 
 ## Evidence by game
 
@@ -26,6 +29,9 @@ back to a legible decision.
 - ark-nova (src-008): the 212-card zoo deck produces "output randomness [that] is so
   large" that laid strategic plans can fail to pan out; the reviewer wanted fewer
   cards or more deck-churn tools, confidence: high
+- betrayal-legacy (src-005): pre-haunt card draws can leave a player "unable to even
+  meaningfully participate" despite reasonable play, and the same review separately
+  calls the dice "the most dickheaded" (source doc status: needs_followup), confidence: high
 - dune-imperium (src-008): hidden combat inputs (Intrigue cards, troop commitments)
   are praised for making decisions "hard, impactful, and constant" because no one is
   ever fully sure of an opponent's combat strength, confidence: medium
@@ -45,6 +51,10 @@ back to a legible decision.
 - the-quacks-of-quedlinburg (src-005): the reviewer flags bag-pull variance as a
   strong taste filter, warning that luck-averse players should try the game before
   buying it, confidence: high
+- nemesis (src-006, src-007): reviewers describe random room/intruder/event chains as
+  the source of the game's most-praised emergent stories, while the same randomness
+  produces escape/noise "domino effects" that one reviewer calls overwhelming,
+  confidence: high
 
 ## Where it works
 
@@ -60,6 +70,10 @@ back to a legible decision.
   player choice is singled out as a thoughtful risk-mitigation mechanism.
 - the-quacks-of-quedlinburg (src-006): the rat-tail catch-up rule is praised for
   keeping players who busted badly competitive, softening the sting of a bad bag pull.
+- nemesis (src-006, src-007, src-009): randomized room/intruder/event chains and
+  variable objectives are credited with producing memorable, replayable stories even
+  when plans fail — the same variance the "where it fails" section flags is the
+  corpus's clearest case of praised-and-punished randomness at once.
 
 ## Where it fails
 
@@ -75,6 +89,12 @@ back to a legible decision.
 - the-quacks-of-quedlinburg (src-005): the reviewer's blunt warning — don't buy
   sight-unseen "if you don't like luck" — shows bag-pull variance as a hard filter
   on the audience, not just a texture note.
+- betrayal-legacy (src-005): pre-haunt card draws are described as capable of leaving
+  a player unable to meaningfully participate before the finale even plays out
+  (source doc status: needs_followup), confidence: high.
+- nemesis (src-006, src-007): escape/noise domino effects and generally "overwhelming"
+  randomness are named as a friction point distinct from the praised storytelling
+  variance, confidence: high.
 
 ## Coverage gaps
 
@@ -83,6 +103,8 @@ variance-specific evidence: legendary-encounters-an-alien-deck-building-game's
 sourced complaints are about hive-deck *timing* and per-player-count *difficulty*
 rather than variance itself, and kingdom-death-monster's only randomness claim is
 explicitly flagged by its own doc as an unconfirmed inference (status:
-needs_followup). The corpus would benefit from a follow-up pass on
-kingdom-death-monster once its needs_followup backlog clears, specifically targeting
-how reviewers discuss its critical-hit/wound-table dice system.
+needs_followup). betrayal-legacy's contribution is also from a `needs_followup`
+reception doc, which is why this pattern's `status` stays `draft` rather than
+`verified`. The corpus would benefit from a follow-up pass on kingdom-death-monster
+once its needs_followup backlog clears, specifically targeting how reviewers discuss
+its critical-hit/wound-table dice system.

@@ -15,8 +15,8 @@ sub-pool (few fear/blight cards, no modules yet unlocked, mismatched module
 sets) turns the same mechanic into a source of predictability or imbalance
 complaints instead. The failure mode is rarely "randomized setup is bad" —
 it is "there wasn't enough variety in the setup pool," or "the variable
-pieces weren't curated correctly." Evidence is real but thin: of the five
-tagged games, only three (Heat, Spirit Island, Quacks) yielded reviewer
+pieces weren't curated correctly." Evidence is real but thin: of the seven
+tagged games, only four (Heat, Spirit Island, Quacks, Nemesis) yielded reviewer
 claims that were genuinely about setup *variability* rather than setup
 *duration* or in-game card-draw randomness.
 
@@ -39,6 +39,7 @@ claims that were genuinely about setup *variability* rather than setup
   ingredient-book sets chosen at setup can leave the game "wildly
   unbalanced" if not curated together, confidence: medium (lowest of the
   two cited claims)
+- nemesis (src-007, src-008, src-009): reviews credit variable objectives and randomized ship/room layout directly with supporting the game's replayability, confidence: high
 
 ## Where it works
 
@@ -48,6 +49,7 @@ claims that were genuinely about setup *variability* rather than setup
 - spirit-island (src-005): modular board and asymmetric spirit setup are
   credited with giving the game "a ton of variety, player choice, and
   replay value."
+- nemesis (src-007, src-008, src-009): randomized ship layout and varied objectives are named directly as replayability drivers, not just a byproduct of theme.
 
 ## Where it fails
 
@@ -67,7 +69,9 @@ Ark Nova and Root both carry the variable-setup tag, but their reviewed
 sources spoke to in-play card-draw randomness (Ark Nova's 212-card zoo
 deck) and faction/expansion depth (Root's low-player-count faction mix)
 rather than setup-condition variability itself, so neither yielded usable
-evidence here — this pattern's coverage would benefit from a game whose
-reviews discuss modular-board or randomized-market setup explicitly (tile
-layout, scenario draw, starting-resource randomization) rather than
-in-game draw variance.
+evidence here. dark-pact also now carries the tag but its reviewed sources
+discuss Pacts, market cards, and multipliers rather than setup-condition
+variability specifically, so it was excluded rather than forced in — this
+pattern's coverage would benefit from a game whose reviews discuss
+modular-board or randomized-market setup explicitly (tile layout, scenario
+draw, starting-resource randomization) rather than in-game draw variance.

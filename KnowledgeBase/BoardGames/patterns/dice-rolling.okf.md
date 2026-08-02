@@ -9,21 +9,24 @@ status: draft
 
 ## Summary
 
-Evidence is thin: of the eight dice-rolling games checked, only four have a claim
-that is actually about dice specifically rather than randomness in general
-(hoplomachus-remastered, root, and the-quacks-of-quedlinburg carry the
+Evidence is thin: of the eighteen dice-rolling games now tagged in the corpus, only
+five have a claim that is actually about dice specifically rather than randomness in
+general (hoplomachus-remastered, root, and the-quacks-of-quedlinburg carry the
 dice-rolling tag but their reception docs never single out dice mechanics by
 name; mage-knight's reviews praise "deterministic combat" with no sourced
 detail tying it to the dice mechanism). Where dice are discussed directly, the
 same lever recurs: giving players a way to choose or convert around a roll
 (dice-or-card resolution, character-specific dice pools) reads as thoughtful,
 while unmediated crit/fail swings read as an accessibility and communication
-risk. Two of the four contributing games (kingdom-death-monster,
-too-many-bones) are still `needs_followup`, so this pattern should be treated
-as a working hypothesis, not a settled consensus.
+risk — Betrayal Legacy's "most dickheaded dice" complaint is the sharpest example
+of the latter. Two of the five contributing games (kingdom-death-monster,
+too-many-bones) are still `needs_followup`, and a third (betrayal-legacy) is as
+well, so this pattern should be treated as a working hypothesis, not a settled
+consensus.
 
 ## Evidence by game
 
+- betrayal-legacy (src-005): a review independently calls out "the most dickheaded dice," a direct dice-mechanism complaint distinct from its broader randomness/card-draw criticism (source doc status: needs_followup), confidence: high
 - heroes-of-terrinoth (src-005): review's Pros section names "randomized enemy
   sets, and dice-driven adjustment" alongside upgrades and hero variety as
   contributors to replay value, confidence: high
@@ -61,16 +64,25 @@ as a working hypothesis, not a settled consensus.
   as a barrier to onboarding for players who don't already understand them,
   i.e., dice-pool literacy itself is a friction point for new players,
   confidence: medium.
+- betrayal-legacy (src-005): swingy dice are named as a specific complaint alongside slipping tracker clips, not folded into a general randomness critique (source doc status: needs_followup).
 
 ## Coverage gaps
 
-Three of the eight tagged games (hoplomachus-remastered, root,
+Three of the original eight tagged games (hoplomachus-remastered, root,
 the-quacks-of-quedlinburg) have verified reception docs that never discuss
 dice mechanics by name despite carrying the dice-rolling tag, and
 mage-knight's "deterministic combat" praise has no source-linked claim to
-cite. The corpus would benefit from re-reading hoplomachus-remastered and
-root's reception sources specifically for dice-combat commentary (their dice
+cite. Ten more games now carry the dice-rolling tag (arydia-the-paths-we-dare-tread,
+cthulhu-death-may-die, descent-journeys-in-the-dark-second-edition,
+star-wars-imperial-assault, dead-of-winter-a-crossroads-game,
+dead-of-winter-the-long-night, forgotten-waters, nemesis, and
+nemesis-lockdown), but only betrayal-legacy's reviews name the dice mechanism
+directly — the rest either lack a reception doc entirely or discuss randomness,
+threat systems, or card draws without singling out dice specifically. The
+corpus would benefit from re-reading hoplomachus-remastered and root's
+reception sources specifically for dice-combat commentary (their dice
 subsystems — Chip Theory's chip-and-die combat, Root's dice-based Woodland
 skirmishes — are known to exist mechanically but are undocumented here), and
-from resolving the needs_followup status on kingdom-death-monster and
-too-many-bones so this pattern's confidence can move past low.
+from resolving the needs_followup status on kingdom-death-monster,
+too-many-bones, and betrayal-legacy so this pattern's confidence can move
+past low.
