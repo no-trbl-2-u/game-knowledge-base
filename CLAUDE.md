@@ -29,6 +29,13 @@ writes what, on what cadence) is `KnowledgeBase/BoardGames/operations.okf.md`.
    from outside BGG. Bathcat cannot create `approval.json` or write canonical
    `games/`. The Mennonite independently approves an immutable packet hash;
    only `scripts/promote-intake.mjs` may copy that packet into the corpus.
+5. **Never ask a human to buy or inspect a game.** Followups, prose "residual
+   help" sections, and `intake-gap` issues may only request *document*
+   sources — URLs, archive captures, official scans/readouts, licensed
+   corpora. Physical-copy acquisition and box/SKU/lot inspection are out of
+   scope (`OKF_SPEC.md`, "No physical-acquisition followups"). Record the gap
+   as a permanently `UNKNOWN` denominator instead; that is a valid terminal
+   state, not a pending task.
 
 ## Validation
 

@@ -229,6 +229,23 @@ followups:
 
 A `scout_report` doc with `status: needs_followup` must carry a non-empty `followups` block — the weekly librarian pass consumes exactly this. Prose failure notes remain welcome but do not replace the block.
 
+### No physical-acquisition followups
+
+A followup must name a **document source** that could be retrieved: a URL, an
+archive capture, an official scan or readout inventory, a licensed corpus.
+Followups that ask a human to buy, borrow, unbox, or physically inspect a copy
+of a game are **out of scope** and must never be written — not as a
+`physical://` pseudo-URL, not as a prose "residual help" bullet, not as an
+`intake-gap` issue line. The same prohibition covers box, SKU, UPC, lot, and
+printing-marker inspection.
+
+This is a scope boundary, not an evidence standard: the underlying gap still
+gets recorded honestly. State the denominator as `UNKNOWN`, keep the record
+`needs_followup`, and say plainly that no lawful document source is known.
+A permanently open denominator is an accepted terminal state for a record —
+it is not a pending task, and it must not be re-raised as an acquisition
+request on the next pass.
+
 ## Daily scout and canonical-promotion boundary
 
 The three-game scout target is 1 cooperative, 1 solo RPG, and 1 rotating-focus game. It is a research target, not a canonical-output quota; honest eligibility shortfalls remain lawful. Each complete candidate uses one one-candidate run and one PR. Below-threshold research becomes an `intake-gap` GitHub issue with exact achieved/required coverage, missing evidence, attempted sources, and help requested; it must not enter Git as a blocked packet or report PR. Bathcat writes complete noncanonical packets under `intake/runs/` according to `intake/README.md`; it does not write directly to `games/` and may not approve its own packet. Every candidate carries a reproducible coverage ledger. Ready packets require 100% coverage of the bounded governing-document inventory needed for the packet's published claims. Exhaustive card-library or expansion coverage and arbitrary factual percentages are not admission gates; every published claim must instead pass Source/Evidence/Confidence validation.

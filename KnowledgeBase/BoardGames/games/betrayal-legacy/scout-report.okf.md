@@ -60,7 +60,7 @@ followups:
     failure: other
     fallback: "Hasbro exposes titles/counts but not complete ordered readouts for the Legacy decks, Purgatory deck, Folium Infernum rules stickers, sealed box, or sealed envelope."
     retry_needs: manual_review
-    notes: "A lawful physical-copy audit or official component scans/readout inventory is required; do not spoil campaign content publicly."
+    notes: "An official component scan/readout inventory is required; do not spoil campaign content publicly. Physical-copy acquisition is out of scope for this corpus; absent an official readout this denominator stays permanently UNKNOWN."
 confidence: high
 status: needs_followup
 last_verified: "2026-07-31"
