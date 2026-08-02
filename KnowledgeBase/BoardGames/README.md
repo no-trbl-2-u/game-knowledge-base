@@ -15,7 +15,7 @@ Primary uses:
 
 ## Daily cadence
 
-A Hermes cron job runs once per day at 06:00 UTC. It selects one cooperative game, one solo RPG board game, and one game matching the rotating mechanic focus when eligible candidates exist. Each candidate gets an independent run and PR: ready packets merge separately, while below-threshold packets remain open as draft gap PRs explaining exact evidence failures and requested help. Selection is not canonical coverage: Bathcat writes only noncanonical candidate packets; a game directory is written only after independent Mennonite audit and deterministic promotion. Ready packets require 100% governing-rules coverage; non-deckbuilders additionally require at least 60% measured factual coverage.
+A Hermes cron job runs once per day at 06:00 UTC. It selects one cooperative game, one solo RPG board game, and one game matching the rotating mechanic focus when eligible candidates exist. Each complete candidate gets one independent run and one PR. Below-threshold research becomes an `intake-gap` issue explaining exact evidence failures and requested help; blocked report PRs are prohibited. Selection is not canonical coverage: Bathcat writes only complete noncanonical candidate packets; a game directory is written only after independent Mennonite audit and deterministic promotion. Ready packets require 100% coverage of the bounded governing-document inventory needed for their published claims; arbitrary factual percentages and exhaustive card-library coverage are not admission gates.
 
 ```txt
 KnowledgeBase/BoardGames/games/<slug>/
@@ -84,7 +84,7 @@ Do not mirror whole copyrighted rulebooks into the KB. Store:
 
 The corpus is for private research and design analysis, not republication of rulebooks.
 
-Each game also carries a curated packet of 4–8 reduced WebP visual references
+Each game also carries a curated packet of 2–8 reduced WebP visual references
 and one contact sheet. Preserve the source page, exact asset URL, creator,
 rights holder, usage basis, attribution, analytical purpose, and SHA-256 for
 every local derivative. “Official” describes provenance, not permission.

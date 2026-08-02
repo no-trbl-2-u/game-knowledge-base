@@ -8,31 +8,35 @@ import { fileURLToPath } from 'node:url'
 
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 
-test('failed command pauses every named cron job and writes durable evidence', t => {
+test('failed command stops the run without pausing future retries and writes durable evidence', t => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fail-closed-'))
   t.after(() => fs.rmSync(root, { recursive: true, force: true }))
   const log = path.join(root, 'pauses.log')
-  const fake = path.join(root, 'hermes')
-  fs.writeFileSync(fake, `#!/bin/sh\nprintf '%s\\n' "$*" >> '${log}'\n`)
+  // Windows cannot exec a shebang script; use a .cmd shim there (redirect
+  // placed first so job names ending in digits cannot form fd-redirects).
+  const isWindows = process.platform === 'win32'
+  const fake = path.join(root, isWindows ? 'hermes.cmd' : 'hermes')
+  fs.writeFileSync(fake, isWindows
+    ? `@echo off\r\n>>"${log}" echo %*\r\n`
+    : `#!/bin/sh\nprintf '%s\\n' "$*" >> '${log}'\n`)
   fs.chmodSync(fake, 0o755)
   const result = spawnSync(process.execPath, [
     path.join(HERE, 'fail-closed.mjs'),
-    '--pause-job', 'scout-job',
-    '--pause-job', 'audit-job',
+    '--job', 'scout-job',
+    '--job', 'audit-job',
     '--', process.execPath, '-e', 'process.exit(7)',
   ], {
-    env: { ...process.env, HOME: root, HERMES_BIN: fake },
+    // os.homedir() reads USERPROFILE on Windows and HOME elsewhere.
+    env: { ...process.env, HOME: root, USERPROFILE: root, HERMES_BIN: fake },
     encoding: 'utf8',
   })
   assert.equal(result.status, 7)
-  assert.deepEqual(fs.readFileSync(log, 'utf8').trim().split('\n'), [
-    'cron pause scout-job',
-    'cron pause audit-job',
-  ])
+  assert.equal(fs.existsSync(log), false)
   const state = path.join(root, '.hermes', 'state', 'game-kb-intake-failures')
   const records = fs.readdirSync(state)
   assert.equal(records.length, 1)
   const record = JSON.parse(fs.readFileSync(path.join(state, records[0]), 'utf8'))
   assert.equal(record.exit_status, 7)
-  assert.deepEqual(record.pauses.map(item => item.paused), [true, true])
+  assert.deepEqual(record.affected_jobs, ['scout-job', 'audit-job'])
+  assert.equal(record.retry_allowed, true)
 })

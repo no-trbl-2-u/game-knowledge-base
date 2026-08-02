@@ -2,10 +2,13 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
+import { fileURLToPath } from 'node:url'
 import { hashTree, packetHash, readJson, writeJson } from './intake-lib.mjs'
 import { validateRunDirectory } from './validate-intake.mjs'
 
-const REPO = path.resolve(new URL('..', import.meta.url).pathname)
+// fileURLToPath, not URL.pathname: the pathname form ('/C:/...') never
+// resolves to a real directory on Windows.
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
 function die(message) {
   console.error(`promote-intake: ${message}`)
