@@ -70,7 +70,7 @@ followups:
     retry_needs: manual_review
     notes: "Need an authoritative bounded live/archived FFG support inventory beyond inspected captures; no absence claim."
   - source_id: null
-    url: "lawful immutable complete 2014 base-game card/board/reference face corpus or physical-copy inspection"
+    url: "lawful immutable complete 2014 base-game card/board/reference face corpus"
     failure: not_found
     fallback: "2014 rulebook class quantities and framework rules plus FAQ cases; no missing face text inferred."
     retry_needs: manual_review
@@ -139,6 +139,6 @@ Four noncontiguous pages (2, 4, 6, 12) from the byte-verified 2014 target PDF we
 ## Exact residual help requested from T
 
 1. Provide or authorize an authoritative bounded live/archived Fantasy Flight Games support inventory beyond the inspected captures.
-2. Provide a lawful immutable complete 2014 base-game card/board/reference face corpus, or a physical copy for independent inspection without publishing replacement-quality text.
+2. Provide a lawful immutable complete 2014 base-game card/board/reference face corpus without publishing replacement-quality text. Acquiring a physical copy is out of scope for this corpus; if no lawful document corpus exists, these denominators stay permanently `UNKNOWN`.
 
 Disposition: **OPEN DRAFT / needs_followup / no readiness claim / do not merge.**
