@@ -28,11 +28,11 @@ sources:
     notes: "Release-era standalone/compatibility evidence."
 followups:
   - source_id: null
-    url: "physical://dead-of-winter-the-long-night-2016-first-printing"
-    failure: other
+    url: "lawful immutable 2016 target-printing card/board/reference face corpus"
+    failure: not_found
     fallback: "Official aggregate inventory and rulebook diagrams only."
-    retry_needs: manual_review
-    notes: "Inspect a confirmed 2016 English copy to close every card/board/reference identity and rule-bearing text class without reproducing full text."
+    retry_needs: alternate_source
+    notes: "Need a lawful document corpus covering card/board/reference identity and rule-bearing text classes without reproducing full text. Physical-copy acquisition is out of scope for this corpus; absent such a document source these denominators stay permanently UNKNOWN."
   - source_id: null
     url: "https://web.archive.org/cdx/search/cdx?url=media.plaidhatgames.com/old_images/games/dead-of-winter/*"
     failure: other
@@ -141,4 +141,6 @@ Counting convention: 42 printed inventory rows; grouped names are preserved exac
 
 ## Exact help requested
 
-T/manual: provide or inspect a confirmed English 2016 first-printing box and record identity/semantics (not replacement-quality text) for every rule-bearing card, board side, location, reference sheet, token face, die face, and card/standee or card/token mapping; confirm SKU/lot/printing markers from box and rulebook; manually inventory current FFG support past Cloudflare; and independently bound the target FAQ/errata/module-sheet inventory. A wholly fresh Mennonite must audit the exact PR head after repair.
+Document-source only: a lawful immutable corpus recording identity/semantics (not replacement-quality text) for every rule-bearing card, board side, location, reference sheet, token face, die face, and card/standee or card/token mapping; a manual inventory of current FFG support past Cloudflare; and an independently bounded target FAQ/errata/module-sheet inventory.
+
+Physical-copy acquisition and box/SKU/lot inspection are **out of scope** for this corpus and must not be requested. Where no lawful document source exists, the affected denominators stay permanently `UNKNOWN` and the records stay `needs_followup` — that is an accepted terminal state, not a pending task.
