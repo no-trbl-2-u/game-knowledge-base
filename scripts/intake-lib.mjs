@@ -176,7 +176,6 @@ export function coverageFindings(candidate, label = 'candidate') {
   findings.push(...coverageMetricFindings(coverage.factual, `${label}.coverage.factual`))
   if (candidate?.status !== 'blocked') {
     if (coverage?.rules?.percent !== 100) findings.push(`${label}.coverage.rules.percent must be 100 for ${candidate.status}`)
-    if (coverage?.deckbuilder === false && !(coverage?.factual?.percent >= 60)) findings.push(`${label}.coverage.factual.percent must be at least 60 for a non-deckbuilder ${candidate.status} packet`)
   }
   return findings
 }

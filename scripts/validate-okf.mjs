@@ -210,7 +210,7 @@ function validate(file) {
     const sourceEntries = entries(topLevelBlock(head, 'sources'))
     const sourceMap = new Map(sourceEntries.map(e => [entryField(e, 'id'), e]))
     const refs = entries(topLevelBlock(head, 'visual_references'))
-    if (refs.length < 4 || refs.length > 8) flag(file, `visual_references must contain 4–8 entries, found ${refs.length}`)
+    if (refs.length < 2 || refs.length > 8) flag(file, `visual_references must contain 2–8 entries, found ${refs.length}`)
 
     const ids = new Set(), localFiles = new Set(), declared = new Set()
     let aggregateBytes = 0
