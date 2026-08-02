@@ -116,11 +116,11 @@ followups:
     retry_needs: browser_fetch
     notes: "Need official retail SKU/UPC/publication receipt and first-print markers."
   - source_id: null
-    url: "physical://english-2022-first-retail-copy"
-    failure: other
+    url: "lawful immutable English 2022 first-retail component/card/face document corpus"
+    failure: not_found
     fallback: "Rulebook inventory plus FAQ marker correction only."
-    retry_needs: manual_review
-    notes: "Need box/SKU/lot/printing and nonreplacement component/card/face inspection."
+    retry_needs: alternate_source
+    notes: "Need a lawful nonreplacement document source for component/card/face identities. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; absent such a document source these denominators stay permanently UNKNOWN."
 confidence: medium
 status: needs_followup
 ---
@@ -160,7 +160,7 @@ status: needs_followup
 
 ## Exact residual help
 
-- Claim: Closure requires (1) an inspected English 2022 first-retail copy with SKU/UPC/lot/printing markers and nonreplacement component/card/face inventory; (2) immutable first-retail rulebook/aid bytes or a publisher bridge beyond the capture-truncated archive; (3) historical FAQ/support history beyond the complete current folder; and (4) licensed nonreplacement identity/text/face denominators for hidden cards, objectives, Rooms, Contingencies, tokens, dice, and board surfaces.
+- Claim: Closure requires document sources only — (1) a lawful nonreplacement component/card/face document corpus for the English 2022 first retail printing; (2) immutable first-retail rulebook/aid bytes or a publisher bridge beyond the capture-truncated archive; (3) historical FAQ/support history beyond the complete current folder; and (4) licensed nonreplacement identity/text/face denominators for hidden cards, objectives, Rooms, Contingencies, tokens, dice, and board surfaces. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; where no lawful document source exists, the denominator stays permanently `UNKNOWN` and these records stay `needs_followup` as an accepted terminal state.
   Source: src-001, src-002, src-003, src-005, src-010
   Evidence: These are precisely the unresolved authority classes above.
   Confidence: high
