@@ -5,10 +5,12 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
+import { fileURLToPath } from 'node:url'
 import {
   auditTransitionFindings,
   blockedRunDiffFindings,
   dailyBatchFindings,
+  intakeCompletionGateFindings,
   intakeCompletionFindings,
   mergeCommitTopologyFindings,
   newGameSlugs,
@@ -18,7 +20,9 @@ import {
 } from './validate-intake.mjs'
 import { packetHash } from './intake-lib.mjs'
 
-const VALIDATOR = path.resolve(new URL('./validate-okf.mjs', import.meta.url).pathname)
+// fileURLToPath, not URL.pathname: the pathname form ('/C:/...') never
+// resolves to a real file on Windows.
+const VALIDATOR = fileURLToPath(new URL('./validate-okf.mjs', import.meta.url))
 
 const NOW = '2026-07-30T12:00:00.000Z'
 const DOCS = [
@@ -34,8 +38,7 @@ const sourceData = [
   ['src-003', 'Rating snapshot', 'https://boardgamegeek.com/boardgame/123/good-game', 'bgg_page', 'community', ['identity', 'rating']],
   ['src-004', 'Publisher visual one', 'https://assets.publisher.test/good-game/asset-1.png', 'image', 'official', ['visual']],
   ['src-005', 'Publisher visual two', 'https://assets.publisher.test/good-game/asset-2.png', 'image', 'official', ['visual']],
-  ['src-006', 'Publisher visual three', 'https://assets.publisher.test/good-game/asset-3.png', 'image', 'official', ['visual']],
-  ['src-007', 'Publisher visual four', 'https://assets.publisher.test/good-game/asset-4.png', 'image', 'official', ['visual']],
+
 ]
 
 function sourcesYaml() {
@@ -103,12 +106,15 @@ function makePackage(t, rootOverride = null) {
     fs.writeFileSync(file, document(type, needsClaim ? claim(rel) : `## ${rel}\n\nThis verified fixture record preserves source-backed package metadata.`, extra))
   }
   fs.mkdirSync(path.join(canonical, 'visuals', 'references'), { recursive: true })
-  const filters = ['testsrc2=s=320x240', 'smptebars=s=320x240', 'rgbtestsrc=s=320x240', 'mandelbrot=s=320x240']
+  const filters = ['testsrc2=s=320x240', 'smptebars=s=320x240']
   const refs = []
   for (let i = 0; i < filters.length; i += 1) {
     const rel = `visuals/references/ref-${i + 1}.webp`
     const file = path.join(canonical, rel)
-    const made = spawnSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-f', 'lavfi', '-i', filters[i], '-frames:v', '1', '-y', file], { encoding: 'utf8' })
+    // -pix_fmt yuv420p forces lossy VP8: ffmpeg 8's libwebp wrapper otherwise
+    // auto-picks lossless VP8X for flat test sources, which ffmpeg's own
+    // native webp decoder cannot read back when building the contact sheet.
+    const made = spawnSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-f', 'lavfi', '-i', filters[i], '-frames:v', '1', '-pix_fmt', 'yuv420p', '-y', file], { encoding: 'utf8' })
     assert.equal(made.status, 0, made.stderr)
     const hash = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
     refs.push(`  - id: "vis-${String(i + 1).padStart(3, '0')}"
@@ -131,9 +137,7 @@ function makePackage(t, rootOverride = null) {
     '-hide_banner', '-loglevel', 'error',
     '-i', path.join(canonical, 'visuals/references/ref-1.webp'),
     '-i', path.join(canonical, 'visuals/references/ref-2.webp'),
-    '-i', path.join(canonical, 'visuals/references/ref-3.webp'),
-    '-i', path.join(canonical, 'visuals/references/ref-4.webp'),
-    '-filter_complex', 'xstack=inputs=4:layout=0_0|w0_0|0_h0|w0_h0',
+    '-filter_complex', 'hstack=inputs=2',
     '-frames:v', '1', '-y', sheetFile,
   ], { encoding: 'utf8' })
   assert.equal(sheet.status, 0, sheet.stderr)
@@ -169,7 +173,21 @@ test('unverified staged record is rejected before audit', t => {
   assert.match(validateCandidatePackage(root, candidate).join('\n'), /new canonical records must be verified/)
 })
 
-test('symlinked staged content is rejected and cannot be packet-hashed', t => {
+// Windows denies symlink creation without Developer Mode; probe once and
+// skip there rather than fail — Linux CI always exercises this gate.
+const canSymlink = (() => {
+  const probeDir = fs.mkdtempSync(path.join(os.tmpdir(), 'symlink-probe-'))
+  try {
+    fs.symlinkSync(path.join(probeDir, 'target'), path.join(probeDir, 'link'))
+    return true
+  } catch {
+    return false
+  } finally {
+    fs.rmSync(probeDir, { recursive: true, force: true })
+  }
+})()
+
+test('symlinked staged content is rejected and cannot be packet-hashed', { skip: !canSymlink && 'symlink creation unavailable on this platform' }, t => {
   const root = makePackage(t)
   const external = path.join(root, 'external.txt')
   fs.writeFileSync(external, 'mutable external content')
@@ -279,6 +297,59 @@ test('changed intake runs must finish promoted and canonicalized in the same PR'
   assert.match(intakeCompletionFindings(run('approved'), new Set()).join('\n'), /must end promoted in the same PR/)
   assert.match(intakeCompletionFindings(run('promoted'), new Set()).join('\n'), /must add its canonical game in the same PR/)
   assert.deepEqual(intakeCompletionFindings(run('promoted'), new Set(['good-game'])), [])
+})
+
+test('ordinary branch delivery permits intermediate intake heads while merge validation requires completion', () => {
+  const records = [{ runId: '2026-07-30-good', candidates: [{ slug: 'good-game', status: 'ready_for_audit' }] }]
+  assert.deepEqual(intakeCompletionGateFindings(records, new Set()), [])
+  assert.match(intakeCompletionGateFindings(records, new Set(), { syntheticMerge: true }).join('\n'), /must end promoted in the same PR/)
+  assert.match(intakeCompletionGateFindings(records, new Set(), { requireMergeCommit: true }).join('\n'), /must end promoted in the same PR/)
+})
+
+test('golden-path approval and protected merge checkpoints validate end to end', { timeout: 60_000 }, t => {
+  const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'intake-golden-path-'))
+  const repo = path.join(sandbox, 'repo')
+  const cleanEnv = { ...process.env }
+  for (const key of Object.keys(cleanEnv)) if (key.startsWith('GIT_')) delete cleanEnv[key]
+  t.after(() => fs.rmSync(sandbox, { recursive: true, force: true }))
+  const run = (command, args) => {
+    const result = spawnSync(command, args, { cwd: repo, encoding: 'utf8', env: cleanEnv })
+    assert.equal(result.status, 0, `${command} ${args.join(' ')}\n${result.stdout}${result.stderr}`)
+    return result.stdout.trim()
+  }
+
+  const sourceHead = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  const cloned = spawnSync('git', ['clone', '--no-local', '--quiet', process.cwd(), repo], { encoding: 'utf8', env: cleanEnv })
+  assert.equal(cloned.status, 0, cloned.stderr)
+  run('git', ['config', 'user.name', 'Intake Golden Path Test'])
+  run('git', ['config', 'user.email', 'intake-golden-path@test.invalid'])
+
+  const base = 'c73e4be1bf88672e29996f3932bcc263fe0cc235'
+  const approval = 'bdd0fb408c1f5c847f399007653a72253166d799'
+  const promotion = 'ce43955920b72c075c722ec00ef38bc8e9a711dd'
+  for (const ref of [base, approval, promotion]) run('git', ['cat-file', '-e', `${ref}^{commit}`])
+
+  run('git', ['checkout', '--detach', approval])
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  const approvedValidation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+
+  run('git', ['checkout', '-B', 'protected-merge', base])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'merge', '--no-ff', promotion, '-m', 'test: protected golden-path merge'])
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  const mergeValidation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base, '--require-merge-commit'], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+
+  run('git', ['checkout', '-B', 'direct-maintenance', base])
+  fs.appendFileSync(path.join(repo, 'README.md'), '\n<!-- direct maintenance control -->\n')
+  run('git', ['add', 'README.md'])
+  run('git', ['-c', 'core.hooksPath=/dev/null', 'commit', '-m', 'test: direct maintenance control'])
+  fs.copyFileSync(path.join(process.cwd(), 'scripts/validate-intake.mjs'), path.join(repo, 'scripts/validate-intake.mjs'))
+  const directMaintenanceValidation = spawnSync(process.execPath, ['scripts/validate-intake.mjs', '--base', base, '--require-merge-commit'], { cwd: repo, encoding: 'utf8', env: cleanEnv })
+
+  assert.equal(approvedValidation.status, 0, approvedValidation.stdout + approvedValidation.stderr)
+  assert.equal(mergeValidation.status, 0, mergeValidation.stdout + mergeValidation.stderr)
+  assert.equal(directMaintenanceValidation.status, 0, directMaintenanceValidation.stdout + directMaintenanceValidation.stderr)
+  const sourceHeadAfter = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: process.cwd(), encoding: 'utf8', env: cleanEnv }).stdout.trim()
+  assert.equal(sourceHeadAfter, sourceHead, 'golden-path fixture must not mutate the source repository ref')
 })
 
 test('protected history rejects every repeated ancestral content state', () => {

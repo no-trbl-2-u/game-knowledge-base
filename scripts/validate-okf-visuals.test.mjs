@@ -4,8 +4,11 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
+import { fileURLToPath } from 'node:url'
 
-const repo = path.resolve(new URL('..', import.meta.url).pathname)
+// fileURLToPath, not URL.pathname: the pathname form ('/C:/...') never
+// resolves to a real directory on Windows.
+const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const validator = path.join(repo, 'scripts', 'validate-okf.mjs')
 const games = path.join(repo, 'KnowledgeBase', 'BoardGames', 'games')
 
@@ -50,7 +53,21 @@ test('visual path traversal is rejected', t => {
   assert.match(result.stderr, /game-relative POSIX \.webp path under visuals/)
 })
 
-test('symlinked parent directory cannot escape the game', t => {
+// Windows denies symlink creation without Developer Mode; probe once and
+// skip there rather than fail — Linux CI always exercises this gate.
+const canSymlink = (() => {
+  const probeDir = fs.mkdtempSync(path.join(os.tmpdir(), 'symlink-probe-'))
+  try {
+    fs.symlinkSync(path.join(probeDir, 'target'), path.join(probeDir, 'link'), 'dir')
+    return true
+  } catch {
+    return false
+  } finally {
+    fs.rmSync(probeDir, { recursive: true, force: true })
+  }
+})()
+
+test('symlinked parent directory cannot escape the game', { skip: !canSymlink && 'symlink creation unavailable on this platform' }, t => {
   const { root, packet } = copyPacket('mage-knight')
   t.after(() => fs.rmSync(root, { recursive: true, force: true }))
   const references = path.join(path.dirname(packet), 'references')

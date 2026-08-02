@@ -38,11 +38,13 @@ the exact key has no match. The required `Stable intake slug` and `BGG ID or
 none` fields must repeat the title key so reviewers can detect drift.
 
 Every candidate records a reproducible coverage ledger. Any non-blocked packet
-must cover 100% of the governing rules corpus for the identified edition.
-Non-deckbuilders must also reach at least 60% factual coverage. Deckbuilders
-still report factual coverage, but may use `known_total: null` and
-`percent: null` when no authoritative distinct-card denominator exists.
-Unknown denominators must never be inferred from assumed duplicate patterns.
+must cover 100% of its bounded governing-document inventory: the exact official
+core rulebook plus every applicable public FAQ/errata authority the packet cites
+or needs for its published claims. This is not a demand for every card text,
+expansion, printing, or inaccessible artifact in existence. Narrow scope and omit
+unsupported claims rather than inventing denominators. Factual coverage remains
+descriptive and may use `known_total: null` / `percent: null`; admission is enforced
+by complete claim-level Source/Evidence/Confidence support, not an arbitrary quota.
 
 BGG is optional discovery, identity, rating, and community evidence. It is not
 the research boundary and cannot satisfy `official_rules`. Each promotable
@@ -123,7 +125,7 @@ runs and a mandatory actionable gap report for blocked candidates:
         "factual": { "recorded": 0, "known_total": 10, "percent": 0 }
       },
       "gap": {
-        "threshold_summary": "Rules coverage is 0% of required 100%; factual coverage is 0% of required 60%.",
+        "threshold_summary": "Rules coverage is 0% of the one-document bounded authority set required for this packet.",
         "missing_evidence": ["The complete official governing rulebook remains unavailable."],
         "attempted_sources": [
           {
@@ -281,8 +283,8 @@ candidates without an actionable gap report, unsupported claims, placeholder mar
 long-form prose, duplicate visual bytes, low-information label images,
 semantic generator scripts targeting `games/`, symlinked packet content,
 canonical directory rename/relocation bypasses, packet mutation after audit,
-canonical trees that differ from the approved staging tree, incomplete rules
-coverage, and non-deckbuilder factual coverage below 60%.
+canonical trees that differ from the approved staging tree, incomplete bounded
+rules coverage, and incomplete claim-level evidence.
 
 ## Failure law
 
@@ -290,12 +292,13 @@ An honest evidence or coverage shortfall is not an infrastructure failure. It
 produces or updates a structured `intake-gap` issue while complete packets
 continue independently. Do not commit a blocked packet or open a report PR. A
 malformed ready packet, failed validator, failed CI, unsafe Git state, or
-delivery failure remains fail-closed: pause the coupled jobs, preserve exact
-evidence, and never weaken a check.
+delivery failure remains fail-closed for that run: stop before writing further,
+preserve exact evidence, and never weaken a check. Future scheduled retries remain
+enabled so a transient failure cannot permanently disable intake.
 
 Cron workers wrap every hard gate and push with `scripts/fail-closed.mjs`.
-When a wrapped command fails, the wrapper invokes `hermes cron pause` for the
-named scout/auditor jobs and writes an evidence record beneath
-`~/.hermes/state/game-kb-intake-failures/`. A normal evidence rejection is not
-an infrastructure failure; two rejections in one run or more than half of the
-audited ready packets pauses the next scout run for review.
+When a wrapped command fails, it exits nonzero and writes an evidence record
+beneath `~/.hermes/state/game-kb-intake-failures/`; it does not mutate cron state.
+A normal evidence rejection is not an infrastructure failure. Repeated identical
+failures are escalated to T, but the scheduler remains live unless T explicitly
+orders a pause.

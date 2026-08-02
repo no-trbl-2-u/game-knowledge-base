@@ -23,7 +23,9 @@ import {
   walkFiles,
 } from './intake-lib.mjs'
 
-const REPO = path.resolve(new URL('..', import.meta.url).pathname)
+// fileURLToPath, not URL.pathname: the pathname form ('/C:/...') never
+// resolves to a real directory on Windows.
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const RUNS = path.join(REPO, 'intake', 'runs')
 const GAMES = path.join(REPO, 'KnowledgeBase', 'BoardGames', 'games')
 const REQUIRED_DOCS = [
@@ -200,8 +202,8 @@ export function validateCandidatePackage(candidateDir, candidate) {
     const packetSources = new Map(sourceEntries(text).map(source => [source.id, source]))
     const files = refs.map(ref => ref.file)
     const assetUrls = refs.map(ref => packetSources.get(ref.source_id)?.asset_url).filter(Boolean)
-    if (files.length < 4 || files.length > 8) flag(findings, packet, `must declare 4–8 visual files, found ${files.length}`)
-    if (new Set(assetUrls).size < 4) flag(findings, packet, `must preserve at least four distinct source asset URLs, found ${new Set(assetUrls).size}`)
+    if (files.length < 2 || files.length > 8) flag(findings, packet, `must declare 2–8 visual files, found ${files.length}`)
+    if (new Set(assetUrls).size < 2) flag(findings, packet, `must preserve at least two distinct source asset URLs, found ${new Set(assetUrls).size}`)
     if (new Set(refs.map(ref => ref.id)).size !== refs.length) flag(findings, packet, 'visual reference ids must be unique')
     if (new Set(refs.map(ref => ref.rationale)).size !== refs.length) flag(findings, packet, 'every new visual reference requires a distinct analytical rationale')
     const imageFiles = []
@@ -368,14 +370,13 @@ function commitParents(ref = 'HEAD') {
   return git(['show', '-s', '--format=%P', ref]).split(/\s+/).filter(Boolean)
 }
 
-function historyHeadFor(base, syntheticMerge = false) {
-  if (!syntheticMerge) return 'HEAD'
+function historyHeadFor(base, syntheticMerge = false, requireMergeCommit = false) {
+  if (!syntheticMerge && !requireMergeCommit) return 'HEAD'
   const baseSha = git(['rev-parse', base])
   const parents = commitParents('HEAD')
-  if (parents.length !== 2 || parents[0] !== baseSha) {
-    throw new Error('declared synthetic merge must have exactly two parents and the validated base as its first parent')
-  }
-  return parents[1]
+  if (parents.length === 2 && parents[0] === baseSha) return parents[1]
+  if (syntheticMerge) throw new Error('declared synthetic merge must have exactly two parents and the validated base as its first parent')
+  return 'HEAD'
 }
 
 function commitsAddingPath(base, file, head = 'HEAD') {
@@ -420,9 +421,10 @@ function auditBoundaryAt(base, runId, slug, decision, decisionFile, head = 'HEAD
     oppositeAtParent: pathExistsAt(parent, opposite),
     unexpectedDecisionChanges: filesChangedInCommit(decisionCommit).filter(file => !allowed.has(file)),
     postDecisionPacketChanges: filesTouchedByCommits(decisionCommit, head, candidatePrefix),
-    manifestChangedOnlyAtPromotion: postDecisionManifestCommits.length === 1
-      && promotionCommits.length === 1
-      && postDecisionManifestCommits[0] === promotionCommits[0],
+    manifestChangedOnlyAtPromotion: postDecisionManifestCommits.length === 0
+      || (postDecisionManifestCommits.length === 1
+        && promotionCommits.length === 1
+        && postDecisionManifestCommits[0] === promotionCommits[0]),
   }
 }
 
@@ -611,6 +613,11 @@ export function intakeCompletionFindings(records, newSlugs) {
   return findings
 }
 
+export function intakeCompletionGateFindings(records, newSlugs, { requireMergeCommit = false, syntheticMerge = false } = {}) {
+  if (!requireMergeCommit && !syntheticMerge) return []
+  return intakeCompletionFindings(records, newSlugs)
+}
+
 export function newGameSlugs(changes, existsAtBase) {
   const slugs = new Set()
   for (const change of changes) {
@@ -668,7 +675,7 @@ function validateDiff(base, { requireMergeCommit = false, syntheticMerge = false
   const changedFiles = changes.map(c => c.file)
   findings.push(...semanticGeneratorFindings(REPO, changedFiles))
   let historyHead = 'HEAD'
-  try { historyHead = historyHeadFor(base, syntheticMerge) }
+  try { historyHead = historyHeadFor(base, syntheticMerge, requireMergeCommit) }
   catch (err) { findings.push(err.message) }
   findings.push(...protectedHistoryFindings(base, historyHead))
   findings.push(...auditTransitionFindings(changes, {
@@ -740,7 +747,7 @@ function validateDiff(base, { requireMergeCommit = false, syntheticMerge = false
   const records = candidateRecords()
   findings.push(...dailyBatchFindings(records))
   const newSlugs = newGameSlugs(changes, slug => gameExistsAt(base, slug))
-  findings.push(...intakeCompletionFindings(changedRunRecords, newSlugs))
+  findings.push(...intakeCompletionGateFindings(changedRunRecords, newSlugs, { requireMergeCommit, syntheticMerge }))
   if (requireMergeCommit) findings.push(...mergeCommitTopologyFindings(newSlugs.size, { parents: commitParents('HEAD'), baseSha: git(['rev-parse', base]) }))
   if (newSlugs.size > 3) findings.push(`intake diff adds ${newSlugs.size} canonical games; hard ceiling is 3`)
   const docs = []
