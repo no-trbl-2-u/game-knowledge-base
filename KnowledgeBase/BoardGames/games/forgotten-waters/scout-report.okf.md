@@ -242,7 +242,10 @@ status: needs_followup
 No percentage is lawful: the digital denominator and physical identity/surface denominator remain open. All target records therefore remain `needs_followup`.
 
 ## Required help
-1. Confirmed PH2900 English first-print physical inspection with SKU/lot/printing markers, nonreplacement face/side/identity evidence, and organizer physical particulars.
+
+Document sources only. Physical-copy acquisition and box/SKU/lot inspection are **out of scope** for this corpus and must not be requested; where no lawful document source closes a denominator, it stays permanently `UNKNOWN` and the records stay `needs_followup` as an accepted terminal state.
+
+1. A lawful immutable PH2900 English first-print face/side/identity document source, including organizer particulars, that can be audited without replacement-quality mirroring.
 2. Immutable release app bundle/data/check/audio manifest and comparison to current v1.12.0.
 3. Authoritative complete FAQ/errata/support inventory beyond the recovered update log.
 4. Licensed narrative/audio denominator that can be audited without mirroring replacement-quality content.
