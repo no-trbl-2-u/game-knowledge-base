@@ -20,12 +20,12 @@ sources:
     retrieved_at: "2026-08-02"
     notes: "Complete official core rules PDF retrieved HTTP 200."
   - id: "src-002"
-    title: "Geek and Sundry TableTop — Elder Sign episode"
-    url: "https://www.youtube.com/watch?v=Jh4nSpV2n4k"
-    kind: video
+    title: "RPGnet — Review of Elder Sign"
+    url: "https://www.rpg.net/reviews/archive/15/15428.phtml"
+    kind: review
     provenance: secondary
     retrieved_at: "2026-08-02"
-    notes: "Independent playthrough/reception source; timestamps require audit."
+    notes: "Playtest review dated 2011-10-31; full article text retrieved and read."
 confidence: high
 status: verified
 ---

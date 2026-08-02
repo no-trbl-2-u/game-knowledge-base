@@ -1,29 +1,185 @@
 {
   "schema_version": 3,
   "slug": "elder-sign",
-  "researcher": {"name": "Bathcat", "role": "Field Intelligence and Knowledge Scout"},
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
   "researched_at": "2026-08-02T06:10:00.000Z",
   "edition_scope": "Released Fantasy Flight Games Elder Sign base game, restricted to the core box and core rules. Expansions, digital Elder Sign: Omens, and later localized printings are excluded.",
   "coverage_ledger": {
-    "rules_denominator": [{"authority": "Fantasy Flight Games Elder Sign Rules of Play", "acquired": true, "official_endpoint": true, "source_ids": ["src-001"], "notes": "Complete 20-page official PDF retrieved HTTP 200; all published rules claims are bounded to its core-game sections."}],
-    "faq_errata_inventory": {"scope": "Public English FAQ or errata applicable to the base-game rules used here.", "checks": ["Fantasy Flight product/support endpoint returned HTTP 403 during bounded inspection.", "Exact official PDF was retrieved and inspected; no FAQ or errata document is cited by the claims in this packet.", "Targeted exact-title searches and publisher CDN discovery found no additional applicable authority that this packet needs."], "applicable_acquired": 0, "applicable_known_total": 0, "notes": "No publisher-wide nonexistence claim is made. Unsupported FAQ-dependent claims are omitted."},
-    "factual_denominator": [
-      {"claim_group": "base-game identity and player count", "recorded": true, "source_ids": ["src-001"]},
-      {"claim_group": "core components", "recorded": true, "source_ids": ["src-001"]},
-      {"claim_group": "objective and defeat conditions", "recorded": true, "source_ids": ["src-001"]},
-      {"claim_group": "setup and investigator selection", "recorded": true, "source_ids": ["src-001"]},
-      {"claim_group": "turn and adventure task resolution", "recorded": true, "source_ids": ["src-001"]},
-      {"claim_group": "dice and item interaction", "recorded": true, "source_ids": ["src-001"]},
-      {"claim_group": "midnight and Mythos procedure", "recorded": true, "source_ids": ["src-001"]},
-      {"claim_group": "Ancient One awakening and combat", "recorded": true, "source_ids": ["src-001"]},
-      {"claim_group": "independent playthrough/reception evidence", "recorded": true, "source_ids": ["src-002"]},
-      {"claim_group": "visual identity and component presence", "recorded": true, "source_ids": ["src-003"]}
+    "rules_denominator": [
+      {
+        "authority": "Fantasy Flight Games Elder Sign Rules of Play",
+        "acquired": true,
+        "official_endpoint": true,
+        "source_ids": [
+          "src-001"
+        ],
+        "notes": "Complete 20-page official PDF retrieved HTTP 200; all published rules claims are bounded to its core-game sections."
+      }
     ],
-    "exclusions": ["All expansions are excluded.", "Ratings and complexity weight are not claimed; game.weight is null.", "Search snippets, inaccessible publisher pages, and BGG are discovery leads rather than evidence."]
+    "faq_errata_inventory": {
+      "scope": "Public English FAQ or errata applicable to the base-game rules used here.",
+      "checks": [
+        "Fantasy Flight product/support endpoint returned HTTP 403 during bounded inspection.",
+        "Exact official PDF was retrieved and inspected; no FAQ or errata document is cited by the claims in this packet.",
+        "Targeted exact-title searches and publisher CDN discovery found no additional applicable authority that this packet needs."
+      ],
+      "applicable_acquired": 0,
+      "applicable_known_total": 0,
+      "notes": "No publisher-wide nonexistence claim is made. Unsupported FAQ-dependent claims are omitted."
+    },
+    "factual_denominator": [
+      {
+        "claim_group": "base-game identity and player count",
+        "recorded": true,
+        "source_ids": [
+          "src-001"
+        ]
+      },
+      {
+        "claim_group": "core components",
+        "recorded": true,
+        "source_ids": [
+          "src-001"
+        ]
+      },
+      {
+        "claim_group": "objective and defeat conditions",
+        "recorded": true,
+        "source_ids": [
+          "src-001"
+        ]
+      },
+      {
+        "claim_group": "setup and investigator selection",
+        "recorded": true,
+        "source_ids": [
+          "src-001"
+        ]
+      },
+      {
+        "claim_group": "turn and adventure task resolution",
+        "recorded": true,
+        "source_ids": [
+          "src-001"
+        ]
+      },
+      {
+        "claim_group": "dice and item interaction",
+        "recorded": true,
+        "source_ids": [
+          "src-001"
+        ]
+      },
+      {
+        "claim_group": "midnight and Mythos procedure",
+        "recorded": true,
+        "source_ids": [
+          "src-001"
+        ]
+      },
+      {
+        "claim_group": "Ancient One awakening and combat",
+        "recorded": true,
+        "source_ids": [
+          "src-001"
+        ]
+      },
+      {
+        "claim_group": "independent written reception",
+        "recorded": true,
+        "source_ids": [
+          "src-002",
+          "src-004"
+        ]
+      },
+      {
+        "claim_group": "visual identity and component presence",
+        "recorded": true,
+        "source_ids": [
+          "src-001",
+          "src-005"
+        ]
+      }
+    ],
+    "exclusions": [
+      "All expansions are excluded.",
+      "Ratings and complexity weight are not claimed; game.weight is null.",
+      "Search snippets, inaccessible publisher pages, and BGG are discovery leads rather than evidence."
+    ]
   },
   "sources": [
-    {"id":"src-001","title":"Fantasy Flight Games — Elder Sign Rules of Play","roles":["identity","official_rules","visual"],"provenance":"official","url":"https://images-cdn.fantasyflightgames.com/ffg_content/Elder%20Sign/support/Eldersign-rules-of-play.pdf","final_url":"https://images-cdn.fantasyflightgames.com/ffg_content/Elder%20Sign/support/Eldersign-rules-of-play.pdf","retrieved_at":"2026-08-02T06:05:19.183Z","http_status":200,"content_type":"application/pdf","byte_length":3367721,"sha256":"a030b0eb9154e96d8364ac58e2db512bc518f6dab01bd86e34b1dd500885128b","locator":"PDF pages 1-3, 5-12, 16-19; overview, components, setup, turn, adventure, midnight, Ancient One","evidence":"In Elder Sign, 1 to 8 players take on the role of investigators struggling to combat one of the Ancient Ones."},
-    {"id":"src-002","title":"Geek and Sundry TableTop — Elder Sign episode","roles":["independent_review"],"provenance":"secondary","url":"https://www.youtube.com/watch?v=Jh4nSpV2n4k","final_url":"https://www.youtube.com/watch?v=Jh4nSpV2n4k","retrieved_at":"2026-08-02T06:05:19.994Z","http_status":200,"content_type":"text/html; charset=utf-8","byte_length":1142320,"sha256":"0ae14c736673e051b45b0fcb5ed3c34735f78aef6e2afd28dc42939f5d239288","locator":"TableTop episode/playthrough; independent audit should verify timestamps before merge","evidence":"Elder Sign with your friends at home?"},
-    {"id":"src-003","title":"Boards of Madness — Elder Sign image","roles":["visual"],"provenance":"secondary","url":"https://boardsofmadness.com/wp-content/uploads/2021/04/Elder-Sign.jpg","final_url":"https://boardsofmadness.com/wp-content/uploads/2021/04/Elder-Sign.jpg","retrieved_at":"2026-08-02T06:05:20.592Z","http_status":200,"content_type":"image/jpeg","byte_length":196162,"sha256":"06cdf6ee338f31cbc52e9742c5c1f76f50555d61bb2948e8eed384deed1399e6","locator":"Direct image asset","evidence":"Source-linked photograph of the Elder Sign base-game box and components."}
+    {
+      "id": "src-001",
+      "title": "Fantasy Flight Games — Elder Sign Rules of Play",
+      "roles": [
+        "identity",
+        "official_rules",
+        "visual"
+      ],
+      "provenance": "official",
+      "url": "https://images-cdn.fantasyflightgames.com/ffg_content/Elder%20Sign/support/Eldersign-rules-of-play.pdf",
+      "final_url": "https://images-cdn.fantasyflightgames.com/ffg_content/Elder%20Sign/support/Eldersign-rules-of-play.pdf",
+      "retrieved_at": "2026-08-02T06:05:19.183Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 3367721,
+      "sha256": "a030b0eb9154e96d8364ac58e2db512bc518f6dab01bd86e34b1dd500885128b",
+      "locator": "PDF pages 1-3, 5-12, 16-19; overview, components, setup, turn, adventure, midnight, Ancient One",
+      "evidence": "In Elder Sign, 1 to 8 players take on the role of investigators struggling to combat one of the Ancient Ones."
+    },
+    {
+      "id": "src-002",
+      "title": "RPGnet — Review of Elder Sign",
+      "roles": [
+        "independent_review"
+      ],
+      "provenance": "secondary",
+      "url": "https://www.rpg.net/reviews/archive/15/15428.phtml",
+      "final_url": "https://www.rpg.net/reviews/archive/15/15428.phtml",
+      "retrieved_at": "2026-08-02T15:20:00.000Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=iso-8859-1",
+      "byte_length": 22671,
+      "sha256": "d0114a99bdb441bba9cc74d865854fdba5070fadc6c6da96b370df0c5259fa5f",
+      "locator": "Playtest review dated 2011-10-31 by reviewer handle \"committed hero\"; Components, Play, and Conclusion sections",
+      "evidence": "Other critics have mocked the game as little more than glorified Yahtzee with custom dice, and if the mechanics strike a player as too simple, this will indeed be a problem."
+    },
+    {
+      "id": "src-004",
+      "title": "The Opinionated Gamers — Review: Elder Sign",
+      "roles": [
+        "independent_review"
+      ],
+      "provenance": "secondary",
+      "url": "https://opinionatedgamers.com/2011/11/12/review-elder-sign/",
+      "final_url": "https://opinionatedgamers.com/2011/11/12/review-elder-sign/",
+      "retrieved_at": "2026-08-02T15:20:00.000Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 196059,
+      "sha256": "491dc50d26f124e5b5cdcc495790b7f4f07fcfe07c8dc75915e24f09a8bb9ff4",
+      "locator": "Review by Matt J. Carlson published 2011-11-12; Final Thoughts section",
+      "evidence": "The box declares the game plays with 1 to 8 players, but this is an extremely optimistic number."
+    },
+    {
+      "id": "src-005",
+      "title": "Wikimedia Commons — Elder Sign Game Setting",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "community",
+      "url": "https://commons.wikimedia.org/wiki/File:Elder_Sign_Game_Setting.jpg",
+      "final_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Elder_Sign_Game_Setting.jpg",
+      "retrieved_at": "2026-08-02T15:35:00.000Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 7681302,
+      "sha256": "8bc6f836cd8bb66a346f46c092fbd48d5277f526f4a69972e1a367045f921414",
+      "locator": "CC BY-SA 4.0 own-work photograph by Professorinc, 2018-06-21; 4032x3024",
+      "evidence": "Base-game Other World Adventure cards in play with green dice committed against printed task lines."
+    }
   ]
 }
