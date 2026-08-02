@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-08-02-elder-sign",
+  "created_at": "2026-08-02T06:10:00.000Z",
+  "scout": {"name": "Bathcat", "role": "Field Intelligence and Knowledge Scout"},
+  "target": {"cooperative": 1, "solo_rpg": 1, "rotating_focus": 1, "total": 3},
+  "focus": {"mechanic": "dice-rolling"},
+  "candidates": [{
+    "slug": "elder-sign",
+    "title": "Elder Sign",
+    "bgg_id": 100423,
+    "cohort": "cooperative",
+    "status": "ready_for_audit",
+    "discovery_sources": ["https://boardgamegeek.com/boardgame/100423/elder-sign", "https://images-cdn.fantasyflightgames.com/ffg_content/Elder%20Sign/support/Eldersign-rules-of-play.pdf", "https://www.youtube.com/watch?v=Jh4nSpV2n4k"],
+    "blockers": [],
+    "coverage": {
+      "deckbuilder": false,
+      "methodology": "Exact physical base game only. The bounded governing-document denominator is the complete official core rulebook used for all published rules claims. No FAQ or errata-dependent claim is published; no separate applicable official FAQ/errata authority was retrieved in the bounded checks.",
+      "rules": {"recorded": 1, "known_total": 1, "percent": 100},
+      "factual": {"recorded": 10, "known_total": 10, "percent": 100}
+    }
+  }]
+}
