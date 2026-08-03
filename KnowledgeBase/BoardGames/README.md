@@ -30,6 +30,8 @@ Retrieval entry points:
 - `INDEX.okf.md` — **generated** corpus index (one row per game + mechanics → games table). The first file an agent should read; regenerate with `node scripts/generate-index.mjs`, never hand-edit.
 - `index.html` — the human dashboard twin.
 
+Corpus totals and tag-distribution counts are generator-owned runtime facts. Do not hard-code them in README files, agent instructions, wishlist entries, or pattern summaries. Query the generated index when a current count is needed; durable synthesis should describe evidence scope qualitatively or name the supporting records.
+
 Each promoted game should contain, at minimum:
 
 ```txt
