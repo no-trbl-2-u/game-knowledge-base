@@ -152,8 +152,12 @@ export function validateCandidatePackage(candidateDir, candidate) {
       else if (meta[key] !== baselineMeta[key]) flag(findings, file, `${key} differs from index.okf.md (${meta[key]} != ${baselineMeta[key]})`)
     }
     if (meta.slug !== candidate.slug) flag(findings, file, `game.slug ${meta.slug} does not match candidate directory ${candidate.slug}`)
+    // `verified` describes the claims a record actually publishes, not how much
+    // of the game it covers. A packet may enter with open followups: they are
+    // the additive to-do the weekly librarian drains, and forbidding them only
+    // pressures a worker to leave a known gap unrecorded. What may not enter is
+    // a claim without a source.
     if (meta.status !== 'verified') flag(findings, file, `new canonical records must be verified, found ${meta.status || 'missing status'}`)
-    if (/^followups:\s*$/m.test(frontmatter(text))) flag(findings, file, 'new canonical packet must not contain unresolved followups')
 
     const localSources = sourceEntries(text)
     const localIds = new Set(localSources.map(source => source.id))
@@ -613,8 +617,14 @@ export function intakeCompletionFindings(records, newSlugs) {
   return findings
 }
 
+// Completion is a merge-time law, not an open-PR law. An intake PR is audited
+// while it is still `ready_for_audit`: the scout cannot author approval.json,
+// so demanding `promoted` on the PR view would make every packet red at exactly
+// the moment the auditor is supposed to read it, and no scout action could
+// clear it. The push-to-main path (--require-merge-commit) still refuses any
+// intake that reaches the protected branch unpromoted.
 export function intakeCompletionGateFindings(records, newSlugs, { requireMergeCommit = false, syntheticMerge = false } = {}) {
-  if (!requireMergeCommit && !syntheticMerge) return []
+  if (!requireMergeCommit) return []
   return intakeCompletionFindings(records, newSlugs)
 }
 

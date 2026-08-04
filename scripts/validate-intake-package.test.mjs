@@ -299,10 +299,12 @@ test('changed intake runs must finish promoted and canonicalized in the same PR'
   assert.deepEqual(intakeCompletionFindings(run('promoted'), new Set(['good-game'])), [])
 })
 
-test('ordinary branch delivery permits intermediate intake heads while merge validation requires completion', () => {
+test('branch and open-PR views permit intermediate intake heads while merge validation requires completion', () => {
   const records = [{ runId: '2026-07-30-good', candidates: [{ slug: 'good-game', status: 'ready_for_audit' }] }]
   assert.deepEqual(intakeCompletionGateFindings(records, new Set()), [])
-  assert.match(intakeCompletionGateFindings(records, new Set(), { syntheticMerge: true }).join('\n'), /must end promoted in the same PR/)
+  // The open-PR view is the audit view: the packet is legally unpromoted there,
+  // because only the auditor can author the approval that promotion requires.
+  assert.deepEqual(intakeCompletionGateFindings(records, new Set(), { syntheticMerge: true }), [])
   assert.match(intakeCompletionGateFindings(records, new Set(), { requireMergeCommit: true }).join('\n'), /must end promoted in the same PR/)
 })
 
