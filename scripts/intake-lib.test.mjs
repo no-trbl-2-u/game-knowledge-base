@@ -117,16 +117,28 @@ test('manifest rejects more than one candidate in a cohort', () => {
   assert.match(validateManifest(value).join('\n'), /cooperative count 3 exceeds 1/)
 })
 
-test('ready packets require complete bounded rules but no arbitrary factual quota', () => {
+test('ready packets admit partial coverage on every metric', () => {
   const value = candidate('one', 'cooperative', 'ready_for_audit')
   value.coverage.rules = { recorded: 3, known_total: 4, percent: 75 }
   value.coverage.factual = { recorded: 5, known_total: 10, percent: 50 }
-  const findings = validateManifest(manifest([value])).join('\n')
-  assert.match(findings, /rules.percent must be 100/)
-  assert.doesNotMatch(findings, /factual.percent must be at least 60/)
+  assert.deepEqual(validateManifest(manifest([value])), [])
 })
 
-test('ready deckbuilder requires complete rules but may declare an unknown factual denominator', () => {
+test('a coverage ledger may not flatter itself', () => {
+  const overRecorded = candidate('one', 'cooperative', 'ready_for_audit')
+  overRecorded.coverage.rules = { recorded: 5, known_total: 4, percent: 125 }
+  assert.match(validateManifest(manifest([overRecorded])).join('\n'), /rules.recorded cannot exceed known_total/)
+
+  const inflated = candidate('two', 'cooperative', 'ready_for_audit')
+  inflated.coverage.factual = { recorded: 5, known_total: 10, percent: 90 }
+  assert.match(validateManifest(manifest([inflated])).join('\n'), /factual.percent must equal the recorded\/known_total percentage/)
+
+  const manufactured = candidate('three', 'cooperative', 'ready_for_audit')
+  manufactured.coverage.factual = { recorded: 5, known_total: null, percent: 100 }
+  assert.match(validateManifest(manifest([manufactured])).join('\n'), /factual.percent must be null when known_total is null/)
+})
+
+test('ready deckbuilder may declare an unknown factual denominator', () => {
   const value = candidate('one', 'cooperative', 'ready_for_audit')
   value.coverage.deckbuilder = true
   value.coverage.factual = { recorded: 81, known_total: null, percent: null }
