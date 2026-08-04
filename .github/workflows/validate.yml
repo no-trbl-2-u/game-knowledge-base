@@ -1,6 +1,6 @@
 name: validate
 
-# Structural OKF validation plus the fail-closed two-key intake boundary.
+# Structural OKF validation plus the fail-closed one-PR/two-role intake boundary.
 # Plain scripts, no model and no token spend. This workflow runs on every PR
 # because main requires its status; path filtering would leave unrelated PRs
 # permanently waiting for a check that never starts.
@@ -31,10 +31,10 @@ jobs:
         run: node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs
       - name: Validate intake diff (pull request)
         if: github.event_name == 'pull_request'
-        run: node scripts/validate-intake.mjs --base "${{ github.event.pull_request.base.sha }}"
+        run: node scripts/validate-intake.mjs --base "${{ github.event.pull_request.base.sha }}" --synthetic-merge
       - name: Validate intake diff (push)
         if: github.event_name == 'push'
-        run: node scripts/validate-intake.mjs --base "${{ github.event.before }}"
+        run: node scripts/validate-intake.mjs --base "${{ github.event.before }}" --require-merge-commit
       - name: Validate OKF
         run: node scripts/validate-okf.mjs
       - name: Test OKF visual validator

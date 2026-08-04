@@ -14,19 +14,55 @@ A Bathcat daily batch selects up to three unique candidates:
 - 1 solo RPG;
 - 1 matching the rotating focus.
 
-These are ceilings, not quotas. Each selected game gets its own
-`YYYY-MM-DD-<slug>` run so passing and failing games have independent Git and
-PR disposition. Passing `ready_for_audit` packets are committed, CI-gated, and
-merged one at a time. A candidate with missing evidence is `blocked`; it has no
-`canonical/` staging tree and travels on an open draft gap PR that is not
-merged until the threshold is met. One weak game never withholds sound packets.
+These are ceilings, not quotas. Each selected game is independent. A candidate
+gets one `YYYY-MM-DD-<slug>` run and one PR from Bathcat research through
+Mennonite audit and deterministic promotion. One weak game never withholds sound
+candidates.
 
-Every candidate records a reproducible coverage ledger. Any non-blocked packet
-must cover 100% of the governing rules corpus for the identified edition.
-Non-deckbuilders must also reach at least 60% factual coverage. Deckbuilders
-still report factual coverage, but may use `known_total: null` and
-`percent: null` when no authoritative distinct-card denominator exists.
-Unknown denominators must never be inferred from assumed duplicate patterns.
+A candidate enters with whatever it can evidence. Thin coverage is not a reason
+to withhold a game — a later pass adds to it, and a game absent from the corpus
+teaches nothing at all. Only one condition keeps a candidate out of Git: no
+lawful document evidence exists for it yet, so there is nothing to publish that
+a source supports. That case records an `intake-gap` issue with the measured
+shortfall, the attempted sources, and the document leads a later scheduled pass
+should try. Nothing in the pipeline waits on a human.
+
+Gap deduplication is mechanical. Normalize the candidate to its lowercase
+kebab-case slug and known numeric BGG ID (or `none`), then search all issue
+states before creating anything:
+
+```bash
+gh issue list --state all --search '"[intake-gap] <slug> [bgg:<id-or-none>]" in:title' \
+  --json number,state,title,url
+```
+
+The canonical title/key is exactly
+`[intake-gap] <slug> [bgg:<id-or-none>]`. Update an open match or reopen a
+closed match when the same evidence gap recurs. Create a new issue only when
+the exact key has no match. The required `Stable intake slug` and `BGG ID or
+none` fields must repeat the title key so reviewers can detect drift.
+
+### Coverage is additive
+
+Every candidate records a reproducible coverage ledger, and the ledger is
+**descriptive, never an admission gate**. No percentage — on rules, on
+components, on anything — blocks a packet. Aim high on rules coverage, because
+governing rules are the point of the corpus; components and other factual
+detail may land low-to-mid and improve later. A record that covers a rulebook
+and three components is a real record; the next pass adds the fourth.
+
+What admission *does* require is that everything published is real: every claim
+carries `Source / Evidence / Confidence`, every source is a retrieval receipt,
+and nothing is asserted beyond what a source supports. Narrow the scope and omit
+the claim instead of reaching for it.
+
+No worker may manufacture a denominator, estimate a count it did not observe,
+infer a value from a similar game, or fill a gap from model prior. An
+unretrieved denominator is `known_total: null` / `percent: null`, and an
+unretrieved fact is simply absent. A permanently open denominator is an accepted
+terminal state. The validator enforces the arithmetic — recorded may not exceed
+its denominator, and a percentage must be the computed result — so a ledger
+cannot be made to flatter itself, but it is free to be honestly small.
 
 BGG is optional discovery, identity, rating, and community evidence. It is not
 the research boundary and cannot satisfy `official_rules`. Each promotable
@@ -68,7 +104,7 @@ intake/runs/<run-id>/
       visuals/contact-sheet.webp
       visuals/references/*.webp
     approval.json              # Mennonite only; mutually exclusive with rejection
-    rejection.json             # Mennonite only; exact failed packet preserved
+    rejection.json             # legacy only; new failures use PR REVISE
 ```
 
 `run-id` is `YYYY-MM-DD-<slug>` for ordinary scout output. The run manifest
@@ -107,7 +143,7 @@ runs and a mandatory actionable gap report for blocked candidates:
         "factual": { "recorded": 0, "known_total": 10, "percent": 0 }
       },
       "gap": {
-        "threshold_summary": "Rules coverage is 0% of required 100%; factual coverage is 0% of required 60%.",
+        "threshold_summary": "No governing rules document has been retrieved yet, so no rules claim has a source to rest on.",
         "missing_evidence": ["The complete official governing rulebook remains unavailable."],
         "attempted_sources": [
           {
@@ -115,7 +151,7 @@ runs and a mandatory actionable gap report for blocked candidates:
             "result": "The publisher endpoint exposed no retrievable rules document."
           }
         ],
-        "help_requested": ["Provide a publisher-hosted rulebook or an authorized rules mirror."]
+        "retry_leads": ["Publisher rules endpoint and archive captures of it remain untried and should be attempted next."]
       }
     }
   ]
@@ -127,12 +163,17 @@ day, the validator enforces no more than three candidates and no more than one
 per cohort. `bgg_id` is nullable, not mandatory. A `rotating_focus` candidate also requires a concrete `focus_fit` sentence
 of at least twenty characters. All staged canonical records must agree on game
 identity, scope, mechanics, and source definitions and must carry
-`status: verified`; unresolved followups cannot enter a promotable packet.
+`status: verified` — which describes the claims the record publishes, not how
+much of the game it covers. A packet may carry open `followups`; they are the
+additive to-do the weekly librarian drains, and recording a known gap is always
+preferred to leaving it silent.
 
-Candidate states are `blocked`, `ready_for_audit`, `rejected`, `approved`,
-and `promoted`. Bathcat may write only the first two. The Mennonite may move
-an audited packet to `rejected` or `approved`. Only the promotion script may
-write `promoted`.
+Candidate states remain `blocked`, `ready_for_audit`, `rejected`, `approved`,
+and `promoted` for historical compatibility. New Git diffs may introduce only
+`ready_for_audit`: `blocked` research belongs in an issue, and a failed audit is
+recorded as `REVISE` on the PR rather than a committed `rejection.json`.
+Bathcat writes `ready_for_audit`; the Mennonite writes `approved`; only the
+promotion script writes `promoted`.
 
 ## Retrieval receipts
 
@@ -213,26 +254,39 @@ Approval schema:
 ```
 
 Changing any byte in `evidence.json` or `canonical/` invalidates approval.
-The ready packet must already be merged to protected `main`. Approval or
-rejection is then added in a separate audit-only PR that changes only the
-decision record and manifest status; CI rejects a decision introduced beside
-new or modified packet bytes. The decision itself becomes immutable once
-committed.
-The auditor must reject rather than repair the scout's packet. Rejection is
-recorded in `rejection.json` with `decision: rejected`, the Mennonite identity,
-`reviewed_at`, `packet_sha256`, and one or more concrete `reasons` of at least
-20 characters. A rejected run is permanent audit evidence: neither its packet
-nor `rejection.json` may be revised or deleted. Repairs return to Bathcat under
-a new run ID and a new candidate tree. The replacement packet starts at
-`ready_for_audit`, receives a new immutable hash, and crosses the ordinary
-audit-only PR boundary again. The prior rejected run remains intact.
+Bathcat commits the complete `ready_for_audit` packet before handing the exact
+PR head to a fresh Mennonite. A passing auditor adds `approval.json` and changes
+only that run's manifest status to `approved` in a second commit on the same PR
+branch. CI verifies that the parent commit contained the complete ready packet,
+that the approval commit touched no other path, and that no packet byte changed
+after approval. The decision is immutable once committed.
+
+### Audit the packet, not the check
+
+A `ready_for_audit` head is unpromoted by law: only the auditor may author the
+approval that promotion requires, so the scout cannot deliver a promoted head
+and must not try. Completion is therefore a merge-time gate, not an open-PR
+gate — `validate` is expected to pass on a ready head, and the audit proceeds on
+the packet's merits. Requiring the pre-approval head to be green would demand
+of the scout the one thing only the auditor can do, and the packet would sit
+forever. Green is required where it means something: on the final promoted head,
+before the merge commit.
+
+A failed audit is a PR verdict, not repository content. The Mennonite posts
+`REVISE` with exact defects and returns the same branch to a fresh Bathcat.
+Bathcat repairs the packet before any approval exists, commits a new frozen
+head, and hands it to a fresh Mennonite. New `rejection.json` records and
+committed blocked packets are rejected by CI.
 
 ## Deterministic promotion
 
-After the audit-only PR is merged, protected `main` contains both the approval
-and `approved` manifest status. Promotion occurs in a third PR. CI rejects any
-canonical game addition whose approval did not already exist on the base
-branch. With the worktree clean:
+After the approval commit, promotion occurs in a third commit on the same PR.
+CI requires the promotion commit's parent to contain the immutable approval and
+`approved` status, permits only the destination game tree, run manifest,
+generated board-game index, and telemetry, and rejects later mutation. The
+manifest transition may change only `approved` to `promoted` and add the valid
+`promoted_at` timestamp written by the promotion tool. With the
+worktree clean:
 
 ```sh
 node scripts/promote-intake.mjs check <run-id> <slug>
@@ -241,7 +295,10 @@ node scripts/promote-intake.mjs promote <run-id> <slug>
 
 Promotion copies the approved staging tree byte-for-byte, marks the manifest,
 regenerates the index, and runs the canonical validator. It authors no facts.
-A validation failure rolls back the game directory and manifest mutation.
+A validation failure rolls back the game directory and manifest mutation. The
+Mennonite commits the result, reruns all gates, posts `GO` bound to the final
+head, and uses a **merge commit**. Squash and rebase merges are prohibited for
+new-game intake because they erase the audited commit boundaries.
 
 Before commit or push:
 
@@ -258,20 +315,27 @@ candidates without an actionable gap report, unsupported claims, placeholder mar
 long-form prose, duplicate visual bytes, low-information label images,
 semantic generator scripts targeting `games/`, symlinked packet content,
 canonical directory rename/relocation bypasses, packet mutation after audit,
-canonical trees that differ from the approved staging tree, incomplete rules
-coverage, and non-deckbuilder factual coverage below 60%.
+canonical trees that differ from the approved staging tree, and incomplete
+claim-level evidence. It does not gate on how much of a game is covered.
 
 ## Failure law
 
-An honest evidence or coverage shortfall is not an infrastructure failure. It
-produces a valid blocked packet and an open draft gap PR while passing packets
-continue through their own merge path. A malformed packet, failed validator,
-failed CI, unsafe Git state, or delivery failure remains fail-closed: pause the
-coupled jobs, preserve exact evidence, and never weaken a check.
+An evidence shortfall is not a failure at all. Thin coverage is published and
+extended later; a total absence of lawful document evidence records an
+`intake-gap` issue while sound packets continue independently. Do not commit a
+blocked packet or open a report PR.
+
+A malformed ready packet, failed validator, unsafe Git state, or delivery
+failure remains fail-closed for that run: stop before writing further, preserve
+exact evidence, and never weaken a check. Failing CI is fail-closed too, with
+one exception that is not a failure: the completion finding on a pre-approval
+`ready_for_audit` head. That state is expected, and auditing proceeds on the
+packet's merits. Future scheduled retries remain enabled so a transient failure
+cannot permanently disable intake.
 
 Cron workers wrap every hard gate and push with `scripts/fail-closed.mjs`.
-When a wrapped command fails, the wrapper invokes `hermes cron pause` for the
-named scout/auditor jobs and writes an evidence record beneath
-`~/.hermes/state/game-kb-intake-failures/`. A normal evidence rejection is not
-an infrastructure failure; two rejections in one run or more than half of the
-audited ready packets pauses the next scout run for review.
+When a wrapped command fails, it exits nonzero and writes an evidence record
+beneath `~/.hermes/state/game-kb-intake-failures/`; it does not mutate cron state.
+A normal evidence rejection is not an infrastructure failure. Repeated identical
+failures accumulate durable evidence records and are surfaced in the run report;
+the scheduler stays live, and no run waits on a reply.

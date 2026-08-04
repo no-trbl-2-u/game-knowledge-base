@@ -29,6 +29,14 @@ writes what, on what cadence) is `KnowledgeBase/BoardGames/operations.okf.md`.
    from outside BGG. Bathcat cannot create `approval.json` or write canonical
    `games/`. The Mennonite independently approves an immutable packet hash;
    only `scripts/promote-intake.mjs` may copy that packet into the corpus.
+5. **Coverage is additive; nobody is waiting.** The pipeline runs unattended,
+   so every followup and `intake-gap` line must name a *document* a later
+   scheduled pass could fetch — URL, archive capture, official scan/readout,
+   licensed corpus (`OKF_SPEC.md`, "A followup names a retrievable document").
+   No coverage percentage blocks a game: aim high on rules, accept low-to-mid
+   on components, publish what is evidenced, and add more next pass. Never
+   close the difference by inventing it — an unretrieved denominator stays
+   `UNKNOWN`, which is a valid terminal state, not a pending task.
 
 ## Validation
 
@@ -44,7 +52,7 @@ A PostToolUse hook runs the single-file check after every write under
 blocks on the same findings. A Stop hook warns when a turn ends with a
 dirty tree or unpushed commits (corpus passes commit+push atomically).
 Full-corpus scans log a row to `TELEMETRY.md` (what was scanned, when,
-complete or not) — data for the human, never a work queue. Controlled vocabularies (mechanics slugs,
+complete or not) — a record, never a work queue. Controlled vocabularies (mechanics slugs,
 better-if labels, enums) are pinned — extend the vocabulary source +
 `OKF_SPEC.md` first, never freelance a new tag.
 
@@ -52,13 +60,15 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 
 - **Bathcat scout** (external Hermes cron) — wishlist-first discovery and
   noncanonical evidence packets only; target 1/1/1, honest eligibility shortfalls
-  allowed. Ready packets require 100% rules coverage and non-deckbuilders require
-  at least 60% measured factual coverage. Each candidate uses its own run and PR:
-  passing packets merge independently; blocked packets remain open as draft gap
-  PRs with exact missing evidence and help requested from T.
+  allowed. Ready packets publish whatever they can evidence; no coverage percentage is an
+  admission gate, and invented data never substitutes for a missing source. Bathcat opens one PR only for a complete
+  `ready_for_audit` packet. A candidate with no retrievable document evidence at
+  all becomes an actionable GitHub issue and must not add a blocked packet or
+  report PR to Git.
 - **Mennonite intake audit** (separate external Hermes cron) — independently
-  reopens sources, verifies claims and visuals, binds approval to the packet
-  SHA-256, and invokes deterministic promotion only after approval is committed.
+  reopens sources, verifies claims and visuals, binds approval to the frozen
+  packet SHA-256, performs deterministic promotion on the same PR branch, and
+  merge-commits that PR only after the promoted head is green.
 - **`/librarian`** (weekly Wed action) — schema drift, `needs_followup`
   retries, wishlist checkoffs, dedupe.
 - **`/synthesize-patterns`** (weekly Sun action) — cross-game synthesis
@@ -71,14 +81,18 @@ Commit style: single-purpose commits on dedicated branches, message prefix per p
 (`kb:`, `librarian:`, `patterns:`, `audit:`). No emojis, no
 `Co-Authored-By` trailers. Validator green before every commit.
 Protected `main` requires pull requests, an up-to-date green `validate` check,
-and resolved conversations; force-push and deletion are disabled. Scout,
-audit, and promotion are separate protected-branch PRs, enforced by diff-state
-transitions: audit cannot arrive with packet bytes, and promotion requires an
-approval already on the base branch. CODEOWNERS names T's authenticated
-repository account for ownership only: a single-account repository cannot
-satisfy a required self-review, so required approving reviews stay at zero and
-the human key is T merging each PR. Separate jobs, disjoint write
-jurisdictions, and immutable packet hashes preserve role separation.
+and resolved conversations; force-push and deletion are disabled. New-game
+intake preserves three commits inside one PR: Bathcat's frozen packet,
+Mennonite's approval-only transition, and deterministic promotion. CI verifies
+the parent state and allowed paths at each boundary and forbids packet mutation
+after approval. This repository is merge-commit only: squash and rebase are disabled so the
+protected-base history always preserves the reviewed branch ancestry. New-game intake
+specifically depends on its Bathcat, approval, and promotion commit boundaries.
+CODEOWNERS names the owning repository account for ownership only: a
+single-account repository cannot satisfy a required self-review, so required
+approving reviews stay at zero. Separate agent contexts, disjoint write
+jurisdictions, immutable packet hashes, preserved commits, and CI preserve role
+separation.
 `TELEMETRY.md` travels with every delivery. The tracked
 `.githooks/pre-commit` auto-stages its current state with ordinary commits;
 `.githooks/pre-push` refuses delivery whenever telemetry remains uncommitted.

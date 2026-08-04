@@ -2,7 +2,7 @@
 
 OKF here means **Operational Knowledge File**: markdown documents with strict frontmatter, source-backed claims, confidence labels, and retrieval-friendly metadata.
 
-This is a provisional SomberSoft format. If T defines another OKF standard, replace this file and migrate forward.
+This is a provisional SomberSoft format. If another OKF standard is defined, replace this file and migrate forward.
 
 Current version: **0.2**. Every document in the corpus carries `okf_version: 0.2`; the validator (`scripts/validate-okf.mjs`) rejects anything else. 0.2 adds `mechanics`, `better_if_labels`, `game.weight`, and the `followups` block over 0.1.
 
@@ -131,7 +131,7 @@ games/<slug>/visuals/
     04-decision-state.webp
 ```
 
-The manifest declares **4–8** `visual_references`. Every entry requires `id`,
+The manifest declares **2–8** `visual_references`. Every entry requires `id`,
 `source_id`, `file`, `subject`, `capture_type`, `creator`, `rights_holder`,
 `usage_basis`, `license`, `attribution`, `demonstrates`, `rationale`, and
 `sha256`. Paths are game-relative POSIX paths under `visuals/`; local assets
@@ -147,7 +147,17 @@ Public availability and `provenance: official` do not grant a license. Prefer
 own work, permission, open licenses, or public-domain material. A narrowly
 transformed `editorial-excerpt` is permitted only for private visual analysis:
 it must be materially reduced, attributed, linked to its source, and carry a
-specific rationale. Do not store complete rulebooks, complete card libraries,
+specific rationale.
+
+**"Private" means this repository and its authorized private sync targets.**
+This repository is private, and the Axiomancer `kb/` mirror is private; an
+`editorial-excerpt` reference is lawful for that destination under the
+conditions above, and no audit may reject one on the theory that promotion into
+this corpus is publication. Two audits of the same packet must not reach
+opposite conclusions because the word was undefined. If this repository or any
+sync target ever becomes public, that change invalidates every stored
+`editorial-excerpt` at once and must be treated as a corpus-wide visual
+re-basing, not a per-packet judgement call. Do not store complete rulebooks, complete card libraries,
 source-resolution promotional art, community photographs without permission,
 or images that substitute for cards, boards, player aids, or other game
 components. A reduced page-overview derivative is permitted when visual
@@ -229,13 +239,29 @@ followups:
 
 A `scout_report` doc with `status: needs_followup` must carry a non-empty `followups` block — the weekly librarian pass consumes exactly this. Prose failure notes remain welcome but do not replace the block.
 
+### A followup names a retrievable document
+
+Every followup, in a record or an `intake-gap` issue, must name a **document
+source a later automated pass could actually fetch**: a URL, an archive
+capture, an official scan or readout inventory, a licensed corpus. The pipeline
+runs unattended; a followup no scheduled run can execute is not a task but a
+permanent stall, so it must never be written.
+
+This is a scope boundary, not an evidence standard: the underlying gap still
+gets recorded honestly. State the denominator as `UNKNOWN`, keep the record
+`needs_followup`, and say plainly that no retrievable source is known.
+A permanently open denominator is an accepted terminal state for a record —
+it is not a pending task, and it must not be re-raised on the next pass.
+
 ## Daily scout and canonical-promotion boundary
 
-The three-game scout target is 1 cooperative, 1 solo RPG, and 1 rotating-focus game. It is a research target, not a canonical-output quota; honest eligibility shortfalls remain lawful. Each candidate uses an independent one-candidate run and PR so ready packets may merge without blocked siblings. Below-threshold packets remain open as draft gap PRs with exact achieved/required coverage, missing evidence, attempted sources, and help requested. Bathcat writes noncanonical packets under `intake/runs/` according to `intake/README.md`; it does not write directly to `games/` and may not approve its own packet. Every candidate carries a reproducible coverage ledger. Ready packets require 100% governing-rules coverage for the identified edition, and non-deckbuilders additionally require at least 60% measured factual coverage.
+The three-game scout target is 1 cooperative, 1 solo RPG, and 1 rotating-focus game. It is a research target, not a canonical-output quota; honest eligibility shortfalls remain lawful. Each candidate uses one one-candidate run and one PR. A candidate with no retrievable document evidence at all becomes an `intake-gap` GitHub issue recording what is absent, which sources were attempted with what result, and which document leads a later pass should try; it must not enter Git as a blocked packet or report PR. Bathcat writes complete noncanonical packets under `intake/runs/` according to `intake/README.md`; it does not write directly to `games/` and may not approve its own packet.
 
-A packet eligible for independent audit stages the complete canonical tree, including `index.okf.md`, `sources.okf.md`, the six standard rule-category records (`overview`, `setup`, `turn-structure`, `actions`, `scoring-endgame`, and `edge-cases-faq`), both reception records, `scout-report.okf.md`, and a 4–8-image visual packet plus contact sheet. It also preserves machine-verifiable retrieval receipts for official rules, independent reception, ratings when claimed, and visual sources. BGG is permitted for discovery, identity, ratings, and community testimony; official rules and independent review must come from separate non-BGG organizational domains, and the packet must span at least two distinct non-BGG organizational domains.
+Every candidate carries a reproducible coverage ledger, and **no coverage figure is an admission gate**. Aim high on governing-rules coverage; component and other factual detail may enter low-to-mid and grow in later passes. A thin record that is honestly sourced is worth more than an absent game, and a later pass may always add to it. What is never permitted is manufacturing the difference: no estimated count, no denominator inferred from a similar game, no figure filled from model prior. Unretrieved denominators stay `null`, unretrieved facts stay absent, and every published claim must pass Source/Evidence/Confidence validation.
 
-Missing evidence produces a `blocked` manifest entry with no staged canonical tree. Only the Mennonite may approve an immutable packet hash. The ready packet, audit-only decision, and deterministic promotion cross protected `main` in three separate reviewed PRs; CI rejects a decision introduced with packet bytes and rejects promotion unless approval already exists on the base branch. `scripts/promote-intake.mjs` then copies the approved tree byte-for-byte; it authors no semantic content.
+A packet eligible for independent audit stages the complete canonical tree, including `index.okf.md`, `sources.okf.md`, the six standard rule-category records (`overview`, `setup`, `turn-structure`, `actions`, `scoring-endgame`, and `edge-cases-faq`), both reception records, `scout-report.okf.md`, and a 2–8-image visual packet plus contact sheet. It also preserves machine-verifiable retrieval receipts for official rules, independent reception, ratings when claimed, and visual sources. BGG is permitted for discovery, identity, ratings, and community testimony; official rules and independent review must come from separate non-BGG organizational domains, and the packet must span at least two distinct non-BGG organizational domains.
+
+Only the Mennonite may approve an immutable packet hash. The ready packet, approval-only transition, and deterministic promotion are three ordered commits on the same PR branch. CI requires the approval commit's parent to contain the frozen `ready_for_audit` packet, forbids packet mutation after approval, and requires the promotion commit's parent to contain approval. `scripts/promote-intake.mjs` copies the approved tree byte-for-byte and authors no semantic content. New-game intake PRs merge with a merge commit so protected `main` preserves this chronology; squash and rebase are forbidden for that artifact class.
 
 Before pushing any intake or promotion change:
 

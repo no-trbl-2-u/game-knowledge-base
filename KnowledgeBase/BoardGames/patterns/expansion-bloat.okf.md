@@ -9,7 +9,7 @@ status: verified
 
 ## Summary
 
-Thin evidence (2 games). Both cases describe expansion-bloat as a "completeness
+Evidence is narrow. The available cases describe expansion-bloat as a "completeness
 pressure" problem rather than a rules-complexity one: reviewers feel the base
 product is a fine design on its own, but the surrounding product line (more
 character copies, more factions, more reprints) becomes an implicit
@@ -47,8 +47,8 @@ No praised-design evidence found for this pattern.
 
 ## Coverage gaps
 
-Only 2 games carry this label so far, both from reviewer commentary rather
-than direct player-count survey data. Games with large, ongoing expansion
+Current support for this label comes from reviewer commentary rather than
+direct player-count survey data. Games with large, ongoing expansion
 catalogs — living card games (e.g. other LCGs beyond Arkham), legacy games,
 and app-supported games with frequent content drops — would test whether
 this "completeness pressure" framing holds outside campaign/asymmetric-board

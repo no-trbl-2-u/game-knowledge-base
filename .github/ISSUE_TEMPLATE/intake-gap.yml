@@ -1,0 +1,76 @@
+name: Board-game intake evidence gap
+description: Record blocked research without opening a report PR
+title: "[intake-gap] <slug> [bgg:<id-or-none>]"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this only when a candidate has no retrievable document evidence at all. Thin coverage is not a gap: publish the game with what it has and add more in a later pass. Before creating it, search all open and closed issues for the exact normalized slug and BGG ID. Update or reopen the matching issue instead of creating a duplicate. Replace both placeholders in the title. Do not commit a blocked intake packet. Update and close this issue when the missing evidence is retrieved.
+  - type: input
+    id: slug
+    attributes:
+      label: Stable intake slug
+      description: Lowercase kebab-case slug used as the deduplication key; it must match the title.
+      placeholder: mage-knight
+    validations:
+      required: true
+  - type: input
+    id: bgg_id
+    attributes:
+      label: BGG ID or none
+      description: Numeric BoardGameGeek ID when known; otherwise write `none`. It must match the title.
+      placeholder: "96848"
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game and edition
+      description: Exact title, edition, printing, language, and platform scope.
+    validations:
+      required: true
+  - type: dropdown
+    id: cohort
+    attributes:
+      label: Intake cohort
+      options:
+        - cooperative
+        - solo_rpg
+        - rotating_focus
+    validations:
+      required: true
+  - type: textarea
+    id: coverage
+    attributes:
+      label: Measured coverage
+      description: Give recorded, known total, percentage, denominator source, and methodology for rules and factual coverage. Coverage is descriptive; report it honestly rather than favourably, and never estimate a count you did not observe.
+    validations:
+      required: true
+  - type: textarea
+    id: missing
+    attributes:
+      label: Missing evidence
+      description: List each governing document, factual denominator, reception source, or visual source still required.
+    validations:
+      required: true
+  - type: textarea
+    id: attempts
+    attributes:
+      label: Retrieval attempts
+      description: Record exact URLs, tools or methods, timestamps, and observed outcomes. No-result is not negative proof.
+    validations:
+      required: true
+  - type: textarea
+    id: help
+    attributes:
+      label: Retry leads for a later pass
+      description: Name the document sources a later scheduled run should attempt — exact URLs, archive captures, official scans or readout inventories, licensed corpora. No run waits on a person, so a lead nothing can fetch is not a lead.
+    validations:
+      required: true
+  - type: textarea
+    id: retained
+    attributes:
+      label: Retained evidence
+      description: Link lawful external receipts or local non-repository evidence paths; do not attach copyrighted source corpora.
+    validations:
+      required: true

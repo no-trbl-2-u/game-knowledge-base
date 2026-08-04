@@ -9,7 +9,7 @@ status: verified
 
 ## Summary
 
-Across these eight games, deck-building is praised when it gives players legible control
+Across the current evidence, deck-building is praised when it gives players legible control
 over composition — deterministic no-shuffle sequencing, weighty single-card acquisitions,
 or a construction system fused tightly with another mechanism — and criticized when that
 control feels shallow or arbitrary: thin starter decks, narrow markets, or variance that
@@ -45,7 +45,7 @@ market-diversity claims.
 
 ## Coverage gaps
 
-All eight games are cooperative or campaign/LCG-style deck-builders (starter decks, campaign
+The represented games are cooperative or campaign/LCG-style deck-builders (starter decks, campaign
 upgrades, or scenario-driven acquisition); none of them is a classic competitive Dominion-style
 market-deckbuilder where a shared central market and deck-thinning economy are the whole game.
 A market-centric deckbuilder in the corpus (e.g. something closer to pure Dominion/Clank!-style
