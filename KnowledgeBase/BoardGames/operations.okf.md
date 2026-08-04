@@ -80,6 +80,13 @@ sources:
     provenance: official
     retrieved_at: "2026-08-01"
     notes: "Live scheduler state verified enabled at 09:00 UTC in the isolated Mennonite checkout. Fail-closed runs preserve evidence and future retries; only T may order cron state changes."
+  - id: "src-011"
+    title: "T instruction: pause specialist automation and remove stale corpus totals"
+    url: "local-session"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-08-03"
+    notes: "T ordered every Bathcat and Mennonite cron job paused, required one exact KB procedure file in each profile, and prohibited hard-coded live corpus totals while retaining the 1/1/1 intake quota."
 confidence: high
 status: verified
 ---
@@ -105,9 +112,9 @@ The current purpose is knowledge gathering only. Full integration into downstrea
   Evidence: T asked to start the knowledge base project as "a directory inside of SomberSoft."
   Confidence: high
 
-- Claim: The daily cadence is once per day at 6am.
-  Source: src-001, src-002
-  Evidence: T specified "Everyday, once a day at 6am"; cron job `44c13742fca9` is scheduled as `0 6 * * *`.
+- Claim: The configured scout cadence is once per day at 6am, but execution is currently paused by T.
+  Source: src-001, src-002, src-011
+  Evidence: T specified "Everyday, once a day at 6am" and cron job `44c13742fca9` retains schedule `0 6 * * *`; T ordered the Bathcat and Mennonite jobs paused on 2026-08-03.
   Confidence: high
 
 - Claim: The current scout target is one cooperative, one solo RPG, and one rotating-focus game per run.
@@ -196,7 +203,7 @@ Cron job:
 - Name: `board-game-kb-bathcat-scout-quarantine`
 - Job ID: `44c13742fca9`
 - Schedule: `0 6 * * *`
-- Current state: enabled and scheduled
+- Scheduler state: query Hermes live; T ordered this job paused on 2026-08-03 pending further direction
 - Workdir: `/root/Workspace/SomberSoft/game-knowledge-base-bathcat`
 - Skill: `research-discovery-monitoring`
 - Toolsets: `web`, `file`, `terminal`, `delegation`
@@ -214,7 +221,7 @@ Independent audit job:
 - Schedule: `0 9 * * *`
 - Scope: reopen receipt sources, record hash-bound approval in a second commit, deterministically promote in a third commit on the same PR, and merge-commit only after final green CI; failures are PR `REVISE` verdicts
 - Failure law: infrastructure failures write durable evidence and leave future scheduled retries enabled; ordinary `REVISE` verdicts do not pause either job, and cron state changes require T's explicit order
-- Current state: enabled and scheduled in `/root/Workspace/SomberSoft/game-knowledge-base-mennonite`
+- Scheduler state: query Hermes live; T ordered this job paused on 2026-08-03 pending further direction. Isolated checkout: `/root/Workspace/SomberSoft/game-knowledge-base-mennonite`
 
 ## Selection doctrine (amended per OKF 0.2 §5)
 

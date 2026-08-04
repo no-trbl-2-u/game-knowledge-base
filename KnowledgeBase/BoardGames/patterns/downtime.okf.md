@@ -15,7 +15,7 @@ Knight, Spirit Island all get noticeably slower at 4 players), and (2)
 structural fixes reviewers actually praise — solo/small-group play that
 sidesteps waiting entirely, and free/simultaneous action order that lets
 players act without a rigid queue (Mage Knight's solo mode, Slay the Spire's
-any-order card/potion/ability play). Only 4 of the 7 games in scope surfaced
+any-order card/potion/ability play). Only a subset of the games in scope surfaced
 usable downtime-specific evidence; several games carry the `downtime` label
 in their frontmatter without a substantiated claim in the body text, so
 this pattern's coverage is thinner than the label distribution alone would
@@ -48,4 +48,4 @@ explicitly flags this: sources don't establish measured downtime, so it
 should not be treated as confirmed). The corpus would benefit from a
 high-player-count, AP-heavy Eurogame or wargame review with an explicit
 downtime complaint to round out the "turn length at scale" side of this
-pattern beyond the three games cited here.
+pattern beyond the currently cited cases.
