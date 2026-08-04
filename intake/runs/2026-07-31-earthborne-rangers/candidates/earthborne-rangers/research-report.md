@@ -1,128 +1,96 @@
-# Earthborne Rangers — blocked intake research report
+# Earthborne Rangers — additive intake research report
 
 ## Exact product and edition boundary
 
-- Claim: This packet scopes the **current corrected English digital core plus Lure of the Valley**, represented by the official 48-page 2024 `EBR001_Rulebook_web.pdf` and the current Living Valley campaign guide.
+- Claim: This packet scopes the current corrected English digital core plus Lure of the Valley public rules.
   Source: src-001, src-002, src-012
-  Evidence: The rulebook footer says “©2024 Earthborne Games LLC,” and the official campaign-guide landing page calls the guide a living document with integrated errata.
+  Evidence: The official rulebook footer says “©2024 Earthborne Games LLC,” the official resources page identifies the public rules surfaces, and the campaign-guide landing page calls the guide a living document with integrated errata.
   Confidence: high
 
-- Claim: First-print material is comparison evidence only; the official box code is `LFCACD30`, and the current 2024 rulebook already incorporates the listed Rest, Travel, Refresh, Injury, Manifestation, Conduit, and reward-swap corrections.
+- Claim: First-print material is comparison evidence only; the official first-print update identifies box code `LFCACD30`, while the current rulebook and living guide carry the corrected procedures.
   Source: src-001, src-014
-  Evidence: The rulebook update identifies the affected first printing by box code `LFCACD30`; comparison against the current PDF finds the corrected procedures in the current text.
+  Evidence: The official rulebook update identifies the affected first printing by box code, and the research comparison found the listed corrections represented in the current public rules.
   Confidence: high
 
-This boundary excludes Legacy of the Ancestors, Stewards of the Valley, Moments on the Path, Moments in the Valley, Spire in Bloom, and Shadow of the Storm except where a live mixed glossary/FAQ row also governs core/Lure play. Historical corrections already integrated into the current rulebook or living guide are inventoried but not counted twice.
+Later products remain outside this packet except where a mixed glossary or FAQ row also applies to core/Lure play. Historical corrections already integrated into the current rulebook or living guide are inventoried without double-counting.
 
 ## Item-level acquisition and classification
 
-`source-inventory.json` is the machine ledger. A scripted crawl enumerated each public category, fetched every listed item with a browser user agent, and retained final URL, retrieval time, HTTP status, media type, byte length, SHA-256, title, classification, and a concise basis. It does not mirror full copyrighted source text.
+`source-inventory.json` is the machine ledger. The preserved crawl enumerated each public category, fetched listed items with a browser user agent, and retained final URL, retrieval time, HTTP status, media type, byte length, SHA-256, title, classification, and concise basis. It does not mirror full copyrighted source text.
 
 - Claim: All 96 immediate Lure of the Valley guide items were acquired and classified `core_lure`.
   Source: src-002
-  Evidence: The official category reports 96 items; the machine ledger contains 96 unique immediate child rows, including nested-category landing pages, each with a successful receipt.
+  Evidence: The official category reports 96 items and the machine ledger contains 96 unique immediate child rows with successful receipts.
   Confidence: high
 
-- Claim: The live glossary has 22 alphabetical categories and 148 unique leaf URLs; all 148 leaves are classified.
+- Claim: The live glossary has 22 alphabetical categories and 148 unique leaf URLs, all classified.
   Source: src-011
-  Evidence: Direct leaf enumeration yields `A14 B2 C15 D9 E8 F6 G4 H2 I4 K1 L4 M9 N1 O2 P19 R12 S19 T10 U3 V1 W2 Y1`, totaling 148.
+  Evidence: Direct leaf enumeration yields the preserved per-category counts totaling 148 unique fetched leaves; the separate navigation sequence totaling 169 is retained as a category-inclusive comparison and not forced into the leaf total.
   Confidence: high
-
-The audit-supplied navigation sequence `A14 B3 C16 D10 E9 F7 G5 H3 I5 K2 L5 M10 N2 O3 P20 R13 S20 T11 U4 V2 W3 Y2` is also preserved in the machine summary. That sequence totals 169, not 148; the packet therefore distinguishes navigation/category-inclusive counts from the 148 directly fetched unique leaf URLs rather than silently forcing contradictory arithmetic.
-
-Glossary leaf classification:
-
-| Classification | Rows | Target treatment |
-|---|---:|---|
-| core/Lure | 126 | included |
-| mixed core/Lure plus later product | 5 | included because the row also governs target play |
-| Legacy of the Ancestors | 6 | excluded |
-| Moments products | 3 | excluded |
-| Stewards of the Valley | 3 | excluded |
-| other later Valley expansions | 5 | excluded |
-| **Total** | **148** | **131 included / 17 excluded** |
-
-The 22 non-core-only or mixed leaves are named row by row in `source-inventory.json`; no glossary leaf remains unclassified. The official dated changelog (`src-017`) distinguishes the original glossary/core concepts from the 2025–2026 expansion-rule additions; each leaf's own body supplies the second classification signal.
 
 - Claim: The FAQ source is completely acquired and all 33 Q&As are classified across 11 section headings.
   Source: src-003
-  Evidence: The page has the Delightful Rule plus ten Q&A headings; the ten Q&A sections contain 33 question/answer pairs.
+  Evidence: The preserved ledger records the Delightful Rule plus ten Q&A headings and 33 question/answer pairs, with 32 applicable to the packet boundary.
   Confidence: high
-
-FAQ classification is 31 target-applicable, one target-applicable mixed row (the general response rule also mentions Moments), and one excluded Moments-specific row about where moment cards are while resolving. Thus 32 Q&As apply to the target. Acquisition is complete; classification is a separate semantic transformation and is also complete.
 
 - Claim: All 16 card-update pages were retrieved; 14 are core/Lure and two are excluded Legacy cards.
   Source: src-015
-  Evidence: The two excluded titles explicitly say `LoA Mission Set Card 10 of 42` and `LoA Mission Set Card 17 of 42`; the other 14 item titles identify core/Lure sets.
+  Evidence: The two excluded titles identify LoA mission cards and the other 14 titles identify core/Lure sets.
   Confidence: high
 
-- Claim: The official printable card-errata PDF is two pages, 1,328,433 bytes, and SHA-256 `395142fb44dc5ff6daffe3541effea96bedb30d5cbd61ce7d94ac5f00b9f7036`.
+- Claim: The printable card-errata PDF is two pages, 1,328,433 bytes, and SHA-256 `395142fb44dc5ff6daffe3541effea96bedb30d5cbd61ce7d94ac5f00b9f7036`.
   Source: src-013
-  Evidence: The independently retrieved `Card_Errata_eng_web.pdf` receipt records the exact bytes and hash and represents the same 16 corrected card identities as the item pages.
+  Evidence: The preserved receipt records the exact byte length and hash and treats the PDF as a duplicate representation of the 16 linked update identities.
   Confidence: high
 
-The PDF is acquisition evidence, not 16 additional governing rows: the two LoA cards remain excluded and the 14 target card identities are counted once.
-
-- Claim: All 35 Lure guide update pages were acquired but are historical duplicates for this edition boundary.
-  Source: src-002, src-016
-  Evidence: The update category exposes 35 pages, while the campaign-guide landing page states that the living guide has integrated errata.
+- Claim: All 35 Lure guide update pages were acquired as historical comparison evidence.
+  Source: src-016
+  Evidence: The update category exposes 35 pages and the living guide states that integrated errata is already carried forward.
   Confidence: high
 
-The first-print rulebook update and all 35 Lure update pages remain classified comparison rows. They do not enlarge the current corrected denominator.
+## Deduplicated governing ledger
 
-## Deduplicated governing denominator
-
-The bounded, current, publicly retrievable target ledger is:
-
-| Operative row class | Acquired / applicable rows | Counting treatment |
-|---|---:|---|
-| Current 2024 rulebook | 1 | included once as the complete 48-page document |
-| Current Lure living-guide items | 96 | included |
-| Glossary leaves | 131 | 126 core/Lure + 5 mixed; 17 later-only excluded |
-| FAQ Q&As | 32 | 31 target + 1 mixed; 1 Moments-only excluded |
-| Core/Lure card updates | 14 | included by corrected card identity |
-| **Bounded public governing rows** | **274** | **all acquired and classified** |
-| Historical Lure update pages | 35 | acquired, integrated duplicate, excluded |
-| First-print rulebook update | 1 | acquired comparison for `LFCACD30`, integrated duplicate, excluded |
-| Printable corrected-card forms | 16 | duplicate form of update identities; 14 target + 2 LoA excluded |
-
-- Claim: The bounded public ledger closes at 274 deduplicated target-applicable rows, but total governing-rules coverage remains `UNKNOWN` and unscored.
-  Source: src-001, src-002, src-003, src-011, src-013, src-014, src-015, src-016, src-017
-  Evidence: Every public item row above is classified, but rulebook page 8 gives contradictory card rules precedence and no authoritative complete distinct-card identity/rules-text denominator was acquired.
+- Claim: The bounded current public ledger records 274 deduplicated target-applicable rows.
+  Source: src-001, src-002, src-003, src-011, src-013, src-015, src-016, src-017
+  Evidence: One rulebook, 96 Lure guide items, 131 target-applicable or mixed glossary leaves, 32 target-applicable or mixed FAQ Q&As, and 14 core/Lure card updates are recorded once each.
   Confidence: high
 
-Accordingly, the manifest records `rules.recorded: 274`, `rules.known_total: null`, and `rules.percent: null`. It does **not** publish a misleading `274/274` or percentage. The packet remains blocked.
-
-## Physical-card arithmetic and factual coverage
-
-- Claim: The core rulebook exposes 438 physical cards inside Ranger and Path card sets, plus 102 separately listed gameplay cards, for 540 physical gameplay cards under this counting convention.
+- Claim: The complete distinct-card rules-text denominator remains unknown and is recorded as `known_total: null` rather than estimated.
   Source: src-001
-  Evidence: Rulebook page 6 lists `278 + 160 = 438` Ranger/Path cards and `37 + 24 + 4 + 17 + 4 + 4 + 12 = 102` separately listed gameplay cards; `438 + 102 = 540`.
+  Evidence: The official rulebook gives rules-bearing card text precedence, while no authoritative complete current distinct-card identity and rules-text corpus was acquired.
   Confidence: high
 
-- Claim: The 540 physical-card total does not establish an authoritative distinct identity or rules-text denominator.
+## Physical-card arithmetic and factual boundary
+
+- Claim: The rulebook exposes 438 cards inside Ranger and Path sets plus 102 separately listed gameplay cards under the preserved counting convention.
   Source: src-001
-  Evidence: Rulebook pages 32–33 require two copies of selected personality, background, specialty, and outside-interest cards.
+  Evidence: The receipt-backed research notes the printed `278 + 160 = 438` and `37 + 24 + 4 + 17 + 4 + 4 + 12 = 102` rollups.
   Confidence: high
 
-Distinct factual-record coverage remains `UNKNOWN` and unscored. Canonical coverage remains 0% because this blocked packet contains no `canonical/` staging tree.
+- Claim: Those physical rollups do not establish a distinct identity or rules-text denominator.
+  Source: src-001
+  Evidence: The rulebook lists duplicate card classes, so physical quantity is not treated as a distinct rules-bearing inventory.
+  Confidence: high
+
+The packet therefore keeps factual coverage descriptive and unscored. It publishes selected supported facts and leaves unretrieved denominators null.
 
 ## Independent reception and visuals
 
-- Claim: Space-Biff praises the game as a major contextual advance over earlier adventure card games.
+- Claim: Space-Biff praises the game as a contextual advance over earlier adventure card games.
   Source: src-004
   Evidence: The review calls it “a gigantic leap forward for a particular niche of card game” and emphasizes emergent card ecosystems and setting.
   Confidence: high
 
-- Claim: Gideon's Gaming reports both strong system ideas and substantial friction in presentation, card quality, and subsystem interaction.
+- Claim: Gideon’s Gaming reports friction among the tabletop-RPG, prewritten-story, and dynamic-storytelling subsystems while praising prologue teaching.
   Source: src-005
-  Evidence: The review says the tabletop-RPG, prewritten-story, and dynamic-storytelling subsystems “tend to step on each other’s toes,” while praising prologue teaching.
+  Evidence: The review says those subsystems “tend to step on each other’s toes” and separately praises the prologue presentation.
   Confidence: high
 
-Four source-linked table-state receipts remain: card ecosystem (`src-006`), Valley map (`src-007`), ranger card area (`src-008`), and populated play state (`src-009`). No files are copied into canonical storage. Rights remain with the source/photographer; these are locators for private analysis, not license claims.
+Four source-linked reduced WebP visual excerpts are staged from the existing ecosystem, map, ranger-card, and populated-table receipts (`src-006` through `src-009`). Rights remain with the source publisher, photographer, and game-art holders; no reuse license is asserted.
 
-## Rating evidence and residual request
+## Open followups
 
-No rating, rank, weight, or numerical complexity claim is made. The attempted unauthenticated BGG XML API request returned HTTP 401.
+- Reopen the official resources surface and living guide for a complete current corrected English core-plus-Lure distinct-card identity and rules-text inventory if one becomes publicly retrievable.
+- Recheck official rulebook, FAQ, glossary, and errata pages before adding card-level claims.
 
-The only residual request to T is an authoritative complete current corrected English core-plus-Lure distinct-card identity and rules-text inventory, if one exists outside the public resources surface. No product-scope ruling is requested because this repair fixes the edition boundary exactly. This PR must remain `OPEN + DRAFT + blocked`; Bathcat must not approve, promote, mark ready, or merge it. A wholly fresh Mennonite context must audit the repaired immutable head.
+This packet is ready for independent Mennonite audit. It is not approved, promoted, or canonical.
