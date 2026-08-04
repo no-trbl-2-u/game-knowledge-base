@@ -21,7 +21,7 @@
       "title": "Earthborne Rangers",
       "bgg_id": null,
       "cohort": "solo_rpg",
-      "status": "approved",
+      "status": "promoted",
       "discovery_sources": [
         "https://earthbornegames.com/resources/",
         "https://boardgamegeek.com/boardgame/342900/earthborne-rangers"
@@ -39,7 +39,8 @@
           "known_total": null,
           "percent": null
         }
-      }
+      },
+      "promoted_at": "2026-08-04T21:48:59.609Z"
     }
   ]
 }
