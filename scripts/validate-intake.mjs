@@ -677,6 +677,36 @@ export function dailyBatchFindings(records) {
   return findings
 }
 
+export function changedRunIds(changedFiles) {
+  const runs = new Set()
+  for (const file of changedFiles) {
+    const match = file.match(/^intake\/runs\/([^/]+)\//)
+    if (match) runs.add(match[1])
+  }
+  return runs
+}
+
+// The completion gate is reported on its own so a repository can require it as
+// a separate status check. `validate` staying green on a `ready_for_audit` head
+// is what lets the audit happen at all; this check staying red is what stops
+// that same head from being merged before the audit produces a promotion. One
+// combined check cannot express both, and collapsing them is what deadlocked
+// intake: the signal that blocked the merge also read as "do not audit yet".
+function validateCompletionOnly(base, { syntheticMerge = false } = {}) {
+  let changes
+  try { changes = changedAgainst(base) }
+  catch (err) { return [`cannot compare intake against ${base}: ${err.message}`] }
+  const changedRunRecords = []
+  for (const id of changedRunIds(changes.map(change => change.file))) {
+    const manifestFile = path.join(RUNS, id, 'manifest.json')
+    if (!fs.existsSync(manifestFile)) continue
+    const manifest = readJson(manifestFile)
+    changedRunRecords.push({ runId: id, candidates: manifest.candidates ?? [] })
+  }
+  const newSlugs = newGameSlugs(changes, slug => gameExistsAt(base, slug))
+  return intakeCompletionFindings(changedRunRecords, newSlugs)
+}
+
 function validateDiff(base, { requireMergeCommit = false, syntheticMerge = false } = {}) {
   const findings = []
   let changes
@@ -737,11 +767,7 @@ function validateDiff(base, { requireMergeCommit = false, syntheticMerge = false
     findings.push(...visualAnomalyFindings(changedCanonicalVisuals).map(message => message.replaceAll(REPO, '.')))
   }
 
-  const changedRuns = new Set()
-  for (const file of changedFiles) {
-    const match = file.match(/^intake\/runs\/([^/]+)\//)
-    if (match) changedRuns.add(match[1])
-  }
+  const changedRuns = changedRunIds(changedFiles)
   const changedRunRecords = []
   for (const id of changedRuns) {
     const runDir = path.join(RUNS, id)
@@ -794,7 +820,7 @@ function validateDiff(base, { requireMergeCommit = false, syntheticMerge = false
 }
 
 function usage() {
-  console.error('usage: node scripts/validate-intake.mjs [--base <git-ref> [--require-merge-commit | --synthetic-merge] | --all | --run <run-id>]')
+  console.error('usage: node scripts/validate-intake.mjs [--base <git-ref> [--require-merge-commit | --synthetic-merge] [--completion-only] | --all | --run <run-id>]')
   process.exit(2)
 }
 
@@ -802,10 +828,13 @@ if (path.resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2)
   const requireMergeCommit = args.includes('--require-merge-commit')
   const syntheticMerge = args.includes('--synthetic-merge')
+  const completionOnly = args.includes('--completion-only')
   if (requireMergeCommit && syntheticMerge) usage()
-  const filteredArgs = args.filter(arg => arg !== '--require-merge-commit' && arg !== '--synthetic-merge')
+  const filteredArgs = args.filter(arg => !['--require-merge-commit', '--synthetic-merge', '--completion-only'].includes(arg))
+  if (completionOnly && filteredArgs[0] !== '--base') usage()
   let findings = []
-  if (!filteredArgs.length) findings = validateDiff(process.env.GITHUB_BASE_SHA || 'origin/main', { requireMergeCommit, syntheticMerge })
+  if (completionOnly) findings = validateCompletionOnly(filteredArgs[1], { syntheticMerge })
+  else if (!filteredArgs.length) findings = validateDiff(process.env.GITHUB_BASE_SHA || 'origin/main', { requireMergeCommit, syntheticMerge })
   else if (filteredArgs[0] === '--base' && filteredArgs[1] && filteredArgs.length === 2) findings = validateDiff(filteredArgs[1], { requireMergeCommit, syntheticMerge })
   else if (filteredArgs[0] === '--all' && filteredArgs.length === 1 && !requireMergeCommit && !syntheticMerge) {
     for (const runDir of runDirs()) findings.push(...validateRunDirectory(runDir))

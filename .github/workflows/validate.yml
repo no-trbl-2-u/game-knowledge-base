@@ -41,3 +41,19 @@ jobs:
         run: node --test scripts/validate-okf-visuals.test.mjs
       - name: Self-test write guard
         run: node .claude/hooks/okf-guard.mjs self-test
+
+  # Separate from `validate` on purpose. `validate` must be able to pass on a
+  # pre-approval `ready_for_audit` head, or the audit that produces promotion
+  # can never begin. This check is the merge barrier for that same head: it
+  # stays red until approval and promotion land, so a packet cannot reach
+  # protected `main` unaudited — including via auto-merge. Both must be
+  # required status checks; neither substitutes for the other.
+  intake-complete:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Require promoted intake before merge
+        run: node scripts/validate-intake.mjs --base "${{ github.event.pull_request.base.sha }}" --synthetic-merge --completion-only
