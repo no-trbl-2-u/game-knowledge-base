@@ -1,0 +1,46 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-07-31-earthborne-rangers",
+  "created_at": "2026-07-31T16:42:30.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "deck-building"
+  },
+  "candidates": [
+    {
+      "slug": "earthborne-rangers",
+      "title": "Earthborne Rangers",
+      "bgg_id": null,
+      "cohort": "solo_rpg",
+      "status": "promoted",
+      "discovery_sources": [
+        "https://earthbornegames.com/resources/",
+        "https://boardgamegeek.com/boardgame/342900/earthborne-rangers"
+      ],
+      "coverage": {
+        "deckbuilder": true,
+        "methodology": "Descriptive ledger of the current corrected English core-plus-Lure public governing sources and selected source-backed facts; unknown card identities and factual denominators remain null.",
+        "rules": {
+          "recorded": 274,
+          "known_total": null,
+          "percent": null
+        },
+        "factual": {
+          "recorded": 0,
+          "known_total": null,
+          "percent": null
+        }
+      },
+      "promoted_at": "2026-08-04T21:48:59.609Z"
+    }
+  ]
+}

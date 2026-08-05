@@ -9,7 +9,7 @@ status: verified
 
 ## Summary
 
-Across these five games, "player interaction" friction clusters into two shapes: (1) euro-style games bolt on confrontation as a discrete subsystem (attack cards, denial effects) that reviewers read as tacked-on rather than integrated; (2) cooperative/simultaneous games get their interaction "for free" from shared mechanisms (aid tokens, enemy handoffs, free-order actions), but that same lack of turn-by-turn structure opens quarterbacking or cheating-adjacent private-information risk. The lesson: interaction works best when it is a structural byproduct of shared stakes (co-op handoffs, shared defeat conditions) rather than an add-on module, and simultaneous/private mechanisms need an explicit audit or commitment ritual to stay trustworthy.
+Across the current evidence, "player interaction" friction clusters into two shapes: (1) euro-style games bolt on confrontation as a discrete subsystem (attack cards, denial effects) that reviewers read as tacked-on rather than integrated; (2) cooperative/simultaneous games get their interaction "for free" from shared mechanisms (aid tokens, enemy handoffs, free-order actions), but that same lack of turn-by-turn structure opens quarterbacking or cheating-adjacent private-information risk. The lesson: interaction works best when it is a structural byproduct of shared stakes (co-op handoffs, shared defeat conditions) rather than an add-on module, and simultaneous/private mechanisms need an explicit audit or commitment ritual to stay trustworthy.
 
 ## Evidence by game
 
@@ -34,4 +34,4 @@ Across these five games, "player interaction" friction clusters into two shapes:
 
 ## Coverage gaps
 
-All five contributing claims come from cooperative or largely-parallel euro designs where interaction is either absent-by-default or added as a discrete module; none of these games treat direct conflict, negotiation, or trading as a core loop. The corpus would benefit from a game whose central mechanic is negotiation, trading, or direct player-vs-player conflict to test whether integrated (rather than bolted-on) interaction produces different reviewer language.
+The contributing claims come from cooperative or largely-parallel euro designs where interaction is either absent-by-default or added as a discrete module; none of the cited games treat direct conflict, negotiation, or trading as a core loop. The corpus would benefit from a game whose central mechanic is negotiation, trading, or direct player-vs-player conflict to test whether integrated (rather than bolted-on) interaction produces different reviewer language.

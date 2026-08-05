@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-08-04T21:47:21.554Z",
+  "packet_sha256": "a72ff154c4ae47475d711012d0a97a085ab76c5a2441df95714026c16a9d38f3",
+  "reviewed_source_ids": [
+    "src-001", "src-002", "src-003", "src-004", "src-005", "src-006", "src-007", "src-008", "src-009", "src-010", "src-011", "src-012", "src-013", "src-014", "src-015", "src-016", "src-017"
+  ],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Independent audit reopened the official rulebook, living guide, FAQ, glossary, errata and changelog sources; both independent reviews; and all four visual receipts. Edition scope is current corrected English core plus Lure of the Valley. The 274-row ledger is 1 + 96 + 131 + 32 + 14, with unknown denominators represented as null. Mutable review and image receipts changed bytes on re-fetch but their cited content remains present; staged visual hashes and provenance metadata match. The frozen ready_for_audit packet is unchanged and hash-bound to this approval."
+}

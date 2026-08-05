@@ -18,8 +18,8 @@ co-op deckbuilders (Aeon's End, Marvel Champions, Legendary Encounters) pay
 it in between-session sorting labor instead. The clearest positive pattern is
 that *in-session* administration and *between-session* teardown are separable
 problems — a streamlined turn structure can coexist with a tedious
-box-closing ritual. Evidence is broad (9 of 15 surveyed games contributed)
-but shallow per game — mostly single-line review complaints rather than a
+box-closing ritual. Evidence spans several surveyed games but remains shallow
+per game — mostly single-line review complaints rather than a
 design reviewers praised as having solved the problem outright.
 
 ## Evidence by game

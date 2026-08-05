@@ -1,0 +1,400 @@
+{
+  "schema_version": 3,
+  "slug": "earthborne-rangers",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-07-31T20:54:01.151Z",
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Earthborne Rangers Rulebook",
+      "roles": [
+        "official_rules",
+        "identity"
+      ],
+      "provenance": "official",
+      "url": "https://earthbornegames.com/wp-content/uploads/EBR001_Rulebook_web.pdf",
+      "final_url": "https://earthbornegames.com/wp-content/uploads/EBR001_Rulebook_web.pdf",
+      "retrieved_at": "2026-07-31T16:41:33.753Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 21019564,
+      "sha256": "7738ec6fd2dab30baa53cebc461e179746442650d1f0d12537f481495b7dfc69",
+      "locator": "48-page rulebook, July 2024 file; components and complete basic procedures",
+      "evidence": "The rulebook states that card text takes precedence over the basic rules."
+    },
+    {
+      "id": "src-002",
+      "title": "The Living Valley Campaign Guides inventory",
+      "roles": [
+        "official_rules"
+      ],
+      "provenance": "official",
+      "url": "https://thelivingvalley.earthbornegames.com/docs/category/campaign-guides/",
+      "final_url": "https://thelivingvalley.earthbornegames.com/docs/category/campaign-guides/",
+      "retrieved_at": "2026-07-31T16:42:06.106Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 21900,
+      "sha256": "dcf1f876f68eebdebdf7b9aa5a5fe995592a9d019db2ae15f705ae6664c491b9",
+      "locator": "Campaign Guides category; Lure of the Valley lists 96 items",
+      "evidence": "This Campaign Guide is a living document with integrated Errata."
+    },
+    {
+      "id": "src-003",
+      "title": "Earthborne Rangers Frequently Asked Questions",
+      "roles": [
+        "official_rules",
+        "faq"
+      ],
+      "provenance": "official",
+      "url": "https://thelivingvalley.earthbornegames.com/docs/faq/",
+      "final_url": "https://thelivingvalley.earthbornegames.com/docs/faq/",
+      "retrieved_at": "2026-07-31T16:42:06.415Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 38012,
+      "sha256": "a85aac6ca272c4f9bbe41352f4bd8195c5061a1ec0168c2cdc935a1fe685e59d",
+      "locator": "Frequently Asked Questions page, all listed sections",
+      "evidence": "Below you will find frequently asked questions concerning various rules and effects"
+    },
+    {
+      "id": "src-004",
+      "title": "Chewing the Scenery",
+      "roles": [
+        "independent_review"
+      ],
+      "provenance": "secondary",
+      "url": "https://spacebiff.com/2024/05/02/earthborne-rangers/",
+      "final_url": "https://spacebiff.com/2024/05/02/earthborne-rangers/",
+      "retrieved_at": "2026-07-31T16:41:33.902Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 168309,
+      "sha256": "2ef7a659b21feeadbd9dad5f1471b1f20ce3d2bc8d804116baa63044bc761043",
+      "locator": "Opening assessment and sections on contextual card ecosystems and campaign play",
+      "evidence": "Earthborne Rangers feels like a gigantic leap forward for a particular niche of card game"
+    },
+    {
+      "id": "src-005",
+      "title": "Earthborne Rangers Board Game Review",
+      "roles": [
+        "independent_review"
+      ],
+      "provenance": "secondary",
+      "url": "https://gideonsgaming.com/earthborne-rangers-board-game-review/",
+      "final_url": "https://gideonsgaming.com/earthborne-rangers-board-game-review/",
+      "retrieved_at": "2026-07-31T16:41:34.091Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 141779,
+      "sha256": "61e84a5b06b87de4c389f8216d64489afa18af8c8198a2794dbcbbf3792a3681",
+      "locator": "Gideon’s Perspective and Presentation sections",
+      "evidence": "Earthborne Rangers Board Game Review"
+    },
+    {
+      "id": "src-006",
+      "title": "Earthborne Rangers card ecosystem table state",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "secondary",
+      "url": "https://spacebiff.com/wp-content/uploads/2024/05/3.-ecosystem.jpg?w=604&h=296",
+      "final_url": "https://spacebiff.com/wp-content/uploads/2024/05/3.-ecosystem.jpg?w=604&h=296",
+      "retrieved_at": "2026-07-31T16:41:34.566Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 62725,
+      "sha256": "6037998928dba6ab93aea66f10383e3bfd1c222db0b3ebf344ac7598eafb068b",
+      "locator": "Review figure captioned Little ecosystems emerge from the card interactions.",
+      "evidence": "Visual evidence of cards interacting in a location ecosystem during play."
+    },
+    {
+      "id": "src-007",
+      "title": "Earthborne Rangers Valley map in play",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "secondary",
+      "url": "https://spacebiff.com/wp-content/uploads/2024/05/4b.-map.jpg?w=604&h=301",
+      "final_url": "https://spacebiff.com/wp-content/uploads/2024/05/4b.-map.jpg?w=604&h=301",
+      "retrieved_at": "2026-07-31T16:41:35.205Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 52892,
+      "sha256": "86a6d30f94ee3fa9c7d202d8ee408e0359e732459f8c574fa610c824bf36b240",
+      "locator": "Review figure showing the campaign map at table scale",
+      "evidence": "Visual evidence of the Valley map and its role in campaign navigation."
+    },
+    {
+      "id": "src-008",
+      "title": "Earthborne Rangers ranger card area",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "secondary",
+      "url": "https://spacebiff.com/wp-content/uploads/2024/05/5.-char-2.jpg?w=604&h=325",
+      "final_url": "https://spacebiff.com/wp-content/uploads/2024/05/5.-char-2.jpg?w=604&h=325",
+      "retrieved_at": "2026-07-31T16:41:35.591Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 59120,
+      "sha256": "8160021e12217b59e647b7686468be6e9d262f1c204abdf122f277f0ab1163b8",
+      "locator": "Review figure adjacent to discussion of skill checks and card ecosystems",
+      "evidence": "Visual evidence of a ranger play area and card layout during a skill check."
+    },
+    {
+      "id": "src-009",
+      "title": "Earthborne Rangers multi-card table state",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "secondary",
+      "url": "https://spacebiff.com/wp-content/uploads/2024/05/6.-woo.jpg?w=604&h=309",
+      "final_url": "https://spacebiff.com/wp-content/uploads/2024/05/6.-woo.jpg?w=604&h=309",
+      "retrieved_at": "2026-07-31T16:41:36.290Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 65667,
+      "sha256": "3e8b1cd70c46641ed6627479f2ae6d4b80f631622e62cd2b5ecf3a4520086b78",
+      "locator": "Review figure showing an active card state during campaign play",
+      "evidence": "Visual evidence of a populated play state with ranger and path cards."
+    },
+    {
+      "id": "src-010",
+      "title": "Earthborne Rangers Updates inventory",
+      "roles": [
+        "official_rules",
+        "errata"
+      ],
+      "provenance": "official",
+      "url": "https://thelivingvalley.earthbornegames.com/docs/category/updates/",
+      "final_url": "https://thelivingvalley.earthbornegames.com/docs/category/updates/",
+      "retrieved_at": "2026-07-31T16:42:06.742Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 22339,
+      "sha256": "8a6d980c2818b37d65456f02e4af039a54d979b570edb04690ba564f4f1d2067",
+      "locator": "Updates category; Card Errata 16 items, Campaign Guide Errata 35 items, and Rulebook update",
+      "evidence": "This section covers any changes to sections of the rulebook."
+    },
+    {
+      "id": "src-011",
+      "title": "Earthborne Rangers Rules Glossary",
+      "roles": [
+        "official_rules"
+      ],
+      "provenance": "official",
+      "url": "https://thelivingvalley.earthbornegames.com/docs/rules_glossary/",
+      "final_url": "https://thelivingvalley.earthbornegames.com/docs/rules_glossary/",
+      "retrieved_at": "2026-07-31T16:42:30.030Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 31184,
+      "sha256": "60bb5bdfd8727f6268feadf6e97dac864fbf8aa9e80a4891d4bb56ab8e3770c6",
+      "locator": "Living rules glossary landing page and 22 alphabetical category links",
+      "evidence": "Navigating the Rules Glossary"
+    },
+    {
+      "id": "src-012",
+      "title": "Earthborne Rangers Resources",
+      "roles": [
+        "identity"
+      ],
+      "provenance": "official",
+      "url": "https://earthbornegames.com/resources/",
+      "final_url": "https://earthbornegames.com/resources/",
+      "retrieved_at": "2026-07-31T16:42:07.394Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 169426,
+      "sha256": "3e82bd2fa0683198d0fe8a190e1facaa0d1a2d487fc441b39a6df06bea367fba",
+      "locator": "Official resource index linking rulebook, campaign guides, updates, FAQ, maps, and trackers",
+      "evidence": "Earthborne Rangers Resources"
+    },
+    {
+      "id": "src-013",
+      "title": "Earthborne Rangers printable card errata",
+      "roles": [
+        "official_rules",
+        "errata"
+      ],
+      "provenance": "official",
+      "url": "https://earthbornegames.com/wp-content/uploads/Card_Errata_eng_web.pdf",
+      "final_url": "https://earthbornegames.com/wp-content/uploads/Card_Errata_eng_web.pdf",
+      "retrieved_at": "2026-07-31T20:47:36.660Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 1328433,
+      "sha256": "395142fb44dc5ff6daffe3541effea96bedb30d5cbd61ce7d94ac5f00b9f7036",
+      "locator": "Two-page Card_Errata_eng_web.pdf; printable corrected cards",
+      "evidence": "The official printable PDF contains the card errata represented by the 16 linked update pages."
+    },
+    {
+      "id": "src-014",
+      "title": "Earthborne Rangers first-printing rulebook update",
+      "roles": [
+        "official_rules",
+        "errata"
+      ],
+      "provenance": "official",
+      "url": "https://thelivingvalley.earthbornegames.com/docs/updates/rulebook/",
+      "final_url": "https://thelivingvalley.earthbornegames.com/docs/updates/rulebook/",
+      "retrieved_at": "2026-07-31T20:47:35.697Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 25847,
+      "sha256": "b873e4d873b0513b23cff1fb094af2d0e127cdbb8f651197046507e1b1593a73",
+      "locator": "Rulebook update page; first-print box code LFCACD30",
+      "evidence": "The update applies to the first printing identified by box code LFCACD30."
+    },
+    {
+      "id": "src-015",
+      "title": "Earthborne Rangers card errata item inventory",
+      "roles": [
+        "official_rules",
+        "errata"
+      ],
+      "provenance": "official",
+      "url": "https://thelivingvalley.earthbornegames.com/docs/updates/card_errata/",
+      "final_url": "https://thelivingvalley.earthbornegames.com/docs/updates/card_errata/",
+      "retrieved_at": "2026-07-31T20:47:35.089Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 27403,
+      "sha256": "d4ac8e313d957e306a839018756347730e9d7353bce5e8fa3544c219716f6adf",
+      "locator": "Card Errata category; 16 item pages",
+      "evidence": "The category exposes 16 card-update pages, including two explicitly labelled LoA mission cards."
+    },
+    {
+      "id": "src-016",
+      "title": "Lure of the Valley campaign guide errata inventory",
+      "roles": [
+        "official_rules",
+        "errata"
+      ],
+      "provenance": "official",
+      "url": "https://thelivingvalley.earthbornegames.com/docs/updates/lure_of_the_valley_errata/",
+      "final_url": "https://thelivingvalley.earthbornegames.com/docs/updates/lure_of_the_valley_errata/",
+      "retrieved_at": "2026-07-31T20:47:35.401Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 30898,
+      "sha256": "69f75e10a3b23e8587898d59a24c134e8c494c088bfca21d619a69b1f851a2b7",
+      "locator": "Campaign Guide Errata category; 35 item pages",
+      "evidence": "The category exposes 35 historical Lure guide updates already integrated into the living guide."
+    },
+    {
+      "id": "src-017",
+      "title": "The Living Valley official changelog",
+      "roles": [
+        "official_rules"
+      ],
+      "provenance": "official",
+      "url": "https://thelivingvalley.earthbornegames.com/blog/",
+      "final_url": "https://thelivingvalley.earthbornegames.com/blog/",
+      "retrieved_at": "2026-07-31T20:53:24.942Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 47918,
+      "sha256": "3b3dc9d4002d2cd483403c3d1411b3000a1940583ce79b03372647ccde207ec6",
+      "locator": "Dated glossary additions and modifications from 2023 through 2026",
+      "evidence": "The official changelog dates glossary additions spanning core rules and later product rules."
+    }
+  ],
+  "item_inventory": {
+    "file": "source-inventory.json",
+    "byte_length": 220671,
+    "sha256": "0e9f4c6153b6ebe73250d5714932b40af1d2d7cc7bb75cf6dd66c5a2364153c5",
+    "generated_at": "2026-07-31T20:54:01.151Z",
+    "summary": {
+      "lure_items": 96,
+      "glossary_categories": 22,
+      "glossary_leaves": 148,
+      "glossary_by_category": {
+        "A": 14,
+        "B": 2,
+        "C": 15,
+        "D": 9,
+        "E": 8,
+        "F": 6,
+        "G": 4,
+        "H": 2,
+        "I": 4,
+        "K": 1,
+        "L": 4,
+        "M": 9,
+        "N": 1,
+        "O": 2,
+        "P": 19,
+        "R": 12,
+        "S": 19,
+        "T": 10,
+        "U": 3,
+        "V": 1,
+        "W": 2,
+        "Y": 1
+      },
+      "glossary_expected_by_category": {
+        "A": 14,
+        "B": 3,
+        "C": 16,
+        "D": 10,
+        "E": 9,
+        "F": 7,
+        "G": 5,
+        "H": 3,
+        "I": 5,
+        "K": 2,
+        "L": 5,
+        "M": 10,
+        "N": 2,
+        "O": 3,
+        "P": 20,
+        "R": 13,
+        "S": 20,
+        "T": 11,
+        "U": 4,
+        "V": 2,
+        "W": 3,
+        "Y": 2
+      },
+      "glossary_by_classification": {
+        "core_lure": 126,
+        "legacy": 6,
+        "stewards": 3,
+        "mixed": 5,
+        "other": 5,
+        "moments": 3
+      },
+      "faq_sections": 11,
+      "faq_qa_sections": 10,
+      "faq_items": 33,
+      "faq_by_classification": {
+        "target_applicable": 31,
+        "target_applicable_mixed": 1,
+        "excluded_later_product": 1
+      },
+      "card_update_pages": 16,
+      "card_updates_by_classification": {
+        "core_lure": 14,
+        "legacy": 2
+      },
+      "lure_update_pages": 35,
+      "rulebook_update_classification": "integrated_historical_first_print_LFCACD30",
+      "errata_pdf_pages": 2,
+      "bounded_current_public_governing_rows": {
+        "rulebook": 1,
+        "lure_guide": 96,
+        "glossary_target_or_mixed": 131,
+        "faq_target_or_mixed": 32,
+        "card_updates_core_lure": 14,
+        "total": 274
+      }
+    },
+    "classification_complete": true,
+    "copyright_boundary": "Titles, URL receipts, hashes, and concise classification bases only; no full source text mirrored."
+  }
+}
