@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "Used the publisher product page plus search-result metadata and a secondary review."
     retry_needs: alternate_source
-    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 on 2026-07-17; current score/rank/weight remain unverified."
+    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 on 2026-07-17; current score/rank/weight remain unverified. 2026-08-05 librarian retry: unchanged, still HTTP 403 / HTTP 401."
   - source_id: "src-005"
     url: "https://shop.kingdomdeath.com/products/kingdom-death-monster-1-5"
     failure: other
     fallback: "Product page was accessible, but no downloadable rulebook was located in the retrieved material."
     retry_needs: manual_review
-    notes: "Retry official rulebook, FAQ, or BGG files."
+    notes: "Retry official rulebook, FAQ, or BGG files. 2026-08-05 librarian retry: page still loads (HTTP 200) but still has no rulebook/FAQ PDF link in the fetched HTML; a genuine interactive/JS-rendered session or a different official URL (kingdomdeath.com support/FAQ, not the shop storefront) is needed next."
 sources:
   - id: "src-001"
     title: "Kingdom Death: Monster — BoardGameGeek"
@@ -98,6 +98,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Documents written
 
+This run for *Kingdom Death: Monster* wrote the standard document set:
 - `index.okf.md`
 - `sources.okf.md`
 - `rules/overview.okf.md`
@@ -111,6 +112,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Run validation
 
+For *Kingdom Death: Monster*:
 - `WISHLIST.md` entry checked off: n/a — wishlist empty.
 - `node scripts/generate-index.mjs` run after writing docs: pending.
 - `node scripts/validate-okf.mjs` exit 0 before push: pending.

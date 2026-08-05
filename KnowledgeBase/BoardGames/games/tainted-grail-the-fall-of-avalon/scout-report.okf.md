@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "BGG search result and indexed review metadata"
     retry_needs: browser_fetch
-    notes: "Recover current average, Geek Rating, rank, and mechanism list."
+    notes: "Recover current average, Geek Rating, rank, and mechanism list. 2026-08-05 librarian retry: unchanged, still HTTP 403."
   - source_id: "src-004"
     url: "https://awakenrealms.com/"
     failure: other
     fallback: "Official Kickstarter campaign page"
     retry_needs: alternate_source
-    notes: "Recover the exact base-game rulebook, FAQ, and errata assets."
+    notes: "Recover the exact base-game rulebook, FAQ, and errata assets. 2026-08-05 librarian retry: the domain now serves a completely different client-rendered React app (self-described as \"a completely free AI chatbot that answers questions about board games\", branded Ludomentor) rather than the old publisher marketing site; no static rulebook/FAQ/errata content is present at this URL anymore. A different official Awaken Realms / Tainted Grail asset location (publisher store page, dedicated game microsite, or a direct rulebook PDF host) is needed next pass."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Tainted Grail: The Fall of Avalon"

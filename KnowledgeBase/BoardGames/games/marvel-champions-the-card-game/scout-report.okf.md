@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Search result snippet and BGG URL identity"
     retry_needs: manual_review
-    notes: "2026-07-12: direct urllib request returned HTTP 403. Retried 2026-07-15 (audit) via WebFetch: still HTTP 403. This matches a systemic block on boardgamegeek.com pages seen across most games in this corpus (see weekly check-links 'suspect' list) — not a game-specific issue. Downgrading retry_needs to manual_review since two automated tool types (urllib, WebFetch) have both failed; a genuine interactive/authenticated browser session is needed next."
+    notes: "2026-07-12: direct urllib request returned HTTP 403. Retried 2026-07-15 (audit) via WebFetch: still HTTP 403. This matches a systemic block on boardgamegeek.com pages seen across most games in this corpus (see weekly check-links 'suspect' list) — not a game-specific issue. Downgrading retry_needs to manual_review since two automated tool types (urllib, WebFetch) have both failed; a genuine interactive/authenticated browser session is needed next. 2026-08-05 librarian retry: unchanged, both the page (HTTP 403) and XML API (HTTP 401) still blocked."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Marvel Champions: The Card Game"
@@ -78,6 +78,7 @@ Study one cooperative deck-building/card-construction game for rules structure, 
 
 ## Documents written
 
+This run for *Marvel Champions: The Card Game* wrote the standard document set:
 - `index.okf.md`
 - `sources.okf.md`
 - `rules/overview.okf.md`

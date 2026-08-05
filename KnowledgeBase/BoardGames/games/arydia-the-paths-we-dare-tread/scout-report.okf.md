@@ -18,12 +18,18 @@ followups:
     fallback: "Used BGG search result metadata and a retailer's BGG-facing rating signal."
     retry_needs: alternate_source
     notes: "Direct BGG page and XML API returned access errors during this run."
-  - source_id: "src-003"
-    url: "https://faroffgames.com/pages/arydia-rulebooks"
+  - source_id: "src-007"
+    url: "https://www.dropbox.com/scl/fi/q9qpvu1uc1pea3lozj6i6/Rulebook_280x216mm_FlatFormat_v35_Cropped_OP.pdf"
     failure: pdf_extraction
-    fallback: "Used the publisher landing-page listing plus secondary rule summaries."
+    fallback: "2026-08-05 librarian pass: downloaded the actual rulebook PDF (linked from src-003's landing page) and extracted it with pypdf; front matter, TOC, and prose paragraphs are clean and now cited in overview.okf.md and rules/setup.okf.md, but card-layout and stat-block pages (Combat/Foes/Exile Turns, pp. 20-29) extract with corrupted icon glyphs and duplicated overlapping text and remain unusable for numeric claims."
+    retry_needs: manual_review
+    notes: "2026-08-05: needs a layout-aware re-extraction (e.g. pdftotext -layout, or a PDF tool that separates icon glyphs from text) or manual page review of pp. 20-29 before turn-structure/actions/scoring-endgame/edge-cases-faq can cite check values or stat numbers from this source."
+  - source_id: null
+    url: "https://www.dropbox.com/scl/fi/t4wjp33aaheoxoniei36m/QuickStartGuide_280x216mm_v35_Cropped_OP.pdf"
+    failure: not_found
+    fallback: "Not yet attempted; identified as a link on the src-003 landing page during the 2026-08-05 retry."
     retry_needs: pdf_tooling
-    notes: "Rulebook PDFs were identified but not downloaded and extracted in this run."
+    notes: "2026-08-05: this is the actual first-session onboarding document (the rulebook's own Setup section defers to it); retrieve and extract next pass to resolve rules/setup.okf.md's open first-session-setup question."
 sources:
   - id: "src-001"
     title: "Arydia: The Paths We Dare Tread — BoardGameGeek"
@@ -67,6 +73,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-23"
     notes: "BGG average rating signal 7.02 in search extract."
+  - id: "src-007"
+    title: "Arydia Rulebook (Rulebook_280x216mm_FlatFormat_v35, Dropbox-hosted)"
+    url: "https://www.dropbox.com/scl/fi/q9qpvu1uc1pea3lozj6i6/Rulebook_280x216mm_FlatFormat_v35_Cropped_OP.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-05"
+    notes: "Actual rulebook PDF, linked from src-003's landing page; downloaded and extracted on the 2026-08-05 librarian pass."
 confidence: medium
 status: needs_followup
 ---
@@ -98,13 +111,14 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Rulebook extraction status
 
-- Official rulebook found: yes, landing page identified.
-- File inspected: no.
-- Page count/version/date: unknown.
-- Text extraction quality: not applicable.
+- Official rulebook found: yes, landing page identified 2026-07-23; the actual PDF (src-007) retrieved and extracted 2026-08-05.
+- File inspected: yes, 36 pages.
+- Page count/version/date: 36 pages, "Rulebook_280x216mm_FlatFormat_v35".
+- Text extraction quality: front matter and prose extract cleanly with pypdf; card-layout and stat-block pages (pp. 20-29) extract with corrupted icon glyphs and duplicated text and need layout-aware re-extraction or manual review.
 
 ## Documents written
 
+This run for *Arydia: The Paths We Dare Tread* wrote the standard document set:
 - `index.okf.md`
 - `sources.okf.md`
 - `rules/overview.okf.md`
@@ -136,4 +150,4 @@ The campaign supported multiple save states and a staged onboarding scenario for
 
 ## Open questions
 
-Direct BGG score verification, official rulebook extraction, exact setup/turn phases, and a broader review sample remain librarian follow-ups.
+Direct BGG score verification, a layout-aware re-extraction of the rulebook's Combat/Foes/Exile Turns pages, retrieval of the separate Quick Start Guide PDF, and a broader review sample remain librarian follow-ups.

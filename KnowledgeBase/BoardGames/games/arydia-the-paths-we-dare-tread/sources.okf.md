@@ -54,10 +54,17 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-23"
     notes: "BGG average rating signal 7.02 in search extract."
+  - id: "src-007"
+    title: "Arydia Rulebook (Rulebook_280x216mm_FlatFormat_v35, Dropbox-hosted)"
+    url: "https://www.dropbox.com/scl/fi/q9qpvu1uc1pea3lozj6i6/Rulebook_280x216mm_FlatFormat_v35_Cropped_OP.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-05"
+    notes: "36-page rulebook PDF linked from src-003's landing page; downloaded and text-extracted with pypdf on the librarian retry pass. Front matter, table of contents, and prose paragraphs extract cleanly; card-layout and stat-block pages (icons, dice-check tables) extract with corrupted glyphs and duplicated overlapping text and are not reliable for numeric claims without a layout-aware re-extraction or manual page review."
 confidence: medium
 status: needs_followup
 ---
 
 ## Source registry
 
-The official publisher and rulebook landing page are the preferred authorities. Reviews are used for reception and high-level rule orientation only. The BGG-facing retail statistic is a selection signal, not a substitute for the BGG page.
+The official publisher and rulebook landing page are the preferred authorities. Reviews are used for reception and high-level rule orientation only. The BGG-facing retail statistic is a selection signal, not a substitute for the BGG page. src-007 is the actual rulebook PDF (src-003 is only the landing page that links it); its prose sections are citable, but its icon-heavy stat/check tables are not until re-extracted with layout-aware tooling.

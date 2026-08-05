@@ -163,3 +163,11 @@ deterministic tier's.
 | 2026-08-05T02:09:39Z | validate-okf | full corpus + index/sidecar freshness | 2661 files | 0 | yes | - |
 | 2026-08-05T02:10:03Z | generate-index | games/**/*.okf.md frontmatter | 80 table row | 0 | yes | wrote KnowledgeBase/BoardGames/INDEX.okf.md |
 | 2026-08-05T02:10:04Z | validate-okf | full corpus + index/sidecar freshness | 2661 files | 0 | yes | - |
+| 2026-08-05T07:49:30Z | validate-okf | full corpus + index/sidecar freshness | 2661 files | 0 | yes | - |
+| 2026-08-05T08:04:55Z | validate-okf | full corpus + index/sidecar freshness | 2661 files | 1 | yes | - |
+| 2026-08-05T08:04:58Z | generate-index | games/**/*.okf.md frontmatter | 80 table row | 0 | yes | wrote KnowledgeBase/BoardGames/INDEX.okf.md |
+| 2026-08-05T08:04:58Z | validate-okf | full corpus + index/sidecar freshness | 2661 files | 0 | yes | - |
+| 2026-08-05T08:06:31Z | validate-okf | full corpus + index/sidecar freshness | 2661 files | 0 | yes | - |
+| 2026-08-05T08:10:34Z | validate-okf | full corpus + index/sidecar freshness | 2661 files | 0 | yes | - |
+| 2026-08-05T08:11:22Z | validate-okf | full corpus + index/sidecar freshness | 2661 files | 0 | yes | - |
+| 2026-08-05T08:11:38Z | validate-okf | full corpus + index/sidecar freshness | 2661 files | 0 | yes | - |

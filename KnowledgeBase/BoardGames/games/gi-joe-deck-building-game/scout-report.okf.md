@@ -11,13 +11,6 @@ game:
   edition: "core set"
 scope: "base game"
 mechanics: [cooperative-game, deck-building, hand-management, variable-player-powers, solo-solitaire-game, campaign-game]
-followups:
-  - source_id: "src-006"
-    url: "https://renegadegamestudios.com/content/File%20Storage%20for%20site/GI%20JOE%20DBG/Joe%20DBG%20FAQ.pdf"
-    failure: pdf_extraction
-    fallback: "Rulebook timing and publisher page were used; FAQ was registered but not extracted."
-    retry_needs: pdf_tooling
-    notes: "Retry FAQ extraction and index card-specific rulings."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — G.I. JOE Deck-Building Game"
@@ -59,10 +52,10 @@ sources:
     url: "https://renegadegamestudios.com/content/File%20Storage%20for%20site/GI%20JOE%20DBG/Joe%20DBG%20FAQ.pdf"
     kind: faq
     provenance: official
-    retrieved_at: "2026-07-14"
-    notes: "Publisher-linked FAQ; extraction followup."
+    retrieved_at: "2026-08-05"
+    notes: "Publisher-linked FAQ; extracted on the 2026-08-05 librarian retry pass (see rules/edge-cases-faq.okf.md)."
 confidence: high
-status: needs_followup
+status: verified
 ---
 
 ## Scout objective
@@ -81,7 +74,7 @@ Study one game matching the current Bathcat focus: cooperative plus deckbuilder,
 - BoardGameGeek: game page located; automated page/API retrieval returned access errors, so no live rank or vote count was asserted.
 - Publisher page: retrieved successfully.
 - Official rulebook: publisher PDF retrieved and text-extracted successfully.
-- FAQ/errata: publisher FAQ URL registered; extraction remains a followup.
+- FAQ/errata: publisher FAQ URL registered; extracted on the 2026-08-05 librarian retry pass.
 - Review sources: Meeple Mountain search result and publisher customer reviews.
 
 ## Rulebook extraction status
@@ -93,6 +86,7 @@ Study one game matching the current Bathcat focus: cooperative plus deckbuilder,
 
 ## Documents written
 
+This run for *G.I. JOE Deck-Building Game* wrote the standard document set:
 - `index.okf.md`
 - `sources.okf.md`
 - `rules/overview.okf.md`
@@ -124,5 +118,4 @@ The first mission taught the entire loop through a controlled setup and the FAQ'
 
 ## Open questions
 
-- What card-specific rulings and errata does the official FAQ contain?
 - What are the current live BGG average rating, rank, and vote count?

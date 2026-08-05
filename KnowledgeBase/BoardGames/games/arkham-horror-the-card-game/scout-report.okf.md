@@ -17,19 +17,19 @@ followups:
     failure: blocked
     fallback: "BGG page URL plus search snippets and a secondary review page quoting BGG Geek Rating 8.57922."
     retry_needs: manual_review
-    notes: "HTTP 401 from XML API during 2026-07-10 scout."
+    notes: "HTTP 401 from XML API during 2026-07-10 scout. 2026-08-05 librarian retry: unchanged, still HTTP 401."
   - source_id: "src-002"
     url: "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/"
     failure: blocked
     fallback: "Official Learn to Play PDF URL from search result; product page retained as official source target."
     retry_needs: browser_fetch
-    notes: "HTTP 403 from direct product-page fetch during 2026-07-10 scout."
+    notes: "HTTP 403 from direct product-page fetch during 2026-07-10 scout. 2026-08-05 librarian retry: unchanged, still HTTP 403."
   - source_id: "src-009"
     url: "https://images-cdn.fantasyflightgames.com/filer_public/2f/b8/2fb895a5-07cb-4784-8a18-b92b3c91e6c9/ahc_rules_reference_v19-compressed.pdf"
     failure: blocked
     fallback: "Official Learn to Play PDF plus ArkhamDB Rules Reference mirror for edge-case leads."
     retry_needs: alternate_source
-    notes: "HTTP 403 from direct Rules Reference PDF URL attempted during 2026-07-10 scout."
+    notes: "HTTP 403 from direct Rules Reference PDF URL attempted during 2026-07-10 scout. 2026-08-05 librarian retry: unchanged, still HTTP 403 (S3-backed FFG CDN returns an XML AccessDenied body)."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Arkham Horror: The Card Game"
@@ -126,6 +126,7 @@ Study a high-scoring cooperative deck/deck-construction game with strong campaig
 
 ## Documents written
 
+This run for *Arkham Horror: The Card Game* wrote the standard document set:
 - `index.okf.md`
 - `sources.okf.md`
 - `rules/overview.okf.md`

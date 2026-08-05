@@ -47,13 +47,20 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-19"
     notes: "Review source."
+  - id: "src-006"
+    title: "Too Many Bones Rulebook v2.2 (Chip Theory Games support, Dropbox-hosted)"
+    url: "https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-05"
+    notes: "32-page official base-game rulebook v2.2, linked from the Chip Theory Games support page; downloaded and text-extracted with pypdf on the librarian retry pass. Prose pages (setup, overview) extract cleanly; the Baddie-chip and dice-icon component-list pages extract with interleaved icon glyphs and are not reliable for precise numeric claims without further review."
 confidence: medium
 status: needs_followup
 ---
 
 ## Source register
 
-The official publisher page is the strongest accessible source. BGG is the discovery and score source. The secondary rules page and two reviews provide provisional extraction and reception evidence until the official rulebook is retrieved.
+The official publisher page and the official rulebook (src-006) are the strongest accessible sources. BGG is the discovery and score source. The secondary rules page and two reviews provide provisional extraction and reception evidence pending fuller rulebook coverage.
 
 ## Retrieval failures
 

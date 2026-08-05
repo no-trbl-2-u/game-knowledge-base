@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Used publisher page, review evidence, and BGG-facing statistics mirror."
     retry_needs: alternate_source
-    notes: "Direct BGG page and XML endpoint were inaccessible during this run; retry BGG files/forums or a publisher rulebook download."
+    notes: "Direct BGG page and XML endpoint were inaccessible during this run; retry BGG files/forums or a publisher rulebook download. 2026-08-05 librarian retry: unchanged, still HTTP 403."
 sources:
   - id: "src-001"
     title: "Oathsworn: Into the Deepwood — BoardGameGeek"
@@ -92,6 +92,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Documents written
 
+This run for *Oathsworn: Into the Deepwood* wrote the standard document set:
 - `index.okf.md`
 - `sources.okf.md`
 - `rules/overview.okf.md`
@@ -105,6 +106,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Run validation
 
+For *Oathsworn: Into the Deepwood*:
 - `WISHLIST.md` entry checked off: n/a — wishlist empty.
 - `node scripts/generate-index.mjs` run after writing docs: pending.
 - `node scripts/validate-okf.mjs` exit 0 before push: pending.

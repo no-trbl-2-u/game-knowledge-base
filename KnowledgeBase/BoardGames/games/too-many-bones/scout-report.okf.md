@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "BGG search result plus official product description and secondary review leads"
     retry_needs: browser_fetch
-    notes: "Direct HTML returned HTTP 403 and XML API returned HTTP 401; recheck current average, Geek Rating, rank, weight, and mechanism metadata."
-  - source_id: "src-002"
-    url: "https://chiptheorygames.com/pages/support/too-many-bones"
-    failure: http_error
-    fallback: "Official product page search result"
-    retry_needs: browser_fetch
-    notes: "Support page direct retrieval returned HTTP 429; recover the official rulebook and FAQ URL."
+    notes: "Direct HTML returned HTTP 403 and XML API returned HTTP 401; recheck current average, Geek Rating, rank, weight, and mechanism metadata. 2026-08-05 librarian retry: unchanged, still HTTP 403 / HTTP 401."
+  - source_id: "src-006"
+    url: "https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf"
+    failure: pdf_extraction
+    fallback: "2026-08-05 librarian pass: the support page (previously HTTP 429) now loads; found and downloaded the official rulebook v2.2 PDF linked from it, and extracted it with pypdf. Objective/Setup prose (pp. 6-7) and the table of contents (p. 3) are clean and now cited in rules/overview.okf.md and rules/setup.okf.md, but Baddie-chip/dice-icon component pages interleave icon glyphs with numbers and are not reliable for precise numeric claims yet."
+    retry_needs: manual_review
+    notes: "2026-08-05: needs a layout-aware re-extraction or manual page review of the Gearloc Mat, Baddie Chip, Tyrants, and Battle Mat sections (pp. 10-17) before turn-structure/actions/scoring-endgame can cite exact stat or dice values from this source."
   - source_id: "src-003"
     url: "https://www.ultraboardgames.com/too-many-bones/game-rules.php"
     failure: other
@@ -45,6 +45,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-19"
     notes: "Official product source; search result exposed component and RPG description."
+  - id: "src-006"
+    title: "Too Many Bones Rulebook v2.2 (Chip Theory Games support, Dropbox-hosted)"
+    url: "https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-05"
+    notes: "Official base-game rulebook, retrieved and extracted on the 2026-08-05 librarian pass."
   - id: "src-003"
     title: "UltraBoardGames — Too Many Bones rules"
     url: "https://www.ultraboardgames.com/too-many-bones/game-rules.php"
@@ -72,7 +79,7 @@ status: needs_followup
 
 ## Scout objective
 
-Select one high-scoring BGG RPG / role-playing board game not already present in the corpus, excluding deckbuilders, and capture rules, reception, and improvement signals.
+For *Too Many Bones*: select one high-scoring BGG RPG / role-playing board game not already present in the corpus, excluding deckbuilders, and capture rules, reception, and improvement signals.
 
 ## Why this game
 
@@ -85,17 +92,18 @@ Select one high-scoring BGG RPG / role-playing board game not already present in
 ## Source search path
 
 - BoardGameGeek: page identified; direct HTML/API blocked.
-- Publisher page: product page found; direct support retrieval rate-limited.
-- Official rulebook: not recovered.
+- Publisher page: product page found; direct support retrieval rate-limited on the 2026-07-19 scout, resolved on the 2026-08-05 retry.
+- Official rulebook: recovered and extracted on the 2026-08-05 retry (src-006).
 - Rules fallback: UltraBoardGames summary.
 - Reviews: Brawling Brothers and Polyhedron Collider.
 
 ## Documents written
 
-- `index.okf.md`, `sources.okf.md`, six `rules/*.okf.md`, `reception/reviews.okf.md`, `reception/better-if.okf.md`, and this report.
+This run for *Too Many Bones* wrote `index.okf.md`, `sources.okf.md`, six `rules/*.okf.md`, `reception/reviews.okf.md`, `reception/better-if.okf.md`, and this report.
 
 ## Run validation
 
+For *Too Many Bones*:
 - Wishlist entry checked off: no; skipped because it does not match the RPG focus.
 - `node scripts/generate-index.mjs`: pending until writing completes.
 - `node scripts/validate-okf.mjs`: pending until writing completes.
@@ -114,6 +122,6 @@ The first session taught one complete Gearloc through a staged encounter while p
 
 ## Open questions
 
-- Current BGG score signal and complexity weight.
-- Official rulebook, FAQ, and errata.
-- Exact encounter-day and Tyrant timing details.
+- Current BGG score signal and complexity weight (still blocked as of 2026-08-05).
+- FAQ and errata.
+- A layout-aware re-extraction of the rulebook's Gearloc Mat, Baddie Chip, Tyrants, and Battle Mat sections (pp. 10-17) for exact stat/dice values.

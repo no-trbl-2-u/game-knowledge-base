@@ -26,8 +26,15 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-19"
     notes: "Rules summary."
-confidence: medium
-status: needs_followup
+  - id: "src-006"
+    title: "Too Many Bones Rulebook v2.2 (Chip Theory Games support, Dropbox-hosted)"
+    url: "https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-05"
+    notes: "Table of contents (p. 3) and objective statement (p. 6), extracted cleanly."
+confidence: high
+status: verified
 ---
 
 ## Summary
@@ -44,3 +51,11 @@ Players control Gearlocs across a short adventure arc. Each encounter is a tacti
   Source: src-003
   Evidence: Rules summary describes choosing Gearloc dice and adding skill dice through progression.
   Confidence: medium
+- Claim: The game's objective is to reach and defeat a chosen Tyrant within its day allotment.
+  Source: src-006
+  Evidence: "Your task is easy...according to the Gearloc Council. Reach and defeat the selected Tyrant within its day allotment to win."
+  Confidence: high
+- Claim: The rulebook's core sections, in order, are: Box Contents, Objective & Game Set-up, Gameplay Overview (Encounter, Reward, Recovery phases), Gearloc Mat, Baddie Chip, Tyrants, and Battle Mat.
+  Source: src-006
+  Evidence: Rulebook table of contents (p. 3).
+  Confidence: high

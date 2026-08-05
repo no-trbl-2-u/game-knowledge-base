@@ -17,13 +17,7 @@ followups:
     failure: blocked
     fallback: "Search result snippets and a secondary BGG-rating report"
     retry_needs: browser_fetch
-    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 during this run; recheck later for current average, rank, weight, and comments."
-  - source_id: "src-006"
-    url: "https://support.chiptheorygames.com/support/solutions/33000133541"
-    failure: blocked
-    fallback: "Official support landing page confirms the FAQ exists"
-    retry_needs: browser_fetch
-    notes: "FAQ link was identified but detailed extraction was not completed."
+    notes: "2026-08-05 librarian retry: still HTTP 403 (page) / HTTP 401 (XML API); recheck later for current average, rank, weight, and comments."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Hoplomachus: Remastered"
@@ -65,8 +59,8 @@ sources:
     url: "https://support.chiptheorygames.com/support/solutions/33000133541"
     kind: faq
     provenance: official
-    retrieved_at: "2026-07-11"
-    notes: "Official FAQ lead."
+    retrieved_at: "2026-08-05"
+    notes: "Landing page plus five Remastered-relevant articles retrieved and extracted on the 2026-08-05 librarian pass; see rules/edge-cases-faq.okf.md."
 confidence: high
 status: needs_followup
 ---
@@ -87,7 +81,7 @@ Study one board game matching the current Governor focus: cooperative plus deckb
 - BoardGameGeek: search snippets obtained; direct page/API blocked.
 - Publisher page: product page and support page retrieved.
 - Official rulebook: publisher-linked Dropbox PDF retrieved and extracted.
-- FAQ/errata: official link identified; detailed page not extracted.
+- FAQ/errata: official link identified; five Remastered-relevant articles extracted on the 2026-08-05 librarian pass.
 - Review sources: Meeple Mountain score page located.
 
 ## Rulebook extraction status
@@ -99,6 +93,7 @@ Study one board game matching the current Governor focus: cooperative plus deckb
 
 ## Documents written
 
+This run for *Hoplomachus: Remastered* wrote the standard document set:
 - `index.okf.md`
 - `sources.okf.md`
 - `rules/overview.okf.md`

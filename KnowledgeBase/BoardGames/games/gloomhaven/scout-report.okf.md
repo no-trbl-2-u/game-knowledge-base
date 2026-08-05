@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "Used BGG search result and BGG Data mirror for score and identity."
     retry_needs: alternate_source
-    notes: "Direct BGG page returned HTTP 403 from this environment."
+    notes: "Direct BGG page returned HTTP 403 from this environment. 2026-08-05 librarian retry: unchanged, still HTTP 403."
   - source_id: null
     url: "https://cephalofair.com/pages/gloomhaven"
     failure: not_found
     fallback: "Used Dized structured rules summary and secondary reviews."
-    retry_needs: alternate_source
-    notes: "No publisher page was confirmed during this run."
+    retry_needs: browser_fetch
+    notes: "No publisher page was confirmed during this run. 2026-08-05 librarian retry: the URL is real and now returns HTTP 200 with correct title/meta description (\"Below you will find a repository of information for the Gloomhaven board game. Major Errata...\"), but the page body is client-rendered (Shopify/JS) and the actual errata/rulebook/FAQ links are not present in the static HTML a plain fetch returns. Needs a real browser-rendering fetch, not just an HTTP GET; retry_needs upgraded from alternate_source to browser_fetch accordingly."
 sources:
   - id: "src-001"
     title: "Gloomhaven — BoardGameGeek"
@@ -108,6 +108,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Documents written
 
+This run for *Gloomhaven* wrote the standard document set:
 - `index.okf.md`
 - `sources.okf.md`
 - `rules/overview.okf.md`
