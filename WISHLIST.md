@@ -15,7 +15,7 @@ BoardGames intake candidates and never create `intake-gap` issues.
 
 ## Physical tabletop intake candidates
 
-- [ ] Quarriors / Dice Masters — dice-pool builder rules + reception (dead-pool churn problem and its patches); wanted for spec 33 dice-as-equipment prior art
+- [x] Quarriors / Dice Masters — dice-pool builder rules + reception (dead-pool churn problem and its patches); wanted for spec 33 dice-as-equipment prior art (Quarriors! base game packet: intake/runs/2026-08-06-quarriors)
 - [ ] Elder Sign — rules + reception (uncompensated miss faces as the cautionary tale); wanted for spec 33 dice-as-equipment prior art
 - [x] [Heroes of Terrinoth](KnowledgeBase/BoardGames/games/heroes-of-terrinoth/) — direct T request; action-retrieval RPG combat, mixed hero/enemy dice, peril clock, and in-quest class upgrades (covered 2026-07-18)
 - [ ] A competitive area-control or engine-building game with reviewer-documented runaway-leader/snowballing complaints and no catch-up mechanism — patterns/runaway-leader.okf.md currently lacks corroborating breadth beyond Quacks of Quedlinburg; wanted 2026-07-19 patterns pass
