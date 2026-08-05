@@ -9,7 +9,7 @@ status: verified
 
 ## Summary
 
-Across the 13 games tagged `solo-solitaire-game`, only a minority carry reception evidence that actually discusses the dedicated solo mode as its own experience (as opposed to the mechanic simply being listed). Where reviewers do address solo play directly, the same tension recurs: a strong ruleset "just works" alone because it removes multiplayer downtime and negotiation overhead, but the solo variant itself is judged on whether it introduces its own new problems — swinginess from running a single hand, brain burn from multi-handing, an anticlimactic/procedural endgame, oversized physical footprint for one player, or (for a video-game adaptation) simply feeling like a slower manual reenactment of software logic. Evidence is genuinely thin for most co-op titles in this set; several carry the tag with no solo-specific reviewer commentary at all.
+Across games tagged `solo-solitaire-game`, only a minority carry reception evidence that actually discusses the dedicated solo mode as its own experience (as opposed to the mechanic simply being listed). Where reviewers do address solo play directly, the same tension recurs: a strong ruleset "just works" alone because it removes multiplayer downtime and negotiation overhead, but the solo variant itself is judged on whether it introduces its own new problems — swinginess from running a single hand, brain burn from multi-handing, an anticlimactic/procedural endgame, oversized physical footprint for one player, or (for a video-game adaptation) simply feeling like a slower manual reenactment of software logic. Evidence is genuinely thin for most co-op titles in this set; several carry the tag with no solo-specific reviewer commentary at all.
 
 ## Evidence by game
 

@@ -149,6 +149,12 @@ export function placeholderFindings(text, label = 'content') {
   return findings
 }
 
+// Coverage is descriptive, not an admission gate. These checks exist only so a
+// ledger cannot be made to flatter itself: a recorded count may not exceed its
+// denominator, an unknown denominator must stay honestly null rather than be
+// manufactured, and the percentage must be the arithmetic result rather than a
+// number a worker preferred. Partial coverage is a legal, publishable state;
+// later passes add to it. See intake/README.md, "Coverage is additive".
 function coverageMetricFindings(metric, label) {
   const findings = []
   const recorded = metric?.recorded
@@ -174,9 +180,6 @@ export function coverageFindings(candidate, label = 'candidate') {
   if (String(coverage.methodology ?? '').trim().length < 20) findings.push(`${label}.coverage.methodology must explain the denominator in at least 20 characters`)
   findings.push(...coverageMetricFindings(coverage.rules, `${label}.coverage.rules`))
   findings.push(...coverageMetricFindings(coverage.factual, `${label}.coverage.factual`))
-  if (candidate?.status !== 'blocked') {
-    if (coverage?.rules?.percent !== 100) findings.push(`${label}.coverage.rules.percent must be 100 for ${candidate.status}`)
-  }
   return findings
 }
 
@@ -188,8 +191,11 @@ export function gapFindings(candidate, label = 'candidate') {
     return findings
   }
   if (!gap || typeof gap !== 'object' || Array.isArray(gap)) return [`${label}.gap is required for a blocked candidate`]
-  if (String(gap.threshold_summary ?? '').trim().length < 40) findings.push(`${label}.gap.threshold_summary must state achieved and required thresholds in at least 40 characters`)
-  for (const key of ['missing_evidence', 'help_requested']) {
+  if (String(gap.threshold_summary ?? '').trim().length < 40) findings.push(`${label}.gap.threshold_summary must state what remains unretrieved in at least 40 characters`)
+  // retry_leads names document sources a later scheduled pass should attempt.
+  // help_requested is the legacy key from the attended era and stays readable.
+  const leadsKey = gap.retry_leads !== undefined || gap.help_requested === undefined ? 'retry_leads' : 'help_requested'
+  for (const key of ['missing_evidence', leadsKey]) {
     if (!Array.isArray(gap[key]) || !gap[key].length) findings.push(`${label}.gap.${key} must be a non-empty array`)
     else for (const [i, value] of gap[key].entries()) if (String(value ?? '').trim().length < 20) findings.push(`${label}.gap.${key}[${i}] must contain at least 20 characters`)
   }

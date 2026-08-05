@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url'
 import {
   auditTransitionFindings,
   blockedRunDiffFindings,
+  changedRunIds,
   dailyBatchFindings,
   intakeCompletionGateFindings,
   intakeCompletionFindings,
@@ -299,11 +300,27 @@ test('changed intake runs must finish promoted and canonicalized in the same PR'
   assert.deepEqual(intakeCompletionFindings(run('promoted'), new Set(['good-game'])), [])
 })
 
-test('ordinary branch delivery permits intermediate intake heads while merge validation requires completion', () => {
+test('branch and open-PR views permit intermediate intake heads while merge validation requires completion', () => {
   const records = [{ runId: '2026-07-30-good', candidates: [{ slug: 'good-game', status: 'ready_for_audit' }] }]
   assert.deepEqual(intakeCompletionGateFindings(records, new Set()), [])
-  assert.match(intakeCompletionGateFindings(records, new Set(), { syntheticMerge: true }).join('\n'), /must end promoted in the same PR/)
+  // The open-PR view is the audit view: the packet is legally unpromoted there,
+  // because only the auditor can author the approval that promotion requires.
+  // The merge barrier for that same head is the separate `intake-complete`
+  // check, which reports intakeCompletionFindings directly.
+  assert.deepEqual(intakeCompletionGateFindings(records, new Set(), { syntheticMerge: true }), [])
   assert.match(intakeCompletionGateFindings(records, new Set(), { requireMergeCommit: true }).join('\n'), /must end promoted in the same PR/)
+  assert.match(intakeCompletionFindings(records, new Set()).join('\n'), /must end promoted in the same PR/)
+})
+
+test('changed run ids are derived identically for the full and completion-only paths', () => {
+  const files = [
+    'intake/runs/2026-07-30-good/manifest.json',
+    'intake/runs/2026-07-30-good/candidates/good-game/evidence.json',
+    'intake/runs/2026-07-31-other/manifest.json',
+    'KnowledgeBase/BoardGames/games/good-game/index.okf.md',
+    'TELEMETRY.md',
+  ]
+  assert.deepEqual([...changedRunIds(files)].sort(), ['2026-07-30-good', '2026-07-31-other'])
 })
 
 test('golden-path approval and protected merge checkpoints validate end to end', { timeout: 60_000 }, t => {

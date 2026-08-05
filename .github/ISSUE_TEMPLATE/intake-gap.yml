@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this only when a candidate cannot reach `ready_for_audit`. Before creating it, search all open and closed issues for the exact normalized slug and BGG ID. Update or reopen the matching issue instead of creating a duplicate. Replace both placeholders in the title. Do not commit a blocked intake packet. Update and close this issue when the missing evidence is retrieved.
+        Use this only when a candidate has no retrievable document evidence at all. Thin coverage is not a gap: publish the game with what it has and add more in a later pass. Before creating it, search all open and closed issues for the exact normalized slug and BGG ID. Update or reopen the matching issue instead of creating a duplicate. Replace both placeholders in the title. Do not commit a blocked intake packet. Update and close this issue when the missing evidence is retrieved.
   - type: input
     id: slug
     attributes:
@@ -43,7 +43,7 @@ body:
     id: coverage
     attributes:
       label: Measured coverage
-      description: Give recorded, known total, percentage, denominator source, and methodology for rules and factual coverage.
+      description: Give recorded, known total, percentage, denominator source, and methodology for rules and factual coverage. Coverage is descriptive; report it honestly rather than favourably, and never estimate a count you did not observe.
     validations:
       required: true
   - type: textarea
@@ -63,8 +63,8 @@ body:
   - type: textarea
     id: help
     attributes:
-      label: How T can unblock it
-      description: State the smallest concrete document, access, edition decision, or source lead needed.
+      label: Retry leads for a later pass
+      description: Name the document sources a later scheduled run should attempt — exact URLs, archive captures, official scans or readout inventories, licensed corpora. No run waits on a person, so a lead nothing can fetch is not a lead.
     validations:
       required: true
   - type: textarea
