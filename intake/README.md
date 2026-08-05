@@ -14,13 +14,18 @@ A Bathcat daily batch selects up to three unique candidates:
 - 1 solo RPG;
 - 1 matching the rotating focus.
 
-These are ceilings, not quotas. Each selected game is independent. A complete
-candidate gets one `YYYY-MM-DD-<slug>` run and one PR from Bathcat research
-through Mennonite audit and deterministic promotion. A candidate with missing
-evidence does not enter Git: Bathcat opens or updates an `intake-gap` issue with
-the measured shortfall, attempted sources, and help requested from T. Once the
-issue is closed by retrieved evidence, Bathcat builds a fresh
-`ready_for_audit` packet. One weak game never withholds sound candidates.
+These are ceilings, not quotas. Each selected game is independent. A candidate
+gets one `YYYY-MM-DD-<slug>` run and one PR from Bathcat research through
+Mennonite audit and deterministic promotion. One weak game never withholds sound
+candidates.
+
+A candidate enters with whatever it can evidence. Thin coverage is not a reason
+to withhold a game — a later pass adds to it, and a game absent from the corpus
+teaches nothing at all. Only one condition keeps a candidate out of Git: no
+lawful document evidence exists for it yet, so there is nothing to publish that
+a source supports. That case records an `intake-gap` issue with the measured
+shortfall, the attempted sources, and the document leads a later scheduled pass
+should try. Nothing in the pipeline waits on a human.
 
 Gap deduplication is mechanical. Normalize the candidate to its lowercase
 kebab-case slug and known numeric BGG ID (or `none`), then search all issue
@@ -37,14 +42,27 @@ closed match when the same evidence gap recurs. Create a new issue only when
 the exact key has no match. The required `Stable intake slug` and `BGG ID or
 none` fields must repeat the title key so reviewers can detect drift.
 
-Every candidate records a reproducible coverage ledger. Any non-blocked packet
-must cover 100% of its bounded governing-document inventory: the exact official
-core rulebook plus every applicable public FAQ/errata authority the packet cites
-or needs for its published claims. This is not a demand for every card text,
-expansion, printing, or inaccessible artifact in existence. Narrow scope and omit
-unsupported claims rather than inventing denominators. Factual coverage remains
-descriptive and may use `known_total: null` / `percent: null`; admission is enforced
-by complete claim-level Source/Evidence/Confidence support, not an arbitrary quota.
+### Coverage is additive
+
+Every candidate records a reproducible coverage ledger, and the ledger is
+**descriptive, never an admission gate**. No percentage — on rules, on
+components, on anything — blocks a packet. Aim high on rules coverage, because
+governing rules are the point of the corpus; components and other factual
+detail may land low-to-mid and improve later. A record that covers a rulebook
+and three components is a real record; the next pass adds the fourth.
+
+What admission *does* require is that everything published is real: every claim
+carries `Source / Evidence / Confidence`, every source is a retrieval receipt,
+and nothing is asserted beyond what a source supports. Narrow the scope and omit
+the claim instead of reaching for it.
+
+No worker may manufacture a denominator, estimate a count it did not observe,
+infer a value from a similar game, or fill a gap from model prior. An
+unretrieved denominator is `known_total: null` / `percent: null`, and an
+unretrieved fact is simply absent. A permanently open denominator is an accepted
+terminal state. The validator enforces the arithmetic — recorded may not exceed
+its denominator, and a percentage must be the computed result — so a ledger
+cannot be made to flatter itself, but it is free to be honestly small.
 
 BGG is optional discovery, identity, rating, and community evidence. It is not
 the research boundary and cannot satisfy `official_rules`. Each promotable
@@ -125,7 +143,7 @@ runs and a mandatory actionable gap report for blocked candidates:
         "factual": { "recorded": 0, "known_total": 10, "percent": 0 }
       },
       "gap": {
-        "threshold_summary": "Rules coverage is 0% of the one-document bounded authority set required for this packet.",
+        "threshold_summary": "No governing rules document has been retrieved yet, so no rules claim has a source to rest on.",
         "missing_evidence": ["The complete official governing rulebook remains unavailable."],
         "attempted_sources": [
           {
@@ -133,7 +151,7 @@ runs and a mandatory actionable gap report for blocked candidates:
             "result": "The publisher endpoint exposed no retrievable rules document."
           }
         ],
-        "help_requested": ["Provide a publisher-hosted rulebook or an authorized rules mirror."]
+        "retry_leads": ["Publisher rules endpoint and archive captures of it remain untried and should be attempted next."]
       }
     }
   ]
@@ -145,7 +163,10 @@ day, the validator enforces no more than three candidates and no more than one
 per cohort. `bgg_id` is nullable, not mandatory. A `rotating_focus` candidate also requires a concrete `focus_fit` sentence
 of at least twenty characters. All staged canonical records must agree on game
 identity, scope, mechanics, and source definitions and must carry
-`status: verified`; unresolved followups cannot enter a promotable packet.
+`status: verified` — which describes the claims the record publishes, not how
+much of the game it covers. A packet may carry open `followups`; they are the
+additive to-do the weekly librarian drains, and recording a known gap is always
+preferred to leaving it silent.
 
 Candidate states remain `blocked`, `ready_for_audit`, `rejected`, `approved`,
 and `promoted` for historical compatibility. New Git diffs may introduce only
@@ -240,6 +261,17 @@ branch. CI verifies that the parent commit contained the complete ready packet,
 that the approval commit touched no other path, and that no packet byte changed
 after approval. The decision is immutable once committed.
 
+### Audit the packet, not the check
+
+A `ready_for_audit` head is unpromoted by law: only the auditor may author the
+approval that promotion requires, so the scout cannot deliver a promoted head
+and must not try. Completion is therefore a merge-time gate, not an open-PR
+gate — `validate` is expected to pass on a ready head, and the audit proceeds on
+the packet's merits. Requiring the pre-approval head to be green would demand
+of the scout the one thing only the auditor can do, and the packet would sit
+forever. Green is required where it means something: on the final promoted head,
+before the merge commit.
+
 A failed audit is a PR verdict, not repository content. The Mennonite posts
 `REVISE` with exact defects and returns the same branch to a fresh Bathcat.
 Bathcat repairs the packet before any approval exists, commits a new frozen
@@ -283,22 +315,27 @@ candidates without an actionable gap report, unsupported claims, placeholder mar
 long-form prose, duplicate visual bytes, low-information label images,
 semantic generator scripts targeting `games/`, symlinked packet content,
 canonical directory rename/relocation bypasses, packet mutation after audit,
-canonical trees that differ from the approved staging tree, incomplete bounded
-rules coverage, and incomplete claim-level evidence.
+canonical trees that differ from the approved staging tree, and incomplete
+claim-level evidence. It does not gate on how much of a game is covered.
 
 ## Failure law
 
-An honest evidence or coverage shortfall is not an infrastructure failure. It
-produces or updates a structured `intake-gap` issue while complete packets
-continue independently. Do not commit a blocked packet or open a report PR. A
-malformed ready packet, failed validator, failed CI, unsafe Git state, or
-delivery failure remains fail-closed for that run: stop before writing further,
-preserve exact evidence, and never weaken a check. Future scheduled retries remain
-enabled so a transient failure cannot permanently disable intake.
+An evidence shortfall is not a failure at all. Thin coverage is published and
+extended later; a total absence of lawful document evidence records an
+`intake-gap` issue while sound packets continue independently. Do not commit a
+blocked packet or open a report PR.
+
+A malformed ready packet, failed validator, unsafe Git state, or delivery
+failure remains fail-closed for that run: stop before writing further, preserve
+exact evidence, and never weaken a check. Failing CI is fail-closed too, with
+one exception that is not a failure: the completion finding on a pre-approval
+`ready_for_audit` head. That state is expected, and auditing proceeds on the
+packet's merits. Future scheduled retries remain enabled so a transient failure
+cannot permanently disable intake.
 
 Cron workers wrap every hard gate and push with `scripts/fail-closed.mjs`.
 When a wrapped command fails, it exits nonzero and writes an evidence record
 beneath `~/.hermes/state/game-kb-intake-failures/`; it does not mutate cron state.
 A normal evidence rejection is not an infrastructure failure. Repeated identical
-failures are escalated to T, but the scheduler remains live unless T explicitly
-orders a pause.
+failures accumulate durable evidence records and are surfaced in the run report;
+the scheduler stays live, and no run waits on a reply.
