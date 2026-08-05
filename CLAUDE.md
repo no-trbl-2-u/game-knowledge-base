@@ -29,13 +29,14 @@ writes what, on what cadence) is `KnowledgeBase/BoardGames/operations.okf.md`.
    from outside BGG. Bathcat cannot create `approval.json` or write canonical
    `games/`. The Mennonite independently approves an immutable packet hash;
    only `scripts/promote-intake.mjs` may copy that packet into the corpus.
-5. **Never ask a human to buy or inspect a game.** Followups, prose "residual
-   help" sections, and `intake-gap` issues may only request *document*
-   sources — URLs, archive captures, official scans/readouts, licensed
-   corpora. Physical-copy acquisition and box/SKU/lot inspection are out of
-   scope (`OKF_SPEC.md`, "No physical-acquisition followups"). Record the gap
-   as a permanently `UNKNOWN` denominator instead; that is a valid terminal
-   state, not a pending task.
+5. **Coverage is additive; nobody is waiting.** The pipeline runs unattended,
+   so every followup and `intake-gap` line must name a *document* a later
+   scheduled pass could fetch — URL, archive capture, official scan/readout,
+   licensed corpus (`OKF_SPEC.md`, "A followup names a retrievable document").
+   No coverage percentage blocks a game: aim high on rules, accept low-to-mid
+   on components, publish what is evidenced, and add more next pass. Never
+   close the difference by inventing it — an unretrieved denominator stays
+   `UNKNOWN`, which is a valid terminal state, not a pending task.
 
 ## Validation
 
@@ -51,7 +52,7 @@ A PostToolUse hook runs the single-file check after every write under
 blocks on the same findings. A Stop hook warns when a turn ends with a
 dirty tree or unpushed commits (corpus passes commit+push atomically).
 Full-corpus scans log a row to `TELEMETRY.md` (what was scanned, when,
-complete or not) — data for the human, never a work queue. Controlled vocabularies (mechanics slugs,
+complete or not) — a record, never a work queue. Controlled vocabularies (mechanics slugs,
 better-if labels, enums) are pinned — extend the vocabulary source +
 `OKF_SPEC.md` first, never freelance a new tag.
 
@@ -59,11 +60,11 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 
 - **Bathcat scout** (external Hermes cron) — wishlist-first discovery and
   noncanonical evidence packets only; target 1/1/1, honest eligibility shortfalls
-  allowed. Ready packets require 100% coverage of the bounded governing-document
-  inventory declared for the claims actually published; exhaustive card-library
-  coverage and arbitrary factual percentages are not admission gates. Bathcat opens one PR only for a complete
-  `ready_for_audit` packet. Below-threshold research becomes an actionable GitHub
-  issue and must not add a blocked packet or report PR to Git.
+  allowed. Ready packets publish whatever they can evidence; no coverage percentage is an
+  admission gate, and invented data never substitutes for a missing source. Bathcat opens one PR only for a complete
+  `ready_for_audit` packet. A candidate with no retrievable document evidence at
+  all becomes an actionable GitHub issue and must not add a blocked packet or
+  report PR to Git.
 - **Mennonite intake audit** (separate external Hermes cron) — independently
   reopens sources, verifies claims and visuals, binds approval to the frozen
   packet SHA-256, performs deterministic promotion on the same PR branch, and
@@ -87,7 +88,7 @@ the parent state and allowed paths at each boundary and forbids packet mutation
 after approval. This repository is merge-commit only: squash and rebase are disabled so the
 protected-base history always preserves the reviewed branch ancestry. New-game intake
 specifically depends on its Bathcat, approval, and promotion commit boundaries.
-CODEOWNERS names T's authenticated repository account for ownership only: a
+CODEOWNERS names the owning repository account for ownership only: a
 single-account repository cannot satisfy a required self-review, so required
 approving reviews stay at zero. Separate agent contexts, disjoint write
 jurisdictions, immutable packet hashes, preserved commits, and CI preserve role
