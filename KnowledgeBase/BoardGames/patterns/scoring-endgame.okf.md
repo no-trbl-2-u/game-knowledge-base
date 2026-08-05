@@ -14,9 +14,8 @@ scoring/endgame complaints, and Slay the Spire's tagged instance is really about
 post-run campaign-reset clarity rather than a scoring ceremony or trigger-design
 problem. Where the pattern shows up cleanly, the complaint is not that the endgame
 math is unfair — it's that closing the game requires either the rulebook (Ark Nova)
-or feels anticlimactic/procedural rather than climactic (Spirit Island). Only 3 games
-carry this label in the corpus, so conclusions here should be treated as directional,
-not definitive.
+or feels anticlimactic/procedural rather than climactic (Spirit Island). The evidence
+base remains narrow, so conclusions here should be treated as directional, not definitive.
 
 ## Evidence by game
 
@@ -34,7 +33,7 @@ not definitive.
 
 ## Where it works
 
-No praised-design evidence found for this pattern. None of the three games' reception
+No praised-design evidence found for this pattern. None of the cited reception
 docs praise a specific scoring ritual or endgame-trigger design as a strength; praise
 in these docs targets other systems (Ark Nova's action-card engine, Spirit Island's
 asymmetric spirits and fear-based victory, Slay the Spire's cooperative adaptation).
@@ -59,4 +58,4 @@ Evidence clusters around "closing the game requires external reference" (Ark Nov
 modes under one label. A heavier area-control or engine-building title with an
 explicit, reviewer-discussed final-scoring phase (tableau/board tally at game end)
 would help separate "scoring math is a chore" from "the endgame trigger itself lacks
-drama," since the current three games mostly evidence the latter.
+drama," since the current evidence mostly supports the latter.
