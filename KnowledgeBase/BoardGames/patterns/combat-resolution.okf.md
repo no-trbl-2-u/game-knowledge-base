@@ -9,7 +9,7 @@ status: draft
 
 ## Summary
 
-Thin evidence (2 games). Dune: Imperium's hidden simultaneous-commitment combat
+Evidence is thin. Dune: Imperium's hidden simultaneous-commitment combat
 draws praise for tension but a matching complaint that the same hiddenness
 reads as swinginess/imbalance when a leader's combat strength outpaces
 opponents' visibility into it. Kingdom Death: Monster's dice-based combat
@@ -62,8 +62,8 @@ game's appeal are also the primary source of "better if" requests.
 
 ## Coverage gaps
 
-Only 2 games carry this label, and Kingdom Death: Monster's reception docs
-are still `needs_followup` with low-confidence, inference-heavy claims. A
+Current support for this label remains narrow, and Kingdom Death: Monster's
+reception docs are still `needs_followup` with low-confidence, inference-heavy claims. A
 dedicated combat-heavy game (e.g., a wargame or skirmish title) with a
 `verified` reception doc would substantially strengthen this pattern; until
 then, conclusions here should be read as provisional.

@@ -2,7 +2,7 @@
 
 OKF here means **Operational Knowledge File**: markdown documents with strict frontmatter, source-backed claims, confidence labels, and retrieval-friendly metadata.
 
-This is a provisional SomberSoft format. If T defines another OKF standard, replace this file and migrate forward.
+This is a provisional SomberSoft format. If another OKF standard is defined, replace this file and migrate forward.
 
 Current version: **0.2**. Every document in the corpus carries `okf_version: 0.2`; the validator (`scripts/validate-okf.mjs`) rejects anything else. 0.2 adds `mechanics`, `better_if_labels`, `game.weight`, and the `followups` block over 0.1.
 
@@ -147,7 +147,17 @@ Public availability and `provenance: official` do not grant a license. Prefer
 own work, permission, open licenses, or public-domain material. A narrowly
 transformed `editorial-excerpt` is permitted only for private visual analysis:
 it must be materially reduced, attributed, linked to its source, and carry a
-specific rationale. Do not store complete rulebooks, complete card libraries,
+specific rationale.
+
+**"Private" means this repository and its authorized private sync targets.**
+This repository is private, and the Axiomancer `kb/` mirror is private; an
+`editorial-excerpt` reference is lawful for that destination under the
+conditions above, and no audit may reject one on the theory that promotion into
+this corpus is publication. Two audits of the same packet must not reach
+opposite conclusions because the word was undefined. If this repository or any
+sync target ever becomes public, that change invalidates every stored
+`editorial-excerpt` at once and must be treated as a corpus-wide visual
+re-basing, not a per-packet judgement call. Do not store complete rulebooks, complete card libraries,
 source-resolution promotional art, community photographs without permission,
 or images that substitute for cards, boards, player aids, or other game
 components. A reduced page-overview derivative is permitted when visual
@@ -229,26 +239,25 @@ followups:
 
 A `scout_report` doc with `status: needs_followup` must carry a non-empty `followups` block — the weekly librarian pass consumes exactly this. Prose failure notes remain welcome but do not replace the block.
 
-### No physical-acquisition followups
+### A followup names a retrievable document
 
-A followup must name a **document source** that could be retrieved: a URL, an
-archive capture, an official scan or readout inventory, a licensed corpus.
-Followups that ask a human to buy, borrow, unbox, or physically inspect a copy
-of a game are **out of scope** and must never be written — not as a
-`physical://` pseudo-URL, not as a prose "residual help" bullet, not as an
-`intake-gap` issue line. The same prohibition covers box, SKU, UPC, lot, and
-printing-marker inspection.
+Every followup, in a record or an `intake-gap` issue, must name a **document
+source a later automated pass could actually fetch**: a URL, an archive
+capture, an official scan or readout inventory, a licensed corpus. The pipeline
+runs unattended; a followup no scheduled run can execute is not a task but a
+permanent stall, so it must never be written.
 
 This is a scope boundary, not an evidence standard: the underlying gap still
 gets recorded honestly. State the denominator as `UNKNOWN`, keep the record
-`needs_followup`, and say plainly that no lawful document source is known.
+`needs_followup`, and say plainly that no retrievable source is known.
 A permanently open denominator is an accepted terminal state for a record —
-it is not a pending task, and it must not be re-raised as an acquisition
-request on the next pass.
+it is not a pending task, and it must not be re-raised on the next pass.
 
 ## Daily scout and canonical-promotion boundary
 
-The three-game scout target is 1 cooperative, 1 solo RPG, and 1 rotating-focus game. It is a research target, not a canonical-output quota; honest eligibility shortfalls remain lawful. Each complete candidate uses one one-candidate run and one PR. Below-threshold research becomes an `intake-gap` GitHub issue with exact achieved/required coverage, missing evidence, attempted sources, and help requested; it must not enter Git as a blocked packet or report PR. Bathcat writes complete noncanonical packets under `intake/runs/` according to `intake/README.md`; it does not write directly to `games/` and may not approve its own packet. Every candidate carries a reproducible coverage ledger. Ready packets require 100% coverage of the bounded governing-document inventory needed for the packet's published claims. Exhaustive card-library or expansion coverage and arbitrary factual percentages are not admission gates; every published claim must instead pass Source/Evidence/Confidence validation.
+The three-game scout target is 1 cooperative, 1 solo RPG, and 1 rotating-focus game. It is a research target, not a canonical-output quota; honest eligibility shortfalls remain lawful. Each candidate uses one one-candidate run and one PR. A candidate with no retrievable document evidence at all becomes an `intake-gap` GitHub issue recording what is absent, which sources were attempted with what result, and which document leads a later pass should try; it must not enter Git as a blocked packet or report PR. Bathcat writes complete noncanonical packets under `intake/runs/` according to `intake/README.md`; it does not write directly to `games/` and may not approve its own packet.
+
+Every candidate carries a reproducible coverage ledger, and **no coverage figure is an admission gate**. Aim high on governing-rules coverage; component and other factual detail may enter low-to-mid and grow in later passes. A thin record that is honestly sourced is worth more than an absent game, and a later pass may always add to it. What is never permitted is manufacturing the difference: no estimated count, no denominator inferred from a similar game, no figure filled from model prior. Unretrieved denominators stay `null`, unretrieved facts stay absent, and every published claim must pass Source/Evidence/Confidence validation.
 
 A packet eligible for independent audit stages the complete canonical tree, including `index.okf.md`, `sources.okf.md`, the six standard rule-category records (`overview`, `setup`, `turn-structure`, `actions`, `scoring-endgame`, and `edge-cases-faq`), both reception records, `scout-report.okf.md`, and a 2–8-image visual packet plus contact sheet. It also preserves machine-verifiable retrieval receipts for official rules, independent reception, ratings when claimed, and visual sources. BGG is permitted for discovery, identity, ratings, and community testimony; official rules and independent review must come from separate non-BGG organizational domains, and the packet must span at least two distinct non-BGG organizational domains.
 
