@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-08-06T17:01:20.000Z",
+  "packet_sha256": "d77840d139d0c560350a58ca154170cd261441253ce54edd8b2c734c263c66aa",
+  "reviewed_source_ids": ["src-001", "src-002", "src-003", "src-004", "src-005", "src-006"],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Independent audit reopened the WizKids product page, the archived official product-70939 English rulebook, both independent reviews, and both official visual asset endpoints. The archive PDF is 12 pages and reproduces the recorded packet SHA-256; claim-level citations, edition scope, source-role separation, visual hashes, and staged tree integrity passed. The current WizKids PDF endpoint was not directly retrievable during audit, but the exact official URL and successful archive capture were verified; no FAQ or errata-dependent claim is published. The packet is approved for deterministic promotion without semantic changes."
+}
