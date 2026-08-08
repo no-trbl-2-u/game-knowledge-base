@@ -1,0 +1,261 @@
+{
+  "schema_version": 3,
+  "slug": "dominion",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-08-08T06:14:03.000Z",
+  "edition_scope": "Released physical Dominion base game, current Rio Grande Games English 2nd Edition product RIO531; expansions, promos, online, digital adaptations, and complete card-text history excluded.",
+  "coverage_ledger": {
+    "rules_denominator": [
+      {
+        "authority": "Rio Grande Games Dominion 2nd Edition core rulebook",
+        "acquired": true,
+        "official_endpoint": true,
+        "source_ids": [
+          "src-001",
+          "src-002"
+        ],
+        "notes": "Product page link and direct PDF both retrieved; PDF inspected as 16 pages with extracted text covering setup, turn phases, card handling, endgame, and base-card reference."
+      }
+    ],
+    "faq_errata_inventory": {
+      "scope": "Public English FAQ or errata applicable to the current Rio Grande base-game claims published in this packet.",
+      "checks": [
+        "Official product page and its current rules link were retrieved; no separate FAQ or errata link was exposed for the base product.",
+        "Official robots and sitemap discovery were inspected; WordPress API endpoints returned HTTP 403 under command-line fetch, recorded as a retrieval state rather than absence.",
+        "A community Dominion Strategy errata/rules-tweaks article was retrieved as src-007 and explicitly excluded from official current-print rule law."
+      ],
+      "applicable_acquired": 0,
+      "applicable_known_total": null,
+      "notes": "No published claim depends on a separate FAQ or erratum. The packet does not claim publisher-wide nonexistence."
+    },
+    "factual_denominator": [
+      {
+        "claim_group": "current Rio Grande product identity and stock",
+        "recorded": true,
+        "source_ids": [
+          "src-001"
+        ]
+      },
+      {
+        "claim_group": "English 2nd Edition core-rule authority",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "500-card component inventory",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "starting deck and Supply setup",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "ABC turn structure",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "Action, Buy, Clean-up handling",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "trashing and card types",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "endgame and scoring",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "independent praise and friction testimony",
+        "recorded": true,
+        "source_ids": [
+          "src-003"
+        ]
+      },
+      {
+        "claim_group": "product visual identity",
+        "recorded": true,
+        "source_ids": [
+          "src-004"
+        ]
+      },
+      {
+        "claim_group": "card/game overview visual state",
+        "recorded": true,
+        "source_ids": [
+          "src-005"
+        ]
+      },
+      {
+        "claim_group": "wider tabletop state visual",
+        "recorded": true,
+        "source_ids": [
+          "src-006"
+        ]
+      },
+      {
+        "claim_group": "community errata boundary",
+        "recorded": true,
+        "source_ids": [
+          "src-007"
+        ]
+      }
+    ],
+    "exclusions": [
+      "All expansions, promos, online play, digital adaptations, and complete card-text denominators.",
+      "BGG ratings, rank, and complexity weight; game.weight is null.",
+      "Community errata as operative law; it is preserved only as a source-boundary witness."
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Rio Grande Games \u2014 Dominion product page",
+      "roles": [
+        "identity"
+      ],
+      "provenance": "official",
+      "url": "https://www.riograndegames.com/games/dominion/",
+      "final_url": "https://www.riograndegames.com/games/dominion/",
+      "retrieved_at": "2026-08-08T06:14:03.971Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 95242,
+      "sha256": "b3e33fd3de16faf94961eca77f117af2fc1ae1114ad440053516e6c64b580c15",
+      "locator": "Product details, Dominion, Game Components, Game Idea, Rules link",
+      "evidence": "is the game that started a new genre: Deckbuilding."
+    },
+    {
+      "id": "src-002",
+      "title": "Rio Grande Games \u2014 Dominion 2nd Edition rulebook",
+      "roles": [
+        "official_rules"
+      ],
+      "provenance": "official",
+      "url": "https://www.riograndegames.com/wp-content/uploads/2016/09/Dominion2E.pdf",
+      "final_url": "https://www.riograndegames.com/wp-content/uploads/2016/09/Dominion2E.pdf",
+      "retrieved_at": "2026-08-08T06:14:04.205Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 4965016,
+      "sha256": "ea9e3fbef0064e6773c8772bbb234ac7d06c71a478422b45143432a29aa64273",
+      "locator": "16-page PDF; printed pp. 1\u201316; title metadata WideDominion; printed setup/components pp. 1\u20134; turn structure pp. 4\u20138; card reference pp. 12\u201316",
+      "evidence": "This is a game of building a deck of cards.",
+      "page_count": 16,
+      "pdf_metadata": {
+        "title": "WideDominion",
+        "creator": "JAY TUMMELSON",
+        "creation_date": "2023-08-17T18:33:03Z",
+        "modification_date": "2023-08-17T17:35:04Z"
+      }
+    },
+    {
+      "id": "src-003",
+      "title": "Board Game Quest \u2014 Dominion Review",
+      "roles": [
+        "independent_review"
+      ],
+      "provenance": "secondary",
+      "url": "https://www.boardgamequest.com/dominion-review/",
+      "final_url": "https://www.boardgamequest.com/dominion-review/",
+      "retrieved_at": "2026-08-08T06:14:04.496Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 209471,
+      "sha256": "f25e0f9f32ce720f7ab67494773fd60fdb6e02269430e1157030b031408e3683",
+      "locator": "Review dated Feb 26, 2013; Game Overview; How to Play; Final Thoughts",
+      "evidence": "Dominion is a deck building game for 2-4 players that plays in about 30 minutes."
+    },
+    {
+      "id": "src-004",
+      "title": "Board Game Quest \u2014 Dominion box photograph",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "secondary",
+      "url": "https://www.boardgamequest.com/wp-content/uploads/2012/11/Dominion.jpg",
+      "final_url": "https://www.boardgamequest.com/wp-content/uploads/2012/11/Dominion.jpg",
+      "retrieved_at": "2026-08-08T06:14:04.716Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 9404,
+      "sha256": "49bc71a3dc650eed0fb5435de999104ab5da5f410c21c4082473bd638ffcf359",
+      "locator": "Dominion Review lead image, alt text Dominion Box Art",
+      "evidence": "Source-linked box photograph used as a reduced editorial excerpt."
+    },
+    {
+      "id": "src-005",
+      "title": "Board Game Quest \u2014 Dominion game overview photograph",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "secondary",
+      "url": "https://www.boardgamequest.com/wp-content/uploads/2013/02/IMG_2969-300x225.jpg",
+      "final_url": "https://www.boardgamequest.com/wp-content/uploads/2013/02/IMG_2969-300x225.jpg",
+      "retrieved_at": "2026-08-08T06:14:04.952Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 27518,
+      "sha256": "6b9bc5d02ef2a089b584e2c508ff7b627d617396e9e30191d2257e2dcf10dba6",
+      "locator": "Dominion Review Game Overview image, alt text Dominion Game Overview",
+      "evidence": "Source-linked gameplay photograph used as a reduced editorial excerpt."
+    },
+    {
+      "id": "src-006",
+      "title": "Board Game Quest \u2014 Dominion game-experience photograph",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "secondary",
+      "url": "https://www.boardgamequest.com/wp-content/uploads/2013/02/IMG_2961-600x450.jpg",
+      "final_url": "https://www.boardgamequest.com/wp-content/uploads/2013/02/IMG_2961-600x450.jpg",
+      "retrieved_at": "2026-08-08T06:14:05.315Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 86343,
+      "sha256": "68bc8b699bd0e2c59919899bfa4a0a752682dc094aea9898de388944ec60dce5",
+      "locator": "Dominion Review game-experience image, alt text The Dominion Game Experince",
+      "evidence": "Source-linked gameplay photograph used as a reduced editorial excerpt."
+    },
+    {
+      "id": "src-007",
+      "title": "Dominion Strategy \u2014 Dominion 2019 Errata and Rules Tweaks",
+      "roles": [
+        "community"
+      ],
+      "provenance": "community",
+      "url": "https://dominionstrategy.com/2019/09/25/dominion-2019-errata-and-rules-tweaks/",
+      "final_url": "https://dominionstrategy.com/2019/09/25/dominion-2019-errata-and-rules-tweaks/",
+      "retrieved_at": "2026-08-08T06:15:53.203Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 120727,
+      "sha256": "2d9d7e32f91f05ebb23190d8268c7a4e9c4e9f2a914b0b90c519410c383dec2c",
+      "locator": "Article title/date, opening designer attribution, Errata section",
+      "evidence": "Donald X. Vaccarino (designer of Dominion)"
+    }
+  ]
+}
