@@ -7,73 +7,79 @@ game:
   bgg_id: 195856
   publisher: "CMON"
   year: 2016
-  players:
-    min: 3
-    max: 5
-  complexity: moderate
-  weight: 2.06
-  edition: "base/standalone release"
-scope: "rating-led semi-cooperative RPG/adventure selection dossier"
-mechanics: ["hand-management", "push-your-luck", "semi-cooperative-game", "set-collection", "simultaneous-action-selection", "variable-player-powers"]
-better_if_labels: []
+  weight: 2.04
+  edition: "English 2016 standalone base game"
+scope: "English 2016 standalone base game; The Hunter's Nightmare expansion and promotional or translated material excluded"
+mechanics: ["hand-management", "push-your-luck", "semi-cooperative-game", "set-collection", "simultaneous-action-selection"]
 sources:
   - id: "src-001"
-    title: "BoardGameGeek \u2014 Bloodborne: The Card Game"
-    url: "https://boardgamegeek.com/boardgame/195856"
-    kind: bgg_page
-    provenance: community
-    retrieved_at: "2026-07-26"
-    notes: "Identity and mechanic evidence."
-  - id: "src-002"
-    title: "CMON \u2014 official product or rules page"
-    url: "https://www.cmon.com/product/bloodborne-the-card-game/"
+    title: "CMON — Bloodborne: The Card Game"
+    url: "https://www.cmon.com/product/bloodborne-the-card-game/bloodborne-the-card-game"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-26"
-    notes: "Identity and mechanic evidence."
-  - id: "src-003"
-    title: "BGG ranking snapshot mirror"
-    url: "https://raw.githubusercontent.com/andyphuawc114/boardgamewhiz-streamlit/e4b8c97d29893a8d0f1cedc02753f10d5dc6130d/dataset/df_weights.csv"
-    kind: other
+    retrieved_at: "2026-07-31"
+    notes: "Direct HTML blocked; dated dynamic proxy returned HTTP 200 and displayed Rules & More → Rulebook → 79.01 MB."
+  - id: "src-002"
+    title: "CMON — Bloodborne: The Card Game Rulebook"
+    url: "https://cmon-files.s3.amazonaws.com/pdf/assets_item/resource/43/Bloodborne_Rulebook__2_.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Official 2016 CMON S3 object; 92,484,273 bytes; 16 pages; SHA-256 e5010bc06faf0a4fc05b70228836401825a123c4dad0459233edcd318b664b38."
+  - id: "src-004"
+    title: "Ars Technica — Bloodborne: The Card Game is actually pretty great"
+    url: "https://arstechnica.com/gaming/2016/09/bloodborne-the-card-game-is-actually-pretty-great/"
+    kind: review
     provenance: secondary
-    retrieved_at: "2026-07-26"
-    notes: "Rating snapshot used for this batch ordering."
+    retrieved_at: "2026-07-31"
+    notes: "Independent review."
+followups:
+  - source_id: "src-001"
+    url: "https://www.cmon.com/product/bloodborne-the-card-game/bloodborne-the-card-game"
+    failure: blocked
+    fallback: "Dated original-URL proxy and direct assets returned HTTP 200; proxy currently lists Rulebook 79.01 MB."
+    retry_needs: manual_review
+    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it."
 confidence: high
-status: verified
-last_verified: "2026-07-26"
-summary: "Why Bloodborne: The Card Game qualifies for this ten-game intake."
+status: needs_followup
 ---
 
-# Scout Report — Bloodborne: The Card Game
+# Scout report
 
-## Rating signal
+## Verdict
 
-- **Source:** src-001, src-003
-- **Evidence:** Snapshot average **6.88/10**; BGG rank 1512. Batch position **#10** applies only after semi-cooperative and RPG/adventure relevance screening.
-- **Confidence:** medium-high; BGG values drift over time
+- Claim: This existing canonical record must remain `needs_followup`, not `verified`.
+  Source: src-001, src-002
+  Evidence: "The official CMON rulebook is now acquired, but complete local text for five card classes and a closed publisher-wide FAQ/errata/clarification/support inventory remain unproved."
+  Confidence: high
 
-## Why it qualifies
+## What is acquired
 
-Compact RPG-adventure fit through weapons, upgrades, monster encounters, risk of death, and personal progression inside a shared dungeon run.
+- Claim: The base-game physical manifest is closed at seven categories, and all seven quantities are transcribed.
+  Source: src-001
+  Evidence: "87 cards, 5 Hunter Boards, 5 Hunter Health Dials, 75 Blood Echo plastic tokens, 16 cardboard tokens, 3 custom Monster dice, and 1 rulebook."
+  Confidence: high
 
-- **Source:** src-001, src-002
-- **Evidence:** Hunters must collectively damage Chalice Dungeon monsters, yet only personal blood echoes, trophies, and upgrades determine the winner.
-- **Confidence:** high
+- Claim: The official rulebook covers setup, eight round steps, combat and death, Hunter's Dream upgrades, trophies, Final Boss resolution, scoring, and ties.
+  Source: src-002
+  Evidence: "Rulebook table of contents and pp. 5–15."
+  Confidence: high
 
-## Core loop
+- Claim: Independent reception supports both praise and friction without model-generated sentiment.
+  Source: src-004
+  Evidence: "Ars praises bluffing, dread, and push-your-luck tension while warning that take-that nastiness will not suit players who dislike being mean to friends."
+  Confidence: high
 
-Players choose action cards simultaneously, resolve attacks and monster retaliation, then decide whether to press on or bank blood echoes at the Hunter’s Dream. Death risks unbanked progress while allies remain rivals.
+## Why the governing denominator is open
 
-- **Source:** src-002
-- **Evidence:** Publisher rules/product framing establishes the shared threat, player-role structure, and individual or traitor incentives summarized above.
-- **Confidence:** medium-high
+The official rulebook row is closed. The Hunter Boards/player aids and Monster dice are rule-bearing surfaces, and the official rulebook sufficiently governs their printed round/track/zone and damage/combo functions. Dials and tokens are governed state/value markers. Five card classes still carry local rules: Starter Actions, Upgrades, Monsters, Chalice Bosses, and Final Bosses. Their quantities are known, but their complete identity/text corpus is not acquired. A closed publisher-wide FAQ/errata/clarification/support inventory is also unproved. Therefore the governing denominator remains **OPEN / UNKNOWN**, with no percentage or composite score.
 
-## Design signal
+## Exact help requested from T
 
-**Praise:** Fast simultaneous choices and the bank-or-continue dilemma translate Bloodborne’s greed and mortality into a sharp semi-cooperative loop.
+Residual HOLD request:
 
-**Friction:** Player-count sensitivity, timing interpretation, and the possibility of profiting from another hunter’s failure can feel arbitrary.
+1. provide a complete immutable base-game card-local corpus covering Starter Actions, Upgrades, Monsters, Chalice Dungeon Bosses, and Final Bosses;
+2. provide a closed official FAQ/errata/clarification/support inventory, or authoritative evidence that none exists; and
+3. only if an official card corpus remains unavailable, T may approve a named immutable secondary card corpus.
 
-## Scope boundary
-
-This is a verified intake dossier, not a substitute for a full setup/turn/endgame transcription or visual evidence packet. No unsupported component counts, card text, or strategy claims are asserted.
+With those authorities, Bathcat can close the denominator and a fresh Mennonite can audit the repaired PR head. This draft must not be marked ready or merged meanwhile.
