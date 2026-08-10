@@ -18,12 +18,12 @@ followups:
     fallback: "The recovered official update-log replay supplies dated version history and four titles; the 2020 publisher page closes the scenario count at five; current v1.12.0 supplies current-only structure."
     retry_needs: alternate_source
     notes: "Release app-root CDX search found no 2020 fwcrossroads.plaidhatgames.com objects; fwcrossroads.com root captures begin in August 2020, but the historical main bundle was unavailable. This is not absence. Need immutable release bundle, complete title/data/entry/check/branch/audio manifest, and byte comparison."
-  - source_id: null
-    url: "publisher support/FAQ/errata inventory"
+  - source_id: "src-003"
+    url: "https://www.plaidhatgames.com/board-games/forgotten-waters/"
     failure: other
-    fallback: "Rulebook and dated app FAQ only."
-    retry_needs: manual_review
-    notes: "No authoritative complete FAQ/errata/support inventory was established."
+    fallback: "The retrieved product page and the dated app FAQ expose support material, but no complete FAQ/errata/support inventory was established."
+    retry_needs: alternate_source
+    notes: "HTTP 200; text/html; 62,640 bytes; SHA-256 309c142e00e1d88d7a6cc7dcfbb48790a1ae3521e36d5f000d23cc14ad9d08e5. The page exposes support links, but the complete authoritative FAQ/errata/support inventory remains UNKNOWN."
 sources:
   - id: "src-001"
     title: "Forgotten Waters Rulebook"
