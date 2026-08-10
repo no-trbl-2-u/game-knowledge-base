@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-08-10T15:36:51.000Z",
+  "packet_sha256": "7210fa7b5fde05633ee0f91060e43f83782051d7572a42fa391d52309a158ca2",
+  "reviewed_source_ids": [
+    "src-001",
+    "src-002",
+    "src-003",
+    "src-004",
+    "src-005",
+    "src-006",
+    "src-007"
+  ],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "GO after reopening the Rio Grande product page and 16-page current Dominion 2nd Edition rulebook, the Board Game Quest review in browser, the Dominion Strategy errata boundary, and all three visual assets. The rulebook hash and all three visual hashes matched the packet; the product page's edition note and review claims were directly observed. No rating is claimed, the open FAQ denominator remains null, and the packet excludes expansions and complete card-text history. The contact sheet is three distinct reduced non-substitutive panels."
+}
