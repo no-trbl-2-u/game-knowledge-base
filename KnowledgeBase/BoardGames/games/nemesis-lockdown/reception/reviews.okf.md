@@ -4,7 +4,7 @@ type: reception
 game:
   title: "Nemesis: Lockdown"
   slug: "nemesis-lockdown"
-  bgg_id: 310100
+  bgg_id: null
   publisher: "Awaken Realms"
   year: 2022
   weight: null
