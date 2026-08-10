@@ -68,7 +68,7 @@ sources:
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-08-10"
-    notes: "Fresh exact-URL retrieval: HTTP 200; text/html; 33,531 served bytes; SHA-256 b5b399c5d835296074cea0d1d0bba45ad06136ed0ba268bae0a1cec99905af57. Body links the archived rules PDF and contains 'Click here to download the game rules.'"
+    notes: "Exact archive URL retrieved 2026-08-10 with HTTP 200 and text/html; body links the archived rules PDF and contains 'Click here to download the game rules.' Wayback replay bytes and SHA-256 are dynamic and not fixed."
   - id: "src-009"
     title: "Dead of Winter rulebook PH1000 (2020 revised printing comparison)"
     url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
@@ -88,7 +88,7 @@ summary: "The byte-verified 2014 release rulebook is target authority; PH1000 is
 |---|---|---|---|---:|---:|---|
 | src-001 | 2026-07-31 | exact URL above; HTTP 200 | application/pdf | 24,044,267 | 20 | `41f37d18f07bf04303c364916dcc0bab62d379b85373661650b0118be5812ca7` |
 | src-007 | 2026-07-31 | exact archive URL above; HTTP 200 | application/pdf | 24,044,267 | 20 | `41f37d18f07bf04303c364916dcc0bab62d379b85373661650b0118be5812ca7` |
-| src-008 | 2026-08-10 | exact URL above; HTTP 200 | text/html | 33,531 | — | `b5b399c5d835296074cea0d1d0bba45ad06136ed0ba268bae0a1cec99905af57` |
+| src-008 | 2026-08-10 | exact URL above; HTTP 200 | text/html | dynamic | — | not fixed |
 | src-009 | 2026-07-31 | exact URL above; HTTP 200 | application/pdf | 9,006,551 | 20 | `0d7389eb286e454ff3fc431efc68fd87f5aceaba939e02bab55664e6183af9b9` |
 | src-002 | 2026-07-31 | exact URL above; HTTP 200 | application/pdf | 2,684,037 | 4 | `331e65dc07240857405d595592e8320e61ac6649def735b3cb8c7659ba13bcee` |
 | src-003 | 2026-07-31 | exact URL above; dynamic HTML | text/html | date-bounded | — | date-bounded |

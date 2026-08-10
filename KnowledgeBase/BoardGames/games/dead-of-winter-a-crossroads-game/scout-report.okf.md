@@ -54,7 +54,7 @@ sources:
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-08-10"
-    notes: "Fresh exact-URL retrieval: HTTP 200; text/html; 33,531 served bytes; SHA-256 b5b399c5d835296074cea0d1d0bba45ad06136ed0ba268bae0a1cec99905af57; body links the archived rules PDF as 'Click here to download the game rules.'"
+    notes: "Exact archive URL retrieved 2026-08-10 with HTTP 200 and text/html; body links the archived rules PDF as 'Click here to download the game rules.' Wayback replay bytes and SHA-256 are dynamic and not fixed."
   - id: "src-009"
     title: "Dead of Winter rulebook PH1000 (2020 revised printing comparison)"
     url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
