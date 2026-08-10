@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-08-05T02:08:38.444Z",
+  "packet_sha256": "46c0003e47b77caab4790b62cf9f7263ccb5097873f2e84efdce16621722777c",
+  "reviewed_source_ids": ["src-001", "src-002", "src-004", "src-005"],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "GO: exact core rulebook reopened and hashes match; both written reviews were fetched and quoted claims remain present; Commons license is confirmed; the private repository permits the reduced editorial excerpts under OKF_SPEC private visual-analysis terms; packet and visual hashes match, and all staged claims remain within the declared base-game scope."
+}
