@@ -7,56 +7,45 @@ game:
   bgg_id: 193037
   publisher: "Plaid Hat Games"
   year: 2016
-  players:
-    min: 2
-    max: 5
-  complexity: expert
-  weight: 3.33
-  edition: "base/standalone release"
-scope: "selection dossier; standalone/base game"
+  weight: null
+  edition: "English 2016 first/release printing; rulebook PDF created 2016-07-07"
+scope: "edition-specific standalone game / standalone expansion"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
-better_if_labels: []
 sources:
   - id: "src-001"
-    title: "BoardGameGeek \u2014 Dead of Winter: The Long Night"
-    url: "https://boardgamegeek.com/boardgame/193037"
-    kind: bgg_page
-    provenance: community
-    retrieved_at: "2026-07-26"
-    notes: "Identity and mechanic evidence."
+    title: "Dead of Winter: The Long Night rulebook"
+    url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/rules-tln.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "24 pages; live publisher file is byte-identical to the 2016-09-10 Wayback capture; SHA-256 dc9002541e8cd7e7273a7ae2d00320fa9b021fd9e77e7e9a0d482999360190e6."
   - id: "src-002"
-    title: "Plaid Hat Games \u2014 official product or rules page"
-    url: "https://www.plaidhatgames.com/news/652/"
+    title: "Dead of Winter: The Long Night PRE-ORDER!"
+    url: "https://web.archive.org/web/20160320090013id_/http://www.plaidhatgames.com/news/652"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-26"
-    notes: "Identity and mechanic evidence."
-  - id: "src-003"
-    title: "BGG ranking snapshot mirror"
-    url: "https://raw.githubusercontent.com/5h-am/Board_Game_Store/b018bd937292fc41a2297ce868bf2938b45244da/boardgameDatabase/boardgames_ranks.csv"
-    kind: other
-    provenance: secondary
-    retrieved_at: "2026-07-26"
-    notes: "Rating snapshot used for this batch ordering."
+    retrieved_at: "2026-07-31"
+    notes: "Release-era Plaid Hat announcement archived 2016-03-20."
 confidence: high
-status: verified
-last_verified: "2026-07-26"
-summary: "A standalone Crossroads survival game adds bandits, improvements, graveyard pressure, and the Raxxon facility to the colony crisis."
+status: needs_followup
 ---
 
 # Dead of Winter: The Long Night
 
-A standalone Crossroads survival game adds bandits, improvements, graveyard pressure, and the Raxxon facility to the colony crisis.
+Exact target: the English 2016 first/release printing represented by Plaid Hat's 24-page rulebook. The current publisher-hosted `rules-tln.pdf` is byte-identical to the immutable 2016-09-10 capture, which closes the rulebook revision boundary but not the box's card/board text denominator.
 
-## Batch position
+- Claim: The target is playable alone and is also described by Plaid Hat as a stand-alone expansion.
+  Source: src-002
+  Evidence: "stand-alone expansion" and "fully-realized ... experience by itself"
+  Confidence: high
 
-**#6** in the 2026-07-26 semi-cooperative RPG/adventure intake, ordered by the cited BGG average-rating signal after the fit screen.
+- Claim: The original Dead of Winter box is optional compatibility material, not governing law for this target.
+  Source: src-001
+  Evidence: Rulebook p.16 permits base-set cards and components to be used "as desired" and supplies combination instructions.
+  Confidence: high
 
-- [Sources](sources.okf.md)
-- [Scout report](scout-report.okf.md)
+## Boundary
 
-## Identity evidence
+Excluded: *Dead of Winter: A Crossroads Game* except explicit compatibility, *Warring Colonies*, the Rich Sommer preorder promo, translations, later revised printings not proven byte-identical, Raxxon products outside this box, and digital adaptations.
 
-- **Source:** src-001
-- **Evidence:** BGG item `193037` identifies the 2016 release, player range, weight signal, and community rating context.
-- **Confidence:** high
+This is not a conventional deckbuilder: setup uses fixed communal survivor, crisis, Crossroads, objective, and location search decks; player state is a hand/following/equipment, and the rulebook provides no personal deck-acquisition/shuffle/discard loop.
