@@ -69,14 +69,14 @@ status: needs_followup
   Evidence: Book of Quests p. 10 Object, Win/Loss, and Consequences of Defeat; FAQ section I confirms increasing sequential order.
   Confidence: high
 
-- Claim: Convocation is optional for each Knight. Heroism may be placed on a Quest remotely. Dark Forest stays beside the Grail board without occupying a Grail spot or preventing Grail-card discards for Excalibur or healing; if drawn after the Grail Quest ends, it is discarded and adds one Siege Engine.
-  Source: src-002
-  Evidence: FAQ section II Convocation, Heroism, and Dark Forest rulings.
+- Claim: Convocation is optional for each Knight. Heroism may be placed remotely on an active Quest other than Camelot and its Siege Engines. Dark Forest stays beside the Grail board without occupying a Grail spot or preventing Grail-card discards for Excalibur or healing; if drawn after the Grail Quest ends, it is discarded and adds one Siege Engine.
+  Source: src-001, src-002
+  Evidence: Book of Quests p. 15 Heroism card; FAQ section II Convocation, Heroism, and Dark Forest rulings.
   Confidence: high
 
-- Claim: Playing one Merlin as a Special White Heroic Action removes the latest Standard Black card still present on a chosen Quest. This distinct one-card use cannot remotely move Excalibur and cannot undo the instant loss caused when the twelfth Siege Engine appears.
-  Source: src-002
-  Evidence: FAQ section II Merlin rulings.
+- Claim: Playing one Merlin as a Special White Heroic Action removes the most recently played Black card still present on a chosen Quest only if that current card is Standard; it cannot bypass a newer Special Black card. This distinct one-card use cannot remotely move Excalibur and cannot undo the instant loss caused when the twelfth Siege Engine appears.
+  Source: src-001, src-002
+  Evidence: Book of Quests p. 15 Merlin card; FAQ section II Merlin worked Grail example and Excalibur/twelfth Siege Engine rulings.
   Confidence: high
 
 - Claim: In Camelot, later comparison permits drawing two White cards if beginning below twelve cards or fighting one Siege Engine by committing Fight cards then rolling the D8; committed total must exceed the die or the Knight loses one Life, and all committed cards discard.
