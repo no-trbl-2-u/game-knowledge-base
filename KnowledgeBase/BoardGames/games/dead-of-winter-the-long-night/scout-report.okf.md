@@ -7,7 +7,7 @@ game:
   bgg_id: 193037
   publisher: "Plaid Hat Games"
   year: 2016
-  weight: 3.33
+  weight: null
   edition: "English 2016 first/release printing"
 scope: "edition-specific remediation and open governing ledger"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
@@ -27,12 +27,6 @@ sources:
     retrieved_at: "2026-07-31"
     notes: "Release-era standalone/compatibility evidence."
 followups:
-  - source_id: null
-    url: "lawful immutable 2016 target-printing card/board/reference face corpus"
-    failure: not_found
-    fallback: "Official aggregate inventory and rulebook diagrams only."
-    retry_needs: alternate_source
-    notes: "Need a lawful document corpus covering card/board/reference identity and rule-bearing text classes without reproducing full text. Physical-copy acquisition is out of scope for this corpus; absent such a document source these denominators stay permanently UNKNOWN."
   - source_id: null
     url: "https://web.archive.org/cdx/search/cdx?url=media.plaidhatgames.com/old_images/games/dead-of-winter/*"
     failure: other
@@ -141,6 +135,6 @@ Counting convention: 42 printed inventory rows; grouped names are preserved exac
 
 ## Exact help requested
 
-Document-source only: a lawful immutable corpus recording identity/semantics (not replacement-quality text) for every rule-bearing card, board side, location, reference sheet, token face, die face, and card/standee or card/token mapping; a manual inventory of current FFG support past Cloudflare; and an independently bounded target FAQ/errata/module-sheet inventory.
+No retrievable document source is currently known for a lawful immutable corpus recording identity/semantics (not replacement-quality text) for every rule-bearing card, board side, location, reference sheet, token face, die face, and card/standee or card/token mapping. The current FFG support inventory past Cloudflare and an independently bounded target FAQ/errata/module-sheet inventory remain separate open-source checks.
 
 Physical-copy acquisition and box/SKU/lot inspection are **out of scope** for this corpus and must not be requested. Where no lawful document source exists, the affected denominators stay permanently `UNKNOWN` and the records stay `needs_followup` — that is an accepted terminal state, not a pending task.

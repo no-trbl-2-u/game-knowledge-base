@@ -7,7 +7,7 @@ game:
   bgg_id: 193037
   publisher: "Plaid Hat Games"
   year: 2016
-  weight: 3.33
+  weight: null
   edition: "English 2016 first/release printing"
 scope: "edition-specific Bandits module and Bandit Blitz scenario"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
