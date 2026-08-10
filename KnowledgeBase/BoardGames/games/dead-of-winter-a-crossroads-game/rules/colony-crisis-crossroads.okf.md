@@ -4,7 +4,7 @@ type: rule_category
 game:
   title: "Dead of Winter: A Crossroads Game"
   slug: "dead-of-winter-a-crossroads-game"
-  bgg_id: 150376
+  bgg_id: null
   publisher: "Plaid Hat Games"
   year: 2014
   weight: null
@@ -55,14 +55,14 @@ status: needs_followup
   Evidence: Rulebook pp. 10 and 12, Clean Waste and Check Waste.
   Confidence: high
 
-- Claim: Under the target 2014 rulebook, crisis contributions are made face down and shuffled; matching symbols add positive points while any nonmatching symbol subtracts one, preventing the crisis when the resulting total reaches the number of players.
+- Claim: Under the target 2014 rulebook, crisis contributions are made face down and shuffled; matching symbols add positive points while any nonmatching symbol subtracts one, and the generic Resolve Crisis procedure prevents the crisis when the resulting total reaches the number of players.
   Source: src-001
   Evidence: 2014 rulebook pp. 11–12, Add a Card to the Crisis and Resolve Crisis; p. 12 says “number of players.”
   Confidence: high
 
-- Claim: PH1000 later revises the crisis threshold to the number of non-exiled players; FAQ v1.1 does not make that revision, so it is recorded only as a segregated printing difference and is not imported into target law.
+- Claim: Target-printed crisis cards also contain card-local “number of non-exiled players” text, so PH1000 is not the sole source of that phrase and no printing-exclusive crisis-threshold revision is established here.
   Source: src-001, src-002, src-009
-  Evidence: 2014 rulebook p. 12 says “number of players”; PH1000 p. 12 says “number of non-exiled players”; the inspected four-page FAQ v1.1 contains no crisis-threshold correction.
+  Evidence: Fresh text extraction of the target PDF finds “number of non-exiled players” on the Blizzard crisis card (p. 4) and Fuel Shortage crisis text (p. 12); PH1000 also contains the phrase, and the inspected four-page FAQ v1.1 contains no crisis-threshold clarification.
   Confidence: high
 
 - Claim: Zombie demand is one per two survivors at the colony, rounded up, plus one per survivor at each non-colony location; overfull entrances break barricades first or kill the lowest-influence survivor when overrun.

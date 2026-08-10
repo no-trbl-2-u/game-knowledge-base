@@ -4,7 +4,7 @@ type: visual_reference
 game:
   title: "Dead of Winter: A Crossroads Game"
   slug: "dead-of-winter-a-crossroads-game"
-  bgg_id: 150376
+  bgg_id: null
   publisher: "Plaid Hat Games"
   year: 2014
   weight: null

@@ -4,7 +4,7 @@ type: sources
 game:
   title: "Dead of Winter: A Crossroads Game"
   slug: "dead-of-winter-a-crossroads-game"
-  bgg_id: 150376
+  bgg_id: null
   publisher: "Plaid Hat Games"
   year: 2014
   weight: null
@@ -116,7 +116,7 @@ summary: "The byte-verified 2014 release rulebook is target authority; PH1000 is
 
 - Claim: PH1000 is a later revised printing and is not target authority.
   Source: src-001, src-009
-  Evidence: Compared PDFs differ materially: 30→20 zombie tokens; removal of the 2014 turn-only card-play sentence plus added event-item removal text; crisis threshold “number of players”→“number of non-exiled players”; and an added general “Roll a Die” rule.
+  Evidence: Compared PDFs differ materially: 30→20 zombie tokens; removal of the 2014 turn-only card-play sentence plus added event-item removal text; and an added general “Roll a Die” rule. The target 2014 PDF itself prints “number of non-exiled players” on card-local crisis text, so the phrase is not a demonstrated printing-only change.
   Confidence: high
 
 ## Bounded failed and incomplete searches

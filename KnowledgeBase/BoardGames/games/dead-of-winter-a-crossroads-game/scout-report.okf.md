@@ -4,7 +4,7 @@ type: scout_report
 game:
   title: "Dead of Winter: A Crossroads Game"
   slug: "dead-of-winter-a-crossroads-game"
-  bgg_id: 150376
+  bgg_id: null
   publisher: "Plaid Hat Games"
   year: 2014
   weight: null
@@ -69,12 +69,6 @@ followups:
     fallback: "Target Plaid Hat rulebook/FAQ, transfer page, known archived FFG capture, and direct PH1000 comparison receipt."
     retry_needs: manual_review
     notes: "Need an authoritative bounded live/archived FFG support inventory beyond inspected captures; no absence claim."
-  - source_id: null
-    url: "lawful immutable complete 2014 base-game card/board/reference face corpus"
-    failure: not_found
-    fallback: "2014 rulebook class quantities and framework rules plus FAQ cases; no missing face text inferred."
-    retry_needs: manual_review
-    notes: "Need authoritative coverage of all rule-bearing faces/surfaces without publishing replacement-quality content."
 confidence: high
 status: needs_followup
 last_verified: "2026-07-31"
@@ -120,9 +114,9 @@ summary: "Target-print repair complete; governing face/support denominators rema
   Evidence: Live/archive target PDFs are byte-identical; the archived product page links their path as the game rules; PH1000 differs in component count and substantive rule text.
   Confidence: high
 
-- Claim: Target crisis law compares the contribution total with the number of players, while PH1000 later says non-exiled players and FAQ v1.1 supplies no target-applicable correction.
+- Claim: The target 2014 rulebook's generic crisis-resolution procedure compares the contribution total with the number of players; target-printed card-local crisis text also uses “number of non-exiled players,” and PH1000 is not the sole source of that phrase.
   Source: src-001, src-002, src-009
-  Evidence: Compared p. 12 texts and full FAQ v1.1 inspection.
+  Evidence: Fresh text extraction of the target PDF finds “number of players” in the generic Resolve Crisis procedure on p. 12 and “number of non-exiled players” on target crisis-card text (Blizzard p. 4 and Fuel Shortage p. 12); PH1000 also contains the latter phrase, and full FAQ v1.1 inspection found no crisis-threshold clarification.
   Confidence: high
 
 ## Reception disposition
@@ -139,6 +133,6 @@ Four noncontiguous pages (2, 4, 6, 12) from the byte-verified 2014 target PDF we
 ## Exact residual help requested from T
 
 1. Provide or authorize an authoritative bounded live/archived Fantasy Flight Games support inventory beyond the inspected captures.
-2. Provide a lawful immutable complete 2014 base-game card/board/reference face corpus without publishing replacement-quality text. Acquiring a physical copy is out of scope for this corpus; if no lawful document corpus exists, these denominators stay permanently `UNKNOWN`.
+2. No retrievable complete 2014 base-game card/board/reference face corpus was identified in this pass. The face and governing-source denominators therefore remain permanently `UNKNOWN` unless a lawful document source is later discovered; no replacement-quality text is requested or inferred.
 
 Disposition: **OPEN DRAFT / needs_followup / no readiness claim / do not merge.**
