@@ -46,8 +46,8 @@ sources:
     url: "https://www.boardgamereviewsbyjosh.com/2014/09/dead-of-winter-review.html"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-31"
-    notes: "HTTP 200; text/html; 114,724 bytes; SHA-256 5b5cf232779f576a064fe4017c9b6f06f25539784258226ef2cb7f9d2aba61c3."
+    retrieved_at: "2026-08-10"
+    notes: "Fresh exact-URL retrieval: HTTP 200; text/html; 114,701 bytes; SHA-256 e4941eb999a015b39f859bc67eff087266fbf684b9ba08304eed2c65c3c3b013. Cited Crossroads, finite-supply, first-turn bite, and engaging-experience passages are present."
   - id: "src-006"
     title: "BoardGameGeek — Dead of Winter: A Crossroads Game"
     url: "https://boardgamegeek.com/boardgame/150376"
@@ -67,8 +67,8 @@ sources:
     url: "https://web.archive.org/web/20140930140125if_/http://www.plaidhatgames.com/games/dead-of-winter/"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-31"
-    notes: "HTTP 200 capture; 33,532 served bytes; SHA-256 5ce72862a372daaea1d4684d6b2cbe71247b5926155bffa790f5fd35db72893f; links /images/games/dead-of-winter/rules.pdf as 'download the game rules.'"
+    retrieved_at: "2026-08-10"
+    notes: "Fresh exact-URL retrieval: HTTP 200; text/html; 33,530 served bytes; SHA-256 84d581314ffc638dd41f427f7ccf4c4d60b58da3b23d455cc23cee28721a3c5c. Body links the archived rules PDF and contains 'Click here to download the game rules.'"
   - id: "src-009"
     title: "Dead of Winter rulebook PH1000 (2020 revised printing comparison)"
     url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
@@ -88,12 +88,12 @@ summary: "The byte-verified 2014 release rulebook is target authority; PH1000 is
 |---|---|---|---|---:|---:|---|
 | src-001 | 2026-07-31 | exact URL above; HTTP 200 | application/pdf | 24,044,267 | 20 | `41f37d18f07bf04303c364916dcc0bab62d379b85373661650b0118be5812ca7` |
 | src-007 | 2026-07-31 | exact archive URL above; HTTP 200 | application/pdf | 24,044,267 | 20 | `41f37d18f07bf04303c364916dcc0bab62d379b85373661650b0118be5812ca7` |
-| src-008 | 2026-07-31 | 2014-09-30 archive capture; HTTP 200 | text/html | 33,532 | — | `5ce72862a372daaea1d4684d6b2cbe71247b5926155bffa790f5fd35db72893f` |
+| src-008 | 2026-08-10 | exact URL above; HTTP 200 | text/html | 33,530 | — | `84d581314ffc638dd41f427f7ccf4c4d60b58da3b23d455cc23cee28721a3c5c` |
 | src-009 | 2026-07-31 | exact URL above; HTTP 200 | application/pdf | 9,006,551 | 20 | `0d7389eb286e454ff3fc431efc68fd87f5aceaba939e02bab55664e6183af9b9` |
 | src-002 | 2026-07-31 | exact URL above; HTTP 200 | application/pdf | 2,684,037 | 4 | `331e65dc07240857405d595592e8320e61ac6649def735b3cb8c7659ba13bcee` |
 | src-003 | 2026-07-31 | exact URL above; dynamic HTML | text/html | date-bounded | — | date-bounded |
 | src-004 | 2026-07-31 | exact URL above; HTTP 200 | text/html | 24,189 | — | `a3fd3527ba9ae7e1c220c5ac30df295013fa91e1f14820e692073ae451366eeb` |
-| src-005 | 2026-07-31 | exact URL above; HTTP 200 | text/html | 114,724 | — | `5b5cf232779f576a064fe4017c9b6f06f25539784258226ef2cb7f9d2aba61c3` |
+| src-005 | 2026-08-10 | exact URL above; HTTP 200 | text/html | 114,701 | — | `e4941eb999a015b39f859bc67eff087266fbf684b9ba08304eed2c65c3c3b013` |
 
 ## Target document identity
 

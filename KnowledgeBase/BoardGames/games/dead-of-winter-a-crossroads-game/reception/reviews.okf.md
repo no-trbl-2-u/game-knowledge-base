@@ -18,8 +18,8 @@ sources:
     url: "https://www.boardgamereviewsbyjosh.com/2014/09/dead-of-winter-review.html"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-31"
-    notes: "Independent contemporaneous base-game review; HTTP 200 and locally inspected."
+    retrieved_at: "2026-08-10"
+    notes: "Fresh exact-URL retrieval: HTTP 200; text/html; 114,701 bytes; SHA-256 e4941eb999a015b39f859bc67eff087266fbf684b9ba08304eed2c65c3c3b013; cited passages are present."
 confidence: medium
 status: needs_followup
 ---

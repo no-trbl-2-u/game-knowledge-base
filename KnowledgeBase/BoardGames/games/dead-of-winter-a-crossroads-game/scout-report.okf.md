@@ -39,8 +39,8 @@ sources:
     url: "https://www.boardgamereviewsbyjosh.com/2014/09/dead-of-winter-review.html"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-31"
-    notes: "Independent contemporaneous base-game review."
+    retrieved_at: "2026-08-10"
+    notes: "Fresh exact-URL retrieval: HTTP 200; text/html; 114,701 bytes; SHA-256 e4941eb999a015b39f859bc67eff087266fbf684b9ba08304eed2c65c3c3b013; cited reception passages are present."
   - id: "src-007"
     title: "Archived Dead of Winter rulebook (2014-04-24)"
     url: "https://web.archive.org/web/20140424225416id_/http://www.plaidhatgames.com/images/games/dead-of-winter/rules.pdf"
@@ -53,8 +53,8 @@ sources:
     url: "https://web.archive.org/web/20140930140125if_/http://www.plaidhatgames.com/games/dead-of-winter/"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-31"
-    notes: "Links the target rules path as 'download the game rules.'"
+    retrieved_at: "2026-08-10"
+    notes: "Fresh exact-URL retrieval: HTTP 200; text/html; 33,530 served bytes; SHA-256 84d581314ffc638dd41f427f7ccf4c4d60b58da3b23d455cc23cee28721a3c5c; body links the archived rules PDF as 'Click here to download the game rules.'"
   - id: "src-009"
     title: "Dead of Winter rulebook PH1000 (2020 revised printing comparison)"
     url: "https://images-cdn.fantasyflightgames.com/filer_public/c0/81/c081efff-c39d-40f1-8261-55570a7002dc/ph1000-rulebook-compressed.pdf"
