@@ -21,7 +21,7 @@
       "title": "Dominion",
       "bgg_id": 36218,
       "cohort": "rotating_focus",
-      "status": "approved",
+      "status": "promoted",
       "discovery_sources": [
         "https://www.riograndegames.com/games/dominion/",
         "https://boardgamegeek.com/boardgame/36218/dominion",
@@ -42,7 +42,8 @@
           "known_total": null,
           "percent": null
         }
-      }
+      },
+      "promoted_at": "2026-08-10T15:38:26.717Z"
     }
   ]
 }
