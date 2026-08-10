@@ -7,7 +7,7 @@ game:
   bgg_id: 150376
   publisher: "Plaid Hat Games"
   year: 2014
-  weight: 3.01
+  weight: null
   edition: "English 2014 standalone/base game"
 scope: "independent 2014 review of the base game only"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]

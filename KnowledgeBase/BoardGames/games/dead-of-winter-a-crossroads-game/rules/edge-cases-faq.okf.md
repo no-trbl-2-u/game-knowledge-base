@@ -7,7 +7,7 @@ game:
   bgg_id: 150376
   publisher: "Plaid Hat Games"
   year: 2014
-  weight: 3.01
+  weight: null
   edition: "English 2014 first/release printing"
 scope: "card hierarchy, official FAQ v1.1, and edition-sensitive edge cases"
 mechanics: ["action-points", "area-movement", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "semi-cooperative-game", "variable-player-powers"]
