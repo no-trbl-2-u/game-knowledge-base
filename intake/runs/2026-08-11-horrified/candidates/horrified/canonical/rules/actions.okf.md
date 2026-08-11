@@ -1,0 +1,55 @@
+---
+okf_version: 0.2
+game:
+  title: "Horrified: Universal Monsters"
+  slug: "horrified"
+  bgg_id: null
+  publisher: "Ravensburger"
+  year: null
+  weight: null
+  edition: "Universal Monsters base game; Ravensburger article 60001836 / EAN 810558018361; official governing instructions retrieved as Spanish ES01, product file 22682"
+scope: "base game"
+mechanics: [action-points, cooperative-game, dice-rolling, hand-management, resource-management, solo-solitaire-game, variable-player-powers, variable-setup]
+type: rule_category
+sources:
+  - id: "src-001"
+    title: "Ravensburger Horrified: Universal Monsters product page (archived publisher page)"
+    url: "https://web.archive.org/web/20260306043202id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-08-11"
+    notes: "Archived publisher page; direct current page returned HTTP 403. Article 60001836, EAN 810558018361, Universal Monsters licence, 1–5 players, and product description were inspected."
+  - id: "src-002"
+    title: "Ravensburger Horrified: Universal Monsters official instructions (Spanish ES01)"
+    url: "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-11"
+    notes: "HTTP 200 application/pdf; 16 pages; 4,796,393 bytes; SHA-256 66ac020f322f4ff1c24b715df13508301effc64f463226e6e6210d5da646b461; copyright page identifies 2024 Ravensburger North America, Inc. and ES01."
+  - id: "src-003"
+    title: "Lee Leonardo — Horrified (First Impressions)"
+    url: "https://lee-leonardo.github.io/blog/horrified-impressions/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-08-11"
+    notes: "Independent review dated 2019-10-29; HTTP 200; full HTML retrieved and read; SHA-256 a20ebd6ed3361e96a11fdae74627fa62353705369c895806b0e1952e3452e5fc."
+confidence: high
+status: verified
+---
+
+# Actions and resources
+
+## Source-backed facts
+
+- Claim: Hero actions include movement along illuminated paths, guiding villagers, collecting objects, sharing objects with heroes in the same space, progressing a monster task, defeating a monster after its task is complete, and the hero’s special action.
+  Source: src-002
+  Evidence: Official instructions printed pp. 5–6, “Acciones.”
+  Confidence: high
+- Claim: Objects have a color/type, strength, and location; a task may limit the color or allow multiple objects whose strengths meet a threshold.
+  Source: src-002
+  Evidence: Official instructions printed p. 7, “Objetos.”
+  Confidence: high
+- Claim: Used objects normally go to an object discard pile and return to the bag only when the rules specifically instruct that the bag be replenished.
+  Source: src-002
+  Evidence: Official instructions printed p. 7 and monster-phase recycling on p. 8.
+  Confidence: high
