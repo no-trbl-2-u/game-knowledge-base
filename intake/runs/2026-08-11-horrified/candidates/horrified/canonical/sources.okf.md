@@ -56,7 +56,7 @@ sources:
     kind: other
     provenance: official
     retrieved_at: "2026-08-12"
-    notes: "Archived HTTP 200 official product image replay; source receipt SHA-256 b2339506a9f857ce5a13796b25e5414c588c3fa9e727de7d39ffde4d8eb."
+    notes: "Archived HTTP 200 official product image replay; source receipt SHA-256 b2339506a9f857ce5a13796b25e5414c588c3fa9e72765267de7d39ffde4d8eb."
 confidence: high
 status: verified
 ---
