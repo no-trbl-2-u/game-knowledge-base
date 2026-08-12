@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "BGG search result plus official product description and secondary review leads"
     retry_needs: browser_fetch
-    notes: "Direct HTML returned HTTP 403 and XML API returned HTTP 401; recheck current average, Geek Rating, rank, weight, and mechanism metadata."
+    notes: "Direct HTML returned HTTP 403 and XML API returned HTTP 401; recheck current average, Geek Rating, rank, weight, and mechanism metadata. Matches the systemic BGG block seen across this corpus (see marvel-champions-the-card-game/scout-report.okf.md notes); not individually retried this pass."
   - source_id: "src-002"
     url: "https://chiptheorygames.com/pages/support/too-many-bones"
     failure: http_error
     fallback: "Official product page search result"
-    retry_needs: browser_fetch
-    notes: "Support page direct retrieval returned HTTP 429; recover the official rulebook and FAQ URL."
+    retry_needs: pdf_tooling
+    notes: "Support page direct retrieval returned HTTP 429; recover the official rulebook and FAQ URL. Retried 2026-08-12 (librarian pass) via WebFetch: page now loads (HTTP 200) and lists direct downloads for the base game rulebook plus Undertow/Unbreakable/Splice & Dice expansion rulebooks, character reference sheets, and a component list. The base-game rulebook PDF itself was not fetched or extracted in this pass; a future pass should retrieve it and re-verify this game's six rules/*.okf.md claims (currently sourced from the UltraBoardGames secondary summary, src-003) against the official text before flipping status."
   - source_id: "src-003"
     url: "https://www.ultraboardgames.com/too-many-bones/game-rules.php"
     failure: other
@@ -72,7 +72,7 @@ status: needs_followup
 
 ## Scout objective
 
-Select one high-scoring BGG RPG / role-playing board game not already present in the corpus, excluding deckbuilders, and capture rules, reception, and improvement signals.
+Selected Too Many Bones as one high-scoring BGG RPG / role-playing board game not already present in the corpus (deckbuilders excluded), to capture its rules, reception, and improvement signals.
 
 ## Why this game
 
@@ -92,13 +92,11 @@ Select one high-scoring BGG RPG / role-playing board game not already present in
 
 ## Documents written
 
-- `index.okf.md`, `sources.okf.md`, six `rules/*.okf.md`, `reception/reviews.okf.md`, `reception/better-if.okf.md`, and this report.
+For Too Many Bones this run wrote `index.okf.md`, `sources.okf.md`, six `rules/*.okf.md` files, `reception/reviews.okf.md`, `reception/better-if.okf.md`, and this report.
 
 ## Run validation
 
-- Wishlist entry checked off: no; skipped because it does not match the RPG focus.
-- `node scripts/generate-index.mjs`: pending until writing completes.
-- `node scripts/validate-okf.mjs`: pending until writing completes.
+For Too Many Bones: the wishlist entry was not checked off, since it does not match the RPG focus; `node scripts/generate-index.mjs` is pending until writing completes; `node scripts/validate-okf.mjs` is pending until writing completes.
 
 ## Strongest design lesson
 

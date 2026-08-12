@@ -11,13 +11,6 @@ game:
   edition: "core set"
 scope: "base game"
 mechanics: [cooperative-game, deck-building, hand-management, variable-player-powers, solo-solitaire-game, campaign-game]
-followups:
-  - source_id: "src-006"
-    url: "https://renegadegamestudios.com/content/File%20Storage%20for%20site/GI%20JOE%20DBG/Joe%20DBG%20FAQ.pdf"
-    failure: pdf_extraction
-    fallback: "Rulebook timing and publisher page were used; FAQ was registered but not extracted."
-    retry_needs: pdf_tooling
-    notes: "Retry FAQ extraction and index card-specific rulings."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — G.I. JOE Deck-Building Game"
@@ -60,9 +53,9 @@ sources:
     kind: faq
     provenance: official
     retrieved_at: "2026-07-14"
-    notes: "Publisher-linked FAQ; extraction followup."
+    notes: "Publisher-linked FAQ; retrieved and extracted 2026-08-12 via curl + pdftotext -layout."
 confidence: high
-status: needs_followup
+status: verified
 ---
 
 ## Scout objective
@@ -93,16 +86,7 @@ Study one game matching the current Bathcat focus: cooperative plus deckbuilder,
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This run wrote the standard G.I. JOE Deck-Building Game doc set: `index.okf.md`, `sources.okf.md`, `rules/overview.okf.md`, `rules/setup.okf.md`, `rules/turn-structure.okf.md`, `rules/actions.okf.md`, `rules/scoring-endgame.okf.md`, `rules/edge-cases-faq.okf.md`, `reception/reviews.okf.md`, and `reception/better-if.okf.md`.
 
 ## Run validation
 
@@ -124,5 +108,8 @@ The first mission taught the entire loop through a controlled setup and the FAQ'
 
 ## Open questions
 
-- What card-specific rulings and errata does the official FAQ contain?
-- What are the current live BGG average rating, rank, and vote count?
+- What are the current live BGG average rating, rank, and vote count? (BGG direct fetch and XML API remain inaccessible from this environment as of 2026-08-12; no retryable non-BGG alternate source is currently known.)
+
+## Retry notes
+
+- 2026-08-12 (librarian pass): FAQ PDF (src-006) resolved — `curl -L` plus `pdftotext -layout` extracted clean text; card-specific rulings and errata are now indexed in `rules/edge-cases-faq.okf.md`.

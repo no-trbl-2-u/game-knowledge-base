@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "BGG files listing plus secondary rules walkthrough/review sources were used for high-level summaries."
     retry_needs: browser_fetch
-    notes: "Official rulebook listing was found, but direct file/PDF extraction was not completed during this cron run."
+    notes: "Official rulebook listing was found, but direct file/PDF extraction was not completed during this cron run. Retried 2026-08-12 (librarian pass) via WebFetch: still HTTP 403."
   - source_id: null
     url: "https://upperdeck.com/"
     failure: not_found
     fallback: "BGG official file listing and secondary summaries."
     retry_needs: alternate_source
-    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF."
+    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF. Retried 2026-08-12 (librarian pass): the homepage now loads but its games section links only to a generic /ud-game-rules/ page with no Legendary Encounters: Alien-specific rulebook or support content found; still not_found."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Legendary Encounters: An Alien Deck Building Game"
@@ -85,16 +85,7 @@ Study one high-scoring cooperative deckbuilding game not already present in the 
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This run wrote the standard Legendary Encounters: An Alien Deck Building Game doc set: `index.okf.md`, `sources.okf.md`, `rules/overview.okf.md`, `rules/setup.okf.md`, `rules/turn-structure.okf.md`, `rules/actions.okf.md`, `rules/scoring-endgame.okf.md`, `rules/edge-cases-faq.okf.md`, `reception/reviews.okf.md`, and `reception/better-if.okf.md`.
 
 ## Run validation
 

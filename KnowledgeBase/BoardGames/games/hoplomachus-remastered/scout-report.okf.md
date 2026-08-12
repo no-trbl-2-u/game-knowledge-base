@@ -17,13 +17,7 @@ followups:
     failure: blocked
     fallback: "Search result snippets and a secondary BGG-rating report"
     retry_needs: browser_fetch
-    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 during this run; recheck later for current average, rank, weight, and comments."
-  - source_id: "src-006"
-    url: "https://support.chiptheorygames.com/support/solutions/33000133541"
-    failure: blocked
-    fallback: "Official support landing page confirms the FAQ exists"
-    retry_needs: browser_fetch
-    notes: "FAQ link was identified but detailed extraction was not completed."
+    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 during this run; recheck later for current average, rank, weight, and comments. Retried 2026-08-12 (librarian pass) via WebFetch: still HTTP 403 — matches the systemic BGG block seen across this corpus (see marvel-champions-the-card-game/scout-report.okf.md notes); a genuine interactive/authenticated browser session is needed next."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Hoplomachus: Remastered"
@@ -65,8 +59,8 @@ sources:
     url: "https://support.chiptheorygames.com/support/solutions/33000133541"
     kind: faq
     provenance: official
-    retrieved_at: "2026-07-11"
-    notes: "Official FAQ lead."
+    retrieved_at: "2026-08-12"
+    notes: "Resolved 2026-08-12: solutions page and its two Remastered-specific articles retrieved via curl; content indexed in rules/edge-cases-faq.okf.md."
 confidence: high
 status: needs_followup
 ---
@@ -99,16 +93,7 @@ Study one board game matching the current Governor focus: cooperative plus deckb
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This run wrote the standard Hoplomachus: Remastered doc set: `index.okf.md`, `sources.okf.md`, `rules/overview.okf.md`, `rules/setup.okf.md`, `rules/turn-structure.okf.md`, `rules/actions.okf.md`, `rules/scoring-endgame.okf.md`, `rules/edge-cases-faq.okf.md`, `reception/reviews.okf.md`, and `reception/better-if.okf.md`.
 
 ## Run validation
 
@@ -130,4 +115,8 @@ Its first-game path compressed the mode tree into one guided scenario and its re
 
 ## Open questions
 
-- What current BGG average rating, rank, and complexity weight should be recorded after a browser-accessible recheck?
+- What current BGG average rating, rank, and complexity weight should be recorded after a browser-accessible recheck? (Still HTTP 403 as of 2026-08-12.)
+
+## Retry notes
+
+- 2026-08-12 (librarian pass): FAQ portal (src-006) resolved — see `rules/edge-cases-faq.okf.md` for indexed content. BGG (src-001) retried and still blocked.

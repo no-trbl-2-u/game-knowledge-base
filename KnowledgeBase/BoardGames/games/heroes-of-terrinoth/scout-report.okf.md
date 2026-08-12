@@ -17,19 +17,19 @@ followups:
     failure: blocked
     fallback: "DuckDuckGo discovery snippets plus BoardGameMatcher BGG-derived metadata"
     retry_needs: browser_fetch
-    notes: "Direct page returned HTTP 403 and XML API returned HTTP 401; recheck current BGG statistics and comments later."
+    notes: "Direct page returned HTTP 403 and XML API returned HTTP 401; recheck current BGG statistics and comments later. Matches the systemic BGG block seen across this corpus (see marvel-champions-the-card-game/scout-report.okf.md notes); not individually retried this pass."
   - source_id: "src-003"
     url: "https://www.fantasyflightgames.com/en/products/heroes-of-terrinoth/"
     failure: blocked
     fallback: "Official Fantasy Flight CDN rulebook and product-page search snippet"
     retry_needs: browser_fetch
-    notes: "Publisher landing page returned HTTP 403; rulebook remained fully accessible."
+    notes: "Publisher landing page returned HTTP 403; rulebook remained fully accessible. Retried 2026-08-12 (librarian pass) via WebFetch: still HTTP 403."
   - source_id: "src-007"
     url: "https://www.boardgamequest.com/heroes-of-terrinoth-review/"
     failure: blocked
     fallback: "Two other full independent reviews"
     retry_needs: browser_fetch
-    notes: "Fetch returned a bot-verification interstitial."
+    notes: "Fetch returned a bot-verification interstitial. Retried 2026-08-12 (librarian pass) via WebFetch: still returns a bot-verification interstitial (\"Please wait while we verify you're not a bot\")."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Heroes of Terrinoth"

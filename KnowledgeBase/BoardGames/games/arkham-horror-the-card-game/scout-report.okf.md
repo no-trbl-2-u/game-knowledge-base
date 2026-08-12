@@ -23,13 +23,13 @@ followups:
     failure: blocked
     fallback: "Official Learn to Play PDF URL from search result; product page retained as official source target."
     retry_needs: browser_fetch
-    notes: "HTTP 403 from direct product-page fetch during 2026-07-10 scout."
+    notes: "HTTP 403 from direct product-page fetch during 2026-07-10 scout. Retried 2026-08-12 (librarian pass) via WebFetch: still HTTP 403."
   - source_id: "src-009"
     url: "https://images-cdn.fantasyflightgames.com/filer_public/2f/b8/2fb895a5-07cb-4784-8a18-b92b3c91e6c9/ahc_rules_reference_v19-compressed.pdf"
     failure: blocked
     fallback: "Official Learn to Play PDF plus ArkhamDB Rules Reference mirror for edge-case leads."
     retry_needs: alternate_source
-    notes: "HTTP 403 from direct Rules Reference PDF URL attempted during 2026-07-10 scout."
+    notes: "HTTP 403 from direct Rules Reference PDF URL attempted during 2026-07-10 scout. Retried 2026-08-12 (librarian pass) via WebFetch: still HTTP 403."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Arkham Horror: The Card Game"
@@ -126,16 +126,7 @@ Study a high-scoring cooperative deck/deck-construction game with strong campaig
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This run wrote the standard Arkham Horror: The Card Game doc set: `index.okf.md`, `sources.okf.md`, `rules/overview.okf.md`, `rules/setup.okf.md`, `rules/turn-structure.okf.md`, `rules/actions.okf.md`, `rules/scoring-endgame.okf.md`, `rules/edge-cases-faq.okf.md`, `reception/reviews.okf.md`, and `reception/better-if.okf.md`.
 
 ## Run validation
 

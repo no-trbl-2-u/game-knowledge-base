@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "BGG search result and indexed review metadata"
     retry_needs: browser_fetch
-    notes: "Recover current average, Geek Rating, rank, and mechanism list."
+    notes: "Recover current average, Geek Rating, rank, and mechanism list. Matches the systemic BGG block seen across this corpus (see marvel-champions-the-card-game/scout-report.okf.md notes); not individually retried this pass."
   - source_id: "src-004"
     url: "https://awakenrealms.com/"
     failure: other
     fallback: "Official Kickstarter campaign page"
     retry_needs: alternate_source
-    notes: "Recover the exact base-game rulebook, FAQ, and errata assets."
+    notes: "Recover the exact base-game rulebook, FAQ, and errata assets. Retried 2026-08-12 (librarian pass) via WebFetch: the root page now returns content (previously `other`/inaccessible) but renders only the site name with no navigable links to game-specific rulebook, FAQ, or errata assets in the fetched snapshot — likely a JS-rendered page not fully captured by this tool. Still needs an alternate source (e.g. a direct product/support subpage URL) naming the exact rulebook/FAQ asset."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Tainted Grail: The Fall of Avalon"

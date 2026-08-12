@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "Used BGG search result and BGG Data mirror for score and identity."
     retry_needs: alternate_source
-    notes: "Direct BGG page returned HTTP 403 from this environment."
+    notes: "Direct BGG page returned HTTP 403 from this environment. Retried 2026-08-12 (librarian pass) via WebFetch: still HTTP 403 — matches the systemic BGG block seen across this corpus (see marvel-champions-the-card-game/scout-report.okf.md notes)."
   - source_id: null
-    url: "https://cephalofair.com/pages/gloomhaven"
-    failure: not_found
-    fallback: "Used Dized structured rules summary and secondary reviews."
+    url: "https://drive.google.com/file/d/16TmmCKa6zVVObj2qM-vIj9RcEAC3nfMT/view?usp=sharing"
+    failure: other
+    fallback: "Dized structured rules summary and secondary reviews remain the rules basis."
     retry_needs: alternate_source
-    notes: "No publisher page was confirmed during this run."
+    notes: "2026-08-12: link discovered on the now-accessible cephalofair.com support page (src-008) but not yet fetched/extracted; not registered as a source until retrieved. Also confirm whether the support page's linked FAQ (cephalofairgames.github.io/gloomhaven2e-faq/) is a second-edition-specific document before citing it against this base-game (2017, first edition) record."
 sources:
   - id: "src-001"
     title: "Gloomhaven — BoardGameGeek"
@@ -74,6 +74,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-16"
     notes: "Time and campaign scale evidence."
+  - id: "src-008"
+    title: "Gloomhaven — Cephalofair Games support page"
+    url: "https://cephalofair.com/pages/gloomhaven"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-08-12"
+    notes: "Resolved 2026-08-12 (librarian pass): page loads and lists a digital rulebook (Google Drive), official FAQ, puzzle-book hint guide, and First Printing 2025 errata (revised campaign sheet, scenario 26 monster placement). The linked rulebook/FAQ documents themselves were not fetched or extracted in this pass."
 confidence: medium
 status: needs_followup
 ---
@@ -92,38 +99,27 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Source search path
 
-- BoardGameGeek: identified through search; direct page blocked.
+- BoardGameGeek: identified through search; direct page blocked (still blocked as of 2026-08-12).
 - BGG-facing score mirror: retrieved successfully.
-- Publisher page: not confirmed.
-- Official rulebook: not located.
+- Publisher page: confirmed 2026-08-12 (librarian pass) at `cephalofair.com/pages/gloomhaven`; links a digital rulebook, FAQ, and errata but these were not yet fetched.
+- Official rulebook: located (Google Drive link on the publisher support page) but not yet retrieved or extracted.
 - Structured rules: Dized retrieved.
 - Review sources: The Opinionated Gamers and Co-op Board Games.
 
 ## Rulebook extraction status
 
-- Official rulebook found: no.
+- Official rulebook found: yes, as of 2026-08-12 — linked from the publisher support page (src-008), not yet fetched.
 - File inspected: no.
 - Page count/version/date if known: unknown.
-- Text extraction quality: secondary summaries only.
+- Text extraction quality: secondary summaries only; official rulebook extraction remains a followup.
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This run wrote the standard Gloomhaven doc set: `index.okf.md`, `sources.okf.md`, `rules/overview.okf.md`, `rules/setup.okf.md`, `rules/turn-structure.okf.md`, `rules/actions.okf.md`, `rules/scoring-endgame.okf.md`, `rules/edge-cases-faq.okf.md`, `reception/reviews.okf.md`, and `reception/better-if.okf.md`.
 
 ## Run validation
 
-- `WISHLIST.md` entry checked off: n/a — wishlist empty.
-- `node scripts/generate-index.mjs` run after writing docs: pending.
-- `node scripts/validate-okf.mjs` exit 0 before push: pending.
+For Gloomhaven: `WISHLIST.md` entry checked off is n/a since the wishlist was empty; `node scripts/generate-index.mjs` ran after writing docs is pending; `node scripts/validate-okf.mjs` exit 0 before push is pending.
 
 ## Strongest design lessons
 
@@ -139,4 +135,8 @@ It reduced state-restoration and setup burden without weakening the campaign's s
 
 ## Open questions
 
-Recover the official first-edition rulebook, verify exact BGG metadata directly, and replace secondary rules summaries with page or section citations.
+Recover the official first-edition rulebook (now a known Google Drive link, see followups), verify exact BGG metadata directly, and replace secondary rules summaries with page or section citations.
+
+## Retry notes
+
+- 2026-08-12 (librarian pass): Publisher page (previously `not_found`) resolved — `cephalofair.com/pages/gloomhaven` now loads and exposes a rulebook link, official FAQ, and First Printing 2025 errata; recorded as src-008. BGG (src-001) retried and still HTTP 403. The rulebook PDF itself was not fetched/extracted this pass — left as a followup naming the exact URL.

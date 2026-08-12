@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Used publisher page, review evidence, and BGG-facing statistics mirror."
     retry_needs: alternate_source
-    notes: "Direct BGG page and XML endpoint were inaccessible during this run; retry BGG files/forums or a publisher rulebook download."
+    notes: "Direct BGG page and XML endpoint were inaccessible during this run; retry BGG files/forums or a publisher rulebook download. Retried 2026-08-12 (librarian pass) via WebFetch: still HTTP 403."
 sources:
   - id: "src-001"
     title: "Oathsworn: Into the Deepwood — BoardGameGeek"
@@ -92,22 +92,11 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This run wrote the standard Oathsworn: Into the Deepwood doc set: `index.okf.md`, `sources.okf.md`, `rules/overview.okf.md`, `rules/setup.okf.md`, `rules/turn-structure.okf.md`, `rules/actions.okf.md`, `rules/scoring-endgame.okf.md`, `rules/edge-cases-faq.okf.md`, `reception/reviews.okf.md`, and `reception/better-if.okf.md`.
 
 ## Run validation
 
-- `WISHLIST.md` entry checked off: n/a — wishlist empty.
-- `node scripts/generate-index.mjs` run after writing docs: pending.
-- `node scripts/validate-okf.mjs` exit 0 before push: pending.
+For Oathsworn: Into the Deepwood: `WISHLIST.md` entry checked off is n/a since the wishlist was empty; `node scripts/generate-index.mjs` ran after writing docs is pending; `node scripts/validate-okf.mjs` exit 0 before push is pending.
 
 ## Strongest design lessons
 

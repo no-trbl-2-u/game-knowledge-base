@@ -26,13 +26,20 @@ sources:
     provenance: official
     retrieved_at: "2026-07-11"
     notes: "Publisher-linked rulebook."
-confidence: medium
-status: needs_followup
+  - id: "src-005"
+    title: "Chip Theory Games — Hoplomachus FAQs (Remastered Specific Qs)"
+    url: "https://support.chiptheorygames.com/support/solutions/33000133541"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-08-12"
+    notes: "Freshdesk solutions category page; retrieved via curl. Article listing indexed; two Remastered-specific articles fetched directly (33000294913, 33000284491)."
+confidence: high
+status: verified
 ---
 
 ## Summary
 
-The publisher maintains a separate FAQ for rulings, but its detailed entries were not extracted during this scout. The rulebook remains the primary source for the baseline distinctions below.
+The publisher maintains a separate FAQ portal for rulings; its "Remastered Specific Qs" section is now indexed below. The rulebook remains the primary source for the baseline distinctions below.
 
 ## Source-backed facts
 
@@ -45,7 +52,22 @@ The publisher maintains a separate FAQ for rulings, but its detailed entries wer
   Evidence: cooperative player-choice guidance in the rulebook.
   Confidence: high
 
+## FAQ answers — Remastered Specific Qs
+
+- Claim: An inactive hero in a player's camp does not count toward that player's four-unit camp limit; when drawing units, a player draws until reaching four units excluding an inactive hero. Active heroes do count toward the camp unit limit.
+  Source: src-005
+  Evidence: "No, while the hero is inactive in your camp, it does not count as one of your four units that you can have in your camp. When you draw units, draw until you have four, excluding your inactive hero. Active heroes in your camp do count towards your unit limit, however."
+  Confidence: high
+- Claim: Against the Shaghad titan, a defeated shard is flipped and gains 5 HP of the opposite color; if fewer than 5 matching-color HP chips remain, it gains as many as are available, and if none of the required color remain, the shard is instead considered defeated and reverts to its previous color.
+  Source: src-005
+  Evidence: "When playing against the titan Shaghad, shards that are defeated are flipped and gain 5 HP of the opposite color. If there are not 5 HP chips of the required color available, give the shard as much HP as possible. If there are no HP chips of the required color available, the shard is considered defeated and reverts back to the previous color it had."
+  Confidence: high
+
 ## Open questions
 
-- Which FAQ rulings alter the Remastered core wording?
+- The FAQ portal lists dozens of additional articles beyond the two "Remastered Specific Qs" entries (Victorum/Remastered errata, skill-interaction rulings, arena-specific questions); only the two Remastered-labeled articles were fetched in this pass. A future pass should index the errata articles (e.g. Depthcharger's Tactician Skill, Scheherazade HP chips) and general skill-interaction articles that apply to Remastered.
 - How do simultaneous or conflicting unit skills resolve in every mode?
+
+## Retry notes
+
+- 2026-08-12 (librarian pass): `src-006`/support-portal followup resolved — the solutions category page (previously recorded as blocked) loaded via `curl -L` (HTTP 200); the two "Remastered Specific Qs" article pages were fetched directly and their full answer text extracted and indexed above.
