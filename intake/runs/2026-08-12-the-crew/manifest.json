@@ -1,0 +1,48 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-08-12-the-crew",
+  "created_at": "2026-08-12T06:20:00.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "cooperative trick-taking and constrained communication"
+  },
+  "candidates": [
+    {
+      "slug": "the-crew",
+      "title": "The Crew: The Quest For Planet Nine",
+      "bgg_id": null,
+      "cohort": "cooperative",
+      "status": "ready_for_audit",
+      "discovery_sources": [
+        "https://thamesandkosmos.com/products/the-crew",
+        "https://www.boardgamequest.com/the-crew-the-quest-for-planet-nine-review/",
+        "https://www.thefamilygamers.com/the-crew/"
+      ],
+      "blockers": [],
+      "coverage": {
+        "deckbuilder": false,
+        "methodology": "Rules coverage counts the one exact-scope official manual. Factual coverage records published source-backed claim groups without inventing a complete mission or card-text denominator.",
+        "rules": {
+          "recorded": 1,
+          "known_total": 1,
+          "percent": 100
+        },
+        "factual": {
+          "recorded": 8,
+          "known_total": null,
+          "percent": null
+        }
+      },
+      "focus_fit": "The Crew is a cooperative trick-taking reference for constrained communication, task assignment, and mission progression."
+    }
+  ]
+}
