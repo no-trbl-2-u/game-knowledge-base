@@ -132,13 +132,13 @@
         "identity"
       ],
       "provenance": "official",
-      "url": "https://web.archive.org/web/20260306043202id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
-      "final_url": "https://web.archive.org/web/20260306043202id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
-      "retrieved_at": "2026-08-11T06:08:48.760Z",
+      "url": "https://web.archive.org/web/20260306043202/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
+      "final_url": "https://web.archive.org/web/20260306043202/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
+      "retrieved_at": "2026-08-12T13:22:37.954Z",
       "http_status": 200,
       "content_type": "text/html;charset=UTF-8",
-      "byte_length": 621111,
-      "sha256": "e5d17fffc9c570773db2a8ea08125c87745678a4184d012c780093d003c18d87",
+      "byte_length": 655243,
+      "sha256": "465e6df063b417cdec681fb65c569fe47ccad115b5092022e111127e34f30ee1",
       "locator": "Archived publisher product page; article number, EAN, Universal Monsters licence, player count, play time, component summary",
       "evidence": "Article number: 60001836"
     },

@@ -15,11 +15,11 @@ better_if_labels: [onboarding, randomness, solo-coop-automation, turn-pacing]
 sources:
   - id: "src-001"
     title: "Ravensburger Horrified: Universal Monsters product page (archived publisher page)"
-    url: "https://web.archive.org/web/20260306043202id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836"
+    url: "https://web.archive.org/web/20260306043202/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-08-11"
-    notes: "Archived publisher page; direct current page returned HTTP 403. Article 60001836, EAN 810558018361, Universal Monsters licence, 1–5 players, and product description were inspected."
+    retrieved_at: "2026-08-12"
+    notes: "Stable archived replay retrieved HTTP 200; 655,243 bytes; SHA-256 465e6df063b417cdec681fb65c569fe47ccad115b5092022e111127e34f30ee1. Direct current page returned HTTP 403. Article 60001836, EAN 810558018361, Universal Monsters licence, 1–5 players, and product description were inspected."
   - id: "src-002"
     title: "Ravensburger Horrified: Universal Monsters official instructions (Spanish ES01)"
     url: "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf"
