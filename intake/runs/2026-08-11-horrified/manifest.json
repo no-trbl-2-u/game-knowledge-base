@@ -24,8 +24,8 @@
       "status": "ready_for_audit",
       "discovery_sources": [
         "https://boardgamegeek.com/boardgame/282524/horrified",
-        "https://web.archive.org/web/20260306043202/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
-        "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf",
+        "https://web.archive.org/web/20251104082036/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
+        "https://web.archive.org/web/20250110120955id_/https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf",
         "https://lee-leonardo.github.io/blog/horrified-impressions/"
       ],
       "blockers": [],

@@ -132,15 +132,15 @@
         "identity"
       ],
       "provenance": "official",
-      "url": "https://web.archive.org/web/20260306043202/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
-      "final_url": "https://web.archive.org/web/20260306043202/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
-      "retrieved_at": "2026-08-12T13:22:37.954Z",
+      "url": "https://web.archive.org/web/20251104082036/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
+      "final_url": "https://web.archive.org/web/20251104082036/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
+      "retrieved_at": "2026-08-12T21:55:00.000Z",
       "http_status": 200,
       "content_type": "text/html;charset=UTF-8",
-      "byte_length": 655243,
-      "sha256": "465e6df063b417cdec681fb65c569fe47ccad115b5092022e111127e34f30ee1",
-      "locator": "Archived publisher product page; article number, EAN, Universal Monsters licence, player count, play time, component summary",
-      "evidence": "Article number: 60001836"
+      "byte_length": 627925,
+      "sha256": "e7705b3facc3ae5f9e84b72ebbf683fef1cb9c0097cb33fcf6d9636c6aabda48",
+      "locator": "Archived publisher product page replay 2025-11-04; article number, EAN, product title, Universal Monsters licence, player count, play time, component summary",
+      "evidence": "Horrified: Universal Monsters"
     },
     {
       "id": "src-002",
@@ -149,9 +149,9 @@
         "official_rules"
       ],
       "provenance": "official",
-      "url": "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf",
-      "final_url": "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf",
-      "retrieved_at": "2026-08-11T06:08:50.677Z",
+      "url": "https://web.archive.org/web/20250110120955id_/https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf",
+      "final_url": "https://web.archive.org/web/20250110120955id_/https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf",
+      "retrieved_at": "2026-08-12T21:55:00.000Z",
       "http_status": 200,
       "content_type": "application/pdf;charset=UTF-8",
       "byte_length": 4796393,
@@ -190,15 +190,15 @@
         "visual"
       ],
       "provenance": "official",
-      "url": "https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp",
-      "final_url": "https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp",
-      "retrieved_at": "2026-08-11T06:14:06.162Z",
+      "url": "https://web.archive.org/web/20250525002319id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp",
+      "final_url": "https://web.archive.org/web/20250525002319id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp",
+      "retrieved_at": "2026-08-12T21:55:00.000Z",
       "http_status": 200,
       "content_type": "application/octet-stream",
-      "byte_length": 45194,
-      "sha256": "f01279e0e89eb403606a48d76950d8685644da296083633708ebc456f746651c",
-      "locator": "Official Ravensburger product image asset 60001836.webp; product-page image 1",
-      "evidence": "Official Ravensburger product image asset for Horrified Universal Monsters base-game identity and table presentation."
+      "byte_length": 45112,
+      "sha256": "58df1aff424d5c9614df08fb1061172b163ee7328d5a453d7060ddfed7941f5d",
+      "locator": "Archived official Ravensburger product image replay 2025-05-25; box/board presentation",
+      "evidence": "Archived official Ravensburger product image visibly presents the Horrified Universal Monsters box and tabletop board arrangement."
     },
     {
       "id": "src-005",
@@ -207,15 +207,15 @@
         "visual"
       ],
       "provenance": "official",
-      "url": "https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp",
-      "final_url": "https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp",
-      "retrieved_at": "2026-08-11T06:14:07.516Z",
+      "url": "https://web.archive.org/web/20250525002318id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp",
+      "final_url": "https://web.archive.org/web/20250525002318id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp",
+      "retrieved_at": "2026-08-12T21:55:00.000Z",
       "http_status": 200,
       "content_type": "application/octet-stream",
-      "byte_length": 64980,
-      "sha256": "b33f40cc252532a0a81b79286a67145b3c9ba823b993eff839a39da599659973",
-      "locator": "Official Ravensburger product image asset 60001836_1.webp; product-page image 2",
-      "evidence": "Official Ravensburger product image asset showing Horrified Universal Monsters components and physical presentation."
+      "byte_length": 64956,
+      "sha256": "a8d574d0d9d68b0218e5a77c965b595855dfc409c259e333c9973cc3aa1e579c",
+      "locator": "Archived official Ravensburger product image replay 2025-05-25; components presentation",
+      "evidence": "Archived official Ravensburger product image visibly presents the Horrified Universal Monsters components and physical presentation."
     },
     {
       "id": "src-006",
@@ -224,15 +224,15 @@
         "visual"
       ],
       "provenance": "official",
-      "url": "https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp",
-      "final_url": "https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp",
-      "retrieved_at": "2026-08-11T06:14:08.848Z",
+      "url": "https://web.archive.org/web/20250525002317id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp",
+      "final_url": "https://web.archive.org/web/20250525002317id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp",
+      "retrieved_at": "2026-08-12T21:55:00.000Z",
       "http_status": 200,
       "content_type": "application/octet-stream",
-      "byte_length": 66838,
-      "sha256": "4a8ae5d45955ae286187adb6bf38db2b439e46d1077e4fc77393ff37173b502c",
-      "locator": "Official Ravensburger product image asset 60001836_2.webp; product-page image 3",
-      "evidence": "Official Ravensburger product image asset showing a Horrified Universal Monsters gameplay arrangement and product details."
+      "byte_length": 66722,
+      "sha256": "b2339506a9f857ce5a13796b25e5414c588c3fa9e72765267de7d39ffde4d8eb",
+      "locator": "Archived official Ravensburger product image replay 2025-05-25; populated tabletop state",
+      "evidence": "Archived official Ravensburger product image visibly presents a populated Horrified Universal Monsters tabletop state."
     }
   ]
 }

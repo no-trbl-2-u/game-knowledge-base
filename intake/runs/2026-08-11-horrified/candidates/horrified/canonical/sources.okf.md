@@ -14,49 +14,49 @@ type: sources
 sources:
   - id: "src-001"
     title: "Ravensburger Horrified: Universal Monsters product page (archived publisher page)"
-    url: "https://web.archive.org/web/20260306043202/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836"
+    url: "https://web.archive.org/web/20251104082036/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836"
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-08-12"
-    notes: "Stable archived replay retrieved HTTP 200; 655,243 bytes; SHA-256 465e6df063b417cdec681fb65c569fe47ccad115b5092022e111127e34f30ee1. Direct current page returned HTTP 403. Article 60001836, EAN 810558018361, Universal Monsters licence, 1–5 players, and product description were inspected."
+    notes: "Archived publisher replay 2025-11-04 retrieved HTTP 200; 627,925 bytes; SHA-256 e7705b3facc3ae5f9e84b72ebbf683fef1cb9c0097cb33fcf6d9636c6aabda48. Direct current page returned HTTP 403. Article 60001836, EAN 810558018361, Universal Monsters licence, 1–5 players, and product description were inspected."
   - id: "src-002"
     title: "Ravensburger Horrified: Universal Monsters official instructions (Spanish ES01)"
-    url: "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf"
+    url: "https://web.archive.org/web/20250110120955id_/https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf"
     kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-08-11"
+    retrieved_at: "2026-08-12"
     notes: "HTTP 200 application/pdf; 16 pages; 4,796,393 bytes; SHA-256 66ac020f322f4ff1c24b715df13508301effc64f463226e6e6210d5da646b461; copyright page identifies 2024 Ravensburger North America, Inc. and ES01."
   - id: "src-003"
     title: "Lee Leonardo — Horrified (First Impressions)"
     url: "https://lee-leonardo.github.io/blog/horrified-impressions/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-08-11"
+    retrieved_at: "2026-08-12"
     notes: "Independent review dated 2019-10-29; HTTP 200; full HTML retrieved and read; SHA-256 a20ebd6ed3361e96a11fdae74627fa62353705369c895806b0e1952e3452e5fc."
   - id: "src-004"
     title: "Ravensburger Horrified: Universal Monsters product image — box/board presentation"
-    url: "https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp"
-    asset_url: "https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp"
+    url: "https://web.archive.org/web/20250525002319id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp"
+    asset_url: "https://web.archive.org/web/20250525002319id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp"
     kind: other
     provenance: official
-    retrieved_at: "2026-08-11"
-    notes: "HTTP 200 official product image; source receipt SHA-256 f01279e0e89eb403606a48d76950d8685644da296083633708ebc456f746651c."
+    retrieved_at: "2026-08-12"
+    notes: "Archived HTTP 200 official product image replay; source receipt SHA-256 58df1aff424d5c9614df08fb1061172b163ee7328d5a453d7060ddfed7941f5d."
   - id: "src-005"
     title: "Ravensburger Horrified: Universal Monsters product image — components"
-    url: "https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp"
-    asset_url: "https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp"
+    url: "https://web.archive.org/web/20250525002318id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp"
+    asset_url: "https://web.archive.org/web/20250525002318id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp"
     kind: other
     provenance: official
-    retrieved_at: "2026-08-11"
-    notes: "HTTP 200 official product image; source receipt SHA-256 b33f40cc252532a0a81b79286a67145b3c9ba823b993eff839a39da599659973."
+    retrieved_at: "2026-08-12"
+    notes: "Archived HTTP 200 official product image replay; source receipt SHA-256 a8d574d0d9d68b0218e5a77c965b595855dfc409c259e333c9973cc3aa1e579c."
   - id: "src-006"
     title: "Ravensburger Horrified: Universal Monsters product image — gameplay state"
-    url: "https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp"
-    asset_url: "https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp"
+    url: "https://web.archive.org/web/20250525002317id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp"
+    asset_url: "https://web.archive.org/web/20250525002317id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp"
     kind: other
     provenance: official
-    retrieved_at: "2026-08-11"
-    notes: "HTTP 200 official product image; source receipt SHA-256 4a8ae5d45955ae286187adb6bf38db2b439e46d1077e4fc77393ff37173b502c."
+    retrieved_at: "2026-08-12"
+    notes: "Archived HTTP 200 official product image replay; source receipt SHA-256 b2339506a9f857ce5a13796b25e5414c588c3fa9e727de7d39ffde4d8eb."
 confidence: high
 status: verified
 ---
