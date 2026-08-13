@@ -14,27 +14,27 @@ mechanics: [action-points, cooperative-game, dice-rolling, hand-management, reso
 sources:
   - id: "src-004"
     title: "Ravensburger Horrified: Universal Monsters product image — box/board presentation"
-    url: "https://web.archive.org/web/20250525002319id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp"
-    asset_url: "https://web.archive.org/web/20250525002319id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp"
+    url: "https://web.archive.org/web/20250525002319if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp"
+    asset_url: "https://web.archive.org/web/20250525002319if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp"
     kind: other
     provenance: official
-    retrieved_at: "2026-08-12"
+    retrieved_at: "2026-08-13"
     notes: "Archived HTTP 200 official product image replay; source receipt SHA-256 58df1aff424d5c9614df08fb1061172b163ee7328d5a453d7060ddfed7941f5d."
   - id: "src-005"
     title: "Ravensburger Horrified: Universal Monsters product image — components"
-    url: "https://web.archive.org/web/20250525002318id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp"
-    asset_url: "https://web.archive.org/web/20250525002318id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp"
+    url: "https://web.archive.org/web/20250525002318if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp"
+    asset_url: "https://web.archive.org/web/20250525002318if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp"
     kind: other
     provenance: official
-    retrieved_at: "2026-08-12"
+    retrieved_at: "2026-08-13"
     notes: "Archived HTTP 200 official product image replay; source receipt SHA-256 a8d574d0d9d68b0218e5a77c965b595855dfc409c259e333c9973cc3aa1e579c."
   - id: "src-006"
     title: "Ravensburger Horrified: Universal Monsters product image — gameplay state"
-    url: "https://web.archive.org/web/20250525002317id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp"
-    asset_url: "https://web.archive.org/web/20250525002317id_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp"
+    url: "https://web.archive.org/web/20250525002317if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp"
+    asset_url: "https://web.archive.org/web/20250525002317if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp"
     kind: other
     provenance: official
-    retrieved_at: "2026-08-12"
+    retrieved_at: "2026-08-13"
     notes: "Archived HTTP 200 official product image replay; source receipt SHA-256 b2339506a9f857ce5a13796b25e5414c588c3fa9e72765267de7d39ffde4d8eb."
 visual_references:
   - id: "vis-001"
