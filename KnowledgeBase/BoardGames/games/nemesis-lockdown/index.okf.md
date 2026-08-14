@@ -4,59 +4,51 @@ type: game_index
 game:
   title: "Nemesis: Lockdown"
   slug: "nemesis-lockdown"
-  bgg_id: 310100
+  bgg_id: null
   publisher: "Awaken Realms"
   year: 2022
-  players:
-    min: 1
-    max: 5
-  complexity: expert
-  weight: 3.9
-  edition: "base/standalone release"
-scope: "selection dossier; standalone/base game"
-mechanics: ["action-points", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "modular-board", "semi-cooperative-game", "variable-player-powers"]
+  weight: null
+  edition: "English 2022 first-release retail core box; 2021-dated base rulebook bytes plus 2022-03-25 FAQ"
+scope: "English first-release retail core box only; crowdfunding bundles, Stretch Goals, expansions, add-ons, compatibility content, translations, reprints, and digital adaptation excluded"
+mechanics: ["action-points", "cooperative-game", "dice-rolling", "hand-management", "hidden-information", "modular-board", "semi-cooperative-game", "solo-solitaire-game", "variable-player-powers"]
 better_if_labels: []
 sources:
   - id: "src-001"
-    title: "BoardGameGeek \u2014 Nemesis: Lockdown"
-    url: "https://boardgamegeek.com/boardgame/310100"
-    kind: bgg_page
-    provenance: community
-    retrieved_at: "2026-07-26"
-    notes: "Identity and mechanic evidence."
-  - id: "src-002"
-    title: "Awaken Realms \u2014 official product or rules page"
-    url: "https://awakenrealms.com/games/awaken-realms/nemesis-lockdown"
-    kind: publisher_page
+    title: "Nemesis: Lockdown Corebox Rulebook"
+    url: "https://awakenrealms.com/images/download/Nemesis_Lockdown/ENG/Nemesis_LD_Rulebook_280x280mm_bleed3mm-32-pages.pdf"
+    kind: rulebook_pdf
     provenance: official
-    retrieved_at: "2026-07-26"
-    notes: "Identity and mechanic evidence."
+    retrieved_at: "2026-07-31"
+    notes: "32 pages; 6,075,325 bytes; SHA-256 d8a939c54552e640b1d0efa1b7552a81e8b4205f04029634eb7f58d10ff2ef43; 810.709 x 810.709 pt; created 2021-08-06; modified 2021-11-18; producer iLovePDF."
   - id: "src-003"
-    title: "BGG ranking snapshot mirror"
-    url: "https://raw.githubusercontent.com/mweuro/bgg/main/PowerBI/bgg.csv"
-    kind: other
-    provenance: secondary
-    retrieved_at: "2026-07-26"
-    notes: "Rating snapshot used for this batch ordering."
-confidence: high
-status: verified
-last_verified: "2026-07-26"
-summary: "Survive a failing Mars facility while pursuing secret objectives that may align, diverge, or turn openly hostile."
+    title: "Nemesis: Lockdown Official Game FAQ"
+    url: "https://awakenrealms.com/images/download/Nemesis_Lockdown/ENG/LOCKDOWN_FAQ_297x214mm_bleed3mm_3-pages.pdf"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-07-31"
+    notes: "Dated 2022-03-25; 3 pages; 678,267 bytes; SHA-256 c5b9bf1297bb68bc2107d0591af3c2b81a24b75a816f42a889b1d467aff6648f; 612.283 x 858.898 pt."
+confidence: medium
+status: needs_followup
 ---
 
 # Nemesis: Lockdown
 
-Survive a failing Mars facility while pursuing secret objectives that may align, diverge, or turn openly hostile.
+## Boundary
 
-## Batch position
+- Claim: This record targets the English 2022 first-release retail core box; the publisher file currently served as the core-box rulebook has 2021 creation/modification metadata, while the dated FAQ is later authority and retail listings place publication in 2022.
+  Source: src-001, src-003
+  Evidence: Core rulebook PDF metadata is 2021-08-06/2021-11-18; FAQ cover is dated 25.03.2022.
+  Confidence: medium
 
-**#1** in the 2026-07-26 semi-cooperative RPG/adventure intake, ordered by the cited BGG average-rating signal after the fit screen.
+- Claim: Standard play is semi-cooperative because players share threats but retain secret individual objectives and independent victory; a separate full-cooperative/solo mode is included.
+  Source: src-001
+  Evidence: Rulebook pp. 2, 8, 10, and 30 describe semi-cooperative play, hidden Personal/Corporate objectives, individual victory, and Solo/Coop mode.
+  Confidence: high
+
+## Documents
 
 - [Sources](sources.okf.md)
-- [Scout report](scout-report.okf.md)
-
-## Identity evidence
-
-- **Source:** src-001
-- **Evidence:** BGG item `310100` identifies the 2022 release, player range, weight signal, and community rating context.
-- **Confidence:** high
+- [Coverage and governing ledger](scout-report.okf.md)
+- Six rule categories under `rules/`
+- Two bounded reception records under `reception/`
+- [Visual packet](visuals/packet.okf.md)
