@@ -1,0 +1,40 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 9
+  title: IX
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92]
+status: verified
+---
+
+## Plot
+- **Observed:** The company ambushes mounted warriors at the dry lake; Toadvine kills one, and the judge inventories, mutilates, and scalps the body. [PDF p.83]
+- **Observed:** Travel across hollow ground and reflective gypsum costs several blinded horses; the Delawares return with the missing veteran's horse, and Glanton burns the man's effects without inquiry or memorial. [PDF pp.84–85]
+- **Observed:** The riders loot a corpse-filled coach, inspect abandoned Santa Rita del Cobre, and enter its presidio, where four starving prospectors and a captive boy shelter. [PDF pp.85–87]
+- **Observed:** After the judge lectures on geology, a storm passes; the boy is found naked with a broken neck, and the company leaves the prospectors behind. [PDF pp.87–90]
+- **Observed:** The company meets ciboleros at night; the parties exchange information but no goods and continue in opposite directions. [PDF pp.90–92]
+
+## Character Evidence
+- **Observed:** Glanton anticipates the attackers' turn, disposes of the veteran's estate, and treats the coach and presidio chiefly as sources of matériel. [PDF pp.83–86]
+- **Observed:** The judge converts a dead man's belongings into data and trophies, then uses rocks to claim interpretive authority over sacred history. [PDF pp.83, 87–88]
+- **Observed:** The judge was reported naked on the wall during the storm; the captive boy is dead the next morning, but the narration does not identify a killer. [PDF pp.88–89]
+- **Inference:** The juxtaposition makes the judge a strong suspect, not a proven culprit; persona logic should preserve that evidentiary distinction. [PDF pp.88–89]
+
+## Voice & Narrative Techniques
+- **Observed:** Mirage imagery enlarges the approaching riders into unstable doubles before the prose returns to exact ranges, weapons, and wounds. [PDF p.83]
+- **Observed:** Natural phenomena—hollow earth, glare, storm, shifting fire—repeatedly frustrate causal certainty and orientation. [PDF pp.84, 88–90]
+- **Inference:** The narration tests whether perception is evidence, especially when retrospective signs appear to direct travelers falsely. [PDF p.90]
+
+## SDLC Translation Candidates
+- **Inference:** **Evidence custodian:** inventory artifacts, preserve provenance, and never convert adjacency into causation. [PDF pp.83, 88–89]
+- **Inference:** **Failure-mode scout:** model glare, sensory loss, depleted mounts, and deceptive signals as operational hazards before committing a route. [PDF pp.84–85, 90]
+- **Inference:** **Resource triage agent:** distinguish recovery from erasure; log abandoned assets and human costs instead of silently burning state. [PDF pp.84–86]
+- **Inference:** **Adversarial explainer:** flag when expertise persuades by performance rather than reproducible proof. [PDF pp.87–88]
+
+## Open Questions
+- **Observed:** The text leaves the veteran's fate unstated. [PDF p.84]
+- **Observed:** The boy's killer and the significance of the old bones remain unresolved. [PDF p.89]
+- **Inference:** Is the shifting fire only parallax, or a broader warning that historical reconstruction manufactures destinations? [PDF p.90]

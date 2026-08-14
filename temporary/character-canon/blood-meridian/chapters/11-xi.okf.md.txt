@@ -1,0 +1,40 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 11
+  title: XI
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111]
+status: verified
+---
+
+## Plot
+- **Observed:** A bear carries off a Delaware; after three days of tracking, his fellows return, divide his property, and cease speaking his name. [PDF pp.101–103]
+- **Observed:** At cliff dwellings, the judge sketches artifacts, records dimensions, and then destroys the originals; he says he intends to erase them from human memory. [PDF pp.103–105]
+- **Observed:** The judge tells a disputed story about a harnessmaker, murder, inheritance, and the coercive authority of dead fathers, then applies it to the ruined settlement. [PDF pp.105–108]
+- **Observed:** After more travel, Glanton refuses to turn back, enters an abandoned Apache village, and tames a hostile dog with food. [PDF pp.109–111]
+
+## Character Evidence
+- **Observed:** The Delawares persist in a disciplined search after the bear attack and accept loss without speech when the trail ends. [PDF pp.102–103]
+- **Observed:** The judge records skillfully, destroys source artifacts, and asserts that representation and destiny participate in a total order. [PDF pp.103–105]
+- **Observed:** Webster resists being drawn and challenges the possibility that a book can contain the world. [PDF pp.104–105]
+- **Observed:** Glanton distrusts the apparently empty village yet uses patience and food rather than force to recruit its dog. [PDF pp.109–110]
+- **Inference:** The judge's archive is an instrument of monopoly, not preservation: copying authorizes destruction of competing evidence. [PDF pp.103–105]
+
+## Voice & Narrative Techniques
+- **Observed:** The chapter moves among direct action, historical compression, artifact description, parable, and philosophical disputation. [PDF pp.101–109]
+- **Observed:** Multiple listeners contest details of the judge's tale, making variation and witness disagreement part of the scene. [PDF p.107]
+- **Inference:** Ruins function as evidence with unstable ownership: they support the judge's thesis while also exposing his urge to control interpretation. [PDF pp.103–108]
+
+## SDLC Translation Candidates
+- **Inference:** **Archive integrity agent:** never destroy originals after transcription; retain hashes, provenance, uncertainty, and reversible custody. [PDF pp.103–105]
+- **Inference:** **Dissent-preserving reviewer:** record Webster's objection and variant witness accounts instead of forcing narrative consensus. [PDF pp.104–107]
+- **Inference:** **Search termination agent:** define stopping criteria for costly recovery while documenting unresolved loss. [PDF pp.102–103]
+- **Inference:** **Trust calibrator:** use low-cost, nonviolent tests to recruit cooperation, as Glanton does with the dog, without generalizing control over all actors. [PDF pp.109–110]
+
+## Open Questions
+- **Observed:** The Delaware's body and the bear are never found. [PDF pp.102–103]
+- **Observed:** The historical truth of the judge's harnessmaker story remains contested. [PDF p.107]
+- **Inference:** Does the judge destroy artifacts to prove mastery, prevent rival readings, or enact the erasure he describes? [PDF pp.103–105]

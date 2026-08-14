@@ -1,0 +1,41 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 15
+  title: XV
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162]
+status: verified
+---
+
+## Plot
+- **Observed:** Under a new Sonoran scalp contract, the gang massacres a Nacozari pueblo and is attacked by General Elías's much larger force. [PDF pp.148–149]
+- **Observed:** Glanton uses marked arrows to assign four men to remain with wounded companions; the kid draws a marked shaft, while a Delaware kills two wounded Delawares. [PDF pp.149–150]
+- **Observed:** Tate leaves; the kid refuses to kill Shelby, gives him water, and departs as Elías approaches. He later rejoins Tate, whose horse is lame. [PDF pp.150–152]
+- **Observed:** Scouts surprise them in snow; the kid escapes alone, crosses the mountains, shelters at a lightning-struck burning tree, and follows the gang's trail. [PDF pp.153–158]
+- **Observed:** The kid rejoins Glanton's reduced party; they kill a failing horse for food, find eight severed heads and burned wagons, and reach Santa Cruz, where they receive food and shelter. [PDF pp.158–162]
+
+## Character Evidence
+- **Observed:** The kid alters his initial arrow choice while aware that the judge is watching. [PDF p.149]
+- **Observed:** He refuses the assigned execution of Shelby, supplies water, attempts to continue with Tate, and survives alone through cold and hunger. [PDF pp.150–158]
+- **Observed:** When the judge asks for help holding a horse for slaughter, the kid assists despite Tobin's warning. [PDF p.159]
+- **Inference:** The kid's mercy is concrete but bounded; he resists killing a helpless companion without rejecting the gang or all necessary violence. [PDF pp.150–159]
+- **Observed:** The judge receives the returning kid with his habitual smile and kills the horse with a single stone blow. [PDF pp.158–159]
+
+## Voice & Narrative Techniques
+- **Observed:** The arrow lottery externalizes command responsibility into chance while preserving Glanton's control of the procedure. [PDF pp.149–150]
+- **Observed:** Long survival passages restrict attention to tracks, weather, bodily limits, and uncertain distant movement. [PDF pp.152–158]
+- **Inference:** The burning tree creates a temporary multispecies truce that contrasts with the gang's sacrificial economy. [PDF p.156]
+
+## SDLC Translation Candidates
+- **Inference:** **Humane exception handler:** refuse destructive defaults for impaired dependents; provide water, time, and transparent choices. [PDF pp.150–151]
+- **Inference:** **Assignment auditor:** do not disguise leadership decisions as random allocation; retain accountable rationale. [PDF pp.149–150]
+- **Inference:** **Resilient navigator:** infer route from tracks and environmental signals, repeatedly recalibrate, and avoid overstating certainty. [PDF pp.152–158]
+- **Inference:** **Capacity-aware degradation:** shed nonessential load while protecting people; do not equate expendability with weakness. [PDF pp.149–159]
+
+## Open Questions
+- **Observed:** Shelby's eventual fate is not shown. [PDF pp.151–152]
+- **Observed:** Tate's fate after the snowy ambush is unresolved here. [PDF p.153]
+- **Observed:** The identities of all four gang members lost after the kid's separation are not established from his viewpoint. [PDF p.158]

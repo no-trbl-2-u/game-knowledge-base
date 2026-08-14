@@ -1,0 +1,3183 @@
+{
+  "generated_at": "2026-08-14T23:05:36.559302+00:00",
+  "files": [
+    {
+      "destination": "EXCLUDED-SENSITIVE-AND-EPHEMERAL.json",
+      "source": "collector exclusion inventory",
+      "bytes": 6394,
+      "sha256": "c74448692a73798fb5eabb856f93ca7eea5645c9b09d1f2c9155d6a79a7fb63e",
+      "redactions": 0
+    },
+    {
+      "destination": "README.md",
+      "source": "generated dossier README",
+      "bytes": 1841,
+      "sha256": "f0c3a9b0db457a446a27463655608a39e4eaf58498d763db2591a2b150f01928",
+      "redactions": 0
+    },
+    {
+      "destination": "automation/bridge/mennonite_revise_triggers_bathcat.py",
+      "source": "/root/.hermes/scripts/mennonite_revise_triggers_bathcat.py",
+      "bytes": 6124,
+      "sha256": "0ee012e26af1fe53b858a4b6ccb18728b9d09451ecfc20ef50c3e5bd5f13b30a",
+      "redactions": 0
+    },
+    {
+      "destination": "automation/bridge/sombersoft-mennonite-revise-bathcat.path",
+      "source": "/tmp/sombersoft-mennonite-revise-bathcat.path",
+      "bytes": 280,
+      "sha256": "91928448c954d5016e6731119e5c7e6d1d7562c9be0bb0d342bd9f3b6979490f",
+      "redactions": 0
+    },
+    {
+      "destination": "automation/bridge/sombersoft-mennonite-revise-bathcat.service",
+      "source": "/tmp/sombersoft-mennonite-revise-bathcat.service",
+      "bytes": 606,
+      "sha256": "d2633991583160a2cfa8f86ac996b1cea228985316fdef84bfeeca30ae9ad0c0",
+      "redactions": 0
+    },
+    {
+      "destination": "automation/journals/hermes-gateway-bathcat.journal.log",
+      "source": "/tmp/bathcat-journal.log",
+      "bytes": 9190013,
+      "sha256": "5f01f18381d2fb4872d0156aeab8e7ae9b2f5d17e1cef68c80631dc0d286cff7",
+      "redactions": 0
+    },
+    {
+      "destination": "automation/journals/hermes-gateway-mennonite.journal.log",
+      "source": "/tmp/mennonite-journal.log",
+      "bytes": 7474969,
+      "sha256": "97d375c673b5322c0e1fad2cce87a2ce664a2ec1019b36dd4a8b9ef1cb2d3482",
+      "redactions": 0
+    },
+    {
+      "destination": "automation/systemd/hermes-gateway-bathcat.service",
+      "source": "/etc/systemd/system/hermes-gateway-bathcat.service",
+      "bytes": 1101,
+      "sha256": "c0300d8685c275e504df881786627cd862d5dad6a16ea7ccf95818afdd03e25e",
+      "redactions": 0
+    },
+    {
+      "destination": "automation/systemd/hermes-gateway-mennonite.service",
+      "source": "/etc/systemd/system/hermes-gateway-mennonite.service",
+      "bytes": 1109,
+      "sha256": "5afdb4d66897c937aef3baccc24a7274b1d8a7414f23d08f73ec2834061265f2",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/INDEX.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/INDEX.okf.md",
+      "bytes": 1783,
+      "sha256": "0ec5ebafaab58d30900a80534606880b6956b845469a9b85fbc5ad2ce5a8029d",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/NARRATIVE_TECHNIQUE_ATLAS.md",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/NARRATIVE_TECHNIQUE_ATLAS.md",
+      "bytes": 2519,
+      "sha256": "dc701a7c686547710088755f2e7e5b024e0952795e33653e9cb3cd8317dd0e91",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/OKF_SPEC.md",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/OKF_SPEC.md",
+      "bytes": 2865,
+      "sha256": "4cb57bcdb51956132cb8e0e534367569fd444b5d85cbf9e7f74b9250ee79b60b",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/PERSONA_EVALUATION.md",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/PERSONA_EVALUATION.md",
+      "bytes": 2681,
+      "sha256": "ef20077527f6d911df1ebad733adfd480b094808cbddb2b4678b1f36835c4948",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/PERSONA_SDLC_MATRIX.md",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/PERSONA_SDLC_MATRIX.md",
+      "bytes": 3103,
+      "sha256": "0a05aaf681709afbc7d9eb76efbd93182cade0138ac828e1b0ea2aaf7f395012",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/README.md",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/README.md",
+      "bytes": 2098,
+      "sha256": "55e5d0688e8d8f3d5825a2bef21aac48b373f8300f22fdf135367d33748b52fe",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/01-i.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/01-i.okf.md",
+      "bytes": 3778,
+      "sha256": "553c97d56fefe90fd30409d416944ed5fef85f55d1eb9415a3ddd3e827f17d67",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/02-ii.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/02-ii.okf.md",
+      "bytes": 3559,
+      "sha256": "e12bcece5b29bb3a66b75f907dacb66541c05cac8112002929665677ca41a04d",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/03-iii.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/03-iii.okf.md",
+      "bytes": 3788,
+      "sha256": "b786e214b6a6679cdd46fb7e86394cfb297d479a6fb50d04d25470b853c4eda6",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/04-iv.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/04-iv.okf.md",
+      "bytes": 3980,
+      "sha256": "6edae4d7910ba60a98b7359aab7df2d67c1af70b4b6e25669de3988605c8643a",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/05-v.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/05-v.okf.md",
+      "bytes": 4274,
+      "sha256": "c49d5be8a2af12d6ec8d891663d3073acbf2083a745952cc8a144b20eecc7ed9",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/06-vi.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/06-vi.okf.md",
+      "bytes": 3838,
+      "sha256": "06a534d2c7e58318412ce064eb9458846f451ed5d0d5498185d87f7ad6cf21d5",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/07-vii.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/07-vii.okf.md",
+      "bytes": 4983,
+      "sha256": "ba62d3ff0e095a7bba95b147e473730eb82af6db90fdf84fd46915fe130cb6b6",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/08-viii.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/08-viii.okf.md",
+      "bytes": 4949,
+      "sha256": "8142acac693a04e500fcbc008200b1d7e0b586dca54276dddcddbe9005e84224",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/09-ix.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/09-ix.okf.md",
+      "bytes": 3435,
+      "sha256": "2243b48480a724b3ab024bbe936de581c338bcd24c56325ae9c1436bd19585a5",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/10-x.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/10-x.okf.md",
+      "bytes": 3192,
+      "sha256": "2069792877d95d7e459ac2ba50ea46deb1eeb28f92b495c7c43286ba973db859",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/11-xi.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/11-xi.okf.md",
+      "bytes": 3368,
+      "sha256": "ae0c363ce9154b431e87524c8e1bc94da5b2e2f2f0f1c6bc6ac5d0173f2af0ae",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/12-xii.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/12-xii.okf.md",
+      "bytes": 3453,
+      "sha256": "68e1d6965318401f917827196c451c6b408beebd8fa56493217accad369da84e",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/13-xiii.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/13-xiii.okf.md",
+      "bytes": 3523,
+      "sha256": "9f6fae18f2fe7a26d9a9e2dcb80c9bc2a957a4c814ad94cae26a47c2a9c747e1",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/14-xiv.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/14-xiv.okf.md",
+      "bytes": 3489,
+      "sha256": "2abfbc21becaef448c81470d23525e0e50e8e9f3f8026206d262c640581b9d2d",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/15-xv.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/15-xv.okf.md",
+      "bytes": 3462,
+      "sha256": "4242ec63b364206f944822d8cf5c23735ed962795c7fae7e2c0f3c040da9ac0e",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/16-xvi.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/16-xvi.okf.md",
+      "bytes": 3856,
+      "sha256": "4d0e6c1d676cb0a7756e3f2e0ed48846b9742410f7e8e374185da765f5f97bc6",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/17-xvii.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/17-xvii.okf.md",
+      "bytes": 3974,
+      "sha256": "a6f5decaf9dfa7b0d51d5f4f1146dbc65e0bb2a2672135c13c0e68b0aac1cffa",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/18-xviii.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/18-xviii.okf.md",
+      "bytes": 3479,
+      "sha256": "130c528ec90418902db7c523f857b8c7807de654499d0d720ebce3f6bef8f6bb",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/19-xix.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/19-xix.okf.md",
+      "bytes": 4218,
+      "sha256": "a36d94d2c1888c0a3e4e47e266fa0bf28abdff1b6da1838d44032144fb7d3140",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/20-xx.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/20-xx.okf.md",
+      "bytes": 3919,
+      "sha256": "d9bca2a1b2972b09c6138d6fd9b9d3aea47546aab5d3b39f633f003cec4c7806",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/21-xxi.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/21-xxi.okf.md",
+      "bytes": 3674,
+      "sha256": "3b4ec3dcda73bc849cf85dbdcb47404f2190566eb74e0a1a5371621ab4d2396e",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/22-xxii.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/22-xxii.okf.md",
+      "bytes": 4002,
+      "sha256": "7d4f9cea0f7fd908d8db92126d0ac408b5573b46eac23791da6aac9098d523ac",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/23-xxiii.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/23-xxiii.okf.md",
+      "bytes": 4620,
+      "sha256": "003c39fb851124270640666a0b1acdb568ebb5fe76e69186572fcb4c7f321b12",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/chapters/24-epilogue.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/chapters/24-epilogue.okf.md",
+      "bytes": 3073,
+      "sha256": "41d3a408bb66891227c61d7320a3c0dd72707d6dd5860f57bd754b5ee3758f32",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/characters/bathcat.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/characters/bathcat.okf.md",
+      "bytes": 2327,
+      "sha256": "aa7b7cbafc9346dd427289e6b027e9fb44ba586903957018705658fd43d51f18",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/characters/glanton.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/characters/glanton.okf.md",
+      "bytes": 2267,
+      "sha256": "7deb3d23e4513dc668f597e1858fb17b9526ecd57cd72be51e614d16145223fc",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/characters/judge-holden.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/characters/judge-holden.okf.md",
+      "bytes": 2495,
+      "sha256": "d652666f60b40d20a0ca4f2397380ba5f64979f995133a86aa1c059adcdc0960",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/characters/the-governor.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/characters/the-governor.okf.md",
+      "bytes": 1864,
+      "sha256": "6deb40bd64e52c39a7c59be3091953a3b234a16f997f0f5c02b39f359d0df03c",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/characters/the-kid.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/characters/the-kid.okf.md",
+      "bytes": 2133,
+      "sha256": "66c8433d70d0cddb884a80f5edfaadb2bf267836781f81b4df333c7239a2e869",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/characters/the-mennonite.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/characters/the-mennonite.okf.md",
+      "bytes": 1927,
+      "sha256": "a16ceacce5145636a92366983b95d3a18302a7ad32c0c4d42a49c735c24c4de3",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/characters/toadvine.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/characters/toadvine.okf.md",
+      "bytes": 2080,
+      "sha256": "431ee70d5d82c7b3716accfcca17a238dbc6d03e4f754109418e28915bd36ba8",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/characters/tobin.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/characters/tobin.okf.md",
+      "bytes": 2099,
+      "sha256": "1bb9325e7ad0aff9f30511428688fae6177b63c85b23bc35972be7cdd6f757a8",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/characters/webster.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/characters/webster.okf.md",
+      "bytes": 1648,
+      "sha256": "33c54f9fe8a79e10bb6a073207b1b6043204a44b0a5e81408171cd7caed88485",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/pilots/JUDGE_PILOT.md",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/pilots/JUDGE_PILOT.md",
+      "bytes": 2279,
+      "sha256": "0ddebc6eac2b0cd710b8dfe306afaf8235f021bb10239e6bdba03535dc2d8164",
+      "redactions": 0
+    },
+    {
+      "destination": "character-canon/blood-meridian/scripts/check_overlap.py",
+      "source": "/root/Workspace/SomberSoft/research/blood-meridian/scripts/check_overlap.py",
+      "bytes": 1606,
+      "sha256": "97fca69683d42343365cfdb9c44d9d649d1529ad649993a6f2306fa8e442d384",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/001/comments.json",
+      "source": "GitHub issue #1 comments",
+      "bytes": 10294,
+      "sha256": "8782549e5c8489dc39bd31f52d28b04f65b1e347cf63864a01a98e777513cc7d",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/001/issue.json",
+      "source": "GitHub issue #1",
+      "bytes": 12249,
+      "sha256": "578de174582614a4b44a87d5a9682a34dfc6f9c0e76f9c75b95848ddf500322f",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/006/comments.json",
+      "source": "GitHub issue #6 comments",
+      "bytes": 45426,
+      "sha256": "2930e0bb18e776e63080e87b5de41d87d8a2ec7d979b6a37a876e6eb2ebd99d5",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/006/issue.json",
+      "source": "GitHub issue #6",
+      "bytes": 8372,
+      "sha256": "46b8d0906d080c511e63bf989b0432ffb0ff8c51163524a26715de60bd18234b",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/008/comments.json",
+      "source": "GitHub issue #8 comments",
+      "bytes": 2259,
+      "sha256": "f2222e66f5e70afdf63744f14298766dd4e877ce8ea389d74c18dbf882ce5238",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/008/issue.json",
+      "source": "GitHub issue #8",
+      "bytes": 4971,
+      "sha256": "fd7ba9dffcf6638327c622ad12e12e4e33319fa7991492b89dd07d86e2739483",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/023/comments.json",
+      "source": "GitHub issue #23 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/023/issue.json",
+      "source": "GitHub issue #23",
+      "bytes": 5624,
+      "sha256": "b90e2469e78986895365fc038287c857e53f074c3acc72347fa032020a98544e",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/024/comments.json",
+      "source": "GitHub issue #24 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/024/issue.json",
+      "source": "GitHub issue #24",
+      "bytes": 5365,
+      "sha256": "c213b331299916301b7ad5c195e96a5ea4e9660f6d3d4a72653ed4abe04c5200",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/025/comments.json",
+      "source": "GitHub issue #25 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/025/issue.json",
+      "source": "GitHub issue #25",
+      "bytes": 7244,
+      "sha256": "0206d64382853a1a487e43ef1719fdad353a1c8082ed3165a69051038acd0977",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/030/comments.json",
+      "source": "GitHub issue #30 comments",
+      "bytes": 1953,
+      "sha256": "96d35c8039e987a9e4ac233f5736df10f33c44efa09b6d3cde4adf1965c28ed2",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/030/issue.json",
+      "source": "GitHub issue #30",
+      "bytes": 7715,
+      "sha256": "4237f4b15b72d7a04370580fdadaa926144a46ef10fbbfdb78e0bdfc888fea6f",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/032/comments.json",
+      "source": "GitHub issue #32 comments",
+      "bytes": 2056,
+      "sha256": "1a5c8921668822da76dd25619081d7d79843f36fc030b056dd66dfa5a0f055a6",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/032/issue.json",
+      "source": "GitHub issue #32",
+      "bytes": 5410,
+      "sha256": "1543612664a7199a0dfd0532b626f153f16c3f1e71fe4030edc9f9af16e000b4",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/033/comments.json",
+      "source": "GitHub issue #33 comments",
+      "bytes": 2056,
+      "sha256": "363b35e861c83f4e6c86bf29526be76168242008477c9fab37fbaf892aaf2b6e",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/033/issue.json",
+      "source": "GitHub issue #33",
+      "bytes": 5385,
+      "sha256": "05306695738fbf499aee9cc8243bb9a96996d0c0aa82113fa186ceee973935f6",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/034/comments.json",
+      "source": "GitHub issue #34 comments",
+      "bytes": 2056,
+      "sha256": "617cf9a26452656acc627378e6048c5fa9b29f0648b7c1fb319b51d74e222ee7",
+      "redactions": 0
+    },
+    {
+      "destination": "github/issues/034/issue.json",
+      "source": "GitHub issue #34",
+      "bytes": 5575,
+      "sha256": "2540f0768b9a6715385dc49a5b99e8a42b2bfbcb6ccfedc73c91b8a02a7a47b0",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/009/comments.json",
+      "source": "GitHub PR #9 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/009/commits.json",
+      "source": "GitHub PR #9 commits",
+      "bytes": 6496,
+      "sha256": "41bd9abd1317d734b34cb69131b9e98a5e69da6b8b6032300d3cdadf120ca169",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/009/pull.json",
+      "source": "GitHub PR #9",
+      "bytes": 21306,
+      "sha256": "fa140200113e6dbd1842eb168a5e872f46bba1beeea8e881e08428b6e9679f70",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/009/reviews.json",
+      "source": "GitHub PR #9 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/010/comments.json",
+      "source": "GitHub PR #10 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/010/commits.json",
+      "source": "GitHub PR #10 commits",
+      "bytes": 1507,
+      "sha256": "840b0ab4a5dd59df6628e65ef6f65e0d6c7dd3c6e3530d552aa120e1f5e43d84",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/010/pull.json",
+      "source": "GitHub PR #10",
+      "bytes": 19661,
+      "sha256": "12200daccfc212df4cebc01ba96013fc14601da66f1ab9afd6a73de4c30b2c38",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/010/reviews.json",
+      "source": "GitHub PR #10 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/011/comments.json",
+      "source": "GitHub PR #11 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/011/commits.json",
+      "source": "GitHub PR #11 commits",
+      "bytes": 1508,
+      "sha256": "213a30de043fcd6aedcce78c8f3228aff6e0b02b31f462a1c75a9a2c2e2a3632",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/011/pull.json",
+      "source": "GitHub PR #11",
+      "bytes": 19931,
+      "sha256": "cc0d88bf35b24e09825d3957678fe8492e0ee3b52c158d9ab78f2f09877122c4",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/011/reviews.json",
+      "source": "GitHub PR #11 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/012/comments.json",
+      "source": "GitHub PR #12 comments",
+      "bytes": 5470,
+      "sha256": "efa72a04b1c4f33cd68eda639ba32e908cc183912cc632bf913181a0a22c28ca",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/012/commits.json",
+      "source": "GitHub PR #12 commits",
+      "bytes": 1504,
+      "sha256": "2fbc8ae1e25a4fafca08176abc1119ba4fca44f07952e54e984290a543f70421",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/012/pull.json",
+      "source": "GitHub PR #12",
+      "bytes": 23241,
+      "sha256": "0f121709d2c91d7827b5eea05535b16611cf9dd6a0f9b37e0fd3df453a1b09e2",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/012/reviews.json",
+      "source": "GitHub PR #12 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/013/comments.json",
+      "source": "GitHub PR #13 comments",
+      "bytes": 35345,
+      "sha256": "904ddd8825ef3e3a7f3dd10f74ea49405520c1225e23a7db2a143131e23d4baf",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/013/commits.json",
+      "source": "GitHub PR #13 commits",
+      "bytes": 4826,
+      "sha256": "a09c88901d2e877d0d431f947bc4964938fdaf30bae3fb51fa0575da61b1a16f",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/013/pull.json",
+      "source": "GitHub PR #13",
+      "bytes": 24597,
+      "sha256": "0c658f31154814ed91def4d7a5bd65093d8e8b017025f0a15fb2477b5dc93af3",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/013/reviews.json",
+      "source": "GitHub PR #13 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/014/comments.json",
+      "source": "GitHub PR #14 comments",
+      "bytes": 39511,
+      "sha256": "ab730d48ee58858a37a67d1176c7fb497fb051d4ffb51520dd7e490ed09ca343",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/014/commits.json",
+      "source": "GitHub PR #14 commits",
+      "bytes": 23422,
+      "sha256": "b687cc7e55b13798a651bab2594d5cd9b4ba93e4f30b92000ac8052558b5da66",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/014/pull.json",
+      "source": "GitHub PR #14",
+      "bytes": 26132,
+      "sha256": "f090d413932ee4635279e711bc8d8dd2e7acb9973de51a50f8b1abf1d8d966f2",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/014/reviews.json",
+      "source": "GitHub PR #14 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/015/comments.json",
+      "source": "GitHub PR #15 comments",
+      "bytes": 128253,
+      "sha256": "903099c349af6c3d304e409a311416d6e2f9c51029bb2f071f88ce95ee60a60d",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/015/commits.json",
+      "source": "GitHub PR #15 commits",
+      "bytes": 39643,
+      "sha256": "8673bf5d72249a323c9ec47c6a39c2c1ca92deb0b22d11e1e50ee859c1fbae04",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/015/pull.json",
+      "source": "GitHub PR #15",
+      "bytes": 26315,
+      "sha256": "fa1fb9e7d9ae637bdf62b1e774bf171204d262a8d9a930e305cdfc73894533e1",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/015/reviews.json",
+      "source": "GitHub PR #15 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/016/comments.json",
+      "source": "GitHub PR #16 comments",
+      "bytes": 68563,
+      "sha256": "da3a1bd938b10bf07d9d9848e5843594490f9d7cfa712bc8de72e2dc84992150",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/016/commits.json",
+      "source": "GitHub PR #16 commits",
+      "bytes": 28483,
+      "sha256": "29ae347a079aedd9fcfe696a6ec785d6cc2b09574fe2b00691ff68d0cf927bcc",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/016/pull.json",
+      "source": "GitHub PR #16",
+      "bytes": 28964,
+      "sha256": "d6b77124fe9b048a1af9bd536de278685a4516a715402709b7eaf8baec60f2b4",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/016/reviews.json",
+      "source": "GitHub PR #16 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/017/comments.json",
+      "source": "GitHub PR #17 comments",
+      "bytes": 57776,
+      "sha256": "ccf77c307bebddd5f211967ea4314e72f8f8eb9ddddf95dcd222428c623547ce",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/017/commits.json",
+      "source": "GitHub PR #17 commits",
+      "bytes": 27060,
+      "sha256": "ec7a24251a04797d4992e1661b9e1412c936fb718d14d069030defb6a9bb1c27",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/017/pull.json",
+      "source": "GitHub PR #17",
+      "bytes": 27881,
+      "sha256": "32dc3c35956f60e1145a7152bddbef89c191924940bb3128ba5321c13eb0653b",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/017/reviews.json",
+      "source": "GitHub PR #17 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/018/comments.json",
+      "source": "GitHub PR #18 comments",
+      "bytes": 85988,
+      "sha256": "44b519032b43fd56e7162cc1e6d1143b4e2514a4a7e93b83e0a8be3b2ad824e8",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/018/commits.json",
+      "source": "GitHub PR #18 commits",
+      "bytes": 33442,
+      "sha256": "16b82d6dc457af188076da64be29603f222eb552284993fe59bc794eb7baf8e4",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/018/pull.json",
+      "source": "GitHub PR #18",
+      "bytes": 26596,
+      "sha256": "ce8b4a0fa3fc37c779dafc9431196a59d8d78fe058a98a215296f8a12ae68fd2",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/018/reviews.json",
+      "source": "GitHub PR #18 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/019/comments.json",
+      "source": "GitHub PR #19 comments",
+      "bytes": 47700,
+      "sha256": "d291e2d5874e1ab57f5ed548934c318586b5e22750cd816b8e78ceefee5adbee",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/019/commits.json",
+      "source": "GitHub PR #19 commits",
+      "bytes": 27108,
+      "sha256": "d7b5fab76bd69bbe4a54c46c5f4616d5deea548810286b11efb5344dc88cf9a8",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/019/pull.json",
+      "source": "GitHub PR #19",
+      "bytes": 28097,
+      "sha256": "94693460838abb5a09af8a5390d58f8745bc49020333b4548fcb013ba87de1c1",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/019/reviews.json",
+      "source": "GitHub PR #19 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/020/comments.json",
+      "source": "GitHub PR #20 comments",
+      "bytes": 27464,
+      "sha256": "124c792d845ee1b1d7bae22fc19040c712217477138bfdeae4caf89057d4ad50",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/020/commits.json",
+      "source": "GitHub PR #20 commits",
+      "bytes": 4510,
+      "sha256": "754b787ab825e8cdc585df04b4947160b6a86abd8650aa3ed0b06e908f296347",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/020/pull.json",
+      "source": "GitHub PR #20",
+      "bytes": 26785,
+      "sha256": "f449db94b30d7113f76791a18fffcf10895f8893b68fa4ddf0aeb963e907ef3d",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/020/reviews.json",
+      "source": "GitHub PR #20 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/021/comments.json",
+      "source": "GitHub PR #21 comments",
+      "bytes": 24039,
+      "sha256": "56f46467a63fc8a6dba468967d31226dd1c49043b8d1efc88f3ffd088111c3e3",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/021/commits.json",
+      "source": "GitHub PR #21 commits",
+      "bytes": 3017,
+      "sha256": "9a8aee97fd82026689fdabbe7a885c958eb9e48b5302f431ef5264ece306e555",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/021/pull.json",
+      "source": "GitHub PR #21",
+      "bytes": 24104,
+      "sha256": "93befff7ef66f6ab4f050acd3466fcbded62806e869acfd84662c15f34dee80a",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/021/reviews.json",
+      "source": "GitHub PR #21 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/022/comments.json",
+      "source": "GitHub PR #22 comments",
+      "bytes": 16018,
+      "sha256": "89269c79c2b41be737e6750c167c7c752d897a826f48d999782cb93391fa4b44",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/022/commits.json",
+      "source": "GitHub PR #22 commits",
+      "bytes": 18095,
+      "sha256": "e31bd8a8cbd8a340a7ad0527fc8a2fd46ea5036bcab02ad4d978d63bbcd9504f",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/022/pull.json",
+      "source": "GitHub PR #22",
+      "bytes": 20293,
+      "sha256": "22f9059a48af4b52ed7f37ee883caeefc9027660f839096148da4f288aad3da3",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/022/reviews.json",
+      "source": "GitHub PR #22 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/026/comments.json",
+      "source": "GitHub PR #26 comments",
+      "bytes": 3092,
+      "sha256": "2331f95c90f99b0acf3172c54ad6bc850ee376e594809165e52e03bfa09ff460",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/026/commits.json",
+      "source": "GitHub PR #26 commits",
+      "bytes": 1535,
+      "sha256": "7b01111eefb0edd19b0607d51faaed50e2f36b46a4aeadc0ae38a92eb42163c8",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/026/pull.json",
+      "source": "GitHub PR #26",
+      "bytes": 21440,
+      "sha256": "8794c7a299aff8e58f346963ed34137b2273a9db42f1fbf30a1e41bf5ecba0df",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/026/reviews.json",
+      "source": "GitHub PR #26 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/027/comments.json",
+      "source": "GitHub PR #27 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/027/commits.json",
+      "source": "GitHub PR #27 commits",
+      "bytes": 7803,
+      "sha256": "21d77ec0ed03446db94abf657157ef48d12569a944e587d18434388f0115effd",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/027/pull.json",
+      "source": "GitHub PR #27",
+      "bytes": 20448,
+      "sha256": "1a2522d77649db66f2ba6dee457d4bd56f1726deecd7841b4744ab3c99b20caf",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/027/reviews.json",
+      "source": "GitHub PR #27 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/029/comments.json",
+      "source": "GitHub PR #29 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/029/commits.json",
+      "source": "GitHub PR #29 commits",
+      "bytes": 1496,
+      "sha256": "66cd86b2d9ddd489da3341445a111dbdf53ca8817847cc2525b5350d026be19c",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/029/pull.json",
+      "source": "GitHub PR #29",
+      "bytes": 19969,
+      "sha256": "b0d940d2505108593176aeaac76a2f28bc41bcbc9e7922694279ddc059f70802",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/029/reviews.json",
+      "source": "GitHub PR #29 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/031/comments.json",
+      "source": "GitHub PR #31 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/031/commits.json",
+      "source": "GitHub PR #31 commits",
+      "bytes": 1501,
+      "sha256": "122b880344b6f2f254d6cee2c03154c929be583886f6ba598911ccc1ee96a3d0",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/031/pull.json",
+      "source": "GitHub PR #31",
+      "bytes": 19511,
+      "sha256": "e921fd1e2c5587be1a714b989b162e6a520121438992c0b77b82b3868437aaec",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/031/reviews.json",
+      "source": "GitHub PR #31 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/035/comments.json",
+      "source": "GitHub PR #35 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/035/commits.json",
+      "source": "GitHub PR #35 commits",
+      "bytes": 1501,
+      "sha256": "65d2a8d26d4d3e31b41ef156a9fa88bb86b3c427a9c5fea5d0a61ef246d30406",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/035/pull.json",
+      "source": "GitHub PR #35",
+      "bytes": 20039,
+      "sha256": "595e60ddb25ea282dfb42523142d782b43b2d5bcc4d853cb3631fd9d937c41f4",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/035/reviews.json",
+      "source": "GitHub PR #35 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/036/comments.json",
+      "source": "GitHub PR #36 comments",
+      "bytes": 3491,
+      "sha256": "9455e1cf5f61fb66b5ec70a2ab1cd24c6ffb56725aa1e1e82e2e7c6774ba2beb",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/036/commits.json",
+      "source": "GitHub PR #36 commits",
+      "bytes": 4496,
+      "sha256": "e588b6bafe6f63b1de3c0a03094881814cf981ac57fc91285c6189bce4351c6b",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/036/pull.json",
+      "source": "GitHub PR #36",
+      "bytes": 21054,
+      "sha256": "e166f385b1f0473d30d81707cc7f55c227244922f815572521d594156e4ee8d4",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/036/reviews.json",
+      "source": "GitHub PR #36 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/037/comments.json",
+      "source": "GitHub PR #37 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/037/commits.json",
+      "source": "GitHub PR #37 commits",
+      "bytes": 3007,
+      "sha256": "3d9520aaaf536ef4b44add3ae871e8594ca612536a4d20c0fa524141b7acd7f2",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/037/pull.json",
+      "source": "GitHub PR #37",
+      "bytes": 20149,
+      "sha256": "01cd0ccb3b80eaaed45a1af812f0be5bcd39ba8144460e2a9855ccd975644455",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/037/reviews.json",
+      "source": "GitHub PR #37 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/038/comments.json",
+      "source": "GitHub PR #38 comments",
+      "bytes": 24103,
+      "sha256": "17fa788702caef5566a714ff55fa717291bbe726b131d227f42f0cff33d119a7",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/038/commits.json",
+      "source": "GitHub PR #38 commits",
+      "bytes": 22913,
+      "sha256": "57c80f81555c1c6e17c51c0e9790bb781e2341223c1c94c3c971cd02649761f7",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/038/pull.json",
+      "source": "GitHub PR #38",
+      "bytes": 20264,
+      "sha256": "ee6f25949f49e5924236acc11658a25a069b268abbc9551265cbcf4b9102bd1d",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/038/reviews.json",
+      "source": "GitHub PR #38 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/039/comments.json",
+      "source": "GitHub PR #39 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/039/commits.json",
+      "source": "GitHub PR #39 commits",
+      "bytes": 1498,
+      "sha256": "14b3bb04f40a9fc0406b616be1e760b9f543a0aa695c0d513df5e75ae131ddcb",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/039/pull.json",
+      "source": "GitHub PR #39",
+      "bytes": 19971,
+      "sha256": "13e0fc5d5a0cba2f8bae26c5bad777fca41052f7f2979b784e70a278a547a84c",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/039/reviews.json",
+      "source": "GitHub PR #39 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/040/comments.json",
+      "source": "GitHub PR #40 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/040/commits.json",
+      "source": "GitHub PR #40 commits",
+      "bytes": 8047,
+      "sha256": "828edced38fb551c6dad250f5a02ac4be4ee6d7f932e0bafec5352268576877f",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/040/pull.json",
+      "source": "GitHub PR #40",
+      "bytes": 21449,
+      "sha256": "1f101746ccf8f4c0966df5d26a2d85351ef0f2240c50ccf7ce7202e47fdd0b4b",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/040/reviews.json",
+      "source": "GitHub PR #40 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/041/comments.json",
+      "source": "GitHub PR #41 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/041/commits.json",
+      "source": "GitHub PR #41 commits",
+      "bytes": 1500,
+      "sha256": "f74ea82f7ed8583488529f4e300ec4794fcc4a81724957a90ea17155ee690529",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/041/pull.json",
+      "source": "GitHub PR #41",
+      "bytes": 19677,
+      "sha256": "1dfd2bfa8766582bd35a86e4f2462b32c4c797998c14fa30c582d1bce1c03693",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/041/reviews.json",
+      "source": "GitHub PR #41 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/042/comments.json",
+      "source": "GitHub PR #42 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/042/commits.json",
+      "source": "GitHub PR #42 commits",
+      "bytes": 1505,
+      "sha256": "6b400c859b2ffbfb4a7204aecda9a8471e56b412b9fec0895c7d73a374dd23e1",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/042/pull.json",
+      "source": "GitHub PR #42",
+      "bytes": 19773,
+      "sha256": "2a3bcc5290143d3a05cf441f0f2e37a53381a4aa19c4008caf9b152d6f673322",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/042/reviews.json",
+      "source": "GitHub PR #42 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/043/comments.json",
+      "source": "GitHub PR #43 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/043/commits.json",
+      "source": "GitHub PR #43 commits",
+      "bytes": 8727,
+      "sha256": "a03296e2da1abc785786f2553488c66a2276e3af06bf804c498b4b73a6c8de6d",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/043/pull.json",
+      "source": "GitHub PR #43",
+      "bytes": 22961,
+      "sha256": "4a9445e60cb55358301471652ccd1cb2fbd670d2f65bd33e3603ad4a7f0932d8",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/043/reviews.json",
+      "source": "GitHub PR #43 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/044/comments.json",
+      "source": "GitHub PR #44 comments",
+      "bytes": 9700,
+      "sha256": "6ad774d3132ae4da14688ec0b55b27bc42b824130a7b914766815d219a31222d",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/044/commits.json",
+      "source": "GitHub PR #44 commits",
+      "bytes": 11268,
+      "sha256": "74761afbdbcb5695d9f63af5a2bf872aec091f24fa66dba5dc7b03f63c4471fa",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/044/pull.json",
+      "source": "GitHub PR #44",
+      "bytes": 21333,
+      "sha256": "f7458df286d93df68a3b7ff8c657eea5e54b8077a253b23cfdf13503d5d1e631",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/044/reviews.json",
+      "source": "GitHub PR #44 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/045/comments.json",
+      "source": "GitHub PR #45 comments",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/045/commits.json",
+      "source": "GitHub PR #45 commits",
+      "bytes": 9997,
+      "sha256": "96664c3269202d37a3a766d5ef0be68671eee852a9cc768d0231176e0b817789",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/045/pull.json",
+      "source": "GitHub PR #45",
+      "bytes": 21390,
+      "sha256": "f294c703371c01edcdc4f5ff89b54d92e609be1361d5143a29634e3e4f544302",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/045/reviews.json",
+      "source": "GitHub PR #45 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/046/comments.json",
+      "source": "GitHub PR #46 comments",
+      "bytes": 7146,
+      "sha256": "449f31a08064ab39159ae6b827cc41f7654d9fc1e1101eed266d2dbb353a461e",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/046/commits.json",
+      "source": "GitHub PR #46 commits",
+      "bytes": 4493,
+      "sha256": "3e79f2e4299c9c9ba5f231efc5d408ca0bf7366375d54e1d96cc7a05601a18f7",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/046/pull.json",
+      "source": "GitHub PR #46",
+      "bytes": 20438,
+      "sha256": "5a7cc97b19176e310debdcf402ada7528959c80b368082c568dc6e417b3c3235",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/046/reviews.json",
+      "source": "GitHub PR #46 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/047/comments.json",
+      "source": "GitHub PR #47 comments",
+      "bytes": 6936,
+      "sha256": "b488027af0f1dec5e5cdea566ff3565f3d75ff6f0a6fab57028a4fba8cba7d8d",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/047/commits.json",
+      "source": "GitHub PR #47 commits",
+      "bytes": 4471,
+      "sha256": "506df3b710684ac3aec2f7d331950a2f6c624f191b33438b0e4cf47a65554240",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/047/pull.json",
+      "source": "GitHub PR #47",
+      "bytes": 22138,
+      "sha256": "c591666274b35e9d764cbebac3ebd574ead7d5983aebdf04c5bf5a2cd8ba1712",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/047/reviews.json",
+      "source": "GitHub PR #47 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/048/comments.json",
+      "source": "GitHub PR #48 comments",
+      "bytes": 42297,
+      "sha256": "4fbd356898aa139e561ddfd5fa0c82dacd475f134f1af5fb796fd35a755027cd",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/048/commits.json",
+      "source": "GitHub PR #48 commits",
+      "bytes": 10800,
+      "sha256": "0c6f6d81a8fe98203d25f181443c54ba54760886e69ec129590c31d238bc749e",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/048/pull.json",
+      "source": "GitHub PR #48",
+      "bytes": 20971,
+      "sha256": "fec8a679eff8c13688369912f50ffeaad0d7d729caeb3658b8009c8c82cc9565",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/048/reviews.json",
+      "source": "GitHub PR #48 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/049/comments.json",
+      "source": "GitHub PR #49 comments",
+      "bytes": 11196,
+      "sha256": "0e61a59f52799d2448217a93c0a4181e6e176f945ec7bb0ac8b19064f7505004",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/049/commits.json",
+      "source": "GitHub PR #49 commits",
+      "bytes": 1485,
+      "sha256": "0dee884b4c15e7c65901cca3e5ad98c72ea39e96229c61e4524ee1e85ae7bc77",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/049/pull.json",
+      "source": "GitHub PR #49",
+      "bytes": 20357,
+      "sha256": "4138fe45ab7c9269621083f3564b80347111bc32e7f18d7a7579716bd462ec0b",
+      "redactions": 0
+    },
+    {
+      "destination": "github/pull-requests/049/reviews.json",
+      "source": "GitHub PR #49 reviews",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "redactions": 0
+    },
+    {
+      "destination": "history/git-log-bathcat-mennonite.txt",
+      "source": "git log --all --grep Bathcat --grep Mennonite",
+      "bytes": 5762,
+      "sha256": "9f0395622cde36f39207de78849ade3394cbbf5a14cf51936c4b4685ba734e41",
+      "redactions": 0
+    },
+    {
+      "destination": "kb-law/CLAUDE.md",
+      "source": "/root/Workspace/SomberSoft/game-knowledge-base/CLAUDE.md",
+      "bytes": 6871,
+      "sha256": "fc579ee6aa1153be6e68ac8e7771f3971ac39e602576d7b102ad9e8fad20a065",
+      "redactions": 0
+    },
+    {
+      "destination": "kb-law/KnowledgeBase/BoardGames/OKF_SPEC.md",
+      "source": "/root/Workspace/SomberSoft/game-knowledge-base/KnowledgeBase/BoardGames/OKF_SPEC.md",
+      "bytes": 16185,
+      "sha256": "1eac90a587c26db1eb3ebf3fb3560f787b52bbff1b5e7985516e531ea954f23e",
+      "redactions": 0
+    },
+    {
+      "destination": "kb-law/KnowledgeBase/BoardGames/README.md",
+      "source": "/root/Workspace/SomberSoft/game-knowledge-base/KnowledgeBase/BoardGames/README.md",
+      "bytes": 6112,
+      "sha256": "d9053883c1afb1d5004bde28222da4e2b20f74381b43bda7a1cd51473493075a",
+      "redactions": 0
+    },
+    {
+      "destination": "kb-law/KnowledgeBase/BoardGames/operations.okf.md.txt",
+      "source": "/root/Workspace/SomberSoft/game-knowledge-base/KnowledgeBase/BoardGames/operations.okf.md",
+      "bytes": 18287,
+      "sha256": "8993370096e942fa384bf96bb563bdbde1137235cc602deb2e7bf7844a26df52",
+      "redactions": 0
+    },
+    {
+      "destination": "kb-law/README.md",
+      "source": "/root/Workspace/SomberSoft/game-knowledge-base/README.md",
+      "bytes": 2757,
+      "sha256": "181684020476807e78208b3e0c6a8ca3a9421b06b3ad4e02e83b00950ee282fa",
+      "redactions": 0
+    },
+    {
+      "destination": "kb-law/historical-operators/bathcat.md",
+      "source": "git:e648f67:KnowledgeBase/BoardGames/operators/bathcat.md",
+      "bytes": 131,
+      "sha256": "65abea005cd775afd54fdded1a8d961d5695f7a9e356cfff0f211c0d6e6d39a8",
+      "redactions": 0
+    },
+    {
+      "destination": "kb-law/historical-operators/the-mennonite.md",
+      "source": "git:e648f67:KnowledgeBase/BoardGames/operators/the-mennonite.md",
+      "bytes": 137,
+      "sha256": "7a0648243260aa43e424cd539948d5374468667e6df4f04331ee9616c961a570",
+      "redactions": 0
+    },
+    {
+      "destination": "kb-law/intake/README.md",
+      "source": "/root/Workspace/SomberSoft/game-knowledge-base/intake/README.md",
+      "bytes": 14668,
+      "sha256": "850402ce5e753e535778c9076d75d38f6aba55cade86540147083c712b35ee58",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/KB_PROCEDURE.md",
+      "source": "/root/.hermes/profiles/bathcat/KB_PROCEDURE.md",
+      "bytes": 8493,
+      "sha256": "33bef8d5d210cd5d6fed92dcc742972a44fa5e8c4d4a872e53df312b9192e806",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/SOUL.md",
+      "source": "/root/.hermes/profiles/bathcat/SOUL.md",
+      "bytes": 8282,
+      "sha256": "f85afecbd85576283b0d7163cce91a7cc2712212e9c4cb07d9638b709c26e08c",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/channel_directory.json",
+      "source": "/root/.hermes/profiles/bathcat/channel_directory.json",
+      "bytes": 67,
+      "sha256": "c512e6119ac6ace62e58c10f51c511d04c91a2c23a24e2ba8a02c1f788ab9f82",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/config.yaml",
+      "source": "/root/.hermes/profiles/bathcat/config.yaml",
+      "bytes": 16637,
+      "sha256": "8889ab4df26c466a2692cab61d78b4414e45becd96d8f5ee6eae6a7ac44bff07",
+      "redactions": 16
+    },
+    {
+      "destination": "profiles/bathcat/cron/jobs.json",
+      "source": "/root/.hermes/profiles/bathcat/cron/jobs.json",
+      "bytes": 26523,
+      "sha256": "a88e1682876e264a0e2a2973271ed7929e4327710b1bd4c999455b11fba5c4ab",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-06_16-37-06.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-06_16-37-06.md",
+      "bytes": 20905,
+      "sha256": "84be8c32011828c68a08695287949f787522b104586f509ccf327fa57d03be43",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-06_16-42-42.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-06_16-42-42.md",
+      "bytes": 37846,
+      "sha256": "64ae2f52f9827d85410f08daa4566399e8b40a9b60365b60281e5ff540601f98",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-07_06-02-17.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-07_06-02-17.md",
+      "bytes": 36728,
+      "sha256": "8acf89544f811a09317cb7e8f104d7c4727eced37505b8958f9ec7dc294e2295",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-08_06-24-33.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-08_06-24-33.md",
+      "bytes": 39649,
+      "sha256": "f9e6d3dd472cc8710cd58ec5a30659838af8b6604e4329582ab83f8029a4684d",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-09_06-02-58.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-09_06-02-58.md",
+      "bytes": 38054,
+      "sha256": "dd44a7eae0b58e26ea1d4d655fcf13d591c82e35123be2d9049e64abbaab18c7",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-10_06-02-06.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-10_06-02-06.md",
+      "bytes": 36980,
+      "sha256": "ae737b71fd88c0c9384f3628ed19aebce402f0a902bd68acf07d753d4ee42b00",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-11_06-23-27.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-11_06-23-27.md",
+      "bytes": 40578,
+      "sha256": "66ef18bf839f2383c73b81af8ace6a4a71cc162383f12df1dac8dd868ba6aaa7",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-12_06-17-50.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-12_06-17-50.md",
+      "bytes": 43133,
+      "sha256": "917605a526acc7bc9c656926c58c74c25b5526950db50d36f71a7dbed326bb4e",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-12_13-32-19.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-12_13-32-19.md",
+      "bytes": 46715,
+      "sha256": "6de5de110a9a7d324b13b6f2850740e0ef5e734c032fad47a7a3cd09e885bb9e",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-12_22-02-41.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-12_22-02-41.md",
+      "bytes": 46248,
+      "sha256": "0257fdefedff71d58159becc1ea0a6f14e28d772c8a743b2f4be953f6ec23482",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-13_06-18-11.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-13_06-18-11.md",
+      "bytes": 46020,
+      "sha256": "8a52e68080a6ae76c8f9f850fe2e349e4e511400c41aaa71b510dfa0a7b83268",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/0909f461cb88/2026-08-14_06-13-51.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/0909f461cb88/2026-08-14_06-13-51.md",
+      "bytes": 48944,
+      "sha256": "c188e2e6a6ab2cc65872c5b83206d21fff360938be4844117520d026a1c579dc",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/23a6db1456c3/2026-08-10_18-26-50.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/23a6db1456c3/2026-08-10_18-26-50.md",
+      "bytes": 25515,
+      "sha256": "04ecd3c372e8d3007a94604eaa1a08e915d47d6db1d29fac5025862ff1b9f823",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/26edda397603/2026-08-10_19-12-54.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/26edda397603/2026-08-10_19-12-54.md",
+      "bytes": 24874,
+      "sha256": "b48e5067080b303e99b5c35b8bf135a95938704ec405734e69f68d1941f341c0",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/2e6f7a4d80e7/2026-05-28_22-39-53.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/2e6f7a4d80e7/2026-05-28_22-39-53.md",
+      "bytes": 27415,
+      "sha256": "ec7dd8b9ca2c22c70e39174f42f3173f4a31fa53e3624e0d0b470f64406270d5",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/2e6f7a4d80e7/2026-05-29_14-02-14.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/2e6f7a4d80e7/2026-05-29_14-02-14.md",
+      "bytes": 37176,
+      "sha256": "556d6b20f9868ca5dca92feeadd973d04db2b567520db0ad17023e49ee354cf6",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/2e6f7a4d80e7/2026-05-30_14-04-37.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/2e6f7a4d80e7/2026-05-30_14-04-37.md",
+      "bytes": 60426,
+      "sha256": "b3edadbd78ee358bfb90c41b8472c262b6519f300062eeba5e2f1952538efd4c",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/2e6f7a4d80e7/2026-05-31_14-04-30.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/2e6f7a4d80e7/2026-05-31_14-04-30.md",
+      "bytes": 63732,
+      "sha256": "5a06b2f094d2836c0be51287ac6714636bb1ff1f84b40c8924acaa58cafdceaf",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/2e6f7a4d80e7/2026-06-01_14-03-44.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/2e6f7a4d80e7/2026-06-01_14-03-44.md",
+      "bytes": 66910,
+      "sha256": "244eab5d0adca3ba669de561a0d7701bcbdf30e11c731fd2f229dfaa83323a8d",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/2e6f7a4d80e7/2026-06-02_14-09-39.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/2e6f7a4d80e7/2026-06-02_14-09-39.md",
+      "bytes": 70138,
+      "sha256": "c7d22b42208edb4f4efd2de7c1635d729066695ffa6c253abc2f5bd4051800b3",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/2e6f7a4d80e7/2026-06-03_14-04-16.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/2e6f7a4d80e7/2026-06-03_14-04-16.md",
+      "bytes": 73613,
+      "sha256": "cc1a4dd1c3454aa28f4028c21738f3253ee7be5724ff05c4623b0e48643f7804",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/37e3218498e3/2026-05-30_15-04-52.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/37e3218498e3/2026-05-30_15-04-52.md",
+      "bytes": 54863,
+      "sha256": "d417e635870a11c7aaa030da6203d235a6569bfae447d941267eee87a84b8549",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/445a0275b23d/2026-05-29_13-50-19.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/445a0275b23d/2026-05-29_13-50-19.md",
+      "bytes": 21467,
+      "sha256": "02e6959bd3fb716bc7ddf395a1939ee78f7e786a18130ebce76a4d6dc24e58ba",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/50ebaee2f092/2026-06-01_15-04-00.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/50ebaee2f092/2026-06-01_15-04-00.md",
+      "bytes": 59741,
+      "sha256": "dfeb6c371e6b2e5bf2cab03ed7cafb1dc70db321afe98a6c2e0f3e086af872e5",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/649014bd1270/2026-08-10_20-04-50.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/649014bd1270/2026-08-10_20-04-50.md",
+      "bytes": 24903,
+      "sha256": "d3ddf1e99a7f360ae6b9785ad46625fda03f47d54f60dc99f99e8b0b101bdfcb",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/a11ab2ef75f1/2026-08-10_19-55-12.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/a11ab2ef75f1/2026-08-10_19-55-12.md",
+      "bytes": 25256,
+      "sha256": "7021d07377d8a3d5bce1a4fd8a489372518f2d27b9b559854bf33a5bbefba061",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/b88c0ba5be91/2026-08-10_18-40-43.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/b88c0ba5be91/2026-08-10_18-40-43.md",
+      "bytes": 25136,
+      "sha256": "f55aa10b1f7d057bbf79f65b92c8359baf743b65a58db212f60ea9062f6ee3b2",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/bf0a6ca7ba09/2026-08-10_18-55-00.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/bf0a6ca7ba09/2026-08-10_18-55-00.md",
+      "bytes": 26664,
+      "sha256": "37ae5ef259ec8e1831d3bf17e6c729543d5d6711156aefe4d5602f3469f96798",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/c73a7382d155/2026-05-28_16-00-47.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/c73a7382d155/2026-05-28_16-00-47.md",
+      "bytes": 169,
+      "sha256": "770d839aa280016620a0d0c4c60094210bdc5b7bf4e8cd6ebf920731a534f05b",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/d1c4799b451d/2026-08-10_20-16-02.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/d1c4799b451d/2026-08-10_20-16-02.md",
+      "bytes": 25673,
+      "sha256": "ae32c8ea497cffa9172fe51ccbf5fafd4e772d885f92861bd27485b4893fc981",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/e1b3eb827561/2026-05-29_08-06-04.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/e1b3eb827561/2026-05-29_08-06-04.md",
+      "bytes": 23168,
+      "sha256": "1d6c50593573fc5149c2289a51f72581e05d3c8e2af72b768e707e0fe20ae48f",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/e1b3eb827561/2026-05-30_08-04-37.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/e1b3eb827561/2026-05-30_08-04-37.md",
+      "bytes": 29254,
+      "sha256": "a6a57d101bdccc57d6e03601407f40ffe215f1ff2ee52e8e4d5c0442114a8088",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/e1b3eb827561/2026-05-31_08-04-24.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/e1b3eb827561/2026-05-31_08-04-24.md",
+      "bytes": 31612,
+      "sha256": "9c6032f80e73ebdbf4d2757a04d1c4e5fc06b4a7bcc7fab50c3afb7be99d968e",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/e1b3eb827561/2026-06-01_08-06-10.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/e1b3eb827561/2026-06-01_08-06-10.md",
+      "bytes": 35411,
+      "sha256": "72f0b5a37715e66bb4a760f9951eca1ab7e2216408c157d273783cca19897455",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/e1b3eb827561/2026-06-02_08-02-55.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/e1b3eb827561/2026-06-02_08-02-55.md",
+      "bytes": 38108,
+      "sha256": "443185c83d9cf975dd5726a764902448eb3929d79b9a9222027173b6e1ce6a91",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/e1b3eb827561/2026-06-03_08-03-12.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/e1b3eb827561/2026-06-03_08-03-12.md",
+      "bytes": 41426,
+      "sha256": "bc1c81e7df7d79c51caf14900d75d13b0fcfa724cff0b26e5b4c5c2446af1098",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/e31d38c3cdf2/2026-08-10_19-43-58.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/e31d38c3cdf2/2026-08-10_19-43-58.md",
+      "bytes": 25917,
+      "sha256": "42cff9beaf340df62ba05fa1b6b43d903100d305ece53f68c9ed169e2e6eff4e",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/output/ecef54ad1140/2026-08-10_19-25-39.md",
+      "source": "/root/.hermes/profiles/bathcat/cron/output/ecef54ad1140/2026-08-10_19-25-39.md",
+      "bytes": 25563,
+      "sha256": "391d4b54077b03b5796342521a7bdf828e7e03879e3f4d3f2f7a6f276f370f96",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/ticker_heartbeat",
+      "source": "/root/.hermes/profiles/bathcat/cron/ticker_heartbeat",
+      "bytes": 17,
+      "sha256": "ebf7e2ed4f9971e1912972100f37f51f67f6ae101c971a1fb100b649ed25efa1",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/cron/ticker_last_success",
+      "source": "/root/.hermes/profiles/bathcat/cron/ticker_last_success",
+      "bytes": 18,
+      "sha256": "e6e6bd2f5203af07b31e0449a68d66e0251013d5099d313c282beee446845942",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/agent.log",
+      "source": "/root/.hermes/profiles/bathcat/logs/agent.log",
+      "bytes": 575141,
+      "sha256": "1227ac3c9a217cab7566449a726ac8fc78e397391988de29c4c1727d6891090c",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/agent.log.1",
+      "source": "/root/.hermes/profiles/bathcat/logs/agent.log.1",
+      "bytes": 5242848,
+      "sha256": "28f82c2f4cd1aa5d0197d484159670ba1bb4f87a195c5a3a51f38d419b742727",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/agent.log.2",
+      "source": "/root/.hermes/profiles/bathcat/logs/agent.log.2",
+      "bytes": 5242744,
+      "sha256": "65c1399d2d0195dc72d7f59dc649b052d0953fc62c480b842a6132859b1e0469",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/agent.log.3",
+      "source": "/root/.hermes/profiles/bathcat/logs/agent.log.3",
+      "bytes": 5242760,
+      "sha256": "9271999244b87d1c609151c0adfc05b7b31b128158e0dad45a7abc7f26bca08f",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/curator/20260531-182931/REPORT.md",
+      "source": "/root/.hermes/profiles/bathcat/logs/curator/20260531-182931/REPORT.md",
+      "bytes": 1723,
+      "sha256": "b7da61950369c0cee72ec77d09af2004284e23c356d36d4a2615d6e08546cca9",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/curator/20260531-182931/run.json",
+      "source": "/root/.hermes/profiles/bathcat/logs/curator/20260531-182931/run.json",
+      "bytes": 2478,
+      "sha256": "9c014cb840590e1bea585ed3279ac452e18982b7eacabedc990ecdfb10346302",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/curator/20260806-173936/REPORT.md",
+      "source": "/root/.hermes/profiles/bathcat/logs/curator/20260806-173936/REPORT.md",
+      "bytes": 799,
+      "sha256": "44d16a961dafcefe0599fc424fb9b292380d4175ad574cb311fee755b5caa1c4",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/curator/20260806-173936/run.json",
+      "source": "/root/.hermes/profiles/bathcat/logs/curator/20260806-173936/run.json",
+      "bytes": 855,
+      "sha256": "f0cbf59c95d130c7087d13657f59d1add900820480f94169b936f8d45a578106",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/curator/20260813-173939/REPORT.md",
+      "source": "/root/.hermes/profiles/bathcat/logs/curator/20260813-173939/REPORT.md",
+      "bytes": 799,
+      "sha256": "59c42863557c2f6fe5e6a64830ef06f69c9b358af6bbd9be8f0fa76c4ef5a982",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/curator/20260813-173939/run.json",
+      "source": "/root/.hermes/profiles/bathcat/logs/curator/20260813-173939/run.json",
+      "bytes": 853,
+      "sha256": "304b4914782617734810911445008abda47bc65da8798287aa52b7dd35ba643e",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/errors.log",
+      "source": "/root/.hermes/profiles/bathcat/logs/errors.log",
+      "bytes": 590763,
+      "sha256": "5edff28384eb6f0dd6bb770a98e00611bfca2410b015e96c751cc505327ee564",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/errors.log.1",
+      "source": "/root/.hermes/profiles/bathcat/logs/errors.log.1",
+      "bytes": 2097055,
+      "sha256": "2f1ced5186862030f1cfc9b9c59e0bc7c9ff5eba63afbf833f7b32368d30b301",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/errors.log.2",
+      "source": "/root/.hermes/profiles/bathcat/logs/errors.log.2",
+      "bytes": 2097003,
+      "sha256": "d65d8866c189bdd9e980dc29f9595a4231c293c0a1a0621daba1f9f9ddc0e1ba",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/gateway-exit-diag.log",
+      "source": "/root/.hermes/profiles/bathcat/logs/gateway-exit-diag.log",
+      "bytes": 11680,
+      "sha256": "790eea48c9c0dfdfa203279b26304786c29a1b8527448c5d2135cc48f0b0b611",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/gateway-shutdown-diag.log",
+      "source": "/root/.hermes/profiles/bathcat/logs/gateway-shutdown-diag.log",
+      "bytes": 6727,
+      "sha256": "d394f12bd71a6540fb40a740cdf88848d7bad65d2bca314c3b465f62109a3576",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/gateway.log",
+      "source": "/root/.hermes/profiles/bathcat/logs/gateway.log",
+      "bytes": 514609,
+      "sha256": "12b1eca382aebd359def95ab00899bc41955b418cb14ad2801eefde5e72f2a82",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/logs/update.log",
+      "source": "/root/.hermes/profiles/bathcat/logs/update.log",
+      "bytes": 1021,
+      "sha256": "a01eb1ec75fdbc17daf6d01659d881dde2fd7509dc1b6530409f719f9647e291",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/memories/MEMORY.md",
+      "source": "/root/.hermes/profiles/bathcat/memories/MEMORY.md",
+      "bytes": 1087,
+      "sha256": "2cf3c8de847ce7f234a3fe4670d50b86a43208fa78fae637c07f6f23df7baccd",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/memories/USER.md",
+      "source": "/root/.hermes/profiles/bathcat/memories/USER.md",
+      "bytes": 809,
+      "sha256": "ff97e2d0c769c4ed7487548cd44d05a3558e326a659790013a62bddf39578b7e",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/bathcat/profile.yaml",
+      "source": "/root/.hermes/profiles/bathcat/profile.yaml",
+      "bytes": 172,
+      "sha256": "c9aeaaeb39b4891af46407870c152478d04e35f4f07318fc9ae4442f9e71e7a7",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/KB_PROCEDURE.md",
+      "source": "/root/.hermes/profiles/mennonite/KB_PROCEDURE.md",
+      "bytes": 9290,
+      "sha256": "f16e2bba34a100c61d36b8d567f3a63b034f52e4b812a9a354e85280c88e3cf2",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/SOUL.md",
+      "source": "/root/.hermes/profiles/mennonite/SOUL.md",
+      "bytes": 7670,
+      "sha256": "f91d260c42a7811555e2fb90bd660b8f5c37abdf278582e86c9c86999d0dbb75",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/channel_directory.json",
+      "source": "/root/.hermes/profiles/mennonite/channel_directory.json",
+      "bytes": 67,
+      "sha256": "59ff4ffb272116eef5279c8996acad8750da44f3e6cc8af11c054d7964f5aca4",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/config.yaml",
+      "source": "/root/.hermes/profiles/mennonite/config.yaml",
+      "bytes": 14279,
+      "sha256": "e62f86968c19dad9129290926e217828b3cd0044668beae8ae882de206c82f75",
+      "redactions": 12
+    },
+    {
+      "destination": "profiles/mennonite/cron/jobs.json",
+      "source": "/root/.hermes/profiles/mennonite/cron/jobs.json",
+      "bytes": 24407,
+      "sha256": "616248932c6e21e2792622c91fc010a3d41538bdaffd9873e8dfbb6337b603f6",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/060a721b5996/2026-08-10_18-47-25.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/060a721b5996/2026-08-10_18-47-25.md",
+      "bytes": 29275,
+      "sha256": "1d267cc8e280eed6ad61b1fa5edd15339431cf7f0a492850fc546f25cd44eaf1",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/0d87df24fb4c/2026-08-10_19-17-46.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/0d87df24fb4c/2026-08-10_19-17-46.md",
+      "bytes": 29777,
+      "sha256": "4909277c933b362a81e39d03fcc7a47c010a9a55f31ae10f0f1dc39530b03f88",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/247a56eb7315/2026-08-10_15-56-32.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/247a56eb7315/2026-08-10_15-56-32.md",
+      "bytes": 30264,
+      "sha256": "7bdbbe456e474ff13285bb154d31c80ded364cbd97bb0be31ef98f4b37d61580",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/2daab65ff688/2026-08-10_18-33-07.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/2daab65ff688/2026-08-10_18-33-07.md",
+      "bytes": 29527,
+      "sha256": "6a186d811bc2d12ee4a6bdedb052326d6a7eff0d480dd99e00abf4a7f95e1312",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/2e6f7a4d80e7/2026-05-28_22-39-53.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/2e6f7a4d80e7/2026-05-28_22-39-53.md",
+      "bytes": 27415,
+      "sha256": "ec7dd8b9ca2c22c70e39174f42f3173f4a31fa53e3624e0d0b470f64406270d5",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/2e6f7a4d80e7/2026-05-29_14-02-14.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/2e6f7a4d80e7/2026-05-29_14-02-14.md",
+      "bytes": 37176,
+      "sha256": "556d6b20f9868ca5dca92feeadd973d04db2b567520db0ad17023e49ee354cf6",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/2e6f7a4d80e7/2026-05-30_14-04-37.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/2e6f7a4d80e7/2026-05-30_14-04-37.md",
+      "bytes": 60426,
+      "sha256": "b3edadbd78ee358bfb90c41b8472c262b6519f300062eeba5e2f1952538efd4c",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/2e6f7a4d80e7/2026-05-31_14-04-30.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/2e6f7a4d80e7/2026-05-31_14-04-30.md",
+      "bytes": 63732,
+      "sha256": "5a06b2f094d2836c0be51287ac6714636bb1ff1f84b40c8924acaa58cafdceaf",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/2e6f7a4d80e7/2026-06-01_14-03-44.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/2e6f7a4d80e7/2026-06-01_14-03-44.md",
+      "bytes": 66910,
+      "sha256": "244eab5d0adca3ba669de561a0d7701bcbdf30e11c731fd2f229dfaa83323a8d",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/2e6f7a4d80e7/2026-06-02_14-09-39.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/2e6f7a4d80e7/2026-06-02_14-09-39.md",
+      "bytes": 70138,
+      "sha256": "c7d22b42208edb4f4efd2de7c1635d729066695ffa6c253abc2f5bd4051800b3",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/2e6f7a4d80e7/2026-06-03_14-04-16.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/2e6f7a4d80e7/2026-06-03_14-04-16.md",
+      "bytes": 73613,
+      "sha256": "cc1a4dd1c3454aa28f4028c21738f3253ee7be5724ff05c4623b0e48643f7804",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/37e3218498e3/2026-05-30_15-04-52.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/37e3218498e3/2026-05-30_15-04-52.md",
+      "bytes": 54863,
+      "sha256": "d417e635870a11c7aaa030da6203d235a6569bfae447d941267eee87a84b8549",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/43c38d9d366d/2026-08-10_16-13-01.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/43c38d9d366d/2026-08-10_16-13-01.md",
+      "bytes": 28469,
+      "sha256": "c1aaaf48b54c3886675820df70552c2642f4d7dbdade4cc2c4ea39d935cc2089",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/445a0275b23d/2026-05-29_13-50-19.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/445a0275b23d/2026-05-29_13-50-19.md",
+      "bytes": 21467,
+      "sha256": "02e6959bd3fb716bc7ddf395a1939ee78f7e786a18130ebce76a4d6dc24e58ba",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/4704ce03d6c1/2026-08-10_20-08-47.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/4704ce03d6c1/2026-08-10_20-08-47.md",
+      "bytes": 30238,
+      "sha256": "dbc5150cbc17484a4db870d47d100d723958e88ad42a69311535365acb4097ae",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/4968b71b6b8f/2026-08-10_16-08-13.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/4968b71b6b8f/2026-08-10_16-08-13.md",
+      "bytes": 28864,
+      "sha256": "316ede1c46ac0caa79555e8a6d43ca647864edd3555f88ec8339687e872b5d83",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/50ebaee2f092/2026-06-01_15-04-00.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/50ebaee2f092/2026-06-01_15-04-00.md",
+      "bytes": 59741,
+      "sha256": "dfeb6c371e6b2e5bf2cab03ed7cafb1dc70db321afe98a6c2e0f3e086af872e5",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/5184c2b6ad8e/2026-08-10_19-59-28.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/5184c2b6ad8e/2026-08-10_19-59-28.md",
+      "bytes": 29275,
+      "sha256": "8f6ac5cb75fca7132268d538e78ad80a3905ba60c87c05e4d5877e940f9dfb45",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/76c50b8043e4/2026-08-10_19-47-51.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/76c50b8043e4/2026-08-10_19-47-51.md",
+      "bytes": 29392,
+      "sha256": "683fe9d201208dbc59b30b935ef5abe5a85d31f43110d32914dffd44abe3205d",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/79eca096b007/2026-08-10_19-01-46.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/79eca096b007/2026-08-10_19-01-46.md",
+      "bytes": 30765,
+      "sha256": "99c222247277ae9bdc9d0457d384fdb074facb05b62bcb5a60fc54111346170b",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/a04be488549e/2026-08-10_19-34-30.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/a04be488549e/2026-08-10_19-34-30.md",
+      "bytes": 30289,
+      "sha256": "6aa73d3af27ab2e10ce47a68ec517bd6eb4410f975bdcb95644255d70ca65302",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/b90ba64d84f7/2026-08-10_16-02-44.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/b90ba64d84f7/2026-08-10_16-02-44.md",
+      "bytes": 30969,
+      "sha256": "1bca0e0d13bcb484aaa1c3d9a6971f016ef909414e5b5fe7b5c673c02117210b",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-07_12-36-45.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-07_12-36-45.md",
+      "bytes": 38091,
+      "sha256": "5d3dc1ab61d2eb99627027e99a9472d33ca70734205d7cf20776e8616f51382e",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-08_01-26-28.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-08_01-26-28.md",
+      "bytes": 26575,
+      "sha256": "484e105b612f419d1ee08f336ef8678081da3a77372a5f49798a1d14c7bd76d3",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-08_09-06-54.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-08_09-06-54.md",
+      "bytes": 26278,
+      "sha256": "f362321140505ce6be566702cf9b7ecb04eb7f073bd36bbd9b6a6e1cfaa98262",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-09_09-05-39.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-09_09-05-39.md",
+      "bytes": 27452,
+      "sha256": "c14a3f1398946dac3f68a563ee233ce504817dfcccc841c103c006c6d7a53ebd",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-10_09-04-27.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-10_09-04-27.md",
+      "bytes": 31463,
+      "sha256": "4d9ba3564f52aeff891db825de811bf6471100e08c7e244fff1dcbbedbda3584",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-10_20-22-23.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-10_20-22-23.md",
+      "bytes": 30313,
+      "sha256": "978fd4091bf1bbc71305371183a4d7cf67fea522035e31867d2c8cfd18eb8910",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-10_20-23-26.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-10_20-23-26.md",
+      "bytes": 26971,
+      "sha256": "84163b80fbb9f410ee73b430f406ea91e63b361641d39007ed722588fdb7bffd",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-10_20-24-11.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-10_20-24-11.md",
+      "bytes": 26971,
+      "sha256": "bf961fa6768c29358585a071a13353467353763b601626a539915f962c40546a",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-11_09-01-43.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-11_09-01-43.md",
+      "bytes": 29262,
+      "sha256": "9d700c2076babad51e6b7eaf1ed4f0856cd62af253e778b1b8619506975dc082",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-12_09-04-55.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-12_09-04-55.md",
+      "bytes": 32949,
+      "sha256": "60d3f9cf260d0118a1abae5f97567135255acb21ac0af3a252b0aa925f88e668",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-12_20-18-02.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-12_20-18-02.md",
+      "bytes": 34668,
+      "sha256": "38ade99ac29c66a1eadf1bded80c6547a0b480450170ae93695d209cc002b148",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-13_09-04-28.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-13_09-04-28.md",
+      "bytes": 33483,
+      "sha256": "3344d4bcccfb2ca6f2a2a2f661f6f28993a7f254110cce9139aa154fbd63e05d",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c3e225a90b9b/2026-08-14_09-03-46.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b/2026-08-14_09-03-46.md",
+      "bytes": 33698,
+      "sha256": "3c59eaf28c6f939440b1ce1ebf9088f02a8477f579e8c02c96051b93d8c5ee33",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/c73a7382d155/2026-05-28_16-00-47.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/c73a7382d155/2026-05-28_16-00-47.md",
+      "bytes": 169,
+      "sha256": "770d839aa280016620a0d0c4c60094210bdc5b7bf4e8cd6ebf920731a534f05b",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/e1b3eb827561/2026-05-29_08-06-04.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/e1b3eb827561/2026-05-29_08-06-04.md",
+      "bytes": 23168,
+      "sha256": "1d6c50593573fc5149c2289a51f72581e05d3c8e2af72b768e707e0fe20ae48f",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/e1b3eb827561/2026-05-30_08-04-37.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/e1b3eb827561/2026-05-30_08-04-37.md",
+      "bytes": 29254,
+      "sha256": "a6a57d101bdccc57d6e03601407f40ffe215f1ff2ee52e8e4d5c0442114a8088",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/e1b3eb827561/2026-05-31_08-04-24.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/e1b3eb827561/2026-05-31_08-04-24.md",
+      "bytes": 31612,
+      "sha256": "9c6032f80e73ebdbf4d2757a04d1c4e5fc06b4a7bcc7fab50c3afb7be99d968e",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/e1b3eb827561/2026-06-01_08-06-10.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/e1b3eb827561/2026-06-01_08-06-10.md",
+      "bytes": 35411,
+      "sha256": "72f0b5a37715e66bb4a760f9951eca1ab7e2216408c157d273783cca19897455",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/e1b3eb827561/2026-06-02_08-02-55.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/e1b3eb827561/2026-06-02_08-02-55.md",
+      "bytes": 38108,
+      "sha256": "443185c83d9cf975dd5726a764902448eb3929d79b9a9222027173b6e1ce6a91",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/output/e1b3eb827561/2026-06-03_08-03-12.md",
+      "source": "/root/.hermes/profiles/mennonite/cron/output/e1b3eb827561/2026-06-03_08-03-12.md",
+      "bytes": 41426,
+      "sha256": "bc1c81e7df7d79c51caf14900d75d13b0fcfa724cff0b26e5b4c5c2446af1098",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/ticker_heartbeat",
+      "source": "/root/.hermes/profiles/mennonite/cron/ticker_heartbeat",
+      "bytes": 18,
+      "sha256": "e62a63208f802b90cc1bd8b44a1b0513ebfceba3f50b273c482fb006294eef73",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/cron/ticker_last_success",
+      "source": "/root/.hermes/profiles/mennonite/cron/ticker_last_success",
+      "bytes": 17,
+      "sha256": "477a891ae94ec7e9377ae07d7c352c29d18b738aecad0b2a45d9f926e9fea3ba",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/agent.log",
+      "source": "/root/.hermes/profiles/mennonite/logs/agent.log",
+      "bytes": 2259848,
+      "sha256": "e9ebd6bf16d89f580684c4c290b2c34d69a1f8bd10100b122c81ab2a09d60a3b",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/agent.log.1",
+      "source": "/root/.hermes/profiles/mennonite/logs/agent.log.1",
+      "bytes": 5242850,
+      "sha256": "c13fe715cec3a010d49ae4fa37dc7cbd0ce1c38a022649e0d2500aa2cd37db95",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/agent.log.2",
+      "source": "/root/.hermes/profiles/mennonite/logs/agent.log.2",
+      "bytes": 5242878,
+      "sha256": "3681885548b8738c6513564b1f7c8cfd5d5d688e9da94310b735bc8dfd1d6806",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/curator/20260531-182931/REPORT.md",
+      "source": "/root/.hermes/profiles/mennonite/logs/curator/20260531-182931/REPORT.md",
+      "bytes": 1723,
+      "sha256": "b7da61950369c0cee72ec77d09af2004284e23c356d36d4a2615d6e08546cca9",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/curator/20260531-182931/run.json",
+      "source": "/root/.hermes/profiles/mennonite/logs/curator/20260531-182931/run.json",
+      "bytes": 2478,
+      "sha256": "9c014cb840590e1bea585ed3279ac452e18982b7eacabedc990ecdfb10346302",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/curator/20260808-021634/REPORT.md",
+      "source": "/root/.hermes/profiles/mennonite/logs/curator/20260808-021634/REPORT.md",
+      "bytes": 799,
+      "sha256": "c51e5a410a5c2dbbbff1d00c24278210175beb895aa118288d25d4ee73a662de",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/curator/20260808-021634/run.json",
+      "source": "/root/.hermes/profiles/mennonite/logs/curator/20260808-021634/run.json",
+      "bytes": 855,
+      "sha256": "07f083abfcb8f2fc7dc78758d0d19b2c8e3ffe69c83f37dbaa3b7416cf392edd",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/errors.log",
+      "source": "/root/.hermes/profiles/mennonite/logs/errors.log",
+      "bytes": 594996,
+      "sha256": "62ab0c0760da16198f930444b708d59fbcc15b5f1cfaaa1183d91f2e14af1a0f",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/errors.log.1",
+      "source": "/root/.hermes/profiles/mennonite/logs/errors.log.1",
+      "bytes": 2097054,
+      "sha256": "2ef31efe0c674856e86b02b06e2393297b901d541f917beea0f2697ecc031f15",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/errors.log.2",
+      "source": "/root/.hermes/profiles/mennonite/logs/errors.log.2",
+      "bytes": 2097009,
+      "sha256": "8203dc24a6de83fc71ae999e30090c95c9653aa5edf37106f787a9e5498768ca",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/gateway-exit-diag.log",
+      "source": "/root/.hermes/profiles/mennonite/logs/gateway-exit-diag.log",
+      "bytes": 10945,
+      "sha256": "d5eacc9f0597eee6b8fcc3f324b8365e74bcd67ea1e1610335fccc66c31a6047",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/gateway.log",
+      "source": "/root/.hermes/profiles/mennonite/logs/gateway.log",
+      "bytes": 509261,
+      "sha256": "f7abe66523338fb641875de2e9f39f011b7899330a0cb54e604d3f3c2a9da11e",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/logs/update.log",
+      "source": "/root/.hermes/profiles/mennonite/logs/update.log",
+      "bytes": 1021,
+      "sha256": "a01eb1ec75fdbc17daf6d01659d881dde2fd7509dc1b6530409f719f9647e291",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/memories/MEMORY.md",
+      "source": "/root/.hermes/profiles/mennonite/memories/MEMORY.md",
+      "bytes": 999,
+      "sha256": "85cf485604d6da53d1fa1e9986dd7ab08e29ef472e1f7af57ba62fe7e53bd2d4",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/memories/USER.md",
+      "source": "/root/.hermes/profiles/mennonite/memories/USER.md",
+      "bytes": 700,
+      "sha256": "b60d70c173453c035f76268832af1963453f8314bc027ee9166a716f79ef0975",
+      "redactions": 0
+    },
+    {
+      "destination": "profiles/mennonite/profile.yaml",
+      "source": "/root/.hermes/profiles/mennonite/profile.yaml",
+      "bytes": 171,
+      "sha256": "5abe097c89749b3ea8a9b3cc597de8fd22c31be3f77b3a424bba0236c0f4fce5",
+      "redactions": 0
+    },
+    {
+      "destination": "shared/SOMBERSOFT_HARNESS.md",
+      "source": "/root/.hermes/shared/SOMBERSOFT_HARNESS.md",
+      "bytes": 11382,
+      "sha256": "1ca8ac9ce32b5aa5c59cccb99302e376cd4c0c45b72b93635c5d17ba321ee5eb",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/board-game-rules-research/SKILL.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/research/board-game-rules-research/SKILL.md",
+      "bytes": 13578,
+      "sha256": "dca16fafb62faff83ca129d90336855e1b83e67a0a8c8f1c820b26de0eb83e32",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/board-game-rules-research/references/20-strong-cloudspire-source-test.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/research/board-game-rules-research/references/20-strong-cloudspire-source-test.md",
+      "bytes": 1571,
+      "sha256": "b77454f0d2badeabc1a9e9cee4f0b294b63e96fe3f5ad0f5b60f94a41f8facd6",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/board-game-rules-research/references/crew-planet-nine-scouting.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/research/board-game-rules-research/references/crew-planet-nine-scouting.md",
+      "bytes": 4175,
+      "sha256": "be7cf384713a50b07262bae5e176904a6a35464abe1249d9091ae74d67e8ee9b",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/board-game-rules-research/references/fresh-receipt-verification.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/research/board-game-rules-research/references/fresh-receipt-verification.md",
+      "bytes": 1850,
+      "sha256": "07a4d87ec6e7ca8db85148bae7bcc1f0689a3ae1a24912d36a051c624347521d",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/board-game-rules-research/references/intake-visuals-and-intermediate-ci.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/research/board-game-rules-research/references/intake-visuals-and-intermediate-ci.md",
+      "bytes": 3984,
+      "sha256": "75c3ccc47023321d5ab38b1f24b4133bc8c094696cd9a4493d5315a1b5475dd5",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/board-game-rules-research/references/revise-replay-receipts.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/research/board-game-rules-research/references/revise-replay-receipts.md",
+      "bytes": 2735,
+      "sha256": "2ca7cbc088a081de5e71532fb42a4c2a38963749cad026a144d41142450b5290",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/github-pr-workflow/SKILL.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/github/github-pr-workflow/SKILL.md",
+      "bytes": 14186,
+      "sha256": "92de386a79a37b4c68d575fc3c0f09a7529418b0889a8b27e54c114cdb0dc240",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/github-pr-workflow/references/ci-troubleshooting.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/github/github-pr-workflow/references/ci-troubleshooting.md",
+      "bytes": 4879,
+      "sha256": "c72b2301e9b85c545c4960722dbd4c0d49c5d883e6d86438e932bd47b1d8eee0",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/github-pr-workflow/references/conflict-resolution-permission-gate.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/github/github-pr-workflow/references/conflict-resolution-permission-gate.md",
+      "bytes": 1712,
+      "sha256": "94eea415f5f644d1c736b511f2b5fee45accb325477e0c4f1af7265e362dffc5",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/github-pr-workflow/references/conventional-commits.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/github/github-pr-workflow/references/conventional-commits.md",
+      "bytes": 2417,
+      "sha256": "2d71a3b701b08c2e5ed5248d17928eb11e27d7b357f9e2dca27caee9cc017aab",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/github-pr-workflow/references/pr-conflict-resolution-source-of-truth.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/github/github-pr-workflow/references/pr-conflict-resolution-source-of-truth.md",
+      "bytes": 3211,
+      "sha256": "b8cca36057e78c8dfa5981392d1d1f8406c5ecedc9623e4447fe17cf77ecb206",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/github-pr-workflow/references/stale-branch-salvage.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/github/github-pr-workflow/references/stale-branch-salvage.md",
+      "bytes": 2199,
+      "sha256": "aa3aeb1b4e6ae4aa9ca00309f51b4d3d81c38a0501c98709f31bd413db15ea7e",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/github-pr-workflow/templates/pr-body-bugfix.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/github/github-pr-workflow/templates/pr-body-bugfix.md",
+      "bytes": 513,
+      "sha256": "e8c31915b87dba0454d7520a3aa45ef8650fd0e50e48e277db855ff919e6251a",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/github-pr-workflow/templates/pr-body-feature.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/github/github-pr-workflow/templates/pr-body-feature.md",
+      "bytes": 580,
+      "sha256": "875e815da6e0e3df2763a85c9c2a56a776461da39d4181a1487333c0bf5b9276",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/SKILL.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/SKILL.md",
+      "bytes": 89369,
+      "sha256": "a8fcabd71e4ac29d051abe9b35d7915eea77db0ab6a87881453fc2413ca1b00b",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-action-model-pins-and-phase-queue.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-action-model-pins-and-phase-queue.md",
+      "bytes": 2421,
+      "sha256": "c40588dee576f91a05c550a220d4f220f2d1a25acce4ae10d0d809ce040246fd",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-agenda-and-evidence-decisions.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-agenda-and-evidence-decisions.md",
+      "bytes": 3153,
+      "sha256": "d13457d7248a2ba1541d1f940f35e634bd07f1ed0e5236b2eca8b3f7e10edb89",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-attention-ledger-cadence.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-attention-ledger-cadence.md",
+      "bytes": 2550,
+      "sha256": "2998b798963588d99268d0428d6f25f3007032647185f3de29a4f18e78435a89",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-attention-ledger-staleness-audit.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-attention-ledger-staleness-audit.md",
+      "bytes": 2484,
+      "sha256": "fdfca9ec28067aa9a15409efb046f38fcf7f3e275b539ee5f6a6b0f13519e111",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-checkin-and-phase-capture.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-checkin-and-phase-capture.md",
+      "bytes": 2590,
+      "sha256": "86f710956203202fff8f2a58cfa9b92f933586545fd47d9a9ec626a53e8a3569",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-combat-resource-truth.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-combat-resource-truth.md",
+      "bytes": 3215,
+      "sha256": "f78b6ab839f32b397af2deee724ddefb0d7dbb411d680ffb10af7dd6cfb3b360",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-cross-repo-combat-audit.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-cross-repo-combat-audit.md",
+      "bytes": 3125,
+      "sha256": "5a956c61cb77a87941f05cf42fce7b1e2197f02b7ffbecb31d555af17f036024",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-cross-repo-design-dissemination.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-cross-repo-design-dissemination.md",
+      "bytes": 3298,
+      "sha256": "ba23cbe089056230a573b6ef5e7bce83b02bf840b4a4d77d2714810673021526",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-cross-repo-doctrine-to-mobile-design-doc.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-cross-repo-doctrine-to-mobile-design-doc.md",
+      "bytes": 3253,
+      "sha256": "93cb5012a8a29cdaba23ffa5ee6db5bfbe74d03da1f2214e88afaacc9950b475",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-cross-repo-hazard-doctrine-dissemination.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-cross-repo-hazard-doctrine-dissemination.md",
+      "bytes": 3244,
+      "sha256": "cf885630edc2ca7fee88db368e66c4e6be2b411a15f9a668eda266e3db180d9f",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-cross-repo-mechanics-release.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-cross-repo-mechanics-release.md",
+      "bytes": 7190,
+      "sha256": "565547d2408f3a76027885a1d64f543a064ffb3e3fa0fd864baee6bddeca3e57",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-daily-playthrough-cron.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-daily-playthrough-cron.md",
+      "bytes": 5914,
+      "sha256": "1ce119850ff5ab1e96f9d892d43e537af324a227a70e5d8bd61a286b6b3a11a6",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-encounter-taxonomy.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-encounter-taxonomy.md",
+      "bytes": 1712,
+      "sha256": "d0c5d7fa86510dbcc5f3e9e8766819f16ecae78a99d479e4e9657bdc445d6d6f",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-equipment-ownership-and-release-provenance.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-equipment-ownership-and-release-provenance.md",
+      "bytes": 2836,
+      "sha256": "9d5fa22f8fbb14c302523dd536b095eff751f9f1018a7ebfb66785fbd6841d93",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-game-cli-route-hazard-handoff.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-game-cli-route-hazard-handoff.md",
+      "bytes": 3747,
+      "sha256": "47c6c3aa33a48fffbf37c6da8683956091ec6613509787a0ae21b8adb78c8caa",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-hazard-cli-tuning-evidence.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-hazard-cli-tuning-evidence.md",
+      "bytes": 3868,
+      "sha256": "c96e95f05608e18d7c0be264f2f7d02198ac43c1dee94dcec57f8d03fc7b1b40",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-kid-first-map-combat-html-report.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-kid-first-map-combat-html-report.md",
+      "bytes": 3924,
+      "sha256": "5b24d43be05457c76573da54a4cb86573c0c7dc3517f37e192e219a8907a54d0",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-kid-monorepo-route-combat-playtest-evidence.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-kid-monorepo-route-combat-playtest-evidence.md",
+      "bytes": 3491,
+      "sha256": "115fa512184374310416238e1b4b5a03f29f0137c522ff81ce4ced2d92aedbe5",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-labyrinth-reference-mining.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-labyrinth-reference-mining.md",
+      "bytes": 4091,
+      "sha256": "652ea3f103acb152f5e3fd4a2c65eec8d71f0ee11ef1be2eb3146ae234fa3311",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-manual-playthrough-evidence.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-manual-playthrough-evidence.md",
+      "bytes": 4110,
+      "sha256": "240632a5ee7ad8fe9265eb12ad88e2aa06caeda311eca897d11ba08aff028e14",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-manual-playthrough-triage.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-manual-playthrough-triage.md",
+      "bytes": 3352,
+      "sha256": "32cd945b6ab5bde44bbcdea4febcdc1a4193b7f6de31b30cff32432e74a4f9b8",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-march-claude-actions-permissions.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-march-claude-actions-permissions.md",
+      "bytes": 3328,
+      "sha256": "f9fe35d38d8c00fec2ada17322cb55dbe03ec16e4135daca2897a82286037768",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-march-manual-phase-focus.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-march-manual-phase-focus.md",
+      "bytes": 2045,
+      "sha256": "44c27836ec833f98d83bdf56293be6d6e969ab718a25f2b5ffac17db434026fa",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-mechanics-release-to-mobile-phase.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-mechanics-release-to-mobile-phase.md",
+      "bytes": 2211,
+      "sha256": "441303e97f53f2956708ad407831c6d559aad930a69569b97a6122f61594c0a7",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-memoir-inner-tabs.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-memoir-inner-tabs.md",
+      "bytes": 2839,
+      "sha256": "51bfcb5b6e9325834d213381912fc56b3fe41d45e1dcf5acac995c750b48e133",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-mobile-combat-ladder-watchpoints.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-mobile-combat-ladder-watchpoints.md",
+      "bytes": 3763,
+      "sha256": "1320f17a9da9e90abeda21af39b5c89ea1346dbf1b79fce7a96e287b00c31931",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-mobile-combat-ux-tuning-automation.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-mobile-combat-ux-tuning-automation.md",
+      "bytes": 2361,
+      "sha256": "76e90ba18744a06c54ae08007e3d314a546a1324f1b9f0f89bcc1a5f17277b46",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-mobile-dev-menu-populate.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-mobile-dev-menu-populate.md",
+      "bytes": 2805,
+      "sha256": "06fef73032485d7ed08ba081174bb48a25ffb040b7315b4bcdba8ffb655142df",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-mobile-map-node-truth.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-mobile-map-node-truth.md",
+      "bytes": 2367,
+      "sha256": "ad93159050fa1d48806cf331371ce46693f31c7a0813d122a65d27a80d02a68d",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-mobile-minigame-e2e-depth.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-mobile-minigame-e2e-depth.md",
+      "bytes": 2636,
+      "sha256": "05add2fdc17be593375991e2140877c36be94dc6fb1c283982b94dd05f2ef398",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-mobile-repo-local-skills.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-mobile-repo-local-skills.md",
+      "bytes": 2100,
+      "sha256": "e55f83ee3e786706150f7b71f67e347b7895ea76be3788e60d320ce1fe8a19e9",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-mobile-ui-playtest-harness.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-mobile-ui-playtest-harness.md",
+      "bytes": 4250,
+      "sha256": "b46a2dfa1d680c87d2cb2d4996e78733560ed034e956a6b5e5b09bf93c33e565",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-mobile-visual-baseline-approval.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-mobile-visual-baseline-approval.md",
+      "bytes": 4363,
+      "sha256": "4cd3f275189b7cf138db8f1f1819d2bf00106f9fc20d3abb372a0656dd744021",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-playtest-evidence.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-playtest-evidence.md",
+      "bytes": 1549,
+      "sha256": "197038d3402538ec245737ff30a0a7303985163b11ed17026da3d88e7f38b6ef",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-promoted-phase-handoff.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-promoted-phase-handoff.md",
+      "bytes": 4075,
+      "sha256": "7e5a4bb9113bba698740298fd10b5284bece42059314fd2f83d2d8a3266c794a",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-repo-hygiene-after-autonomous-work.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-repo-hygiene-after-autonomous-work.md",
+      "bytes": 3455,
+      "sha256": "dc5783b487dba3c4a83aa794365f429afd47762a797a8c3a0af6e108236fea48",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-repo-skills-as-github-actions.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-repo-skills-as-github-actions.md",
+      "bytes": 2036,
+      "sha256": "e6cb752870c8c7f1189430be3fca931c7fc9c8f0c9204b0d0a0285dca968ad08",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-roster-wide-difficulty-tuning-loop.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-roster-wide-difficulty-tuning-loop.md",
+      "bytes": 5016,
+      "sha256": "d5572375b7107f1fc4782813a5061f12eacf607e34a4fc7c6b4e6de733b69a50",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-roundtable-affix-loot-review.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-roundtable-affix-loot-review.md",
+      "bytes": 3616,
+      "sha256": "e20d004218b68b2ee44ab526524f721a5d4b07ff260093ade90ecf664e213cd9",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-roundtable-release-provenance-and-browser-harness-drift.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-roundtable-release-provenance-and-browser-harness-drift.md",
+      "bytes": 2230,
+      "sha256": "5c8197b1c5f9ab8b962fa72a46d78028bef5830a1047ed6509ae25c16db514c6",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-skills-cards-terminology.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-skills-cards-terminology.md",
+      "bytes": 2445,
+      "sha256": "db1e51fe055ecdee101901863e0ba95ed6da78e5686c9629ba268cec449447e0",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/axiomancer-temporary-encounter-shell-phase.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/axiomancer-temporary-encounter-shell-phase.md",
+      "bytes": 2397,
+      "sha256": "5d99570b0eb851debb60464a31086288857542141779492c1540eb31a4658b05",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/blood-meridian-persona-and-narrative-corpus.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/blood-meridian-persona-and-narrative-corpus.md",
+      "bytes": 3053,
+      "sha256": "bfe14d0c3eece631374b979f29c7a614f0b1224aaa830c884624a3529a15f793",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/game-kb-ready-audit-branch-gate.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/game-kb-ready-audit-branch-gate.md",
+      "bytes": 2853,
+      "sha256": "b4fbcd1c4b091f85580ff2866b04271118504c8c0e8a3a5d33f47ac6b2688b22",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/glanton-nexus-state-marshal.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/glanton-nexus-state-marshal.md",
+      "bytes": 2688,
+      "sha256": "342f8d851aee8926b5d6637ef2100e22a2c2142ed2dd47fcc1aa039b7496704a",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/glanton-overnight-drift-promotion.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/glanton-overnight-drift-promotion.md",
+      "bytes": 2269,
+      "sha256": "e365d06568293b37bbd1ce650010493a8e46d072332beccec2bdddb6646bbcd7",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/hermes-profile-project-mcp-wiring.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/hermes-profile-project-mcp-wiring.md",
+      "bytes": 3242,
+      "sha256": "08f169b7a87ff0b920b70e16dff69a81162946a9b48ccf12e20780f490a190f2",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/hermes-upgrades-ledger.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/hermes-upgrades-ledger.md",
+      "bytes": 3280,
+      "sha256": "d0921698229616152ab544f8d204b92c788580a811faeeac7aa1e1b3a354b80b",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-agents/README.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-agents/README.md",
+      "bytes": 3628,
+      "sha256": "86084750a23e4809956f9a9ec125fb69053d041c4406977a646322858a40e901",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-agents/_TEMPLATE.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-agents/_TEMPLATE.md",
+      "bytes": 3063,
+      "sha256": "50d78dac92341e2eb1d5d9aa3884158a1c1b1a6cbd07ad1fea8f2b8a964eafe5",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-agents/boss.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-agents/boss.md",
+      "bytes": 2277,
+      "sha256": "49f8f1963dae3fced7e5921ea9ae8819c56495d815f65826fa46aa7865820040",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-agents/combat.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-agents/combat.md",
+      "bytes": 6914,
+      "sha256": "cc5c905e973af0d38ccdc0e22a17af4e735c1cc3595caf29f1fcbb20891b7018",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-agents/gather.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-agents/gather.md",
+      "bytes": 9203,
+      "sha256": "d3acaaf0972533982582cfeeb0656078907107dbb8ea66201a7d7482f693d00b",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-agents/hazard-combat-first-level.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-agents/hazard-combat-first-level.md",
+      "bytes": 14719,
+      "sha256": "2cb1fd0fd13170dfbee9e063fcc92fd09b600cc8017571159f32b3e32aaeb95c",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-agents/hazard.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-agents/hazard.md",
+      "bytes": 14506,
+      "sha256": "276fabbebadcad3740071650833c7443fa31bb04bb82c73bfb4c0b3b65f1623e",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-agents/quest.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-agents/quest.md",
+      "bytes": 2229,
+      "sha256": "2a44b8b50f72ca4c6087b3087ce941f8de723dea55e2749a6c97e1d9e5a6b489",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-agents/rest.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-agents/rest.md",
+      "bytes": 2055,
+      "sha256": "0c9850a1300173883e3042de7372470c5f516244c4de8bfb044be0f4302ce83e",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-agents/treasure.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-agents/treasure.md",
+      "bytes": 2181,
+      "sha256": "b5cadd7b052188d2e3dceb9364fd57f0d586b31f2a7b746e423e02b420473ab1",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/kid-encounter-playtest-learning.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/kid-encounter-playtest-learning.md",
+      "bytes": 17005,
+      "sha256": "3d6f29bb3e0e68e34839d5743993b1eff225f531cbbfa8d71909ec073ba26a3a",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/onboarding-context.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/onboarding-context.md",
+      "bytes": 1238,
+      "sha256": "679f412ca9bb79b2ffc9e4793ded861a8619bd18c34f0150d9747f8d9aad1b5a",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-adr-cdr-decision-records.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-adr-cdr-decision-records.md",
+      "bytes": 4375,
+      "sha256": "67e283858bb0068af776f14af27d0e99b01d3ed59d74f706a3fa704e5d2b7093",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-agent-power-integrations.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-agent-power-integrations.md",
+      "bytes": 4710,
+      "sha256": "cc4aa140057b324aa16b0793543623681fb09e122bb0f25ea603421d2ec0b507",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-command-ledger-and-rituals.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-command-ledger-and-rituals.md",
+      "bytes": 5065,
+      "sha256": "d725665508d07d5ea406bf50abced0aa9279e1ba99f8d00552ec93d4821c9c1e",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-command-ledger-rituals.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-command-ledger-rituals.md",
+      "bytes": 5983,
+      "sha256": "a2a4cc55546c285d8b2195d2aed3f540af35abcc4213775aeefb295afe03bb41",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-context-compression-spikes.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-context-compression-spikes.md",
+      "bytes": 3213,
+      "sha256": "dae2e7540b26e02b0d38db5548515da8761a60a3084c6d0746dbeba6c0ee4719",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-cron-prompt-and-toolset-updates.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-cron-prompt-and-toolset-updates.md",
+      "bytes": 2491,
+      "sha256": "9c286d268604b2776e535e5c0797a2365b0b95c2df31a81834ff51e4d0458313",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-daily-roundtable-mainline-witness.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-daily-roundtable-mainline-witness.md",
+      "bytes": 4076,
+      "sha256": "875698c06f278712d581cc63b717c0be38bed6f55426ce150777c815a9ee2899",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-devlog-workday-maps.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-devlog-workday-maps.md",
+      "bytes": 2808,
+      "sha256": "e9c1f56a3053875baabe3cdbbcea0ce90dfc4a1d51d30f089877b2f89714247c",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-doctrine-alignment-audit.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-doctrine-alignment-audit.md",
+      "bytes": 3735,
+      "sha256": "1d8c2019b54453c724994678cc2b506ce3b6dd7f5bb9f0744464f454236466f3",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-doctrine-sweeper.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-doctrine-sweeper.md",
+      "bytes": 2041,
+      "sha256": "8224831f996979f110200ead999442055f5de0d602b4f9386481ffc4e60a9cda",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-external-reference-asset-imports.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-external-reference-asset-imports.md",
+      "bytes": 1716,
+      "sha256": "c2a2da495e746d86d31b91dc1afd328b2b5b5000ab2200e63ed1789762a63992",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-github-branch-pr-policy.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-github-branch-pr-policy.md",
+      "bytes": 2015,
+      "sha256": "da31238836962604178b6b17269929ea6efe113a12b59b33c6338e9dcd1eaf81",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-hermes-global-npm-tooling.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-hermes-global-npm-tooling.md",
+      "bytes": 5504,
+      "sha256": "c0e9d6034c5c71d96d05ab0996b3aea10228cd920cc54b2304d5814cc647aa4a",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-memory-nexus-html-review.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-memory-nexus-html-review.md",
+      "bytes": 2137,
+      "sha256": "34ecb8893e24ec692360cb1b759079a0bdfb3ff2cf004e8ea6d107928c7ba80d",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-memory-seeding.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-memory-seeding.md",
+      "bytes": 2984,
+      "sha256": "63a642df71c46c03920b51747638dd2a22e084a0c4f8807a03baf9009091949a",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-monorepo-and-kb-isolation.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-monorepo-and-kb-isolation.md",
+      "bytes": 2658,
+      "sha256": "645616476ba62b092b92f304956758535ba11b4bc13c29041bc8ba390f041277",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-monthly-strategy-court.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-monthly-strategy-court.md",
+      "bytes": 4277,
+      "sha256": "ea9a8489c8979a32d60839a97960c5f0b55ebcd87b849f09734f6f1fce321056",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-production-ritual-bootstrap.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-production-ritual-bootstrap.md",
+      "bytes": 2155,
+      "sha256": "9d73a2d51899c31129f5c68396487c0e5cc512147c2194f57d7081a0d55171f3",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-public-artifact-staging.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-public-artifact-staging.md",
+      "bytes": 1602,
+      "sha256": "af031e72feea81c842ec9228f8f41b289d84676bf939f59fce44224ae2e9dba6",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-release-automation-actions.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-release-automation-actions.md",
+      "bytes": 3058,
+      "sha256": "9b7427bfc4f051df3043683b59b015f5e3967b9e5f2bf340cbd2f296fcadeac5",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-release-automation-github-actions.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-release-automation-github-actions.md",
+      "bytes": 3636,
+      "sha256": "7b6ea5aa3ec12cb9abddab5b8f829ee29d1273893bbfdc8813b50ca4097b6cde",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-scheduled-repo-hygiene.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-scheduled-repo-hygiene.md",
+      "bytes": 2738,
+      "sha256": "28f960c608e049099d14b62e1548472bee7577c308ee70aad2ac4d1de2eff519",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-specialist-cron-and-skill-profile-updates.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-specialist-cron-and-skill-profile-updates.md",
+      "bytes": 2464,
+      "sha256": "d6e8403f82c3b6d7223d67f67b4771cdeccecc3e778f6f1c3cb7ecb05f3a732f",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-specialist-hermes-profiles.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-specialist-hermes-profiles.md",
+      "bytes": 8817,
+      "sha256": "2b65cdec1840d8899bcb906df1fa4770b10b1dc98cea9585ae50aed3c3afe2da",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-weekly-alignment.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-weekly-alignment.md",
+      "bytes": 6552,
+      "sha256": "18bd10af8cc418228fa4d571573c101b7af4523e66d0bfd0cf09f9ecbd5f8056",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/sombersoft-workspace-consolidation.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/sombersoft-workspace-consolidation.md",
+      "bytes": 1894,
+      "sha256": "6f8fcb53e5ff185e9731c9ddbfa3d9f838fa429aad1bbf07310e86b0316e9c8b",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/third-party-card-library-discovery.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/third-party-card-library-discovery.md",
+      "bytes": 3057,
+      "sha256": "012adb8b7f7f1f9828733ff6b18c46f97ae8b7c1afc648a13a43687cf5812cf4",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/sombersoft-project-partner/references/toadvine-art-pipeline.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/project-workflows/sombersoft-project-partner/references/toadvine-art-pipeline.md",
+      "bytes": 2928,
+      "sha256": "ac736e266bfd0c0df7932e2e3c87f51c751ea6d9f4a30f522b8c28c39ab82e00",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/subagent-driven-development/SKILL.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/software-development/subagent-driven-development/SKILL.md",
+      "bytes": 11392,
+      "sha256": "11ecbf9b67e8b12071f9eb6786c32d5767b2da5f1cc7a4f56c9c3a77068bb3c9",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/subagent-driven-development/references/context-budget-discipline.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/software-development/subagent-driven-development/references/context-budget-discipline.md",
+      "bytes": 4209,
+      "sha256": "325d4f3b16db3215a1d7d8771b4c03af40cad62a468df5c44757c1e6366f2c9c",
+      "redactions": 0
+    },
+    {
+      "destination": "skills/subagent-driven-development/references/gates-taxonomy.md",
+      "source": "/root/.hermes/profiles/bathcat/skills/software-development/subagent-driven-development/references/gates-taxonomy.md",
+      "bytes": 4668,
+      "sha256": "2740dbfb83cb58d2e8bffd6d2dca95c2dbccca3b60138dcb81b9be905554043a",
+      "redactions": 0
+    },
+    {
+      "destination": "status/bathcat-cron.txt",
+      "source": "live Bathcat cron list",
+      "bytes": 2591,
+      "sha256": "ee87853c45dcda057b5755be6337443be39a86b1b3990aafdd897766df886bbe",
+      "redactions": 0
+    },
+    {
+      "destination": "status/bridge-systemd.txt",
+      "source": "live bridge systemd status",
+      "bytes": 107,
+      "sha256": "bd46fd3168b9c2f4eefdff0b5f5f8e0e2a2d8e31704ab6807b846fd35ce1e4d8",
+      "redactions": 0
+    },
+    {
+      "destination": "status/mennonite-cron.txt",
+      "source": "live Mennonite cron list",
+      "bytes": 2570,
+      "sha256": "4a1a2ef96be216a336563127ac8ad16e7035db824b1f09d6284a7497387f1334",
+      "redactions": 0
+    },
+    {
+      "destination": "status/open-prs.json",
+      "source": "live GitHub open PR list",
+      "bytes": 1755,
+      "sha256": "f397fab275ef411da885860f6b1877f2c55a5ffecf5a593099b4c1efa31d14fb",
+      "redactions": 0
+    },
+    {
+      "destination": "status/recent-runs.json",
+      "source": "live GitHub workflow runs",
+      "bytes": 12995,
+      "sha256": "70cfa548b1137d8a2281ee2bd8c0696660c31d2aac3eccd2bf399a90608d0a42",
+      "redactions": 0
+    },
+    {
+      "destination": "status/repository.txt",
+      "source": "live git status",
+      "bytes": 138,
+      "sha256": "204e39e305f1161a2aaaef9c1e2f37a403ee30250a587225f5e8d2cbaec57b09",
+      "redactions": 0
+    }
+  ]
+}

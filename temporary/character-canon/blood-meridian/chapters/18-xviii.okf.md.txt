@@ -1,0 +1,41 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 18
+  title: XVIII
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [185, 186, 187, 188]
+status: verified
+---
+
+## Plot
+- **Observed:** Glanton's party returns from an all-night Yuma parley after agreeing to conspire in seizing the ferry. [PDF pp. 185–186]
+- **Observed:** Sarah Borginnis confronts Cloyce Bell over his treatment of James Robert, organizes the man's bathing and clothing, and has the cage burned. [PDF pp. 185–187]
+- **Observed:** James Robert later sheds his clothes, enters the river, and begins to drown; the naked judge retrieves and revives him, then carries him back to camp. [PDF pp. 187–188]
+- **Inference:** The chapter pairs two apparent liberations—one communal and one controlled by the judge—without making them ethically equivalent. [PDF pp. 186–188]
+
+## Character Evidence
+- **Observed:** Borginnis names James Robert, touches him despite his filth, recruits practical aid, and replaces confinement with bathing, clothing, food, and bedding. [PDF pp. 185–187]
+- **Inference:** Her authority is care enacted through concrete tasks rather than abstract doctrine. [PDF pp. 185–187]
+- **Observed:** Cloyce says he has done all he can and offers his brother to Borginnis without resistance. [PDF pp. 185–186]
+- **Inference:** His surrender of responsibility exposes custody without care as exploitation. [PDF pp. 185–186]
+- **Observed:** The judge is present at the exact river location, rescues James Robert physically, and restores him to the camp. [PDF pp. 187–188]
+- **Inference:** The rescue is genuinely effective, but the ritualized narration and later relationship leave the judge's motive unresolved in this chapter. [PDF pp. 187–188]
+
+## Voice & Narrative Techniques
+- **Observed:** The chapter moves from star-field scale to close bodily detail, then casts the rescue through birth and baptism analogies. [PDF pp. 185–188]
+- **Observed:** Women's collective speech provides an unusual counter-register of moral judgment and coordinated care. [PDF pp. 185–187]
+- **Inference:** Naming functions as recognition: repeated use of “James Robert” counters the company's dehumanizing labels. [PDF pp. 185–188]
+
+## SDLC Translation Candidates
+- **Inference:** **Care-centered incident lead:** name the affected person or system, remove harmful containment, assign immediate tasks, and restore minimum safe conditions. [PDF pp. 185–187]
+- **Inference:** **Custody audit:** reject claims of stewardship based only on possession; require evidence of maintenance, dignity, and informed transfer. [PDF pp. 185–187]
+- **Inference:** **Rescue reviewer:** credit effective remediation while separately examining motive, recurrence risk, and whether the rescuer gains control from the crisis. [PDF pp. 187–188]
+- **Inference:** **Accessible-operations agent:** translate moral urgency into soap, clothing, food, shelter, and supervision rather than policy language alone. [PDF pp. 186–187]
+
+## Open Questions
+- **Observed:** The text does not explain why James Robert removes his clothes or enters the river. [PDF p. 187]
+- **Observed:** The terms and intended execution of the ferry conspiracy remain unstated here. [PDF pp. 185–186]
+- **Inference:** Whether the judge anticipated the drowning cannot be established from this chapter. [PDF pp. 187–188]

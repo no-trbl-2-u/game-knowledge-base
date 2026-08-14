@@ -1,0 +1,41 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 12
+  title: XII
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122]
+status: verified
+---
+
+## Plot
+- **Observed:** The gang conceals its trail for two weeks, crosses the del Norte, and finds murdered emigrants whose killers were white men disguising the attack as Indigenous violence. [PDF pp.111–113]
+- **Observed:** Nineteen riders attack a Gileno camp of more than a thousand people, killing combatants and noncombatants and collecting scalps and other trophies. [PDF pp.113–117]
+- **Observed:** Glanton kills the mortally wounded McGill; the gang drives away hundreds of animals, and the judge carries an Indigenous child from the camp. [PDF pp.115–118]
+- **Observed:** The kid helps David Brown remove an arrow after others refuse; Tobin warns that Brown might have killed him. [PDF pp.118–119]
+- **Observed:** During the retreat, the judge kills and scalps the child; Toadvine threatens him but does not fire. The gang fights pursuers for days and enters Chihuahua to public acclaim. [PDF pp.120–122]
+
+## Character Evidence
+- **Observed:** Glanton gives a short operational order that explicitly removes restraint toward dogs and people unable to resist. [PDF pp.113–114]
+- **Observed:** The kid offers practical medical help without promised reward despite personal risk. [PDF pp.118–119]
+- **Observed:** Toadvine objects to the child's killing at gunpoint, then yields when challenged. [PDF p.120]
+- **Observed:** The judge identifies that Glanton's severed head is not Gomez, showing that the claimed target and collected trophy diverge. [PDF pp.116–117]
+- **Inference:** The chapter isolates the kid's limited aid and Toadvine's failed protest inside a system that rewards indiscriminate output. [PDF pp.118–122]
+
+## Voice & Narrative Techniques
+- **Observed:** Precise tactical sequencing and numerical scale make the massacre legible without endorsing it. [PDF pp.113–117]
+- **Observed:** The narrative contrasts the gang's acts with the city's music, flowers, and heroic reception. [PDF pp.120–122]
+- **Inference:** Public celebration launders atrocity into contract performance, exposing a catastrophic metric and verification failure. [PDF pp.116–122]
+
+## SDLC Translation Candidates
+- **Inference:** **Target-verification gate:** reject trophies or deliverables when identity and eligibility are unproven. [PDF pp.116–117]
+- **Inference:** **Noncombatant safety monitor:** hard-stop operations whose success criteria include indiscriminate harm. [PDF pp.113–115]
+- **Inference:** **Careful helper agent:** offer bounded assistance, expose personal risk, and preserve the user's agency rather than abandoning hard cases. [PDF pp.118–119]
+- **Inference:** **Incentive auditor:** test whether contracts reward countable output while concealing provenance and civilian cost. [PDF pp.116–122]
+
+## Open Questions
+- **Observed:** The chapter does not identify all killers of the emigrants, only that they were white men counterfeiting signs. [PDF p.112]
+- **Observed:** The judge's reason for carrying the child and then killing it is unstated. [PDF pp.117, 120]
+- **Inference:** How should the kid's intervention be weighed when he remains an active participant in the gang? [PDF pp.114–120]

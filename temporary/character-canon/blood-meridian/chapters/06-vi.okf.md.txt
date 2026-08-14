@@ -1,0 +1,50 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 6
+  title: VI
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [58, 59, 60, 61, 62]
+status: verified
+---
+
+## Plot
+
+- Chained prisoners, including the kid and Toadvine, are forced to collect refuse in Chihuahua under abusive guards (PDF pp. 58–59).
+- A Kentucky veteran recounts prior campaigns, looting, punishments, and the desecration of a Lipan burial cave (pp. 59–60).
+- Glanton's scalphunters enter the city with Judge Holden among them and gain access to the governor (pp. 60–61).
+- Toadvine learns that Glanton has a government contract paying for scalps and for Gómez's head; he falsely presents himself, the kid, and the veteran as experienced killers (p. 61).
+- Glanton equips the three on credit, securing their release; they leave Chihuahua with the gang after a public ceremony (pp. 61–62).
+
+## Character Evidence
+
+- **Toadvine:** Maintains gallows humor under forced labor, gathers actionable intelligence, and negotiates release by overstating the group's experience (pp. 58, 61).
+- **The kid:** Endures labor, watches the judge closely, and recounts the Comanche attack to fellow prisoners (pp. 58–61).
+- **The veteran:** Tells operationally detailed war stories while acknowledging looting, lethal punishment, and grave robbery; his tone is restrained rather than celebratory (pp. 59–60).
+- **Glanton:** Leads a heavily armed group and turns state payments for human trophies into a commercial operation (pp. 60–62).
+- **Judge Holden:** Appears socially polished within the gang, recognizes the kid, and silently acknowledges him before recruitment (pp. 60–61).
+
+## Voice & Narrative Techniques
+
+- Carceral routine reduces people to laboring bodies before personal histories re-emerge in dialogue.
+- Embedded war testimony complicates official victory narratives with theft, punishment, and desecration.
+- Civic ceremony and commercial bounty are juxtaposed with the gang's visible brutality.
+- Recognition between the kid and judge is conveyed through gaze rather than explanation.
+- Satirical understatement exposes the transformation of imprisonment into contractual violence.
+
+## SDLC Translation Candidates
+
+> The following are design inferences, not claims about software in the novel.
+
+- **Inference — Toadvine:** **Operational behavior:** discover a route out of a blocked state and assemble a team quickly. **Danger:** false capability claims create hidden operational risk. **Guardrail:** verify competencies, prohibit résumé inflation, and stage access through supervised trials.
+- **Inference — the veteran:** **Operational behavior:** preserve field knowledge through incident narratives. **Danger:** anecdotes can normalize misconduct or substitute for validated procedure. **Guardrail:** extract evidence, separate lessons from rationalizations, and document accountability.
+- **Inference — Glanton:** **Operational behavior:** align payment directly with measurable output. **Danger:** a crude metric rewards fraud, indiscriminate harm, and target substitution. **Guardrail:** audit provenance, measure outcomes rather than trophies, and reject incentives incompatible with rights.
+- **Inference — Judge Holden:** **Operational behavior:** maintain continuity across organizations and identify known operators. **Danger:** opaque influence bypasses due process. **Guardrail:** log sponsorship, conflicts, access decisions, and the factual basis for selection.
+
+## Open Questions
+
+- What role does the judge play in arranging the prisoners' recruitment and release?
+- Does Glanton know Toadvine exaggerated the three men's experience?
+- How voluntary is enlistment when it is the available alternative to imprisonment?

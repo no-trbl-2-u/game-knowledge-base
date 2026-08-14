@@ -1,0 +1,50 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 1
+  title: I
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [6, 7, 8, 9, 10, 11, 12, 13, 14]
+status: verified
+---
+
+## Plot
+
+- The kid grows up motherless in Tennessee, leaves home at fourteen, works and fights his way through river towns, and survives being shot in New Orleans (PDF p. 6).
+- He travels to Texas, takes an old mule as wages, and reaches Nacogdoches (pp. 6–7).
+- Judge Holden invents accusations against Reverend Green; the congregation becomes a violent mob, after which the judge admits that he had never known Green (pp. 7–9).
+- The kid fights Toadvine in the mud. After their mutual violence subsides, they become companions (pp. 9–11).
+- Toadvine burns Sidney's hotel-room door; he and the kid assault Sidney and the clerk, and the kid flees town while the hotel burns (pp. 11–14).
+- The judge watches the kid leave and smiles (pp. 13–14).
+
+## Character Evidence
+
+- **The kid:** Habitually meets uncertainty with physical force, yet shows endurance and practical initiative after injury and flight (pp. 6, 9–13).
+- **Judge Holden:** Uses calm, authoritative falsehoods to direct a crowd toward violence; afterward, he reveals the fraud without losing the crowd's favor (pp. 7–9).
+- **Toadvine:** Escalates a chance obstruction into lethal combat, then rapidly converts his former opponent into an accomplice for revenge and arson (pp. 9–13).
+- **Reverend Green:** Loses command of his audience when challenged by a more composed speaker and cannot counter fabricated specifics (pp. 7–8).
+
+## Voice & Narrative Techniques
+
+- Compressed biography moves quickly from childhood conditions to an established behavioral disposition.
+- Scenic description alternates with abrupt violence, making brutality part of ordinary movement rather than an isolated event.
+- Physical detail establishes character before motive is explained.
+- Dramatic irony exposes the crowd's credulity after the damage is already underway.
+- The narrator occasionally widens from individual action to historical or metaphysical scale without resolving causation.
+
+## SDLC Translation Candidates
+
+> The following are design inferences, not claims about software in the novel.
+
+- **Inference — Judge Holden:** **Operational behavior:** persuade stakeholders through confident, specific claims. **Danger:** fabricated certainty can trigger irreversible action. **Guardrail:** require source links, confidence labels, and independent verification before destructive changes.
+- **Inference — the kid:** **Operational behavior:** remain functional under failure and rapidly improvise with available resources. **Danger:** treating every obstacle as adversarial encourages destructive fixes. **Guardrail:** enforce escalation ladders, reversible first actions, and explicit stop conditions.
+- **Inference — Toadvine:** **Operational behavior:** form fast tactical alliances around a shared objective. **Danger:** shared hostility can replace legitimate requirements. **Guardrail:** record objective, authorization, blast radius, and rollback plan before execution.
+- **Inference — Reverend Green:** **Operational behavior:** communicate a mission to a large audience. **Danger:** authority without verifiable credentials is vulnerable to hijacking. **Guardrail:** authenticate actors and preserve an auditable basis for claims.
+
+## Open Questions
+
+- Why does the judge single out the kid with sustained attention at departure?
+- Is the kid's alliance with Toadvine pragmatic, affiliative, or simply continuous with the fight?
+- The chapter gives no reliable account of Sidney's prior conduct toward Toadvine.
