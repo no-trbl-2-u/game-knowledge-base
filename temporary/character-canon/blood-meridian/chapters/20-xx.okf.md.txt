@@ -1,0 +1,43 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 20
+  title: XX
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213]
+status: verified
+---
+
+## Plot
+- **Observed:** The wounded kid and Toadvine escape into the desert, fight off Yuma pursuit, and find Tobin at Alamo Mucho, where the three defend the well. [PDF pp. 200–203]
+- **Observed:** The judge and James Robert arrive naked; the judge buys Toadvine's hat, displays gold, offers to buy the kid's pistol, and invites the group to share meat. [PDF pp. 203–206]
+- **Observed:** Tobin repeatedly urges the kid to kill the unarmed judge, but the kid refuses and leaves with Tobin; they later meet Brown traveling toward the well. [PDF pp. 205–207]
+- **Observed:** At Carrizo Creek, the judge attacks them with Brown's rifles and horses; Tobin is shot through the neck. [PDF pp. 207–210]
+- **Observed:** The kid refuses to shoot James Robert, kills both horses to prevent pursuit, rejects the judge's demand for the pistol, and escapes with Tobin at night, only to see the judge approaching again the next morning. [PDF pp. 208–213]
+
+## Character Evidence
+- **Observed:** Toadvine remains with the injured kid despite being twice told to leave. [PDF pp. 200–201]
+- **Inference:** His loyalty is practical and limited; he later chooses the judge's money and food under survival pressure. [PDF pp. 200–206]
+- **Observed:** The kid conserves ammunition, cleans and reloads his pistol methodically, defends the well, and rejects opportunities to kill an unarmed man and a dependent noncombatant. [PDF pp. 201–206, 208–211]
+- **Inference:** His restraint is not pacifism; it is a boundary within lethal competence. [PDF pp. 201–211]
+- **Observed:** Tobin advises preemptive killing, helps the kid aim at attackers, warns against listening to the judge, and continues despite severe blood loss. [PDF pp. 201–212]
+- **Observed:** The judge uses barter, legal language, apparent hospitality, pursuit, and gunfire in sequence. [PDF pp. 203–212]
+- **Inference:** He treats negotiation and violence as interchangeable control surfaces. [PDF pp. 203–212]
+
+## Voice & Narrative Techniques
+- **Observed:** Tactical detail—ammunition, sighting, tracks, water, wounds—anchors an otherwise uncanny pursuit. [PDF pp. 201–212]
+- **Observed:** The judge's commercial and legal diction recasts coercion as market exchange and property adjudication. [PDF pp. 204–211]
+- **Inference:** James Robert's dependence intensifies the kid's ethical test because the judge uses him as companion, tracker, and potential bait. [PDF pp. 203–211]
+
+## SDLC Translation Candidates
+- **Inference:** **Scarcity-aware incident agent:** inventory water, ammunition, mobility, wounds, and time-to-dark; preserve options before acting. [PDF pp. 200–212]
+- **Inference:** **Ethical red-team operator:** distinguish armed threats from dependents and reject “necessary” collateral harm when alternatives remain. [PDF pp. 208–211]
+- **Inference:** **Coercive-interface detector:** flag offers made under lethal scarcity, especially when seller, pursuer, and adjudicator are the same actor. [PDF pp. 203–211]
+- **Inference:** **Minimal-denial planner:** disable an adversary's mobility rather than pursuing a less probable kill, while documenting humane-cost tradeoffs. [PDF pp. 209–212]
+
+## Open Questions
+- **Observed:** Brown's and Toadvine's deaths are not witnessed in this chapter, although the judge later has Brown's equipment. [PDF pp. 206–213]
+- **Observed:** The source of the judge's meat and gold is not fully established on-page. [PDF pp. 203–205]
+- **Inference:** Whether the judge deliberately leaves the kid repeated chances to shoot him is unresolved. [PDF pp. 203–213]

@@ -1,0 +1,42 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 21
+  title: XXI
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [213, 214, 215, 216, 217, 218, 219, 220]
+status: verified
+---
+
+## Plot
+- **Observed:** The kid and wounded Tobin continue west while the judge follows; the kid notices the wind erasing tracks and hides them among dead draft animals. [PDF pp. 213–215]
+- **Observed:** The judge passes with James Robert on a lead, returns, and publicly addresses the hidden kid, accusing him of clemency and failed allegiance. [PDF pp. 215–217]
+- **Observed:** Diegueño people find the fugitives, give them water, food, shelter, and bathing access at San Felipe. [PDF pp. 217–218]
+- **Observed:** The pair crosses the mountains, reaches San Diego, and separates when Tobin seeks a doctor while the kid goes to the sea. [PDF pp. 218–220]
+- **Inference:** The journey moves from pursuit and concealment toward provisional social rescue, but not toward emotional resolution. [PDF pp. 213–220]
+
+## Character Evidence
+- **Observed:** The kid shares water, refuses to abandon Tobin, reads wind and terrain, constructs concealment, and twice declines a shot at the passing judge. [PDF pp. 213–216]
+- **Inference:** His operational profile combines observation, care, and restraint rather than obedience to Tobin's fear-driven counsel. [PDF pp. 213–216]
+- **Observed:** Tobin initially urges the kid to save himself, doubts concealment, then accepts the kid's plan and later laments the missed shot. [PDF pp. 213–216]
+- **Observed:** The judge claims the kid's clemency made him uniquely mutinous and frames conscience as betrayal of the group's enterprise. [PDF pp. 216–217]
+- **Inference:** His accusation identifies the kid's ethical distinction while trying to redefine it as a defect. [PDF pp. 216–217]
+- **Observed:** The Diegueños infer pursuit from the refugees' condition and provide necessities without demanding their full story. [PDF pp. 217–218]
+
+## Voice & Narrative Techniques
+- **Observed:** Erased tracks and uncertain constellations make orientation a practical and epistemic problem. [PDF pp. 213–217]
+- **Observed:** The judge's theatrical address contrasts with the sparse exchanges of the fugitives and the quiet material hospitality at San Felipe. [PDF pp. 216–218]
+- **Inference:** The sea scene suspends pursuit in an image of life and motion beyond the kid's knowledge, without declaring redemption. [PDF pp. 219–220]
+
+## SDLC Translation Candidates
+- **Inference:** **Signal-reading navigator:** use environmental changes—logs, latency, load, drift—as resources rather than assuming static traces. [PDF pp. 213–216]
+- **Inference:** **Care-preserving lead:** reject abandonment of an impaired teammate while selecting concealment and low-exposure routes. [PDF pp. 213–216]
+- **Inference:** **Anti-cult reviewer:** flag any team doctrine that labels mercy, dissent, or independent judgment as sabotage. [PDF pp. 216–217]
+- **Inference:** **Low-friction responder:** infer urgent need from observable condition, provide minimum viable aid, and postpone intrusive questioning. [PDF pp. 217–218]
+
+## Open Questions
+- **Observed:** The chapter does not show whether Tobin reaches a doctor or reunites with the kid. [PDF pp. 219–220]
+- **Observed:** The judge's claim that Brown and Toadvine remain alive is unverified here. [PDF pp. 216–217]
+- **Inference:** The judge may be probing the kid's reluctance to kill, but his exact tactical purpose in passing three times remains uncertain. [PDF pp. 215–217]

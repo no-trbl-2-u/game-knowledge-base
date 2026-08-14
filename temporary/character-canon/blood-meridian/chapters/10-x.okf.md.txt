@@ -1,0 +1,39 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 10
+  title: X
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [92, 93, 94, 95, 96, 97, 98, 99, 100, 101]
+status: verified
+---
+
+## Plot
+- **Observed:** While the kid repairs a strap, Tobin describes the judge's languages, music, tracking, riding, and other skills, then recounts the gang's first encounter with him. [PDF pp.92–95]
+- **Observed:** Tobin says the depleted gang found the judge alone in the desert; he redirected them toward a bat cave and extracted saltpeter from guano while producing charcoal. [PDF pp.94–97]
+- **Observed:** The judge leads the men across lava to a volcanic cone, obtains sulfur, mixes gunpowder, and turns an apparently final refuge into an ambush. [PDF pp.97–100]
+- **Observed:** The gang kills scores of pursuing Indigenous people; Tobin ends by warning the kid that the judge may hear his questions. [PDF pp.100–101]
+
+## Character Evidence
+- **Observed:** Tobin admires the judge's competence but alternates between calling him savior, lunatic, curse, and object of study. [PDF pp.93–98, 101]
+- **Observed:** The kid tells Tobin he saw the judge in Nacogdoches and asks what the judge is a judge of. [PDF pp.93–94, 101]
+- **Observed:** The judge combines observation, chemistry, logistics, deception, and marksmanship under extreme time pressure. [PDF pp.95–100]
+- **Inference:** Tobin's account establishes operational brilliance but is retrospective testimony colored by fear, theology, and awe. [PDF pp.93–101]
+
+## Voice & Narrative Techniques
+- **Observed:** Most events arrive through Tobin's first-person oral account rather than direct scene narration. [PDF pp.93–101]
+- **Observed:** Technical steps for powder manufacture coexist with religious analogies, infernal imagery, and comic obscenity. [PDF pp.96–100]
+- **Inference:** The katabasis structure turns engineering success into moral danger: effectiveness and goodness are explicitly decoupled. [PDF pp.97–101]
+
+## SDLC Translation Candidates
+- **Inference:** **Incident improviser:** identify available inputs, validate a minimal process, test safely, then scale under deadline. [PDF pp.95–100]
+- **Inference:** **Source critic:** label Tobin's narrative as witness testimony and separate measured details from theological interpretation. [PDF pp.93–101]
+- **Inference:** **Capability-risk reviewer:** treat exceptional cross-domain competence as a governance risk when goals and constraints are malign. [PDF pp.93–100]
+- **Inference:** **Deception gate:** require authorization before using false surrender or asymmetric surprise, regardless of tactical value. [PDF p.100]
+
+## Open Questions
+- **Observed:** The judge's origin, why he waited alone, and how he knew the cave and sulfur deposit are not explained. [PDF pp.94–98]
+- **Observed:** Tobin alleges a hidden covenant between Glanton and the judge but supplies no direct evidence. [PDF p.94]
+- **Inference:** How much of the account's precision reflects memory, communal legend, or the judge's own retrospective influence? [PDF pp.94–101]

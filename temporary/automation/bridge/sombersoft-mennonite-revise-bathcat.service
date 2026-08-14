@@ -1,0 +1,16 @@
+[Unit]
+Description=SomberSoft bridge: new Mennonite REVISE triggers one Bathcat run
+After=network-online.target hermes-gateway-mennonite.service hermes-gateway-bathcat.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/root/Workspace/SomberSoft/game-knowledge-base-mennonite
+Environment="HOME=/root"
+Environment="USER=root"
+Environment="LOGNAME=root"
+Environment="PATH=/usr/local/lib/hermes-agent/venv/bin:/root/.local/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/usr/bin/python3 /root/.hermes/scripts/mennonite_revise_triggers_bathcat.py
+TimeoutStartSec=2h

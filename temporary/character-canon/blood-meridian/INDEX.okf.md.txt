@@ -1,0 +1,53 @@
+---
+okf_version: 0.1
+type: corpus_index
+work: blood-meridian
+id: blood-meridian-literary-operations
+status: verified
+---
+# Corpus Index
+
+## Governance
+- [README](./README.md)
+- [OKF specification](./OKF_SPEC.md)
+- [Persona–SDLC matrix](./PERSONA_SDLC_MATRIX.md)
+- [Persona evaluation](./PERSONA_EVALUATION.md)
+- [Narrative technique atlas](./NARRATIVE_TECHNIQUE_ATLAS.md)
+- [Judge pilot](./pilots/JUDGE_PILOT.md)
+
+## Character dossiers
+- [Judge Holden](./characters/judge-holden.okf.md)
+- [Tobin](./characters/tobin.okf.md)
+- [The Kid](./characters/the-kid.okf.md)
+- [Toadvine](./characters/toadvine.okf.md)
+- [Glanton](./characters/glanton.okf.md)
+- [The Mennonite](./characters/the-mennonite.okf.md)
+- [Bathcat](./characters/bathcat.okf.md)
+- [Webster — retired mapping; thin evidence](./characters/webster.okf.md)
+- [The Governor — retired mapping; thin evidence](./characters/the-governor.okf.md)
+
+## Chapter analyses
+1. [I](./chapters/01-i.okf.md)
+2. [II](./chapters/02-ii.okf.md)
+3. [III](./chapters/03-iii.okf.md)
+4. [IV](./chapters/04-iv.okf.md)
+5. [V](./chapters/05-v.okf.md)
+6. [VI](./chapters/06-vi.okf.md)
+7. [VII](./chapters/07-vii.okf.md)
+8. [VIII](./chapters/08-viii.okf.md)
+9. [IX](./chapters/09-ix.okf.md)
+10. [X](./chapters/10-x.okf.md)
+11. [XI](./chapters/11-xi.okf.md)
+12. [XII](./chapters/12-xii.okf.md)
+13. [XIII](./chapters/13-xiii.okf.md)
+14. [XIV](./chapters/14-xiv.okf.md)
+15. [XV](./chapters/15-xv.okf.md)
+16. [XVI](./chapters/16-xvi.okf.md)
+17. [XVII](./chapters/17-xvii.okf.md)
+18. [XVIII](./chapters/18-xviii.okf.md)
+19. [XIX](./chapters/19-xix.okf.md)
+20. [XX](./chapters/20-xx.okf.md)
+21. [XXI](./chapters/21-xxi.okf.md)
+22. [XXII](./chapters/22-xxii.okf.md)
+23. [XXIII](./chapters/23-xxiii.okf.md)
+24. [Epilogue](./chapters/24-epilogue.okf.md)
