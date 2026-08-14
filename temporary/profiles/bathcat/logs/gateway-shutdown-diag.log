@@ -1,0 +1,76 @@
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-08-06T16:40:20Z
+--- ps auxf (top 60 by cpu) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           2  0.0  0.0      0     0 ?        S    May24   0:02 [kthreadd]
+root          39  0.0  0.0      0     0 ?        S    May24  10:45  \_ [kcompactd0]
+root     1566873  0.0  0.0      0     0 ?        I    16:24   0:00  \_ [kworker/0:1-events_freezable_pwr_efficient]
+root     1567661  0.0  0.0      0     0 ?        I    16:34   0:00  \_ [kworker/0:0-ata_sff]
+root     1565400  0.0  0.0      0     0 ?        I    15:51   0:00  \_ [kworker/1:1-events]
+root           1  0.0  0.1  23816  9844 ?        Ss   May24   1:52 /usr/lib/systemd/systemd --system --deserialize=68
+root     1567573  1.8  3.0 1315588 249912 ?      Ssl  16:34   0:06 /usr/local/lib/hermes-agent/venv/bin/python -m hermes_cli.main --profile bathcat gateway run --force
+root     1567607  0.0  0.2 104628 18212 ?        Ssl  16:34   0:00  \_ /usr/local/lib/hermes-agent/venv/bin/python /usr/local/lib/hermes-agent/tools/mcp_stdio_watchdog.py --ppid 1567573 --create-time 1786034081.2 -- /root/.hermes/scripts/github-mcp-server.sh
+root     1567613  0.0  0.2 1247500 23832 ?       Ssl  16:34   0:00      \_ /root/.local/bin/github-mcp-server stdio --read-only --toolsets=default,actions
+root     1549737  0.2  5.0 1440188 410664 ?      Ssl  Aug05   4:11 /usr/local/lib/hermes-agent/venv/bin/python -m hermes_cli.main gateway run
+root     1568517 41.0  4.8 1305800 391796 ?      Ssl  16:39   0:09  \_ node /root/.hermes/lsp/bin/pyright-langserver --stdio
+--- pstree of self ---
+hermes,1567573 -m hermes_cli.main --profile bathcat gateway run --force
+  |-python,1567607 /usr/local/lib/hermes-agent/tools/mcp_stdio_watchdog.py --ppid 1567573 --create-time 1786034081.2 -- /root/.hermes/scripts/github-mcp-server.sh
+  |   |-github-mcp-serv,1567613 stdio --read-only --toolsets=default,actions
+  |   |   |-{github-mcp-serv},1567622
+  |   |   |-{github-mcp-serv},1567623
+  |   |   |-{github-mcp-serv},1567624
+  |   |   |-{github-mcp-serv},1567625
+  |   |   |-{github-mcp-serv},1567626
+  |   |   |-{github-mcp-serv},1567627
+  |   |   `-{github-mcp-serv},1567628
+  |   `-{python},1567614
+  |-python,1567609 /usr/local/lib/hermes-agent/tools/mcp_stdio_watchdog.py --ppid 1567573 --create-time 1786034081.2 -- /root/.hermes/profiles/bathcat/node/bin/node /root/Workspace/SomberSoft/game-knowledge-base/scripts/kb-mcp-server.mjs --root /root/Workspace/SomberSoft/game-knowledge-base
+  |   |-node,1567615 /root/Workspace/SomberSoft/game-knowledge-base/scripts/kb-mcp-server.mjs --root /root/Workspace/SomberSoft/game-knowledge-base
+  |   |   |-{node},1567630
+  |   |   |-{node},1567631
+  |   |   |-{node},1567632
+  |   |   |-{node},1567633
+  |   |   |-{node},1567634
+  |   |   `-{node},1567639
+  |   `-{python},1567616
+  |-timeout,1568619 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1567573 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |   `-bash,1568620 -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1567573 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |       |-head,1568625 -40
+  |       `-pstree,1568624 -plau 1567573
+  |-{hermes},1567576
+  |-{hermes},1567599
+  |-{hermes},1567601
+  |-{hermes},1567602
+  |-{hermes},1567603
+  |-{hermes},1567604
+  |-{hermes},1567608
+  |-{hermes},1567610
+  |-{hermes},1567681
+  |-{hermes},1567713
+  `-{hermes},1567784
+--- /proc/loadavg ---
+0.16 0.10 0.05 1/216 1568626
+--- recent dmesg (oom/killed) ---
+[Fri Jul 31 11:16:43 2026] [1185703]     0 1185703   187506     1946     1888       58         0   512000        0             0 node
+[Fri Jul 31 11:16:43 2026] [1185712]     0 1185712     4092       47       32       15         0    69632        0             0 agent-browser-l
+[Fri Jul 31 11:16:43 2026] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/system.slice/hermes-gateway.service,task=chrome,pid=1185615,uid=0
+[Fri Jul 31 11:16:43 2026] Out of memory: Killed process 1185615 (chrome) total-vm:1518993148kB, anon-rss:301824kB, file-rss:136kB, shmem-rss:62240kB, UID:0 pgtables:2144kB oom_score_adj:300
+[Fri Jul 31 11:16:45 2026] systemd-journald[10589]: Under memory pressure, flushing caches.
+[Fri Jul 31 16:38:40 2026] systemd-journald[10589]: Retention time reached, vacuuming.
+[Sat Aug  1 02:13:23 2026] systemd-ssh-generator[1355255]: Failed to query local AF_VSOCK CID: Cannot assign requested address
+[Sat Aug  1 16:38:45 2026] systemd-journald[10589]: Retention time reached, vacuuming.
+[Sun Aug  2 02:13:22 2026] systemd-ssh-generator[1450794]: Failed to query local AF_VSOCK CID: Cannot assign requested address
+[Sun Aug  2 16:39:08 2026] systemd-journald[10589]: Retention time reached, vacuuming.
+[Mon Aug  3 02:12:42 2026] systemd-ssh-generator[1477863]: Failed to query local AF_VSOCK CID: Cannot assign requested address
+[Mon Aug  3 16:39:26 2026] systemd-journald[10589]: Retention time reached, vacuuming.
+[Tue Aug  4 02:13:08 2026] systemd-ssh-generator[1496726]: Failed to query local AF_VSOCK CID: Cannot assign requested address
+[Tue Aug  4 16:39:43 2026] systemd-journald[10589]: Retention time reached, vacuuming.
+[Wed Aug  5 02:13:10 2026] systemd-ssh-generator[1537597]: Failed to query local AF_VSOCK CID: Cannot assign requested address
+[Wed Aug  5 16:40:05 2026] systemd-journald[10589]: Retention time reached, vacuuming.
+[Thu Aug  6 02:13:22 2026] systemd-ssh-generator[1557748]: Failed to query local AF_VSOCK CID: Cannot assign requested address
+[Thu Aug  6 16:32:57 2026] systemd-ssh-generator[1567351]: Failed to query local AF_VSOCK CID: Cannot assign requested address
+[Thu Aug  6 16:32:57 2026] systemd-ssh-generator[1567385]: Failed to query local AF_VSOCK CID: Cannot assign requested address
+[Thu Aug  6 16:34:11 2026] systemd-ssh-generator[1567563]: Failed to query local AF_VSOCK CID: Cannot assign requested address
+=== end ===
