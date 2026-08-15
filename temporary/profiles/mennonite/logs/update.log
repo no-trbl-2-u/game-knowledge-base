@@ -1,0 +1,40 @@
+
+=== hermes update started 2026-05-27T11:58:59 ===
+⚕ Updating Hermes Agent...
+
+→ Fetching updates...
+→ Found 308 new commit(s)
+  ✓ Pre-update snapshot: 20260527-115916-pre-update
+→ Pulling updates...
+  ✓ Cleared 70 stale __pycache__ directories
+→ Updating Python dependencies...
+
+→ Refreshing 11 active lazy backend(s)...
+  ↑ 1 refreshed: platform.slack
+  ✓ 10 already current
+→ Updating Node.js dependencies...
+  ✓ repo root
+  ✓ ui-tui
+→ Building web UI...
+  ✓ Web UI built
+
+✓ Code updated!
+
+→ Syncing bundled skills...
+  + 1 new: hermes-s6-container-supervision
+  ↑ 2 updated: xurl, hermes-agent
+  ~ 1 user-modified (kept)
+
+→ Syncing bundled skills to all profiles...
+  default: ~1 user-modified
+
+→ Checking configuration for new options...
+  ✓ Configuration is up to date
+
+✓ Update complete!
+  → hermes-gateway: draining (up to 195s)...
+
+  ✓ Restarted hermes-gateway
+
+Tip: You can now select a provider and model:
+  hermes model              # Select provider and model

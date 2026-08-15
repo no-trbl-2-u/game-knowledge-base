@@ -1,0 +1,52 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 4
+  title: IV
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [35, 36, 37, 38, 39, 40, 41, 42, 43]
+status: verified
+---
+
+## Plot
+
+- Captain White's forty-six-man expedition crosses into Mexico, hunts for food, and advances with wagons and uneven equipment (PDF pp. 35–36).
+- Disease kills four men; failing wagons and animals force repairs, rationing, and night travel across a pumice desert (pp. 36–38).
+- Hayward prays for rain, which arrives briefly; the company later reaches a remote homestead and water source (pp. 38–39).
+- White's men drag a terrified old resident from hiding, dismiss his speech, repair equipment, and continue through ruins (pp. 39–40).
+- A large herd conceals hundreds of Comanche fighters. White misreads the approach as a small group of thieves and anticipates easy combat (pp. 40–41).
+- The Comanches overwhelm the expedition; the kid is unhorsed amid the massacre (pp. 41–43).
+
+## Character Evidence
+
+- **Captain White:** Maintains vigilance rituals but interprets ambiguous evidence through contempt and overconfidence, leading his company into a disastrous encounter (pp. 39–43).
+- **Sergeant Trammel:** Demonstrates disciplined weapons maintenance and long-range marksmanship, while also sharing White's mistaken assessment of the herd (pp. 35, 40–41).
+- **Candelario:** Serves as guide but gives an uncertain identification; he cannot be found when the concealed force becomes apparent (pp. 36, 40–41).
+- **Hayward:** Voices a modest, situational prayer for rain, which the company collectively endorses (pp. 38).
+- **The kid:** Carries unreliable equipment, fires during the attack, and attempts to reload after being unhorsed (pp. 35, 42).
+
+## Voice & Narrative Techniques
+
+- Technical descriptions of firearms, hunting, and wagon repair make operational competence visible.
+- Environmental scale steadily reduces the expedition's apparent power.
+- Disease is personified as an unseen follower, connecting logistics and mortality.
+- Celestial and geological imagery frames human plans as temporary and poorly fitted to the terrain.
+- The final battle shifts into accumulative, disorienting observation rather than strategic overview.
+- Dramatic irony makes the captain's prediction of sport immediately precede annihilation.
+
+## SDLC Translation Candidates
+
+> The following are design inferences, not claims about software in the novel.
+
+- **Inference — Captain White:** **Operational behavior:** make rapid field decisions from sparse observations. **Danger:** prior contempt determines interpretation and suppresses threat signals. **Guardrail:** use red-team review, confidence ranges, disconfirming checks, and mandatory abort criteria.
+- **Inference — Sergeant Trammel:** **Operational behavior:** maintain critical tools after every use and gather calibrated measurements. **Danger:** component excellence cannot rescue a failed mission model. **Guardrail:** pair technical readiness with system-level scenario testing.
+- **Inference — Candelario:** **Operational behavior:** provide local interpretation under uncertainty. **Danger:** leaders may convert tentative advice into false certainty or lose access to the expert. **Guardrail:** record uncertainty explicitly, retain backup experts, and verify contact continuity.
+- **Inference — expedition repair crews:** **Operational behavior:** improvise repairs to preserve forward motion. **Danger:** repeated patches conceal declining system integrity. **Guardrail:** track technical debt, define retirement thresholds, and stop when safety margins fail.
+
+## Open Questions
+
+- Why is Candelario absent at the moment the company seeks him?
+- Which members besides the kid survive the initial attack?
+- Would better reconnaissance have changed White's decision, or would his bias have overridden it?

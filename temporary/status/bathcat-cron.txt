@@ -1,0 +1,61 @@
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         Scheduled Jobs                                  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+  e1b3eb827561 [paused]
+    Name:      The Kid — Daily Axiomancer Playthrough
+    Schedule:  0 8 * * *
+    Repeat:    ∞
+    Next run:  2026-06-04T08:00:00+00:00
+    Deliver:   origin
+    Skills:    sombersoft-project-partner, judge-holden-persona
+    Last run:  2026-06-03T08:03:12.869953+00:00  ok
+
+  2e6f7a4d80e7 [paused]
+    Name:      Daily SomberSoft Roundtable
+    Schedule:  0 14 * * *
+    Repeat:    ∞
+    Next run:  2026-06-04T14:00:00+00:00
+    Deliver:   origin
+    Skills:    sombersoft-project-partner, judge-holden-persona, tobin-rpg-systems-theologian, axiomancer-oversight
+    Last run:  2026-06-03T14:04:17.638108+00:00  ok
+
+  37e3218498e3 [paused]
+    Name:      Weekly SomberSoft Alignment
+    Schedule:  0 15 * * 6
+    Repeat:    ∞
+    Next run:  2026-06-06T15:00:00+00:00
+    Deliver:   origin
+    Skills:    sombersoft-project-partner, judge-holden-persona, tobin-rpg-systems-theologian
+    Last run:  2026-05-30T15:04:53.647336+00:00  ok
+
+  c73a7382d155 [paused]
+    Name:      Weekly SomberSoft Doctrine Sweeper
+    Schedule:  0 16 * * 4
+    Repeat:    ∞
+    Next run:  2026-06-04T16:00:00+00:00
+    Deliver:   origin
+    Script:    sombersoft_doctrine_sweeper_gate.sh
+    Mode:      no-agent (script stdout delivered directly)
+    Last run:  2026-05-28T16:00:47.540581+00:00  ok
+
+  50ebaee2f092 [paused]
+    Name:      Monthly SomberSoft Strategy Court
+    Schedule:  0 15 1 * *
+    Repeat:    ∞
+    Next run:  2026-07-01T15:00:00+00:00
+    Deliver:   origin
+    Skills:    sombersoft-project-partner, judge-holden-persona, tobin-rpg-systems-theologian
+    Last run:  2026-06-01T15:04:01.476443+00:00  ok
+
+  0909f461cb88 [active]
+    Name:      Bathcat — REVISE-First, Otherwise Scout
+    Schedule:  0 6 * * *
+    Repeat:    ∞
+    Next run:  2026-08-15T06:00:00+00:00
+    Deliver:   telegram:8174123879
+    Skills:    board-game-rules-research, subagent-driven-development, github-pr-workflow
+    Workdir:   /root/Workspace/SomberSoft/game-knowledge-base-bathcat
+    Last run:  2026-08-14T06:13:51.610916+00:00  ok
+

@@ -1,0 +1,5 @@
+[COMMAND FAILED exit=4]
+STDOUT:
+
+STDERR:
+Unit sombersoft-mennonite-revise-bathcat.path could not be found.

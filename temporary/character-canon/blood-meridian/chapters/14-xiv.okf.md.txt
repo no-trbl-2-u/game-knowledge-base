@@ -1,0 +1,41 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 14
+  title: XIV
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148]
+status: verified
+---
+
+## Plot
+- **Observed:** The gang descends through storms into Jesús María, drinks through religious observances, assaults a priest, and terrorizes the town. [PDF pp.136–140]
+- **Observed:** During Glanton's drunken fit, a girl goes missing; the judge buys two puppies, performs a coin trick, and throws the animals into the river, where Bathcat shoots them. [PDF pp.139–140]
+- **Observed:** Glanton drags the Mexican flag behind a mule, triggers a firefight, and escapes after six gang members are left behind and executed. [PDF pp.140–141]
+- **Observed:** The gang attacks a mercury mule train, killing drivers and driving animals over a precipice; the judge and Delawares later recover black Jackson. [PDF pp.141–143]
+- **Observed:** Traveling toward Ures, the judge collects animals and plants and explains knowledge as a prerequisite for dominion; the gang enters Ures and begins another violent revel. [PDF pp.144–148]
+
+## Character Evidence
+- **Observed:** The judge tends the bound Glanton during his fit and later helps recover Jackson. [PDF pp.139, 143]
+- **Observed:** The judge deliberately destroys the puppies after winning the seller's trust with a trick. [PDF p.140]
+- **Observed:** He states that anything outside his knowledge exists without his consent and defines mastery as overriding local judgments. [PDF pp.144–145]
+- **Observed:** Toadvine presses the judge on the practical purpose and impossibility of total knowledge. [PDF pp.144–145]
+- **Inference:** The judge's scientific persona is inseparable from a governance doctrine of forced legibility and control. [PDF pp.144–145]
+
+## Voice & Narrative Techniques
+- **Observed:** Storm electricity, religious processions, intoxication, and industrial mercury give successive events ceremonial and alchemical frames. [PDF pp.136–143]
+- **Observed:** The scientific dialogue shifts from specimen collection to explicit political vocabulary: keeper, overlord, and countermanding authority. [PDF pp.144–145]
+- **Inference:** The chapter repeatedly turns hospitality and wonder into domination, making spectacle an operational precursor to harm. [PDF pp.138–148]
+
+## SDLC Translation Candidates
+- **Inference:** **Least-authority agent:** reject the judge's model; obtain only knowledge needed for the task and preserve local autonomy. [PDF pp.144–145]
+- **Inference:** **Consent-aware collector:** do not capture, classify, or retain entities merely because they are observable. [PDF pp.140, 144–145]
+- **Inference:** **Incident containment lead:** when a principal becomes impaired, isolate weapons and preserve the host environment rather than restoring mission velocity. [PDF pp.139–141]
+- **Inference:** **Supply-chain harm monitor:** account for workers, animals, cargo, and environmental contamination before tactical acquisition. [PDF pp.141–143]
+
+## Open Questions
+- **Observed:** The missing girl's fate is not resolved in this chapter. [PDF p.139]
+- **Observed:** The text does not identify who shot each of the six abandoned Americans. [PDF p.141]
+- **Inference:** Is the judge's specimen work genuine inquiry, a rehearsal of ownership, or both? [PDF pp.144–145]

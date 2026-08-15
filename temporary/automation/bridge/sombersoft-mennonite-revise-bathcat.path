@@ -1,0 +1,10 @@
+[Unit]
+Description=Watch Mennonite cron outputs for new REVISE dispositions
+After=hermes-gateway-mennonite.service
+
+[Path]
+PathChanged=/root/.hermes/profiles/mennonite/cron/output/c3e225a90b9b
+Unit=sombersoft-mennonite-revise-bathcat.service
+
+[Install]
+WantedBy=multi-user.target

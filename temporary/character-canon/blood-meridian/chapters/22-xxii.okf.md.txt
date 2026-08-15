@@ -1,0 +1,44 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 22
+  title: XXII
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [220, 221, 222, 223, 224, 225, 226, 227, 228]
+status: verified
+---
+
+## Plot
+- **Observed:** Soldiers arrest the kid in San Diego; the judge visits his cell, says he blamed the ferry disaster on him, and condemns his failure to submit fully to the gang. [PDF pp. 220–222]
+- **Observed:** The kid is unexpectedly released, sells his pistol to fund surgery, and has the embedded arrowshaft removed under ether. [PDF pp. 222–224]
+- **Observed:** In Los Angeles he discovers Brown and Toadvine hanged, buys Brown's ear necklace, and fails to find Tobin. [PDF pp. 224–226]
+- **Observed:** Years of travel follow; he carries an unread Bible, witnesses repeated violence, and hears rumors of the judge. [PDF pp. 225–226]
+- **Observed:** At age twenty-eight he leaves an eastbound party, encounters a penitential procession, later finds it massacred, and offers aid to an old woman who proves to have been dead for years. [PDF pp. 226–228]
+
+## Character Evidence
+- **Observed:** The judge attempts to isolate the kid morally, describes him as responsible for collective failure, offers paternal intimacy, and interprets clemency as withheld commitment. [PDF pp. 220–222]
+- **Inference:** His method resembles coercive postmortem analysis: blame the dissenter, erase leadership responsibility, and demand emotional identification with the failed system. [PDF pp. 220–222]
+- **Observed:** The kid rejects the judge's account, bargains unsuccessfully with a guard, pays for treatment by surrendering his weapon, and repeatedly searches for Tobin. [PDF pp. 221–225]
+- **Observed:** As an adult he works, travels with others, keeps no stable trade, carries a Bible he cannot read, and provides little testimony about what he has seen. [PDF pp. 225–226]
+- **Inference:** Experience has produced reserve and social distance rather than a coherent public witness. [PDF pp. 225–226]
+- **Observed:** He tells the kneeling woman his history and offers transport before checking whether she is alive. [PDF pp. 227–228]
+- **Inference:** The impulse to help persists, but perception and projection are misaligned. [PDF pp. 227–228]
+
+## Voice & Narrative Techniques
+- **Observed:** The prison dialogue stages rival causal accounts: the judge assigns singular blame, while the kid returns responsibility to him. [PDF pp. 220–222]
+- **Observed:** Surgical delirium shifts into an opaque metalworking and counterfeit-coin vision linked to judgment, identity, and inscription. [PDF pp. 223–224]
+- **Observed:** A long temporal summary turns the kid into “the man,” while the final encounter abruptly restores intimate speech. [PDF pp. 225–228]
+- **Inference:** The unread Bible and dead listener make failed interpretation a central motif. [PDF pp. 225–228]
+
+## SDLC Translation Candidates
+- **Inference:** **Blameless postmortem guardian:** reject monocausal scapegoating, map authority and incentives, and separate dissent from sabotage. [PDF pp. 220–222]
+- **Inference:** **Recovery planner:** accept strategic capability loss—selling a weapon—to remove a persistent defect and restore long-term function. [PDF pp. 222–224]
+- **Inference:** **Evidence-before-rescue agent:** verify state and responsiveness before narrating need or prescribing transport. [PDF pp. 227–228]
+- **Inference:** **Knowledge-access reviewer:** flag possession without usability; documentation carried but unread is not operational knowledge. [PDF pp. 225–226]
+
+## Open Questions
+- **Observed:** The reason for the kid's release is not supplied. [PDF pp. 221–223]
+- **Observed:** Tobin's fate remains unknown, and the kid never sees him again. [PDF pp. 224–226]
+- **Inference:** The identity and meaning of the dream's metalworker remain indeterminate. [PDF pp. 223–224]

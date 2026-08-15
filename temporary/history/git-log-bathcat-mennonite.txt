@@ -1,0 +1,127 @@
+commit e648f67fbf3890ee89c70317a74d1c3cacdce902
+Merge: 98dd804 42dd412
+Author:     Anthony Allen <40865735+no-trbl-2-u@users.noreply.github.com>
+AuthorDate: 2026-08-10T16:20:35-04:00
+Commit:     GitHub <noreply@github.com>
+CommitDate: 2026-08-10T16:20:35-04:00
+
+    kb: merge Dead of Winter evidence remediation (#15)
+    
+    Mennonite GO bound to exact audited head 42dd4127724a1c771bb62b936801091f379353ad; required checks green.
+
+commit 98dd804f4f752094c391956689490ab6d0d93e5b
+Merge: 073c2a0 cbd7b12
+Author:     Anthony Allen <40865735+no-trbl-2-u@users.noreply.github.com>
+AuthorDate: 2026-08-10T15:32:54-04:00
+Commit:     GitHub <noreply@github.com>
+CommitDate: 2026-08-10T15:32:54-04:00
+
+    kb: merge Shadows over Camelot remediation (#19)
+    
+    Mennonite GO at exact head cbd7b1283fbadb6526e1ebc8f112a04bdb27044f; preserve merge-commit ancestry.
+
+commit 8346f1bd1374d7cf5667e67d70b0df2c9d7d911c
+Merge: fbedf83 d0980d9
+Author:     Anthony Allen <40865735+no-trbl-2-u@users.noreply.github.com>
+AuthorDate: 2026-08-10T14:45:50-04:00
+Commit:     GitHub <noreply@github.com>
+CommitDate: 2026-08-10T14:45:50-04:00
+
+    kb: merge Dead of Winter: The Long Night remediation (#16)
+    
+    Preserves the Mennonite-audited maintenance history and exact-head evidence disposition.
+
+commit fbedf8380255f6403d2752f714b82dbf1ffd12c9
+Merge: e6b066a 9737589
+Author:     Anthony Allen <40865735+no-trbl-2-u@users.noreply.github.com>
+AuthorDate: 2026-08-10T11:41:44-04:00
+Commit:     GitHub <noreply@github.com>
+CommitDate: 2026-08-10T11:41:44-04:00
+
+    kb: merge Dominion intake (#47)
+    
+    Mennonite GO bound to promoted head 9737589c6363ddd11c4e2c6ea1b1aca637740c01; required validate and intake-complete checks green.
+
+commit e6b066ad61e135f211cb51a9108ad025ca9b6e5a
+Merge: 95d181f dc3a888
+Author:     Anthony Allen <40865735+no-trbl-2-u@users.noreply.github.com>
+AuthorDate: 2026-08-07T21:24:32-04:00
+Commit:     GitHub <noreply@github.com>
+CommitDate: 2026-08-07T21:24:32-04:00
+
+    kb: merge Bloodborne remediation (#14)
+    
+    Mennonite GO at exact audited head dc3a888fbcf03e1e497d66fa9c75ba9b9f3140d3; preserve merge-commit ancestry.
+
+commit e0e47b2f7593f5ee34c25c5695be9b6bed172afd
+Author:     Anthony Allen <40865735+no-trbl-2-u@users.noreply.github.com>
+AuthorDate: 2026-07-31T02:58:19-04:00
+Commit:     GitHub <noreply@github.com>
+CommitDate: 2026-07-31T02:58:19-04:00
+
+    kb: complete Battlestar Galactica base rules (#12)
+    
+    Independently audited at head 722e76769cc7d67f14b0e84d1272413f865663f9. Reopens and verifies the corrected base-game rulebook, FAQ v2.1, and three official reference sheets; completes six rule records and the 34-leaf component inventory. Mennonite verdict: GO. Validate run 30610863629 succeeded.
+
+M	KnowledgeBase/BoardGames/INDEX.okf.md
+M	KnowledgeBase/BoardGames/games/battlestar-galactica-the-board-game/index.okf.md
+A	KnowledgeBase/BoardGames/games/battlestar-galactica-the-board-game/rules/actions.okf.md
+A	KnowledgeBase/BoardGames/games/battlestar-galactica-the-board-game/rules/edge-cases-faq.okf.md
+A	KnowledgeBase/BoardGames/games/battlestar-galactica-the-board-game/rules/overview.okf.md
+A	KnowledgeBase/BoardGames/games/battlestar-galactica-the-board-game/rules/scoring-endgame.okf.md
+A	KnowledgeBase/BoardGames/games/battlestar-galactica-the-board-game/rules/setup.okf.md
+A	KnowledgeBase/BoardGames/games/battlestar-galactica-the-board-game/rules/turn-structure.okf.md
+M	KnowledgeBase/BoardGames/games/battlestar-galactica-the-board-game/scout-report.okf.md
+M	KnowledgeBase/BoardGames/games/battlestar-galactica-the-board-game/sources.okf.md
+M	TELEMETRY.md
+
+commit 16e748c8bd83ccf3c86616a064a39995631331c5
+Author:     Anthony Allen <40865735+no-trbl-2-u@users.noreply.github.com>
+AuthorDate: 2026-07-30T17:42:59-04:00
+Commit:     GitHub <noreply@github.com>
+CommitDate: 2026-07-30T17:42:59-04:00
+
+    Harden board-game intake and deterministic promotion (#9)
+    
+    Adds receipt-backed noncanonical intake, immutable audit decisions, protected three-stage transitions, collision-safe packet hashing, canonical validation, fail-closed automation, and deterministic rollback-safe promotion. Bathcat and Mennonite intake jobs remain paused pending dry runs on clean main.
+
+M	.githooks/pre-push
+A	.github/CODEOWNERS
+M	.github/workflows/validate.yml
+M	CLAUDE.md
+M	KnowledgeBase/Axiomancer/design-graph/brainstorming-seeds.okf.md
+M	KnowledgeBase/BoardGames/OKF_SPEC.md
+M	KnowledgeBase/BoardGames/README.md
+M	KnowledgeBase/BoardGames/games/ark-nova/scout-report.okf.md
+M	KnowledgeBase/BoardGames/games/descent-journeys-in-the-dark-second-edition/reception/reviews.okf.md
+M	KnowledgeBase/BoardGames/games/mage-knight/scout-report.okf.md
+M	KnowledgeBase/BoardGames/games/slay-the-spire-the-board-game/reception/better-if.okf.md
+M	KnowledgeBase/BoardGames/games/spirit-island/scout-report.okf.md
+M	KnowledgeBase/BoardGames/games/spirit-island/sources.okf.md
+M	KnowledgeBase/BoardGames/operations.okf.md
+M	KnowledgeBase/BoardGames/templates/scout-report.okf.md
+M	TELEMETRY.md
+A	intake/README.md
+A	scripts/capture-source-receipt.mjs
+A	scripts/fail-closed.mjs
+A	scripts/fail-closed.test.mjs
+A	scripts/intake-lib.mjs
+A	scripts/intake-lib.test.mjs
+A	scripts/promote-intake.mjs
+A	scripts/validate-intake-package.test.mjs
+A	scripts/validate-intake.mjs
+A	scripts/validate-okf-provenance.test.mjs
+M	scripts/validate-okf.mjs
+
+commit b8f6b2d8fbe4a82de2da64687c07cef493cc7f7f
+Author:     root <root@srv1699746.hstgr.cloud>
+AuthorDate: 2026-07-29T12:11:09Z
+Commit:     root <root@srv1699746.hstgr.cloud>
+CommitDate: 2026-07-29T12:11:09Z
+
+    kb: expand Bathcat daily intake to 60 games
+
+M	KnowledgeBase/BoardGames/README.md
+M	KnowledgeBase/BoardGames/index.html
+M	KnowledgeBase/BoardGames/operations.okf.md
+M	TELEMETRY.md
