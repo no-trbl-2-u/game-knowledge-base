@@ -38,7 +38,7 @@ followups:
     failure: blocked
     fallback: "Plaid Hat live and archived primary sources."
     retry_needs: browser_fetch
-    notes: "HTTP 403 Cloudflare is not evidence of absence."
+    notes: "HTTP 403 Cloudflare is not evidence of absence. 2026-08-15 audit: re-confirmed still blocked (curl and WebFetch both 403), same systemic Cloudflare pattern documented corpus-wide in issue #6. No change from 2026-07-31."
 confidence: high
 status: needs_followup
 ---

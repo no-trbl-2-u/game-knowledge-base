@@ -32,7 +32,14 @@ sources:
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-23"
-    notes: "Rulebook landing page."
+    notes: "Rulebook landing page; links to the direct PDF now registered as src-007."
+  - id: "src-007"
+    title: "Arydia rulebook PDF (v35, publisher-hosted download)"
+    url: "https://www.dropbox.com/scl/fi/q9qpvu1uc1pea3lozj6i6/Rulebook_280x216mm_FlatFormat_v35_Cropped_OP.pdf?rlkey=fx2oqdenrwmbjcy32jpfsojh0&dl=1"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-15"
+    notes: "2026-08-15 audit: downloaded and extracted (previously only the landing page was reachable in the scout run). 36 pages; SHA-256 72109d2161caee72a1330cf83543442531e8991f9d122a6ac3e7bc432f3ba1ed; linked directly from src-003's official landing page."
   - id: "src-004"
     title: "Arydia Board Game Review — Cooperative Board Games"
     url: "https://coopboardgames.com/cooperative-board-game-reviews/arydia/"

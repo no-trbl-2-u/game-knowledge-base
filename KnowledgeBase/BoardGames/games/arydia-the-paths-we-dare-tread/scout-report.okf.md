@@ -17,13 +17,7 @@ followups:
     failure: blocked
     fallback: "Used BGG search result metadata and a retailer's BGG-facing rating signal."
     retry_needs: alternate_source
-    notes: "Direct BGG page and XML API returned access errors during this run."
-  - source_id: "src-003"
-    url: "https://faroffgames.com/pages/arydia-rulebooks"
-    failure: pdf_extraction
-    fallback: "Used the publisher landing-page listing plus secondary rule summaries."
-    retry_needs: pdf_tooling
-    notes: "Rulebook PDFs were identified but not downloaded and extracted in this run."
+    notes: "2026-08-15 audit: re-confirmed still blocked (403/401), same systemic BGG anti-bot pattern documented corpus-wide in issue #6. No change from 2026-07-23."
 sources:
   - id: "src-001"
     title: "Arydia: The Paths We Dare Tread — BoardGameGeek"
@@ -45,7 +39,14 @@ sources:
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-23"
-    notes: "Official rulebook lead."
+    notes: "Official rulebook lead; links to the direct PDF now registered as src-007."
+  - id: "src-007"
+    title: "Arydia rulebook PDF (v35, publisher-hosted download)"
+    url: "https://www.dropbox.com/scl/fi/q9qpvu1uc1pea3lozj6i6/Rulebook_280x216mm_FlatFormat_v35_Cropped_OP.pdf?rlkey=fx2oqdenrwmbjcy32jpfsojh0&dl=1"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-15"
+    notes: "2026-08-15 audit: downloaded and extracted. 36 pages; SHA-256 72109d2161caee72a1330cf83543442531e8991f9d122a6ac3e7bc432f3ba1ed."
   - id: "src-004"
     title: "Arydia Board Game Review — Cooperative Board Games"
     url: "https://coopboardgames.com/cooperative-board-game-reviews/arydia/"
@@ -99,9 +100,9 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 ## Rulebook extraction status
 
 - Official rulebook found: yes, landing page identified.
-- File inspected: no.
-- Page count/version/date: unknown.
-- Text extraction quality: not applicable.
+- File inspected: yes (2026-08-15 audit) — the landing page links a direct publisher-hosted PDF (src-007), 36 pages, v35.
+- Page count/version/date: 36 pages, "v35" per filename; no printed revision date found.
+- Text extraction quality: good (`pypdf`); `rules/setup.okf.md` upgraded to verified with page-cited claims. Other rule categories (turn-structure, actions, scoring-endgame) still cite secondary reviews only and remain a librarian/audit followup.
 
 ## Documents written
 
@@ -115,6 +116,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 - `rules/edge-cases-faq.okf.md`
 - `reception/reviews.okf.md`
 - `reception/better-if.okf.md`
+- `rules/setup.okf.md` (upgraded to `status: verified` by the 2026-08-15 audit; see src-007 in `sources.okf.md`)
 
 ## Run validation
 
@@ -136,4 +138,4 @@ The campaign supported multiple save states and a staged onboarding scenario for
 
 ## Open questions
 
-Direct BGG score verification, official rulebook extraction, exact setup/turn phases, and a broader review sample remain librarian follow-ups.
+Direct BGG score verification remains blocked (systemic anti-bot pattern). Rulebook extraction is now underway: setup is verified from the primary PDF (src-007); exact turn/action/scoring phases and a broader review sample remain librarian follow-ups.

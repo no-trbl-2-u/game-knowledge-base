@@ -54,7 +54,7 @@ followups:
     failure: other
     fallback: "The four complete book sections were inspected and summarized, but their F3147/2021 printing relationship to BGG's 2018 3-5-player record is not proven."
     retry_needs: manual_review
-    notes: "Obtain and compare a first-print 2018 English rulebook/component manifest or an official Avalon Hill statement that F3147 is rules-identical."
+    notes: "2026-08-15 audit: this URL is not link rot (the weekly check-links 'timeout' flag is a false positive — the PDF is a live 11,278,257-byte file that just takes ~28s to fully download, confirmed byte-identical to the 2026-07-31 retrieval by size). The substantive gap is unchanged: obtain and compare a first-print 2018 English rulebook/component manifest or an official Avalon Hill statement that F3147 is rules-identical."
   - source_id: "src-002"
     url: "https://instructions.hasbro.com/en-us/instruction/avalon-hill-betrayal-legacy-role-playing-haunted-narrative-board-game"
     failure: other
