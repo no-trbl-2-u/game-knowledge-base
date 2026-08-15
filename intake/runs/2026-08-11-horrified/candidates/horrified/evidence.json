@@ -132,14 +132,14 @@
         "identity"
       ],
       "provenance": "official",
-      "url": "https://web.archive.org/web/20251104082036/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
-      "final_url": "https://web.archive.org/web/20251104082036/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
-      "retrieved_at": "2026-08-14T06:03:21.779Z",
+      "url": "https://web.archive.org/web/20251104082036id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
+      "final_url": "https://web.archive.org/web/20251104082036id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
+      "retrieved_at": "2026-08-15T06:03:33.858Z",
       "http_status": 200,
       "content_type": "text/html;charset=UTF-8",
-      "byte_length": 627926,
-      "sha256": "8a445a85a90cdf3a5659b188549b2b2f72f88fcc8802693cdb305237d3233333",
-      "locator": "Archived publisher product page replay 2025-11-04; article number, EAN, product title, Universal Monsters licence, player count, play time, component summary",
+      "byte_length": 601935,
+      "sha256": "6cf94bf639a38137b4ae1b64a85d30156732f0f6e9b49e4d5aca1237c06233c8",
+      "locator": "Archived publisher product page `id_` raw replay 2025-11-04; article number, EAN, product title, Universal Monsters licence",
       "evidence": "Horrified: Universal Monsters"
     },
     {

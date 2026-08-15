@@ -14,11 +14,11 @@ type: game_index
 sources:
   - id: "src-001"
     title: "Ravensburger Horrified: Universal Monsters product page (archived publisher page)"
-    url: "https://web.archive.org/web/20251104082036/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836"
+    url: "https://web.archive.org/web/20251104082036id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-08-14"
-    notes: "Archived publisher replay 2025-11-04 retrieved HTTP 200; 627,926 bytes; SHA-256 8a445a85a90cdf3a5659b188549b2b2f72f88fcc8802693cdb305237d3233333. Direct current page returned HTTP 403. Article 60001836, EAN 810558018361, Universal Monsters licence, 1–5 players, and product description were inspected."
+    retrieved_at: "2026-08-15"
+    notes: "Archived publisher replay 2025-11-04 `id_` raw response retrieved HTTP 200; 601,935 bytes; SHA-256 6cf94bf639a38137b4ae1b64a85d30156732f0f6e9b49e4d5aca1237c06233c8; repeated three times with matching payload; body inspection found the title, article 60001836, EAN 810558018361, and Universal Monsters licence. Direct current page returned HTTP 403."
   - id: "src-002"
     title: "Ravensburger Horrified: Universal Monsters official instructions (Spanish ES01)"
     url: "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf"
