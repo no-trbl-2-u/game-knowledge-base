@@ -14,9 +14,12 @@ Rules-ambiguity friction rarely shows up as "the rules are wrong." It shows up a
 ## Evidence by game
 
 - ark-nova (src-007): Board Game Quest reports that endgame scoring "is not elegant" and forces players to "pull out the rule book" to resolve it, confidence: high
+- betrayal-legacy (src-005): the review praises clearer haunt implementation in some scenarios while still describing the game as rough and inconsistent overall, an implementation-quality gap between the edition's best and weakest haunts, confidence: medium
+- cthulhu-death-may-die (src-002): the four-part turn sequence spans pp. 12-17 of the rulebook and the rules summary only compresses it on p. 20, leaving the Mythos/summoning check order hard to follow without a dedicated aid, confidence: medium
 - dune-imperium (src-004): The official FAQ carries repeated timing/definition clarifications (Intrigue cards, optional effects, Reveal turn, troop counts, Alliance, "when you win a Conflict"), indicating a real edge-case load behind the base rulebook, confidence: high
 - legendary-encounters-an-alien-deck-building-game (src-003): A reviewer flags that timing between completing an objective and the hive deck spawning "can be an issue," i.e. an unresolved sequencing question at the table, confidence: medium
 - mage-knight (src-011): A BGG fan critique complains rules are split across the rulebook, the Walkthrough booklet, individual cards, and the FAQ/site, with no single point of authority, confidence: medium
+- nemesis-lockdown (src-008, src-009): both reviews report frequent stops and difficult rulebook navigation/presentation, with one explicitly asking for an index and clearer cross-references, confidence: high
 - root (src-003): Leder's official Rules Library exists specifically to adjudicate disputes such as whether "cannot" is absolute and who resolves ambiguous simultaneous-turn order, confidence: high
 - slay-the-spire-the-board-game (src-008): A reviewer accidentally shuffled the Summon deck (which must stay ordered/searchable) because the rulebook didn't flag the exception, and separately found post-Act-III progression "very unclear" without prior video-game knowledge, confidence: high
 
@@ -32,7 +35,10 @@ No praised-design evidence found for this pattern. None of the sampled reviews s
 - mage-knight (src-011): authoritative rulings are fragmented across four different physical/official sources with no single index.
 - root (src-003): even with an official living rules library, base concepts like "cannot" and simultaneous-turn precedence needed explicit adjudication.
 - slay-the-spire-the-board-game (src-008): genre-breaking instructions (don't shuffle this deck) and post-campaign progression steps go unexplained for players without outside (video-game) context.
+- betrayal-legacy (src-005): haunt quality is inconsistent across the campaign — some scenarios are clearly implemented, others are not — so the game's own internal consistency is the ambiguity source, not just external documentation.
+- cthulhu-death-may-die (src-002): a four-part turn structure spread across several rulebook pages makes the summoning-check order easy to lose track of mid-session.
+- nemesis-lockdown (src-008, src-009): rulebook navigation and presentation cause frequent play stops, with lookup speed itself (not just rule content) named as the problem.
 
 ## Coverage gaps
 
-hoplomachus-remastered and spirit-island carry the rules-ambiguity label in the corpus but did not yield citable evidence here: hoplomachus's better-if doc only infers ambiguity risk from rulebook structure and FAQ existence (no reviewer complaint sighted), and spirit-island's rules-ambiguity bullet in its better-if doc lacks an attached source/evidence pair. The corpus would benefit from a game with heavier, well-documented errata history (e.g. a wargame or living-rules title with an active BGG rules-forum trail) to strengthen this pattern with primary-source ruling disputes rather than reviewer paraphrase.
+hoplomachus-remastered and spirit-island carry the rules-ambiguity label in the corpus but did not yield citable evidence here: hoplomachus's better-if doc only infers ambiguity risk from rulebook structure and FAQ existence (no reviewer complaint sighted), and spirit-island's rules-ambiguity bullet in its better-if doc lacks an attached source/evidence pair. The corpus would benefit from a game with heavier, well-documented errata history (e.g. a wargame or living-rules title with an active BGG rules-forum trail) to strengthen this pattern with primary-source ruling disputes rather than reviewer paraphrase. Nemesis: Lockdown's evidence is the corpus's first clean example of "lookup speed" (navigation/typography/index) as a distinct rules-ambiguity failure mode, separate from the "scattered authority across sources" shape that dominates the rest of this table.

@@ -9,11 +9,15 @@ status: verified
 
 ## Summary
 
-Turn-pacing friction in this corpus splits into two distinct failure modes. The first is individual-turn slowness: a single player's turn drags because it demands open-ended analysis (Mage Knight) or because it is procedurally required but low-agency (Heroes of Terrinoth's Rest action). The second is aggregate pace-of-play decay: the whole session lengthens as player count rises, through more turns to wait through (Ark Nova, Spirit Island) or a flat stretch before a late climax (Heat). The recurring fix reviewers credit is removing sequential waiting altogether — simultaneous or free-order action resolution (Heat, Slay the Spire) — or offering a solo/lighter mode that strips the downtime without cutting the decision space (Mage Knight). Evidence is real but thin per game; most claims are single-review observations rather than corroborated across sources.
+Turn-pacing friction in this corpus splits into two distinct failure modes. The first is individual-turn slowness: a single player's turn drags because it demands open-ended analysis (Mage Knight, Dark Pact's Action-counting chains) or because it is procedurally required but low-agency (Heroes of Terrinoth's Rest action). The second is aggregate pace-of-play decay: the whole session lengthens as player count rises, through more turns to wait through (Ark Nova, Spirit Island, Elder Sign beyond 4-5 players) or a flat stretch before a late climax (Heat, Betrayal Legacy's variable haunt-phase length). The recurring fix reviewers credit is removing sequential waiting altogether — simultaneous or free-order action resolution (Heat, Slay the Spire) — or offering a solo/lighter mode that strips the downtime without cutting the decision space (Mage Knight); Dominion's short-turn design is the corpus's clearest positive baseline, explicitly praised and named as a constraint any future interaction fix must preserve. Evidence is real but thin per game; most claims are single-review observations rather than corroborated across sources.
 
 ## Evidence by game
 
 - ark-nova (src-007): Board Game Quest says they "won't touch a four player game" because it "would take too long" — pace-of-play degrades as player count rises, confidence: high
+- betrayal-legacy (src-005): haunt phases were reported running "thirty minutes beyond what it should" in one session, or ending before a full round in another — uneven pacing within the same core system, confidence: medium
+- dark-pact (src-007, src-008, src-010): multiple reviews describe administrative pressure — sequencing and Action counting — during long turns, confidence: medium
+- dominion (src-003): quick turns and short session length are named directly in the review's Final Thoughts as a strength to preserve, confidence: high
+- elder-sign (src-002, src-004): "any number of players beyond 4 or 5 will suffer significant downtime," making the box's printed 1-8 player range unrealistic in practice, confidence: high
 - heat-pedal-to-the-metal (src-006): Co-op Board Games credits simultaneous card selection with eliminating downtime, confidence: medium
 - heat-pedal-to-the-metal (src-007): Shelf Gamer found the race "relatively flat until the climactic final round," a mid-game pacing complaint, confidence: medium
 - heroes-of-terrinoth (src-005): a four-player Rest round is described as a turn players would rather not spend their activation on — a low-agency, maintenance-feeling individual turn, confidence: high
@@ -26,6 +30,7 @@ Turn-pacing friction in this corpus splits into two distinct failure modes. The 
 - heat-pedal-to-the-metal (src-006): simultaneous card selection is explicitly credited with eliminating downtime between turns.
 - slay-the-spire-the-board-game (src-008): free-order action resolution (no fixed turn sequence) is praised as a rulebook strength for cooperative pacing.
 - mage-knight (src-009): the dedicated solo variant is called out as preserving the game's decision crunch "without a lot of the downtime" that the multiplayer round-based structure creates.
+- dominion (src-003): quick, short turns are the review's clearest praised strength — the corpus's cleanest example of turn-pacing as a design goal explicitly achieved rather than merely absent-of-complaint.
 
 ## Where it fails
 
@@ -34,7 +39,10 @@ Turn-pacing friction in this corpus splits into two distinct failure modes. The 
 - ark-nova (src-007): length at four players is severe enough that the reviewer refuses that player count outright.
 - spirit-island (src-006, src-008): four-player sessions run long, driven by both raw turn count and extended discussion/coordination time.
 - heat-pedal-to-the-metal (src-007): pacing can go flat mid-race, with tension concentrated only at the finish.
+- elder-sign (src-002, src-004): downtime is the most consistently reported friction beyond 4-5 players, with non-active players given nothing mechanical to resolve while waiting.
+- dark-pact (src-007, src-008, src-010): long combo chains create administrative counting overhead rather than pure decision time.
+- betrayal-legacy (src-005): haunt-phase length is inconsistent session to session, undercutting predictable pacing even within a single well-defined game phase.
 
 ## Coverage gaps
 
-Most cited evidence describes aggregate session-length pacing (more players, more turns) rather than pure single-turn duration; only Mage Knight and Heroes of Terrinoth give a clean individual-turn-length complaint. A lighter, faster-playing game (a filler or family-weight title) with turn-pacing commentary would help separate "this turn itself is slow" from "this game has too many turns" as distinct design problems.
+Most cited evidence describes aggregate session-length pacing (more players, more turns) rather than pure single-turn duration; Mage Knight, Heroes of Terrinoth, and Dark Pact give the cleanest individual-turn-length complaints. Elder Sign is now the strongest single data point for "printed player count vs. actual playable count" divergence driven by pacing alone. Dominion's contribution finally supplies this pattern's first strong "where it works" baseline beyond mode-switching (Mage Knight's solo variant) or removing sequencing (Heat, Slay the Spire) — a design that is simply fast by default.

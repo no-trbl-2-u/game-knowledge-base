@@ -10,12 +10,17 @@ status: verified
 ## Summary
 
 Randomness friction splits into two failure modes and one recurring fix. Too much
-uncontrolled variance (an oversized card pool, an artificial catch-up bump) reads as
-the game overriding player skill; too little variance (a thin card pool that repeats)
-reads as predictable and stale. The recurring mitigation reviewers reward is giving
-players a lever over the randomness — deterministic ordering, a dice-or-card choice,
-or a catch-up tool framed as earned rather than free — so a bad outcome still traces
-back to a legible decision.
+uncontrolled variance (an oversized card pool, an artificial catch-up bump, a fully
+dice-gated resolution with no deterministic recourse) reads as the game overriding
+player skill; too little variance (a thin card pool that repeats) reads as predictable
+and stale. The recurring mitigation reviewers reward is giving players a lever over
+the randomness — deterministic ordering, a dice-or-card choice, or a catch-up tool
+framed as earned rather than free — so a bad outcome still traces back to a legible
+decision. Newly-added evidence sharpens the "too much, no lever" failure mode:
+Elder Sign's dice-only task resolution, Nemesis's "domino outcomes," and the Dead of
+Winter titles' exposure/crossroads swings are all cases where reviewers value the
+tension the randomness produces but still name it as needing better framing or
+mitigation, not removal.
 
 ## Evidence by game
 
@@ -45,6 +50,25 @@ back to a legible decision.
 - the-quacks-of-quedlinburg (src-005): the reviewer flags bag-pull variance as a
   strong taste filter, warning that luck-averse players should try the game before
   buying it, confidence: high
+- betrayal-legacy (src-005): pre-haunt card draws can leave a player "unable to even
+  meaningfully participate" before the finale despite reasonable play, confidence: medium
+- dead-of-winter-a-crossroads-game (src-005): a first-turn exposure bite "can knock the
+  wind out of a player and group," interesting "for the right players" but abrupt enough
+  to warrant framing before play, confidence: medium
+- dead-of-winter-the-long-night (src-004): exposure outcomes are reported as
+  potentially unfair — "random nature can be slightly unfair," confidence: medium
+- elder-sign (src-001, src-002): task resolution is fully dice-gated, so players
+  seeking deterministic planning have little recourse beyond consumable rerolls,
+  standing criticism reading it as "glorified Yahtzee with custom dice," confidence: high
+- elder-sign (src-004): "a few bad rolls of the dice can cause a failure while
+  simultaneously using up all of one's resources," compounding a bad roll with the
+  loss of the tools needed to recover from it, confidence: high
+- nemesis (src-006, src-007, src-009): the same chaos praised for generating stories is
+  also criticized for "domino outcomes and overwhelming randomness," supporting a call
+  to teach high-variance systems as narrative risk rather than deterministic control,
+  confidence: high
+- nemesis-lockdown (src-009): "randomness can torpedo games despite strategy" and
+  complexity can obscure which decisions are actually meaningful, confidence: medium
 
 ## Where it works
 
@@ -75,6 +99,18 @@ back to a legible decision.
 - the-quacks-of-quedlinburg (src-005): the reviewer's blunt warning — don't buy
   sight-unseen "if you don't like luck" — shows bag-pull variance as a hard filter
   on the audience, not just a texture note.
+- elder-sign (src-001, src-002, src-004): fully dice-gated resolution offers little
+  deterministic recourse, and a bad roll sequence can strip the resources a player
+  would need to recover from it.
+- betrayal-legacy (src-005): pre-haunt draws can eliminate a player's meaningful
+  participation before the game's climax arrives.
+- dead-of-winter-a-crossroads-game (src-005) / dead-of-winter-the-long-night (src-004):
+  both editions draw the same complaint from independent reviewers — a single random
+  event (exposure) can feel abrupt or slightly unfair regardless of prior play quality.
+- nemesis (src-006, src-007, src-009) / nemesis-lockdown (src-009): both Nemesis
+  titles draw the same "chaos as double-edged sword" complaint — the randomness that
+  produces memorable stories is also named as capable of torpedoing a game or
+  producing domino outcomes regardless of strategy.
 
 ## Coverage gaps
 
@@ -85,4 +121,7 @@ rather than variance itself, and kingdom-death-monster's only randomness claim i
 explicitly flagged by its own doc as an unconfirmed inference (status:
 needs_followup). The corpus would benefit from a follow-up pass on
 kingdom-death-monster once its needs_followup backlog clears, specifically targeting
-how reviewers discuss its critical-hit/wound-table dice system.
+how reviewers discuss its critical-hit/wound-table dice system. Two Nemesis titles
+and two Dead of Winter titles now independently corroborate the same "chaos is the
+point, but it needs a mitigation lever" shape first seen in Ark Nova and Heat —
+strengthening this pattern's cross-game consistency beyond a single-genre coincidence.

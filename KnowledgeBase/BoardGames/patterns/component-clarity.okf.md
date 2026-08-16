@@ -19,6 +19,9 @@ Component-clarity friction shows up two ways across this sample: physical legibi
 - mage-knight (src-012): BGG Ultimate Edition rating comments describe "rules checking is 30% of playing time" and "really fiddly rules," tied to the game's site/enemy-effect iconography needing multiple lookups, confidence: medium
 - slay-the-spire-the-board-game (src-007, src-010): Rolling In The Meep's dislikes list cites fiddly tracking and "many cubes/effects," and Miniature Market retail snippets call setup "a little lengthy" and "a bit heavy," confidence: high
 - the-quacks-of-quedlinburg (src-005): a reviewer reports "beginning to notice wear on the chips" after just five plays and calls the plastic chips "a bit expensive" to replace, confidence: high
+- betrayal-legacy (src-005): the physical trackers/clips used to mark state can slip or damage Family cards, a handling-durability complaint distinct from icon/legibility friction, confidence: medium
+- bloodborne-the-card-game (src-006): Meeple Mountain specifically criticizes the drab visual palette, hurting quick reading of cards and board tracks in a simultaneous, timing-sensitive game, confidence: medium
+- nemesis (src-005, src-008): the existing pair of shared quick references must support a large, information-dense table, supporting a call for a readable personal flow aid covering the Event phase, bag development, and the final engine/coordinate/contamination/objective sequence, confidence: medium
 
 ## Where it works
 
@@ -34,7 +37,10 @@ No other game in this sample produced a review quote that explicitly praises a c
 - mage-knight (src-012): fiddly rules push rules-checking to roughly 30% of playing time, implicating unclear iconography/reference design, confidence: medium
 - slay-the-spire-the-board-game (src-007): fiddly cube/effect tracking and a "massive box/table footprint" are named dislikes, confidence: high
 - the-quacks-of-quedlinburg (src-005): repeated handling wears visible marks into the chips within a handful of plays, confidence: high
+- betrayal-legacy (src-005): tracker clips reported as capable of slipping or damaging cardboard components, confidence: medium
+- bloodborne-the-card-game (src-006): a drab visual palette is named as hurting quick reading in a game where timing matters, confidence: medium
+- nemesis (src-005, src-008): a large, information-dense table isn't fully served by the existing shared reference pair, pushing lookups onto memory rather than a glanceable aid, confidence: medium
 
 ## Coverage gaps
 
-Every citable claim here comes from secondary reviews, not from direct component/graphic-design analysis, and only one game (Quacks) offers a genuine praised-design counterexample — the corpus is thin on the "works well" side of this label. A game whose reviewers specifically credit iconography or a reference-card redesign for resolving prior complaints (e.g., a revised/second edition) would strengthen the "where it works" side considerably.
+Every citable claim here comes from secondary reviews, not from direct component/graphic-design analysis, and only one game (Quacks) offers a genuine praised-design counterexample — the corpus is thin on the "works well" side of this label. A game whose reviewers specifically credit iconography or a reference-card redesign for resolving prior complaints (e.g., a revised/second edition) would strengthen the "where it works" side considerably. The three newly-added games (Betrayal Legacy, Bloodborne, Nemesis) all add friction-only evidence, reinforcing rather than closing this gap.

@@ -48,6 +48,10 @@ market-diversity claims.
 The represented games are cooperative or campaign/LCG-style deck-builders (starter decks, campaign
 upgrades, or scenario-driven acquisition); none of them is a classic competitive Dominion-style
 market-deckbuilder where a shared central market and deck-thinning economy are the whole game.
-A market-centric deckbuilder in the corpus (e.g. something closer to pure Dominion/Clank!-style
-market building) would sharpen the "market variety vs. narrow market" side of this pattern,
-which currently rests on thin evidence (aeons-end's single community comment).
+Dominion itself has now been added to the corpus, closing part of this gap in principle, but its
+sourced better-if claims (onboarding, turn-pacing, player-interaction, expansion-bloat — see
+`patterns/turn-pacing.okf.md` and `patterns/player-interaction.okf.md`) don't yet include a
+market-composition or deck-thinning-variety claim, so the "market variety vs. narrow market" side
+of this pattern still rests on thin evidence (aeons-end's single community comment). A future
+source pass on Dominion specifically targeting Kingdom-card-set variety and market-diversity
+reception would close this gap for real.

@@ -15,12 +15,18 @@ reads as swinginess/imbalance when a leader's combat strength outpaces
 opponents' visibility into it. Kingdom Death: Monster's dice-based combat
 resolution is only lightly sourced so far (needs_followup) but points at the
 same tension: risk/randomness that defines the game's identity is also the
-axis reviewers flag as needing clearer at-the-table communication. Both games
-suggest the same shape of problem — resolution mechanics that are core to the
-game's appeal are also the primary source of "better if" requests.
+axis reviewers flag as needing clearer at-the-table communication. Arydia adds
+a third, distinct data point: an AI-card-driven foe-behavior system where the
+better-if pressure is visibility/auditability of state changes (Threat levels)
+rather than randomness itself. All three games suggest the same shape of
+problem — resolution mechanics that are core to the game's appeal are also the
+primary source of "better if" requests.
 
 ## Evidence by game
 
+- arydia-the-paths-we-dare-tread (src-005): foe behavior depends on Threat
+  levels and AI cards, supporting a call to keep threat-level changes and
+  AI-card-driven behavior visible and auditable at the table. confidence: medium
 - dune-imperium (src-008): Reviewer (There Will Be Games) praised hidden combat
   inputs, saying a player is "never 100% sure how much combat power someone
   has," calling resulting decisions "hard, impactful, and constant." confidence: medium
@@ -59,11 +65,15 @@ game's appeal are also the primary source of "better if" requests.
   hits/failures) is flagged as needing clearer point-of-decision
   communication, though this is an inference in the source doc rather than a
   directly reported reviewer complaint, confidence: low.
+- arydia-the-paths-we-dare-tread (src-005): AI-card-driven foe behavior
+  changes state (Threat) in ways that need to stay visible at the table,
+  or players risk losing track of why an encounter escalated, confidence: medium.
 
 ## Coverage gaps
 
 Current support for this label remains narrow, and Kingdom Death: Monster's
-reception docs are still `needs_followup` with low-confidence, inference-heavy claims. A
-dedicated combat-heavy game (e.g., a wargame or skirmish title) with a
-`verified` reception doc would substantially strengthen this pattern; until
+reception docs are still `needs_followup` with low-confidence, inference-heavy claims.
+Arydia's own reception doc is likewise `needs_followup` and its combat claim rests on
+only one review. A dedicated combat-heavy game (e.g., a wargame or skirmish title)
+with a `verified` reception doc would substantially strengthen this pattern; until
 then, conclusions here should be read as provisional.

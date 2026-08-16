@@ -33,10 +33,15 @@ design reviewers praised as having solved the problem outright.
 - marvel-champions-the-card-game (src-004): The reviewer flags manual post-game teardown — character-specific cards must be re-sorted by hand or players risk hunting for one hero's Obligations mixed into another's deck, confidence: high
 - slay-the-spire-the-board-game (src-007, src-010): Rolling in the Meep dislikes fiddly cube/effect tracking and a "massive box/table footprint"; Miniature Market snippets independently call setup "a little lengthy" and "a bit heavy", confidence: high
 - the-quacks-of-quedlinburg (src-006): A reviewer warns that ingredient books must be matched to the correct box set at setup or the game becomes "wildly unbalanced," turning module selection into a setup-accuracy risk, confidence: medium
+- descent-journeys-in-the-dark-second-edition (src-006): full-board setup exposes unexplored dungeon areas up front, weakening the discovery/mystery the layout is meant to preserve, confidence: medium
+- descent-journeys-in-the-dark-second-edition (src-003): the publisher's own product page markets "faster setup" and "minimal player downtime" as selling points — an admission that setup/downtime were pain points worth addressing in this edition, confidence: high
+- nemesis (src-005): setup involves nested, multi-step work across a very large table footprint, supporting a call for labeled trays or bagged modules keyed to the official sequence, confidence: medium
+- onirim-second-edition (src-002): repeated reshuffles create handling and card-wear cost without removing Limbo's uncertainty, with the reviewer naming extensive shuffling as a primary con, confidence: medium
 
 ## Where it works
 
 - marvel-champions-the-card-game (src-004): Reviewer praises the turn structure as having "little fiddly management of components or resetting things each turn besides readying and drawing cards" — in-session administration stays low even though the same source flags post-game teardown sorting as a chore. This is the corpus's clearest example that per-turn upkeep and end-of-session teardown are separable design problems, and solving the first doesn't require solving the second.
+- descent-journeys-in-the-dark-second-edition (src-003): the publisher explicitly sells faster setup and minimal downtime as second-edition improvements — a rare case where a setup/teardown fix is part of the product's own pitch rather than only reviewer wish-listing.
 
 ## Where it fails
 
@@ -49,7 +54,10 @@ design reviewers praised as having solved the problem outright.
 - legendary-encounters-an-alien-deck-building-game (src-005): a ~600-card set with inserts implies heavy sorting overhead, confidence: medium
 - marvel-champions-the-card-game (src-004): post-game teardown requires manually re-sorting character-specific cards back to their owners, confidence: high
 - the-quacks-of-quedlinburg (src-006): mismatched ingredient-book sets at setup can silently unbalance the game, confidence: medium
+- descent-journeys-in-the-dark-second-edition (src-006): revealing the full board at setup undercuts the intended sense of unexplored dungeon mystery, confidence: medium
+- nemesis (src-005): a very large table footprint and nested setup steps make the setup process itself a friction point independent of session length, confidence: medium
+- onirim-second-edition (src-002): frequent shuffling wears cards down and adds handling time each session, confidence: medium
 
 ## Coverage gaps
 
-Nearly all evidence here is complaint-only — reviewers name the friction (time, weight, sorting) but rarely credit a design with actually solving it; only Marvel Champions supplies a partial counter-example, and only for in-session upkeep, not teardown. The corpus would benefit from a game whose setup/teardown design was itself praised as a solved problem (e.g. app-guided setup, snap-in trays, or pre-bagged campaign packaging) to give this pattern a genuine "where it works" anchor beyond one partial case.
+Nearly all evidence here is complaint-only — reviewers name the friction (time, weight, sorting) but rarely credit a design with actually solving it; Marvel Champions and Descent 2E's publisher-stated design goals are the closest partial counter-examples, and Descent's is a stated intent rather than a reviewer-confirmed outcome (the same review that quotes the publisher's "faster setup" pitch also independently criticizes full-board setup for weakening discovery). The corpus would benefit from a game whose setup/teardown design was itself reviewer-praised as a solved problem (e.g. app-guided setup, snap-in trays, or pre-bagged campaign packaging) to give this pattern a genuine independently-verified "where it works" anchor.
