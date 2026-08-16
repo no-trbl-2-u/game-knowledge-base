@@ -21,7 +21,7 @@
       "title": "Horrified: Universal Monsters",
       "bgg_id": null,
       "cohort": "cooperative",
-      "status": "approved",
+      "status": "promoted",
       "discovery_sources": [
         "https://boardgamegeek.com/boardgame/282524/horrified",
         "https://web.archive.org/web/20251104082036id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
@@ -42,7 +42,8 @@
           "known_total": null,
           "percent": null
         }
-      }
+      },
+      "promoted_at": "2026-08-16T09:05:20.124Z"
     }
   ]
 }
