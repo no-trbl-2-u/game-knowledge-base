@@ -1,0 +1,238 @@
+{
+  "schema_version": 3,
+  "slug": "horrified",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-08-11T06:08:00.000Z",
+  "edition_scope": "Horrified: Universal Monsters base game, Ravensburger article 60001836 / EAN 810558018361. The packet uses the publisher-hosted Spanish ES01 instructions file as the retrieved governing authority; expansions and other Horrified titles are excluded.",
+  "coverage_ledger": {
+    "rules_denominator": [
+      {
+        "authority": "Ravensburger Horrified: Universal Monsters official instructions (Spanish ES01)",
+        "acquired": true,
+        "official_endpoint": true,
+        "source_ids": [
+          "src-002"
+        ],
+        "notes": "Complete 16-page PDF retrieved HTTP 200 and inspected across components, setup, hero/monster phases, end conditions, monster procedures, clarifications, and solo rules."
+      }
+    ],
+    "faq_errata_inventory": {
+      "scope": "Public official FAQ or errata applicable to the Universal Monsters base-game claims published here.",
+      "checks": [
+        "The archived publisher product page and direct official instructions endpoint were retrieved.",
+        "The official instructions include an appendix of clarifications and solo rules on printed page 15.",
+        "No separate FAQ or erratum is cited by a claim in this packet; no publisher-wide absence claim is made."
+      ],
+      "applicable_acquired": 0,
+      "applicable_known_total": null,
+      "notes": "The packet publishes only the official instructions and its own clarification appendix."
+    },
+    "factual_denominator": [
+      {
+        "claim_group": "product identity and article/EAN",
+        "recorded": true,
+        "source_ids": [
+          "src-001"
+        ]
+      },
+      {
+        "claim_group": "core component classes",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "player setup and difficulty",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "hero phase actions",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "item color/strength/location handling",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "monster phase resolution",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "terror and empty-monster-deck loss",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "monster-specific task framework",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "solo procedure",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "independent reception",
+        "recorded": true,
+        "source_ids": [
+          "src-003"
+        ]
+      },
+      {
+        "claim_group": "visual component/setup/monster-phase subjects",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "mechanics classification",
+        "recorded": true,
+        "source_ids": [
+          "src-002",
+          "src-003"
+        ]
+      }
+    ],
+    "exclusions": [
+      "All other Horrified titles and expansions.",
+      "BGG rating, rank, complexity weight, and any BGG identity field; game.bgg_id is null because the BGG page was a discovery lead, not a retrieved local identity receipt.",
+      "Complete card, monster-panel, item, or hidden-text denominators; only observed source-bounded component classes are summarized.",
+      "The packet does not claim that the Spanish ES01 PDF is the English-language insert of every 60001836 printing; it records the language and file boundary explicitly."
+    ]
+  },
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Ravensburger Horrified: Universal Monsters product page (archived publisher page)",
+      "roles": [
+        "identity"
+      ],
+      "provenance": "official",
+      "url": "https://web.archive.org/web/20251104082036id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
+      "final_url": "https://web.archive.org/web/20251104082036id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
+      "retrieved_at": "2026-08-16T06:04:44.307Z",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "byte_length": 601935,
+      "sha256": "6cf94bf639a38137b4ae1b64a85d30156732f0f6e9b49e4d5aca1237c06233c8",
+      "locator": "Archived publisher product page `id_` raw replay 2025-11-04; article number, EAN, product title, Universal Monsters licence",
+      "evidence": "Horrified: Universal Monsters; Article number: 60001836; EAN: 810558018361; Licence: Universal Monsters"
+    },
+    {
+      "id": "src-002",
+      "title": "Ravensburger Horrified: Universal Monsters official instructions (Spanish ES01)",
+      "roles": [
+        "official_rules"
+      ],
+      "provenance": "official",
+      "url": "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf",
+      "final_url": "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf",
+      "retrieved_at": "2026-08-13T06:15:24.000Z",
+      "http_status": 200,
+      "content_type": "application/pdf;charset=UTF-8",
+      "byte_length": 4796393,
+      "sha256": "66ac020f322f4ff1c24b715df13508301effc64f463226e6e6210d5da646b461",
+      "locator": "PDF pp. 1-16; components p. 2-3; setup p. 4; objective/turn/end p. 5-9; monster procedures pp. 10-14; solo/clarifications p. 15; copyright p. 16",
+      "evidence": "DE 1 A 5 JUGADORES • A PARTIR DE 10 AÑOS • 60 MINUTOS",
+      "page_count": 16,
+      "pdf_metadata": {
+        "title": "Unbenannt-1",
+        "creator": "Adobe InDesign 19.2 (Macintosh)",
+        "creation_date": "2024-04-09T06:14:35Z",
+        "modification_date": "2024-04-09T06:14:47Z"
+      }
+    },
+    {
+      "id": "src-003",
+      "title": "Lee Leonardo — Horrified (First Impressions)",
+      "roles": [
+        "independent_review"
+      ],
+      "provenance": "secondary",
+      "url": "https://lee-leonardo.github.io/blog/horrified-impressions/",
+      "final_url": "https://lee-leonardo.github.io/blog/horrified-impressions/",
+      "retrieved_at": "2026-08-11T06:08:36.251Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 17269,
+      "sha256": "a20ebd6ed3361e96a11fdae74627fa62353705369c895806b0e1952e3452e5fc",
+      "locator": "Review dated 2019-10-29; overview, core loop, components, rules legibility, final assessment",
+      "evidence": "Horrified is a hyper-thematic replacement for Pandemic"
+    },
+    {
+      "id": "src-004",
+      "title": "Ravensburger Horrified: Universal Monsters product image — box/board presentation",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "official",
+      "url": "https://web.archive.org/web/20250525002319if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp",
+      "final_url": "https://web.archive.org/web/20250525002319if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836.webp",
+      "retrieved_at": "2026-08-13T06:15:24.000Z",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "byte_length": 45112,
+      "sha256": "58df1aff424d5c9614df08fb1061172b163ee7328d5a453d7060ddfed7941f5d",
+      "locator": "Archived official Ravensburger product image replay 2025-05-25; box/board presentation",
+      "evidence": "Archived official Ravensburger product image visibly presents the Horrified Universal Monsters box and tabletop board arrangement."
+    },
+    {
+      "id": "src-005",
+      "title": "Ravensburger Horrified: Universal Monsters product image — components",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "official",
+      "url": "https://web.archive.org/web/20250525002318if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp",
+      "final_url": "https://web.archive.org/web/20250525002318if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_1.webp",
+      "retrieved_at": "2026-08-13T06:15:24.000Z",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "byte_length": 64956,
+      "sha256": "a8d574d0d9d68b0218e5a77c965b595855dfc409c259e333c9973cc3aa1e579c",
+      "locator": "Archived official Ravensburger product image replay 2025-05-25; components presentation",
+      "evidence": "Archived official Ravensburger product image visibly presents the Horrified Universal Monsters components and physical presentation."
+    },
+    {
+      "id": "src-006",
+      "title": "Ravensburger Horrified: Universal Monsters product image — gameplay state",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "official",
+      "url": "https://web.archive.org/web/20250525002317if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp",
+      "final_url": "https://web.archive.org/web/20250525002317if_/https://ravensburger.cloud/images/produktseiten/820x600/60001836_2.webp",
+      "retrieved_at": "2026-08-13T06:15:24.000Z",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "byte_length": 66722,
+      "sha256": "b2339506a9f857ce5a13796b25e5414c588c3fa9e72765267de7d39ffde4d8eb",
+      "locator": "Archived official Ravensburger product image replay 2025-05-25; populated tabletop state",
+      "evidence": "Archived official Ravensburger product image visibly presents a populated Horrified Universal Monsters tabletop state."
+    }
+  ]
+}
