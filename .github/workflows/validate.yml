@@ -39,6 +39,8 @@ jobs:
         run: node scripts/validate-okf.mjs
       - name: Test OKF visual validator
         run: node --test scripts/validate-okf-visuals.test.mjs
+      - name: Test telemetry delivery invariants
+        run: node --test scripts/telemetry-delivery.test.mjs
       - name: Self-test write guard
         run: node .claude/hooks/okf-guard.mjs self-test
 

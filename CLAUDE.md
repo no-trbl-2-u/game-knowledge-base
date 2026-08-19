@@ -43,7 +43,7 @@ writes what, on what cadence) is `KnowledgeBase/BoardGames/operations.okf.md`.
 ```
 node scripts/validate-okf.mjs            # full corpus + index/sidecar freshness
 node scripts/validate-okf.mjs <files...> # just those files
-node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs
+node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs scripts/validate-okf-visuals.test.mjs scripts/telemetry-delivery.test.mjs
 node scripts/validate-intake.mjs --base origin/main # diff-aware hard gate
 ```
 
@@ -96,6 +96,10 @@ separation.
 `TELEMETRY.md` travels with every delivery. The tracked
 `.githooks/pre-commit` auto-stages its current state with ordinary commits;
 `.githooks/pre-push` refuses delivery whenever telemetry remains uncommitted.
+`.gitattributes` gives this append-only ledger Git's built-in `union` merge
+driver, so parallel branches preserve both row sets instead of stranding one
+behind a merge conflict. `scripts/telemetry-delivery.test.mjs` proves the
+merge and hook behavior in disposable repositories in local and CI gates.
 It also runs the intake regression suite and diff-aware hard gate; canonical
 additions without an exact approved packet cannot leave the machine.
 Every writer environment—including Hermes cron—must set
