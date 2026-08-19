@@ -8,7 +8,7 @@ game:
   publisher: "Thames & Kosmos"
   year: 2020
   weight: null
-  edition: "North American Thames & Kosmos SKU 691868; English base-game manual linked from the product page"
+  edition: "North American Thames & Kosmos SKU 691868; retained English base-game manual"
 scope: "base game"
 mechanics: [cooperative-game, campaign-game, hand-management, hidden-information, trick-taking]
 sources:
@@ -26,8 +26,8 @@ sources:
     asset_url: "https://tabletopbellhop.com/wp-content/uploads/2021/03/Playing-The-Crew-scaled.jpg"
     kind: image
     provenance: secondary
-    retrieved_at: "2026-08-12"
-    notes: "Review image asset: Playing-The-Crew-scaled.jpg; Independent review photograph showing a tabletop play state with The Crew cards and tokens."
+    retrieved_at: "2026-08-19"
+    notes: "Current JPEG image asset: 43,411 bytes, SHA-256 ba465c59fe928529b59b108bb3b8a402316702643f45d9e20d5dbf5ab6d654d0; independent review photograph showing a tabletop play state with The Crew cards and tokens."
   - id: "src-007"
     title: "The Family Gamers — The Crew card-hand photograph"
     url: "https://www.thefamilygamers.com/wp-content/uploads/Crew_hand_of_cards-min.jpg"
@@ -62,7 +62,7 @@ visual_references:
     attribution: "Tabletop Bellhop, The Crew review"
     demonstrates: "A physical tabletop play state with cards and tokens."
     rationale: "A reduced independent table photograph records spatial presence and live play state without retaining a playable card library."
-    sha256: "13ae5ffb3029aa554caa715ce4d4aea97660754c3a3d4e34e2591a4a6d134a51"
+    sha256: "921793ad52a78331a02dfda8fc568280cac72c0cccb2e4e3fb409b1c25f36046"
   - id: "vis-003"
     source_id: "src-007"
     file: "visuals/references/03-card-hand.webp"
@@ -77,7 +77,7 @@ visual_references:
     rationale: "A reduced card-hand image supports component and hand-management analysis without preserving readable card text as a substitute."
     sha256: "de097e9cc4ad2931480355389a0f9fd7846daaa7900f5d42204ea82dea72a89c"
 contact_sheet: "visuals/contact-sheet.webp"
-contact_sheet_sha256: "8803a9fd4349aa3a2338687b0ffce7fd3decfe8f2c1ffb83ec5cc0574fc98a63"
+contact_sheet_sha256: "b8b0114d38d2ce00dd33b87779f7cad2f9e2eff474221480937fab48d99fd8d2"
 confidence: high
 status: verified
 ---
