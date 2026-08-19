@@ -26,6 +26,20 @@ sources:
     provenance: official
     retrieved_at: "2026-07-19"
     notes: "Official product page."
+  - id: "src-006"
+    title: "Too Many Bones Rulebook (v2.2)"
+    url: "https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf?rlkey=1y2zxkqw7mpi98aljmaoipjzq&e=1&dl=0"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-19"
+    notes: "Official rulebook, retrieved via the publisher support page link (chiptheorygames.com/pages/support/too-many-bones) and text-extracted with curl + pypdf during the 2026-08-19 librarian pass. 32 pages, versioned v2.2 on the cover; battle-sequence diagram internally marked v2.3."
+  - id: "src-007"
+    title: "Chip Theory Games — Too Many Bones FAQs (support solutions index)"
+    url: "https://tmbsupport.chiptheorygames.com/support/solutions/33000133540"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-08-19"
+    notes: "Support-portal solutions index; article titles confirm FAQ topic coverage (battle timing, Baddie skills, Tyrants, character-specific rulings) but individual article bodies were not retrieved in this pass — the index lists titles/navigation only."
   - id: "src-003"
     title: "UltraBoardGames — Too Many Bones rules"
     url: "https://www.ultraboardgames.com/too-many-bones/game-rules.php"
@@ -47,13 +61,14 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-19"
     notes: "Review source."
-confidence: medium
+confidence: high
 status: needs_followup
+last_verified: "2026-08-19"
 ---
 
 ## Source register
 
-The official publisher page is the strongest accessible source. BGG is the discovery and score source. The secondary rules page and two reviews provide provisional extraction and reception evidence until the official rulebook is retrieved.
+The official rulebook (src-006) is now the strongest accessible source for rules claims. BGG remains the discovery and score source but stays blocked. The secondary rules page and two reviews remain useful for reception evidence.
 
 ## Retrieval failures
 
@@ -61,7 +76,9 @@ The official publisher page is the strongest accessible source. BGG is the disco
   Source: src-001
   Evidence: Automated requests returned HTTP 401/403 during this run.
   Confidence: high
-- Claim: The publisher support page and product page were rate-limited during direct retrieval.
+  Note (2026-08-19 librarian pass): retried via WebFetch; still HTTP 403. Matches the systemic BGG block documented across the corpus (see `marvel-champions-the-card-game/scout-report.okf.md`) rather than a game-specific issue.
+- Claim: The publisher support page was rate-limited during direct retrieval.
   Source: src-002
   Evidence: Automated request returned HTTP 429; search results exposed the product description.
   Confidence: high
+  Resolution (2026-08-19 librarian pass): retried via WebFetch; the support page now returns HTTP 200 and links the official rulebook (src-006) and FAQ index (src-007). Followup resolved.

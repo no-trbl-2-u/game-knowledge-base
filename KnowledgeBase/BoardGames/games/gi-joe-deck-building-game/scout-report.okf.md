@@ -11,13 +11,6 @@ game:
   edition: "core set"
 scope: "base game"
 mechanics: [cooperative-game, deck-building, hand-management, variable-player-powers, solo-solitaire-game, campaign-game]
-followups:
-  - source_id: "src-006"
-    url: "https://renegadegamestudios.com/content/File%20Storage%20for%20site/GI%20JOE%20DBG/Joe%20DBG%20FAQ.pdf"
-    failure: pdf_extraction
-    fallback: "Rulebook timing and publisher page were used; FAQ was registered but not extracted."
-    retry_needs: pdf_tooling
-    notes: "Retry FAQ extraction and index card-specific rulings."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — G.I. JOE Deck-Building Game"
@@ -60,9 +53,10 @@ sources:
     kind: faq
     provenance: official
     retrieved_at: "2026-07-14"
-    notes: "Publisher-linked FAQ; extraction followup."
+    notes: "Publisher-linked FAQ; retrieved and text-extracted via curl + pypdf in the 2026-08-19 librarian pass."
 confidence: high
-status: needs_followup
+status: verified
+last_verified: "2026-08-19"
 ---
 
 ## Scout objective
@@ -81,7 +75,7 @@ Study one game matching the current Bathcat focus: cooperative plus deckbuilder,
 - BoardGameGeek: game page located; automated page/API retrieval returned access errors, so no live rank or vote count was asserted.
 - Publisher page: retrieved successfully.
 - Official rulebook: publisher PDF retrieved and text-extracted successfully.
-- FAQ/errata: publisher FAQ URL registered; extraction remains a followup.
+- FAQ/errata: publisher FAQ URL retrieved and text-extracted in the 2026-08-19 librarian pass; card-specific rulings indexed in `rules/edge-cases-faq.okf.md`.
 - Review sources: Meeple Mountain search result and publisher customer reviews.
 
 ## Rulebook extraction status
@@ -91,18 +85,12 @@ Study one game matching the current Bathcat focus: cooperative plus deckbuilder,
 - Page count/version/date if known: 24 pages; PDF created 2021-12-07, modified 2023-04-18.
 - Text extraction quality: successful with pdftotext; minor font warnings only.
 
-## Documents written
+## Documents written for the G.I. JOE Deck-Building Game intake
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This run produced the standard canonical set for G.I. JOE: `index.okf.md`,
+`sources.okf.md`, the six `rules/*.okf.md` category files (overview,
+setup, turn-structure, actions, scoring-endgame, edge-cases-faq), and
+both `reception/*.okf.md` files (reviews, better-if).
 
 ## Run validation
 
@@ -124,5 +112,4 @@ The first mission taught the entire loop through a controlled setup and the FAQ'
 
 ## Open questions
 
-- What card-specific rulings and errata does the official FAQ contain?
-- What are the current live BGG average rating, rank, and vote count?
+- What are the current live BGG average rating, rank, and vote count? (BGG remains blocked corpus-wide as of 2026-08-19; see other games' followups for the same systemic block.)

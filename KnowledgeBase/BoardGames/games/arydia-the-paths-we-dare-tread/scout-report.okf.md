@@ -16,14 +16,8 @@ followups:
     url: "https://boardgamegeek.com/boardgame/219650/arydia-the-paths-we-dare-tread"
     failure: blocked
     fallback: "Used BGG search result metadata and a retailer's BGG-facing rating signal."
-    retry_needs: alternate_source
-    notes: "Direct BGG page and XML API returned access errors during this run."
-  - source_id: "src-003"
-    url: "https://faroffgames.com/pages/arydia-rulebooks"
-    failure: pdf_extraction
-    fallback: "Used the publisher landing-page listing plus secondary rule summaries."
-    retry_needs: pdf_tooling
-    notes: "Rulebook PDFs were identified but not downloaded and extracted in this run."
+    retry_needs: manual_review
+    notes: "Direct BGG page and XML API returned access errors during this run. Retried 2026-08-19 (librarian): still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not a game-specific issue. Downgraded to manual_review since automated fetch has failed twice."
 sources:
   - id: "src-001"
     title: "Arydia: The Paths We Dare Tread — BoardGameGeek"
@@ -45,7 +39,21 @@ sources:
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-23"
-    notes: "Official rulebook lead."
+    notes: "Official rulebook lead; PDF links resolved and extracted in the 2026-08-19 librarian pass. Followup resolved."
+  - id: "src-007"
+    title: "Arydia Rulebook (v35)"
+    url: "https://www.dropbox.com/scl/fi/q9qpvu1uc1pea3lozj6i6/Rulebook_280x216mm_FlatFormat_v35_Cropped_OP.pdf?rlkey=fx2oqdenrwmbjcy32jpfsojh0&dl=0"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-19"
+    notes: "Recovered via the publisher rulebooks page and text-extracted with curl + pypdf in the 2026-08-19 librarian pass. 36 pages, v35."
+  - id: "src-008"
+    title: "Arydia Quick Start Guide (v35)"
+    url: "https://www.dropbox.com/scl/fi/t4wjp33aaheoxoniei36m/QuickStartGuide_280x216mm_v35_Cropped_OP.pdf?rlkey=5w4bqlm9dp7kl7e27cdhmzxrq&dl=0"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-19"
+    notes: "Official first-game onboarding booklet, retrieved and text-extracted (16 pages) in the 2026-08-19 librarian pass."
   - id: "src-004"
     title: "Arydia Board Game Review — Cooperative Board Games"
     url: "https://coopboardgames.com/cooperative-board-game-reviews/arydia/"
@@ -67,8 +75,9 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-23"
     notes: "BGG average rating signal 7.02 in search extract."
-confidence: medium
+confidence: high
 status: needs_followup
+last_verified: "2026-08-19"
 ---
 
 ## Scout objective
@@ -92,29 +101,23 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 - BoardGameGeek: page identified; direct retrieval blocked.
 - Publisher page: identified; direct retrieval rate-limited.
-- Official rulebook: landing page found; PDFs not extracted.
+- Official rulebook: landing page found; main Rulebook and Quick Start Guide PDFs resolved and text-extracted in the 2026-08-19 librarian pass.
 - Reviews: Cooperative Board Games and GamesRadar+ retrieved through search results.
 - Forum/community sources: not used.
 
 ## Rulebook extraction status
 
-- Official rulebook found: yes, landing page identified.
-- File inspected: no.
-- Page count/version/date: unknown.
-- Text extraction quality: not applicable.
+- Official rulebook found: yes.
+- File inspected: yes (2026-08-19 librarian pass).
+- Page count/version/date: Rulebook 36 pages (v35); Quick Start Guide 16 pages (v35).
+- Text extraction quality: successful with curl + pypdf; the Quick Start Guide hit a form-XObject extraction limit on some decorative elements but body text extracted cleanly.
 
-## Documents written
+## Documents written for the Arydia intake
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This run produced the standard canonical set for Arydia: `index.okf.md`,
+`sources.okf.md`, the six `rules/*.okf.md` category files (overview,
+setup, turn-structure, actions, scoring-endgame, edge-cases-faq), and
+both `reception/*.okf.md` files (reviews, better-if).
 
 ## Run validation
 
@@ -136,4 +139,4 @@ The campaign supported multiple save states and a staged onboarding scenario for
 
 ## Open questions
 
-Direct BGG score verification, official rulebook extraction, exact setup/turn phases, and a broader review sample remain librarian follow-ups.
+Direct BGG score verification remains blocked corpus-wide as of 2026-08-19 (manual review needed). Official rulebook extraction, setup/turn phases, actions, and scoring are now resolved in `rules/*.okf.md`. Path-specific setup/skill rules (printed on each Path's physical slipcase) and a broader review sample remain open.

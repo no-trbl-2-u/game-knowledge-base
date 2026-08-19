@@ -32,7 +32,14 @@ sources:
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-23"
-    notes: "Official rulebook landing page; direct PDF extraction was not completed."
+    notes: "Official rulebook landing page; PDF links resolved and extracted in the 2026-08-19 librarian pass (src-007)."
+  - id: "src-007"
+    title: "Arydia Rulebook (v35)"
+    url: "https://www.dropbox.com/scl/fi/q9qpvu1uc1pea3lozj6i6/Rulebook_280x216mm_FlatFormat_v35_Cropped_OP.pdf?rlkey=fx2oqdenrwmbjcy32jpfsojh0&dl=0"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-19"
+    notes: "Official rulebook, retrieved and text-extracted in the 2026-08-19 librarian pass."
   - id: "src-004"
     title: "Arydia Board Game Review — Cooperative Board Games"
     url: "https://coopboardgames.com/cooperative-board-game-reviews/arydia/"
@@ -54,8 +61,9 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-23"
     notes: "Search result reported BGG average rating 7.02; used only as a current score signal, not rules evidence."
-confidence: medium
+confidence: high
 status: needs_followup
+last_verified: "2026-08-19"
 ---
 
 ## Summary
@@ -74,6 +82,11 @@ Arydia is a cooperative fantasy campaign board game in which exiled characters e
   Evidence: Publisher search extract describes weapons, skills, cooperation, and strategic turn-based combat.
   Confidence: medium
 
+- Claim: Arydia is a 1–4 player, open-world, campaign-based cooperative fantasy RPG in which players create a character (an exile) and journey through the world of Arydia.
+  Source: src-007
+  Evidence: "Arydia is an open world, campaign-based, cooperative fantasy role playing game for 1-4 players. You take on the role of exiles trying to return home. Create a character, then journey through the land of Arydia."
+  Confidence: high
+
 ## Open questions
 
-The exact BGG weight, final edition metadata, and complete rule sequence require direct rulebook extraction and a fresh BGG statistics capture.
+The exact BGG weight, rank, and current rating require a fresh BGG statistics capture (BGG remains blocked corpus-wide as of 2026-08-19). Full rules detail is now in `rules/*.okf.md`, sourced from the official rulebook (src-007) and Quick Start Guide.
