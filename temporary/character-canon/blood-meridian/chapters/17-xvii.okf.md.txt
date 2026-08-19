@@ -1,0 +1,42 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 17
+  title: XVII
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185]
+status: verified
+---
+
+## Plot
+- **Observed:** Glanton's reduced company leaves Tucson with five recruits, Cloyce Bell's caged brother, a disguised whiskey supply, and twenty-one men; they trade the liquor to Apaches and continue west. [PDF pp. 175–176]
+- **Observed:** The party passes Colonel Garcia's ill-equipped Sonoran command, crosses extreme desert terrain, and reaches water at the Tinajas Altas before arriving at the Colorado. [PDF pp. 176–183]
+- **Observed:** Around campfires, the judge lectures first on cosmic order and then on war; his coin performance turns an abstract account of orbit, constraint, and witness into spectacle. [PDF pp. 177–181]
+- **Observed:** At the Colorado, Glanton meets Dr. Lincoln, inspects the ferry, and joins the judge and five men in a nighttime meeting with Yuma leaders. [PDF pp. 183–185]
+- **Inference:** The ferry appears to Glanton less as public infrastructure than as a controllable chokepoint. [PDF pp. 183–185]
+
+## Character Evidence
+- **Observed:** Glanton disregards consequences, asserts agency against fate, and leads without explaining himself even when the company encounters Garcia's troops. [PDF pp. 176–177]
+- **Inference:** A Glanton-derived agent would be decisive but dangerously indifferent to externalities and should therefore require explicit stop conditions. [PDF pp. 176–177]
+- **Observed:** The judge records specimens, navigates by triangulation, answers recruits carefully, performs persuasive tricks, and reframes war as an ultimate adjudicating system. [PDF pp. 177–183]
+- **Inference:** His competence is inseparable from domination: knowledge, rhetoric, and spectacle are used to make his premises feel inevitable. [PDF pp. 177–183]
+- **Observed:** Brown disputes the judge openly, while Tobin refuses the role of theological respondent and rejects the judge's blasphemous framing. [PDF pp. 178–182]
+- **Observed:** The kid watches the judge across the fire rather than joining his discourse. [PDF p. 176]
+- **Inference:** The kid's attention without assent is early evidence for a witness role resistant to group ideology. [PDF p. 176]
+
+## Voice & Narrative Techniques
+- **Observed:** The narration alternates logistical particulars—water, equipment, routes—with immense geological and astronomical scales. [PDF pp. 175–185]
+- **Observed:** Repeated forward motion compresses suffering while extended campfire dialogue slows the chapter for philosophical contest. [PDF pp. 179–182]
+- **Inference:** The landscape's equalizing descriptions challenge human priority without endorsing the judge's claim that violence supplies truth. [PDF pp. 179–181]
+
+## SDLC Translation Candidates
+- **Inference:** **Adversarial systems theorist:** enumerate hidden assumptions and plausible orders not represented by the current model; never treat destructive outcomes as validation. [PDF pp. 177–181]
+- **Inference:** **Field-reliability lead:** track personnel, water, route, equipment, and irreversible thresholds; escalate before a jornada begins. [PDF pp. 175–183]
+- **Inference:** **Evidence custodian:** measure and log artifacts, but preserve provenance and prohibit the judge's pattern of converting documentation into ownership. [PDF pp. 176, 182–183]
+- **Inference:** **Chokepoint reviewer:** identify when a service such as a ferry can become coercive infrastructure and require pricing, access, and abuse controls. [PDF pp. 183–185]
+
+## Open Questions
+- **Observed:** The chapter ends during the Yuma parley, before its terms are disclosed. [PDF p. 185]
+- **Inference:** It remains unclear here whether Glanton or the judge originated the plan for the ferry. [PDF pp. 184–185]

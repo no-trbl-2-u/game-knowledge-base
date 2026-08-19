@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-08-16T09:02:57.000Z",
+  "packet_sha256": "20fbaed68321ba363ae338bb68de26236d31fb168520480a00d2ccf187ea5a70",
+  "reviewed_source_ids": [
+    "src-001",
+    "src-002",
+    "src-003",
+    "src-004",
+    "src-005",
+    "src-006"
+  ],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Exact-edition base-game scope verified. All six receipts were independently reopened; status, final URL, content type, byte length, and SHA-256 matched where declared, and source bodies/assets supported the retained claims. Spanish ES01 scope remains explicit; no rating is claimed."
+}

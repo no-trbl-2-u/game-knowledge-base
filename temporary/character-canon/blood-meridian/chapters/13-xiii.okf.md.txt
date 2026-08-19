@@ -1,0 +1,42 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 13
+  title: XIII
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136]
+status: verified
+---
+
+## Plot
+- **Observed:** Chihuahua counts 128 scalps and eight heads, pays the gang, bathes and outfits them, and honors them at a banquet that becomes recurrent riot and civic intimidation. [PDF pp.122–126]
+- **Observed:** After leaving, the gang exploits Coyame, wanders the border, and the judge copies selected rock images at Hueco Tanks before erasing one original. [PDF pp.126–127]
+- **Observed:** The gang knowingly massacres peaceful Tiguas; Toadvine and the kid voice concern beforehand but do not prevent the attack. [PDF pp.127–128]
+- **Observed:** After trouble over stolen teeth and expulsion under escort, the gang kills dozens in a Nacori cantina, scalps the bodies, and later destroys another village. [PDF pp.129–133]
+- **Observed:** Mounted soldiers pursue them; the gang ultimately kills the soldiers, buries its own dead, returns to Chihuahua, and then rides west. [PDF pp.133–136]
+
+## Character Evidence
+- **Observed:** Glanton refuses separate treatment for officers, divides the payment directly, and later looks toward the family in Texas he will not revisit. [PDF pp.124–126]
+- **Observed:** The judge moves easily among governor, musicians, dancers, violence, and archival erasure. [PDF pp.124–127, 130–132]
+- **Observed:** Toadvine and the kid recognize that the Tiguas have harmed no one, yet remain in formation. [PDF p.127]
+- **Observed:** Tobin, posted with the horses, shoots fleeing witnesses after the cantina fight. [PDF pp.131–132]
+- **Inference:** Individual misgivings have no effective escalation path inside Glanton's command. [PDF pp.127–128]
+
+## Voice & Narrative Techniques
+- **Observed:** Civic ceremony, luxury, and administrative counting are placed beside decomposing trophies and uncontrolled violence. [PDF pp.122–126]
+- **Observed:** The aftermath of the Tigua massacre emphasizes how wind and time erase physical evidence. [PDF p.128]
+- **Inference:** Repetition across towns converts exceptional violence into a process sustained by payment, hospitality, fear, and silence. [PDF pp.122–136]
+
+## SDLC Translation Candidates
+- **Inference:** **Metric integrity auditor:** verify that counted outputs correspond to authorized targets and include externalized harm. [PDF pp.122–125, 127–128]
+- **Inference:** **Stop-work channel:** give minority objections authority to pause execution before irreversible action. [PDF p.127]
+- **Inference:** **Evidence preservation agent:** prohibit transcription followed by source destruction; maintain independent reviewability. [PDF p.127]
+- **Inference:** **Post-deployment monitor:** assess whether a contracted capability remains controllable after delivery and payment. [PDF pp.125–126]
+- **Inference:** **Witness-protection rule:** never treat observers or escapees as defects to eliminate. [PDF pp.131–132]
+
+## Open Questions
+- **Observed:** The source of the teeth dispute is not fully adjudicated in the chapter. [PDF p.129]
+- **Observed:** The judge's selection criteria for copied and erased images are not explained. [PDF p.127]
+- **Inference:** At what point does Chihuahua's sponsorship become responsibility for harms beyond the original contract? [PDF pp.122–136]

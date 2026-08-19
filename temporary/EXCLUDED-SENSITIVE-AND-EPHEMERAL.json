@@ -1,0 +1,164 @@
+[
+  {
+    "source": "/root/.hermes/profiles/bathcat/.env",
+    "bytes": 23339,
+    "sha256": "4fc559ac9c8dcc4e96079c4ebbc4e9006cbdf92b41c1c95cd05ea5e1958a8df6",
+    "reason": "secret-bearing or private runtime database; deliberately not committed"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/audio_cache",
+    "files": 0,
+    "bytes": 0,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/auth.json",
+    "bytes": 1991,
+    "sha256": "4e0ff5fd9f5bb0c4cef75a9808fe8e417bd9467f46626099bf325ff3be416d8a",
+    "reason": "secret-bearing or private runtime database; deliberately not committed"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/browser_recordings",
+    "files": 9,
+    "bytes": 6221395,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/cache",
+    "files": 10,
+    "bytes": 442606,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/checkpoints",
+    "files": 3309,
+    "bytes": 16611291,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/image_cache",
+    "files": 0,
+    "bytes": 0,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/kanban.db",
+    "bytes": 106496,
+    "sha256": "de3d579b898b99b3bedafcd78e8ef34a514611ba789887f70210182c6f9579a5",
+    "reason": "secret-bearing or private runtime database; deliberately not committed"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/logs/mcp-stderr.log",
+    "bytes": 47763058,
+    "sha256": "61ce3c5d696407afa145afe4c952df4f634beada2091a3031f5718ce64d31554",
+    "reason": "MCP dependency stderr flood; unrelated to specialist decisions and too large for Git"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/node",
+    "files": 27314,
+    "bytes": 725228072,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/sandboxes",
+    "files": 0,
+    "bytes": 0,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/sessions",
+    "files": 21,
+    "bytes": 4498444,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/state.db",
+    "bytes": 262533120,
+    "sha256": "447880a4bf8063d254e958527ac3b6f101cc48bfe564e07ac963564fd0014cf0",
+    "reason": "secret-bearing or private runtime database; deliberately not committed"
+  },
+  {
+    "source": "/root/.hermes/profiles/bathcat/verification_evidence.db",
+    "bytes": 77824,
+    "sha256": "bcc88d7a6d982a211431116b2777a7779fb54376eaf056a4e105863d4a865008",
+    "reason": "secret-bearing or private runtime database; deliberately not committed"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/.env",
+    "bytes": 23339,
+    "sha256": "857c421e0261e1718287c24632557cf619603d3620cbf6d59188264466934ed3",
+    "reason": "secret-bearing or private runtime database; deliberately not committed"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/audio_cache",
+    "files": 0,
+    "bytes": 0,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/auth.json",
+    "bytes": 1991,
+    "sha256": "4e0ff5fd9f5bb0c4cef75a9808fe8e417bd9467f46626099bf325ff3be416d8a",
+    "reason": "secret-bearing or private runtime database; deliberately not committed"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/cache",
+    "files": 3,
+    "bytes": 415415,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/checkpoints",
+    "files": 16084,
+    "bytes": 316409599,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/image_cache",
+    "files": 0,
+    "bytes": 0,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/kanban.db",
+    "bytes": 106496,
+    "sha256": "de3d579b898b99b3bedafcd78e8ef34a514611ba789887f70210182c6f9579a5",
+    "reason": "secret-bearing or private runtime database; deliberately not committed"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/logs/mcp-stderr.log",
+    "bytes": 36656143,
+    "sha256": "8e5b6e0b01cb6cf11966ce29d916fa17eba70408e95a76f0b18b18856740d48f",
+    "reason": "MCP dependency stderr flood; unrelated to specialist decisions and too large for Git"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/node",
+    "files": 27314,
+    "bytes": 725228072,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/sandboxes",
+    "files": 0,
+    "bytes": 0,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/sessions",
+    "files": 20,
+    "bytes": 3601031,
+    "reason": "ephemeral cache, dependency tree, binary media, or unrelated private sessions; inventory only"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/state.db",
+    "bytes": 214392832,
+    "sha256": "ae63a7aab612628dc08019182544b10fedf92a43a905f55ca5685046e7d4a027",
+    "reason": "secret-bearing or private runtime database; deliberately not committed"
+  },
+  {
+    "source": "/root/.hermes/profiles/mennonite/verification_evidence.db",
+    "bytes": 32768,
+    "sha256": "92d0a6bff88ab933c5679ed667bbc8fc0f14cee4f674f57b5a71f27bb4ec5860",
+    "reason": "secret-bearing or private runtime database; deliberately not committed"
+  }
+]

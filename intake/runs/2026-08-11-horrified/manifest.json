@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-08-11-horrified",
+  "created_at": "2026-08-11T06:08:00.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "dice-rolling"
+  },
+  "candidates": [
+    {
+      "slug": "horrified",
+      "title": "Horrified: Universal Monsters",
+      "bgg_id": null,
+      "cohort": "cooperative",
+      "status": "promoted",
+      "discovery_sources": [
+        "https://boardgamegeek.com/boardgame/282524/horrified",
+        "https://web.archive.org/web/20251104082036id_/https://www.ravensburger.us/en-US/products/games/board-games/horrified-universal-monsters-60001836",
+        "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22682_UMH_Instructions_ES.pdf",
+        "https://lee-leonardo.github.io/blog/horrified-impressions/"
+      ],
+      "blockers": [],
+      "coverage": {
+        "deckbuilder": false,
+        "methodology": "Exact Universal Monsters base game only. The bounded governing-document inventory is the retrieved official 16-page ES01 instructions file; no claim depends on a separate FAQ or errata document. Factual coverage records only source-backed claim groups and leaves hidden card text and unobserved denominators unknown.",
+        "rules": {
+          "recorded": 1,
+          "known_total": 1,
+          "percent": 100
+        },
+        "factual": {
+          "recorded": 12,
+          "known_total": null,
+          "percent": null
+        }
+      },
+      "promoted_at": "2026-08-16T09:05:20.124Z"
+    }
+  ]
+}

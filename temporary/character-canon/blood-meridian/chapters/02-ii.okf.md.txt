@@ -1,0 +1,49 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 2
+  title: II
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+status: verified
+---
+
+## Plot
+
+- Traveling west alone, the kid shelters with a former slave trader who keeps a preserved human heart and warns about self-perpetuating human evil (PDF pp. 15–18).
+- Cattle drovers feed the kid, give him beans, peppers, and a knife, and direct him toward Bexar (pp. 18–19).
+- He enters Bexar amid signs of disease and asks a cantina keeper to exchange labor for liquor (pp. 19–21).
+- When the keeper refuses payment after the work, the kid disables a pistol, attacks him with bottles, takes liquor, and leaves (pp. 21–22).
+- He wakes in a ruined mission, observes bodies in the sacristy and damaged sacred figures, tracks his mule to the river, and bathes (pp. 22–24).
+
+## Character Evidence
+
+- **The kid:** Can negotiate and perform useful work, but responds to perceived breach with calculated, severe violence; he first neutralizes the firearm (pp. 20–22).
+- **The hermit:** Offers shelter while presenting racist trophies and a theory that human invention can automate evil across generations (pp. 15–18).
+- **The cattle drovers:** Extend material aid without interrogation, quietly adding supplies to the kid's mule (pp. 18–19).
+- **The cantina keeper:** Initially permits the proposed work exchange, then dismisses the kid and reaches for a weapon when challenged (pp. 20–22).
+
+## Voice & Narrative Techniques
+
+- A journey structure links encounters that test hospitality, exchange, violence, and desecration.
+- Dialogue carries competing moral theories without narratorial endorsement.
+- Ruined religious imagery places institutional promise beside abandonment and bodily evidence.
+- Language barriers become both comic friction and a catalyst for conflict.
+- Recurring water imagery marks temporary survival rather than moral renewal.
+
+## SDLC Translation Candidates
+
+> The following are design inferences, not claims about software in the novel.
+
+- **Inference — the kid:** **Operational behavior:** clarify an exchange, complete the requested task, and secure a blocked resource. **Danger:** unilateral enforcement turns a dispute into catastrophic escalation. **Guardrail:** make acceptance criteria explicit; use mediation and nonviolent rollback when terms are disputed.
+- **Inference — the hermit:** **Operational behavior:** reason about systems that continue operating without supervision. **Danger:** self-propagating automation can preserve harmful objectives. **Guardrail:** add expiry, human review, kill switches, provenance, and recurring policy checks.
+- **Inference — cattle drovers:** **Operational behavior:** provide low-friction support to a distressed operator. **Danger:** unexamined aid may enable unsafe work. **Guardrail:** couple emergency assistance with minimal safety screening and bounded resources.
+- **Inference — cantina keeper:** **Operational behavior:** control access to scarce resources. **Danger:** ambiguous agreements and armed enforcement create avoidable conflict. **Guardrail:** publish terms, confirm consent, and provide a dispute path.
+
+## Open Questions
+
+- What does the hermit intend when he approaches the sleeping kid?
+- Did the cantina keeper understand the work-for-drink agreement as the kid did?
+- The source does not identify who killed those found in the mission sacristy.

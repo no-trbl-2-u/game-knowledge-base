@@ -1,0 +1,43 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 19
+  title: XIX
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200]
+status: verified
+---
+
+## Plot
+- **Observed:** Glanton and the judge persuade Dr. Lincoln to let them fortify his position and load the howitzer; after the Yumas attack, the gang kills wounded people, takes scalps, and assumes control of the ferry. [PDF pp. 188–190]
+- **Observed:** The gang escalates variable tolls into robbery, assault, enslavement, sexual violence, and murder while Lincoln withdraws and still receives revenue. [PDF pp. 189–191]
+- **Observed:** Brown, Webster, and Toadvine travel to San Diego for supplies; Brown mutilates a fine shotgun, burns a soldier alive, bribes a guard with a treasure story, escapes, and murders the guard. [PDF pp. 191–195]
+- **Observed:** Glanton terrorizes San Diego while seeking Brown and the missing supplies, then returns alone to a disorderly ferry camp. [PDF pp. 195–198]
+- **Observed:** At dawn the Yumas retake the crossing, killing Jackson, Lincoln, Glanton, and others; the judge escapes with James Robert after threatening the attackers with the detached howitzer barrel. [PDF pp. 198–200]
+
+## Character Evidence
+- **Observed:** The judge secures Lincoln's consent through calm concern, then later possesses the tactical means and composure needed to escape the collapse. [PDF pp. 188–189, 198–199]
+- **Inference:** He excels at converting another person's stated duty into authorization for infrastructure he can control. [PDF pp. 188–190]
+- **Observed:** Glanton changes the ferry from service to extortion, tolerates unrestricted abuses, and responds to supply loss with hostage-taking and torture. [PDF pp. 189–197]
+- **Inference:** His leadership destroys the legitimacy and operating environment on which the revenue stream depends. [PDF pp. 189–200]
+- **Observed:** Brown treats refusal as defiance, converts payment into coerced consent, and murders Petit after exploiting the young soldier's trust. [PDF pp. 192–195]
+- **Observed:** Lincoln objects but accepts a share and retreats into isolation. [PDF pp. 189–190]
+- **Inference:** Passive objection plus retained benefit makes him compromised rather than an effective control. [PDF pp. 189–190]
+
+## Voice & Narrative Techniques
+- **Observed:** Commercial and engineering detail makes the ferry's institutional capture legible before the narration catalogs its human consequences. [PDF pp. 188–191]
+- **Observed:** The chapter crosscuts between frontier enterprise, urban violence, and the Yuma counterattack, joining private misconduct to systemic collapse. [PDF pp. 190–200]
+- **Inference:** The final fire mirrors the gang's earlier disposal of victims and frames retaliation as another cycle of appropriation, not moral purification. [PDF pp. 198–200]
+
+## SDLC Translation Candidates
+- **Inference:** **Platform-governance auditor:** monitor price discrimination, access denial, asset seizure, abuse complaints, and operator conflicts before a chokepoint service becomes predatory. [PDF pp. 189–191]
+- **Inference:** **Consent validator:** distinguish voluntary authorization from assent obtained through fear, dependency, or misleading framing. [PDF pp. 188–190, 192–194]
+- **Inference:** **Abuse escalation agent:** treat retained revenue, silence, and withdrawal as failed controls; trigger external shutdown and victim protection. [PDF pp. 189–190]
+- **Inference:** **Resilience reviewer:** model backlash created by betrayal and prevent sleeping, intoxication, centralized assets, and absent sentries from becoming correlated failure. [PDF pp. 197–200]
+
+## Open Questions
+- **Observed:** The narrative does not specify how the Yumas coordinated undetected access to the fortifications. [PDF pp. 197–199]
+- **Observed:** Toadvine, Webster, the kid, Tobin, and Brown are not accounted for at the chapter's close. [PDF pp. 195–200]
+- **Inference:** The degree to which the judge planned for the gang's destruction remains unresolved. [PDF pp. 197–200]

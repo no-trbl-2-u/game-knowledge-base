@@ -1,0 +1,43 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 16
+  title: XVI
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175]
+status: verified
+---
+
+## Plot
+- **Observed:** The gang rides north through the Santa Cruz valley; at Tumacácori, Prewett shoots one of two German hermits, and the survivors leave the brother behind. [PDF pp.162–164]
+- **Observed:** They find their four missing scouts tortured and dead, then approach Tucson and enter a tense parley with Chiricahuas led by Mangas. [PDF pp.164–167]
+- **Observed:** Glanton promises a barrel of whiskey in three days, enters Tucson, and begins recruiting travelers, including Cloyce and his caged disabled brother. [PDF pp.167–170]
+- **Observed:** After an eatinghouse owner attempts to segregate black Jackson, Jackson kills him; Glanton denies the gang was present, and the judge supplies a legal defense. [PDF pp.170–173]
+- **Observed:** A Mexican girl is abducted; later revelry follows, and the judge demonstrates strength by lifting and throwing a large meteorite used as an anvil. [PDF pp.173–175]
+
+## Character Evidence
+- **Observed:** Glanton reacts to the hermits' degradation as an offense to whiteness rather than to the wrongful shooting itself. [PDF pp.163–164]
+- **Observed:** The judge uses Spanish to defuse a near firefight, recognizes Mangas's authority, and helps negotiate a transactional truce. [PDF pp.166–167]
+- **Observed:** Black Jackson responds to an armed racial threat with a fatal shot; Brown had supplied the proprietor with the gun and urged him to fire. [PDF pp.170–171]
+- **Observed:** The judge denies readily testable facts, invokes legal authorities, and redirects the lieutenant from investigation to procedure. [PDF pp.171–173]
+- **Observed:** The judge physically examines Cloyce's skull after learning that the caged man is his brother. [PDF p.173]
+- **Inference:** His legal expertise functions as adversarial obstruction rather than truth-seeking. [PDF pp.171–173]
+
+## Voice & Narrative Techniques
+- **Observed:** The Chiricahua encounter is rendered as an interdependent structure in which one movement could collapse the truce. [PDF pp.165–167]
+- **Observed:** Institutional forms—military command, commerce, law, exhibition, and public festivity—appear but repeatedly fail to protect vulnerable people. [PDF pp.167–175]
+- **Inference:** The meteorite episode turns cosmic material into wager, spectacle, and private gain, echoing the judge's conversion of knowledge into power. [PDF pp.174–175]
+
+## SDLC Translation Candidates
+- **Inference:** **Deadlock de-escalator:** identify mutual dependencies, lower arousal, route negotiation through recognized authority, and avoid sudden state changes. [PDF pp.165–167]
+- **Inference:** **Truthful legal agent:** distinguish zealous representation from fabrication; never erase observable facts through procedural fluency. [PDF pp.171–173]
+- **Inference:** **Vulnerability safeguard:** reject exploitation, confinement, or biometric examination of disabled people without consent. [PDF pp.169–173]
+- **Inference:** **Bias incident reviewer:** reconstruct provocation, weapon transfer, threat, and response without reducing the event to a single actor. [PDF pp.170–171]
+- **Inference:** **Contract-risk monitor:** flag promised intoxicants to an armed force as a deferred safety and credibility hazard. [PDF p.167]
+
+## Open Questions
+- **Observed:** The surviving hermit's later fate is unknown. [PDF p.164]
+- **Observed:** The abducted girl's perpetrator and fate are unstated. [PDF pp.173–174]
+- **Observed:** The promised whiskey exchange with Mangas remains pending at chapter end. [PDF p.167]

@@ -1,0 +1,50 @@
+---
+okf_version: 0.1
+type: literary_chapter_analysis
+work: blood-meridian
+chapter:
+  number: 3
+  title: III
+source_pdf: /root/.hermes/cache/documents/doc_31721a125321_mccarthy_cormac_blood_meridianbooksee-org.pdf
+pdf_pages: [25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+status: verified
+---
+
+## Plot
+
+- Sergeant Trammel recruits the kid for Captain White's unauthorized expedition into Mexico by promising equipment and spoils (PDF pp. 25–26).
+- Captain White frames renewed invasion as liberation, racial destiny, and private opportunity; the kid joins while focusing on a horse, rifle, and saddle (pp. 26–30).
+- At camp the kid receives clothes and converts his mule into riding equipment and a small coin (pp. 30–32).
+- The kid, the second corporal, and Earl drink in a Laredito cantina despite a Mennonite's warning that the expedition will bring destruction (pp. 32–34).
+- After a confused night of conflict, Earl is found with his skull broken; the Mennonite returns to mark the contrast between anticipation and consequence (pp. 33–34).
+
+## Character Evidence
+
+- **The kid:** Lies about being robbed, listens without engaging White's ideology, and negotiates concrete equipment before enlisting (pp. 27–30).
+- **Captain White:** Converts prejudice, grievance, geopolitical speculation, and promised wealth into a recruitment narrative (pp. 27–30).
+- **Sergeant Trammel:** Uses personal rescue testimony and material promises to make enlistment appear redemptive and practical (pp. 25–26).
+- **The Mennonite:** Warns plainly that the group may not return and identifies the expedition as a private war; he remains present after his warning is ignored (pp. 33–34).
+- **Earl:** Joins the recruits' celebratory drinking and is killed by an unidentified person before dawn (pp. 31–34).
+
+## Voice & Narrative Techniques
+
+- Recruitment is staged as an interview in which procedural form masks an unlawful project.
+- Extended political speech reveals character through rhetoric, selective history, and promised rewards.
+- The kid's terse practical questions undercut the captain's grand abstractions.
+- Foreshadowing explicitly interrupts youthful expectation before the fatal night.
+- The Mennonite functions as a warning voice without controlling the outcome.
+
+## SDLC Translation Candidates
+
+> The following are design inferences, not claims about software in the novel.
+
+- **Inference — Captain White:** **Operational behavior:** align a team through a compelling strategic narrative. **Danger:** ideology and incentives can conceal invalid authority and weak evidence. **Guardrail:** verify mandate, test premises, disclose conflicts, and separate mission approval from reward allocation.
+- **Inference — Sergeant Trammel:** **Operational behavior:** recruit by matching resources to immediate operator needs. **Danger:** urgency and vulnerability undermine informed consent. **Guardrail:** provide written scope, alternatives, risks, and a cooling-off period.
+- **Inference — the kid:** **Operational behavior:** reduce vague proposals to dependencies and concrete deliverables. **Danger:** optimizing equipment can normalize an illegitimate mission. **Guardrail:** validate purpose and authorization before implementation details.
+- **Inference — the Mennonite:** **Operational behavior:** raise an early risk objection grounded in likely terminal outcomes. **Danger:** an unstructured warning is easy to dismiss. **Guardrail:** log dissent, assign an owner, define trigger conditions, and require formal risk acceptance.
+
+## Open Questions
+
+- Who killed Earl, and what specific dispute preceded his death?
+- How much of Captain White's political account does the kid believe, if any?
+- Does the kid enlist mainly for survival, mobility, spoils, or violence?
