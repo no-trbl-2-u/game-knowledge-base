@@ -32,7 +32,14 @@ sources:
     kind: other
     provenance: secondary
     retrieved_at: "2026-07-19"
-    notes: "Accessible secondary rules summary used where the official rulebook could not be fetched."
+    notes: "Accessible secondary rules summary; cross-checked against the official rulebook."
+  - id: "src-006"
+    title: "Too Many Bones Rulebook (v2.2)"
+    url: "https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf?rlkey=1y2zxkqw7mpi98aljmaoipjzq&e=1&dl=0"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-19"
+    notes: "Official rulebook, retrieved and text-extracted in the 2026-08-19 librarian pass."
   - id: "src-004"
     title: "Brawling Brothers — Too Many Bones review"
     url: "https://brawlingbrothers.com/too-many-bones-review/"
@@ -47,8 +54,9 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-19"
     notes: "Review search result; walkthrough and rules-learning testimony."
-confidence: medium
+confidence: high
 status: needs_followup
+last_verified: "2026-08-19"
 ---
 
 ## Summary
@@ -72,5 +80,5 @@ Gearlocs allocate dice to attack, defense, and skills; encounters grant progress
 
 ## Open questions
 
-- Current BGG average, Geek Rating, rank, and complexity weight require a later direct BGG fetch.
-- The official rulebook URL and any current errata were not recovered during this run.
+- Current BGG average, Geek Rating, rank, and complexity weight require a later direct BGG fetch (BGG remains blocked corpus-wide as of 2026-08-19).
+- Official rulebook (src-006) recovered and text-extracted in the 2026-08-19 librarian pass; see `rules/*.okf.md` for detailed claims. FAQ article-level rulings beyond the solutions-index topic list remain unretrieved.
