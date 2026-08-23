@@ -15,12 +15,17 @@ reads as swinginess/imbalance when a leader's combat strength outpaces
 opponents' visibility into it. Kingdom Death: Monster's dice-based combat
 resolution is only lightly sourced so far (needs_followup) but points at the
 same tension: risk/randomness that defines the game's identity is also the
-axis reviewers flag as needing clearer at-the-table communication. Both games
-suggest the same shape of problem — resolution mechanics that are core to the
-game's appeal are also the primary source of "better if" requests.
+axis reviewers flag as needing clearer at-the-table communication. Arydia adds
+a third, related shape this pass: combat resolution driven by a hidden-ish
+system state (Threat levels and AI cards) that a reviewer wants kept visible
+and auditable rather than tracked only by the game. All three games suggest
+the same shape of problem — resolution mechanics that are core to the game's
+appeal are also the primary source of "better if" requests, and the fix is
+consistently visibility/legibility rather than removing the risk.
 
 ## Evidence by game
 
+- arydia-the-paths-we-dare-tread (src-005): foe behavior depends on Threat levels and AI cards, supporting a call to keep threat changes visible and auditable at the table rather than tracked opaquely, confidence: medium
 - dune-imperium (src-008): Reviewer (There Will Be Games) praised hidden combat
   inputs, saying a player is "never 100% sure how much combat power someone
   has," calling resulting decisions "hard, impactful, and constant." confidence: medium
@@ -47,6 +52,7 @@ game's appeal are also the primary source of "better if" requests.
 
 ## Where it fails
 
+- arydia-the-paths-we-dare-tread (src-005): Threat-driven foe behavior is only lightly sourced (single review, medium confidence) but names visibility of that state as the specific gap, not the threat system itself.
 - dune-imperium (src-010): Possible leader-specific combat dominance
   (Glossu Rabban) reported as a low-confidence balance complaint tied to the
   combat/conflict phase.
@@ -62,8 +68,11 @@ game's appeal are also the primary source of "better if" requests.
 
 ## Coverage gaps
 
-Current support for this label remains narrow, and Kingdom Death: Monster's
-reception docs are still `needs_followup` with low-confidence, inference-heavy claims. A
+Current support for this label remains narrow, and both Kingdom Death: Monster's
+and Arydia's reception docs are still `needs_followup` with low-to-medium-confidence,
+partly inference-heavy claims. Cthulhu: Death May Die carries the `combat-resolution`
+label in frontmatter this pass but its body claims are about turn sequencing and
+progression tracking, not combat resolution specifically, so it was excluded. A
 dedicated combat-heavy game (e.g., a wargame or skirmish title) with a
 `verified` reception doc would substantially strengthen this pattern; until
 then, conclusions here should be read as provisional.

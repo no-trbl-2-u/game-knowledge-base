@@ -15,10 +15,14 @@ sub-pool (few fear/blight cards, no modules yet unlocked, mismatched module
 sets) turns the same mechanic into a source of predictability or imbalance
 complaints instead. The failure mode is rarely "randomized setup is bad" —
 it is "there wasn't enough variety in the setup pool," or "the variable
-pieces weren't curated correctly." Evidence is real but thin: of the five
-tagged games, only three (Heat, Spirit Island, Quacks) yielded reviewer
-claims that were genuinely about setup *variability* rather than setup
-*duration* or in-game card-draw randomness.
+pieces weren't curated correctly." Horrified adds a clean rules-derived
+confirmation of the positive case this pass: its official rules build
+variable monster selection directly into the shared setup procedure, giving
+each session a different opponent puzzle by design rather than by chance
+draw. Evidence is real but thin: of the six tagged games with a usable
+claim, only four (Heat, Horrified, Spirit Island, Quacks) yielded reviewer
+or rules claims that were genuinely about setup *variability* rather than
+setup *duration* or in-game card-draw randomness.
 
 ## Evidence by game
 
@@ -26,6 +30,7 @@ claims that were genuinely about setup *variability* rather than setup
   "Early games without modules may feel overly simplistic for seasoned
   players" — the base race alone under-delivers until the optional,
   variable championship modules are added, confidence: medium
+- horrified (src-002): the official rules build variable monster selection into setup alongside a visible action limit and shared object economy, giving each session a distinct opponent puzzle rather than a fixed scenario, confidence: high
 - spirit-island (src-005): Gideon's Gaming notes the core box's fear and
   blight decks are small enough to repeat ("low number of fear cards means
   they repeat often"; "only comes with two blight cards"), which the same
@@ -48,6 +53,7 @@ claims that were genuinely about setup *variability* rather than setup
 - spirit-island (src-005): modular board and asymmetric spirit setup are
   credited with giving the game "a ton of variety, player choice, and
   replay value."
+- horrified (src-002): variable monster selection is a rules-level design choice, built directly into shared setup rather than left to card-draw luck, giving each session a different, bounded objective puzzle.
 
 ## Where it fails
 
@@ -67,7 +73,11 @@ Ark Nova and Root both carry the variable-setup tag, but their reviewed
 sources spoke to in-play card-draw randomness (Ark Nova's 212-card zoo
 deck) and faction/expansion depth (Root's low-player-count faction mix)
 rather than setup-condition variability itself, so neither yielded usable
-evidence here — this pattern's coverage would benefit from a game whose
-reviews discuss modular-board or randomized-market setup explicitly (tile
-layout, scenario draw, starting-resource randomization) rather than
-in-game draw variance.
+evidence here. Dark Pact, Dominion, and Nemesis carry `variable-setup` this
+pass but their strongest claims map to turn-pacing, onboarding, and
+setup-teardown instead and are cited there. Horrified's claim is drawn from
+the official rulebook rather than independent reviewer testimony — this
+pattern's coverage would still benefit from a game whose independent reviews
+discuss modular-board or randomized-market setup explicitly and praise it as
+solving the variety problem, rather than the claim resting on rules text
+alone.
