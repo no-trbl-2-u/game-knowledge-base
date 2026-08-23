@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-08-23-scythe",
+  "created_at": "2026-08-23T06:12:00.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "area-majority-influence"
+  },
+  "candidates": [
+    {
+      "slug": "scythe",
+      "title": "Scythe",
+      "bgg_id": 169786,
+      "cohort": "rotating_focus",
+      "status": "ready_for_audit",
+      "discovery_sources": [
+        "https://stonemaiergames.com/games/scythe/",
+        "https://stonemaiergames.com/games/scythe/rules/",
+        "https://boardgamegeek.com/boardgame/169786/scythe",
+        "https://www.boardgamequest.com/scythe-review/"
+      ],
+      "blockers": [],
+      "focus_fit": "Scythe is a competitive engine-building and area-control game matching the wishlist gap about snowballing leader pressure.",
+      "coverage": {
+        "deckbuilder": false,
+        "methodology": "Rules coverage counts the three retrieved publisher-linked authority surfaces used for the narrow claims published here; complete card, FAQ, expansion, and printing-history inventories remain outside scope.",
+        "rules": {
+          "recorded": 3,
+          "known_total": 3,
+          "percent": 100
+        },
+        "factual": {
+          "recorded": 11,
+          "known_total": null,
+          "percent": null
+        }
+      }
+    }
+  ]
+}
