@@ -8,7 +8,7 @@ game:
   publisher: "Stonemaier Games"
   year: 2016
   weight: null
-  edition: "Stonemaier Games base game; claims bounded to current publisher product/rules pages and linked Dized tutorial"
+  edition: "Stonemaier Games base game; claims bounded to current publisher product/rules pages"
 scope: "base game"
 mechanics: [area-majority-influence, engine-building, variable-player-powers, resource-management, grid-movement, action-selection]
 sources:
@@ -54,13 +54,7 @@ sources:
     provenance: secondary
     retrieved_at: "2026-08-23"
     notes: "Visual receipt."
-  - id: "src-007"
-    title: "Dized — Scythe rules and tutorial page linked by Stonemaier Games"
-    url: "https://app.dized.com/game/aa313257-ef9b-4eef-835c-a199593a0cd4"
-    kind: other
-    provenance: official
-    retrieved_at: "2026-08-23"
-    notes: "Publisher-linked tutorial receipt."
+
 confidence: high
 status: verified
 ---
@@ -68,8 +62,8 @@ status: verified
 ## Scope decision
 
 - Claim: This packet covers the released physical Scythe base game and only the claims supported by the retrieved authority surfaces.
-  Source: src-001, src-002, src-007
-  Evidence: The publisher product and rules pages identify the base game, while the linked Dized record identifies Scythe and Stonemaier Games with the core produce/build/mech/territory description.
+  Source: src-001, src-002
+  Evidence: The publisher product and rules pages identify the base game and define the narrow authority boundary used here.
   Confidence: high
 
 - Claim: The packet is eligible for the rotating-focus area-control and engine-building request.
@@ -79,9 +73,9 @@ status: verified
 
 ## Authority inventory
 
-- Claim: The bounded rules ledger is three retrieved publisher-linked authority surfaces, not a manufactured complete card or expansion denominator.
-  Source: src-001, src-002, src-007
-  Evidence: All three receipts are HTTP 200 records with preserved body hashes and cited semantic markers; excluded material is named in the evidence ledger.
+- Claim: The bounded rules ledger is two retrieved publisher authority surfaces, not a manufactured complete card or expansion denominator.
+  Source: src-001, src-002
+  Evidence: Both receipts are HTTP 200 records with preserved body hashes and cited semantic markers; excluded material is named in the evidence ledger.
   Confidence: medium
 
 ## Reception and visual evidence

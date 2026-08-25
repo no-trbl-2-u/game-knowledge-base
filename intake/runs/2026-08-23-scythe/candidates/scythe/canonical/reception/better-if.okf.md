@@ -8,7 +8,7 @@ game:
   publisher: "Stonemaier Games"
   year: 2016
   weight: null
-  edition: "Stonemaier Games base game; claims bounded to current publisher product/rules pages and linked Dized tutorial"
+  edition: "Stonemaier Games base game; claims bounded to current publisher product/rules pages"
 scope: "base game"
 mechanics: [area-majority-influence, engine-building, variable-player-powers, resource-management, grid-movement, action-selection]
 better_if_labels: [strategic-depth, onboarding, balance-faction-asymmetry, player-interaction, combat-resolution, turn-pacing]

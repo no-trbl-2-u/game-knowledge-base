@@ -32,10 +32,10 @@
       "focus_fit": "Scythe is a competitive engine-building and area-control game matching the wishlist gap about snowballing leader pressure.",
       "coverage": {
         "deckbuilder": false,
-        "methodology": "Rules coverage counts the three retrieved publisher-linked authority surfaces used for the narrow claims published here; complete card, FAQ, expansion, and printing-history inventories remain outside scope.",
+        "methodology": "Rules coverage counts the two retrieved publisher authority surfaces used for the narrow claims published here; complete card, FAQ, expansion, and printing-history inventories remain outside scope.",
         "rules": {
-          "recorded": 3,
-          "known_total": 3,
+          "recorded": 2,
+          "known_total": 2,
           "percent": 100
         },
         "factual": {

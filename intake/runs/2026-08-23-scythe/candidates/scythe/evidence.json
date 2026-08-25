@@ -6,7 +6,7 @@
     "role": "Field Intelligence and Knowledge Scout"
   },
   "researched_at": "2026-08-23T06:12:00.000Z",
-  "edition_scope": "Released physical Scythe base game sold by Stonemaier Games; claims are bounded to the current publisher product page, publisher rules page, publisher-linked Dized tutorial record, and one independent review. Expansions, Automa rules, complete card text, and exact printing history are excluded.",
+  "edition_scope": "Released physical Scythe base game sold by Stonemaier Games; claims are bounded to the current publisher product page, publisher rules page, and one independent review.",
   "coverage_ledger": {
     "rules_denominator": [
       {
@@ -21,14 +21,7 @@
         "acquired": true,
         "official_endpoint": true,
         "source_ids": ["src-002"],
-        "notes": "Retrieved HTML directly; page identifies the base-game rules collection and publisher-linked tutorial path."
-      },
-      {
-        "authority": "Dized Scythe tutorial record linked by Stonemaier Games",
-        "acquired": true,
-        "official_endpoint": true,
-        "source_ids": ["src-007"],
-        "notes": "Retrieved HTML record identifies Scythe, Stonemaier Games, player count, and the core produce/build/mech/territory description."
+        "notes": "Retrieved HTML directly; page identifies the base-game rules collection."
       }
     ],
     "faq_errata_inventory": {
@@ -44,9 +37,9 @@
     "factual_denominator": [
       {"claim_group":"physical product identity and publisher description","recorded":true,"source_ids":["src-001"]},
       {"claim_group":"player count, duration, and base-game components","recorded":true,"source_ids":["src-001"]},
-      {"claim_group":"action-selection and engine-building description","recorded":true,"source_ids":["src-001","src-007"]},
-      {"claim_group":"territory, resource, mech, and combat framing","recorded":true,"source_ids":["src-001","src-007"]},
-      {"claim_group":"publisher rules/tutorial authority path","recorded":true,"source_ids":["src-002","src-007"]},
+      {"claim_group":"action-selection and engine-building description","recorded":true,"source_ids":["src-001"]},
+      {"claim_group":"alternate-history setting and engine-building description","recorded":true,"source_ids":["src-001"]},
+      {"claim_group":"publisher rules authority path","recorded":true,"source_ids":["src-002"]},
       {"claim_group":"independent gameplay overview","recorded":true,"source_ids":["src-003"]},
       {"claim_group":"independent snowball and onboarding testimony","recorded":true,"source_ids":["src-003"]},
       {"claim_group":"product identity visual","recorded":true,"source_ids":["src-004"]},
@@ -78,9 +71,6 @@
     },
     {
       "id":"src-006","title":"Board Game Quest — Scythe game experience photograph","roles":["visual"],"provenance":"secondary","url":"https://www.boardgamequest.com/wp-content/uploads/2021/06/Scythe-Game-Experience.jpg","final_url":"https://www.boardgamequest.com/wp-content/uploads/2021/06/Scythe-Game-Experience.jpg","retrieved_at":"2026-08-23T06:08:12.356Z","http_status":200,"content_type":"image/jpeg","byte_length":132856,"sha256":"3ee581b7ef33105b19df24bb52c6131088b27accdaf459939bcef734503ad69b","locator":"Scythe Review game experience figure","evidence":"Reduced source-linked review photograph for the tabletop game state."
-    },
-    {
-      "id":"src-007","title":"Dized — Scythe rules and tutorial page linked by Stonemaier Games","roles":["official_rules"],"provenance":"official","url":"https://app.dized.com/game/aa313257-ef9b-4eef-835c-a199593a0cd4","final_url":"https://app.dized.com/game/aa313257-ef9b-4eef-835c-a199593a0cd4","retrieved_at":"2026-08-23T06:10:41.016Z","http_status":200,"content_type":"text/html; charset=utf-8","byte_length":63777,"sha256":"b301a049ad00f945d33f0cb67ebf520afaf0694aeb14605a60268ab5333d1272","locator":"Scythe rules/tutorial product record; publisher field and core description","evidence":"Set in an alternate history 1920s Europa, players control factions which produce resources, build economic infrastructure, and use giant dieselpunk war machines called mechs to fight and control territory."
     }
   ]
 }

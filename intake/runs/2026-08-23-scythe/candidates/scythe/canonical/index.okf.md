@@ -8,7 +8,7 @@ game:
   publisher: "Stonemaier Games"
   year: 2016
   weight: null
-  edition: "Stonemaier Games base game; claims bounded to current publisher product/rules pages and linked Dized tutorial"
+  edition: "Stonemaier Games base game; claims bounded to current publisher product/rules pages"
 scope: "base game"
 mechanics: [area-majority-influence, engine-building, variable-player-powers, resource-management, grid-movement, action-selection]
 sources:
@@ -54,13 +54,7 @@ sources:
     provenance: secondary
     retrieved_at: "2026-08-23"
     notes: "Visual receipt."
-  - id: "src-007"
-    title: "Dized — Scythe rules and tutorial page linked by Stonemaier Games"
-    url: "https://app.dized.com/game/aa313257-ef9b-4eef-835c-a199593a0cd4"
-    kind: other
-    provenance: official
-    retrieved_at: "2026-08-23"
-    notes: "Publisher-linked tutorial receipt."
+
 confidence: high
 status: verified
 ---
