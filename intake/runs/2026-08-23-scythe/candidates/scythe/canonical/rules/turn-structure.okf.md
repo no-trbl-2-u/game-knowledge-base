@@ -17,7 +17,7 @@ sources:
     url: "https://stonemaiergames.com/games/scythe/"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-08-23"
+    retrieved_at: "2026-08-26"
     notes: "Current product action-selection and pacing description."
   - id: "src-003"
     title: "Board Game Quest — Scythe Review REST receipt"

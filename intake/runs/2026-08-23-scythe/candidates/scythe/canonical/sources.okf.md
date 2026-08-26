@@ -17,14 +17,14 @@ sources:
     url: "https://stonemaiergames.com/games/scythe/"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-08-23"
+    retrieved_at: "2026-08-26"
     notes: "HTTP 200 HTML receipt; product identity, mechanism, player count, duration, components, and interaction description."
   - id: "src-002"
     title: "Stonemaier Games — Scythe rules page"
     url: "https://stonemaiergames.com/games/scythe/rules/"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-08-23"
+    retrieved_at: "2026-08-26"
     notes: "HTTP 200 HTML receipt; publisher base-game rules collection."
   - id: "src-003"
     title: "Board Game Quest — Scythe Review REST receipt"

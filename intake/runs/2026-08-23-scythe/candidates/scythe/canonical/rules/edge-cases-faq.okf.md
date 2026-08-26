@@ -17,7 +17,7 @@ sources:
     url: "https://stonemaiergames.com/games/scythe/rules/"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-08-23"
+    retrieved_at: "2026-08-26"
     notes: "Rules-page inventory receipt."
 
 confidence: medium
