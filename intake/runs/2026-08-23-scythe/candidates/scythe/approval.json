@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-08-26T09:03:17.000Z",
+  "packet_sha256": "0b77ae76d53a76c1163dc8a418cd49869a6df9b70a093aced07c65a0d9f8bfa1",
+  "reviewed_source_ids": ["src-001", "src-002", "src-003", "src-004", "src-005", "src-006"],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Exact-head audit reopened all six retained receipts; all status, final URL, content type, byte length, and SHA-256 values matched. Canonical claims and duplicated registries were inspected, visual derivatives and contact sheet hashes matched, and the narrow base-game scope and unknown denominators are honestly stated."
+}
