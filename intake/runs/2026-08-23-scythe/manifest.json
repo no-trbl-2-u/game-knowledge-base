@@ -21,7 +21,7 @@
       "title": "Scythe",
       "bgg_id": 169786,
       "cohort": "rotating_focus",
-      "status": "approved",
+      "status": "promoted",
       "discovery_sources": [
         "https://stonemaiergames.com/games/scythe/",
         "https://stonemaiergames.com/games/scythe/rules/",
@@ -43,7 +43,8 @@
           "known_total": null,
           "percent": null
         }
-      }
+      },
+      "promoted_at": "2026-08-26T09:04:22.902Z"
     }
   ]
 }
