@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "Used the publisher product page plus search-result metadata and a secondary review."
     retry_needs: alternate_source
-    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 on 2026-07-17; current score/rank/weight remain unverified."
+    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 on 2026-07-17; current score/rank/weight remain unverified. Retried 2026-08-26 (librarian): page still 403, XML API still 401 (dual failure persists across two runs). Found a substitute secondary source (src-006, coopboardgames.com) quoting BGG rank 87 and rating 8.5, weight 4.27 — this is a snapshot only (no retrieval date printed on the page) and a WebSearch synthesis suggested a conflicting older figure (rank ~55/8.57), so treat src-006's numbers as drifting, not BGG-authoritative."
   - source_id: "src-005"
     url: "https://shop.kingdomdeath.com/products/kingdom-death-monster-1-5"
     failure: other
     fallback: "Product page was accessible, but no downloadable rulebook was located in the retrieved material."
     retry_needs: manual_review
-    notes: "Retry official rulebook, FAQ, or BGG files."
+    notes: "Retry official rulebook, FAQ, or BGG files. Retried 2026-08-26 (librarian): checked three official pages beyond the product page — kingdomdeath.com/rules/downloads (lists only settlement/survivor record sheets and expansion inserts, no full rulebook PDF), kingdomdeath.com/rules/faq (no rulebook text, links back to Downloads), and kingdomdeath.com/rules/living-glossary (200 OK, but only the alphabetical 'A' section rendered in this pass). No official downloadable rulebook PDF exists on the Kingdom Death storefront/rules site as of this pass, confirmed via three official URLs, not just the product page. Next retry should target the living-glossary page's other alphabetical sections/anchors directly."
 sources:
   - id: "src-001"
     title: "Kingdom Death: Monster — BoardGameGeek"
@@ -60,6 +60,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-17"
     notes: "Registered failed extraction/search path; no rulebook file located in accessible product material."
+  - id: "src-006"
+    title: "Kingdom Death: Monster — Co-op Board Games review"
+    url: "https://coopboardgames.com/cooperative-board-game-reviews/kingdom-death-monster/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-08-26"
+    notes: "Found in the 2026-08-26 librarian pass as a substitute BGG-stats source while direct BGG remained blocked. States rank 87, rating 8.5, weight 4.27; treat as a snapshot signal, not BGG-authoritative — a WebSearch synthesis suggested a conflicting older figure (rank ~55/8.57)."
 confidence: medium
 status: needs_followup
 ---
@@ -98,22 +105,11 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This Kingdom Death: Monster scout run wrote the standard document set: `index.okf.md`, `sources.okf.md`, the six `rules/*.okf.md` records (overview, setup, turn-structure, actions, scoring-endgame, edge-cases-faq), and both `reception/*.okf.md` records (reviews, better-if).
 
 ## Run validation
 
-- `WISHLIST.md` entry checked off: n/a — wishlist empty.
-- `node scripts/generate-index.mjs` run after writing docs: pending.
-- `node scripts/validate-okf.mjs` exit 0 before push: pending.
+For this Kingdom Death: Monster scout run: no `WISHLIST.md` entry applied (wishlist was empty); `node scripts/generate-index.mjs` and `node scripts/validate-okf.mjs` status as of the original run is recorded as pending in this doc's history.
 
 ## Strongest design lessons
 

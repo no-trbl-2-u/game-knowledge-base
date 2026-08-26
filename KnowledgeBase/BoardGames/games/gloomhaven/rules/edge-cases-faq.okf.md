@@ -19,8 +19,15 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-16"
     notes: "Exhaustion summary."
+  - id: "src-008"
+    title: "Gloomhaven — Cephalofair Games official resources page"
+    url: "https://cephalofair.com/pages/gloomhaven"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-08-26"
+    notes: "Found in the 2026-08-26 librarian pass; official support hub linking a digital rulebook, an official FAQ, and an errata section."
 confidence: medium
-status: verified
+status: needs_followup
 ---
 
 ## Edge-case findings
@@ -29,7 +36,11 @@ status: verified
   Source: src-005
   Evidence: Dized summary states there is no coming back from exhaustion during a scenario.
   Confidence: medium
+- Claim: The publisher maintains an official errata section covering at least a first-printing campaign-sheet event-card note and a Scenario 26 setup correction, alongside a separate official FAQ page and a digital rulebook.
+  Source: src-008
+  Evidence: Official resources page's errata section documents corrections for a first-printing batch, including a campaign-sheet event-card note and a Scenario 26 setup correction; links to a digital rulebook (Google Drive) and an official FAQ (cephalofairgames.github.io/gloomhaven2e-faq/, URL slug not independently confirmed as first-edition-scoped).
+  Confidence: medium
 
 ## Open questions
 
-Exhaustion triggers, hand-loss timing, and monster-specific exceptions require official FAQ verification.
+Exhaustion triggers, hand-loss timing, and monster-specific exceptions require official FAQ verification. The linked official FAQ's URL slug says "gloomhaven2e" — confirm whether it covers the base (first) edition before citing it against this base-game-scoped record.

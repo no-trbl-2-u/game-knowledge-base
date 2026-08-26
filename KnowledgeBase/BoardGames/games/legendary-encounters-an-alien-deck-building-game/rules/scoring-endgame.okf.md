@@ -19,8 +19,15 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-09"
     notes: "End-state and objective commentary."
-confidence: medium
-status: draft
+  - id: "src-006"
+    title: "Legendary Encounters Rules - Alien (Upper Deck official rulebook PDF)"
+    url: "https://theupperdeckco.wpenginepowered.com/wp-content/uploads/2024/05/Legendary_Encounters_Rules-Alien.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-26"
+    notes: "Official rulebook, recovered in the 2026-08-26 librarian pass."
+confidence: high
+status: verified
 ---
 
 ## Summary
@@ -41,6 +48,10 @@ This is a win/loss cooperative game, not a point-scored contest. The secondary s
   Source: src-003
   Evidence: "Face Huggers" attach; if not removed, a player gains a "Chestburster" and "you die" / become an Alien player in the review's account.
   Confidence: medium
+- Claim: Players must jointly complete three Objectives to win; if any player's strike damage reaches or exceeds their health they die and are out of the game, and if all players die the aliens win.
+  Source: src-006
+  Evidence: "Players must work together to complete three Objectives... If a player takes strike damage equal to or greater than their health, the player dies and is out of the game. If all the players die, the aliens win. If at least one player survives to complete the final objective, the players win."
+  Confidence: high
 
 ## Rules / Mechanics
 

@@ -26,19 +26,26 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "Release-era standalone/compatibility evidence."
+  - id: "src-003"
+    title: "Dead of Winter Warring Colonies module rules"
+    url: "https://media.plaidhatgames.com/old_images/games/dead-of-winter/rules-wc.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-26"
+    notes: "Found via the CDX directory listing in the 2026-08-26 librarian pass; not previously catalogued. Warring Colonies module rules, distinct from the Long Night target rulebook (src-001) and the base-game FAQ."
 followups:
   - source_id: null
     url: "https://web.archive.org/cdx/search/cdx?url=media.plaidhatgames.com/old_images/games/dead-of-winter/*"
     failure: other
     fallback: "Bounded CDX inventory found rules-tln.pdf, pre-target dow-faq.pdf, base rules, and Warring Colonies rules."
     retry_needs: manual_review
-    notes: "Need independent authority-inventory confirmation that no target FAQ/errata/module sheet is omitted."
+    notes: "Need independent authority-inventory confirmation that no target FAQ/errata/module sheet is omitted. Resolved 2026-08-26 (librarian): fetched the CDX JSON directly — the media.plaidhatgames.com/old_images/games/dead-of-winter/ directory contains exactly 15 unique 200-status URLs: 4 PDFs (rules.pdf base game, dow-faq.pdf base-game FAQ, rules-tln.pdf Long Night target rulebook already src-001, rules-wc.pdf Warring Colonies module rules now added as src-003) and 11 image assets (award badges, box/cover/promo art). No additional FAQ, errata, or module sheet exists beyond these four PDFs — the directory is now independently confirmed bounded."
   - source_id: null
     url: "https://www.fantasyflightgames.com/en/products/dead-of-winter-the-long-night/"
     failure: blocked
     fallback: "Plaid Hat live and archived primary sources."
     retry_needs: browser_fetch
-    notes: "HTTP 403 Cloudflare is not evidence of absence."
+    notes: "HTTP 403 Cloudflare is not evidence of absence. Retried 2026-08-26 (librarian): still 403; the Wayback availability API found zero snapshots for this exact URL slug. An alternate FFG URL structure (fantasyflightgames.com/en/products/dead-of-winter/products/long-night/) does have an archived 2023-01-27 capture, but that capture is a client-rendered SPA whose support/rules links load via API calls not present in the static HTML — no FFG-hosted Long Night support inventory could be extracted from it. Plaid Hat's own hosting (confirmed bounded above) remains the working authority; a JS-executing fetch of the alternate FFG URL is the only remaining path to close this specific followup."
 confidence: high
 status: needs_followup
 ---

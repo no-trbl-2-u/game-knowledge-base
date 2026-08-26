@@ -17,14 +17,13 @@ followups:
     failure: blocked
     fallback: "BGG search result and indexed review metadata"
     retry_needs: browser_fetch
-    notes: "Recover current average, Geek Rating, rank, and mechanism list."
+    notes: "Recover current average, Geek Rating, rank, and mechanism list. Retried 2026-08-26 (librarian): page still 403, XML API still 401 (dual failure, same as original). WebSearch-derived aggregated metadata (not a direct page read) gives average rating 8.0, rank Overall 139/Thematic 34, weight 3.37/5, ~14K ratings/~3.1K comments — treat as search-snippet-derived, provenance: secondary, confidence medium-low; spot-check against a direct BGG read before citing as a verbatim quote."
   - source_id: "src-004"
     url: "https://awakenrealms.com/"
     failure: other
     fallback: "Official Kickstarter campaign page"
     retry_needs: alternate_source
-    notes: "Recover the exact base-game rulebook, FAQ, and errata assets."
-sources:
+    notes: "Recover the exact base-game rulebook, FAQ, and errata assets. Resolved 2026-08-26 (librarian): awakenrealms.com itself is a JS-rendered SPA that doesn't serve usable content to a plain fetch (bare header only), and a candidate subdomain (new.awakenrealms.com) failed with a TLS certificate mismatch. Found and fetched the actual rulebook instead at a Gamefound-hosted asset (src-005, static.gamefound.com/taintedgrail/rulebook_web.pdf, 7.1MB, 200 OK, PDF metadata/XMP confirms 'TaintedGrail'/'Rulebook'/'open and play' identity) — a legitimate official-channel replacement for the awakenrealms.com lead. A BGG file page and thread pointing to the same asset family remain 403-blocked. FAQ/errata still not located; that portion of the followup stays open."
   - id: "src-001"
     title: "BoardGameGeek — Tainted Grail: The Fall of Avalon"
     url: "https://boardgamegeek.com/boardgame/264220/tainted-grail-the-fall-of-avalon"
@@ -52,7 +51,14 @@ sources:
     kind: other
     provenance: official
     retrieved_at: "2026-07-20"
-    notes: "Official domain; exact asset not recovered."
+    notes: "Official domain; exact asset not recovered. Superseded by src-005 (Gamefound-hosted rulebook PDF) in the 2026-08-26 librarian pass — awakenrealms.com itself is a JS-rendered SPA not fetchable by this tool."
+  - id: "src-005"
+    title: "Tainted Grail: The Fall of Avalon — Open & Play / Rulebook"
+    url: "https://static.gamefound.com/taintedgrail/rulebook_web.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-26"
+    notes: "Found in the 2026-08-26 librarian pass via Gamefound's publisher-controlled distribution channel. 7.1MB PDF, 200 OK; identity confirmed via embedded PDF metadata/XMP paths and labels ('TaintedGrail', 'Rulebook', 'open and play'). Not yet full-text extracted for rule claims — a future pass should pull specific setup/turn-structure/scoring quotes from this PDF."
 confidence: medium
 status: needs_followup
 ---

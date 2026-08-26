@@ -47,25 +47,25 @@ followups:
     failure: blocked
     fallback: "2005 Book of Quests and FAQ 1.0 govern acquired release law; 2015 rulebook is labeled comparison only."
     retry_needs: wayback_snapshot
-    notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference."
+    notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference. Retried 2026-08-26 (librarian): direct fetch and a cdn1.daysofwonder.com mirror variant both still 403; the Wayback availability API now confirms zero snapshots were ever archived for this exact path (not just a CDX lookup miss) — the file itself may never have been crawled. Next attempt should try a legacy shadowsovercamelot.com domain or an sc_rules.pdf path without the _en suffix, checked against the availability API first."
   - source_id: null
     url: "https://www.daysofwonder.com/shadowsovercamelot/en/content/faq"
     failure: blocked
     fallback: "Official FAQ 1.0 PDF acquired directly from Asmodee CDN."
     retry_needs: wayback_snapshot
-    notes: "Direct/browser Access Denied; text-proxy retrieval aid reports current 404. Need complete historical official web FAQ/support inventory and explicit version bridge."
+    notes: "Direct/browser Access Denied; text-proxy retrieval aid reports current 404. Need complete historical official web FAQ/support inventory and explicit version bridge. Retried 2026-08-26 (librarian): direct fetch still 403. The Wayback availability API this time returned a concrete snapshot (http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/, 2015-04-03, status 200 at capture time), but this tool cannot fetch web.archive.org content at all (hard domain block), so the snapshot remains unread. Next attempt needs a fetch path that isn't archive.org-blocked to read that exact URL."
   - source_id: null
     url: "lawful immutable English 2005 first-retail component inventory document"
     failure: not_found
     fallback: "Later 2015 inventory is retained only as a provisional lead; 2005 review supplies secondary observations."
     retry_needs: alternate_source
-    notes: "Need a lawful line-by-line nonreplacement first-retail component inventory document. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; absent such a document source the first-print denominator stays permanently UNKNOWN."
+    notes: "Need a lawful line-by-line nonreplacement first-retail component inventory document. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; absent such a document source the first-print denominator stays permanently UNKNOWN. Retried 2026-08-26 (librarian): checked BGG filepages, UltraBoardGames, and a 1jour-1jeu.com rulebook mirror; the mirror's own footer print mark reads 'SOC rulebook EN reprint 2012' — it is the same 2012/2015 reprint document already on file as src-003, not an independent 2005 first-retail inventory. No new document found; denominator stays UNKNOWN, per OKF_SPEC a permanent terminal state, not re-raised as a pending task."
   - source_id: null
     url: "authority://licensed-base-component-face-manifest"
     failure: other
     fallback: "Framework and grouped classes from acquired official documents."
     retry_needs: alternate_source
-    notes: "Need complete base-only identities/text/faces/mappings for cards, coats, boards, swords, D8, relics, and miniatures without replacement-quality mirroring."
+    notes: "Need complete base-only identities/text/faces/mappings for cards, coats, boards, swords, D8, relics, and miniatures without replacement-quality mirroring. Retried 2026-08-26 (librarian): the same 1jour-1jeu.com 2012-reprint mirror shows a component photo spread and Knight/color mappings (Arthur=red, Gawain=green, Galahad=yellow, Kay=blue, Palamedes=black, Percival=white, Tristan=purple) but is the later-reprint document class already governed by src-003, not a licensed base-only first-print manifest. No qualifying document found; gap remains open."
 confidence: medium
 status: needs_followup
 ---

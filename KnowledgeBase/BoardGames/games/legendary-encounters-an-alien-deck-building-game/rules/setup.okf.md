@@ -26,8 +26,15 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-09"
     notes: "BGG-derived product/component summary."
-confidence: medium
-status: draft
+  - id: "src-006"
+    title: "Legendary Encounters Rules - Alien (Upper Deck official rulebook PDF)"
+    url: "https://theupperdeckco.wpenginepowered.com/wp-content/uploads/2024/05/Legendary_Encounters_Rules-Alien.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-26"
+    notes: "Official rulebook, recovered in the 2026-08-26 librarian pass."
+confidence: high
+status: verified
 ---
 
 ## Summary
@@ -48,6 +55,10 @@ Setup is scenario-driven. The available secondary walkthrough says the group cho
   Source: src-005
   Evidence: "600 total Original Art Card Set"; "Full Color Game Board (mat)"; "Full Color Rule Book".
   Confidence: medium
+- Claim: Each player takes a personal starting deck of Specialist and Grunt cards and one of ten Roles, and the Barracks/HQ recruitment row is dealt out before the first hand is drawn. The official rulebook's own printed deck size is internally inconsistent — one passage says the personal deck has 7 Specialists + 5 Grunts (12 cards), while the shuffle/draw instruction later refers to "13 cards" — quoted as printed rather than resolved.
+  Source: src-006
+  Evidence: "Give each player their own personal 12-card deck made up of these cards: 7 Specialists, 5 Grunts. Each player then selects one of the ten Roles and takes the appropriate Role Avatar and Role Character Card... Put the top five cards of the Barracks into the five spaces of the Headquarters (HQ). Each player shuffles their own personal deck of 13 cards and draws a hand of 6 cards from it."
+  Confidence: high
 
 ## Rules / Mechanics
 

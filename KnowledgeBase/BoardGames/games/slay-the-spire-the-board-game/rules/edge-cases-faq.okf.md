@@ -48,6 +48,19 @@ sources:
     notes: "Rulebook ambiguity assuming video-game knowledge."
 confidence: high
 status: needs_followup
+followups:
+  - source_id: "src-004"
+    url: "https://www.kickstarter.com/projects/contentiongames/sts-downfall/faqs?category_id=34&total_hits=670267"
+    failure: blocked
+    fallback: "Existing extracted rulebook text (src-002) and BGG change-note summary (src-003) cover general FAQ/errata ground; the Downfall/reprint reset-game clarification and Gremlin Leader wording are not independently confirmed."
+    retry_needs: wayback_snapshot
+    notes: "2026-07-04: WebFetch and curl -L both returned HTTP 403 (Kickstarter bot/verification wall). 2026-07-08 (librarian): retried via Wayback CDX search; zero snapshots exist for this project's FAQ page. 2026-08-26 (librarian): re-retried direct fetch (still 403) and the Wayback availability API (still zero snapshots, matching 2026-07-08). Found the topic discussed on BGG threads 3296089, 3290922, and 3364531 (Gremlin Leader / Act 1 summon deck) via WebSearch snippets — confirms a rulebook clarification exists stating Gremlins are in the Act 1 summon deck — but BGG WebFetch returns 403 and the XML API now returns 401, so no exact quote could be extracted; snippets are paraphrase, not citable Evidence. Next attempt needs an authenticated Kickstarter/BGG session or a working archive.org path."
+  - source_id: "src-002"
+    url: "https://contentiongames.com/_images/STS_KS_Rulebook.pdf"
+    failure: other
+    fallback: "Full 24-page text is extracted and used for the sections above, but this hosted copy predates the v2.30 revision (no teardown section, no Ascension 7/A7 sticker-fix text, still lists Sequential Turns as optional)."
+    retry_needs: alternate_source
+    notes: "2026-08-26 (librarian): re-fetched src-002 directly (still HTTP 200, still 24 pages, unchanged via pdftotext diff — Contention Games' own hosted PDF still predates v2.30). Located a candidate v2.30 PDF on Scribd ('Slay the Spire - Rulebook v2.30 Reprint Web', https://www.scribd.com/document/815966403/Slay-the-Spire-Rulebook-v2-30-Reprint-Web) with a confirmed Wayback snapshot (http://web.archive.org/web/20260802053352/https://www.scribd.com/document/815966403/...), but Scribd serves a JS bot-challenge wall to direct fetch and archive.org was returning HTTP 503 site-wide outages during this pass. Next attempt should retry that exact Wayback snapshot URL once archive.org's outage clears."
 ---
 
 # Edge cases and FAQ
@@ -97,5 +110,9 @@ status: needs_followup
 - [medium] Check official Discord/FAQ for living errata, if accessible.
 
 ## Retry notes
+
+Historical log; the frontmatter `followups:` block above is now the source of truth for retry status (converted from this prose during the 2026-08-26 librarian pass per OKF 0.2 §6).
+
 - 2026-07-04: Retried `src-004` (Kickstarter FAQ) via WebFetch and `curl -L`; both returned HTTP 403 (Kickstarter's bot/verification wall blocks non-browser fetches). A future attempt needs either an authenticated/browser-based fetch or an archived mirror (e.g. Wayback Machine snapshot) of the FAQ page to confirm whether the reset-game clarification supersedes the base retail rulebook.
 - 2026-07-08 (librarian pass): `src-002` resolved — retried with `curl -L`, got HTTP 200 (no block this time), and extracted the full 24-page rulebook text with pypdf instead of just the table of contents; FAQ answers, triggered-ability timing, Ascension/Unlocks/Act IV, and Optional Rules sections added above with high confidence. `src-004` (Kickstarter FAQ) still unresolved: retried via Wayback Machine CDX search (`kickstarter.com/projects/contentiongames/sts-downfall/faqs*`) and found zero snapshots exist for that project's FAQ page. Next attempt needs an authenticated Kickstarter session or a different archival source (e.g. a BGG thread quoting the FAQ text) — Wayback has no copy to fall back on.
+- 2026-08-26 (librarian pass): both followups retried and remain open; see `followups:` block above for exact dated outcomes (Kickstarter FAQ still 403/no Wayback snapshot; a v2.30 rulebook lead was found on Scribd with a confirmed but currently unreadable Wayback snapshot).

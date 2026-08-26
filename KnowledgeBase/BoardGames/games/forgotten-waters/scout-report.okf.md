@@ -17,13 +17,13 @@ followups:
     failure: other
     fallback: "The recovered official update-log replay supplies dated version history and four titles; the 2020 publisher page closes the scenario count at five; current v1.12.0 supplies current-only structure."
     retry_needs: alternate_source
-    notes: "Release app-root CDX search found no 2020 fwcrossroads.plaidhatgames.com objects; fwcrossroads.com root captures begin in August 2020, but the historical main bundle was unavailable. This is not absence. Need immutable release bundle, complete title/data/entry/check/branch/audio manifest, and byte comparison."
+    notes: "Release app-root CDX search found no 2020 fwcrossroads.plaidhatgames.com objects; fwcrossroads.com root captures begin in August 2020, but the historical main bundle was unavailable. This is not absence. Need immutable release bundle, complete title/data/entry/check/branch/audio manifest, and byte comparison. Retried 2026-08-26 (librarian): live app root still renders only a bare client-side shell (not manifest-inspectable). Found src-019 (an archived-news preview page, 2020-03-24) — new context but no manifest data. Searched for the open-source app-code release Plaid Hat promised in src-004 ('if we stop supporting the game, we commit to releasing the code as open source') — no repository found under Joe Ellis's known GitHub accounts or elsewhere. web.archive.org is unreachable from this tool's WebFetch entirely (both generic and timestamped snapshot forms failed), which blocks the wayback_snapshot retry path itself — an environment limitation, not evidence of snapshot absence. Manifest recovery still needs either working archive.org access or direct publisher outreach."
   - source_id: "src-003"
     url: "https://www.plaidhatgames.com/board-games/forgotten-waters/"
     failure: other
     fallback: "The retrieved product page and the dated app FAQ expose support material, but no complete FAQ/errata/support inventory was established."
     retry_needs: alternate_source
-    notes: "HTTP 200; text/html; 62,640 bytes; SHA-256 309c142e00e1d88d7a6cc7dcfbb48790a1ae3521e36d5f000d23cc14ad9d08e5. The page exposes support links, but the complete authoritative FAQ/errata/support inventory remains UNKNOWN."
+    notes: "HTTP 200; text/html; 62,640 bytes; SHA-256 309c142e00e1d88d7a6cc7dcfbb48790a1ae3521e36d5f000d23cc14ad9d08e5. The page exposes support links, but the complete authoritative FAQ/errata/support inventory remains UNKNOWN. Retried 2026-08-26 (librarian): re-fetched and extracted the complete current support-link inventory — rulebook PDF, replacement player-sheets PDF, replacement ship's-log PDF, a parts-request form, the app (fwcrossroads.com), the Remote Play Assistant (remote.fwcrossroads.com), an 'App Update Log' link that still points to src-014's now-404 URL, the Entry Book PDF (src-018), and a DLC purchase link — nine items total, no separate errata link. This bounds the inventory: beyond src-004's FAQ, there is no additional authoritative errata document on the official product page itself. Two BGG community FAQ threads (boardgamegeek.com/thread/2391444, /thread/2929872) are candidate alternate/secondary sources but return HTTP 403 to this tool's WebFetch — need an authenticated/browser-capable fetch before they can be cited with quotable Evidence."
 sources:
   - id: "src-001"
     title: "Forgotten Waters Rulebook"
@@ -151,6 +151,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "HTTP 200; application/pdf; 34,031,011 bytes; 154 letter pages; SHA-256 7ce652179b4a58dc2d6addd665e647f887781c203a6c7dc1b2714bd10a66fe32; created 2025-09-19; later revision excluded from target authority."
+  - id: "src-019"
+    title: "Forgotten Waters App Preview — Archived News"
+    url: "https://www.plaidhatgames.com/news/1056/"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-08-26"
+    notes: "Found in the 2026-08-26 librarian pass. Dated 2020-03-24, four days after the App FAQ (src-004). Describes pre-release app feature set: scenario setup, ship stats, voice-acted narration, sand-timer planning phase, offline caching. No version numbers or manifest data."
 confidence: medium
 status: needs_followup
 ---

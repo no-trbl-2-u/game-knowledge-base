@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Search result snippet and BGG URL identity"
     retry_needs: manual_review
-    notes: "2026-07-12: direct urllib request returned HTTP 403. Retried 2026-07-15 (audit) via WebFetch: still HTTP 403. This matches a systemic block on boardgamegeek.com pages seen across most games in this corpus (see weekly check-links 'suspect' list) — not a game-specific issue. Downgrading retry_needs to manual_review since two automated tool types (urllib, WebFetch) have both failed; a genuine interactive/authenticated browser session is needed next."
+    notes: "2026-07-12: direct urllib request returned HTTP 403. Retried 2026-07-15 (audit) via WebFetch: still HTTP 403. This matches a systemic block on boardgamegeek.com pages seen across most games in this corpus (see weekly check-links 'suspect' list) — not a game-specific issue. Downgrading retry_needs to manual_review since two automated tool types (urllib, WebFetch) have both failed; a genuine interactive/authenticated browser session is needed next. Retried 2026-08-26 (librarian): still HTTP 403 on the direct page and the /ratings subpage; WebSearch fallback surfaced no citable rating/rank/weight figures. Manual/authenticated browser session remains the only known path."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Marvel Champions: The Card Game"
@@ -78,16 +78,7 @@ Study one cooperative deck-building/card-construction game for rules structure, 
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This Marvel Champions: The Card Game scout run wrote the standard document set: `index.okf.md`, `sources.okf.md`, the six `rules/*.okf.md` records (overview, setup, turn-structure, actions, scoring-endgame, edge-cases-faq), and both `reception/*.okf.md` records (reviews, better-if).
 
 ## Run validation
 

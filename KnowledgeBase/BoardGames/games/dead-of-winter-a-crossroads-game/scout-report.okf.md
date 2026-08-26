@@ -62,13 +62,20 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "Later revised-print comparison only; never target authority."
+  - id: "src-010"
+    title: "Archived FFG Dead of Winter product/support page (2025-11-14)"
+    url: "http://web.archive.org/web/20251114235119/https://www.fantasyflightgames.com/en/products/dead-of-winter/"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-08-26"
+    notes: "Found in the 2026-08-26 librarian pass via the Wayback availability API (direct fetch of the live FFG page still 403 Cloudflare). Bounds the FFG support-section inventory: the Rules category holds only the PH1000 PDF (already src-009), and the Other category holds four promotional items (Facebook/Social Media trivia sweepstakes PDFs) plus one not-previously-catalogued item, 'Special Main Objective B1' (dow02_specialobjectiveb1.pdf, 14 May 2021) — a promotional main-objective card PDF, a candidate lead for the 10 dual-sided main-objectives face-corpus gap. No FAQ, errata, or module-sheet entries exist on this page beyond the PH1000 rulebook."
 followups:
   - source_id: "src-004"
     url: "https://www.fantasyflightgames.com/en/products/dead-of-winter/"
     failure: blocked
     fallback: "Target Plaid Hat rulebook/FAQ, transfer page, known archived FFG capture, and direct PH1000 comparison receipt."
     retry_needs: manual_review
-    notes: "Need an authoritative bounded live/archived FFG support inventory beyond inspected captures; no absence claim."
+    notes: "Need an authoritative bounded live/archived FFG support inventory beyond inspected captures; no absence claim. Resolved 2026-08-26 (librarian): live page is still 403, but a 2025-11-14 Wayback capture (src-010) gives a complete, bounded FFG support-section inventory — one rules PDF (already known) and five 'Other' items, four promotional and one previously-unlisted main-objective card PDF (see src-010 notes). This closes the 'unknown boundedness' question; the missing face-corpus gap itself remains open but is no longer an unbounded FFG-support unknown."
 confidence: high
 status: needs_followup
 last_verified: "2026-07-31"

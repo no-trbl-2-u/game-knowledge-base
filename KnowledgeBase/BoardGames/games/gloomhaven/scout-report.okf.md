@@ -16,14 +16,8 @@ followups:
     url: "https://boardgamegeek.com/boardgame/174430/gloomhaven"
     failure: blocked
     fallback: "Used BGG search result and BGG Data mirror for score and identity."
-    retry_needs: alternate_source
-    notes: "Direct BGG page returned HTTP 403 from this environment."
-  - source_id: null
-    url: "https://cephalofair.com/pages/gloomhaven"
-    failure: not_found
-    fallback: "Used Dized structured rules summary and secondary reviews."
-    retry_needs: alternate_source
-    notes: "No publisher page was confirmed during this run."
+    retry_needs: manual_review
+    notes: "Direct BGG page returned HTTP 403 from this environment. Retried 2026-08-26 (librarian): the page no longer returns a clean 403 but serves only a near-empty bot-blocked shell (bare title, no rating/rank body); the XML API v1/v2 returned 402/401. Downgraded to manual_review; src-002 (BGG Data mirror) remains the working score signal."
 sources:
   - id: "src-001"
     title: "Gloomhaven — BoardGameGeek"
@@ -74,6 +68,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-16"
     notes: "Time and campaign scale evidence."
+  - id: "src-008"
+    title: "Gloomhaven — Cephalofair Games official resources page"
+    url: "https://cephalofair.com/pages/gloomhaven"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-08-26"
+    notes: "Found and fetched in the 2026-08-26 librarian pass, resolving the prior 'no publisher page confirmed' followup. Links a digital rulebook, an official FAQ, a component-inventory spreadsheet, and an errata section. Claims added to rules/edge-cases-faq.okf.md."
 confidence: medium
 status: needs_followup
 ---
@@ -108,16 +109,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This Gloomhaven scout run wrote the standard document set: `index.okf.md`, `sources.okf.md`, the six `rules/*.okf.md` records (overview, setup, turn-structure, actions, scoring-endgame, edge-cases-faq), and both `reception/*.okf.md` records (reviews, better-if).
 
 ## Run validation
 

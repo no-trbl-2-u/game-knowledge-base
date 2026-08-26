@@ -90,37 +90,44 @@ sources:
     provenance: community
     retrieved_at: "2026-07-31"
     notes: "Identity lead only; no weight or rating retained because no fresh auditable snapshot was acquired."
+  - id: "src-012"
+    title: "Asmodee UK — Nemesis: Lockdown product page"
+    url: "https://www.asmodee.co.uk/products/rebnemlocken01-nemesis-lockdown"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-08-26"
+    notes: "Found in the 2026-08-26 librarian pass while retrying the blocked shop.asmodee.com followup. SKU REBNEMLOCKEN01, UPC/EAN 5907222999837, publisher listed as Awaken Realms, box 30.0x17.6x30.0cm/4.0kg, £124.99 RRP. No first-print/publication-date marker shown."
 followups:
   - source_id: "src-001"
     url: "https://web.archive.org/web/20231129181753id_/https://awakenrealms.com/images/download/Nemesis_Lockdown/ENG/Nemesis_LD_Rulebook_280x280mm_bleed3mm-32-pages.pdf"
     failure: other
     fallback: "The captured 1 MiB prefix is byte-identical to current, and current equals the complete 2024-02-20 archive object."
     retry_needs: wayback_snapshot
-    notes: "The 2023 object itself is capture-truncated: x-archive-orig-content-length 1048576 versus crawler length 6075325. Alternate modifiers expose the same prefix; beyond-prefix Range falls forward to the 2024 object by Memento-Datetime/x-archive-src, so chunking cannot recover the missing 2023 tail. Need immutable first-retail bytes or publisher bridge."
+    notes: "The 2023 object itself is capture-truncated: x-archive-orig-content-length 1048576 versus crawler length 6075325. Alternate modifiers expose the same prefix; beyond-prefix Range falls forward to the 2024 object by Memento-Datetime/x-archive-src, so chunking cannot recover the missing 2023 tail. Need immutable first-retail bytes or publisher bridge. Retried 2026-08-26 (librarian): web.archive.org is unreachable from this tool's WebFetch entirely (not content-specific), so even the known-truncated capture could not be re-inspected. An unverified alternate mirror (en.1jour-1jeu.com/table-game/2022-nemesis-lockdown/files, English 5.59 MB) was found but not hash-compared against this record — do not treat as equivalent without a SHA-256 check first."
   - source_id: "src-002"
     url: "https://web.archive.org/web/20231129182438id_/https://awakenrealms.com/images/download/Nemesis_Lockdown/ENG/Nemesis_LD_Room_Sheet_280x280mm_bleed3mm-4-pages.pdf"
     failure: other
     fallback: "The captured 1 MiB prefix and complete later archive object match current."
     retry_needs: wayback_snapshot
-    notes: "Same genuine archive capture-truncation condition as the rulebook; chunking cannot recover the 2023 tail. Need complete first-retail aid bytes or publisher bridge."
+    notes: "Same genuine archive capture-truncation condition as the rulebook; chunking cannot recover the 2023 tail. Need complete first-retail aid bytes or publisher bridge. Retried 2026-08-26 (librarian): same web.archive.org unreachability as src-001; no Room Sheet-specific alternate mirror was found (the 1jour-1jeu.com lead above lists only the two rulebooks, not the Room Sheet)."
   - source_id: "src-005"
     url: "https://support.awakenrealms.com/support/solutions/folders/42000113456"
     failure: other
     fallback: "The current folder is fully enumerated at six articles; only the Status-marker article supplies target-core correction law."
     retry_needs: wayback_snapshot
-    notes: "Current accessible inventory is closed. Need historical FAQ/support history beyond the complete current folder; wrapper hash drift is not semantic drift."
+    notes: "Current accessible inventory is closed. Need historical FAQ/support history beyond the complete current folder; wrapper hash drift is not semantic drift. Retried 2026-08-26 (librarian): re-fetched the live folder directly (not via wayback) — still the same six-article inventory, no drift observed. A candidate historical-FAQ alternate, the Nemesis: Lockdown Kickstarter FAQ page (kickstarter.com/projects/awakenrealms/nemesis-lockdown/faqs), was found but not fetched/content-verified this pass. web.archive.org remains unreachable for the wayback_snapshot retry path itself."
   - source_id: null
     url: "https://shop.asmodee.com/nemesis-lockdown-nemld01"
     failure: blocked
     fallback: "Search result exposed Item No. NEMLD01; no body claim relies on the blocked page."
     retry_needs: browser_fetch
-    notes: "Need official retail SKU/UPC/publication receipt and first-print markers."
+    notes: "Need official retail SKU/UPC/publication receipt and first-print markers. Retried 2026-08-26 (librarian): the exact URL resolves (200) but to Asmodee's B2B retailer login portal, not a product page — confirms the block is real, not a transient error. Found two working official alternates instead: store.asmodee.com/products/nemesis-lockdown (SKU NEMLD01, publisher Rebel, sold out, no UPC shown) and asmodee.co.uk/products/rebnemlocken01-nemesis-lockdown (SKU REBNEMLOCKEN01, UPC/EAN 5907222999837, publisher Awaken Realms, 30.0x17.6x30.0cm, 4.0kg — EAN independently corroborated by an eBay listing). Neither page shows a first-print/publication-date marker."
   - source_id: null
     url: "lawful immutable English 2022 first-retail component/card/face document corpus"
     failure: not_found
     fallback: "Rulebook inventory plus FAQ marker correction only."
     retry_needs: alternate_source
-    notes: "Need a lawful nonreplacement document source for component/card/face identities. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; absent such a document source these denominators stay permanently UNKNOWN."
+    notes: "Need a lawful nonreplacement document source for component/card/face identities. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; absent such a document source these denominators stay permanently UNKNOWN. Retried 2026-08-26 (librarian): only community/fan-made candidates found (a BGG file 'Complete Card List v1.04', 403-blocked to this tool anyway; a Scribd card list; a BGG forum thread) — all user-generated, not publisher-licensed, so none qualify. The official Awaken Realms game page exposes no downloadable card/component manifest. Denominator stays UNKNOWN, per OKF_SPEC a permanent terminal state, not re-raised as a pending task."
 confidence: medium
 status: needs_followup
 ---

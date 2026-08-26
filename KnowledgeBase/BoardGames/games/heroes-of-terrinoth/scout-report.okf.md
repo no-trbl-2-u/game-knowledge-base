@@ -16,20 +16,14 @@ followups:
     url: "https://boardgamegeek.com/boardgame/254591/heroes-of-terrinoth"
     failure: blocked
     fallback: "DuckDuckGo discovery snippets plus BoardGameMatcher BGG-derived metadata"
-    retry_needs: browser_fetch
-    notes: "Direct page returned HTTP 403 and XML API returned HTTP 401; recheck current BGG statistics and comments later."
+    retry_needs: manual_review
+    notes: "Direct page returned HTTP 403 and XML API returned HTTP 401; recheck current BGG statistics and comments later. Retried 2026-08-26 (librarian): still HTTP 403 on the page and an alternate BGG wiki path; matches the systemic BGG block documented on marvel-champions-the-card-game, arydia-the-paths-we-dare-tread, and too-many-bones. Wayback fallback unavailable (archive.org unreachable from this tool). Downgraded to manual_review after two blocked automated attempts."
   - source_id: "src-003"
     url: "https://www.fantasyflightgames.com/en/products/heroes-of-terrinoth/"
     failure: blocked
     fallback: "Official Fantasy Flight CDN rulebook and product-page search snippet"
-    retry_needs: browser_fetch
-    notes: "Publisher landing page returned HTTP 403; rulebook remained fully accessible."
-  - source_id: "src-007"
-    url: "https://www.boardgamequest.com/heroes-of-terrinoth-review/"
-    failure: blocked
-    fallback: "Two other full independent reviews"
-    retry_needs: browser_fetch
-    notes: "Fetch returned a bot-verification interstitial."
+    retry_needs: manual_review
+    notes: "Publisher landing page returned HTTP 403; rulebook remained fully accessible. Retried 2026-08-26 (librarian): still HTTP 403, including an alternate FFG products path and the drafts.fantasyflightgames.com subdomain — the whole fantasyflightgames.com domain is blocked from this tool, not just this URL. Wayback fallback unavailable. Downgraded to manual_review; the rulebook (src-004) remains the reliable primary source regardless."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Heroes of Terrinoth"
@@ -78,8 +72,8 @@ sources:
     url: "https://www.boardgamequest.com/heroes-of-terrinoth-review/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-18"
-    notes: "Bot-verification interstitial; no claims used."
+    retrieved_at: "2026-08-26"
+    notes: "Retried in the 2026-08-26 librarian pass; fetched cleanly (no bot-verification interstitial this time). Claims added to reception/reviews.okf.md."
 confidence: high
 status: needs_followup
 ---

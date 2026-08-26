@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "BGG search result plus official product description and secondary review leads"
     retry_needs: manual_review
-    notes: "Direct HTML returned HTTP 403 and XML API returned HTTP 401; recheck current average, Geek Rating, rank, weight, and mechanism metadata. Retried 2026-08-19 (librarian): still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not a game-specific issue. Downgrading to manual_review since automated fetch has failed twice."
+    notes: "Direct HTML returned HTTP 403 and XML API returned HTTP 401; recheck current average, Geek Rating, rank, weight, and mechanism metadata. Retried 2026-08-19 (librarian): still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not a game-specific issue. Downgrading to manual_review since automated fetch has failed twice. Retried 2026-08-26 (librarian): still HTTP 403 (HTML) and HTTP 401 (XML API v1/v2); WebSearch turned up no third-party mirror quoting current rating/rank/weight. Systemic BGG block persists; no automated remediation path this pass."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Too Many Bones"

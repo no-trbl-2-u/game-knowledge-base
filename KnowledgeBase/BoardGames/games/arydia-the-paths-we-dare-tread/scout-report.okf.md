@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Used BGG search result metadata and a retailer's BGG-facing rating signal."
     retry_needs: manual_review
-    notes: "Direct BGG page and XML API returned access errors during this run. Retried 2026-08-19 (librarian): still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not a game-specific issue. Downgraded to manual_review since automated fetch has failed twice."
+    notes: "Direct BGG page and XML API returned access errors during this run. Retried 2026-08-19 (librarian): still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not a game-specific issue. Downgraded to manual_review since automated fetch has failed twice. Retried 2026-08-26 (librarian): still HTTP 403 (third consecutive block); Wayback fallback is unavailable at the tool level (not content-level) so remains untested. Found a substitute secondary source (src-007, boardgameoftheyear.org) quoting a BGG average rating of 9.1 and weight 3.32 — this directly conflicts with src-006's 7.02 figure. Neither figure has been independently re-verified against BGG directly, so the conflict is recorded rather than resolved; do not treat either number as authoritative without a third corroborating source."
 sources:
   - id: "src-001"
     title: "Arydia: The Paths We Dare Tread — BoardGameGeek"
@@ -75,6 +75,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-23"
     notes: "BGG average rating signal 7.02 in search extract."
+  - id: "src-007"
+    title: "Arydia: The Paths We Dare Tread — Board Game of the Year"
+    url: "https://boardgameoftheyear.org/game/219650"
+    kind: other
+    provenance: secondary
+    retrieved_at: "2026-08-26"
+    notes: "Found in the 2026-08-26 librarian pass while direct BGG remained blocked. States 'BGG Average Rating: 9.1' and 'Weight/Complexity: 3.32 / 5', plus 2025 reviewer-list ranking data (8th place, 187 points, 29 lists). This conflicts with src-006's 7.02 rating signal — flagged, not reconciled; treat both as unverified snapshots pending direct BGG access."
 confidence: high
 status: needs_followup
 last_verified: "2026-08-19"

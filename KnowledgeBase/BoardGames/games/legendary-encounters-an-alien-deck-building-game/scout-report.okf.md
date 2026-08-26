@@ -11,19 +11,6 @@ game:
   edition: "base game"
 scope: "base game"
 mechanics: [cooperative-game, deck-bag-and-pool-building, deck-building, hand-management, open-drafting, solo-solitaire-game, variable-player-powers]
-followups:
-  - source_id: "src-002"
-    url: "https://boardgamegeek.com/filepage/104744/legendary-enccounters-rulebook"
-    failure: blocked
-    fallback: "BGG files listing plus secondary rules walkthrough/review sources were used for high-level summaries."
-    retry_needs: browser_fetch
-    notes: "Official rulebook listing was found, but direct file/PDF extraction was not completed during this cron run."
-  - source_id: null
-    url: "https://upperdeck.com/"
-    failure: not_found
-    fallback: "BGG official file listing and secondary summaries."
-    retry_needs: alternate_source
-    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Legendary Encounters: An Alien Deck Building Game"
@@ -53,8 +40,22 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-09"
     notes: "Rules summary page and commentary."
-confidence: medium
-status: needs_followup
+  - id: "src-006"
+    title: "Legendary Encounters Rules - Alien (Upper Deck official rulebook PDF)"
+    url: "https://theupperdeckco.wpenginepowered.com/wp-content/uploads/2024/05/Legendary_Encounters_Rules-Alien.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-26"
+    notes: "Found in the 2026-08-26 librarian pass via the publisher's rules index (upperdeck.com/ud-game-rules/); the original BGG filepage lead (formerly src-002) stayed HTTP 403 to this tool but this official PDF resolves the same rulebook-recovery followup. 23-page official rulebook, fully extracted."
+  - id: "src-007"
+    title: "Legendary Encounters: ALIEN Rules Summary v1.1 (Esoteric Order of Gamers)"
+    url: "https://www.orderofgamers.com/downloads/LegendaryEncountersAlien_v1.1.pdf"
+    kind: other
+    provenance: secondary
+    retrieved_at: "2026-08-26"
+    notes: "4-page quick-reference PDF, distinct document from src-004 (that one is an HTML summary page). Cross-check for turn-phase/keyword terminology."
+confidence: high
+status: verified
 ---
 
 ## Scout objective
@@ -85,16 +86,7 @@ Study one high-scoring cooperative deckbuilding game not already present in the 
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This Legendary Encounters: An Alien Deck Building Game scout run wrote the standard document set: `index.okf.md`, `sources.okf.md`, the six `rules/*.okf.md` records (overview, setup, turn-structure, actions, scoring-endgame, edge-cases-faq), and both `reception/*.okf.md` records (reviews, better-if).
 
 ## Run validation
 

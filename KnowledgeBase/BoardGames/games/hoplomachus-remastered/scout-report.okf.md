@@ -16,15 +16,8 @@ followups:
     url: "https://boardgamegeek.com/boardgame/338434/hoplomachus-remastered"
     failure: blocked
     fallback: "Search result snippets and a secondary BGG-rating report"
-    retry_needs: browser_fetch
-    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 during this run; recheck later for current average, rank, weight, and comments."
-  - source_id: "src-006"
-    url: "https://support.chiptheorygames.com/support/solutions/33000133541"
-    failure: blocked
-    fallback: "Official support landing page confirms the FAQ exists"
-    retry_needs: browser_fetch
-    notes: "FAQ link was identified but detailed extraction was not completed."
-sources:
+    retry_needs: manual_review
+    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 during this run; recheck later for current average, rank, weight, and comments. Retried 2026-08-26 (librarian): page still 403, XML API still 401; WebSearch surfaced only rank/weight figures for sibling titles (Rise of Rome, Victorum), not Remastered itself — do not substitute those. Downgraded to manual_review; src-005 (Meeple Mountain, Geek Rating 8.03885) remains the best available secondary signal."
   - id: "src-001"
     title: "BoardGameGeek — Hoplomachus: Remastered"
     url: "https://boardgamegeek.com/boardgame/338434/hoplomachus-remastered"
@@ -65,8 +58,8 @@ sources:
     url: "https://support.chiptheorygames.com/support/solutions/33000133541"
     kind: faq
     provenance: official
-    retrieved_at: "2026-07-11"
-    notes: "Official FAQ lead."
+    retrieved_at: "2026-08-26"
+    notes: "Retried in the 2026-08-26 librarian pass and fetched cleanly (no longer blocked). Detailed entries added to rules/edge-cases-faq.okf.md."
 confidence: high
 status: needs_followup
 ---
@@ -99,16 +92,7 @@ Study one board game matching the current Governor focus: cooperative plus deckb
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This Hoplomachus: Remastered scout run wrote the standard document set: `index.okf.md`, `sources.okf.md`, the six `rules/*.okf.md` records (overview, setup, turn-structure, actions, scoring-endgame, edge-cases-faq), and both `reception/*.okf.md` records (reviews, better-if).
 
 ## Run validation
 

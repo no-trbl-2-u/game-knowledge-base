@@ -24,8 +24,8 @@ sources:
     url: "https://arkhamdb.com/rules"
     kind: other
     provenance: secondary
-    retrieved_at: "2026-07-10"
-    notes: "Community rules reference mirror used for edge-case leads only."
+    retrieved_at: "2026-08-26"
+    notes: "Re-fetched in the 2026-08-26 librarian pass to substitute for the still-blocked official Rules Reference PDF (src-009 in scout-report.okf.md). FFG never released an updated official Rules Reference PDF post-launch (corroborated by an FFG forum-archive thread, https://ffg-forum-archive.entropicdreams.com/topic/306788-revised-rules-reference-pdf/, which explicitly recommends ArkhamDB's page as the substitute); promoted from edge-case-lead-only to a primary citation for the claims below."
 confidence: medium
 status: needs_followup
 ---
@@ -48,12 +48,17 @@ The edge-case surface is large: timing conflicts, card text interpretation, deck
   Source: src-004
   Evidence: Table of contents includes "Appendix I: Initiation Sequence," "Appendix II: Timing and Gameplay Phase Sequence," "Deckbuilding Options," and "Campaign Play."
   Confidence: medium
+- Claim: When a card's printed text directly contradicts the Rules Reference or the Learn to Play book, the card text takes precedence; when player perception of the "correct" outcome is disputed mid-game, the game defaults to resolving in whichever way the players agree is the worst possible outcome at that moment (the "Grim Rule").
+  Source: src-004
+  Evidence: "If the text of a card directly contradicts either the Rules Reference or the Learn to Play book, the text of the card takes precedence."; "resolve the conflict in the manner that the players perceive as the worst possible outcome at that moment."
+  Confidence: medium
 
 ## Rules / Mechanics
 
 - Treat timing and card-text disputes as Rules Reference problems, not Learn to Play problems.
 - Because the game is expandable, FAQ drift and expansion rules require periodic audit.
+- Card text overrides both core rules documents; unresolved disputes default to the worst-case outcome ("Grim Rule").
 
 ## Open questions
 
-- Retrieve the official Rules Reference PDF directly and replace ArkhamDB edge-case dependence where possible.
+- The official Rules Reference PDF itself remains unretrievable (HTTP 403 as of 2026-08-26; see scout-report.okf.md followups). FFG appears to have never republished it post-launch, so ArkhamDB (src-004) is treated as the durable substitute going forward rather than a temporary edge-case lead.

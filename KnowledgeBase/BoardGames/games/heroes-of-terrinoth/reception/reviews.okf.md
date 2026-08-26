@@ -27,13 +27,20 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-18"
     notes: "Detailed review; rating 7/10."
+  - id: "src-007"
+    title: "Board Game Quest — Heroes of Terrinoth Review"
+    url: "https://www.boardgamequest.com/heroes-of-terrinoth-review/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-08-26"
+    notes: "4-star review; retried in the 2026-08-26 librarian pass and fetched cleanly (no bot-verification interstitial this time)."
 confidence: high
 status: verified
 ---
 
 ## Summary
 
-The two detailed reviews agree on the game's identity: fast, accessible cooperative fantasy with lively dice moments and clean teamwork, but constrained action variety, repetitive upkeep, weak long-term progression, and no campaign continuity.
+The three detailed reviews agree on the game's identity: fast, accessible cooperative fantasy with lively dice moments and clean teamwork, but constrained action variety, repetitive upkeep, weak long-term progression, and no campaign continuity.
 
 ## Praised design
 
@@ -48,6 +55,10 @@ The two detailed reviews agree on the game's identity: fast, accessible cooperat
 - Claim: Sessions remain short while feeling like complete adventures.
   Source: src-005, src-006
   Evidence: One review reports all sessions under an hour; the other praises the short, simple adventure format.
+  Confidence: high
+- Claim: The Terrinoth theme implementation and resource/danger-level tension read as strong for a cooperative filler.
+  Source: src-007
+  Evidence: "great moments for cooperative play"; "solid implementation of the Terrinoth theme"
   Confidence: high
 
 ## Player friction
@@ -72,6 +83,10 @@ The two detailed reviews agree on the game's identity: fast, accessible cooperat
   Source: src-005
   Evidence: Review flags alpha-player takeover as a potential issue.
   Confidence: medium
+- Claim: Repeated play can feel repetitive and abstract, better suited as a filler than an epic narrative experience.
+  Source: src-007
+  Evidence: "can feel repetitive and abstract if played too often"; "choosing when to activate cards just so you can flip the next location can feel a bit repetitive"; "more of an advanced filler game"... "the abstract nature of play makes the quest feel a bit bland"
+  Confidence: high
 
 ## Open questions
 

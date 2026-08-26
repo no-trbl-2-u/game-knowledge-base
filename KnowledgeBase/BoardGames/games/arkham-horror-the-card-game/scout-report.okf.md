@@ -17,19 +17,13 @@ followups:
     failure: blocked
     fallback: "BGG page URL plus search snippets and a secondary review page quoting BGG Geek Rating 8.57922."
     retry_needs: manual_review
-    notes: "HTTP 401 from XML API during 2026-07-10 scout."
+    notes: "HTTP 401 from XML API during 2026-07-10 scout. Retried 2026-08-26 (librarian): XML API still 401, direct page and BGG wiki path both 403 — whole BGG domain blocked from this tool, not just the API. Found a working secondary source (src-010, The Dice Drop, 2026-06-11) quoting a BGG raw average rating of 8.12 — this conflicts with src-008's Geek Rating figure of 8.57922. These are two different BGG metrics (raw average vs. Bayesian Geek Rating), and a Geek Rating normally sits below the raw average, so having Geek Rating (8.57922) exceed the raw average (8.12) is numerically odd; flagged as an open discrepancy rather than reconciled, since neither figure could be independently re-verified against BGG directly."
   - source_id: "src-002"
     url: "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/"
     failure: blocked
     fallback: "Official Learn to Play PDF URL from search result; product page retained as official source target."
-    retry_needs: browser_fetch
-    notes: "HTTP 403 from direct product-page fetch during 2026-07-10 scout."
-  - source_id: "src-009"
-    url: "https://images-cdn.fantasyflightgames.com/filer_public/2f/b8/2fb895a5-07cb-4784-8a18-b92b3c91e6c9/ahc_rules_reference_v19-compressed.pdf"
-    failure: blocked
-    fallback: "Official Learn to Play PDF plus ArkhamDB Rules Reference mirror for edge-case leads."
-    retry_needs: alternate_source
-    notes: "HTTP 403 from direct Rules Reference PDF URL attempted during 2026-07-10 scout."
+    retry_needs: manual_review
+    notes: "HTTP 403 from direct product-page fetch during 2026-07-10 scout. Retried 2026-08-26 (librarian): still 403, along with an alternate FFG product path and arkhamhorror.com — the whole fantasyflightgames.com/arkhamhorror.com domain family is blocked from this tool. No retailer/distributor mirror of the product description was located. Downgraded to manual_review; the Learn to Play PDF (src-003) remains the reliable primary source regardless."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Arkham Horror: The Card Game"
@@ -93,7 +87,14 @@ sources:
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-10"
-    notes: "Attempted official Rules Reference PDF URL returned HTTP 403."
+    notes: "Attempted official Rules Reference PDF URL returned HTTP 403. Retried 2026-08-26 (librarian): still 403. FFG appears to have never republished this PDF post-launch (see edge-cases-faq.okf.md); ArkhamDB (src-004) is now the durable substitute and this followup entry is dropped in favor of that resolution."
+  - id: "src-010"
+    title: "The Dice Drop — Solo Spotlight: Arkham Horror: The Card Game"
+    url: "https://thedicedrop.com/posts/solo-spotlight-arkham-horror-card-game/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-08-26"
+    notes: "Found in the 2026-08-26 librarian pass as a substitute BGG-stats source (direct BGG remains blocked). States rank #33 overall, raw average rating 8.12/10 from ~48,000 users, weight 3.57/5, 370,000+ logged plays, 83,000+ owners, 'verified via BGG' as of June 2026. Its 8.12 raw average conflicts with src-008's quoted Geek Rating of 8.57922 — flagged, not reconciled; see src-001 followup note."
 confidence: medium
 status: needs_followup
 ---
@@ -126,16 +127,7 @@ Study a high-scoring cooperative deck/deck-construction game with strong campaig
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+This Arkham Horror: The Card Game scout run wrote the standard document set: `index.okf.md`, `sources.okf.md`, the six `rules/*.okf.md` records (overview, setup, turn-structure, actions, scoring-endgame, edge-cases-faq), and both `reception/*.okf.md` records (reviews, better-if).
 
 ## Run validation
 

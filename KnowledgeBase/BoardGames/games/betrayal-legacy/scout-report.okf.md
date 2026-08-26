@@ -54,7 +54,7 @@ followups:
     failure: other
     fallback: "The four complete book sections were inspected and summarized, but their F3147/2021 printing relationship to BGG's 2018 3-5-player record is not proven."
     retry_needs: manual_review
-    notes: "Obtain and compare a first-print 2018 English rulebook/component manifest or an official Avalon Hill statement that F3147 is rules-identical."
+    notes: "Obtain and compare a first-print 2018 English rulebook/component manifest or an official Avalon Hill statement that F3147 is rules-identical. Retried 2026-08-26 (librarian): downloaded and diffed both PDFs; sampled core rule prose and the starting-component list are byte-identical between F3147 and the 2018 Wizards rulebook, but F3147 and the current Hasbro instructions page both print a 3-6 player range that contradicts BGG's own 3-5 item record, and the 2018 rulebook prints no player-count text at all (see new claim above). No official Hasbro/Avalon Hill statement addressing this was found via WebSearch. Two BGG threads ('Errata?' thread 2845131; 'Seems like it's between print runs...' thread 2752207) look directly relevant by title but are Cloudflare-blocked (403) to this tool's WebFetch — src-005's existing Jina-proxy technique could retrieve them in a future pass. 'Rules-identical' remains unproven, now with one confirmed, sourced discrepancy rather than a pure unknown."
   - source_id: "src-002"
     url: "https://instructions.hasbro.com/en-us/instruction/avalon-hill-betrayal-legacy-role-playing-haunted-narrative-board-game"
     failure: other
@@ -121,6 +121,10 @@ Starting-inventory transcription: **22 / 22 printed lines**, independently recor
   Source: src-002, src-003, src-007
   Evidence: Hasbro lists the books, decks, cards, figures, 71 tiles, and 122 tokens; both rulebooks' physical page 2 records the same starting inventory and token breakdown.
   Confidence: high
+- Claim: Sampled core rule prose (the opening premise paragraph and the "What is a Legacy Game?" section) and the printed starting-component list are byte-identical between the F3147 bundle (src-003) and the 2018 Wizards rulebook (src-007), but the F3147 bundle and the current Hasbro instructions page (src-002) both print a "3-6 Players" player-count range, contradicting BGG's own item record (src-001: minplayers 3, maxplayers 5). The 2018 rulebook (src-007) prints no player-count range in its body text at all; player count there is box-only. The F3147 component list still supplies only 5 figures/5 bases/5 Family cards and no 6-player setup rule was found in either PDF, so this reads as a marketing/packaging template inconsistency rather than a genuine rules change — but it is a real, sourced discrepancy and not resolved to "rules-identical."
+  Source: src-001, src-002, src-003, src-007
+  Evidence: F3147 bundle prints "12+  3-6" six times across its four books; src-002 states "Player Count: For 3 to 6 Players"; src-001's BGG item record gives minplayers 3 / maxplayers 5; src-007's extracted text contains no "3-5"/"3-6"/player-count string.
+  Confidence: medium
 
 ## Spoiler and leakage boundary
 

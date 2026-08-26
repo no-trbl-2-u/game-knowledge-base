@@ -39,7 +39,7 @@ followups:
     failure: blocked
     fallback: "Dated original-URL proxy and direct assets returned HTTP 200; proxy currently lists Rulebook 79.01 MB."
     retry_needs: manual_review
-    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it."
+    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it. Retried 2026-08-26 (librarian): direct fetch still 403; web.archive.org is unreachable from this tool (a confirmed live 2023-03-28 snapshot exists per the Wayback availability API but could not be read). Checked cmon.com's FAQ/errata/rulebook PDFs (Bloodborne_Boardgame_FAQ_v1.0.pdf, ..._Rulebook_v1.1.pdf) but corroborating retail/Kickstarter listings indicate those belong to the different 2019/2021 CMON miniatures product 'Bloodborne: The Board Game,' not this 2016 standalone 'Bloodborne: The Card Game' — do not cite them against this record. A BGG 'unclear rulings' thread (boardgamegeek.com/thread/1728365) looks relevant but is 403-blocked. Next attempt needs a manual browser session or archive.org access."
 confidence: high
 status: needs_followup
 ---
