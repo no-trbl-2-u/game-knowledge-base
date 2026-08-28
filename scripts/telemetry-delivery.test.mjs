@@ -4,11 +4,14 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 import test from 'node:test'
+import { fileURLToPath } from 'node:url'
 
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const CLEAN_ENV = { ...process.env }
+for (const key of Object.keys(CLEAN_ENV)) if (key.startsWith('GIT_')) delete CLEAN_ENV[key]
 
 function run(cwd, command, args, options = {}) {
-  const result = spawnSync(command, args, { cwd, encoding: 'utf8', ...options })
+  const result = spawnSync(command, args, { cwd, encoding: 'utf8', env: CLEAN_ENV, ...options })
   assert.equal(result.status, 0, `${command} ${args.join(' ')}\n${result.stdout}${result.stderr}`)
   return result.stdout.trim()
 }
@@ -78,7 +81,7 @@ test('hooks stage telemetry with a commit and reject dirty telemetry before push
     assert.equal(run(repo, 'git', ['status', '--porcelain', '--', 'TELEMETRY.md']), '')
 
     fs.appendFileSync(path.join(repo, 'TELEMETRY.md'), row('2026-01-01T00:02:00Z', 'stranded'))
-    const rejected = spawnSync(path.join(repo, '.githooks', 'pre-push'), ['origin'], { cwd: repo, encoding: 'utf8' })
+    const rejected = spawnSync(path.join(repo, '.githooks', 'pre-push'), ['origin'], { cwd: repo, encoding: 'utf8', env: CLEAN_ENV })
     assert.equal(rejected.status, 1)
     assert.match(rejected.stderr, /TELEMETRY\.md has uncommitted changes/)
   }
