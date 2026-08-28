@@ -4,6 +4,7 @@ export const MAX_REVISE_ATTEMPTS = 3;
 export const MARKER_START = '<!-- SOMBERSOFT_KB_LOOP';
 export const MARKER_END = '-->';
 export const DISPOSITIONS = new Set(['REVISE', 'MENNONITE_READY', 'HOLD', 'GO']);
+const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 
 function fail(message) {
   throw new Error(`invalid KB loop marker: ${message}`);
@@ -17,7 +18,7 @@ export function issueTitle(pr) {
 export function validateRecord(record) {
   if (!record || typeof record !== 'object' || Array.isArray(record)) fail('record must be an object');
   const allowed = new Set([
-    'schema_version', 'repository', 'pr', 'head', 'disposition',
+    'schema_version', 'repository', 'pr', 'head', 'audit_head', 'disposition',
     'attempt', 'audit_comment_url', 'updated_at',
   ]);
   for (const key of Object.keys(record)) {
@@ -27,6 +28,7 @@ export function validateRecord(record) {
   if (record.repository !== REPO) fail(`repository must be ${REPO}`);
   if (!Number.isInteger(record.pr) || record.pr < 1) fail('pr must be a positive integer');
   if (typeof record.head !== 'string' || !/^[0-9a-f]{40}$/.test(record.head)) fail('head must be a lowercase full SHA');
+  if (typeof record.audit_head !== 'string' || !/^[0-9a-f]{40}$/.test(record.audit_head)) fail('audit_head must be a lowercase full SHA');
   if (!DISPOSITIONS.has(record.disposition)) fail('unknown disposition');
   if (!Number.isInteger(record.attempt) || record.attempt < 1 || record.attempt > MAX_REVISE_ATTEMPTS) {
     fail(`attempt must be 1-${MAX_REVISE_ATTEMPTS}`);
@@ -37,8 +39,35 @@ export function validateRecord(record) {
       fail('audit_comment_url must be a KB GitHub issue-comment URL or null');
     }
   }
-  if (typeof record.updated_at !== 'string' || Number.isNaN(Date.parse(record.updated_at))) fail('updated_at must be ISO-8601');
+  if (typeof record.updated_at !== 'string' || !ISO_UTC_RE.test(record.updated_at) ||
+      Number.isNaN(Date.parse(record.updated_at)) || new Date(record.updated_at).toISOString() !== record.updated_at) {
+    fail('updated_at must be canonical ISO-8601 UTC');
+  }
   return Object.freeze({ ...record });
+}
+
+export function nextReviseState(prior, head) {
+  if (typeof head !== 'string' || !/^[0-9a-f]{40}$/.test(head)) fail('head must be a lowercase full SHA');
+  if (!prior) return Object.freeze({ disposition: 'REVISE', attempt: 1 });
+  const valid = validateRecord(prior);
+  if (valid.disposition === 'HOLD' || valid.disposition === 'GO') {
+    return Object.freeze({ disposition: valid.disposition, attempt: valid.attempt });
+  }
+  if (valid.head === head && valid.disposition === 'REVISE') {
+    return Object.freeze({ disposition: 'REVISE', attempt: valid.attempt });
+  }
+  const attempt = valid.attempt + 1;
+  if (attempt > MAX_REVISE_ATTEMPTS) {
+    return Object.freeze({ disposition: 'HOLD', attempt: MAX_REVISE_ATTEMPTS });
+  }
+  return Object.freeze({ disposition: 'REVISE', attempt });
+}
+
+export function parseVerdict(body, expected) {
+  if (typeof body !== 'string') fail('verdict comment must be text');
+  const first = body.split(/\r?\n/).map(line => line.trim()).find(Boolean);
+  if (first !== expected) fail(`first disposition must be ${expected}`);
+  return first;
 }
 
 export function renderMarker(record) {
@@ -74,6 +103,7 @@ export function renderIssueBody(record) {
     '',
     `- PR: #${valid.pr}`,
     `- Exact head: \`${valid.head}\``,
+    `- Audited head: \`${valid.audit_head}\``,
     `- State: **${state}**`,
     `- Repair attempt: ${valid.attempt}/${MAX_REVISE_ATTEMPTS}`,
     `- Audit verdict: ${valid.audit_comment_url ?? 'pending'}`,
