@@ -28,7 +28,7 @@ function int(value, name) { const n = Number(value); if (!Number.isInteger(n) ||
 function fullSha(value, name) { if (!/^[0-9a-f]{40}$/.test(value ?? '')) die(`${name} must be lowercase full SHA`); return value; }
 function now() { return new Date().toISOString(); }
 function listIssues() {
-  return ghJson(['issue', 'list', '--repo', REPO, '--state', 'all', '--limit', '100', '--json', 'number,title,state,body,url,labels']);
+  return ghJson(['issue', 'list', '--repo', REPO, '--state', 'all', '--limit', '1000', '--json', 'number,title,state,body,url,labels']);
 }
 function findIssue(pr) {
   const matches = listIssues().filter(x => x.title === issueTitle(pr));
@@ -116,8 +116,10 @@ if (o.action === 'revise') {
   const head = fullSha(o.head, 'head');
   if (!existing) die(`no loop issue for PR #${pr}`);
   if (live.state !== 'MERGED' || live.headRefOid !== head || !live.mergedAt) die('issue closes only after exact PR head is merged');
+  if (!o['comment-url']) die('GO requires an exact-head verdict comment URL');
+  validateComment(o['comment-url'], head, 'GO');
   const prior = parseMarker(existing.body);
-  const rec = record({ pr, head, disposition: 'GO', attempt: prior.attempt, auditCommentUrl: o['comment-url'] ?? prior.audit_comment_url });
+  const rec = record({ pr, head, disposition: 'GO', attempt: prior.attempt, auditCommentUrl: o['comment-url'] });
   const issue = putIssue(existing, rec, 'closed', ['kb-complete']);
   console.log(JSON.stringify({ action: 'closed', issue: issue.number, url: issue.html_url }));
 }
