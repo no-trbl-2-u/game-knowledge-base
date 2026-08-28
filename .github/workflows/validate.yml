@@ -41,6 +41,8 @@ jobs:
         run: node --test scripts/validate-okf-visuals.test.mjs
       - name: Test telemetry delivery invariants
         run: node --test scripts/telemetry-delivery.test.mjs
+      - name: Test event-driven correction-loop contract
+        run: node --test scripts/kb-loop-contract.test.mjs
       - name: Self-test write guard
         run: node .claude/hooks/okf-guard.mjs self-test
 
