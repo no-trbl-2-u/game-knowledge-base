@@ -1,0 +1,205 @@
+{
+  "schema_version": 3,
+  "slug": "the-crew",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-08-12T06:20:00.000Z",
+  "edition_scope": "Released physical The Crew: The Quest For Planet Nine base game, Thames & Kosmos North American SKU 691868 and the retained English manual; Mission Deep Sea, translations, app, promotional material, and complete mission/card-text history excluded.",
+  "coverage_ledger": {
+    "rules_denominator": [
+      {
+        "authority": "Thames & Kosmos official English manual receipt for SKU 691868 scope",
+        "acquired": true,
+        "official_endpoint": true,
+        "source_ids": [
+          "src-002"
+        ],
+        "notes": "The stable official PDF filename identifies 691868; the 22-page manual has extracted contents, components, setup, trick-taking, communication, mission sequence, two-/five-player variants, and logbook material."
+      }
+    ],
+    "faq_errata_inventory": {
+      "scope": "Public English FAQ or errata applicable to the bounded base-game claims published in this packet.",
+      "checks": [
+        "The retained official manual was inspected; no separate FAQ or errata document is needed for the published claims.",
+        "The packet makes no claim that the publisher has no other support material; it records the current product/manual authority only."
+      ],
+      "applicable_acquired": 0,
+      "applicable_known_total": null,
+      "notes": "No published claim depends on a separate FAQ or erratum."
+    },
+    "factual_denominator": [
+      {
+        "claim_group": "691868 manual identity and scope",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "official English manual identity and scope",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "component framework",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "mission and trick-taking rules",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "communication and distress-signal rules",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "two-/five-player variants",
+        "recorded": true,
+        "source_ids": [
+          "src-002"
+        ]
+      },
+      {
+        "claim_group": "independent reception",
+        "recorded": true,
+        "source_ids": [
+          "src-003",
+          "src-004"
+        ]
+      },
+      {
+        "claim_group": "visual identity and table state",
+        "recorded": true,
+        "source_ids": [
+          "src-005",
+          "src-006",
+          "src-007"
+        ]
+      }
+    ],
+    "exclusions": [
+      "Mission-by-mission text and complete card-text denominator.",
+      "The Crew: Mission Deep Sea and other editions/translations.",
+      "The optional helper app and any digital implementation.",
+      "BGG rating, rank, and complexity weight; game.weight is null."
+    ]
+  },
+  "sources": [
+
+    {
+      "id": "src-002",
+      "title": "Thames & Kosmos official English manual \u2014 The Crew",
+      "roles": [
+        "official_rules"
+      ],
+      "provenance": "official",
+      "url": "https://cdn.shopify.com/s/files/1/0104/6331/3977/files/691868_Crew_Manual.pdf?v=1780593954",
+      "final_url": "https://cdn.shopify.com/s/files/1/0104/6331/3977/files/691868_Crew_Manual.pdf?v=1780593954",
+      "retrieved_at": "2026-08-12T06:07:35.654Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 3333181,
+      "sha256": "12aded82732014978dfd8a744c6775e75ba9e719b7241e2bab7de42680a8db2f",
+      "locator": "PDF pages 1-22; contents and Game Materials on printed page 2",
+      "evidence": "The Crew is a cooperative, mission-based trick-taking game."
+    },
+    {
+      "id": "src-003",
+      "title": "Board Game Quest REST post — The Crew review",
+      "roles": [
+        "independent_review"
+      ],
+      "provenance": "secondary",
+      "url": "https://www.boardgamequest.com/wp-json/wp/v2/posts/39838",
+      "final_url": "https://www.boardgamequest.com/wp-json/wp/v2/posts/39838",
+      "retrieved_at": "2026-08-19T09:54:23.234Z",
+      "http_status": 200,
+      "content_type": "application/json; charset=UTF-8",
+      "byte_length": 17439,
+      "sha256": "f33549cde6dc301460e8e5378afd3b06ff2c33c96811dcb7adb8398a2e8b7f5c",
+      "locator": "WordPress REST post 39838 content.rendered, gameplay overview",
+      "evidence": "The Crew is a unique trick-taking game."
+    },
+    {
+      "id": "src-004",
+      "title": "The Family Gamers REST post — The Crew review",
+      "roles": [
+        "independent_review"
+      ],
+      "provenance": "secondary",
+      "url": "https://www.thefamilygamers.com/wp-json/wp/v2/posts/13761",
+      "final_url": "https://www.thefamilygamers.com/wp-json/wp/v2/posts/13761",
+      "retrieved_at": "2026-08-19T09:54:58.650Z",
+      "http_status": 200,
+      "content_type": "application/json; charset=UTF-8",
+      "byte_length": 43494,
+      "sha256": "50d9d9546157607075a801fe7ac5d3b05e5d1e37f2898ff436491889385c04e9",
+      "locator": "WordPress REST post 13761 title and content.rendered, communication section",
+      "evidence": "The Crew: The Quest for Planet Nine"
+    },
+    {
+      "id": "src-005",
+      "title": "Thames & Kosmos official product box image",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "official",
+      "url": "https://www.thamesandkosmos.com/cdn/shop/products/TheCrew_3DBox_1000x.jpg?v=1667421243",
+      "final_url": "https://www.thamesandkosmos.com/cdn/shop/products/TheCrew_3DBox_1000x.jpg?v=1667421243",
+      "retrieved_at": "2026-08-12T06:08:06.565Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 161335,
+      "sha256": "2910a9794be669cc1d7dc1c76a25c5434b8a23e040ba8008c78140110e1cfecd",
+      "locator": "Product image asset",
+      "evidence": "Official product box image showing The Crew product identity and physical packaging."
+    },
+    {
+      "id": "src-006",
+      "title": "Tabletop Bellhop \u2014 The Crew gameplay photograph",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "secondary",
+      "url": "https://tabletopbellhop.com/wp-content/uploads/2021/03/Playing-The-Crew-scaled.jpg",
+      "final_url": "https://tabletopbellhop.com/wp-content/uploads/2021/03/Playing-The-Crew-scaled.jpg",
+      "retrieved_at": "2026-08-19T09:54:24.000Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 43411,
+      "sha256": "ba465c59fe928529b59b108bb3b8a402316702643f45d9e20d5dbf5ab6d654d0",
+      "locator": "Playing-The-Crew-scaled.jpg image asset",
+      "evidence": "Independent review photograph showing a tabletop play state with The Crew cards and tokens."
+    },
+    {
+      "id": "src-007",
+      "title": "The Family Gamers \u2014 The Crew card-hand photograph",
+      "roles": [
+        "visual"
+      ],
+      "provenance": "secondary",
+      "url": "https://www.thefamilygamers.com/wp-content/uploads/Crew_hand_of_cards-min.jpg",
+      "final_url": "https://www.thefamilygamers.com/wp-content/uploads/Crew_hand_of_cards-min.jpg",
+      "retrieved_at": "2026-08-12T06:08:07.330Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 128480,
+      "sha256": "f6fb0c489277a7ceb60c84d771f2b8a0fcac1f7e5238abe6d96e078524262ae3",
+      "locator": "Review image asset: Crew_hand_of_cards-min.jpg",
+      "evidence": "Independent review photograph showing a hand of The Crew cards as a game component state."
+    }
+  ]
+}

@@ -22,7 +22,7 @@ if ! command -v ffmpeg >/dev/null 2>&1; then
   printf '%s\n' 'pre-push: ffmpeg is required by the intake visual gate.' >&2
   exit 1
 fi
-node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs
+node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs scripts/validate-okf-visuals.test.mjs scripts/telemetry-delivery.test.mjs
 
 base=origin/main
 if ! git rev-parse --verify --quiet "$base" >/dev/null; then

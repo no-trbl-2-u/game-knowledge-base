@@ -1,0 +1,3 @@
+# TELEMETRY.md is an append-only deterministic scan ledger. Parallel branches
+# must retain rows from both histories rather than conflict or choose one side.
+TELEMETRY.md merge=union

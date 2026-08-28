@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-08-28T09:03:22.597Z",
+  "packet_sha256": "84c94700540da105da12ee8ad332f9588eecf322cccc5302a4485d6d2adcc199",
+  "reviewed_source_ids": [
+    "src-002",
+    "src-003",
+    "src-004",
+    "src-005",
+    "src-006",
+    "src-007"
+  ],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Fresh audit of exact head 1fd09485596b8b3b76695404520d66ce06219db7. All seven receipts independently matched status, final URL, content type, byte length, and SHA-256. The official 691868 English manual returned HTTP 200 application/pdf, 3,333,181 bytes, and 22 pages; extracted contents and rules headings support the bounded base-game claims. Board Game Quest and The Family Gamers REST receipts are independent non-publisher reception sources. The contact sheet was inspected first; its three distinct reduced panels and individual references are meaningful, non-corrupt, and non-substitutive. Coverage is honest: one known governing manual and an unknown factual denominator; no unsupported rating claim is published. The packet hash is bound to the frozen ready packet."
+}
