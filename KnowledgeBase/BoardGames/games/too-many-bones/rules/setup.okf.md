@@ -18,22 +18,34 @@ sources:
     kind: other
     provenance: secondary
     retrieved_at: "2026-07-19"
-    notes: "Setup summary."
-confidence: medium
-status: needs_followup
+    notes: "Setup summary; cross-checked against the official rulebook."
+  - id: "src-006"
+    title: "Too Many Bones Rulebook (v2.2)"
+    url: "https://www.dropbox.com/scl/fi/mwe9nv6bb68gtkkhgx04o/TMB-Rulebook.pdf?rlkey=1y2zxkqw7mpi98aljmaoipjzq&e=1&dl=0"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-08-19"
+    notes: "Official rulebook, retrieved and text-extracted in the 2026-08-19 librarian pass."
+confidence: high
+status: verified
+last_verified: "2026-08-19"
 ---
 
 ## Setup
 
-- Claim: Each player chooses a Gearloc and prepares that character's mat, chip, starting health, initiative die, and stat dice.
-  Source: src-003
-  Evidence: The accessible rules summary states that each player chooses a Gearloc and places the Gearloc mat, chip, starting health chips, initiative die, and stat dice.
+- Claim: Each player chooses a Gearloc and places that character's mat, chip (with starting Health Chips underneath), Initiative Die, and Stat Dice.
+  Source: src-003, src-006
+  Evidence: "Each player chooses a Gearloc and places their selected Gearloc Mat, Gearloc Chip (with # of Starting Health Chips underneath it), Initiative (Ini) Die, and Stat Dice." Rulebook, Game Set-up.
   Confidence: high
-- Claim: The party selects a Tyrant and prepares the encounter, loot, baddie, and battle components for the run.
-  Source: src-003
-  Evidence: Setup sequence identifies Tyrant and encounter preparation before the first day.
-  Confidence: medium
-
-## Open questions
-
-Exact setup counts and solo setup changes await the official rulebook.
+- Claim: The party selects a Tyrant, then builds an Encounter Deck by shuffling General (or Solo, for one-Gearloc parties) Encounter Cards with the Tyrant's own Tyrant Encounter cards, and prepares separate Loot/Trove Loot decks and 1/5/20-point Baddie stacks matching the Tyrant's listed Baddie types.
+  Source: src-006
+  Evidence: Rulebook, Game Set-up — Encounters, Loot & Trove Loot, and Baddies subsections.
+  Confidence: high
+- Claim: With one Gearloc, setup uses the Solo Encounter Deck instead of the General Encounter Deck.
+  Source: src-006
+  Evidence: "Shuffle the General Encounter Deck ... or Solo Encounter Deck ... if playing with only one Gearloc."
+  Confidence: high
+- Claim: Special Encounters 001–003 are placed in order on top of the newly built Encounter Deck during setup.
+  Source: src-006
+  Evidence: "find Special Encounters 001-003 ... and place them, in order, on top of your newly created Encounter Deck."
+  Confidence: high

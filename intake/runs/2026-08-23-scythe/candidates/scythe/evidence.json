@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "slug": "scythe",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-08-23T06:12:00.000Z",
+  "edition_scope": "Released physical Scythe base game sold by Stonemaier Games; claims are bounded to the current publisher product page, publisher rules page, and one independent review.",
+  "coverage_ledger": {
+    "rules_denominator": [
+      {
+        "authority": "Stonemaier Games Scythe product page",
+        "acquired": true,
+        "official_endpoint": true,
+        "source_ids": ["src-001"],
+        "notes": "Retrieved HTML directly and used only for the product's stated mechanism, scope, components, and interaction summary."
+      },
+      {
+        "authority": "Stonemaier Games Scythe rules page",
+        "acquired": true,
+        "official_endpoint": true,
+        "source_ids": ["src-002"],
+        "notes": "Retrieved HTML directly; page identifies the base-game rules collection."
+      }
+    ],
+    "faq_errata_inventory": {
+      "scope": "Public English FAQ or errata applicable to the narrow base-game claims published here.",
+      "checks": [
+        "The publisher rules page was retrieved and its current base-game links were inspected.",
+        "No separate FAQ or errata claim is published in this packet; the packet does not assert publisher-wide absence."
+      ],
+      "applicable_acquired": 0,
+      "applicable_known_total": null,
+      "notes": "FAQ and errata are outside the bounded claim set and remain open for a later librarian pass."
+    },
+    "factual_denominator": [
+      {"claim_group":"physical product identity and publisher description","recorded":true,"source_ids":["src-001"]},
+      {"claim_group":"player count, duration, and base-game components","recorded":true,"source_ids":["src-001"]},
+      {"claim_group":"action-selection and engine-building description","recorded":true,"source_ids":["src-001"]},
+      {"claim_group":"alternate-history setting and engine-building description","recorded":true,"source_ids":["src-001"]},
+      {"claim_group":"publisher rules authority path","recorded":true,"source_ids":["src-002"]},
+      {"claim_group":"independent gameplay overview","recorded":true,"source_ids":["src-003"]},
+      {"claim_group":"independent snowball and onboarding testimony","recorded":true,"source_ids":["src-003"]},
+      {"claim_group":"product identity visual","recorded":true,"source_ids":["src-004"]},
+      {"claim_group":"player-board action visual","recorded":true,"source_ids":["src-005"]},
+      {"claim_group":"territory tabletop visual","recorded":true,"source_ids":["src-006"]},
+      {"claim_group":"visual contact-sheet inspection","recorded":true,"source_ids":["src-004","src-005","src-006"]}
+    ],
+    "exclusions": [
+      "All expansions and variants, including Automa, are excluded.",
+      "Complete card-text and component-history denominators are unknown and not inferred.",
+      "BGG rating, rank, and complexity weight are not claimed; game.weight is null."
+    ]
+  },
+  "sources": [
+    {
+      "id":"src-001","title":"Stonemaier Games — Scythe product page","roles":["identity","official_rules"],"provenance":"official","url":"https://stonemaiergames.com/games/scythe/","final_url":"https://stonemaiergames.com/games/scythe/","retrieved_at":"2026-08-26T06:02:09.439Z","http_status":200,"content_type":"text/html; charset=UTF-8","byte_length":131230,"sha256":"9831b43767033bc38915b4c955706f0cff6193de1203a534c1187bd902444a54","locator":"Product description, player count, game length, mechanism, components","evidence":"Scythe is an engine-building, asymmetric, competitive board game set in an alternate-history 1920s period."
+    },
+    {
+      "id":"src-002","title":"Stonemaier Games — Scythe rules page","roles":["official_rules"],"provenance":"official","url":"https://stonemaiergames.com/games/scythe/rules/","final_url":"https://stonemaiergames.com/games/scythe/rules/","retrieved_at":"2026-08-26T06:02:09.858Z","http_status":200,"content_type":"text/html; charset=UTF-8","byte_length":152687,"sha256":"a35191c63334c92aea5887545853c1aad44acd099ef3481e4a261c62f297491a","locator":"Scythe Base Game rules collection and Multiplayer Game Rules link","evidence":"Below are links to PDF files of game rules and guides which are available in multiple languages."
+    },
+    {
+      "id":"src-003","title":"Board Game Quest — Scythe Review REST receipt","roles":["independent_review"],"provenance":"secondary","url":"https://www.boardgamequest.com/wp-json/wp/v2/posts/44352","final_url":"https://www.boardgamequest.com/wp-json/wp/v2/posts/44352","retrieved_at":"2026-08-23T06:07:48.423Z","http_status":200,"content_type":"application/json; charset=UTF-8","byte_length":25529,"sha256":"999190a79037f5341d67465b9818fa15000522879bb6062fe95d82b29b36480a","locator":"Post 44352; Final Thoughts; Hits and Misses","evidence":"New players will suffer against seasoned vets"
+    },
+    {
+      "id":"src-004","title":"Board Game Quest — Scythe review header photograph","roles":["visual"],"provenance":"secondary","url":"https://www.boardgamequest.com/wp-content/uploads/2021/06/Scythe-Header.jpg","final_url":"https://www.boardgamequest.com/wp-content/uploads/2021/06/Scythe-Header.jpg","retrieved_at":"2026-08-23T06:08:11.288Z","http_status":200,"content_type":"image/jpeg","byte_length":123661,"sha256":"17a9c2745eceaba2b2d261bcec95b1187c343a508343637beed320db9fcf9507","locator":"Scythe Review header image","evidence":"Reduced source-linked review photograph for product identity."
+    },
+    {
+      "id":"src-005","title":"Board Game Quest — Scythe player board photograph","roles":["visual"],"provenance":"secondary","url":"https://www.boardgamequest.com/wp-content/uploads/2021/06/Scythe-Player-Board.jpg","final_url":"https://www.boardgamequest.com/wp-content/uploads/2021/06/Scythe-Player-Board.jpg","retrieved_at":"2026-08-23T06:08:11.827Z","http_status":200,"content_type":"image/jpeg","byte_length":150274,"sha256":"a4f3295ebf68fce02a607d0aeafa4815829a6026a281085ba288b41f53e4f15b","locator":"Scythe Review player board figure","evidence":"Reduced source-linked review photograph for player-board action selection."
+    },
+    {
+      "id":"src-006","title":"Board Game Quest — Scythe game experience photograph","roles":["visual"],"provenance":"secondary","url":"https://www.boardgamequest.com/wp-content/uploads/2021/06/Scythe-Game-Experience.jpg","final_url":"https://www.boardgamequest.com/wp-content/uploads/2021/06/Scythe-Game-Experience.jpg","retrieved_at":"2026-08-23T06:08:12.356Z","http_status":200,"content_type":"image/jpeg","byte_length":132856,"sha256":"3ee581b7ef33105b19df24bb52c6131088b27accdaf459939bcef734503ad69b","locator":"Scythe Review game experience figure","evidence":"Reduced source-linked review photograph for the tabletop game state."
+    }
+  ]
+}
