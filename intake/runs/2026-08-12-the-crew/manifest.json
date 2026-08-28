@@ -21,7 +21,7 @@
       "title": "The Crew: The Quest For Planet Nine",
       "bgg_id": null,
       "cohort": "cooperative",
-      "status": "approved",
+      "status": "promoted",
       "discovery_sources": [
         "https://thamesandkosmos.com/products/the-crew",
         "https://www.boardgamequest.com/the-crew-the-quest-for-planet-nine-review/",
@@ -42,7 +42,8 @@
           "percent": null
         }
       },
-      "focus_fit": "The Crew is a cooperative trick-taking reference for constrained communication, task assignment, and mission progression."
+      "focus_fit": "The Crew is a cooperative trick-taking reference for constrained communication, task assignment, and mission progression.",
+      "promoted_at": "2026-08-28T09:04:30.413Z"
     }
   ]
 }
