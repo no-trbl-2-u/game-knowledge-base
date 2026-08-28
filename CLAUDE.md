@@ -68,7 +68,12 @@ better-if labels, enums) are pinned — extend the vocabulary source +
 - **Mennonite intake audit** (separate external Hermes cron) — independently
   reopens sources, verifies claims and visuals, binds approval to the frozen
   packet SHA-256, performs deterministic promotion on the same PR branch, and
-  merge-commits that PR only after the promoted head is green.
+  merge-commits that PR only after the promoted head is green. Exact-head
+  `REVISE` creates or updates one `[kb-revise] PR #N` issue through
+  `scripts/kb-loop-issue.mjs`; its authenticated `bathcat-ready` event wakes
+  one event-only Bathcat repair. Bathcat's fresh pushed head transitions that
+  issue to `mennonite-ready`; `HOLD` stops the loop, and `GO` closes the issue
+  only after verified merge. Three repair attempts are the hard ceiling.
 - **`/librarian`** (weekly Wed action) — schema drift, `needs_followup`
   retries, wishlist checkoffs, dedupe.
 - **`/synthesize-patterns`** (weekly Sun action) — cross-game synthesis
