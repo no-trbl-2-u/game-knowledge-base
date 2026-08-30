@@ -15,7 +15,10 @@ reads as swinginess/imbalance when a leader's combat strength outpaces
 opponents' visibility into it. Kingdom Death: Monster's dice-based combat
 resolution is only lightly sourced so far (needs_followup) but points at the
 same tension: risk/randomness that defines the game's identity is also the
-axis reviewers flag as needing clearer at-the-table communication. Both games
+axis reviewers flag as needing clearer at-the-table communication. Arydia's
+threat-driven AI combat adds a similar auditability angle from a different
+mechanism — foe behavior keyed to a Threat track needs those changes to stay
+visible, or the same "why did that happen" opacity results. Both games
 suggest the same shape of problem — resolution mechanics that are core to the
 game's appeal are also the primary source of "better if" requests.
 
@@ -33,6 +36,9 @@ game's appeal are also the primary source of "better if" requests.
   reported reviewer request) that clearer point-of-decision communication for
   combat randomness would help accessibility without removing the game's risk
   identity. confidence: low
+- arydia-the-paths-we-dare-tread (src-005): foe behavior depends on Threat levels
+  and AI cards; combat resolution should keep those threat changes visible and
+  auditable at the table. confidence: medium (source doc status: needs_followup)
 
 ## Where it works
 
@@ -62,8 +68,12 @@ game's appeal are also the primary source of "better if" requests.
 
 ## Coverage gaps
 
-Current support for this label remains narrow, and Kingdom Death: Monster's
-reception docs are still `needs_followup` with low-confidence, inference-heavy claims. A
-dedicated combat-heavy game (e.g., a wargame or skirmish title) with a
-`verified` reception doc would substantially strengthen this pattern; until
-then, conclusions here should be read as provisional.
+Current support for this label remains narrow, and both Kingdom Death: Monster's and
+Arydia's reception docs are still `needs_followup`, the latter with a low-confidence,
+single-source claim. Scythe and Cthulhu: Death May Die also carry the
+combat-resolution label but their better-if docs' body claims land on
+onboarding/session-pacing or campaign-progression rather than a distinct
+resolution-mechanics statement, so they were left out. A dedicated combat-heavy game
+(e.g., a wargame or skirmish title) with a `verified` reception doc would
+substantially strengthen this pattern; until then, conclusions here should be read as
+provisional.

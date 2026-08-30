@@ -4,17 +4,18 @@ type: pattern
 mechanics: []
 better_if_labels: [expansion-bloat]
 confidence: medium
-status: verified
+status: draft
 ---
 
 ## Summary
 
 Evidence is narrow. The available cases describe expansion-bloat as a "completeness
-pressure" problem rather than a rules-complexity one: reviewers feel the base
-product is a fine design on its own, but the surrounding product line (more
-character copies, more factions, more reprints) becomes an implicit
-requirement to reach the "ideal" experience, and that pressure — not raw
-card/faction count — is what draws criticism.
+pressure" or "separate-purchase value" problem rather than a rules-complexity one:
+reviewers feel the base product is a fine design on its own, but the surrounding
+product line (more character copies, more factions, more reprints, a same-genre
+standalone follow-up) becomes an implicit requirement to reach the "ideal" experience
+or a purchase whose incremental value is unclear against what a player already owns —
+and that pressure, not raw card/faction count, is what draws criticism.
 
 ## Evidence by game
 
@@ -27,6 +28,14 @@ card/faction count — is what draws criticism.
   perceived-completeness pressure — "having them all is the ideal
   experience" — and that "the Law of Root booklet itself even heightens the
   feeling of incompleteness," confidence: medium
+- dominion (src-003, src-007): Board Game Quest lists expansion fatigue as a minor
+  flaw while the community errata article demonstrates a broader ongoing rules
+  ecosystem, supporting a completeness/maintenance-fatigue read distinct from the
+  base game's praised compact identity, confidence: medium
+- dead-of-winter-the-long-night (src-004): the reviewer is "not sure The Long Night
+  is a worthwhile purchase if you've already got the original game," a
+  purchase-value complaint aimed at a same-genre standalone follow-up rather than
+  an add-on module, confidence: medium (source doc status: needs_followup)
 
 ## Where it works
 
@@ -44,12 +53,19 @@ No praised-design evidence found for this pattern.
 - root (src-006): the official rules booklet itself is cited as amplifying
   the sense that the base game alone is incomplete, pushing players toward
   the full expansion set to get the "ideal" experience.
+- dominion (src-003, src-007): expansion fatigue is flagged even in a review
+  otherwise praising the base game's quick turns and accessibility.
+- dead-of-winter-the-long-night (src-004): a same-genre standalone follow-up draws
+  the same "worth owning on top of what I have" question that Root and Arkham draw
+  about literal expansions (source doc status: needs_followup).
 
 ## Coverage gaps
 
 Current support for this label comes from reviewer commentary rather than
-direct player-count survey data. Games with large, ongoing expansion
-catalogs — living card games (e.g. other LCGs beyond Arkham), legacy games,
-and app-supported games with frequent content drops — would test whether
-this "completeness pressure" framing holds outside campaign/asymmetric-board
-designs.
+direct player-count survey data. Dead of Winter: The Long Night extends this
+pattern to standalone same-IP follow-ups rather than only literal expansions, but
+its source doc is still `needs_followup`, which is why this pattern's status moved
+to `draft` this pass. Games with large, ongoing expansion catalogs — living card
+games (e.g. other LCGs beyond Arkham), legacy games, and app-supported games with
+frequent content drops — would test whether this "completeness pressure" framing
+holds outside campaign/asymmetric-board designs.

@@ -4,18 +4,24 @@ type: pattern
 mechanics: [dice-rolling, deck-bag-and-pool-building, push-your-luck]
 better_if_labels: [randomness]
 confidence: medium
-status: verified
+status: draft
 ---
 
 ## Summary
 
 Randomness friction splits into two failure modes and one recurring fix. Too much
-uncontrolled variance (an oversized card pool, an artificial catch-up bump) reads as
+uncontrolled variance (an oversized card pool, an artificial catch-up bump, a dice
+roll that can both fail the task and strip the resources needed to recover) reads as
 the game overriding player skill; too little variance (a thin card pool that repeats)
-reads as predictable and stale. The recurring mitigation reviewers reward is giving
-players a lever over the randomness — deterministic ordering, a dice-or-card choice,
-or a catch-up tool framed as earned rather than free — so a bad outcome still traces
-back to a legible decision.
+reads as predictable and stale. A cluster of cooperative/semi-cooperative horror and
+survival games (Elder Sign, Nemesis, Nemesis: Lockdown, Dead of Winter) adds a third
+shape reviewers treat differently: high-variance instant-elimination or catastrophic
+outcomes that are accepted, even praised, as narrative risk rather than a fairness
+complaint, provided the game frames them as story rather than promising deterministic
+control. The recurring mitigation reviewers reward is giving players a lever over the
+randomness — deterministic ordering, a dice-or-card choice, a catch-up tool framed as
+earned rather than free, or explicit narrative framing for high-variance swings — so a
+bad outcome still traces back to a legible decision or a story beat, not raw noise.
 
 ## Evidence by game
 
@@ -45,6 +51,35 @@ back to a legible decision.
 - the-quacks-of-quedlinburg (src-005): the reviewer flags bag-pull variance as a
   strong taste filter, warning that luck-averse players should try the game before
   buying it, confidence: high
+- horrified (src-002): the item bag and monster deck create uncertainty, while each
+  selected monster still supplies a bounded, learnable objective puzzle — randomness
+  layered on top of a fixed structure rather than replacing it, confidence: medium
+- elder-sign (src-001, src-002): task resolution is fully dice-gated with consumable
+  rerolls as the only recourse, and RPGnet records the standing criticism that this
+  reads as "glorified Yahtzee with custom dice," confidence: high
+- elder-sign (src-004): "a few bad rolls of the dice can cause a failure while
+  simultaneously using up all of one's resources," so a bad roll sequence can strip
+  the exact tools needed to recover from it, confidence: high
+- dead-of-winter-a-crossroads-game (src-005): a first-turn exposure bite "can knock
+  the wind out of a player and group," though the reviewer calls the consequence
+  interesting "for the right players," supporting explicit variant framing before play,
+  confidence: medium (source doc status: needs_followup)
+- dead-of-winter-the-long-night (src-004): the reviewer says exposure's "random nature
+  can be slightly unfair," confidence: medium (source doc status: needs_followup)
+- bloodborne-the-card-game (src-005, src-006): reviewers identify extreme damage
+  chains and upgrade-reveal luck as friction for players seeking skill-dominant
+  combat, even while valuing the resulting tension, confidence: medium (source doc
+  status: needs_followup)
+- betrayal-legacy (src-005): pre-haunt card draws can leave a player "unable to even
+  meaningfully participate" despite reasonable play, confidence: medium (source doc
+  status: needs_followup)
+- nemesis-lockdown (src-009): randomness "can torpedo games despite strategy" and
+  complexity can obscure which decisions would have mitigated it, confidence: medium
+  (source doc status: needs_followup)
+- nemesis (src-006, src-007, src-009): the same chaos praised for generating stories
+  is criticized for domino outcomes and overwhelming randomness — the teach should
+  label high-variance systems as narrative risk rather than promise deterministic
+  tactical control, confidence: high
 
 ## Where it works
 
@@ -60,6 +95,12 @@ back to a legible decision.
   player choice is singled out as a thoughtful risk-mitigation mechanism.
 - the-quacks-of-quedlinburg (src-006): the rat-tail catch-up rule is praised for
   keeping players who busted badly competitive, softening the sting of a bad bag pull.
+- horrified (src-002): item-bag and monster-deck randomness is layered onto a bounded,
+  per-monster objective puzzle, so variance never removes the underlying legible task.
+- nemesis (src-006, src-007, src-009): reviewers explicitly credit the same high
+  variance that produces domino failures with generating the game's best emergent
+  stories — proof that unmitigated randomness can read as a feature when the game's
+  framing sets narrative-risk, not tactical-control, expectations.
 
 ## Where it fails
 
@@ -75,6 +116,16 @@ back to a legible decision.
 - the-quacks-of-quedlinburg (src-005): the reviewer's blunt warning — don't buy
   sight-unseen "if you don't like luck" — shows bag-pull variance as a hard filter
   on the audience, not just a texture note.
+- elder-sign (src-001, src-002, src-004): fully dice-gated task resolution with
+  scarce rerolls means a bad sequence can both fail the task and strip the resources
+  needed to try again, compounding rather than merely delaying.
+- dead-of-winter-a-crossroads-game (src-005) / dead-of-winter-the-long-night
+  (src-004): the shared exposure/instant-elimination mechanic draws the same
+  "abrupt" and "slightly unfair" language across both standalone titles in this
+  sub-corpus (both source docs status: needs_followup).
+- betrayal-legacy (src-005): pre-haunt randomness can leave a player structurally
+  unable to participate before the game's climax even arrives (source doc status:
+  needs_followup).
 
 ## Coverage gaps
 
@@ -83,6 +134,10 @@ variance-specific evidence: legendary-encounters-an-alien-deck-building-game's
 sourced complaints are about hive-deck *timing* and per-player-count *difficulty*
 rather than variance itself, and kingdom-death-monster's only randomness claim is
 explicitly flagged by its own doc as an unconfirmed inference (status:
-needs_followup). The corpus would benefit from a follow-up pass on
-kingdom-death-monster once its needs_followup backlog clears, specifically targeting
-how reviewers discuss its critical-hit/wound-table dice system.
+needs_followup). Four of the newer contributing games (Dead of Winter: A Crossroads
+Game, Dead of Winter: The Long Night, Bloodborne: The Card Game, Betrayal Legacy,
+Nemesis: Lockdown) also carry needs_followup-status reception docs, which is why this
+pattern's status is `draft` rather than `verified` for this pass; reweight once those
+clear review. The corpus would benefit from a follow-up pass on kingdom-death-monster
+once its needs_followup backlog clears, specifically targeting how reviewers discuss
+its critical-hit/wound-table dice system.

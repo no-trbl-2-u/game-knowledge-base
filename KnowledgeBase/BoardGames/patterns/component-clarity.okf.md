@@ -4,12 +4,12 @@ type: pattern
 mechanics: []
 better_if_labels: [component-clarity]
 confidence: medium
-status: verified
+status: draft
 ---
 
 ## Summary
 
-Component-clarity friction shows up two ways across this sample: physical legibility (icon systems, reference cards, board/graphic design) and physical handling (chip durability, table footprint, tracking overhead). Heavier euros and app-adjacent adaptations (Ark Nova, Mage Knight, Slay the Spire) draw complaints that icon-heavy systems demand repeated rulebook/reference lookups rather than resolving from the table state. Lighter, family-weight games (Quacks) draw complaints about physical wear on handled components rather than legibility. The one clean praised-design example (Quacks' status icons) suggests small in-line reminder icons are an effective, low-cost fix for memory load — a much narrower intervention than the "ruthless visual hierarchy" heavy games seem to need.
+Component-clarity friction shows up two ways across this sample: physical legibility (icon systems, reference cards, board/graphic design, visual contrast) and physical handling (chip/tracker durability, table footprint, tracking overhead). Heavier euros and app-adjacent adaptations (Ark Nova, Mage Knight, Slay the Spire) draw complaints that icon-heavy systems demand repeated rulebook/reference lookups rather than resolving from the table state; two newer entries (Bloodborne, Betrayal Legacy) add drab visual contrast and fragile physical trackers to the same handling-friction bucket. Lighter, family-weight games (Quacks) draw complaints about physical wear on handled components rather than legibility. The one clean praised-design example (Quacks' status icons) suggests small in-line reminder icons are an effective, low-cost fix for memory load — a much narrower intervention than the "ruthless visual hierarchy" heavy games seem to need.
 
 ## Evidence by game
 
@@ -19,6 +19,8 @@ Component-clarity friction shows up two ways across this sample: physical legibi
 - mage-knight (src-012): BGG Ultimate Edition rating comments describe "rules checking is 30% of playing time" and "really fiddly rules," tied to the game's site/enemy-effect iconography needing multiple lookups, confidence: medium
 - slay-the-spire-the-board-game (src-007, src-010): Rolling In The Meep's dislikes list cites fiddly tracking and "many cubes/effects," and Miniature Market retail snippets call setup "a little lengthy" and "a bit heavy," confidence: high
 - the-quacks-of-quedlinburg (src-005): a reviewer reports "beginning to notice wear on the chips" after just five plays and calls the plastic chips "a bit expensive" to replace, confidence: high
+- bloodborne-the-card-game (src-006): Meeple Mountain specifically criticizes the drab visual palette, supporting higher-contrast presentation for quick reading of cards and board tracks in a simultaneous, timing-sensitive environment, confidence: medium (source doc status: needs_followup)
+- betrayal-legacy (src-005): the reviewer says physical trackers/clips can slip or damage Family cards, supporting trackers that stay fixed without damaging components, confidence: medium (source doc status: needs_followup)
 
 ## Where it works
 
@@ -34,7 +36,9 @@ No other game in this sample produced a review quote that explicitly praises a c
 - mage-knight (src-012): fiddly rules push rules-checking to roughly 30% of playing time, implicating unclear iconography/reference design, confidence: medium
 - slay-the-spire-the-board-game (src-007): fiddly cube/effect tracking and a "massive box/table footprint" are named dislikes, confidence: high
 - the-quacks-of-quedlinburg (src-005): repeated handling wears visible marks into the chips within a handful of plays, confidence: high
+- bloodborne-the-card-game (src-006): a drab visual palette is flagged as a specific hindrance to quick reading in a game whose simultaneous, timing-sensitive turns make legibility especially load-bearing (source doc status: needs_followup).
+- betrayal-legacy (src-005): physical trackers that slip or damage cardboard Family cards is a handling-durability complaint distinct from legibility (source doc status: needs_followup).
 
 ## Coverage gaps
 
-Every citable claim here comes from secondary reviews, not from direct component/graphic-design analysis, and only one game (Quacks) offers a genuine praised-design counterexample — the corpus is thin on the "works well" side of this label. A game whose reviewers specifically credit iconography or a reference-card redesign for resolving prior complaints (e.g., a revised/second edition) would strengthen the "where it works" side considerably.
+Every citable claim here comes from secondary reviews, not from direct component/graphic-design analysis, and only one game (Quacks) offers a genuine praised-design counterexample — the corpus is thin on the "works well" side of this label. Dark Pact carries the component-clarity label and proposes a specific fix (visually separating permissions, resources, and multiplication), but that bullet has no attached source/evidence citation in its own doc, so it was excluded rather than cited without support. Bloodborne's and Betrayal Legacy's contributions both rest on needs_followup-status docs, which is why this pattern's status moved to `draft` this pass. A game whose reviewers specifically credit iconography or a reference-card redesign for resolving prior complaints (e.g., a revised/second edition) would strengthen the "where it works" side considerably.

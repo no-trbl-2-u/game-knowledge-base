@@ -4,12 +4,12 @@ type: pattern
 mechanics: []
 better_if_labels: [rules-ambiguity]
 confidence: medium
-status: verified
+status: draft
 ---
 
 ## Summary
 
-Rules-ambiguity friction rarely shows up as "the rules are wrong." It shows up as scattered authority: a ruling lives in the rulebook, a card, a walkthrough, and an FAQ, and none of those four agree on precedence at the table. The recurring fixes reviewers ask for are not simpler rules but a single, searchable place to resolve a dispute — a living FAQ, an explicit timing-window reference, or an in-line reason for any instruction that breaks genre habit (e.g. "don't shuffle this deck"). Evidence is real but thin-to-moderate per game: most complaints come from single secondary reviews rather than aggregated player consensus, so treat this synthesis as directional, not exhaustive.
+Rules-ambiguity friction rarely shows up as "the rules are wrong." It shows up as scattered authority: a ruling lives in the rulebook, a card, a walkthrough, and an FAQ, and none of those four agree on precedence at the table. The recurring fixes reviewers ask for are not simpler rules but a single, searchable place to resolve a dispute — a living FAQ, an explicit timing-window reference, or an in-line reason for any instruction that breaks genre habit (e.g. "don't shuffle this deck"). Two heavier survival/horror co-ops (Nemesis, Nemesis: Lockdown) reinforce the pattern from a different angle: a dense, information-heavy table needs a personal or shared quick-reference surface, and reviewers explicitly ask for an index rather than fewer rules. Evidence is real but thin-to-moderate per game: most complaints come from single secondary reviews rather than aggregated player consensus, and Nemesis: Lockdown's contribution rests on a needs_followup-status doc, so treat this synthesis as directional, not exhaustive.
 
 ## Evidence by game
 
@@ -19,6 +19,8 @@ Rules-ambiguity friction rarely shows up as "the rules are wrong." It shows up a
 - mage-knight (src-011): A BGG fan critique complains rules are split across the rulebook, the Walkthrough booklet, individual cards, and the FAQ/site, with no single point of authority, confidence: medium
 - root (src-003): Leder's official Rules Library exists specifically to adjudicate disputes such as whether "cannot" is absolute and who resolves ambiguous simultaneous-turn order, confidence: high
 - slay-the-spire-the-board-game (src-008): A reviewer accidentally shuffled the Summon deck (which must stay ordered/searchable) because the rulebook didn't flag the exception, and separately found post-Act-III progression "very unclear" without prior video-game knowledge, confidence: high
+- nemesis-lockdown (src-008, src-009): Both independent reviews report frequent stops and difficult rulebook navigation/presentation, with one reviewer explicitly asking for an index, confidence: high (source doc status: needs_followup)
+- nemesis (src-005, src-008): reviewers report a twenty-step setup and comprehensive, information-dense rules; the existing pair of shared quick references is judged insufficient for the table, supporting a readable personal flow aid for the Event phase, bag development, and the final engine/coordinate/contamination/objective sequence, confidence: medium
 
 ## Where it works
 
@@ -32,7 +34,9 @@ No praised-design evidence found for this pattern. None of the sampled reviews s
 - mage-knight (src-011): authoritative rulings are fragmented across four different physical/official sources with no single index.
 - root (src-003): even with an official living rules library, base concepts like "cannot" and simultaneous-turn precedence needed explicit adjudication.
 - slay-the-spire-the-board-game (src-008): genre-breaking instructions (don't shuffle this deck) and post-campaign progression steps go unexplained for players without outside (video-game) context.
+- nemesis-lockdown (src-008, src-009): both reviewers independently report frequent rulebook stops during play, with poor navigation and typography named as the specific culprits rather than rules content itself (source doc status: needs_followup).
+- nemesis (src-005, src-008): a twenty-step setup and dense rules text outrun what the game's own printed quick references can support at the table.
 
 ## Coverage gaps
 
-hoplomachus-remastered and spirit-island carry the rules-ambiguity label in the corpus but did not yield citable evidence here: hoplomachus's better-if doc only infers ambiguity risk from rulebook structure and FAQ existence (no reviewer complaint sighted), and spirit-island's rules-ambiguity bullet in its better-if doc lacks an attached source/evidence pair. The corpus would benefit from a game with heavier, well-documented errata history (e.g. a wargame or living-rules title with an active BGG rules-forum trail) to strengthen this pattern with primary-source ruling disputes rather than reviewer paraphrase.
+hoplomachus-remastered and spirit-island carry the rules-ambiguity label in the corpus but did not yield citable evidence here: hoplomachus's better-if doc only infers ambiguity risk from rulebook structure and FAQ existence (no reviewer complaint sighted), and spirit-island's rules-ambiguity bullet in its better-if doc lacks an attached source/evidence pair. Earthborne Rangers and Cthulhu: Death May Die also carry this label but their better-if docs' body claims land on strategic-depth/onboarding or campaign-progression rather than a distinct rules-ambiguity statement, so they were left out. Nemesis: Lockdown's contribution rests on a needs_followup-status doc, which is why this pattern's status moved to `draft` this pass. The corpus would benefit from a game with heavier, well-documented errata history (e.g. a wargame or living-rules title with an active BGG rules-forum trail) to strengthen this pattern with primary-source ruling disputes rather than reviewer paraphrase.

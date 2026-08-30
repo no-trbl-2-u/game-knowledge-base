@@ -9,7 +9,7 @@ status: draft
 
 ## Summary
 
-Across this sample, "accessibility" friction is rarely about a single missing feature — it's a byproduct of ambition: heavy card text, dense rulebooks, tactical dice/combat systems, and large physical footprints all raise the entry cost for new, casual, or non-expert players. The recurring fix pattern is not simplification but *scaffolding*: icon reminders, guided first plays, official alternate-effect modes, and compact reference formats let designs keep their depth while lowering the barrier to a first successful turn. Evidence is broad (7 of 8 games contributed a traceable claim) but individually thin — most bullets are single-review observations rather than corroborated consensus, so this synthesis should be read as directional, not definitive.
+Across this sample, "accessibility" friction is rarely about a single missing feature — it's a byproduct of ambition: heavy card text, dense rulebooks, tactical dice/combat systems, large physical footprints, and (newly) mandatory companion apps all raise the entry cost for new, casual, or tech-averse players. The recurring fix pattern is not simplification but *scaffolding*: icon reminders, guided first plays, official alternate-effect modes, compact reference formats, and preserving an existing accessibility affordance (like a color-symbol correspondence) rather than replacing it with an unverified convention, let designs keep their depth while lowering the barrier to a first successful turn. Evidence is broad (9 of 10 games contributed a traceable claim) but individually thin — most bullets are single-review observations rather than corroborated consensus, so this synthesis should be read as directional, not definitive.
 
 ## Evidence by game
 
@@ -20,11 +20,14 @@ Across this sample, "accessibility" friction is rarely about a single missing fe
 - spirit-island (src-007): A cooperative-games review warns of "Heavy 'brain-burner' gameplay that may overwhelm some players," a cognitive-load accessibility barrier distinct from rules complexity alone, confidence: high
 - the-quacks-of-quedlinburg (src-004): A family-oriented review suggests new/younger players benefit from "an adult buddy the first play through," an entry-barrier accessibility observation, confidence: medium
 - too-many-bones (src-004): A review distinguishes the game's fit for "seasoned gamers" from its barrier to casual players unfamiliar with tactical dice systems, confidence: medium (note: source doc status is needs_followup)
+- the-crew (src-002): The official manual supplies symbols for color distinction alongside color coding itself, so an accessibility improvement should extend that existing aid rather than replace it with an unverified convention, confidence: high
+- forgotten-waters (src-011, src-006, src-009): Dicebreaker identifies the mandatory companion device as a dealbreaker for some groups; the 2024 Entry Book substitutes for app play but only for the first five scenarios, leaving the release-era version question open, confidence: high (note: source doc status is needs_followup)
 
 ## Where it works
 
 - ark-nova (src-004): The official FAQ formalizes an accessibility accommodation rather than leaving it to house rules — "If your group dislikes interactive abilities... use the alternate solo-game effects" — turning a social-friction point (forced player-vs-player poison/pilfering effects) into an opt-out mode.
 - the-quacks-of-quedlinburg (src-004): Reviewers praise the game's icon-based reminders as lowering rules-recall burden for family/casual play ("icons that help remind players"), alongside its terrific-family-game framing.
+- the-crew (src-002): the official rules already supply a symbol-based color-distinction aid, giving future accessibility work an existing, source-backed convention to extend rather than a blank slate.
 
 ## Where it fails
 
@@ -34,7 +37,8 @@ Across this sample, "accessibility" friction is rarely about a single missing fe
 - spirit-island (src-007): Simultaneous multi-spirit planning is called a brain-burner that can overwhelm some players outright, not merely challenge them.
 - kingdom-death-monster (src-002): Sheer physical scale (21 lb) and multi-session campaign commitment gate entry before rules are even taught.
 - too-many-bones (src-004): Tactical dice-based combat systems are reported as a casual-player deterrent independent of rules-teaching quality.
+- forgotten-waters (src-011): a mandatory companion device is named directly as a dealbreaker for tech-averse groups, the corpus's clearest hardware-dependency accessibility complaint (source doc status: needs_followup).
 
 ## Coverage gaps
 
-legendary-encounters-an-alien-deck-building-game carries the accessibility label in its frontmatter but neither reception doc pins a specific accessibility claim to a cited source — its friction notes (text-heavy cards, IP-specific knowledge) appear only as unsourced summary bullets, so it was excluded here. Two of the seven cited games (kingdom-death-monster, too-many-bones) still carry status: needs_followup on their reception docs, so this pattern's confidence should rise once those are re-verified. None of the sampled games discuss accessibility for players with visual/motor impairments (colorblind-safe iconography, physical dexterity for token/dice handling) — the corpus would benefit from a game whose reviews explicitly address those dimensions rather than only text-density, table-footprint, and cognitive-load framings.
+legendary-encounters-an-alien-deck-building-game carries the accessibility label in its frontmatter but neither reception doc pins a specific accessibility claim to a cited source — its friction notes (text-heavy cards, IP-specific knowledge) appear only as unsourced summary bullets, so it was excluded here. Three of the nine cited games (kingdom-death-monster, too-many-bones, forgotten-waters) still carry status: needs_followup on their reception docs, so this pattern's confidence should rise once those are re-verified. None of the sampled games discuss accessibility for players with visual/motor impairments (colorblind-safe iconography, physical dexterity for token/dice handling) — the corpus would benefit from a game whose reviews explicitly address those dimensions rather than only text-density, table-footprint, hardware-dependency, and cognitive-load framings.

@@ -9,16 +9,22 @@ status: draft
 
 ## Summary
 
-Evidence is thin: of the eight dice-rolling games checked, only four have a claim
-that is actually about dice specifically rather than randomness in general
+Evidence is thin: of the many more dice-rolling games now in the corpus, only five have
+a claim that is actually about dice specifically rather than randomness in general
 (hoplomachus-remastered, root, and the-quacks-of-quedlinburg carry the
 dice-rolling tag but their reception docs never single out dice mechanics by
 name; mage-knight's reviews praise "deterministic combat" with no sourced
-detail tying it to the dice mechanism). Where dice are discussed directly, the
+detail tying it to the dice mechanism; most of this pass's newly-added
+dice-rolling-tagged games — Horrified, Cthulhu: Death May Die, Descent, Star Wars:
+Imperial Assault, Nemesis, Nemesis: Lockdown, Betrayal Legacy, Dead of Winter — discuss
+randomness generally without naming dice as the specific mechanism). Elder Sign is
+the sharpest new dice-specific case: fully dice-gated resolution with only
+consumable rerolls as recourse draws the corpus's most pointed dice complaint —
+"glorified Yahtzee with custom dice." Where dice are discussed directly, the
 same lever recurs: giving players a way to choose or convert around a roll
 (dice-or-card resolution, character-specific dice pools) reads as thoughtful,
 while unmediated crit/fail swings read as an accessibility and communication
-risk. Two of the four contributing games (kingdom-death-monster,
+risk. Two of the five contributing games (kingdom-death-monster,
 too-many-bones) are still `needs_followup`, so this pattern should be treated
 as a working hypothesis, not a settled consensus.
 
@@ -39,6 +45,10 @@ as a working hypothesis, not a settled consensus.
   critical hits/failures as core mechanisms, but the doc explicitly flags
   that consensus strength on this axis is not established from the material
   fetched, confidence: low
+- elder-sign (src-001, src-002): task resolution is fully dice-gated with dice
+  removed as tasks complete and only consumable rerolls as recourse; RPGnet
+  records the standing criticism that this reads as "glorified Yahtzee with
+  custom dice," confidence: high
 
 ## Where it works
 
@@ -61,14 +71,23 @@ as a working hypothesis, not a settled consensus.
   as a barrier to onboarding for players who don't already understand them,
   i.e., dice-pool literacy itself is a friction point for new players,
   confidence: medium.
+- elder-sign (src-001, src-002): fully dice-gated resolution with scarce rerolls
+  means a bad roll can both fail the task and remove the tool needed to try
+  again, the sharpest "dice as sole arbiter" complaint in this set.
 
 ## Coverage gaps
 
-Three of the eight tagged games (hoplomachus-remastered, root,
+Three of the eight originally-tagged games (hoplomachus-remastered, root,
 the-quacks-of-quedlinburg) have verified reception docs that never discuss
 dice mechanics by name despite carrying the dice-rolling tag, and
 mage-knight's "deterministic combat" praise has no source-linked claim to
-cite. The corpus would benefit from re-reading hoplomachus-remastered and
+cite. Most of this pass's newly-added dice-rolling games (Horrified, Cthulhu:
+Death May Die, Descent, Star Wars: Imperial Assault, Nemesis, Nemesis: Lockdown,
+Betrayal Legacy, Dead of Winter: A Crossroads Game, Dead of Winter: The Long
+Night, Shadows over Camelot, Arydia) carry the tag but their better-if docs
+discuss randomness, elimination, or combat generally without naming dice as the
+specific mechanism, so they were left out rather than force-fit. The corpus
+would benefit from re-reading hoplomachus-remastered and
 root's reception sources specifically for dice-combat commentary (their dice
 subsystems — Chip Theory's chip-and-die combat, Root's dice-based Woodland
 skirmishes — are known to exist mechanically but are undocumented here), and

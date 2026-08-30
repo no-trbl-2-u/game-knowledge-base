@@ -13,10 +13,14 @@ Across the current evidence, deck-building is praised when it gives players legi
 over composition — deterministic no-shuffle sequencing, weighty single-card acquisitions,
 or a construction system fused tightly with another mechanism — and criticized when that
 control feels shallow or arbitrary: thin starter decks, narrow markets, or variance that
-reads as "the deck failed me" rather than a player choice. The corpus's deck-builders are
-mostly LCG/campaign-upgrade or acquisition-driven designs rather than classic Dominion-style
-market builders, so evidence skews toward construction-and-consistency claims over
-market-diversity claims.
+reads as "the deck failed me" rather than a player choice. Dominion now closes the market-diversity
+gap flagged at last pass: as the corpus's first classic competitive market-deckbuilder, its own
+review names quick turns and accessibility as strengths while flagging lower player interaction
+and expansion fatigue as the tradeoffs of that same compact, market-driven design. Dark Pact adds
+a second market-adjacent case — a shared central display plus a private grimoire — where reviewers
+praise the combinatorial depth but flag that some acquisition chains create more handling than
+strategic payoff. Earthborne Rangers carries the deck-building tag but its reception evidence is
+about subsystem friction rather than deck construction itself, so it contributes nothing usable here.
 
 ## Evidence by game
 
@@ -28,6 +32,8 @@ market-diversity claims.
 - mage-knight (src-010): The Thoughtful Gamer calls it "a deckbuilder, but in slow motion," where "every time you acquire a new card it feels weighty and significant," confidence: high
 - marvel-champions-the-card-game (src-004): Meeple Mountain notes deck-driven variance can feel unfair — "you are set up for failure simply in how the decks present themselves" — even though prebuilt starter decks make onboarding easy, confidence: high
 - slay-the-spire-the-board-game (src-008): A reviewer accidentally shuffled the game's Summon deck before learning it must stay unshuffled and be searched alphabetically, flagging a deck-order rule that isn't explained in-line, confidence: high
+- dominion (src-001, src-003): the official product page labels the game "Type: Deck Building," and Board Game Quest's review treats it as "a short, accessible foundational deck-builder" while naming lower player interaction and a tacked-on theme as its minor flaws, confidence: high
+- dark-pact (src-007, src-008, src-010): a ten-card shared central display plus a private three-card grimoire drive acquisition, and multiple reviews describe strong combinatorial depth alongside a recurring complaint that some combo chains create more handling than strategic payoff, confidence: medium
 
 ## Where it works
 
@@ -35,6 +41,8 @@ market-diversity claims.
 - arkham-horror-the-card-game (src-006): Campaign deck construction across scenarios is called the best in the genre by a dedicated reviewer.
 - mage-knight (src-010): Single-card acquisition is deliberately rare and heavy, making each deck addition feel earned.
 - dune-imperium (src-001): Tying deck-building directly to the worker-placement action economy (rather than a separate acquisition phase) is highlighted as a defining, well-received design choice.
+- dominion (src-003): quick turns and a short, accessible core loop are named directly as the review's Final Thoughts strength, the corpus's clearest "the market-deckbuilder fundamentals just work" praise.
+- dark-pact (src-007, src-008, src-010): the combinatorial multiplier/grimoire system is repeatedly named as the design's central strength even in otherwise-critical reviews.
 
 ## Where it fails
 
@@ -42,12 +50,18 @@ market-diversity claims.
 - marvel-champions-the-card-game (src-004): Deck composition variance can make a loss feel like the deck's fault rather than a player decision, even in an otherwise well-regarded system.
 - aeons-end (src-005): Community comments describe the fixed market as offering limited perceived variety across plays.
 - gi-joe-deck-building-game (src-005): Card synergy is present but was described as not deep enough to reward extended optimization.
+- dominion (src-003): lower player interaction and a "tacked-on" theme are named as the review's minor flaws, the tradeoff side of the same compact, quick-turn design that earns its praise.
+- dark-pact (src-007, src-008, src-010): some acquisition/combo chains generate more table handling than strategic payoff, an efficiency complaint distinct from the shallow-synergy or narrow-market failure modes seen elsewhere in this pattern.
 
 ## Coverage gaps
 
-The represented games are cooperative or campaign/LCG-style deck-builders (starter decks, campaign
-upgrades, or scenario-driven acquisition); none of them is a classic competitive Dominion-style
-market-deckbuilder where a shared central market and deck-thinning economy are the whole game.
-A market-centric deckbuilder in the corpus (e.g. something closer to pure Dominion/Clank!-style
-market building) would sharpen the "market variety vs. narrow market" side of this pattern,
-which currently rests on thin evidence (aeons-end's single community comment).
+Dominion now supplies the classic competitive market-deckbuilder evidence this pattern
+previously lacked — a shared central market and deck-thinning economy where a shared
+resource pool is genuinely the whole game — resolving the gap flagged at last pass.
+Dark Pact adds a second market-adjacent case, though its evidence rests on multiple
+critical reviews rather than a single Board-Game-Quest-style consensus read. The
+represented games otherwise remain mostly cooperative or campaign/LCG-style
+deck-builders (starter decks, campaign upgrades, or scenario-driven acquisition); the
+corpus would still benefit from a second classic market-deckbuilder (Clank!-style, with
+board movement fused to the market) to test whether Dominion's "quick but low-interaction"
+read generalizes or is specific to a pure abstract market.
