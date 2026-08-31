@@ -12,6 +12,7 @@
 // process.exitCode rather than calling process.exit(), which aborts Node on
 // Windows while fetch keep-alive sockets are still open.
 
+import { execFileSync } from 'node:child_process'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -40,6 +41,13 @@ const check = (name, ok, detail = '') => {
   if (!ok) failures.push(name)
 }
 
+function gitHead() {
+  try {
+    return execFileSync('git', ['rev-parse', 'HEAD'], { cwd: HERE, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()
+  }
+  catch { return null }
+}
+
 async function rpc(method, params) {
   const res = await fetch(`${BASE}/mcp`, {
     method: 'POST',
@@ -60,6 +68,27 @@ async function main() {
     health?.configured === true,
     health?.configured === false ? 'MCP_TOKEN secret is not set — see how-to-configure.md' : '',
   )
+
+  // Freshness. With automatic deploys the interesting failure is no longer "is
+  // it up" but "is it current" — a build that never fired leaves a healthy
+  // server quietly answering from a stale corpus.
+  const live = health?.build?.commit ?? null
+  const localHead = gitHead()
+  if (!live) {
+    check('reports a build commit', false, 'no build identity — server predates the /health build field')
+  }
+  else if (!localHead) {
+    console.log(`ok   serving commit ${live.slice(0, 8)} (built ${health.build.built_at}); no local git to compare`)
+  }
+  else {
+    // A mismatch is not automatically a failure: a local branch legitimately
+    // differs from what is deployed. Report it rather than fail on it.
+    const match = live === localHead
+    console.log(
+      `ok   serving commit ${live.slice(0, 8)} with ${health.build.docs} docs (built ${health.build.built_at})`
+      + (match ? ' — matches local HEAD' : ` — local HEAD is ${localHead.slice(0, 8)}, so the deploy is not this commit`),
+    )
+  }
 
   if (!TOKEN) {
     console.error(

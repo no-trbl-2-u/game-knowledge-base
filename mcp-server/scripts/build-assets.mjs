@@ -12,6 +12,7 @@
 // file. This mirrors the repo's existing generated-sidecar convention:
 // derived artifacts are built, never hand-edited.
 
+import { execFileSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -132,6 +133,10 @@ const SCOPES = {
   other: (f) => !f.startsWith('BoardGames/') && !f.startsWith('DigitalCardGames/'),
 }
 
+// Cold-isolate decode cost scales with bundle size; see verify() below.
+const BUNDLE_WARN_MB = 9
+const BUNDLE_FAIL_MB = 14
+
 const searchDocs = []
 const docId = (rel) => {
   const at = searchDocs.indexOf(rel)
@@ -155,8 +160,28 @@ function bundle(predicate) {
 
 const bundles = Object.fromEntries(Object.entries(SCOPES).map(([k, p]) => [k, bundle(p)]))
 
+// --- build identity -------------------------------------------------------
+// Without this a deployed server cannot answer "which commit am I serving?",
+// which is exactly the question automatic deploys make urgent: nothing else
+// distinguishes a current corpus from one three merges stale.
+//
+// Workers Builds and GitHub Actions each expose the SHA under their own name;
+// a local build falls back to git. Null is an honest answer when none apply.
+function buildCommit() {
+  const fromEnv = process.env.WORKERS_CI_COMMIT_SHA
+    ?? process.env.GITHUB_SHA
+    ?? process.env.CF_PAGES_COMMIT_SHA
+  if (fromEnv) return fromEnv.trim()
+  try {
+    return execFileSync('git', ['rev-parse', 'HEAD'], { cwd: REPO, encoding: 'utf8' }).trim()
+  }
+  catch { return null }
+}
+
 const index = {
   built_from: 'KnowledgeBase/',
+  commit: buildCommit(),
+  built_at: new Date().toISOString(),
   file_count: files.length,
   doc_count: docs.length,
   games,
@@ -211,6 +236,18 @@ function verify() {
 
   const unindexed = docs.filter((d) => !searchDocs.includes(d))
   if (unindexed.length) problems.push(`${unindexed.length} doc(s) missing from every search scope, e.g. ${unindexed[0]}`)
+
+  // A search bundle is decoded whole on a cold isolate. At 5.3 MB that measured
+  // ~3.4ms of CPU against the Workers Free 10ms per-request budget, so the
+  // ceiling is real but distant. The failure it guards against is silent: the
+  // corpus grows, kb_search starts exceeding CPU, and nothing says why. These
+  // thresholds are deliberately generous -- crossing the warning is a prompt to
+  // re-measure, not evidence of a problem.
+  for (const [scope, text] of Object.entries(bundles)) {
+    const mb = text.length / 1e6
+    if (mb > BUNDLE_FAIL_MB) problems.push(`search/${scope}.txt is ${mb.toFixed(1)} MB, over the ${BUNDLE_FAIL_MB} MB ceiling`)
+    else if (mb > BUNDLE_WARN_MB) console.warn(`  warning: search/${scope}.txt is ${mb.toFixed(1)} MB — re-measure cold-isolate CPU before it reaches ${BUNDLE_FAIL_MB} MB`)
+  }
 
   if (problems.length) {
     console.error('Build produced artifacts the Worker cannot trust:')

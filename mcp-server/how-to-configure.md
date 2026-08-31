@@ -11,7 +11,7 @@ itself. Four parts, in order:
 | | |
 |---|---|
 | **Endpoint** | `https://kb-mcp.no-trbl-2-u.workers.dev/mcp` |
-| **Liveness** | `GET /health` — unauthenticated, reports nothing about the corpus |
+| **Liveness** | `GET /health` — unauthenticated; build identity, no corpus content |
 | **Auth** | `Authorization: Bearer <MCP_TOKEN>` |
 | **Transport** | MCP Streamable HTTP, stateless |
 | **Cloudflare account** | `no.trbl.2.u@gmail.com` — Worker `kb-mcp` |
@@ -132,7 +132,7 @@ Cloudflare dashboard → **Workers & Pages → kb-mcp → Settings → Build**, 
 | Production branch | `main` |
 | Enable Preview builds | **unchecked** (see below) |
 | Build command | `npm ci && npm run build` |
-| Deploy command | `npx wrangler deploy` |
+| Deploy command | `npx wrangler deploy && node scripts/smoke.mjs` |
 | **Advanced → Root directory** | **`mcp-server`** |
 
 Three of those are easy to get wrong:
@@ -147,6 +147,12 @@ Three of those are easy to get wrong:
   no assets.
 - **Preview builds off.** Every branch push would upload ~22 MB of assets for
   a preview URL. Enable it later if you want per-branch previews.
+- **Chain the smoke check onto the deploy command.** `wrangler deploy` alone
+  reports success as soon as the upload finishes; it cannot tell you the assets
+  are readable or the tools answer. For the check to authenticate, add
+  `KB_MCP_TOKEN` as a build-time environment variable (Settings → Build →
+  Variables) — without it the run still verifies liveness and freshness, just
+  not the tool surface.
 
 Deploys do not touch secrets, so `MCP_TOKEN` persists across all of them.
 
@@ -156,7 +162,7 @@ Auto-deploy is a convenience, not a dependency:
 
 ```bash
 cd mcp-server
-npm run deploy      # build + wrangler deploy
+npm run deploy      # build + wrangler deploy + smoke
 ```
 
 ---
@@ -168,11 +174,14 @@ curl -s https://kb-mcp.no-trbl-2-u.workers.dev/health
 ```
 
 ```json
-{"ok":true,"server":{"name":"kb-query","version":"2.0.0"},"configured":true}
+{"ok":true,"server":{"name":"kb-query","version":"2.0.0"},"configured":true,
+ "build":{"commit":"c82ed09...","built_at":"2026-08-31T20:05:42.103Z","docs":2765}}
 ```
 
 `configured: false` means the `MCP_TOKEN` secret is missing — go back to
-step 1. Then check the tool surface:
+step 1. `build.commit` says which commit is live: compare it against
+`git rev-parse origin/main` to tell whether the last merge actually deployed.
+`npm run smoke` does that comparison for you. Then check the tool surface:
 
 ```bash
 curl -s https://kb-mcp.no-trbl-2-u.workers.dev/mcp \
@@ -196,7 +205,8 @@ Six tools should be available: `kb_overview`, `kb_find_games`, `kb_search`,
 | `KB_MCP_TOKEN is not set` from the smoke check | Client-side variable missing — unrelated to the Worker's secret | Export it, or add it to a gitignored `.env` (see step 2) |
 | Smoke check says `unauthenticated checks passed` | It ran, but skipped the tool surface for lack of a token | Same fix; a clean run ends `all checks passed` |
 | Client shows no tools | Hitting `/` instead of `/mcp` | URL must end in `/mcp` |
-| Corpus is stale | No deploy since the merge | Re-run the build, or connect auto-deploy |
+| Corpus is stale | No deploy since the merge | Compare `build.commit` on `/health` against `origin/main`; re-run the build or check Workers Builds |
+| `build` is `null` on `/health` | Deployed Worker predates build identity, or assets failed to upload | Redeploy |
 | Build fails: config not found | Root directory unset | Set it to `mcp-server` |
 | Deployed Worker has no corpus | Build command empty | `npm ci && npm run build` |
 

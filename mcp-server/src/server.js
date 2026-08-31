@@ -383,10 +383,23 @@ export async function handleRequest(request, env) {
 
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS })
 
-  // Unauthenticated liveness: reports whether the server is configured and
-  // reachable, and nothing about the corpus contents.
+  // Unauthenticated liveness. It reports whether the server is configured and
+  // which build it is serving, and no corpus *content* — no titles, no paths,
+  // no bodies.
+  //
+  // The commit and doc count are deliberate: with automatic deploys, "is
+  // production current?" is otherwise unanswerable, and requiring a token to
+  // ask would put a secret in every freshness cron. Both are already public in
+  // the GitHub repository this corpus is published from, so the endpoint
+  // reveals nothing the repository does not.
   if (url.pathname === '/health') {
-    return json({ ok: true, server: SERVER_INFO, configured: !!env.MCP_TOKEN })
+    const ix = await corpusIndex(env).catch(() => null)
+    return json({
+      ok: true,
+      server: SERVER_INFO,
+      configured: !!env.MCP_TOKEN,
+      build: ix ? { commit: ix.commit ?? null, built_at: ix.built_at ?? null, docs: ix.doc_count ?? null } : null,
+    })
   }
 
   if (url.pathname !== '/mcp') {

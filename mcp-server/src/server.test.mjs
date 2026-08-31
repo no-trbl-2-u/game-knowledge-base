@@ -11,107 +11,8 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 
+import { FILES, INDEX, TOKEN, makeEnv } from './fixture.mjs'
 import { handleRequest, TOOLS } from './server.js'
-
-const TOKEN = 'test-token-value'
-
-// --- fixture --------------------------------------------------------------
-const DOCS = [
-  'BoardGames/games/tester/index.okf.md',
-  'BoardGames/games/tester/reception/better-if.okf.md',
-  'BoardGames/patterns/deck-building.okf.md',
-  'DigitalCardGames/dawncaster/cards/0001-spark.okf.md',
-  'general mechanics/semi-cooperative/index.okf.md',
-]
-
-const INDEX = {
-  built_from: 'KnowledgeBase/',
-  file_count: 6,
-  doc_count: DOCS.length,
-  games: [{
-    slug: 'tester',
-    title: 'Tester',
-    year: '2020',
-    weight: null,
-    status: 'verified',
-    mechanics: ['deck-building', 'push-your-luck'],
-    better_if_labels: ['runaway-leader'],
-    docs: DOCS.slice(0, 2),
-  }],
-  patterns: ['BoardGames/patterns/deck-building.okf.md'],
-  files: [...DOCS, 'BoardGames/games/tester/visuals/sheet.webp'],
-  search_docs: DOCS,
-  search_scopes: {},
-}
-
-// "<text>\t<doc id>\t<line number>" — the layout server.js scans in place.
-const line = (text, docId, lineNo) => `${text}\t${docId}\t${lineNo}`
-
-const BUNDLES = {
-  boardgames: [
-    line('mechanics: [deck-building, push-your-luck]', 0, 13),
-    line('Source: src-001 Evidence: "a quoted claim" Confidence: high', 0, 42),
-    line('better_if_labels: [runaway-leader]', 1, 14),
-    line('A line that mentions 1692 in its text', 1, 20),
-  ].join('\n'),
-  cards: [line('Dispel a Blessing.', 3, 75)].join('\n'),
-  other: [line('topic: "Semi-cooperative games"', 4, 4)].join('\n'),
-}
-
-const FILES = {
-  'index.json': JSON.stringify(INDEX),
-  'search/boardgames.txt': BUNDLES.boardgames,
-  'search/cards.txt': BUNDLES.cards,
-  'search/other.txt': BUNDLES.other,
-  'kb/BoardGames/games/tester/index.okf.md': '---\ntitle: "Tester"\n---\n\nBody text.\n',
-  'kb/general mechanics/semi-cooperative/index.okf.md': '---\ntopic: "Semi-cooperative"\n---\n',
-  'kb/DigitalCardGames/dawncaster/cards.json': JSON.stringify({
-    card_count: 2,
-    cards: [
-      {
-        name: 'Spark', rarity: 'Common', type: 'Attack',
-        cost: { int: 1, str: 0 }, rules_text: 'Deal 3 damage.\nDispel a Blessing.',
-        observed_terms: ['Dispel'], okf_path: 'cards/0001-spark.okf.md',
-      },
-      {
-        name: 'Ember', rarity: 'Rare', type: 'Magic',
-        cost: {}, rules_text: 'Burn.', observed_terms: [], okf_path: 'cards/0002-ember.okf.md',
-      },
-    ],
-  }),
-  'kb/DigitalCardGames/slay-the-spire/cards.json': JSON.stringify({
-    card_count: 1,
-    cards: [{
-      name: 'Strike', rarity: 'Basic', type: 'Attack', cost: '1',
-      rules_text: 'Deal 6 damage.', observed_terms: [], okf_path: 'cards/0001-strike.okf.md',
-    }],
-  }),
-  'kb/DigitalCardGames/dawncaster/keywords.json': JSON.stringify({
-    keyword_count: 1,
-    keywords: [{ keyword: 'Affliction', slug: 'affliction', type: 'Effect', description: 'A negative effect.' }],
-  }),
-}
-
-// A fresh env per test: server.js caches assets per env object, so reusing one
-// would let a mutated fixture leak across cases.
-//
-// `unconfigured` rather than a falsy token, because a default parameter cannot
-// distinguish "omitted" from "deliberately absent" — the first version of this
-// helper silently handed back a configured server and the fail-closed tests
-// passed for the wrong reason.
-function makeEnv({ unconfigured = false, files = FILES } = {}) {
-  return {
-    MCP_TOKEN: unconfigured ? undefined : TOKEN,
-    ASSETS: {
-      async fetch(url) {
-        const key = decodeURIComponent(new URL(url).pathname.slice(1))
-        return key in files
-          ? new Response(files[key], { status: 200 })
-          : new Response('not found', { status: 404 })
-      },
-    },
-  }
-}
 
 // --- request helpers ------------------------------------------------------
 const post = (body, { token = TOKEN, env } = {}) => handleRequest(
@@ -157,15 +58,36 @@ test('a correct token authorizes', async () => {
   assert.equal((await res.json()).result.tools.length, TOOLS.length)
 })
 
-test('health is unauthenticated and reveals nothing about the corpus', async () => {
+test('health is unauthenticated and reports build identity, not corpus content', async () => {
   const res = await handleRequest(new Request('https://kb.test/health'), makeEnv())
   assert.equal(res.status, 200)
   const body = await res.json()
-  assert.deepEqual(Object.keys(body).sort(), ['configured', 'ok', 'server'])
+  assert.deepEqual(Object.keys(body).sort(), ['build', 'configured', 'ok', 'server'])
   assert.equal(body.configured, true)
+  assert.deepEqual(Object.keys(body.build).sort(), ['built_at', 'commit', 'docs'])
+  assert.equal(body.build.commit, INDEX.commit)
+  assert.equal(body.build.docs, INDEX.doc_count)
+
+  // The identity fields are public repository facts. Corpus content is not:
+  // no titles, no slugs, no document paths may appear on an open endpoint.
+  const serialized = JSON.stringify(body)
+  for (const secretish of ['Tester', 'tester', 'deck-building', 'okf.md']) {
+    assert.doesNotMatch(serialized, new RegExp(secretish), `/health leaked ${secretish}`)
+  }
+
   assert.equal((await (await handleRequest(
     new Request('https://kb.test/health'), makeEnv({ unconfigured: true }),
   )).json()).configured, false)
+})
+
+test('health still answers when the corpus index is unreachable', async () => {
+  const body = await (await handleRequest(
+    new Request('https://kb.test/health'), makeEnv({ files: {} }),
+  )).json()
+  // Liveness must not depend on the assets binding, or a broken deploy looks
+  // like a dead server and the smoke check reports the wrong failure.
+  assert.equal(body.ok, true)
+  assert.equal(body.build, null)
 })
 
 // --- protocol -------------------------------------------------------------
