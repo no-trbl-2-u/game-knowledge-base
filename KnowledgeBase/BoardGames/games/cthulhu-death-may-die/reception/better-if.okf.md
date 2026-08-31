@@ -11,7 +11,7 @@ game:
   edition: "English core game"
 scope: "base game"
 mechanics: [campaign-game, cooperative-game, dice-rolling, grid-movement, modular-board, variable-player-powers]
-better_if_labels: [onboarding, rules-ambiguity, campaign-progression, combat-resolution]  
+better_if_labels: [onboarding, rules-ambiguity, campaign-progression, combat-resolution, component-clarity, randomness]  
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Cthulhu: Death May Die"
@@ -32,8 +32,8 @@ sources:
     url: "https://coopboardgames.com/cooperative-board-game-reviews/cthulhu-death-may-die-review/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-28"
-    notes: "Independent cooperative-game review; page extraction was unavailable in this run, so reception claims are limited and marked medium/low confidence."
+    retrieved_at: "2026-08-31"
+    notes: "Independent cooperative-game review; full text retrieved and extracted in the 2026-08-31 librarian pass (the 2026-07-28 extraction backend failure is resolved)."
   - id: "src-004"
     title: "Dized Rules — Cthulhu: Death May Die — Sanity"
     url: "https://rules.dized.com/game/kp6yXekcT6agDFGangIB1Q/XXNB96tBSqWBcLGQXdDfYA/sanity"
@@ -63,7 +63,15 @@ The strongest evidence-backed improvement pressures are onboarding clarity, camp
   Source: src-002
   Evidence: Skill levels advance at sanity thresholds while the Elder One advances from Mythos summoning symbols and Stage reveals (pp. 8, 17–18).
   Confidence: medium
+- Claim: The game would be better if crowded map tiles had a documented stacking or token-substitution convention, because the miniature footprint can exceed the space a tile provides.
+  Source: src-003
+  Evidence: "You will run out of room for miniatures on some of the tiles."
+  Confidence: medium
+- Claim: The game would be better if a mitigation lever damped the swing of dice and card randomness, which the reviewer reports can decide a game outright.
+  Source: src-003
+  Evidence: "You can get completely ruined by dice and card randomness in this game."
+  Confidence: medium
 
 ## Open questions
 
-- Independent review extraction is still required before asserting a broad player-consensus friction pattern.
+- One independent review is now extracted; a second independent review is still needed before asserting a broad player-consensus friction pattern.

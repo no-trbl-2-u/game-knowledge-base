@@ -18,12 +18,6 @@ followups:
     fallback: "Used BGG search result and BGG Data mirror for score and identity."
     retry_needs: alternate_source
     notes: "Direct BGG page returned HTTP 403 from this environment."
-  - source_id: null
-    url: "https://cephalofair.com/pages/gloomhaven"
-    failure: not_found
-    fallback: "Used Dized structured rules summary and secondary reviews."
-    retry_needs: alternate_source
-    notes: "No publisher page was confirmed during this run."
 sources:
   - id: "src-001"
     title: "Gloomhaven — BoardGameGeek"
@@ -74,6 +68,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-16"
     notes: "Time and campaign scale evidence."
+  - id: "src-008"
+    title: "Cephalofair Games — Gloomhaven support and resources"
+    url: "https://cephalofair.com/pages/gloomhaven"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-08-31"
+    notes: "Official publisher support hub, confirmed in the 2026-08-31 librarian pass; the 2026-07-16 not_found followup is resolved. Links the Gloomhaven Rulebook, the Gloomhaven FAQ at cephalofairgames.github.io, a puzzle-book hint guide, how-to-play videos, First Printing (2025) errata, and crossover character sheets."
 confidence: medium
 status: needs_followup
 ---
@@ -108,22 +109,23 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+- `games/gloomhaven/index.okf.md`
+- `games/gloomhaven/sources.okf.md`
+- `games/gloomhaven/rules/overview.okf.md`
+- `games/gloomhaven/rules/setup.okf.md`
+- `games/gloomhaven/rules/turn-structure.okf.md`
+- `games/gloomhaven/rules/actions.okf.md`
+- `games/gloomhaven/rules/scoring-endgame.okf.md`
+- `games/gloomhaven/rules/edge-cases-faq.okf.md`
+- `games/gloomhaven/reception/reviews.okf.md`
+- `games/gloomhaven/reception/better-if.okf.md`
 
 ## Run validation
 
 - `WISHLIST.md` entry checked off: n/a — wishlist empty.
 - `node scripts/generate-index.mjs` run after writing docs: pending.
 - `node scripts/validate-okf.mjs` exit 0 before push: pending.
+- 2026-08-31 (librarian): the two `pending` lines above record the state at scout time only. This game is promoted canonical corpus; `node scripts/generate-index.mjs` and `node scripts/validate-okf.mjs` both ran green in the 2026-08-31 librarian pass.
 
 ## Strongest design lessons
 

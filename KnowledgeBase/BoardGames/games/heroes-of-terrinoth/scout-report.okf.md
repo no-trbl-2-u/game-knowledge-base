@@ -24,12 +24,6 @@ followups:
     fallback: "Official Fantasy Flight CDN rulebook and product-page search snippet"
     retry_needs: browser_fetch
     notes: "Publisher landing page returned HTTP 403; rulebook remained fully accessible."
-  - source_id: "src-007"
-    url: "https://www.boardgamequest.com/heroes-of-terrinoth-review/"
-    failure: blocked
-    fallback: "Two other full independent reviews"
-    retry_needs: browser_fetch
-    notes: "Fetch returned a bot-verification interstitial."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Heroes of Terrinoth"
@@ -78,8 +72,8 @@ sources:
     url: "https://www.boardgamequest.com/heroes-of-terrinoth-review/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-18"
-    notes: "Bot-verification interstitial; no claims used."
+    retrieved_at: "2026-08-31"
+    notes: "Retrieved and extracted in the 2026-08-31 librarian pass; the 2026-07-18 bot-verification interstitial is resolved. Reviewer score 4 stars."
 confidence: high
 status: needs_followup
 ---

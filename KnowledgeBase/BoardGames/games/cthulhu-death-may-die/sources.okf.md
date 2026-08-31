@@ -31,8 +31,8 @@ sources:
     url: "https://coopboardgames.com/cooperative-board-game-reviews/cthulhu-death-may-die-review/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-28"
-    notes: "Independent cooperative-game review; page extraction was unavailable in this run, so reception claims are limited and marked medium/low confidence."
+    retrieved_at: "2026-08-31"
+    notes: "Independent cooperative-game review; full text retrieved and extracted in the 2026-08-31 librarian pass (the 2026-07-28 extraction backend failure is resolved)."
   - id: "src-004"
     title: "Dized Rules — Cthulhu: Death May Die — Sanity"
     url: "https://rules.dized.com/game/kp6yXekcT6agDFGangIB1Q/XXNB96tBSqWBcLGQXdDfYA/sanity"

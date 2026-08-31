@@ -11,7 +11,7 @@ game:
   edition: "English core game"
 scope: "base game"
 mechanics: [campaign-game, cooperative-game, dice-rolling, grid-movement, modular-board, variable-player-powers]
-better_if_labels: [onboarding, campaign-progression, combat-resolution]  
+better_if_labels: [onboarding, campaign-progression, combat-resolution, component-clarity, randomness]  
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Cthulhu: Death May Die"
@@ -32,8 +32,8 @@ sources:
     url: "https://coopboardgames.com/cooperative-board-game-reviews/cthulhu-death-may-die-review/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-28"
-    notes: "Independent cooperative-game review; page extraction was unavailable in this run, so reception claims are limited and marked medium/low confidence."
+    retrieved_at: "2026-08-31"
+    notes: "Independent cooperative-game review; full text retrieved and extracted in the 2026-08-31 librarian pass (the 2026-07-28 extraction backend failure is resolved)."
   - id: "src-004"
     title: "Dized Rules — Cthulhu: Death May Die — Sanity"
     url: "https://rules.dized.com/game/kp6yXekcT6agDFGangIB1Q/XXNB96tBSqWBcLGQXdDfYA/sanity"
@@ -47,14 +47,14 @@ status: verified
 
 ## Summary
 
-The available review lead treats the game as a cooperative horror-strategy title. This run preserves only a cautious reception statement because the page could not be extracted directly.
+The independent cooperative-games review is positive overall, praising teachability, fast setup, the sanity push-your-luck decision, and combo-driven replay value, while faulting dice swinginess, crowded tiles, and unremarkable monsters.
 
 ## Source-backed facts
 
 - Claim: An independent review source exists specifically for the cooperative board-game experience.
   Source: src-003
   Evidence: Review title and URL identify Cthulhu: Death May Die as a cooperative board-game review.
-  Confidence: medium
+  Confidence: high
 
 ## Praised design
 
@@ -62,7 +62,38 @@ The available review lead treats the game as a cooperative horror-strategy title
   Source: src-002
   Evidence: Investigator skills level at sanity thresholds; the Elder One reveals sequential Stages (pp. 8, 18).
   Confidence: high
+- Claim: The reviewer's overall verdict is positive, citing ease of teaching and comparatively fast setup for the genre.
+  Source: src-003
+  Evidence: "I've had a lot of fun playing this one"; "it's easy to teach, it's quicker to set up than most other games of this type."
+  Confidence: high
+- Claim: The reviewer treats the sanity track as the game's most interesting decision, because insanity is both the upgrade currency and the loss condition.
+  Source: src-003
+  Evidence: "You want to get more insane so you can upgrade your abilities, but you don't want it to go up so fast that you end up going completely insane before you defeat the Elder One."
+  Confidence: high
+- Claim: The reviewer credits the Elder One / scenario / investigator combinations with sustaining replay value.
+  Source: src-003
+  Evidence: "The Elder One-scenario-investigator combos give the game plenty of replay value."
+  Confidence: high
+- Claim: The reviewer praises the per-box component manifests as a sorting and setup aid.
+  Source: src-003
+  Evidence: "I appreciate that the Elder One and scenario boxes include the full lists of components."
+  Confidence: high
+
+## Criticism
+
+- Claim: The reviewer reports that dice and card randomness can decide a game outright, though without spoiling enjoyment.
+  Source: src-003
+  Evidence: "You can get completely ruined by dice and card randomness in this game."
+  Confidence: high
+- Claim: The reviewer reports that some tiles physically cannot hold the miniatures the game places on them.
+  Source: src-003
+  Evidence: "You will run out of room for miniatures on some of the tiles."
+  Confidence: high
+- Claim: The reviewer finds the monster roster the weakest part of the design.
+  Source: src-003
+  Evidence: "the monsters in Cthulhu: Death May Die aren't as interesting as I had hoped."
+  Confidence: high
 
 ## Open questions
 
-- Extract the independent review and add direct praise/friction quotations in a later pass.
+- No exact BGG numeric rating is asserted; the BGG page remains blocked (see the scout report's src-001 followup).
