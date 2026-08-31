@@ -85,16 +85,16 @@ Study one high-scoring cooperative deckbuilding game not already present in the 
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+- `games/legendary-encounters-an-alien-deck-building-game/index.okf.md`
+- `games/legendary-encounters-an-alien-deck-building-game/sources.okf.md`
+- `games/legendary-encounters-an-alien-deck-building-game/rules/overview.okf.md`
+- `games/legendary-encounters-an-alien-deck-building-game/rules/setup.okf.md`
+- `games/legendary-encounters-an-alien-deck-building-game/rules/turn-structure.okf.md`
+- `games/legendary-encounters-an-alien-deck-building-game/rules/actions.okf.md`
+- `games/legendary-encounters-an-alien-deck-building-game/rules/scoring-endgame.okf.md`
+- `games/legendary-encounters-an-alien-deck-building-game/rules/edge-cases-faq.okf.md`
+- `games/legendary-encounters-an-alien-deck-building-game/reception/reviews.okf.md`
+- `games/legendary-encounters-an-alien-deck-building-game/reception/better-if.okf.md`
 
 ## Run validation
 

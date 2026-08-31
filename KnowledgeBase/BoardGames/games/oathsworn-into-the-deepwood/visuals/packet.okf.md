@@ -83,8 +83,8 @@ status: verified
 
 ## Curation notes
 
-This packet gives agents four rules-derived views of components, setup, card anatomy, and play-state hierarchy. Open the contact sheet first, then inspect individual references only when needed.
+This Oathsworn: Into the Deepwood packet gives agents four rules-derived views of components, setup, card anatomy, and play-state hierarchy. Open the contact sheet first, then inspect individual references only when needed.
 
 ## Copyright and provenance
 
-All local images are reduced WebP derivatives for private research and design analysis. Rights remain with Shadowborne Games. Source and exact asset URLs are preserved above. These files are not training data, promotional assets, or substitutes for the game, cards, player aids, or rulebook. Remove on rights-holder request.
+All local Oathsworn: Into the Deepwood images are reduced WebP derivatives for private research and design analysis. Rights remain with Shadowborne Games. Source and exact asset URLs are preserved above. These files are not training data, promotional assets, or substitutes for the game, cards, player aids, or rulebook. Remove on rights-holder request.

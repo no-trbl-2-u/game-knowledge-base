@@ -55,9 +55,9 @@ summary: "Primary identity, publisher, and ranking sources for Unfathomable."
 ## Provenance judgment
 
 - **Source:** src-001, src-002
-- **Evidence:** Publisher and BGG identity agree on the title, release family, and core premise.
+- **Evidence:** Publisher and BGG identity agree on the Unfathomable title, release family, and core premise.
 - **Confidence:** high
 
 - **Source:** src-003
-- **Evidence:** Rating figures are volatile community telemetry. This dossier records the snapshot signal used for selection, not an eternal score.
+- **Evidence:** Rating figures are volatile community telemetry. This Unfathomable dossier records the snapshot signal used for selection, not an eternal score.
 - **Confidence:** high for the cited snapshot; medium for present-day ordering

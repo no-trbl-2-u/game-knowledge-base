@@ -78,17 +78,17 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
-- `visuals/packet.okf.md`
+- `games/star-wars-imperial-assault/index.okf.md`
+- `games/star-wars-imperial-assault/sources.okf.md`
+- `games/star-wars-imperial-assault/rules/overview.okf.md`
+- `games/star-wars-imperial-assault/rules/setup.okf.md`
+- `games/star-wars-imperial-assault/rules/turn-structure.okf.md`
+- `games/star-wars-imperial-assault/rules/actions.okf.md`
+- `games/star-wars-imperial-assault/rules/scoring-endgame.okf.md`
+- `games/star-wars-imperial-assault/rules/edge-cases-faq.okf.md`
+- `games/star-wars-imperial-assault/reception/reviews.okf.md`
+- `games/star-wars-imperial-assault/reception/better-if.okf.md`
+- `games/star-wars-imperial-assault/visuals/packet.okf.md`
 
 ## Strongest design lessons
 

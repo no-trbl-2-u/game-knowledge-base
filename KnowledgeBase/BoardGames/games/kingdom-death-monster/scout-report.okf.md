@@ -98,22 +98,23 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+- `games/kingdom-death-monster/index.okf.md`
+- `games/kingdom-death-monster/sources.okf.md`
+- `games/kingdom-death-monster/rules/overview.okf.md`
+- `games/kingdom-death-monster/rules/setup.okf.md`
+- `games/kingdom-death-monster/rules/turn-structure.okf.md`
+- `games/kingdom-death-monster/rules/actions.okf.md`
+- `games/kingdom-death-monster/rules/scoring-endgame.okf.md`
+- `games/kingdom-death-monster/rules/edge-cases-faq.okf.md`
+- `games/kingdom-death-monster/reception/reviews.okf.md`
+- `games/kingdom-death-monster/reception/better-if.okf.md`
 
 ## Run validation
 
 - `WISHLIST.md` entry checked off: n/a — wishlist empty.
 - `node scripts/generate-index.mjs` run after writing docs: pending.
 - `node scripts/validate-okf.mjs` exit 0 before push: pending.
+- 2026-08-31 (librarian): the two `pending` lines above record the state at scout time only. Kingdom Death: Monster is promoted canonical corpus; `node scripts/generate-index.mjs` and `node scripts/validate-okf.mjs` both ran green in the 2026-08-31 librarian pass.
 
 ## Strongest design lessons
 

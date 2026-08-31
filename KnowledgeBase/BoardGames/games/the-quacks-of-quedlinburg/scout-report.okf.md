@@ -88,16 +88,16 @@ Consume the top wishlist entry: The Quacks of Quedlinburg — push-your-luck bus
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+- `games/the-quacks-of-quedlinburg/index.okf.md`
+- `games/the-quacks-of-quedlinburg/sources.okf.md`
+- `games/the-quacks-of-quedlinburg/rules/overview.okf.md`
+- `games/the-quacks-of-quedlinburg/rules/setup.okf.md`
+- `games/the-quacks-of-quedlinburg/rules/turn-structure.okf.md`
+- `games/the-quacks-of-quedlinburg/rules/actions.okf.md`
+- `games/the-quacks-of-quedlinburg/rules/scoring-endgame.okf.md`
+- `games/the-quacks-of-quedlinburg/rules/edge-cases-faq.okf.md`
+- `games/the-quacks-of-quedlinburg/reception/reviews.okf.md`
+- `games/the-quacks-of-quedlinburg/reception/better-if.okf.md`
 
 ## Run validation
 

@@ -94,16 +94,16 @@ Study one board game matching the current Governor focus: cooperative plus deckb
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+- `games/aeons-end/index.okf.md`
+- `games/aeons-end/sources.okf.md`
+- `games/aeons-end/rules/overview.okf.md`
+- `games/aeons-end/rules/setup.okf.md`
+- `games/aeons-end/rules/turn-structure.okf.md`
+- `games/aeons-end/rules/actions.okf.md`
+- `games/aeons-end/rules/scoring-endgame.okf.md`
+- `games/aeons-end/rules/edge-cases-faq.okf.md`
+- `games/aeons-end/reception/reviews.okf.md`
+- `games/aeons-end/reception/better-if.okf.md`
 
 ## Run validation
 
