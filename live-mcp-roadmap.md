@@ -17,7 +17,7 @@ this file tracks what is *not done yet*.
 | Endpoint | `https://kb-mcp.no-trbl-2-u.workers.dev/mcp` — deployed, all six tools |
 | State | **Serving nothing.** No `MCP_TOKEN` secret, so every request returns `503` |
 | Deploys | Manual (`npm run deploy`); auto-deploy not connected |
-| Tests | **None.** CI does not build, test, or lint `mcp-server/` at all |
+| Tests | 27 unit tests + build invariants + a post-deploy smoke check, all gated by the `validate` required check |
 
 ---
 
@@ -43,16 +43,21 @@ Nothing works until this phase is done, and every step is yours.
 
 ---
 
-## Phase 2 — Close the engineering gaps
+## Phase 2 — Close the engineering gaps — **done**
 
-The honest weak point: this server has no automated test of any kind, and a
-broken deploy would be caught only by someone using it.
+Was the honest weak point: no automated test of any kind, and a broken deploy
+caught only by someone trying to use the server.
 
-- [ ] Extract the tool handlers and JSON-RPC dispatch from `src/index.js` into a module that can be imported without a Worker runtime.
-- [ ] Write `mcp-server/src/index.test.mjs` covering auth (`503` unconfigured, `401` wrong token, `200` correct), each tool's happy path, path traversal refusal, unknown tool/scope/card-corpus, and the metadata-isolation rule in `kb_search`.
-- [ ] Add a `mcp-server` job to `.github/workflows/validate.yml` running `npm ci`, `npm run build`, and `node --test` — note `validate` deliberately runs on every PR without path filters, so a new job must be cheap.
-- [ ] Assert build invariants in `build-assets.mjs`: every `search_docs` id resolves, no bundle line is missing its two trailing fields, and `index.json` file count matches what was copied.
-- [ ] Add a smoke check that runs after deploy and fails loudly if `/health` reports `configured:false` or a tool returns `isError`.
+- [x] Logic extracted to `src/server.js`, which imports no Workers-only API; `src/index.js` is now a three-line entry point.
+- [x] `src/server.test.mjs` — 27 tests over auth, protocol, all six tools, and the failure modes, run against a stub `ASSETS` binding with a miniature fixture corpus so CI needs no 22 MB build.
+- [x] Both added as steps inside the existing `validate` job rather than a new job, since `validate` is already a required check and a new one would need branch protection edited by hand.
+- [x] `build-assets.mjs` verifies its own output — doc ids resolve, every bundle line keeps its two trailing fields, scopes stay disjoint, copied file count matches the index — and each invariant was negative-tested by corrupting a bundle.
+- [x] `scripts/smoke.mjs` probes a deployed server across all four storage paths; `npm run deploy` runs it automatically after `wrangler deploy`.
+
+Remaining test debt, deliberately not taken on:
+
+- [ ] No test asserts the fixture in `server.test.mjs` still matches the real `build-assets.mjs` output shape, so a layout change could pass tests and break production — the build's own invariants narrow this but do not close it.
+- [ ] `wrangler deploy` itself is unexercised in CI; nothing catches a `wrangler.jsonc` mistake until someone deploys.
 
 ---
 

@@ -46,6 +46,19 @@ jobs:
       - name: Self-test write guard
         run: node .claude/hooks/okf-guard.mjs self-test
 
+      # Steps in this job rather than a job of their own: `validate` is already
+      # a required check on main, so a separate job would need branch
+      # protection updated by hand before it could block anything. Neither step
+      # installs dependencies -- both run on Node builtins alone -- so the cost
+      # is seconds, which is what this workflow's no-path-filter design needs.
+      - name: Test MCP server
+        run: node --test mcp-server/src/server.test.mjs
+      - name: Build MCP server assets
+        # Also the build's own invariant check: it refuses to emit a corpus
+        # index or search bundle the Worker could not safely trust.
+        working-directory: mcp-server
+        run: node scripts/build-assets.mjs
+
   # Separate from `validate` on purpose. `validate` must be able to pass on a
   # pre-approval `ready_for_audit` head, or the audit that produces promotion
   # can never begin. This check is the merge barrier for that same head: it
