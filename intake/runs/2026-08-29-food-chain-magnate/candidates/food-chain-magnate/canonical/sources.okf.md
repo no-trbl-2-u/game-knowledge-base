@@ -8,24 +8,11 @@ game:
   publisher: "Splotter Spellen"
   year: 2015
   weight: null
-  edition: "Splotter Spellen third printing with modifications; claims bounded to the hosted English rules v3 and current product record"
+  edition: "Splotter Spellen third printing with modifications; claims bounded to the hosted English rules v3 and retained source-linked reception and visual evidence"
 scope: "base game"
 mechanics: [action-selection, engine-building, income, market, resource-management, variable-setup]
 sources:
-  - id: "src-001"
-    title: "Splotter Shop — Food Chain Magnate product JSON"
-    url: "https://www.splottershop.com/products/food-chain-magnate.json"
-    kind: publisher_page
-    provenance: official
-    retrieved_at: "2026-08-30"
-    notes: "HTTP 200 JSON; product identity and description; recaptured at 4,726 bytes with SHA-256 5dbe791246a102108e6b85f6230e15540b29f6d4e7ba31924d37a940cdd175eb."
-  - id: "src-002"
-    title: "Splotter Con — Food Chain Magnate Rules page"
-    url: "https://splottercon.com/rules-fcm/"
-    kind: publisher_page
-    provenance: official
-    retrieved_at: "2026-08-30"
-    notes: "HTTP 200 HTML; page title and embedded PDF link; recaptured at 325,023 bytes with SHA-256 f9f27cf8629d58fa721f2ad3774741d14facc718407ad72c284eef125612abc1."
+
   - id: "src-003"
     title: "Splotter Con — Food Chain Magnate Rules EN v3 PDF"
     url: "https://splottercon.com/wp-content/uploads/2023/07/FCM_Rules_EN_v3.pdf"
@@ -60,9 +47,9 @@ status: verified
 
 ## Source-backed facts
 
-- Claim: Six machine-recorded retrieval receipts support this packet across official product/rules sources, an independent review, and two visual assets.
-  Source: src-001, src-002, src-003, src-004, src-005, src-006
-  Evidence: evidence.json preserves final URLs, status, content type, byte length, retrieval timestamps, SHA-256 values, locators, and extracted evidence for all six receipts.
+- Claim: Four machine-recorded retrieval receipts support this packet across the official rules PDF, an independent review, and two visual assets.
+  Source: src-003, src-004, src-005, src-006
+  Evidence: evidence.json preserves final URLs, status, content type, byte length, retrieval timestamps, SHA-256 values, locators, and extracted evidence for all four retained receipts.
   Confidence: high
 
 - Claim: The official rules authority is separate from the independent reception source.

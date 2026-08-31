@@ -31,10 +31,10 @@
       "focus_fit": "Food Chain Magnate is a competitive engine-building economic game whose independent reception records severe setbacks from small sales advantages.",
       "coverage": {
         "deckbuilder": false,
-        "methodology": "Rules coverage counts the retrieved product authority, rules landing page, and English core rulebook used for the bounded claims published here; expansions and complete component inventories remain outside scope.",
+        "methodology": "Rules coverage counts the retained official English core rulebook used for the bounded claims published here; dynamic product and rules-landing endpoints, expansions, and complete component inventories remain outside scope.",
         "rules": {
-          "recorded": 3,
-          "known_total": 3,
+          "recorded": 1,
+          "known_total": 1,
           "percent": 100
         },
         "factual": {

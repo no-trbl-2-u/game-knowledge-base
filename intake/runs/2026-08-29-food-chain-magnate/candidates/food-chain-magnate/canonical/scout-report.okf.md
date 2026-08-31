@@ -8,24 +8,11 @@ game:
   publisher: "Splotter Spellen"
   year: 2015
   weight: null
-  edition: "Splotter Spellen third printing with modifications; claims bounded to the hosted English rules v3 and current product record"
+  edition: "Splotter Spellen third printing with modifications; claims bounded to the hosted English rules v3 and retained source-linked reception and visual evidence"
 scope: "base game"
 mechanics: [action-selection, engine-building, income, market, resource-management, variable-setup]
 sources:
-  - id: "src-001"
-    title: "Splotter Shop — Food Chain Magnate product JSON"
-    url: "https://www.splottershop.com/products/food-chain-magnate.json"
-    kind: publisher_page
-    provenance: official
-    retrieved_at: "2026-08-30"
-    notes: "Identity and high-level product receipt; recaptured 2026-08-30 (4,726 bytes, SHA-256 5dbe791246a102108e6b85f6230e15540b29f6d4e7ba31924d37a940cdd175eb)."
-  - id: "src-002"
-    title: "Splotter Con — Food Chain Magnate Rules page"
-    url: "https://splottercon.com/rules-fcm/"
-    kind: publisher_page
-    provenance: official
-    retrieved_at: "2026-08-30"
-    notes: "Rules landing page receipt; recaptured 2026-08-30 (325,023 bytes, SHA-256 f9f27cf8629d58fa721f2ad3774741d14facc718407ad72c284eef125612abc1)."
+
   - id: "src-003"
     title: "Splotter Con — Food Chain Magnate Rules EN v3 PDF"
     url: "https://splottercon.com/wp-content/uploads/2023/07/FCM_Rules_EN_v3.pdf"
@@ -64,14 +51,9 @@ This run selected Food Chain Magnate as the top eligible physical candidate afte
 
 ## Source-backed facts
 
-- Claim: The candidate is a physical tabletop product published by Splotter Spellen.
-  Source: src-001
-  Evidence: The official product JSON labels the vendor as Splotter Spellen and the product type as “Board Game.”
-  Confidence: high
-
 - Claim: The candidate is relevant to the rotating engine-building focus.
-  Source: src-001, src-003
-  Evidence: The product record describes a card-driven human resource-management system, and the rules describe building a company through hiring, training, marketing, and sales.
+  Source: src-003
+  Evidence: The rules describe building a company through hiring, training, marketing, and sales, supporting the engine-building focus.
   Confidence: high
 
 - Claim: The run does not use an estimated component or card denominator.

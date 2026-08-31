@@ -8,7 +8,7 @@ game:
   publisher: "Splotter Spellen"
   year: 2015
   weight: null
-  edition: "Splotter Spellen third printing with modifications; claims bounded to the hosted English rules v3 and current product record"
+  edition: "Splotter Spellen third printing with modifications; claims bounded to the hosted English rules v3 and retained source-linked reception and visual evidence"
 scope: "base game"
 mechanics: [action-selection, engine-building, income, market, resource-management, variable-setup]
 better_if_labels: [runaway-leader, onboarding, player-interaction, turn-pacing]

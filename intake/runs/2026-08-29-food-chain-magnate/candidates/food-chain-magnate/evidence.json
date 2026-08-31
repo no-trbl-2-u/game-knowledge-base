@@ -6,23 +6,10 @@
     "role": "Field Intelligence and Knowledge Scout"
   },
   "researched_at": "2026-08-29T06:01:15.000Z",
-  "edition_scope": "Released physical Food Chain Magnate base game. Claims are bounded to the Splotter product record, the Splotter Con rules landing page and hosted English rules PDF, and the independent Board Game Quest article; expansions and later print-specific changes are excluded.",
+  "edition_scope": "Released physical Food Chain Magnate base game. Claims are bounded to the hosted English rules PDF, the independent Board Game Quest article, and the two source-linked visual assets; expansions and later print-specific changes are excluded.",
   "coverage_ledger": {
     "rules_denominator": [
-      {
-        "authority": "Splotter Shop Food Chain Magnate product record",
-        "acquired": true,
-        "official_endpoint": true,
-        "source_ids": ["src-001"],
-        "notes": "Direct product JSON retrieval; used for product identity, publisher, physical product type, and high-level mechanism description."
-      },
-      {
-        "authority": "Splotter Con Food Chain Magnate Rules landing page",
-        "acquired": true,
-        "official_endpoint": true,
-        "source_ids": ["src-002"],
-        "notes": "Direct HTML retrieval; page title and embedded English rules PDF link were observed."
-      },
+
       {
         "authority": "Splotter Con FCM Rules EN v3 PDF",
         "acquired": true,
@@ -34,7 +21,7 @@
     "faq_errata_inventory": {
       "scope": "Public English FAQ or errata applicable to the base-game claims published here.",
       "checks": [
-        "The retrieved rules landing page exposed the hosted core rules PDF used here.",
+        "The hosted English core rules PDF is the retained official rules authority used here.",
         "No separate FAQ or errata claim is published in this packet; no publisher-wide absence is asserted."
       ],
       "applicable_acquired": 0,
@@ -42,8 +29,7 @@
       "notes": "FAQ and errata applicability remains outside this bounded claim set."
     },
     "factual_denominator": [
-      {"claim_group":"physical product identity and publisher","recorded":true,"source_ids":["src-001"]},
-      {"claim_group":"player count, duration, and product description","recorded":true,"source_ids":["src-001","src-003"]},
+      {"claim_group":"player count, duration, and rules overview","recorded":true,"source_ids":["src-003"]},
       {"claim_group":"base-game components observed in rulebook","recorded":true,"source_ids":["src-003"]},
       {"claim_group":"employee-card role and action-selection loop","recorded":true,"source_ids":["src-003"]},
       {"claim_group":"marketing, demand, and sales resolution","recorded":true,"source_ids":["src-003"]},
@@ -55,17 +41,12 @@
     ],
     "exclusions": [
       "The Ketchup Mechanism & Other Ideas and other expansions are excluded.",
-      "Complete employee-card, component-count, FAQ, errata, and printing-history denominators are not inferred.",
+      "Complete employee-card, component-count, FAQ, errata, and printing-history denominators are not inferred; dynamic product and rules-landing endpoints are excluded from the retained evidence set.",
       "BGG rating and complexity weight are not claimed; game.weight is null."
     ]
   },
   "sources": [
-    {
-      "id":"src-001","title":"Splotter Shop — Food Chain Magnate product JSON","roles":["identity","official_rules"],"provenance":"official","url":"https://www.splottershop.com/products/food-chain-magnate.json","final_url":"https://www.splottershop.com/products/food-chain-magnate.json","retrieved_at":"2026-08-30T06:01:34.476Z","http_status":200,"content_type":"application/json; charset=utf-8","byte_length":4726,"sha256":"5dbe791246a102108e6b85f6230e15540b29f6d4e7ba31924d37a940cdd175eb","locator":"product.title, product.vendor, product.product_type, product.body_html","evidence":"Food Chain Magnate is our 2015 release."
-    },
-    {
-      "id":"src-002","title":"Splotter Con — Food Chain Magnate Rules page","roles":["official_rules"],"provenance":"official","url":"https://splottercon.com/rules-fcm/","final_url":"https://splottercon.com/rules-fcm/","retrieved_at":"2026-08-30T06:01:35.883Z","http_status":200,"content_type":"text/html; charset=UTF-8","byte_length":325023,"sha256":"f9f27cf8629d58fa721f2ad3774741d14facc718407ad72c284eef125612abc1","locator":"Page title and embedded FCM_Rules_EN_v3.pdf link","evidence":"Food Chain Magnate Rules"
-    },
+
     {
       "id":"src-003","title":"Splotter Con — Food Chain Magnate Rules EN v3 PDF","roles":["official_rules"],"provenance":"official","url":"https://splottercon.com/wp-content/uploads/2023/07/FCM_Rules_EN_v3.pdf","final_url":"https://splottercon.com/wp-content/uploads/2023/07/FCM_Rules_EN_v3.pdf","retrieved_at":"2026-08-29T06:02:02.000Z","http_status":200,"content_type":"application/pdf","byte_length":6337651,"sha256":"95831b0165f4d0c6b9bd4187280dbeeded4df0d40973fd886b9c947aef4a2ddd","locator":"PDF page 1 colophon and overview; page 2 components; pages 3-15 rules","evidence":"Food Chain Magnate is a heavy strategy game about building a fast food chain."
     },
