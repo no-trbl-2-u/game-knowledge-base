@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kb-mcp",
+  "main": "src/index.js",
+  "compatibility_date": "2025-08-01",
+  "observability": { "enabled": true },
+  "assets": {
+    // The corpus is reachable only through the ASSETS binding: run_worker_first
+    // means the Worker sees every request, so nothing under dist/ is served
+    // directly as a static file.
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  }
+}
