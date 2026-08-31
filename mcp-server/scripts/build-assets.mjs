@@ -178,6 +178,48 @@ for (const [scope, text] of Object.entries(bundles)) {
   fs.writeFileSync(path.join(DIST, 'search', `${scope}.txt`), text)
 }
 
+// --- verify what was emitted ---------------------------------------------
+// The Worker trusts these artifacts completely: it resolves doc ids without
+// bounds-checking and slices bundle lines by their trailing tabs. A malformed
+// bundle would not crash the deploy, it would quietly return wrong paths and
+// wrong line numbers. So the build proves its own output before finishing.
+function verify() {
+  const problems = []
+
+  const copied = walk(path.join(DIST, 'kb')).length
+  if (copied !== files.length) problems.push(`copied ${copied} files but indexed ${files.length}`)
+
+  const scopeOf = new Map()
+  for (const [scope, text] of Object.entries(bundles)) {
+    if (!text) continue
+    text.split('\n').forEach((entry, i) => {
+      if (problems.length > 20) return
+      const lastTab = entry.lastIndexOf('\t')
+      const prevTab = entry.lastIndexOf('\t', lastTab - 1)
+      if (prevTab === -1) { problems.push(`${scope}.txt line ${i + 1}: missing trailing fields`); return }
+      const id = Number(entry.slice(prevTab + 1, lastTab))
+      const lineNo = Number(entry.slice(lastTab + 1))
+      if (!Number.isInteger(id) || !searchDocs[id]) problems.push(`${scope}.txt line ${i + 1}: unresolvable doc id ${id}`)
+      if (!Number.isInteger(lineNo) || lineNo < 1) problems.push(`${scope}.txt line ${i + 1}: bad line number ${lineNo}`)
+      if (!entry.slice(0, prevTab)) problems.push(`${scope}.txt line ${i + 1}: empty text`)
+
+      const seen = scopeOf.get(id)
+      if (seen && seen !== scope) problems.push(`doc ${searchDocs[id]} indexed in both ${seen} and ${scope}`)
+      scopeOf.set(id, scope)
+    })
+  }
+
+  const unindexed = docs.filter((d) => !searchDocs.includes(d))
+  if (unindexed.length) problems.push(`${unindexed.length} doc(s) missing from every search scope, e.g. ${unindexed[0]}`)
+
+  if (problems.length) {
+    console.error('Build produced artifacts the Worker cannot trust:')
+    for (const p of problems.slice(0, 20)) console.error(`  - ${p}`)
+    process.exit(1)
+  }
+}
+verify()
+
 const bytes = files.reduce((n, f) => n + fs.statSync(path.join(KB, f)).size, 0)
 console.log(
   `built dist/: ${files.length} files (${(bytes / 1e6).toFixed(1)} MB), ` +
