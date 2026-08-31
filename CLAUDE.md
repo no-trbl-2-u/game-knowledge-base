@@ -116,6 +116,9 @@ validator.
 ## Downstream consumer
 
 The Axiomancer repo syncs this corpus to `kb/` via its
-`scripts/kb-sync.mjs` and queries it (grep-first; optionally through the
-`kb-query` MCP server defined in `scripts/kb-mcp-server.mjs` here).
+`scripts/kb-sync.mjs` and queries it grep-first. The optional accelerator is
+now the hosted `kb-query` MCP server in `mcp-server/` — a Cloudflare Worker
+that needs no synced clone, gated by a bearer token
+(`mcp-server/how-to-configure.md`). Grep-first still works with the server
+unreachable; that is the point of keeping it optional.
 Axiomancer design sessions append coverage requests to `WISHLIST.md`.

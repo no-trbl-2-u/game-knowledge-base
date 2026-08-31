@@ -38,8 +38,13 @@ function frontmatter(file) {
 
 // `\\s*` prefix so nested keys resolve too: title/year/weight live under the
 // `game:` block, while scope/status/confidence sit at the top level.
-const field = (head, name) =>
-  head?.match(new RegExp(`^\\s*${name}:\\s*(.*)$`, 'm'))?.[1]?.trim().replace(/^["']|["']$/g, '') ?? null
+// YAML `null`/`~`/empty all mean absent. Carrying them through as the string
+// "null" defeats every `?? '?'` fallback downstream and renders as a value.
+const ABSENT = new Set(['', 'null', '~', 'none', 'unknown'])
+function field(head, name) {
+  const raw = head?.match(new RegExp(`^\\s*${name}:\\s*(.*)$`, 'm'))?.[1]?.trim().replace(/^["']|["']$/g, '')
+  return raw === undefined || ABSENT.has(raw.toLowerCase()) ? null : raw
+}
 
 function listItems(head, name) {
   if (!head) return []
@@ -97,6 +102,59 @@ if (games.length && unparsed.length > games.length / 2) {
   process.exit(1)
 }
 
+// --- search bundles -------------------------------------------------------
+// kb_search greps document bodies. A Worker cannot walk 2,765 files per query,
+// so each scope is flattened here into one bundle the Worker fetches once per
+// isolate and regex-scans in place.
+//
+//   <line text>\t<doc id>\t<line number>
+//
+// Two properties of that layout matter, and both were measured rather than
+// assumed:
+//
+//   Text first, metadata last. The Worker scans the bundle with one global
+//   regex instead of splitting it into 150k strings -- split() alone costs
+//   ~20ms of CPU, over the Workers Free 10ms budget, while the global scan
+//   costs ~1.4ms. Putting the text at the start of each line keeps `^` anchors
+//   meaning what the caller intends.
+//
+//   Doc id, not path. A numeric index into index.json's search_docs replaces
+//   a path that averages ~60 bytes and repeats on every line.
+//
+// Only .okf.md is indexed. The stdio server also matched plain .md, which is
+// how operator-profile prose once answered corpus queries (see the commit that
+// removed those copies). Frontmatter lines stay indexed: they carry mechanics,
+// source ids, and confidence, which are exactly what claim-hunting searches
+// look for.
+const SCOPES = {
+  boardgames: (f) => f.startsWith('BoardGames/'),
+  cards: (f) => f.startsWith('DigitalCardGames/'),
+  other: (f) => !f.startsWith('BoardGames/') && !f.startsWith('DigitalCardGames/'),
+}
+
+const searchDocs = []
+const docId = (rel) => {
+  const at = searchDocs.indexOf(rel)
+  return at === -1 ? searchDocs.push(rel) - 1 : at
+}
+
+function bundle(predicate) {
+  const out = []
+  for (const rel of docs.filter(predicate)) {
+    const id = docId(rel)
+    const lines = fs.readFileSync(path.join(KB, rel), 'utf-8').split(/\r?\n/)
+    for (let i = 0; i < lines.length; i++) {
+      // Tabs inside the text would break the trailing-field split, and a
+      // corpus line's leading indentation is not worth preserving here.
+      const text = lines[i].replaceAll('\t', ' ').trim()
+      if (text) out.push(`${text}\t${id}\t${i + 1}`)
+    }
+  }
+  return out.join('\n')
+}
+
+const bundles = Object.fromEntries(Object.entries(SCOPES).map(([k, p]) => [k, bundle(p)]))
+
 const index = {
   built_from: 'KnowledgeBase/',
   file_count: files.length,
@@ -104,6 +162,10 @@ const index = {
   games,
   patterns,
   files,
+  search_docs: searchDocs,
+  search_scopes: Object.fromEntries(
+    Object.entries(bundles).map(([k, v]) => [k, { lines: v ? v.split('\n').length : 0, bytes: v.length }]),
+  ),
 }
 
 // --- emit -----------------------------------------------------------------
@@ -111,6 +173,10 @@ fs.rmSync(DIST, { recursive: true, force: true })
 fs.mkdirSync(DIST, { recursive: true })
 fs.cpSync(KB, path.join(DIST, 'kb'), { recursive: true })
 fs.writeFileSync(path.join(DIST, 'index.json'), JSON.stringify(index))
+fs.mkdirSync(path.join(DIST, 'search'), { recursive: true })
+for (const [scope, text] of Object.entries(bundles)) {
+  fs.writeFileSync(path.join(DIST, 'search', `${scope}.txt`), text)
+}
 
 const bytes = files.reduce((n, f) => n + fs.statSync(path.join(KB, f)).size, 0)
 console.log(
@@ -118,3 +184,6 @@ console.log(
   `${docs.length} okf docs, ${games.length} games, ${patterns.length} pattern docs` +
   (unparsed.length ? `, ${unparsed.length} game(s) with thin frontmatter` : ''),
 )
+for (const [scope, stats] of Object.entries(index.search_scopes)) {
+  console.log(`  search/${scope}.txt: ${stats.lines} lines (${(stats.bytes / 1e6).toFixed(1)} MB)`)
+}
