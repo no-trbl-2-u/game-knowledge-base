@@ -15,29 +15,28 @@ this file tracks what is *not done yet*.
 | | |
 |---|---|
 | Endpoint | `https://kb-mcp.no-trbl-2-u.workers.dev/mcp` — deployed, all six tools |
-| State | **Serving nothing.** No `MCP_TOKEN` secret, so every request returns `503` |
-| Deploys | Manual (`npm run deploy`); auto-deploy not connected |
-| Tests | 27 unit tests + build invariants + a post-deploy smoke check, all gated by the `validate` required check |
+| State | **Live and serving.** `MCP_TOKEN` set; all six tools answer over the wire |
+| Deploys | Workers Builds connected to `main`; first automatic build not yet observed |
+| Tests | 36 unit/protocol/drift tests + build invariants + a post-deploy smoke check, gated by the `validate` required check |
+| Freshness | `/health` reports the commit it is serving; `npm run smoke` compares it to local `HEAD` |
 
 ---
 
-## Phase 0 — Activation
+## Phase 0 — Activation — **substantially done**
 
-Nothing works until this phase is done, and every step is yours.
-
-- [ ] **`needs human`** — Generate a token: `node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"`, and store it in your password manager.
-- [ ] **`needs human`** — Install it: `cd mcp-server && npx wrangler secret put MCP_TOKEN` — this is a credential, so an agent should never create or hold it.
-- [ ] Confirm activation: `curl -s https://kb-mcp.no-trbl-2-u.workers.dev/health` must report `"configured":true`.
-- [ ] **`needs human`** — Finish the Workers Builds connect screen: build `npm ci && npm run build`, deploy `npx wrangler deploy`, preview builds **off**, **Advanced → Root directory `mcp-server`**.
-- [ ] **`needs human`** — Trigger one build now that `main` contains `mcp-server/`, proving auto-deploy works end to end.
-- [ ] **`needs human`** — Export `KB_MCP_TOKEN` in the shell profile of every machine that will run a client.
+- [x] Token generated and stored by the operator; an agent never created or held it.
+- [x] `MCP_TOKEN` secret installed on the Worker — `/health` reports `"configured":true` and unauthenticated requests get `401`.
+- [x] Workers Builds connected: build `npm ci && npm run build`, preview builds off, root directory `mcp-server`.
+- [ ] **`needs human`** — Confirm one automatic build has actually run; `wrangler deployments list` still shows no Workers Builds deployment, so the wiring is unproven.
+- [ ] **`needs human`** — Add `KB_MCP_TOKEN` as a build-time variable and extend the deploy command to `npx wrangler deploy && node scripts/smoke.mjs`, so a broken deploy fails loudly instead of shipping quietly.
+- [x] `KB_MCP_TOKEN` exported locally (via a gitignored `.env`, which the smoke check now reads).
 
 ---
 
 ## Phase 1 — Adoption
 
 - [ ] Add the `.mcp.json` block from `how-to-configure.md` to the Axiomancer repo, which references `${KB_MCP_TOKEN}` and is therefore safe to commit.
-- [ ] Call `kb_overview` from a real MCP client and confirm all six tools appear — the handshake has only ever been exercised by `curl` and `wrangler dev`.
+- [ ] **`needs human`** — Call `kb_overview` from a real MCP client and confirm all six tools appear. `src/protocol.test.mjs` now proves a spec-following client *can* complete a session, so a failure here is the host's to explain — but no in-repo test can stand in for a particular client.
 - [ ] **`needs human`** — Decide whether Axiomancer keeps `scripts/kb-sync.mjs`: the hosted server removes the need for a synced clone, but grep-first is the documented fallback and dropping the sync removes it.
 - [ ] Update the Axiomancer `kb-query` skill so it prefers the hosted server and falls back to grep when the server is unreachable or unauthorized.
 
@@ -54,10 +53,13 @@ caught only by someone trying to use the server.
 - [x] `build-assets.mjs` verifies its own output — doc ids resolve, every bundle line keeps its two trailing fields, scopes stay disjoint, copied file count matches the index — and each invariant was negative-tested by corrupting a bundle.
 - [x] `scripts/smoke.mjs` probes a deployed server across all four storage paths; `npm run deploy` runs it automatically after `wrangler deploy`.
 
-Remaining test debt, deliberately not taken on:
+Both pieces of debt this phase originally left open are now closed:
 
-- [ ] No test asserts the fixture in `server.test.mjs` still matches the real `build-assets.mjs` output shape, so a layout change could pass tests and break production — the build's own invariants narrow this but do not close it.
-- [ ] `wrangler deploy` itself is unexercised in CI; nothing catches a `wrangler.jsonc` mistake until someone deploys.
+- [x] `src/fixture-drift.test.mjs` compares the unit fixture against real build output — index keys, bundle line layout, build identity — and CI asserts it did not silently skip. It caught its first drift immediately, when build identity was added.
+- [x] `wrangler deploy --dry-run` runs in a separate `worker-dry-run` job, which validates `wrangler.jsonc` and bundles the Worker without credentials. A cheap structural check duplicates the common cases inside the fast suite.
+- [x] `src/protocol.test.mjs` drives the server as a spec-following MCP client: handshake order, `MCP-Protocol-Version`, exact request-id echo, and every advertised tool callable with its own required arguments.
+
+- [ ] **`needs human`** — `worker-dry-run` is not a required status check; add it in branch protection if a `wrangler.jsonc` mistake ever reaches `main`.
 
 ---
 
@@ -68,7 +70,7 @@ Remaining test debt, deliberately not taken on:
 - [ ] **`needs human`** — Add a WAF rate-limiting rule, since a leaked token currently has no request ceiling.
 - [ ] **`needs human`** — Write down a rotation procedure and pick a cadence; rotation has no grace period, so every client breaks the moment the secret changes.
 - [ ] **`needs human`** — Turn on Cloudflare alerting for Worker error rate, because `observability` is enabled but nobody is watching it.
-- [ ] Decide whether `/health` should stay unauthenticated — it currently leaks only "this server exists and is configured", which is judged acceptable but was never explicitly signed off.
+- [ ] **`needs human`** — Sign off on `/health` staying unauthenticated. It now also reports the deployed commit, build time, and doc count, so a freshness cron needs no secret. All three are already public in this repository, and no corpus content is exposed — but the decision was made in passing rather than deliberately.
 
 ---
 
@@ -76,7 +78,7 @@ Remaining test debt, deliberately not taken on:
 
 - [ ] Fix `kb_search`'s `$` anchor: metadata trails each indexed line, so `$` cannot match end-of-line — solvable by moving line numbers out-of-band, at the cost of a second lookup structure.
 - [ ] Drain the 22 games carrying `weight: null` in frontmatter, which is a corpus coverage gap surfaced by this work and belongs to a `/librarian` pass, not the server.
-- [ ] Watch the `cards` search bundle as the corpus grows: cold-isolate decode plus scan measures ~3.4 ms today against the Workers Free 10 ms CPU budget, so headroom is real but finite.
+- [x] Bundle growth is now guarded: the build warns at 9 MB and fails at 14 MB per scope, since cold-isolate decode plus scan measured ~3.4 ms at 5.3 MB against the Workers Free 10 ms CPU budget.
 - [ ] **`needs human`** — Move to Workers Paid if that budget is ever exceeded, which raises the CPU ceiling substantially for $5/month.
 - [ ] Reconsider shipping `visuals/*.webp` as assets, since they inflate every deploy and no tool currently reads them.
 - [ ] Add a `kb_sources` tool if consumers start needing source provenance without reading whole documents.

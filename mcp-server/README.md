@@ -4,7 +4,7 @@ A Cloudflare Worker that serves this knowledge base over MCP Streamable HTTP.
 It replaces the stdio server: no synced clone, no per-session process.
 
 **Endpoint:** `https://kb-mcp.no-trbl-2-u.workers.dev/mcp` (bearer token required)
-**Liveness:** `GET /health` — unauthenticated, says nothing about the corpus
+**Liveness:** `GET /health` — unauthenticated; reports build identity, not corpus content
 
 **Setup and client wiring: [`how-to-configure.md`](how-to-configure.md).**
 
@@ -26,7 +26,7 @@ KnowledgeBase/  --build-assets.mjs-->  dist/kb/**            corpus (Static Asse
                                        dist/index.json       manifest + game summary
                                        dist/search/*.txt     line-addressed body bundles
                                               |
-                                       src/index.js          POST /mcp, JSON-RPC
+                                       src/server.js         POST /mcp, JSON-RPC
 ```
 
 Two constraints shape everything:
@@ -67,9 +67,25 @@ how operator-profile prose once answered corpus queries.
 
 ```bash
 npm run build     # regenerate dist/ from ../KnowledgeBase
+npm test          # 36 unit, protocol and drift tests (no network, no build needed)
 npm run dev       # local server on http://localhost:8787
-npm run deploy    # build + deploy to Cloudflare
+npm run smoke     # probe a deployed server
+npm run deploy    # build + deploy + smoke
 ```
+
+## Tests
+
+| File | Proves |
+|---|---|
+| `src/server.test.mjs` | Auth, protocol surface, all six tools, failure modes — against a stub `ASSETS` binding |
+| `src/protocol.test.mjs` | A spec-following MCP client can complete a session: handshake order, `MCP-Protocol-Version`, exact id echo, every advertised tool callable |
+| `src/fixture-drift.test.mjs` | The synthetic fixture still matches real `build-assets.mjs` output, and `wrangler.jsonc` still points at what the build produces. Skips without `dist/` |
+| `scripts/build-assets.mjs` | Verifies its own output before finishing; refuses to emit artifacts the Worker could not trust |
+| `scripts/smoke.mjs` | A *deployed* server is serving: assets uploaded, secret set, tools answering, and which commit is live |
+
+The unit tests use a miniature fixture rather than the real corpus, so CI needs
+no 22 MB build to test request handling. `fixture-drift.test.mjs` is what keeps
+that shortcut honest.
 
 `dist/` is gitignored — a 22 MB copy of the corpus does not belong in Git
 history. It is rebuilt on every deploy, including automatic ones.
@@ -81,8 +97,15 @@ than defaulting to public; an unconfigured server is a misconfigured one, not
 an open one. With the secret set, `/mcp` requires
 `Authorization: Bearer <token>`, compared in constant time.
 
-`/health` stays unauthenticated so liveness checks work, and reports only
-whether the server is configured — never corpus contents.
+`/health` stays unauthenticated so liveness checks and freshness crons work
+without holding a secret. It reports whether the server is configured and which
+build it is serving — commit, build time, doc count — and no corpus *content*:
+no titles, no slugs, no paths. Those identity fields are already public in the
+GitHub repository this corpus is published from.
+
+Build identity exists because automatic deploys make "is production current?"
+the interesting question. `npm run smoke` compares the live commit against
+local `HEAD` and says which is which.
 
 Cloudflare Access would be the better mechanism, but it cannot protect a
 `workers.dev` hostname; it needs a custom domain on a zone in the account. See

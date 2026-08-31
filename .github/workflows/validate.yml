@@ -51,13 +51,57 @@ jobs:
       # protection updated by hand before it could block anything. Neither step
       # installs dependencies -- both run on Node builtins alone -- so the cost
       # is seconds, which is what this workflow's no-path-filter design needs.
-      - name: Test MCP server
-        run: node --test mcp-server/src/server.test.mjs
+      #
+      # Build first: fixture-drift.test.mjs compares the unit fixture against
+      # real build output and skips itself when dist/ is absent, so running the
+      # tests first would silently skip the checks that matter most.
       - name: Build MCP server assets
         # Also the build's own invariant check: it refuses to emit a corpus
         # index or search bundle the Worker could not safely trust.
         working-directory: mcp-server
         run: node scripts/build-assets.mjs
+      - name: Test MCP server
+        working-directory: mcp-server
+        run: node --test src/server.test.mjs src/protocol.test.mjs src/fixture-drift.test.mjs
+      - name: Confirm drift checks were not skipped
+        # A skipped drift test reports as a pass. Since the whole point is to
+        # catch fixture drift, assert the checks actually ran.
+        working-directory: mcp-server
+        run: |
+          node --test src/fixture-drift.test.mjs 2>&1 | tee /tmp/drift.log
+          if grep -q "no dist/" /tmp/drift.log; then
+            echo "drift tests skipped despite a build having run" >&2
+            exit 1
+          fi
+
+  # Separate from `validate` on purpose, for the opposite reason to
+  # `intake-complete` below: this one installs wrangler, which costs far more
+  # than every other check combined, and `validate` must stay fast because it
+  # runs on every PR without path filters. It answers the one question the
+  # dependency-free checks cannot -- whether wrangler itself accepts the
+  # config and can bundle the Worker -- which otherwise surfaces only on a
+  # real deploy. Not currently a required check; make it one if that failure
+  # mode ever bites.
+  worker-dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: mcp-server/package-lock.json
+      - name: Install worker dependencies
+        working-directory: mcp-server
+        run: npm ci
+      - name: Build assets
+        working-directory: mcp-server
+        run: npm run build
+      - name: Bundle without deploying
+        # --dry-run needs no Cloudflare credentials: it validates wrangler.jsonc
+        # and bundles the Worker without touching the account.
+        working-directory: mcp-server
+        run: npx wrangler deploy --dry-run --outdir /tmp/kb-mcp-dry-run
 
   # Separate from `validate` on purpose. `validate` must be able to pass on a
   # pre-approval `ready_for_audit` head, or the audit that produces promotion
