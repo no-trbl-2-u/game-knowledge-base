@@ -55,6 +55,31 @@ There is no grace period; the old token stops working immediately.
 
 The token belongs in an environment variable, never in a committed file.
 
+There are two names, holding the same value, and mixing them up is the most
+common way to get stuck:
+
+| Name | Lives | Set by |
+|---|---|---|
+| `MCP_TOKEN` | On the Worker, at Cloudflare | `wrangler secret put` (step 1) |
+| `KB_MCP_TOKEN` | In your shell or a local `.env` | You, per machine |
+
+The server needs one to check against; the client needs one to send.
+
+### Where to put `KB_MCP_TOKEN`
+
+Either a shell export, or a **gitignored** `.env` at the repo root or in
+`mcp-server/`:
+
+```
+KB_MCP_TOKEN=<token>
+```
+
+`scripts/smoke.mjs` reads either location, preferring `mcp-server/.env`, and a
+real environment variable always wins. Node does **not** load `.env` on its own,
+so other tools need `node --env-file=.env ...` unless they handle it themselves.
+`.env` is already covered by `.gitignore` — confirm with `git check-ignore -v .env`
+before writing a secret into a new one.
+
 ### Claude Code
 
 ```bash
@@ -168,6 +193,8 @@ Six tools should be available: `kb_overview`, `kb_find_games`, `kb_search`,
 | `503 Server unconfigured` | No `MCP_TOKEN` secret | `npx wrangler secret put MCP_TOKEN` |
 | `401 Unauthorized` | Missing/wrong header | Header must be exactly `Authorization: Bearer <token>` |
 | `401` after `.mcp.json` edit | `${KB_MCP_TOKEN}` unset in that shell | Export it before launching the client |
+| `KB_MCP_TOKEN is not set` from the smoke check | Client-side variable missing — unrelated to the Worker's secret | Export it, or add it to a gitignored `.env` (see step 2) |
+| Smoke check says `unauthenticated checks passed` | It ran, but skipped the tool surface for lack of a token | Same fix; a clean run ends `all checks passed` |
 | Client shows no tools | Hitting `/` instead of `/mcp` | URL must end in `/mcp` |
 | Corpus is stale | No deploy since the merge | Re-run the build, or connect auto-deploy |
 | Build fails: config not found | Root directory unset | Set it to `mcp-server` |

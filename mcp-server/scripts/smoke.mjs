@@ -12,6 +12,25 @@
 // process.exitCode rather than calling process.exit(), which aborts Node on
 // Windows while fetch keep-alive sockets are still open.
 
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// Read KB_MCP_TOKEN from a gitignored .env if the shell does not already carry
+// it. Node does not load .env on its own, and `export`ing a secret by hand in
+// every new terminal is the kind of friction that ends with the token pasted
+// somewhere it should not be. A real environment variable always wins, so CI
+// and one-off overrides are unaffected.
+const HERE = path.dirname(fileURLToPath(import.meta.url))
+if (!process.env.KB_MCP_TOKEN) {
+  for (const candidate of [path.join(HERE, '..', '.env'), path.join(HERE, '..', '..', '.env')]) {
+    try {
+      process.loadEnvFile(candidate)
+      if (process.env.KB_MCP_TOKEN) break
+    }
+    catch { /* absent or unreadable: fall through to the next candidate */ }
+  }
+}
+
 const BASE = (process.argv[2] ?? 'https://kb-mcp.no-trbl-2-u.workers.dev').replace(/\/+$/, '')
 const TOKEN = process.env.KB_MCP_TOKEN
 
@@ -43,7 +62,12 @@ async function main() {
   )
 
   if (!TOKEN) {
-    console.error('\nKB_MCP_TOKEN is not set; the authenticated surface was not checked.')
+    console.error(
+      '\nKB_MCP_TOKEN is not set, so the authenticated surface was not checked.'
+      + '\nSet it in the shell, or put KB_MCP_TOKEN=... in a gitignored .env at the repo root'
+      + '\nor in mcp-server/ — this script reads either. It is the client half of the token;'
+      + '\nthe Worker\'s half is the MCP_TOKEN secret set with `wrangler secret put`.',
+    )
     return
   }
 
@@ -80,6 +104,11 @@ await main()
 if (failures.length) {
   console.error(`\n${failures.length} check(s) failed: ${failures.join(', ')}`)
   process.exitCode = 1
+}
+else if (!TOKEN) {
+  // Not "all checks passed": the authenticated half never ran. Saying so
+  // plainly stops a partial run from reading as a clean bill of health.
+  console.log('\nunauthenticated checks passed; the tool surface was not exercised')
 }
 else {
   console.log('\nall checks passed')
