@@ -81,7 +81,10 @@ test('hooks stage telemetry with a commit and reject dirty telemetry before push
     assert.equal(run(repo, 'git', ['status', '--porcelain', '--', 'TELEMETRY.md']), '')
 
     fs.appendFileSync(path.join(repo, 'TELEMETRY.md'), row('2026-01-01T00:02:00Z', 'stranded'))
-    const rejected = spawnSync(path.join(repo, '.githooks', 'pre-push'), ['origin'], { cwd: repo, encoding: 'utf8', env: CLEAN_ENV })
+    // Through `sh`, the way Git invokes hooks. Executing the file directly
+    // fails with ENOENT on Windows -- an extensionless shell script is not
+    // an executable image there -- which reports as status null, not 1.
+    const rejected = spawnSync('sh', [path.join(repo, '.githooks', 'pre-push'), 'origin'], { cwd: repo, encoding: 'utf8', env: CLEAN_ENV })
     assert.equal(rejected.status, 1)
     assert.match(rejected.stderr, /TELEMETRY\.md has uncommitted changes/)
   }
