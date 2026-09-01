@@ -273,3 +273,4 @@ deterministic tier's.
 | 2026-08-31T19:30:37Z | validate-okf | full corpus + index/sidecar freshness | 2762 files | 0 | yes | - |
 | 2026-08-31T19:40:42Z | validate-okf | full corpus + index/sidecar freshness | 2762 files | 0 | yes | - |
 | 2026-08-31T20:10:39Z | validate-okf | full corpus + index/sidecar freshness | 2762 files | 0 | yes | - |
+| 2026-08-31T20:24:40Z | validate-okf | full corpus + index/sidecar freshness | 2762 files | 0 | yes | - |

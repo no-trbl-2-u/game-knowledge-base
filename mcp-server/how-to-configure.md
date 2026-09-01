@@ -132,7 +132,7 @@ Cloudflare dashboard → **Workers & Pages → kb-mcp → Settings → Build**, 
 | Production branch | `main` |
 | Enable Preview builds | **unchecked** (see below) |
 | Build command | `npm ci && npm run build` |
-| Deploy command | `npx wrangler deploy && node scripts/smoke.mjs` |
+| Deploy command | `npx wrangler deploy && node scripts/smoke.mjs --require-auth` |
 | **Advanced → Root directory** | **`mcp-server`** |
 
 Three of those are easy to get wrong:
@@ -149,10 +149,17 @@ Three of those are easy to get wrong:
   a preview URL. Enable it later if you want per-branch previews.
 - **Chain the smoke check onto the deploy command.** `wrangler deploy` alone
   reports success as soon as the upload finishes; it cannot tell you the assets
-  are readable or the tools answer. For the check to authenticate, add
-  `KB_MCP_TOKEN` as a build-time environment variable (Settings → Build →
-  Variables) — without it the run still verifies liveness and freshness, just
-  not the tool surface.
+  are readable or the tools answer. `--require-auth` makes a missing token a
+  failure rather than a skipped half — in a pipeline, the checks being skipped
+  are exactly the ones worth running.
+- **`KB_MCP_TOKEN` must be a *build* variable, not a runtime one.** Cloudflare
+  keeps the two environments separate in both directions: build variables are
+  not readable at runtime, and **runtime secrets are not exposed to the build or
+  deploy commands**. Add it under **Settings → Build → Build variables and
+  secrets**. Putting it under *Runtime variables and secrets* leaves the deploy
+  unable to read it, and puts a second live copy of the secret somewhere nothing
+  uses. `MCP_TOKEN` is the opposite case: it belongs at runtime, because the
+  Worker reads it on every request.
 
 Deploys do not touch secrets, so `MCP_TOKEN` persists across all of them.
 

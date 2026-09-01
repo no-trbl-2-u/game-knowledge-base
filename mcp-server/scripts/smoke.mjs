@@ -32,7 +32,13 @@ if (!process.env.KB_MCP_TOKEN) {
   }
 }
 
-const BASE = (process.argv[2] ?? 'https://kb-mcp.no-trbl-2-u.workers.dev').replace(/\/+$/, '')
+// --require-auth turns a missing token from "skip the second half" into a
+// failure. Interactively, a partial run is useful. In a deploy pipeline it is
+// not: the checks that would catch a bad upload are exactly the ones being
+// skipped, and the deploy would go green having verified almost nothing.
+const args = process.argv.slice(2)
+const REQUIRE_AUTH = args.includes('--require-auth')
+const BASE = (args.find((a) => !a.startsWith('--')) ?? 'https://kb-mcp.no-trbl-2-u.workers.dev').replace(/\/+$/, '')
 const TOKEN = process.env.KB_MCP_TOKEN
 
 const failures = []
@@ -91,6 +97,15 @@ async function main() {
   }
 
   if (!TOKEN) {
+    if (REQUIRE_AUTH) {
+      // Named as a check so it lands in the failure summary and the exit code,
+      // rather than as advice printed next to a passing run.
+      check('KB_MCP_TOKEN is available', false,
+        'required by --require-auth. In Workers Builds this must be a BUILD variable '
+        + '(Settings → Build → Build variables and secrets); runtime secrets are not '
+        + 'exposed to build or deploy commands.')
+      return
+    }
     console.error(
       '\nKB_MCP_TOKEN is not set, so the authenticated surface was not checked.'
       + '\nSet it in the shell, or put KB_MCP_TOKEN=... in a gitignored .env at the repo root'

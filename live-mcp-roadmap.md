@@ -15,7 +15,7 @@ this file tracks what is *not done yet*.
 | | |
 |---|---|
 | Endpoint | `https://kb-mcp.no-trbl-2-u.workers.dev/mcp` — deployed, all six tools |
-| State | **Live and serving.** `MCP_TOKEN` set; all six tools answer over the wire |
+| State | **Live, private and self-deploying.** `MCP_TOKEN` set; merges to `main` deploy automatically |
 | Deploys | Workers Builds connected to `main`; first automatic build not yet observed |
 | Tests | 36 unit/protocol/drift tests + build invariants + a post-deploy smoke check, gated by the `validate` required check |
 | Freshness | `/health` reports the commit it is serving; `npm run smoke` compares it to local `HEAD` |
@@ -27,8 +27,9 @@ this file tracks what is *not done yet*.
 - [x] Token generated and stored by the operator; an agent never created or held it.
 - [x] `MCP_TOKEN` secret installed on the Worker — `/health` reports `"configured":true` and unauthenticated requests get `401`.
 - [x] Workers Builds connected: build `npm ci && npm run build`, preview builds off, root directory `mcp-server`.
-- [ ] **`needs human`** — Confirm one automatic build has actually run; `wrangler deployments list` still shows no Workers Builds deployment, so the wiring is unproven.
-- [ ] **`needs human`** — Add `KB_MCP_TOKEN` as a build-time variable and extend the deploy command to `npx wrangler deploy && node scripts/smoke.mjs`, so a broken deploy fails loudly instead of shipping quietly.
+- [x] Auto-deploy proven: merging #64 produced a Workers Build ~45s later serving that exact commit, with the SHA supplied by `WORKERS_CI_COMMIT_SHA` rather than a local git fallback.
+- [x] Deploy command chained to the smoke check with `--require-auth`.
+- [ ] **`needs human`** — Move `KB_MCP_TOKEN` from *Runtime variables and secrets* to **Settings → Build → Build variables and secrets**, then delete the runtime copy. Runtime secrets are not exposed to build or deploy commands, so the smoke check cannot currently authenticate. `MCP_TOKEN` stays a runtime secret.
 - [x] `KB_MCP_TOKEN` exported locally (via a gitignored `.env`, which the smoke check now reads).
 
 ---
