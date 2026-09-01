@@ -21,7 +21,7 @@
       "title": "Food Chain Magnate",
       "bgg_id": null,
       "cohort": "rotating_focus",
-      "status": "approved",
+      "status": "promoted",
       "discovery_sources": [
         "https://www.splottershop.com/products/food-chain-magnate.json",
         "https://splottercon.com/rules-fcm/",
@@ -42,7 +42,8 @@
           "known_total": null,
           "percent": null
         }
-      }
+      },
+      "promoted_at": "2026-09-01T09:06:16.843Z"
     }
   ]
 }
