@@ -4,7 +4,7 @@ type: better_if
 game:
   title: "Food Chain Magnate"
   slug: "food-chain-magnate"
-  bgg_id: 175914
+  bgg_id: null
   publisher: "Splotter Spellen"
   year: 2015
   weight: null
