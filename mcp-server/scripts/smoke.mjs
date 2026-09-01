@@ -1,0 +1,176 @@
+#!/usr/bin/env node
+// mcp-server/scripts/smoke.mjs — post-deploy check against a running server.
+//
+//   KB_MCP_TOKEN=... node scripts/smoke.mjs [base-url]
+//
+// The unit tests prove the handler is correct against a stub binding. This
+// proves the deployed thing is actually serving: the assets uploaded, the
+// secret is set, and the tools answer. Those are exactly the failures a green
+// unit suite cannot see.
+//
+// Sets a non-zero exit code on failure, so it can gate a deploy. It sets
+// process.exitCode rather than calling process.exit(), which aborts Node on
+// Windows while fetch keep-alive sockets are still open.
+
+import { execFileSync } from 'node:child_process'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// Read KB_MCP_TOKEN from a gitignored .env if the shell does not already carry
+// it. Node does not load .env on its own, and `export`ing a secret by hand in
+// every new terminal is the kind of friction that ends with the token pasted
+// somewhere it should not be. A real environment variable always wins, so CI
+// and one-off overrides are unaffected.
+const HERE = path.dirname(fileURLToPath(import.meta.url))
+if (!process.env.KB_MCP_TOKEN) {
+  for (const candidate of [path.join(HERE, '..', '.env'), path.join(HERE, '..', '..', '.env')]) {
+    try {
+      process.loadEnvFile(candidate)
+      if (process.env.KB_MCP_TOKEN) break
+    }
+    catch { /* absent or unreadable: fall through to the next candidate */ }
+  }
+}
+
+// --require-auth turns a missing token from "skip the second half" into a
+// failure. Interactively, a partial run is useful. In a deploy pipeline it is
+// not: the checks that would catch a bad upload are exactly the ones being
+// skipped, and the deploy would go green having verified almost nothing.
+const args = process.argv.slice(2)
+const REQUIRE_AUTH = args.includes('--require-auth')
+const BASE = (args.find((a) => !a.startsWith('--')) ?? 'https://kb-mcp.no-trbl-2-u.workers.dev').replace(/\/+$/, '')
+const TOKEN = process.env.KB_MCP_TOKEN
+
+const failures = []
+const check = (name, ok, detail = '') => {
+  console.log(`${ok ? 'ok  ' : 'FAIL'} ${name}${detail ? ` — ${detail}` : ''}`)
+  if (!ok) failures.push(name)
+}
+
+function gitHead() {
+  try {
+    return execFileSync('git', ['rev-parse', 'HEAD'], { cwd: HERE, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()
+  }
+  catch { return null }
+}
+
+async function rpc(method, params) {
+  const res = await fetch(`${BASE}/mcp`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {}),
+    },
+    body: JSON.stringify({ jsonrpc: '2.0', id: 1, method, ...(params ? { params } : {}) }),
+  })
+  return { status: res.status, body: await res.json().catch(() => null) }
+}
+
+async function main() {
+  const health = await fetch(`${BASE}/health`).then((r) => r.json()).catch(() => null)
+  check('health responds', !!health?.ok, health ? `server ${health.server?.version}` : 'no response')
+  check(
+    'server is configured',
+    health?.configured === true,
+    health?.configured === false ? 'MCP_TOKEN secret is not set — see how-to-configure.md' : '',
+  )
+
+  // Freshness. With automatic deploys the interesting failure is no longer "is
+  // it up" but "is it current" — a build that never fired leaves a healthy
+  // server quietly answering from a stale corpus.
+  const live = health?.build?.commit ?? null
+  const localHead = gitHead()
+  if (!live) {
+    check('reports a build commit', false, 'no build identity — server predates the /health build field')
+  }
+  else if (!localHead) {
+    console.log(`ok   serving commit ${live.slice(0, 8)} (built ${health.build.built_at}); no local git to compare`)
+  }
+  else {
+    // A mismatch is not automatically a failure: a local branch legitimately
+    // differs from what is deployed. Report it rather than fail on it.
+    const match = live === localHead
+    console.log(
+      `ok   serving commit ${live.slice(0, 8)} with ${health.build.docs} docs (built ${health.build.built_at})`
+      + (match ? ' — matches local HEAD' : ` — local HEAD is ${localHead.slice(0, 8)}, so the deploy is not this commit`),
+    )
+  }
+
+  if (!TOKEN) {
+    if (REQUIRE_AUTH) {
+      // Named as a check so it lands in the failure summary and the exit code,
+      // rather than as advice printed next to a passing run.
+      check('KB_MCP_TOKEN is available', false,
+        'required by --require-auth. In Workers Builds this must be a BUILD variable '
+        + '(Settings → Build → Build variables and secrets); runtime secrets are not '
+        + 'exposed to build or deploy commands.')
+      return
+    }
+    console.error(
+      '\nKB_MCP_TOKEN is not set, so the authenticated surface was not checked.'
+      + '\nSet it in the shell, or put KB_MCP_TOKEN=... in a gitignored .env at the repo root'
+      + '\nor in mcp-server/ — this script reads either. It is the client half of the token;'
+      + '\nthe Worker\'s half is the MCP_TOKEN secret set with `wrangler secret put`.',
+    )
+    return
+  }
+
+  const unauth = await fetch(`${BASE}/mcp`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/list' }),
+  })
+  check('unauthenticated request is refused', unauth.status === 401 || unauth.status === 503, `HTTP ${unauth.status}`)
+
+  const list = await rpc('tools/list')
+  const names = list.body?.result?.tools?.map((t) => t.name) ?? []
+  check('tools/list returns the full surface', names.length === 6, names.join(', ') || `HTTP ${list.status}`)
+
+  // One probe per storage path: index.json, a search bundle, a raw document,
+  // and a JSON sidecar. A partial asset upload shows up here and nowhere else.
+  //
+  // Each expectation must be something the corpus structurally guarantees, not
+  // something a particular document happens to contain today. The first version
+  // of the kb_read_doc probe looked for `okf_version` in INDEX.okf.md, which is
+  // a generated index with an HTML banner and no frontmatter -- so the check
+  // failed against a server that was answering perfectly. A smoke check that
+  // cries wolf is worse than no smoke check.
+  const probes = [
+    ['kb_overview', {}, /BoardGames — \d+ game/],
+    ['kb_search', { query: 'mechanics:', max_results: 1 }, /\.okf\.md:\d+:/],
+    // INDEX.okf.md is generated by scripts/generate-index.mjs and its freshness
+    // is enforced by validate-okf.mjs, so this heading and table header are as
+    // stable as anything in the corpus.
+    ['kb_read_doc', { path: 'BoardGames/INDEX.okf.md' }, /# Corpus index[\s\S]*\| slug \| title \|/],
+    ['kb_keyword', { term: 'affliction' }, /Affliction/],
+  ]
+
+  for (const [name, args, expect] of probes) {
+    const res = await rpc('tools/call', { name, arguments: args })
+    const text = res.body?.result?.content?.[0]?.text ?? ''
+    const errored = !!res.body?.result?.isError
+    const ok = !errored && expect.test(text)
+    // Say which expectation failed. Without it, a wrong pattern is
+    // indistinguishable from a broken server -- the reader sees a document
+    // excerpt and no reason why it was rejected.
+    const why = errored
+      ? `tool error: ${text.slice(0, 120)}`
+      : `expected ${expect} — got: ${text.slice(0, 100).replace(/\s+/g, ' ')}`
+    check(`${name} answers`, ok, ok ? '' : (text ? why : `HTTP ${res.status}`))
+  }
+}
+
+await main()
+
+if (failures.length) {
+  console.error(`\n${failures.length} check(s) failed: ${failures.join(', ')}`)
+  process.exitCode = 1
+}
+else if (!TOKEN) {
+  // Not "all checks passed": the authenticated half never ran. Saying so
+  // plainly stops a partial run from reading as a clean bill of health.
+  console.log('\nunauthenticated checks passed; the tool surface was not exercised')
+}
+else {
+  console.log('\nall checks passed')
+}

@@ -11,7 +11,7 @@ itself. Four parts, in order:
 | | |
 |---|---|
 | **Endpoint** | `https://kb-mcp.no-trbl-2-u.workers.dev/mcp` |
-| **Liveness** | `GET /health` — unauthenticated, reports nothing about the corpus |
+| **Liveness** | `GET /health` — unauthenticated; build identity, no corpus content |
 | **Auth** | `Authorization: Bearer <MCP_TOKEN>` |
 | **Transport** | MCP Streamable HTTP, stateless |
 | **Cloudflare account** | `no.trbl.2.u@gmail.com` — Worker `kb-mcp` |
@@ -54,6 +54,31 @@ There is no grace period; the old token stops working immediately.
 ## 2. Connect a client
 
 The token belongs in an environment variable, never in a committed file.
+
+There are two names, holding the same value, and mixing them up is the most
+common way to get stuck:
+
+| Name | Lives | Set by |
+|---|---|---|
+| `MCP_TOKEN` | On the Worker, at Cloudflare | `wrangler secret put` (step 1) |
+| `KB_MCP_TOKEN` | In your shell or a local `.env` | You, per machine |
+
+The server needs one to check against; the client needs one to send.
+
+### Where to put `KB_MCP_TOKEN`
+
+Either a shell export, or a **gitignored** `.env` at the repo root or in
+`mcp-server/`:
+
+```
+KB_MCP_TOKEN=<token>
+```
+
+`scripts/smoke.mjs` reads either location, preferring `mcp-server/.env`, and a
+real environment variable always wins. Node does **not** load `.env` on its own,
+so other tools need `node --env-file=.env ...` unless they handle it themselves.
+`.env` is already covered by `.gitignore` — confirm with `git check-ignore -v .env`
+before writing a secret into a new one.
 
 ### Claude Code
 
@@ -107,7 +132,7 @@ Cloudflare dashboard → **Workers & Pages → kb-mcp → Settings → Build**, 
 | Production branch | `main` |
 | Enable Preview builds | **unchecked** (see below) |
 | Build command | `npm ci && npm run build` |
-| Deploy command | `npx wrangler deploy` |
+| Deploy command | `npx wrangler deploy && node scripts/smoke.mjs --require-auth` |
 | **Advanced → Root directory** | **`mcp-server`** |
 
 Three of those are easy to get wrong:
@@ -122,6 +147,19 @@ Three of those are easy to get wrong:
   no assets.
 - **Preview builds off.** Every branch push would upload ~22 MB of assets for
   a preview URL. Enable it later if you want per-branch previews.
+- **Chain the smoke check onto the deploy command.** `wrangler deploy` alone
+  reports success as soon as the upload finishes; it cannot tell you the assets
+  are readable or the tools answer. `--require-auth` makes a missing token a
+  failure rather than a skipped half — in a pipeline, the checks being skipped
+  are exactly the ones worth running.
+- **`KB_MCP_TOKEN` must be a *build* variable, not a runtime one.** Cloudflare
+  keeps the two environments separate in both directions: build variables are
+  not readable at runtime, and **runtime secrets are not exposed to the build or
+  deploy commands**. Add it under **Settings → Build → Build variables and
+  secrets**. Putting it under *Runtime variables and secrets* leaves the deploy
+  unable to read it, and puts a second live copy of the secret somewhere nothing
+  uses. `MCP_TOKEN` is the opposite case: it belongs at runtime, because the
+  Worker reads it on every request.
 
 Deploys do not touch secrets, so `MCP_TOKEN` persists across all of them.
 
@@ -131,7 +169,7 @@ Auto-deploy is a convenience, not a dependency:
 
 ```bash
 cd mcp-server
-npm run deploy      # build + wrangler deploy
+npm run deploy      # build + wrangler deploy + smoke
 ```
 
 ---
@@ -143,11 +181,14 @@ curl -s https://kb-mcp.no-trbl-2-u.workers.dev/health
 ```
 
 ```json
-{"ok":true,"server":{"name":"kb-query","version":"2.0.0"},"configured":true}
+{"ok":true,"server":{"name":"kb-query","version":"2.0.0"},"configured":true,
+ "build":{"commit":"c82ed09...","built_at":"2026-08-31T20:05:42.103Z","docs":2765}}
 ```
 
 `configured: false` means the `MCP_TOKEN` secret is missing — go back to
-step 1. Then check the tool surface:
+step 1. `build.commit` says which commit is live: compare it against
+`git rev-parse origin/main` to tell whether the last merge actually deployed.
+`npm run smoke` does that comparison for you. Then check the tool surface:
 
 ```bash
 curl -s https://kb-mcp.no-trbl-2-u.workers.dev/mcp \
@@ -168,8 +209,11 @@ Six tools should be available: `kb_overview`, `kb_find_games`, `kb_search`,
 | `503 Server unconfigured` | No `MCP_TOKEN` secret | `npx wrangler secret put MCP_TOKEN` |
 | `401 Unauthorized` | Missing/wrong header | Header must be exactly `Authorization: Bearer <token>` |
 | `401` after `.mcp.json` edit | `${KB_MCP_TOKEN}` unset in that shell | Export it before launching the client |
+| `KB_MCP_TOKEN is not set` from the smoke check | Client-side variable missing — unrelated to the Worker's secret | Export it, or add it to a gitignored `.env` (see step 2) |
+| Smoke check says `unauthenticated checks passed` | It ran, but skipped the tool surface for lack of a token | Same fix; a clean run ends `all checks passed` |
 | Client shows no tools | Hitting `/` instead of `/mcp` | URL must end in `/mcp` |
-| Corpus is stale | No deploy since the merge | Re-run the build, or connect auto-deploy |
+| Corpus is stale | No deploy since the merge | Compare `build.commit` on `/health` against `origin/main`; re-run the build or check Workers Builds |
+| `build` is `null` on `/health` | Deployed Worker predates build identity, or assets failed to upload | Redeploy |
 | Build fails: config not found | Root directory unset | Set it to `mcp-server` |
 | Deployed Worker has no corpus | Build command empty | `npm ci && npm run build` |
 
