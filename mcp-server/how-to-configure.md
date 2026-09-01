@@ -1,12 +1,13 @@
 # How to configure the kb-query MCP server
 
-Everything needed to stand this up, connect a client, and keep it deploying
-itself. Four parts, in order:
+Everything needed to stand this up, connect a client (local or cloud), and
+keep it deploying itself. Five parts, in order:
 
 1. [Set the access token](#1-set-the-access-token) — required, the server is fail-closed
 2. [Connect a client](#2-connect-a-client)
-3. [Auto-deploy from GitHub](#3-auto-deploy-from-github)
-4. [Verify](#4-verify) / [Troubleshooting](#troubleshooting)
+3. [Remote and cloud sessions](#3-remote-and-cloud-sessions) — cloud egress is allowlisted; this is not optional there
+4. [Auto-deploy from GitHub](#4-auto-deploy-from-github)
+5. [Verify](#5-verify) / [Troubleshooting](#troubleshooting)
 
 | | |
 |---|---|
@@ -120,7 +121,102 @@ curl -s https://kb-mcp.no-trbl-2-u.workers.dev/mcp \
 
 ---
 
-## 3. Auto-deploy from GitHub
+## 3. Remote and cloud sessions
+
+A cloud session — Claude Code on the web, `claude --cloud`, a routine, the
+mobile or desktop app — runs in a cloud environment with **an outbound
+allowlist**, not open internet. `kb-mcp.no-trbl-2-u.workers.dev` is not on the
+default list, so a session at the default **Trusted** level cannot reach this
+server at all. Egress has to be solved before authentication ever matters.
+
+Two ways to do it. They are alternatives, not steps.
+
+### Option A — API credential (recommended)
+
+Anthropic's agent proxy attaches the token to requests for the hosts you list,
+*after* each request leaves the session's VM.
+
+| Field | Value |
+|---|---|
+| Where | [claude.ai/code](https://claude.ai/code) → edit an **existing** environment → **API credentials** |
+| Credential type | `Bearer` (the default) |
+| Name | anything, e.g. `KB MCP` |
+| Allowed websites | `kb-mcp.no-trbl-2-u.workers.dev` |
+| Custom headers | Name `Authorization`, Prefix `Bearer`, Value = the token |
+
+Two properties make this the better option:
+
+- **The token never reaches Claude**, the commands it runs, or the session's
+  environment variables. It cannot leak through a transcript or a printed `env`.
+- **It opens egress by itself.** Sessions reach a credential's hosts even when
+  the environment's network access level would not otherwise allow them, so no
+  allowlist edit is needed.
+
+Constraints worth knowing first: it needs an organization admin role (on Pro
+and Max you hold it in your own organization), it exists only on
+Anthropic-hosted environments, and you add it from the editor of an environment
+that **already exists** — the new-environment dialog does not offer it. There is
+no edit; to change a credential, delete it and add it again.
+
+Because the token never enters the session environment, a `.mcp.json` that
+interpolates `${KB_MCP_TOKEN}` has nothing to expand and would send the literal
+string. Omit the `headers` block entirely and let the proxy supply it.
+
+### Option B — environment variable plus a network allowlist
+
+Set the environment's network access to **Custom**, add
+`kb-mcp.no-trbl-2-u.workers.dev` to the allowlist, and add the token to the
+environment's variables in `.env` format:
+
+```
+KB_MCP_TOKEN=<token>
+```
+
+`.mcp.json` then expands `${KB_MCP_TOKEN}` exactly as it does locally.
+
+The cost is exposure. The environment-variable box is explicit that **anyone
+who uses the environment can read the values**, and every command Claude runs
+can read them too. You would be spreading a live credential to produce a header
+that Option A attaches invisibly. Prefer Option A unless a constraint above
+rules it out.
+
+### Migrating a consumer off the old stdio server
+
+A repo that predates the hosted server has an entry like this, which spawns a
+script that **no longer exists** — `scripts/kb-mcp-server.mjs` was deleted when
+the Worker replaced it, so a synced `kb/` no longer contains it:
+
+```json
+"kb-query": {
+  "type": "stdio",
+  "command": "node",
+  "args": ["kb/scripts/kb-mcp-server.mjs", "--root", "kb"]
+}
+```
+
+Replace it with the HTTP form:
+
+```json
+"kb-query": {
+  "type": "http",
+  "url": "https://kb-mcp.no-trbl-2-u.workers.dev/mcp",
+  "headers": {
+    "Authorization": "Bearer ${KB_MCP_TOKEN}"
+  }
+}
+```
+
+Under Option A, drop the `headers` block — the proxy supplies it.
+
+This failure mode is worth recognising because it mimics every other one. The
+old server is missing rather than unreachable, so a full network allowlist and
+a correct token change nothing: the session never gets as far as a request.
+`claude mcp list` names it directly, printing `✘ Failed to connect` against
+`kb-query` while every other server connects.
+
+---
+
+## 4. Auto-deploy from GitHub
 
 Cloudflare dashboard → **Workers & Pages → kb-mcp → Settings → Build**, then
 *Connect a repository*.
@@ -174,7 +270,7 @@ npm run deploy      # build + wrangler deploy + smoke
 
 ---
 
-## 4. Verify
+## 5. Verify
 
 ```bash
 curl -s https://kb-mcp.no-trbl-2-u.workers.dev/health
@@ -212,6 +308,9 @@ Six tools should be available: `kb_overview`, `kb_find_games`, `kb_search`,
 | `KB_MCP_TOKEN is not set` from the smoke check | Client-side variable missing — unrelated to the Worker's secret | Export it, or add it to a gitignored `.env` (see step 2) |
 | Smoke check says `unauthenticated checks passed` | It ran, but skipped the tool surface for lack of a token | Same fix; a clean run ends `all checks passed` |
 | Client shows no tools | Hitting `/` instead of `/mcp` | URL must end in `/mcp` |
+| `✘ Failed to connect` on `kb-query` | `.mcp.json` still spawns the deleted stdio server | Replace with the HTTP entry ([migration](#migrating-a-consumer-off-the-old-stdio-server)) |
+| Cloud session cannot reach the server | Cloud egress is allowlisted; `workers.dev` is not on the default list | Add an API credential, or set Custom network access ([section 3](#3-remote-and-cloud-sessions)) |
+| Cloud session sends `Bearer ${KB_MCP_TOKEN}` literally | Variable absent from the session environment — expected under Option A | Drop the `headers` block and let the proxy attach it |
 | Corpus is stale | No deploy since the merge | Compare `build.commit` on `/health` against `origin/main`; re-run the build or check Workers Builds |
 | `build` is `null` on `/health` | Deployed Worker predates build identity, or assets failed to upload | Redeploy |
 | Build fails: config not found | Root directory unset | Set it to `mcp-server` |

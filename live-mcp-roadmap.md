@@ -36,7 +36,9 @@ this file tracks what is *not done yet*.
 
 ## Phase 1 — Adoption
 
-- [ ] Add the `.mcp.json` block from `how-to-configure.md` to the Axiomancer repo, which references `${KB_MCP_TOKEN}` and is therefore safe to commit.
+- [ ] **Replace Axiomancer's dead `kb-query` entry.** Its `.mcp.json` still spawns `kb/scripts/kb-mcp-server.mjs`, deleted when the Worker replaced it, so the server fails to connect before authentication is ever attempted — which is why a cloud session with full network access and a correct token still could not reach it. Swap in the HTTP entry from [`how-to-configure.md`](mcp-server/how-to-configure.md#migrating-a-consumer-off-the-old-stdio-server).
+- [ ] **`needs human`** — Give cloud sessions a route to the server. Cloud egress is allowlisted and `workers.dev` is not on the default list, so this is required, not optional. Prefer an **API credential** (the token never enters the session, and it opens egress by itself) over an environment variable plus a Custom allowlist (readable by anyone using the environment). Both are written up in [section 3](mcp-server/how-to-configure.md#3-remote-and-cloud-sessions).
+- [ ] Confirm which option is in force before wiring headers: under an API credential the `.mcp.json` `headers` block must be **omitted**, because `${KB_MCP_TOKEN}` has nothing to expand and would be sent literally.
 - [ ] **`needs human`** — Call `kb_overview` from a real MCP client and confirm all six tools appear. `src/protocol.test.mjs` now proves a spec-following client *can* complete a session, so a failure here is the host's to explain — but no in-repo test can stand in for a particular client.
 - [ ] **`needs human`** — Decide whether Axiomancer keeps `scripts/kb-sync.mjs`: the hosted server removes the need for a synced clone, but grep-first is the documented fallback and dropping the sync removes it.
 - [ ] Update the Axiomancer `kb-query` skill so it prefers the hosted server and falls back to grep when the server is unreachable or unauthorized.
@@ -88,7 +90,7 @@ Both pieces of debt this phase originally left open are now closed:
 
 ## Guardrails that must survive all of the above
 
-- **The server stays an accelerator, never a dependency.** A remote server can be down, unreachable, or unauthorized in ways a local process cannot; grep-first must keep resolving every query without it.
+- **The server stays an accelerator, never a dependency.** A remote server can be down, unreachable, or unauthorized in ways a local process cannot — and in a cloud session it can also be *unroutable*, which is a failure mode a local process never had. Grep-first must keep resolving every query without it.
 - **`dist/` stays gitignored.** It is a 22 MB derived copy of the corpus and does not belong in Git history.
 - **Fail closed stays the default.** An unconfigured server is a misconfigured one, not a public one.
 - **Nothing in the corpus pipeline may call this server** — intake, promotion, librarian, and audit passes must not acquire a network dependency on it.
