@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-09-01T09:03:01.000Z",
+  "packet_sha256": "571e28e0de1c7f55cc3b913168f0c63b4856eaf82716919f0f0afe6804ba52b2",
+  "reviewed_source_ids": ["src-003", "src-004", "src-005", "src-006"],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Exact-head audit reopened the official 15-page English rules PDF, independent Board Game Quest reception JSON, and both visual assets; all four receipts matched status, content type, final URL, byte length, and SHA-256. Claims are bounded to the retained base-game evidence, with unknown FAQ, printing-history, and exhaustive component denominators left unasserted. Contact sheet and reduced WebP derivatives were inspected and hashes matched."
+}
