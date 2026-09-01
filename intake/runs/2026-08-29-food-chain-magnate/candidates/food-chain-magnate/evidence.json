@@ -1,0 +1,63 @@
+{
+  "schema_version": 3,
+  "slug": "food-chain-magnate",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-08-29T06:01:15.000Z",
+  "edition_scope": "Released physical Food Chain Magnate base game. Claims are bounded to the hosted English rules PDF, the independent Board Game Quest article, and the two source-linked visual assets; expansions and later print-specific changes are excluded.",
+  "coverage_ledger": {
+    "rules_denominator": [
+
+      {
+        "authority": "Splotter Con FCM Rules EN v3 PDF",
+        "acquired": true,
+        "official_endpoint": true,
+        "source_ids": ["src-003"],
+        "notes": "Static PDF retrieved and hash recorded; 15 pages, English, third printing with modifications stated in the colophon."
+      }
+    ],
+    "faq_errata_inventory": {
+      "scope": "Public English FAQ or errata applicable to the base-game claims published here.",
+      "checks": [
+        "The hosted English core rules PDF is the retained official rules authority used here.",
+        "No separate FAQ or errata claim is published in this packet; no publisher-wide absence is asserted."
+      ],
+      "applicable_acquired": 0,
+      "applicable_known_total": null,
+      "notes": "FAQ and errata applicability remains outside this bounded claim set."
+    },
+    "factual_denominator": [
+      {"claim_group":"player count, duration, and rules overview","recorded":true,"source_ids":["src-003"]},
+      {"claim_group":"base-game components observed in rulebook","recorded":true,"source_ids":["src-003"]},
+      {"claim_group":"employee-card role and action-selection loop","recorded":true,"source_ids":["src-003"]},
+      {"claim_group":"marketing, demand, and sales resolution","recorded":true,"source_ids":["src-003"]},
+      {"claim_group":"bank-break end condition","recorded":true,"source_ids":["src-004"]},
+      {"claim_group":"independent testimony about severe setbacks","recorded":true,"source_ids":["src-004"]},
+      {"claim_group":"box-cover visual","recorded":true,"source_ids":["src-005"]},
+      {"claim_group":"tabletop product visual","recorded":true,"source_ids":["src-006"]},
+      {"claim_group":"visual contact-sheet inspection","recorded":true,"source_ids":["src-005","src-006"]}
+    ],
+    "exclusions": [
+      "The Ketchup Mechanism & Other Ideas and other expansions are excluded.",
+      "Complete employee-card, component-count, FAQ, errata, and printing-history denominators are not inferred; dynamic product and rules-landing endpoints are excluded from the retained evidence set.",
+      "BGG rating and complexity weight are not claimed; game.weight is null."
+    ]
+  },
+  "sources": [
+
+    {
+      "id":"src-003","title":"Splotter Con — Food Chain Magnate Rules EN v3 PDF","roles":["official_rules"],"provenance":"official","url":"https://splottercon.com/wp-content/uploads/2023/07/FCM_Rules_EN_v3.pdf","final_url":"https://splottercon.com/wp-content/uploads/2023/07/FCM_Rules_EN_v3.pdf","retrieved_at":"2026-08-29T06:02:02.000Z","http_status":200,"content_type":"application/pdf","byte_length":6337651,"sha256":"95831b0165f4d0c6b9bd4187280dbeeded4df0d40973fd886b9c947aef4a2ddd","locator":"PDF page 1 colophon and overview; page 2 components; pages 3-15 rules","evidence":"Food Chain Magnate is a heavy strategy game about building a fast food chain."
+    },
+    {
+      "id":"src-004","title":"Board Game Quest — Brutal But Not Mean: A Tasty Tidbit from Food Chain Magnate","roles":["independent_review"],"provenance":"secondary","url":"https://www.boardgamequest.com/wp-json/wp/v2/posts/57861","final_url":"https://www.boardgamequest.com/wp-json/wp/v2/posts/57861","retrieved_at":"2026-08-29T06:02:03.000Z","http_status":200,"content_type":"application/json; charset=UTF-8","byte_length":23789,"sha256":"630c951c019940786d3af6489bbea6c4419cff40a2d3e35eef03f33ce3f522ef","locator":"Article discussion of sales competition, telegraphed counterplay, and long-term setback","evidence":"the game is brutally punishing at times"
+    },
+    {
+      "id":"src-005","title":"Splotter Shop — Food Chain Magnate product image","roles":["visual"],"provenance":"official","url":"https://cdn.shopify.com/s/files/1/0556/2476/1532/products/pic2649434.png?v=1617718800","final_url":"https://cdn.shopify.com/s/files/1/0556/2476/1532/products/pic2649434.png?v=1617718800","retrieved_at":"2026-08-29T06:02:04.000Z","http_status":200,"content_type":"image/png","byte_length":71628,"sha256":"332800ba17cb0c4df42dfd15ba31a9be081182db81807601829fa58fe41cf22c","locator":"Product image 1; box cover","evidence":"Reduced source-linked product image for box identity."
+    },
+    {
+      "id":"src-006","title":"Splotter Shop — Food Chain Magnate product photograph","roles":["visual"],"provenance":"official","url":"https://cdn.shopify.com/s/files/1/0556/2476/1532/products/IMG_0740.jpg?v=1624358926","final_url":"https://cdn.shopify.com/s/files/1/0556/2476/1532/products/IMG_0740.jpg?v=1624358926","retrieved_at":"2026-08-29T06:02:05.000Z","http_status":200,"content_type":"image/jpeg","byte_length":896753,"sha256":"c092f066d02c6e0832a037ded1d15c5c8526ed2435db11e2c3e35b46fbb79f87","locator":"Product image 2; tabletop component photograph","evidence":"Reduced source-linked product photograph for tabletop state."
+    }
+  ]
+}

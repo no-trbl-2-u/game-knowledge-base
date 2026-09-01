@@ -28,6 +28,7 @@ BGG complexity weight from the game's discovery source.
 | dune-imperium | Dune: Imperium | 2020 | 3.08 | deck-building, worker-placement, hand-management, multi-use-cards, force-commitment, race, variable-player-powers | onboarding, component-clarity, accessibility, rules-ambiguity, combat-resolution | 4 | [packet](games/dune-imperium/visuals/packet.okf.md) · [sheet](games/dune-imperium/visuals/contact-sheet.webp) | verified | 12 |
 | earthborne-rangers | Earthborne Rangers | 2024 | null | campaign-game, deck-building, hand-management, solo-solitaire-game | strategic-depth, onboarding, rules-ambiguity | 4 | [packet](games/earthborne-rangers/visuals/packet.okf.md) · [sheet](games/earthborne-rangers/visuals/contact-sheet.webp) | verified | 12 |
 | elder-sign | Elder Sign | 2011 | null | cooperative-game, dice-rolling, hand-management, solo-solitaire-game, variable-player-powers | randomness, strategic-depth, turn-pacing, solo-coop-automation | 3 | [packet](games/elder-sign/visuals/packet.okf.md) · [sheet](games/elder-sign/visuals/contact-sheet.webp) | verified | 12 |
+| food-chain-magnate | Food Chain Magnate | 2015 | null | action-selection, engine-building, income, market, resource-management, variable-setup | runaway-leader, onboarding, player-interaction, turn-pacing | 2 | [packet](games/food-chain-magnate/visuals/packet.okf.md) · [sheet](games/food-chain-magnate/visuals/contact-sheet.webp) | verified | 12 |
 | forgotten-waters | Forgotten Waters | 2020 | null | cooperative-game, dice-rolling, push-your-luck, semi-cooperative-game, variable-player-powers, worker-placement | accessibility, downtime, strategic-depth, turn-pacing | 4 | [packet](games/forgotten-waters/visuals/packet.okf.md) · [sheet](games/forgotten-waters/visuals/contact-sheet.webp) | needs_followup:12 | 12 |
 | gi-joe-deck-building-game | G.I. JOE Deck-Building Game | 2021 | 2.50 | cooperative-game, deck-building, hand-management, variable-player-powers, solo-solitaire-game, campaign-game | onboarding, setup-teardown, strategic-depth, component-clarity, campaign-progression | 4 | [packet](games/gi-joe-deck-building-game/visuals/packet.okf.md) · [sheet](games/gi-joe-deck-building-game/visuals/contact-sheet.webp) | verified | 12 |
 | gloomhaven | Gloomhaven | 2017 | 3.90 | campaign-game, cooperative-game, hand-management, point-to-point-movement, variable-player-powers | onboarding, setup-teardown, downtime, campaign-progression | 4 | [packet](games/gloomhaven/visuals/packet.okf.md) · [sheet](games/gloomhaven/visuals/contact-sheet.webp) | needs_followup:1 verified:11 | 12 |
@@ -63,7 +64,7 @@ BGG complexity weight from the game's discovery source.
 | action-points | arkham-horror-the-card-game, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, horrified, nemesis-lockdown, root |
 | action-queue | root |
 | action-retrieval | heroes-of-terrinoth, root |
-| action-selection | ark-nova, scythe, the-thing-the-boardgame |
+| action-selection | ark-nova, food-chain-magnate, scythe, the-thing-the-boardgame |
 | area-majority-influence | root, scythe |
 | area-movement | dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, root |
 | campaign-game | arkham-horror-the-card-game, arydia-the-paths-we-dare-tread, betrayal-legacy, cthulhu-death-may-die, descent-journeys-in-the-dark-second-edition, earthborne-rangers, gi-joe-deck-building-game, gloomhaven, kingdom-death-monster, mage-knight, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, star-wars-imperial-assault, tainted-grail-the-fall-of-avalon, the-crew, too-many-bones |
@@ -74,15 +75,15 @@ BGG complexity weight from the game's discovery source.
 | deck-building | aeons-end, arkham-horror-the-card-game, dark-pact, dominion, dune-imperium, earthborne-rangers, gi-joe-deck-building-game, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, slay-the-spire-the-board-game |
 | dice-rolling | arydia-the-paths-we-dare-tread, betrayal-legacy, cthulhu-death-may-die, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, descent-journeys-in-the-dark-second-edition, elder-sign, forgotten-waters, heroes-of-terrinoth, hoplomachus-remastered, horrified, kingdom-death-monster, mage-knight, nemesis, nemesis-lockdown, oathsworn-into-the-deepwood, root, shadows-over-camelot, star-wars-imperial-assault, the-quacks-of-quedlinburg, too-many-bones |
 | end-game-bonuses | ark-nova |
-| engine-building | scythe |
+| engine-building | food-chain-magnate, scythe |
 | force-commitment | dune-imperium |
 | grid-coverage | ark-nova |
 | grid-movement | cthulhu-death-may-die, descent-journeys-in-the-dark-second-edition, kingdom-death-monster, mage-knight, scythe, star-wars-imperial-assault |
 | hand-management | aeons-end, ark-nova, arkham-horror-the-card-game, battlestar-galactica-the-board-game, bloodborne-the-card-game, dark-pact, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, dominion, dune-imperium, earthborne-rangers, elder-sign, gi-joe-deck-building-game, gloomhaven, heat-pedal-to-the-metal, hoplomachus-remastered, horrified, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, nemesis-lockdown, oathsworn-into-the-deepwood, onirim-second-edition, root, shadows-over-camelot, slay-the-spire-the-board-game, spirit-island, tainted-grail-the-fall-of-avalon, the-crew, too-many-bones, unfathomable |
 | hidden-information | battlestar-galactica-the-board-game, betrayal-legacy, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, nemesis, nemesis-lockdown, shadows-over-camelot, the-crew, the-thing-the-boardgame, unfathomable |
-| income | ark-nova |
+| income | ark-nova, food-chain-magnate |
 | legacy-game | betrayal-legacy |
-| market | dark-pact, dominion |
+| market | dark-pact, dominion, food-chain-magnate |
 | modular-board | betrayal-legacy, cthulhu-death-may-die, descent-journeys-in-the-dark-second-edition, mage-knight, nemesis, nemesis-lockdown, spirit-island, star-wars-imperial-assault |
 | multi-use-cards | dune-imperium, root |
 | negotiation | battlestar-galactica-the-board-game, nemesis, root, unfathomable |
@@ -90,7 +91,7 @@ BGG complexity weight from the game's discovery source.
 | point-to-point-movement | gloomhaven, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, tainted-grail-the-fall-of-avalon |
 | push-your-luck | bloodborne-the-card-game, forgotten-waters, heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
 | race | dune-imperium, heat-pedal-to-the-metal |
-| resource-management | dominion, horrified, scythe, tainted-grail-the-fall-of-avalon, the-thing-the-boardgame |
+| resource-management | dominion, food-chain-magnate, horrified, scythe, tainted-grail-the-fall-of-avalon, the-thing-the-boardgame |
 | semi-cooperative-game | battlestar-galactica-the-board-game, betrayal-legacy, bloodborne-the-card-game, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, forgotten-waters, nemesis-lockdown, shadows-over-camelot, the-thing-the-boardgame, unfathomable |
 | set-collection | ark-nova, bloodborne-the-card-game, dark-pact, onirim-second-edition, shadows-over-camelot |
 | simultaneous-action-selection | bloodborne-the-card-game, heat-pedal-to-the-metal, spirit-island, the-quacks-of-quedlinburg, the-thing-the-boardgame |
@@ -99,5 +100,5 @@ BGG complexity weight from the game's discovery source.
 | tile-placement | ark-nova, betrayal-legacy |
 | trick-taking | the-crew |
 | variable-player-powers | aeons-end, arkham-horror-the-card-game, arydia-the-paths-we-dare-tread, battlestar-galactica-the-board-game, betrayal-legacy, cthulhu-death-may-die, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, descent-journeys-in-the-dark-second-edition, dune-imperium, elder-sign, forgotten-waters, gi-joe-deck-building-game, gloomhaven, heroes-of-terrinoth, hoplomachus-remastered, horrified, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, nemesis-lockdown, oathsworn-into-the-deepwood, root, scythe, shadows-over-camelot, slay-the-spire-the-board-game, spirit-island, star-wars-imperial-assault, tainted-grail-the-fall-of-avalon, the-thing-the-boardgame, too-many-bones, unfathomable |
-| variable-setup | ark-nova, dark-pact, dominion, heat-pedal-to-the-metal, horrified, nemesis, root, spirit-island, the-quacks-of-quedlinburg |
+| variable-setup | ark-nova, dark-pact, dominion, food-chain-magnate, heat-pedal-to-the-metal, horrified, nemesis, root, spirit-island, the-quacks-of-quedlinburg |
 | worker-placement | dune-imperium, forgotten-waters |
