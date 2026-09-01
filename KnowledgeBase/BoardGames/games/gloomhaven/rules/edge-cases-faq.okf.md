@@ -19,6 +19,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-16"
     notes: "Exhaustion summary."
+  - id: "src-008"
+    title: "Cephalofair Games — Gloomhaven support and resources"
+    url: "https://cephalofair.com/pages/gloomhaven"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-08-31"
+    notes: "Official publisher support hub, confirmed in the 2026-08-31 librarian pass."
 confidence: medium
 status: verified
 ---
@@ -30,6 +37,11 @@ status: verified
   Evidence: Dized summary states there is no coming back from exhaustion during a scenario.
   Confidence: medium
 
+- Claim: The publisher maintains an official Gloomhaven FAQ and an official errata list for First Printing (2025) copies, both linked from the publisher support hub.
+  Source: src-008
+  Evidence: The Cephalofair Gloomhaven page links a "Gloomhaven FAQ" hosted at cephalofairgames.github.io and lists major errata for First Printing (2025) copies.
+  Confidence: high
+
 ## Open questions
 
-Exhaustion triggers, hand-loss timing, and monster-specific exceptions require official FAQ verification.
+Exhaustion triggers, hand-loss timing, and monster-specific exceptions still require official FAQ verification. The retrievable document is now known: the official FAQ linked from src-008 at cephalofairgames.github.io, plus the First Printing (2025) errata on that same publisher page. A later pass should fetch both.

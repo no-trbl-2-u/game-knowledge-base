@@ -65,7 +65,7 @@ Character powers, items, crises, monsters, and a long survival voyage create a r
 A turn moves and activates a character, then resolves a mythos crisis and travel consequences. Shared skill checks accept facedown contributions, preserving deniable sabotage until a traitor reveals.
 
 - **Source:** src-002
-- **Evidence:** Publisher rules/product framing establishes the shared threat, player-role structure, and individual or traitor incentives summarized above.
+- **Evidence:** Publisher rules/product framing for Unfathomable establishes the shared threat, player-role structure, and individual or traitor incentives summarized above.
 - **Confidence:** medium-high
 
 ## Design signal
@@ -76,4 +76,4 @@ A turn moves and activates a character, then resolves a mythos crisis and travel
 
 ## Scope boundary
 
-This is a verified intake dossier, not a substitute for a full setup/turn/endgame transcription or visual evidence packet. No unsupported component counts, card text, or strategy claims are asserted.
+This Unfathomable record is a verified intake dossier, not a substitute for a full setup/turn/endgame transcription or visual evidence packet. No unsupported component counts, card text, or strategy claims are asserted.

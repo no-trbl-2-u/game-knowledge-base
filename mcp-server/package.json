@@ -1,0 +1,15 @@
+{
+  "name": "kb-mcp-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-assets.mjs",
+    "test": "node --test src/server.test.mjs src/protocol.test.mjs src/fixture-drift.test.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy && npm run smoke"
+  },
+  "devDependencies": {
+    "wrangler": "^4.42.0"
+  }
+}

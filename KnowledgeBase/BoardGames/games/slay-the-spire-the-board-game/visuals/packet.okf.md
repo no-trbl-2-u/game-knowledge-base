@@ -83,8 +83,8 @@ status: verified
 
 ## Curation notes
 
-This packet gives agents four rules-derived views of components, setup, card anatomy, and play-state hierarchy. Open the contact sheet first, then inspect individual references only when needed.
+This Slay the Spire: The Board Game packet gives agents four rules-derived views of components, setup, card anatomy, and play-state hierarchy. Open the contact sheet first, then inspect individual references only when needed.
 
 ## Copyright and provenance
 
-All local images are reduced WebP derivatives for private research and design analysis. Rights remain with Contention Games. Source and exact asset URLs are preserved above. These files are not training data, promotional assets, or substitutes for the game, cards, player aids, or rulebook. Remove on rights-holder request.
+All local Slay the Spire: The Board Game images are reduced WebP derivatives for private research and design analysis. Rights remain with Contention Games. Source and exact asset URLs are preserved above. These files are not training data, promotional assets, or substitutes for the game, cards, player aids, or rulebook. Remove on rights-holder request.

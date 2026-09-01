@@ -81,4 +81,4 @@ status: verified
 
 # Visual Reference Packet — Unfathomable
 
-Four original analytical diagrams cover setup architecture, turn flow, escalating tension, and endgame branching. They are conceptual aids, not component substitutes.
+Four original analytical Unfathomable diagrams cover setup architecture, turn flow, escalating tension, and endgame branching. They are conceptual aids, not component substitutes.

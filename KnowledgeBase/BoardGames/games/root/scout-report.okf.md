@@ -94,16 +94,16 @@ Study Root as a high-signal asymmetric conflict game with official rules access 
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+- `games/root/index.okf.md`
+- `games/root/sources.okf.md`
+- `games/root/rules/overview.okf.md`
+- `games/root/rules/setup.okf.md`
+- `games/root/rules/turn-structure.okf.md`
+- `games/root/rules/actions.okf.md`
+- `games/root/rules/scoring-endgame.okf.md`
+- `games/root/rules/edge-cases-faq.okf.md`
+- `games/root/reception/reviews.okf.md`
+- `games/root/reception/better-if.okf.md`
 
 ## Run validation
 

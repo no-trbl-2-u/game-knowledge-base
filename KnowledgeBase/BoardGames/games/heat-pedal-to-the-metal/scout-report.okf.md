@@ -95,16 +95,16 @@ Study one board game for rules structure, reception, and better-if opportunities
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+- `games/heat-pedal-to-the-metal/index.okf.md`
+- `games/heat-pedal-to-the-metal/sources.okf.md`
+- `games/heat-pedal-to-the-metal/rules/overview.okf.md`
+- `games/heat-pedal-to-the-metal/rules/setup.okf.md`
+- `games/heat-pedal-to-the-metal/rules/turn-structure.okf.md`
+- `games/heat-pedal-to-the-metal/rules/actions.okf.md`
+- `games/heat-pedal-to-the-metal/rules/scoring-endgame.okf.md`
+- `games/heat-pedal-to-the-metal/rules/edge-cases-faq.okf.md`
+- `games/heat-pedal-to-the-metal/reception/reviews.okf.md`
+- `games/heat-pedal-to-the-metal/reception/better-if.okf.md`
 
 ## Run validation
 
