@@ -52,8 +52,36 @@ sources:
     url: "https://support.chiptheorygames.com/support/solutions/33000133541"
     kind: faq
     provenance: official
-    retrieved_at: "2026-07-11"
-    notes: "Official FAQ lead identified on the support page; detailed extraction deferred."
+    retrieved_at: "2026-08-31"
+    notes: "Official FAQ tree enumerated in the 2026-08-31 librarian pass; the deferred extraction is resolved. Categories cover errata, skill questions, Victorum, Remastered, and legacy Hoplomachus titles; the Remastered Specific Qs category holds exactly two articles."
+  - id: "src-007"
+    title: "Chip Theory Games FAQ — Remastered Errata: Depthcharger's Tactician Skill"
+    url: "https://support.chiptheorygames.com/support/solutions/articles/33000277388-remastered-errata-depthcharger-s-tactician-skill"
+    kind: errata
+    provenance: official
+    retrieved_at: "2026-08-31"
+    notes: "First-print Remastered errata; retrieved in the 2026-08-31 librarian pass."
+  - id: "src-008"
+    title: "Chip Theory Games FAQ — Remastered Errata: Scheherazade HP chips"
+    url: "https://support.chiptheorygames.com/support/solutions/articles/33000278192-remastered-errata-scheherazade-hp-chips"
+    kind: errata
+    provenance: official
+    retrieved_at: "2026-08-31"
+    notes: "First-print Remastered component-shortfall errata; retrieved in the 2026-08-31 librarian pass."
+  - id: "src-009"
+    title: "Chip Theory Games FAQ — Skirmish: Do inactive heroes count as units in your camp?"
+    url: "https://support.chiptheorygames.com/support/solutions/articles/33000294913-skirmish-do-inactive-heroes-count-as-units-in-your-camp-no-"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-08-31"
+    notes: "Remastered-specific ruling; retrieved in the 2026-08-31 librarian pass."
+  - id: "src-010"
+    title: "Chip Theory Games FAQ — Shaghad Shards Out of HP"
+    url: "https://support.chiptheorygames.com/support/solutions/articles/33000284491-shaghad-shards-out-of-hp"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-08-31"
+    notes: "Remastered-specific titan ruling; retrieved in the 2026-08-31 librarian pass."
 confidence: high
 status: verified
 ---

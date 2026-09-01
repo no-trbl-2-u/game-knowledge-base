@@ -18,19 +18,13 @@ followups:
     fallback: "BGG search result and page URL used as discovery lead; no numeric rating asserted."
     retry_needs: alternate_source
     notes: "Direct page retrieval returned HTTP 403 on 2026-07-28."
-  - source_id: "src-003"
-    url: "https://coopboardgames.com/cooperative-board-game-reviews/cthulhu-death-may-die-review/"
-    failure: blocked
-    fallback: "Review title and URL retained; no detailed reception claims asserted."
-    retry_needs: browser_fetch
-    notes: "Extraction backend unavailable on 2026-07-28."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Cthulhu: Death May Die"
     url: "https://boardgamegeek.com/boardgame/253344/cthulhu-death-may-die"
     kind: bgg_page
     provenance: secondary
-    retrieved_at: "2026-07-28"
+    retrieved_at: "2026-08-31"
     notes: "Discovery and rating-source lead. The page describes the game as a cooperative dice-driven Elder God hunt; direct numeric rating retrieval returned HTTP 403, so no exact rating is asserted."
   - id: "src-002"
     title: "Cthulhu: Death May Die — Rules of the Game"
@@ -44,8 +38,8 @@ sources:
     url: "https://coopboardgames.com/cooperative-board-game-reviews/cthulhu-death-may-die-review/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-28"
-    notes: "Independent cooperative-game review; page extraction was unavailable in this run, so reception claims are limited and marked medium/low confidence."
+    retrieved_at: "2026-08-31"
+    notes: "Independent cooperative-game review; full text retrieved and extracted in the 2026-08-31 librarian pass (the 2026-07-28 extraction backend failure is resolved)."
   - id: "src-004"
     title: "Dized Rules — Cthulhu: Death May Die — Sanity"
     url: "https://rules.dized.com/game/kp6yXekcT6agDFGangIB1Q/XXNB96tBSqWBcLGQXdDfYA/sanity"
@@ -86,17 +80,17 @@ Study one high-scoring, eligible RPG/role-playing board game for rules structure
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
-- `visuals/packet.okf.md`
+- `games/cthulhu-death-may-die/index.okf.md`
+- `games/cthulhu-death-may-die/sources.okf.md`
+- `games/cthulhu-death-may-die/rules/overview.okf.md`
+- `games/cthulhu-death-may-die/rules/setup.okf.md`
+- `games/cthulhu-death-may-die/rules/turn-structure.okf.md`
+- `games/cthulhu-death-may-die/rules/actions.okf.md`
+- `games/cthulhu-death-may-die/rules/scoring-endgame.okf.md`
+- `games/cthulhu-death-may-die/rules/edge-cases-faq.okf.md`
+- `games/cthulhu-death-may-die/reception/reviews.okf.md`
+- `games/cthulhu-death-may-die/reception/better-if.okf.md`
+- `games/cthulhu-death-may-die/visuals/packet.okf.md`
 
 ## Run validation
 

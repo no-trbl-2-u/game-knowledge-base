@@ -65,7 +65,7 @@ Character-role survival with inventory, location tasks, hidden identity, and a s
 Players secretly choose locations and tasks, the leader assigns actions, weather and base systems degrade, and suspicion changes who can board an escape route. Infection can spread without an immediate public reveal.
 
 - **Source:** src-002
-- **Evidence:** Publisher rules/product framing establishes the shared threat, player-role structure, and individual or traitor incentives summarized above.
+- **Evidence:** Publisher rules/product framing for The Thing: The Boardgame establishes the shared threat, player-role structure, and individual or traitor incentives summarized above.
 - **Confidence:** medium-high
 
 ## Design signal
@@ -76,4 +76,4 @@ Players secretly choose locations and tasks, the leader assigns actions, weather
 
 ## Scope boundary
 
-This is a verified intake dossier, not a substitute for a full setup/turn/endgame transcription or visual evidence packet. No unsupported component counts, card text, or strategy claims are asserted.
+This The Thing: The Boardgame record is a verified intake dossier, not a substitute for a full setup/turn/endgame transcription or visual evidence packet. No unsupported component counts, card text, or strategy claims are asserted.

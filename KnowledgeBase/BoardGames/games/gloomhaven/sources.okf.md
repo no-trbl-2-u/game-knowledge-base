@@ -61,6 +61,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-16"
     notes: "Playtime, setup, and campaign scale testimony."
+  - id: "src-008"
+    title: "Cephalofair Games — Gloomhaven support and resources"
+    url: "https://cephalofair.com/pages/gloomhaven"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-08-31"
+    notes: "Official publisher support hub, confirmed in the 2026-08-31 librarian pass; the 2026-07-16 not_found followup is resolved. Links the Gloomhaven Rulebook, the Gloomhaven FAQ at cephalofairgames.github.io, a puzzle-book hint guide, how-to-play videos, First Printing (2025) errata, and crossover character sheets."
 confidence: high
 status: verified
 ---

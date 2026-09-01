@@ -18,12 +18,6 @@ followups:
     fallback: "Search result snippets and a secondary BGG-rating report"
     retry_needs: browser_fetch
     notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 during this run; recheck later for current average, rank, weight, and comments."
-  - source_id: "src-006"
-    url: "https://support.chiptheorygames.com/support/solutions/33000133541"
-    failure: blocked
-    fallback: "Official support landing page confirms the FAQ exists"
-    retry_needs: browser_fetch
-    notes: "FAQ link was identified but detailed extraction was not completed."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Hoplomachus: Remastered"
@@ -65,8 +59,8 @@ sources:
     url: "https://support.chiptheorygames.com/support/solutions/33000133541"
     kind: faq
     provenance: official
-    retrieved_at: "2026-07-11"
-    notes: "Official FAQ lead."
+    retrieved_at: "2026-08-31"
+    notes: "Official FAQ tree enumerated and the four Remastered-scoped articles extracted in the 2026-08-31 librarian pass. Followup resolved."
 confidence: high
 status: needs_followup
 ---
@@ -99,22 +93,23 @@ Study one board game matching the current Governor focus: cooperative plus deckb
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+- `games/hoplomachus-remastered/index.okf.md`
+- `games/hoplomachus-remastered/sources.okf.md`
+- `games/hoplomachus-remastered/rules/overview.okf.md`
+- `games/hoplomachus-remastered/rules/setup.okf.md`
+- `games/hoplomachus-remastered/rules/turn-structure.okf.md`
+- `games/hoplomachus-remastered/rules/actions.okf.md`
+- `games/hoplomachus-remastered/rules/scoring-endgame.okf.md`
+- `games/hoplomachus-remastered/rules/edge-cases-faq.okf.md`
+- `games/hoplomachus-remastered/reception/reviews.okf.md`
+- `games/hoplomachus-remastered/reception/better-if.okf.md`
 
 ## Run validation
 
 - `WISHLIST.md` entry checked off: n-a; no unchecked entries existed.
 - `node scripts/generate-index.mjs` run after writing docs: pending.
 - `node scripts/validate-okf.mjs` exit 0 before push: pending.
+- 2026-08-31 (librarian): the two `pending` lines above record the state at scout time only. Hoplomachus: Remastered is promoted canonical corpus; `node scripts/generate-index.mjs` and `node scripts/validate-okf.mjs` both ran green in the 2026-08-31 librarian pass.
 
 ## Strongest design lessons
 

@@ -27,13 +27,20 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-18"
     notes: "Detailed review; rating 7/10."
+  - id: "src-007"
+    title: "Board Game Quest — Heroes of Terrinoth Review"
+    url: "https://www.boardgamequest.com/heroes-of-terrinoth-review/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-08-31"
+    notes: "Retrieved and extracted in the 2026-08-31 librarian pass; the 2026-07-18 bot-verification interstitial is resolved. Reviewer score 4 stars."
 confidence: high
 status: verified
 ---
 
 ## Summary
 
-The two detailed reviews agree on the game's identity: fast, accessible cooperative fantasy with lively dice moments and clean teamwork, but constrained action variety, repetitive upkeep, weak long-term progression, and no campaign continuity.
+The three detailed reviews agree on the game's identity: fast, accessible cooperative fantasy with lively dice moments and clean teamwork, but constrained action variety, repetitive upkeep, weak long-term progression, and no campaign continuity.
 
 ## Praised design
 
@@ -48,6 +55,14 @@ The two detailed reviews agree on the game's identity: fast, accessible cooperat
 - Claim: Sessions remain short while feeling like complete adventures.
   Source: src-005, src-006
   Evidence: One review reports all sessions under an hour; the other praises the short, simple adventure format.
+  Confidence: high
+- Claim: A third independent review scores the game 4 stars and endorses it as a solid, fun cooperative filler.
+  Source: src-007
+  Evidence: "As a filler for a consistent adventuring party, Heroes of Terrinoth picks up the banner for a fallen IP with a solid grasp and fun gameplay."
+  Confidence: high
+- Claim: The same review credits sustained decision-making across the whole session and strong cooperative moments.
+  Source: src-007
+  Evidence: "Great moments for cooperative play"; "Engaging choices over the whole course of the game."
   Confidence: high
 
 ## Player friction
@@ -72,6 +87,14 @@ The two detailed reviews agree on the game's identity: fast, accessible cooperat
   Source: src-005
   Evidence: Review flags alpha-player takeover as a potential issue.
   Confidence: medium
+- Claim: The repetition complaint is corroborated by a third reviewer, who recommends playing the game sparingly between larger titles.
+  Source: src-007
+  Evidence: The review advises playing it "sparingly," best "between larger more epic diversions," because it "can feel repetitive and abstract if played too often."
+  Confidence: high
+- Claim: The abstraction of quest progress weakens the game's narrative payoff.
+  Source: src-007
+  Evidence: The reviewer says the abstract progress makes "the quest feel a bit bland," reducing play to "Choosing when to activate cards just so you can flip the next location."
+  Confidence: high
 
 ## Open questions
 

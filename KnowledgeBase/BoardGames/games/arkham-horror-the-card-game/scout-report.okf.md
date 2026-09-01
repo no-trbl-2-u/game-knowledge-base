@@ -126,16 +126,16 @@ Study a high-scoring cooperative deck/deck-construction game with strong campaig
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
+- `games/arkham-horror-the-card-game/index.okf.md`
+- `games/arkham-horror-the-card-game/sources.okf.md`
+- `games/arkham-horror-the-card-game/rules/overview.okf.md`
+- `games/arkham-horror-the-card-game/rules/setup.okf.md`
+- `games/arkham-horror-the-card-game/rules/turn-structure.okf.md`
+- `games/arkham-horror-the-card-game/rules/actions.okf.md`
+- `games/arkham-horror-the-card-game/rules/scoring-endgame.okf.md`
+- `games/arkham-horror-the-card-game/rules/edge-cases-faq.okf.md`
+- `games/arkham-horror-the-card-game/reception/reviews.okf.md`
+- `games/arkham-horror-the-card-game/reception/better-if.okf.md`
 
 ## Run validation
 

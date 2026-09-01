@@ -83,8 +83,8 @@ status: verified
 
 ## Curation notes
 
-This packet gives agents four rules-derived views of components, setup, card anatomy, and play-state hierarchy. Open the contact sheet first, then inspect individual references only when needed.
+This G.I. JOE Deck-Building Game packet gives agents four rules-derived views of components, setup, card anatomy, and play-state hierarchy. Open the contact sheet first, then inspect individual references only when needed.
 
 ## Copyright and provenance
 
-All local images are reduced WebP derivatives for private research and design analysis. Rights remain with Renegade Game Studios. Source and exact asset URLs are preserved above. These files are not training data, promotional assets, or substitutes for the game, cards, player aids, or rulebook. Remove on rights-holder request.
+All local G.I. JOE Deck-Building Game images are reduced WebP derivatives for private research and design analysis. Rights remain with Renegade Game Studios. Source and exact asset URLs are preserved above. These files are not training data, promotional assets, or substitutes for the game, cards, player aids, or rulebook. Remove on rights-holder request.

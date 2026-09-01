@@ -124,6 +124,7 @@ both `reception/*.okf.md` files (reviews, better-if).
 - `WISHLIST.md` entry checked off: no — skipped because it is card-costing research, outside the current RPG focus.
 - `node scripts/generate-index.mjs` run after writing docs: pending.
 - `node scripts/validate-okf.mjs` exit 0 before push: pending.
+- 2026-08-31 (librarian): the two `pending` lines above record the state at scout time only. Arydia: The Paths We Dare Tread is promoted canonical corpus; `node scripts/generate-index.mjs` and `node scripts/validate-okf.mjs` both ran green in the 2026-08-31 librarian pass.
 
 ## Strongest design lessons
 

@@ -93,17 +93,17 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Documents written
 
-- `index.okf.md`
-- `sources.okf.md`
-- `rules/overview.okf.md`
-- `rules/setup.okf.md`
-- `rules/turn-structure.okf.md`
-- `rules/actions.okf.md`
-- `rules/scoring-endgame.okf.md`
-- `rules/edge-cases-faq.okf.md`
-- `reception/reviews.okf.md`
-- `reception/better-if.okf.md`
-- `visuals/packet.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/index.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/sources.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/rules/overview.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/rules/setup.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/rules/turn-structure.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/rules/actions.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/rules/scoring-endgame.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/rules/edge-cases-faq.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/reception/reviews.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/reception/better-if.okf.md`
+- `games/descent-journeys-in-the-dark-second-edition/visuals/packet.okf.md`
 
 ## Strongest design lessons
 
