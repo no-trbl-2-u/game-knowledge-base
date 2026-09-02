@@ -650,11 +650,9 @@ mcp_servers:
     command: /root/.hermes/scripts/github-mcp-server.sh
     enabled: true
   kb-query:
-    command: node
-    args:
-      - /root/Workspace/SomberSoft/game-knowledge-base/scripts/kb-mcp-server.mjs
-      - --root
-      - /root/Workspace/SomberSoft/game-knowledge-base
+    url: https://kb-mcp.no-trbl-2-u.workers.dev/mcp
+    headers:
+      Authorization: Bearer ${KB_MCP_TOKEN}
     enabled: true
 known_plugin_toolsets:
   cli:

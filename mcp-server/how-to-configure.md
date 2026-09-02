@@ -47,8 +47,9 @@ There is no grace period; the old token stops working immediately.
 > Access is the better mechanism — dashboard-managed service tokens, central
 > revocation, blocking at the edge before the Worker runs. It **cannot protect
 > a `workers.dev` hostname**; it needs a custom domain on a zone in the
-> account. There is no zone on this account today. If you add a domain, moving
-> to Access is a clean swap.
+> account. The account now has the `edventures.pet` zone, but no custom MCP
+> hostname or Access policy is deployed; moving from `workers.dev` therefore
+> remains a separate gated infrastructure change.
 
 ---
 
