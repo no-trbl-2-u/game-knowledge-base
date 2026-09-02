@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-09-02-terra-mystica",
+  "created_at": "2026-09-02T06:12:00.000Z",
+  "scout": {"name": "Bathcat", "role": "Field Intelligence and Knowledge Scout"},
+  "target": {"cooperative": 1, "solo_rpg": 1, "rotating_focus": 1, "total": 3},
+  "focus": {"mechanic": "engine-building"},
+  "candidates": [{
+    "slug": "terra-mystica",
+    "title": "Terra Mystica",
+    "bgg_id": 120677,
+    "cohort": "rotating_focus",
+    "status": "ready_for_audit",
+    "discovery_sources": [
+      "https://boardgamegeek.com/boardgame/120677/terra-mystica",
+      "https://www.feuerland-spiele.de/spiele/terra-mystica/"
+    ],
+    "blockers": [],
+    "focus_fit": "Terra Mystica is a competitive engine-building and area-control game whose deterministic development economy and reviewer-described blocking pressure fit the wishlist request.",
+    "coverage": {
+      "deckbuilder": false,
+      "methodology": "Rules coverage counts the one official German core rulebook retrieved from the publisher and used for the bounded claims; expansions, variants, and an exhaustive FAQ/errata inventory remain outside scope. Factual coverage records sourced claim groups without manufacturing a denominator.",
+      "rules": {"recorded": 1, "known_total": 1, "percent": 100},
+      "factual": {"recorded": 13, "known_total": null, "percent": null}
+    }
+  }]
+}
