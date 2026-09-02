@@ -16,7 +16,7 @@ this file tracks what is *not done yet*.
 |---|---|
 | Endpoint | `https://kb-mcp.no-trbl-2-u.workers.dev/mcp` — deployed, all six tools |
 | State | **Live, private and self-deploying.** `MCP_TOKEN` set; merges to `main` deploy automatically |
-| Deploys | Workers Builds connected to `main`; first automatic build not yet observed |
+| Deploys | Workers Builds connected to `main`; automatic exact-commit deployment proven from merged PR #64 onward |
 | Tests | 36 unit/protocol/drift tests + build invariants + a post-deploy smoke check, gated by the `validate` required check |
 | Freshness | `/health` reports the commit it is serving; `npm run smoke` compares it to local `HEAD` |
 
@@ -34,14 +34,16 @@ this file tracks what is *not done yet*.
 
 ---
 
-## Phase 1 — Adoption
+## Phase 1 — Adoption — **Axiomancer connected**
 
-- [ ] **Replace Axiomancer's dead `kb-query` entry.** Its `.mcp.json` still spawns `kb/scripts/kb-mcp-server.mjs`, deleted when the Worker replaced it, so the server fails to connect before authentication is ever attempted — which is why a cloud session with full network access and a correct token still could not reach it. Swap in the HTTP entry from [`how-to-configure.md`](mcp-server/how-to-configure.md#migrating-a-consumer-off-the-old-stdio-server).
-- [ ] **`needs human`** — Give cloud sessions a route to the server. Cloud egress is allowlisted and `workers.dev` is not on the default list, so this is required, not optional. Prefer an **API credential** (the token never enters the session, and it opens egress by itself) over an environment variable plus a Custom allowlist (readable by anyone using the environment). Both are written up in [section 3](mcp-server/how-to-configure.md#3-remote-and-cloud-sessions).
-- [ ] Confirm which option is in force before wiring headers: under an API credential the `.mcp.json` `headers` block must be **omitted**, because `${KB_MCP_TOKEN}` has nothing to expand and would be sent literally.
-- [ ] **`needs human`** — Call `kb_overview` from a real MCP client and confirm all six tools appear. `src/protocol.test.mjs` now proves a spec-following client *can* complete a session, so a failure here is the host's to explain — but no in-repo test can stand in for a particular client.
-- [ ] **`needs human`** — Decide whether Axiomancer keeps `scripts/kb-sync.mjs`: the hosted server removes the need for a synced clone, but grep-first is the documented fallback and dropping the sync removes it.
-- [ ] Update the Axiomancer `kb-query` skill so it prefers the hosted server and falls back to grep when the server is unreachable or unauthorized.
+- [x] Axiomancer PR #267 replaced the deleted stdio entry with the live HTTP endpoint and `${KB_MCP_TOKEN}` bearer header.
+- [x] Axiomancer GitHub Actions has the repository secret and can reach the Worker: post-wiring `/march` and `/digest` runs returned authenticated `tools/list: 200` and discovered all six tools.
+- [x] A real MCP client completed authenticated discovery and `kb_overview` against the deployed corpus during the Axiomancer migration.
+- [x] Axiomancer skills name `kb-query` as the external prior-art surface and require `kb:` / `src-NNN` receipts where evidence is used.
+- [x] Keep `scripts/kb-sync.mjs` for now as a grep-first fallback; the synced `kb/` snapshot is no longer the MCP runtime.
+- [ ] Verify the Axiomancer `kb-query` skill actually falls back to grep-first when the Worker is down, unreachable, or unauthorized — not just that authenticated calls succeed while it's healthy.
+- [ ] **`needs human`** — Configure egress and credential attachment separately for any hosted Claude environment outside GitHub Actions; `workers.dev` is not on every provider's default allowlist.
+- [ ] Add privacy-preserving `tools/call` telemetry. Current Worker invocation counts include health checks, initialization, and `tools/list`, so they cannot prove substantive corpus use.
 
 ---
 
@@ -68,8 +70,8 @@ Both pieces of debt this phase originally left open are now closed:
 
 ## Phase 3 — Hardening
 
-- [ ] **`needs human`** — Buy or move a domain onto the Cloudflare account if you want Cloudflare Access, which cannot protect a `workers.dev` hostname and needs a zone.
-- [ ] Swap the bearer token for Access service tokens once a zone exists, gaining central revocation and edge-level blocking before the Worker runs.
+- [ ] **`needs human`** — Put the Worker behind a custom hostname on the existing `edventures.pet` zone if you want Cloudflare Access; the current `workers.dev` hostname cannot be protected by Access.
+- [ ] Swap the bearer token for Access service tokens after a custom hostname and Access policy are deployed, gaining central revocation and edge-level blocking before the Worker runs.
 - [ ] **`needs human`** — Add a WAF rate-limiting rule, since a leaked token currently has no request ceiling.
 - [ ] **`needs human`** — Write down a rotation procedure and pick a cadence; rotation has no grace period, so every client breaks the moment the secret changes.
 - [ ] **`needs human`** — Turn on Cloudflare alerting for Worker error rate, because `observability` is enabled but nobody is watching it.
@@ -90,7 +92,7 @@ Both pieces of debt this phase originally left open are now closed:
 
 ## Guardrails that must survive all of the above
 
-- **The server stays an accelerator, never a dependency.** A remote server can be down, unreachable, or unauthorized in ways a local process cannot — and in a cloud session it can also be *unroutable*, which is a failure mode a local process never had. Grep-first must keep resolving every query without it.
+- **The Worker is the supported retrieval surface, not the only path.** A remote server can be down, unreachable, or unauthorized in ways a local process cannot — and in a cloud session it can also be *unroutable*, which is a failure mode a local process never had. Grep-first must keep resolving every query without it.
 - **`dist/` stays gitignored.** It is a 22 MB derived copy of the corpus and does not belong in Git history.
 - **Fail closed stays the default.** An unconfigured server is a misconfigured one, not a public one.
 - **Nothing in the corpus pipeline may call this server** — intake, promotion, librarian, and audit passes must not acquire a network dependency on it.

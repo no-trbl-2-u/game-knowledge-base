@@ -106,7 +106,8 @@ validator.
 
 ## Downstream consumer
 
-The Axiomancer repo syncs this corpus to `kb/` via its
-`scripts/kb-sync.mjs` and queries it (grep-first; optionally through the
-`kb-query` MCP server defined in `scripts/kb-mcp-server.mjs` here).
+The supported MCP retrieval surface is the live bearer-authenticated
+`kb-query` Cloudflare Worker over Streamable HTTP. The former stdio server and
+`scripts/kb-mcp-server.mjs` are retired and deleted; never restore them.
+Axiomancer retains its synced `kb/` snapshot only as a grep-first fallback.
 Axiomancer design sessions append coverage requests to `WISHLIST.md`.

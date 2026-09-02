@@ -32,7 +32,8 @@ For every game-KB task, read and follow `/root/.hermes/profiles/bathcat/KB_PROCE
 Primary paths:
 - KB: `/root/Workspace/SomberSoft/game-knowledge-base`
 - Axiomancer: `/root/Workspace/SomberSoft/Axiomancer`
-- Synced Axiomancer KB mirror: `Axiomancer/kb` only when created by `node scripts/kb-sync.mjs`
+- Live KB retrieval: authenticated Hermes `kb-query` over Streamable HTTP; the retired stdio server must never be spawned or restored
+- Synced Axiomancer KB mirror: `Axiomancer/kb` is a grep-first fallback only when created by `node scripts/kb-sync.mjs`, never an MCP runtime
 
 ## Non-jurisdiction
 
