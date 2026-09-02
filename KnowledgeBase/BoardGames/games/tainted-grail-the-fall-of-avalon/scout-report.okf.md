@@ -16,14 +16,14 @@ followups:
     url: "https://boardgamegeek.com/boardgame/264220/tainted-grail-the-fall-of-avalon"
     failure: blocked
     fallback: "BGG search result and indexed review metadata"
-    retry_needs: browser_fetch
-    notes: "Recover current average, Geek Rating, rank, and mechanism list."
+    retry_needs: manual_review
+    notes: "Recover current average, Geek Rating, rank, and mechanism list. Retried 2026-09-02 (librarian) via WebFetch: still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not game-specific. Downgrading to manual_review since a genuine interactive/authenticated browser session is needed next."
   - source_id: "src-004"
     url: "https://awakenrealms.com/"
     failure: other
     fallback: "Official Kickstarter campaign page"
     retry_needs: alternate_source
-    notes: "Recover the exact base-game rulebook, FAQ, and errata assets."
+    notes: "Recover the exact base-game rulebook, FAQ, and errata assets. Retried 2026-09-02 (librarian): awakenrealms.com root now loads (no block) but exposes only a bare page header, no rulebook/FAQ/errata links reachable without further site navigation this pass; still open."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Tainted Grail: The Fall of Avalon"

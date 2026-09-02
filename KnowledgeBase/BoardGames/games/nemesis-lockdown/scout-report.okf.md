@@ -111,10 +111,10 @@ followups:
     notes: "Current accessible inventory is closed. Need historical FAQ/support history beyond the complete current folder; wrapper hash drift is not semantic drift."
   - source_id: null
     url: "https://shop.asmodee.com/nemesis-lockdown-nemld01"
-    failure: blocked
+    failure: other
     fallback: "Search result exposed Item No. NEMLD01; no body claim relies on the blocked page."
-    retry_needs: browser_fetch
-    notes: "Need official retail SKU/UPC/publication receipt and first-print markers."
+    retry_needs: alternate_source
+    notes: "Need official retail SKU/UPC/publication receipt and first-print markers. Retried 2026-09-02 (librarian) via WebFetch: page now returns HTTP 200 (Cloudflare block lifted) but resolves to an Asmodee retailer-account login portal with no product/SKU data exposed pre-login; browser_fetch alone cannot clear this, need a different retail source."
   - source_id: null
     url: "lawful immutable English 2022 first-retail component/card/face document corpus"
     failure: not_found

@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "BGG page URL plus search snippets and a secondary review page quoting BGG Geek Rating 8.57922."
     retry_needs: manual_review
-    notes: "HTTP 401 from XML API during 2026-07-10 scout."
+    notes: "HTTP 401 from XML API during 2026-07-10 scout. Retried 2026-09-02 (librarian): boardgamegeek.com/xmlapi2 still returns HTTP 401 corpus-wide, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not game-specific."
   - source_id: "src-002"
     url: "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/"
     failure: blocked
     fallback: "Official Learn to Play PDF URL from search result; product page retained as official source target."
-    retry_needs: browser_fetch
-    notes: "HTTP 403 from direct product-page fetch during 2026-07-10 scout."
+    retry_needs: manual_review
+    notes: "HTTP 403 from direct product-page fetch during 2026-07-10 scout. Retried 2026-09-02 (librarian) via WebFetch: still HTTP 403. Two automated tool types have now failed; downgrading to manual_review since a genuine interactive/authenticated browser session is needed next."
   - source_id: "src-009"
     url: "https://images-cdn.fantasyflightgames.com/filer_public/2f/b8/2fb895a5-07cb-4784-8a18-b92b3c91e6c9/ahc_rules_reference_v19-compressed.pdf"
     failure: blocked

@@ -16,8 +16,8 @@ followups:
     url: "https://boardgamegeek.com/filepage/104744/legendary-enccounters-rulebook"
     failure: blocked
     fallback: "BGG files listing plus secondary rules walkthrough/review sources were used for high-level summaries."
-    retry_needs: browser_fetch
-    notes: "Official rulebook listing was found, but direct file/PDF extraction was not completed during this cron run."
+    retry_needs: manual_review
+    notes: "Official rulebook listing was found, but direct file/PDF extraction was not completed during this cron run. Retried 2026-09-02 (librarian) via WebFetch: still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not game-specific. Downgrading to manual_review since a genuine interactive/authenticated browser session is needed next."
   - source_id: null
     url: "https://upperdeck.com/"
     failure: not_found

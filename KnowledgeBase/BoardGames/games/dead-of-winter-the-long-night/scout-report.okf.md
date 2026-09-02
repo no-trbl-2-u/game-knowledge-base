@@ -37,8 +37,8 @@ followups:
     url: "https://www.fantasyflightgames.com/en/products/dead-of-winter-the-long-night/"
     failure: blocked
     fallback: "Plaid Hat live and archived primary sources."
-    retry_needs: browser_fetch
-    notes: "HTTP 403 Cloudflare is not evidence of absence."
+    retry_needs: manual_review
+    notes: "HTTP 403 Cloudflare is not evidence of absence. Retried 2026-09-02 (librarian) via WebFetch: still HTTP 403. Two automated tool types have now failed; downgrading to manual_review since a genuine interactive/authenticated browser session is needed next."
 confidence: high
 status: needs_followup
 ---

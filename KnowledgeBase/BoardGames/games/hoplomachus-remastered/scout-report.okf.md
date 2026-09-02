@@ -16,8 +16,8 @@ followups:
     url: "https://boardgamegeek.com/boardgame/338434/hoplomachus-remastered"
     failure: blocked
     fallback: "Search result snippets and a secondary BGG-rating report"
-    retry_needs: browser_fetch
-    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 during this run; recheck later for current average, rank, weight, and comments."
+    retry_needs: manual_review
+    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 during this run; recheck later for current average, rank, weight, and comments. Retried 2026-09-02 (librarian) via WebFetch: still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not game-specific. Downgrading to manual_review since a genuine interactive/authenticated browser session is needed next."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Hoplomachus: Remastered"

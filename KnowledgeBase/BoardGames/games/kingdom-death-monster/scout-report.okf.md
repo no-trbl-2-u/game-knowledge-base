@@ -23,7 +23,7 @@ followups:
     failure: other
     fallback: "Product page was accessible, but no downloadable rulebook was located in the retrieved material."
     retry_needs: manual_review
-    notes: "Retry official rulebook, FAQ, or BGG files."
+    notes: "Retry official rulebook, FAQ, or BGG files. Retried 2026-09-02 (librarian): checked support.kingdomdeath.com/en-US (HTTP 200); its Help Center categories (Combine Order, Store FAQ, Kickstarter/Backerkit, Damaged Items, Gambler's Chest fulfillment, vacation delivery) contain no rulebook, errata, or rules-FAQ content — still open."
 sources:
   - id: "src-001"
     title: "Kingdom Death: Monster — BoardGameGeek"
