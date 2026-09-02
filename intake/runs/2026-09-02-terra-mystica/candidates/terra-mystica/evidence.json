@@ -1,0 +1,44 @@
+{
+  "schema_version": 3,
+  "slug": "terra-mystica",
+  "researcher": {"name": "Bathcat", "role": "Field Intelligence and Knowledge Scout"},
+  "researched_at": "2026-09-02T06:12:00.000Z",
+  "edition_scope": "Released physical Terra Mystica base game. Rules claims are bounded to Feuerland Spiele's official German rulebook PDF v1.2 and the official product page; reception claims use two independent reviews. Expansions, the Automa Solo Box, later Big Box changes, and an exhaustive FAQ/errata inventory are excluded.",
+  "coverage_ledger": {
+    "rules_denominator": [{
+      "authority": "Feuerland Spiele Terra Mystica Regel-Deutsch.pdf",
+      "acquired": true,
+      "official_endpoint": true,
+      "source_ids": ["src-002"],
+      "notes": "Static 20-page German PDF retrieved from the publisher; PDF footer identifies v1.2. Exact byte receipt and SHA-256 are recorded below."
+    }],
+    "faq_errata_inventory": {
+      "scope": "Public base-game FAQ or errata applicable to the claims published here.",
+      "checks": ["The official product page exposes the core rulebook and several supplemental downloads.", "No separate FAQ or errata claim is published in this packet."],
+      "applicable_acquired": 0,
+      "applicable_known_total": null,
+      "notes": "A complete applicable FAQ/errata denominator was not retrieved and is not inferred."
+    },
+    "factual_denominator": [
+      {"claim_group":"identity, player count, duration, authors, and product status","recorded":true,"source_ids":["src-001"]},
+      {"claim_group":"core components and setup","recorded":true,"source_ids":["src-002"]},
+      {"claim_group":"six-round phase structure and income","recorded":true,"source_ids":["src-002","src-003"]},
+      {"claim_group":"terraforming, building, upgrades, shipping, and power","recorded":true,"source_ids":["src-002","src-003"]},
+      {"claim_group":"cult tracks, towns, scoring, and end game","recorded":true,"source_ids":["src-002","src-003"]},
+      {"claim_group":"independent reception: deterministic strategy and teaching friction","recorded":true,"source_ids":["src-003"]},
+      {"claim_group":"independent reception: blocking a player who is ahead and limited interaction","recorded":true,"source_ids":["src-004"]},
+      {"claim_group":"box-cover visual","recorded":true,"source_ids":["src-005"]},
+      {"claim_group":"tabletop visual","recorded":true,"source_ids":["src-006"]},
+      {"claim_group":"local visual reductions and contact sheet","recorded":true,"source_ids":["src-005","src-006"]}
+    ],
+    "exclusions": ["No complete component, faction-balance, FAQ, errata, rating, or cross-variant catch-up denominator is asserted."]
+  },
+  "sources": [
+    {"id":"src-001","title":"Feuerland Spiele — Terra Mystica product page","roles":["identity","official_rules"],"provenance":"official","url":"https://www.feuerland-spiele.de/spiele/terra-mystica/","final_url":"https://www.feuerland-spiele.de/spiele/terra-mystica/","retrieved_at":"2026-09-02T21:49:24.885Z","http_status":200,"content_type":"text/html; charset=utf-8","byte_length":41203,"sha256":"1853bec778122bcbb937e6bfdf0d6edc188c60d7b6f70c1bcd7f375c7ebd9bf2","locator":"Product page: game description, player count, duration, authors, and Downloads section","evidence":"Das Strategiespiel ist zum modernen Klassiker geworden"},
+    {"id":"src-002","title":"Feuerland Spiele — Terra Mystica Spielregel PDF","roles":["official_rules"],"provenance":"official","url":"https://www.feuerland-spiele.de/fileadmin/game/Terra_Mystica/Regel-Deutsch.pdf","final_url":"https://www.feuerland-spiele.de/fileadmin/game/Terra_Mystica/Regel-Deutsch.pdf","retrieved_at":"2026-09-02T06:18:14.742Z","http_status":200,"content_type":"application/pdf","byte_length":10876886,"sha256":"6d2d1ed08d28aac034d034b35a3fd9a43b59a1d0168d1c2412ce7cd653229b62","locator":"PDF pages 2–20; title metadata and v1.2 footer","evidence":"In Terra Mystica führen die Spieler die Geschicke eines von 14 Völkern"},
+    {"id":"src-003","title":"Board Game Quest — Terra Mystica Review","roles":["independent_review"],"provenance":"secondary","url":"https://www.boardgamequest.com/wp-json/wp/v2/posts/5905","final_url":"https://www.boardgamequest.com/wp-json/wp/v2/posts/5905","retrieved_at":"2026-09-02T06:18:15.779Z","http_status":200,"content_type":"application/json; charset=UTF-8","byte_length":25288,"sha256":"b9efaa0f1a7c297b04f2e7ec9befe6a6248510bc61a76497c94cd2fdf1714b07","locator":"Rendered review sections: Game Overview, How to Play, Game Experience, Misses","evidence":"You are gaining a limited number of resources each turn"},
+    {"id":"src-004","title":"SPACE-BIFF! — Terra Terrifica","roles":["independent_review"],"provenance":"secondary","url":"https://spacebiff.com/2014/08/04/terra-mystica/","final_url":"https://spacebiff.com/2014/08/04/terra-mystica/","retrieved_at":"2026-09-02T21:49:26.250Z","http_status":200,"content_type":"text/html; charset=UTF-8","byte_length":117022,"sha256":"7ee0009a4973a3f0fec9a2a5a58a64d7d748ec130d0e3a06152c1373638e5bf2","locator":"Review paragraph on player interaction and dealing with a player who is getting ahead","evidence":"If someone is getting ahead, you build in such a way that it blocks them"},
+    {"id":"src-005","title":"Feuerland Spiele — Terra Mystica box image","roles":["visual"],"provenance":"official","url":"https://www.feuerland-spiele.de/fileadmin/game/Terra_Mystica/TerraMystica_Schachtel_druck.jpg","final_url":"https://www.feuerland-spiele.de/fileadmin/game/Terra_Mystica/TerraMystica_Schachtel_druck.jpg","retrieved_at":"2026-09-02T06:09:18.998Z","http_status":200,"content_type":"image/jpeg","byte_length":4244651,"sha256":"ed631776d3dcc36a71f4f9653f391eab0817d3ea568457b71fcbb9d11a82db49","locator":"Official Terra Mystica product-page download: Schachtel (JPG)","evidence":"Official product image retained as a reduced WebP editorial excerpt for box identity."},
+    {"id":"src-006","title":"Feuerland Spiele — Terra Mystica play scene image","roles":["visual"],"provenance":"official","url":"https://www.feuerland-spiele.de/fileadmin/game/Terra_Mystica/terra_mystica_spielszene.jpg","final_url":"https://www.feuerland-spiele.de/fileadmin/game/Terra_Mystica/terra_mystica_spielszene.jpg","retrieved_at":"2026-09-02T06:09:20.249Z","http_status":200,"content_type":"image/jpeg","byte_length":3882497,"sha256":"03402ae27f9c19c96523b26ed3015135c6a78166062e0473874aaedf17263b5c","locator":"Official Terra Mystica product-page download: Spielszene (JPG)","evidence":"Official tabletop scene image retained as a reduced WebP editorial excerpt for table presence."}
+  ]
+}

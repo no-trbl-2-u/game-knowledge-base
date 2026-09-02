@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-09-02T22:10:00.000Z",
+  "packet_sha256": "aa411f6070e467a2a58f4f2c456df3c623e34d07e001d85ad9a0e3595a0dbab3",
+  "reviewed_source_ids": ["src-001", "src-002", "src-003", "src-004", "src-005", "src-006"],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Exact-head audit reopened all six receipts, confirmed the German v1.2 base-game scope, supported claims, visual reductions, and dynamic HTML semantic witnesses. HTML wrapper hashes drifted, but identity, cited excerpts, and load-bearing markers remained stable; static PDF and source assets matched exactly."
+}
