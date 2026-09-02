@@ -121,5 +121,6 @@ that needs no synced clone or per-session process
 (`mcp-server/how-to-configure.md`). The former stdio server and
 `scripts/kb-mcp-server.mjs` are retired and deleted; never restore or prescribe
 them. Axiomancer retains `scripts/kb-sync.mjs` and its `kb/` snapshot only as a
-grep-first fallback when the live service is unreachable or unauthorized.
+grep-first fallback when the live service is down, unreachable, or
+unauthorized.
 Axiomancer design sessions append coverage requests to `WISHLIST.md`.

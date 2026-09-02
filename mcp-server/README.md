@@ -108,14 +108,17 @@ the interesting question. `npm run smoke` compares the live commit against
 local `HEAD` and says which is which.
 
 Cloudflare Access would be the better mechanism, but it cannot protect a
-`workers.dev` hostname; it needs a custom domain on a zone in the account. See
+`workers.dev` hostname; it needs a custom domain on a zone in the account. The
+account has the `edventures.pet` zone, but no custom MCP hostname or Access
+policy is deployed yet. See
 [`how-to-configure.md`](how-to-configure.md#1-set-the-access-token).
 
 ## Relationship to grep-first
 
 The retired stdio server's design rule was "an ACCELERATOR, never a
 dependency," and a remote server is a *harder* dependency than a local one —
-it can be down, unreachable, or unauthorized. The hosted Worker is now the
-supported MCP retrieval surface, while Axiomancer retains a synced `kb/`
-snapshot as a grep-first fallback. Nothing in the corpus intake, validation,
-promotion, librarian, or audit pipeline calls the Worker.
+it can be down, unreachable, or unauthorized. That rule still holds in
+spirit: the hosted Worker is now the supported MCP retrieval surface, but
+Axiomancer's synced `kb/` snapshot must keep resolving queries on its own as
+a grep-first fallback whenever the Worker isn't. Nothing in the corpus
+intake, validation, promotion, librarian, or audit pipeline calls the Worker.

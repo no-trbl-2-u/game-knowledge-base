@@ -41,6 +41,7 @@ this file tracks what is *not done yet*.
 - [x] A real MCP client completed authenticated discovery and `kb_overview` against the deployed corpus during the Axiomancer migration.
 - [x] Axiomancer skills name `kb-query` as the external prior-art surface and require `kb:` / `src-NNN` receipts where evidence is used.
 - [x] Keep `scripts/kb-sync.mjs` for now as a grep-first fallback; the synced `kb/` snapshot is no longer the MCP runtime.
+- [ ] Verify the Axiomancer `kb-query` skill actually falls back to grep-first when the Worker is down, unreachable, or unauthorized — not just that authenticated calls succeed while it's healthy.
 - [ ] **`needs human`** — Configure egress and credential attachment separately for any hosted Claude environment outside GitHub Actions; `workers.dev` is not on every provider's default allowlist.
 - [ ] Add privacy-preserving `tools/call` telemetry. Current Worker invocation counts include health checks, initialization, and `tools/list`, so they cannot prove substantive corpus use.
 
@@ -91,7 +92,7 @@ Both pieces of debt this phase originally left open are now closed:
 
 ## Guardrails that must survive all of the above
 
-- **The server stays an accelerator, never a dependency.** A remote server can be down, unreachable, or unauthorized in ways a local process cannot — and in a cloud session it can also be *unroutable*, which is a failure mode a local process never had. Grep-first must keep resolving every query without it.
+- **The Worker is the supported retrieval surface, not the only path.** A remote server can be down, unreachable, or unauthorized in ways a local process cannot — and in a cloud session it can also be *unroutable*, which is a failure mode a local process never had. Grep-first must keep resolving every query without it.
 - **`dist/` stays gitignored.** It is a 22 MB derived copy of the corpus and does not belong in Git history.
 - **Fail closed stays the default.** An unconfigured server is a misconfigured one, not a public one.
 - **Nothing in the corpus pipeline may call this server** — intake, promotion, librarian, and audit passes must not acquire a network dependency on it.
