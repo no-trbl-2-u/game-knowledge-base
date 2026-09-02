@@ -198,6 +198,24 @@ tool refuses evidence text that does not occur in the fetched body. PDF and
 video excerpts require a precise page or timestamp and independent audit.
 Do not commit downloaded full rulebooks or source-resolution art.
 
+Receipt metadata records what the researcher observed; it does not declare
+that every live endpoint will remain byte-identical forever. Audit drift by
+source class:
+
+| Source class | Required replay | Hash/byte drift disposition |
+| --- | --- | --- |
+| Static PDF, image, retained artifact, genuinely immutable archive capture | Exact bytes and SHA-256 | Custody defect unless the packet honestly preserves a different observed artifact |
+| Dynamic HTML or dynamic archive replay wrapper | Final URL, source identity, cited excerpt, and every load-bearing semantic marker; also record fresh transport metadata | Wrapper-only drift is recorded and is not by itself `REVISE` |
+| Any source with identity, edition, cited-evidence, or load-bearing semantic drift | Fresh source inspection | `REVISE`, narrow/remove the claim, or bind it to a lawful stable replacement |
+
+A dynamic receipt must carry a retrieval timestamp, locator/evidence witness,
+and observed transport metadata. Never claim exact current replay when only an
+observed-at witness exists. Conversely, never demand repeated packet commits
+merely to chase a nonce, timestamp, compression change, template wrapper, or
+unrelated markup while source identity and consequential evidence remain
+stable. Immutable packet hashing still freezes the bytes Bathcat handed off;
+this rule governs how Mennonite judges the external source on later retrieval.
+
 An evidence packet contains:
 
 ```json
