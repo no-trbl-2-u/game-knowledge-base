@@ -17,6 +17,6 @@ Current corpora:
 - `claude` (on `@claude` mention in issues/comments) — interactive responder for corpus questions and small fixes.
 - `WISHLIST.md` — the demand loop: Axiomancer design sessions append coverage requests; the daily scout consumes top-down; the librarian checks off covered entries.
 
-Model workflows run Claude Sonnet 5 via the `CLAUDE_CODE_OAUTH_TOKEN` repo secret. Consumers (the Axiomancer repo) sync this corpus via its `scripts/kb-sync.mjs` and can query it through the `kb-query` stdio MCP server (`scripts/kb-mcp-server.mjs`, spawned per session by the MCP host — grep-first workflows work without it).
+Model workflows run Claude Sonnet 5 via the `CLAUDE_CODE_OAUTH_TOKEN` repo secret. The supported MCP retrieval surface is the live bearer-authenticated `kb-query` Cloudflare Worker over Streamable HTTP. It replaces the deleted stdio server; do not spawn `scripts/kb-mcp-server.mjs`. Axiomancer keeps `scripts/kb-sync.mjs` only as a grep-first fallback, not as an MCP runtime dependency.
 
 Interactive sessions get the same guardrails via the committed `.claude/settings.json`: a PreToolUse hook blocks hand-edits to generated files and a PostToolUse hook runs the validator on every record written (`.claude/hooks/okf-guard.mjs`; `CLAUDE.md` carries the working rules).

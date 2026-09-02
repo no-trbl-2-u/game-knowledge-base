@@ -113,8 +113,9 @@ Cloudflare Access would be the better mechanism, but it cannot protect a
 
 ## Relationship to grep-first
 
-The stdio server's design rule was "an ACCELERATOR, never a dependency," and a
-remote server is a *harder* dependency than a local one — it can be down,
-unreachable, or unauthorized. That rule still holds: the Axiomancer `kb-query`
-skill greps the synced `kb/` directly and does not need this server. Nothing in
-the corpus pipeline calls it.
+The retired stdio server's design rule was "an ACCELERATOR, never a
+dependency," and a remote server is a *harder* dependency than a local one —
+it can be down, unreachable, or unauthorized. The hosted Worker is now the
+supported MCP retrieval surface, while Axiomancer retains a synced `kb/`
+snapshot as a grep-first fallback. Nothing in the corpus intake, validation,
+promotion, librarian, or audit pipeline calls the Worker.

@@ -1,13 +1,13 @@
-# Hermes profile wiring for project-local MCP servers
+# Hermes profile wiring for project and live MCP servers
 
 Use this when T asks to expose a repository MCP server to the Judge, Tobin, or another durable Hermes profile.
 
 ## First establish server truth
 
-1. Do not infer the server from the repository name or from another entry in `.mcp.json`. If T names `axio-query`, search for that exact server id and script.
-2. Fetch the repository and compare local `main` to `origin/main`. A newly shipped MCP server may exist remotely while the clean local checkout is merely behind. Fast-forward with `git pull --ff-only` when safe.
-3. Read the live root `.mcp.json` and use its exact server id, command, and arguments. Confirm the referenced script exists.
-4. Translate relative repo arguments to absolute paths in Hermes profile config because profiles and the gateway may start from different working directories.
+1. Do not infer transport from the repository name or a historical `.mcp.json`; establish whether the current server is stdio or HTTP from live repository and deployment truth.
+2. Fetch the repository and compare local `main` to `origin/main`. A newly shipped MCP transport may exist remotely while a clean local checkout is merely behind.
+3. For stdio, verify the exact script exists and translate repo-relative arguments to absolute paths. For HTTP, verify the deployed endpoint, authentication mechanism, and health/build identity.
+4. Preserve secrets in the routed profile's mode-600 `.env` and reference them as `${VAR}` from `config.yaml`; never put bearer values in prompts, skills, logs, or repository files.
 
 Axiomancer example:
 
@@ -23,13 +23,13 @@ KB example:
 
 ```yaml
 kb-query:
-  command: node
-  args:
-  - /root/Workspace/SomberSoft/game-knowledge-base/scripts/kb-mcp-server.mjs
-  - --root
-  - /root/Workspace/SomberSoft/game-knowledge-base
+  url: https://kb-mcp.no-trbl-2-u.workers.dev/mcp
+  headers:
+    Authorization: Bearer ${KB_MCP_TOKEN}
   enabled: true
 ```
+
+The KB stdio server and `scripts/kb-mcp-server.mjs` are retired and deleted. Do not restore them. A repository checkout or synced `Axiomancer/kb` tree is a source/grep fallback, not the MCP runtime.
 
 ## Profile scope
 
