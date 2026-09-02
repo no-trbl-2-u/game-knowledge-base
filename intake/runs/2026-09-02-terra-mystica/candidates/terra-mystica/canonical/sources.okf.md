@@ -18,7 +18,7 @@ sources:
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-09-02"
-    notes: "HTTP 200; 41,203 bytes; SHA-256 73e86a3534ddeea22fbb640081d1644c401ca28b6cd30ce780c30455e928b1dd."
+    notes: "HTTP 200; 41,203 bytes; SHA-256 1853bec778122bcbb937e6bfdf0d6edc188c60d7b6f70c1bcd7f375c7ebd9bf2. Repair recapture at 2026-09-02T21:49:24.885Z supersedes the prior dynamic-HTML observation; cited excerpt and source identity remain stable."
   - id: "src-002"
     title: "Feuerland Spiele — Terra Mystica Spielregel PDF"
     url: "https://www.feuerland-spiele.de/fileadmin/game/Terra_Mystica/Regel-Deutsch.pdf"
@@ -39,7 +39,7 @@ sources:
     kind: review
     provenance: secondary
     retrieved_at: "2026-09-02"
-    notes: "HTTP 200 HTML; 117,022 bytes; SHA-256 7ee0009a4973a3f0fec9a2a5a58a64d7d748ec130d0e3a06152c1373638e5bf2."
+    notes: "HTTP 200 HTML; 117,022 bytes; SHA-256 7ee0009a4973a3f0fec9a2a5a58a64d7d748ec130d0e3a06152c1373638e5bf2. Repair recapture at 2026-09-02T21:49:26.250Z confirms the cited excerpt and source identity."
   - id: "src-005"
     title: "Feuerland Spiele — Terra Mystica box image"
     url: "https://www.feuerland-spiele.de/fileadmin/game/Terra_Mystica/TerraMystica_Schachtel_druck.jpg"
