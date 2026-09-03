@@ -27,6 +27,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-16"
     notes: "Time and scale testimony."
+  - id: "src-010"
+    title: "Gloomhaven review: 2017’s biggest board game is astoundingly good — Ars Technica"
+    url: "https://arstechnica.com/gaming/2017/04/gloomhaven-review-2017s-biggest-board-game-is-astoundingly-good/2/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-03"
+    notes: "HTTP 200 dynamic HTML receipt; final URL redirected to the article root. Monster-AI passage remained present at retrieval."
 confidence: medium
 status: verified
 ---
@@ -44,3 +51,8 @@ status: verified
   Source: src-007
   Evidence: Review estimates 15–20 minutes setup, 10–15 minutes teardown, and roughly 150–200 hours for the full campaign.
   Confidence: medium
+
+- Claim: The monster-AI deck system is received as fast to administer while adding meaningful tactical uncertainty.
+  Source: src-010
+  Evidence: Ars Technica calls running the AI "quick and painless" and says its unpredictability can require new plans on the fly.
+  Confidence: high
