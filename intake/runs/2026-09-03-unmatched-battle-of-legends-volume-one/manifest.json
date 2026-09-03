@@ -22,7 +22,7 @@
       "bgg_id": null,
       "cohort": "rotating_focus",
       "focus_fit": "This released physical skirmish game centers asymmetric fighters, tactical movement, and card-driven combat resolution.",
-      "status": "approved",
+      "status": "promoted",
       "discovery_sources": [
         "https://restorationgames.com/shop/battle-of-legends-vol-1-unmatched/"
       ],
@@ -40,7 +40,8 @@
           "known_total": null,
           "percent": null
         }
-      }
+      },
+      "promoted_at": "2026-09-03T03:06:06.610Z"
     }
   ]
 }
