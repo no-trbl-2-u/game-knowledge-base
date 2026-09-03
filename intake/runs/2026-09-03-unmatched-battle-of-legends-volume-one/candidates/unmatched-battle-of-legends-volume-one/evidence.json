@@ -1,0 +1,86 @@
+{
+  "schema_version": 3,
+  "slug": "unmatched-battle-of-legends-volume-one",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-09-03T00:07:41.730Z",
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Unmatched: Battle of Legends, Vol. 1 — Restoration Games product page",
+      "roles": ["identity"],
+      "provenance": "official",
+      "url": "https://restorationgames.com/shop/battle-of-legends-vol-1-unmatched/",
+      "final_url": "https://restorationgames.com/shop/battle-of-legends-vol-1-unmatched/",
+      "retrieved_at": "2026-09-03T00:07:34.796Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 483971,
+      "sha256": "e43b1b90f98622021d2cc7f4489abd4af0859e235eb555119ce079416be892ab",
+      "locator": "HTML title and meta description",
+      "evidence": "This asymmetrical miniature fighting game rewards skill, tactical movement, and more."
+    },
+    {
+      "id": "src-002",
+      "title": "Unmatched: Battle of Legends, Volume 1 official rules",
+      "roles": ["official_rules", "visual"],
+      "provenance": "official",
+      "url": "https://restorationgames.com/wp-content/uploads/2019/07/UM-Battle_of_Legends_vol1_Rules-two-page.pdf",
+      "final_url": "https://restorationgames.com/wp-content/uploads/2019/07/UM-Battle_of_Legends_vol1_Rules-two-page.pdf",
+      "retrieved_at": "2026-09-03T00:07:36.886Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 10116591,
+      "sha256": "9268869aee60c472e1b0ef6b987bfecab030ee7ebc5ec7d5becbc83c15eb695e",
+      "locator": "PDF pages 1–9; setup, maneuver, attack, combat, victory",
+      "evidence": "To win, you must be the first to defeat your opponent’s hero, which happens when they are reduced to zero health."
+    },
+    {
+      "id": "src-003",
+      "title": "(Un)Match This — SPACE-BIFF!",
+      "roles": ["independent_review"],
+      "provenance": "secondary",
+      "url": "https://spacebiff.com/2019/10/10/unmatched/",
+      "final_url": "https://spacebiff.com/2019/10/10/unmatched/",
+      "retrieved_at": "2026-09-03T00:07:38.335Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 154505,
+      "sha256": "639b3b15273f3c5dd51e187eb3887f004bb377660d5e007c96ee2ce8bd879af5",
+      "locator": "Review paragraphs on turn options, combat, player count, and teach time",
+      "evidence": "There are few fighting systems as simple as this one."
+    },
+    {
+      "id": "src-004",
+      "title": "Unmatched: Battle of Legends, Vol. 1 product image",
+      "roles": ["visual"],
+      "provenance": "official",
+      "url": "https://restorationgames.com/wp-content/uploads/2019/07/UM_BoLv1_primary-900x900-1.png",
+      "final_url": "https://restorationgames.com/wp-content/uploads/2019/07/UM_BoLv1_primary-900x900-1.png",
+      "retrieved_at": "2026-09-03T00:07:40.000Z",
+      "http_status": 200,
+      "content_type": "image/png",
+      "byte_length": 244201,
+      "sha256": "64cc5d31fd854304231b15b3dce2a6f8c3417ebaea970eff18264e781ab424f0",
+      "locator": "Full product image",
+      "evidence": "Official product image for Unmatched Battle of Legends Volume 1."
+    },
+    {
+      "id": "src-005",
+      "title": "Unmatched: Battle of Legends, Vol. 1 art detail image",
+      "roles": ["visual"],
+      "provenance": "official",
+      "url": "https://restorationgames.com/wp-content/uploads/2019/07/UM_BoLv1_ArtFocus1.png",
+      "final_url": "https://restorationgames.com/wp-content/uploads/2019/07/UM_BoLv1_ArtFocus1.png",
+      "retrieved_at": "2026-09-03T00:07:41.730Z",
+      "http_status": 200,
+      "content_type": "image/png",
+      "byte_length": 468650,
+      "sha256": "4e09383723100a68db1712a665a352260256ef88d0d90078dbbb40c2988e3f9e",
+      "locator": "Full product art detail image",
+      "evidence": "Official product art detail for Unmatched Battle of Legends Volume 1."
+    }
+  ]
+}

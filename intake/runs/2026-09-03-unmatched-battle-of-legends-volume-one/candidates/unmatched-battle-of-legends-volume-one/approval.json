@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-09-03T03:03:20.000Z",
+  "packet_sha256": "5d6d5df816523750d02cecc9d8f17279a1d27d8408b2549d30976aaeadb100dd",
+  "reviewed_source_ids": ["src-001", "src-002", "src-003", "src-004", "src-005"],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Exact-edition Volume One rules, product identity, independent reception, and visual sources were reopened. Static PDF and image bytes matched receipts; dynamic HTML drifted only in wrapper bytes while identity, cited excerpts, and semantic markers remained intact. Coverage is bounded and honest: no rating, exhaustive card inventory, or FAQ claim is published."
+}

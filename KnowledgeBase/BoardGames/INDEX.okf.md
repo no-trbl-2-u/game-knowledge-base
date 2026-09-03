@@ -57,6 +57,7 @@ BGG complexity weight from the game's discovery source.
 | the-thing-the-boardgame | The Thing: The Boardgame | 2022 | 2.96 | action-selection, cooperative-game, hidden-information, resource-management, semi-cooperative-game, simultaneous-action-selection, variable-player-powers |  | 4 | [packet](games/the-thing-the-boardgame/visuals/packet.okf.md) · [sheet](games/the-thing-the-boardgame/visuals/contact-sheet.webp) | verified | 4 |
 | too-many-bones | Too Many Bones | 2017 | null | campaign-game, cooperative-game, dice-rolling, hand-management, solo-solitaire-game, variable-player-powers | onboarding, setup-teardown, accessibility, strategic-depth | 4 | [packet](games/too-many-bones/visuals/packet.okf.md) · [sheet](games/too-many-bones/visuals/contact-sheet.webp) | needs_followup:7 verified:5 | 12 |
 | unfathomable | Unfathomable | 2021 | 3.12 | cooperative-game, hand-management, hidden-information, negotiation, semi-cooperative-game, variable-player-powers |  | 4 | [packet](games/unfathomable/visuals/packet.okf.md) · [sheet](games/unfathomable/visuals/contact-sheet.webp) | verified | 4 |
+| unmatched-battle-of-legends-volume-one | Unmatched: Battle of Legends, Volume One | 2019 | null | card-play-conflict-resolution, grid-movement, hand-management, multi-use-cards, variable-player-powers | onboarding, downtime, strategic-depth, combat-resolution, player-interaction | 2 | [packet](games/unmatched-battle-of-legends-volume-one/visuals/packet.okf.md) · [sheet](games/unmatched-battle-of-legends-volume-one/visuals/contact-sheet.webp) | verified | 12 |
 
 ## Mechanics → games
 
@@ -69,7 +70,7 @@ BGG complexity weight from the game's discovery source.
 | area-majority-influence | root, scythe, terra-mystica |
 | area-movement | dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, root |
 | campaign-game | arkham-horror-the-card-game, arydia-the-paths-we-dare-tread, betrayal-legacy, cthulhu-death-may-die, descent-journeys-in-the-dark-second-edition, earthborne-rangers, gi-joe-deck-building-game, gloomhaven, kingdom-death-monster, mage-knight, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, star-wars-imperial-assault, tainted-grail-the-fall-of-avalon, the-crew, too-many-bones |
-| card-play-conflict-resolution | mage-knight |
+| card-play-conflict-resolution | mage-knight, unmatched-battle-of-legends-volume-one |
 | catch-up-mechanism | heat-pedal-to-the-metal, the-quacks-of-quedlinburg |
 | cooperative-game | aeons-end, arkham-horror-the-card-game, arydia-the-paths-we-dare-tread, battlestar-galactica-the-board-game, betrayal-legacy, cthulhu-death-may-die, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, descent-journeys-in-the-dark-second-edition, elder-sign, forgotten-waters, gi-joe-deck-building-game, gloomhaven, heroes-of-terrinoth, hoplomachus-remastered, horrified, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, nemesis-lockdown, oathsworn-into-the-deepwood, onirim-second-edition, shadows-over-camelot, slay-the-spire-the-board-game, spirit-island, star-wars-imperial-assault, tainted-grail-the-fall-of-avalon, the-crew, the-thing-the-boardgame, too-many-bones, unfathomable |
 | deck-bag-and-pool-building | aeons-end, arkham-horror-the-card-game, heat-pedal-to-the-metal, hoplomachus-remastered, legendary-encounters-an-alien-deck-building-game, the-quacks-of-quedlinburg |
@@ -79,14 +80,14 @@ BGG complexity weight from the game's discovery source.
 | engine-building | food-chain-magnate, scythe, terra-mystica |
 | force-commitment | dune-imperium |
 | grid-coverage | ark-nova |
-| grid-movement | cthulhu-death-may-die, descent-journeys-in-the-dark-second-edition, kingdom-death-monster, mage-knight, scythe, star-wars-imperial-assault |
-| hand-management | aeons-end, ark-nova, arkham-horror-the-card-game, battlestar-galactica-the-board-game, bloodborne-the-card-game, dark-pact, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, dominion, dune-imperium, earthborne-rangers, elder-sign, gi-joe-deck-building-game, gloomhaven, heat-pedal-to-the-metal, hoplomachus-remastered, horrified, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, nemesis-lockdown, oathsworn-into-the-deepwood, onirim-second-edition, root, shadows-over-camelot, slay-the-spire-the-board-game, spirit-island, tainted-grail-the-fall-of-avalon, the-crew, too-many-bones, unfathomable |
+| grid-movement | cthulhu-death-may-die, descent-journeys-in-the-dark-second-edition, kingdom-death-monster, mage-knight, scythe, star-wars-imperial-assault, unmatched-battle-of-legends-volume-one |
+| hand-management | aeons-end, ark-nova, arkham-horror-the-card-game, battlestar-galactica-the-board-game, bloodborne-the-card-game, dark-pact, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, dominion, dune-imperium, earthborne-rangers, elder-sign, gi-joe-deck-building-game, gloomhaven, heat-pedal-to-the-metal, hoplomachus-remastered, horrified, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, nemesis-lockdown, oathsworn-into-the-deepwood, onirim-second-edition, root, shadows-over-camelot, slay-the-spire-the-board-game, spirit-island, tainted-grail-the-fall-of-avalon, the-crew, too-many-bones, unfathomable, unmatched-battle-of-legends-volume-one |
 | hidden-information | battlestar-galactica-the-board-game, betrayal-legacy, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, nemesis, nemesis-lockdown, shadows-over-camelot, the-crew, the-thing-the-boardgame, unfathomable |
 | income | ark-nova, food-chain-magnate, terra-mystica |
 | legacy-game | betrayal-legacy |
 | market | dark-pact, dominion, food-chain-magnate |
 | modular-board | betrayal-legacy, cthulhu-death-may-die, descent-journeys-in-the-dark-second-edition, mage-knight, nemesis, nemesis-lockdown, spirit-island, star-wars-imperial-assault, terra-mystica |
-| multi-use-cards | dune-imperium, root |
+| multi-use-cards | dune-imperium, root, unmatched-battle-of-legends-volume-one |
 | negotiation | battlestar-galactica-the-board-game, nemesis, root, unfathomable |
 | open-drafting | legendary-encounters-an-alien-deck-building-game |
 | point-to-point-movement | gloomhaven, oathsworn-into-the-deepwood, slay-the-spire-the-board-game, tainted-grail-the-fall-of-avalon |
@@ -100,6 +101,6 @@ BGG complexity weight from the game's discovery source.
 | tableau-building | ark-nova |
 | tile-placement | ark-nova, betrayal-legacy, terra-mystica |
 | trick-taking | the-crew |
-| variable-player-powers | aeons-end, arkham-horror-the-card-game, arydia-the-paths-we-dare-tread, battlestar-galactica-the-board-game, betrayal-legacy, cthulhu-death-may-die, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, descent-journeys-in-the-dark-second-edition, dune-imperium, elder-sign, forgotten-waters, gi-joe-deck-building-game, gloomhaven, heroes-of-terrinoth, hoplomachus-remastered, horrified, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, nemesis-lockdown, oathsworn-into-the-deepwood, root, scythe, shadows-over-camelot, slay-the-spire-the-board-game, spirit-island, star-wars-imperial-assault, tainted-grail-the-fall-of-avalon, terra-mystica, the-thing-the-boardgame, too-many-bones, unfathomable |
+| variable-player-powers | aeons-end, arkham-horror-the-card-game, arydia-the-paths-we-dare-tread, battlestar-galactica-the-board-game, betrayal-legacy, cthulhu-death-may-die, dead-of-winter-a-crossroads-game, dead-of-winter-the-long-night, descent-journeys-in-the-dark-second-edition, dune-imperium, elder-sign, forgotten-waters, gi-joe-deck-building-game, gloomhaven, heroes-of-terrinoth, hoplomachus-remastered, horrified, kingdom-death-monster, legendary-encounters-an-alien-deck-building-game, mage-knight, marvel-champions-the-card-game, nemesis, nemesis-lockdown, oathsworn-into-the-deepwood, root, scythe, shadows-over-camelot, slay-the-spire-the-board-game, spirit-island, star-wars-imperial-assault, tainted-grail-the-fall-of-avalon, terra-mystica, the-thing-the-boardgame, too-many-bones, unfathomable, unmatched-battle-of-legends-volume-one |
 | variable-setup | ark-nova, dark-pact, dominion, food-chain-magnate, heat-pedal-to-the-metal, horrified, nemesis, root, spirit-island, terra-mystica, the-quacks-of-quedlinburg |
 | worker-placement | dune-imperium, forgotten-waters |
