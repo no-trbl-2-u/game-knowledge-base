@@ -30,7 +30,13 @@ that ships beats a complete pass that doesn't):
    a dated note to the entry's `notes:` with what a future attempt
    needs. Never delete an honest failure record.
 3. **Wishlist hygiene.** For each unchecked `WISHLIST.md` entry that the
-   corpus now covers, check it off with a pointer to the game dir.
+   corpus now covers, check it off with a pointer to the game dir. Then
+   drain the inbox: `gh issue list --label wishlist --state open`.
+   Downstream design sessions file coverage requests as issues, and the
+   scout reads only `WISHLIST.md` — so each open issue becomes one
+   unchecked entry in the file (dropping duplicates of entries already
+   there), and the issue is closed with a comment naming the entry it
+   became. An issue that never reaches the file never reaches the scout.
 4. **Dedupe / contradiction check.** Flag (in the commit body, not by
    deleting) near-duplicate docs and claims that contradict across docs
    of the same game.

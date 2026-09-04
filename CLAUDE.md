@@ -120,7 +120,15 @@ The supported MCP retrieval surface is the live hosted `kb-query` service in
 that needs no synced clone or per-session process
 (`mcp-server/how-to-configure.md`). The former stdio server and
 `scripts/kb-mcp-server.mjs` are retired and deleted; never restore or prescribe
-them. Axiomancer retains `scripts/kb-sync.mjs` and its `kb/` snapshot only as a
-grep-first fallback when the live service is down, unreachable, or
-unauthorized.
-Axiomancer design sessions append coverage requests to `WISHLIST.md`.
+them. As of 2026-09-04 the hosted service is the *only* consumer path: Axiomancer
+deleted `scripts/kb-sync.mjs` and its `kb/` snapshot, so no downstream grep
+fallback exists and none should be prescribed. A consumer that cannot reach the
+Worker reports the corpus as unreachable rather than reading a stale copy.
+
+Coverage requests no longer arrive as direct `WISHLIST.md` pushes — protected
+`main` refuses them. Design sessions file a GitHub issue labelled `wishlist`.
+The scout does **not** read issues; `WISHLIST.md` remains the only queue it
+consumes. The weekly `/librarian` pass is the bridge: it drains open `wishlist`
+issues into the file and closes them, so a filed issue reaches the scout within
+one week rather than immediately. Anything needed sooner goes into
+`WISHLIST.md` by hand.
