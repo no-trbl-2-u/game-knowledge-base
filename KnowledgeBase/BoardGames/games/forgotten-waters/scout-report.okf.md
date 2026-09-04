@@ -23,7 +23,7 @@ followups:
     failure: other
     fallback: "The retrieved product page and the dated app FAQ expose support material, but no complete FAQ/errata/support inventory was established."
     retry_needs: alternate_source
-    notes: "HTTP 200; text/html; 62,640 bytes; SHA-256 309c142e00e1d88d7a6cc7dcfbb48790a1ae3521e36d5f000d23cc14ad9d08e5. The page exposes support links, but the complete authoritative FAQ/errata/support inventory remains UNKNOWN."
+    notes: "HTTP 200; text/html; 62,640 bytes; SHA-256 309c142e00e1d88d7a6cc7dcfbb48790a1ae3521e36d5f000d23cc14ad9d08e5. The page exposes support links, but the complete authoritative FAQ/errata/support inventory remains UNKNOWN. Retried 2026-09-04 (librarian): page still HTTP 200 at the identical 62,640-byte length, so the captured state is unchanged. Enumerated its complete PDF set — exactly four official assets: rules_1.pdf, forgotten_waters_entry_book.pdf, shiplog.pdf, and playersheets.pdf, all on media.plaidhatgames.com. No FAQ or errata document appears among them. The publisher-page denominator is therefore closed at four documents; whether a separate FAQ/errata exists off this page remains UNKNOWN and is not an absence claim."
 sources:
   - id: "src-001"
     title: "Forgotten Waters Rulebook"

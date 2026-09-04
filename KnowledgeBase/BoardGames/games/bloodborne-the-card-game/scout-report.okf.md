@@ -39,7 +39,7 @@ followups:
     failure: blocked
     fallback: "Dated original-URL proxy and direct assets returned HTTP 200; proxy currently lists Rulebook 79.01 MB."
     retry_needs: manual_review
-    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it."
+    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it. Retried 2026-09-04 (librarian): the Cloudflare block has LIFTED — the product page now returns HTTP 200 (72,449 bytes) to a direct fetch. Enumerated it: it exposes exactly one PDF, the official rulebook at https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf, plus a link to the publisher-wide portal https://support.cmon.com/hc/en-us. That portal was also retrieved (HTTP 200) and is a fulfillment/customer-service help centre — its article set is shipping, refunds, pledge-manager, damaged-component and 'How do I get the Rulebook for my game' topics — not a rules FAQ/errata archive. This narrows but does not close the entry, and is NOT an absence claim. Next retrieval target: the dated rulebook PDF itself for any embedded errata/version marker."
 confidence: high
 status: needs_followup
 ---
