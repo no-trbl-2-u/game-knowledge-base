@@ -2,7 +2,8 @@ name: librarian
 
 # Weekly corpus maintenance (see .claude/commands/librarian.md): fix
 # schema drift, drain status: needs_followup by retrying failed sources,
-# check off covered wishlist entries, flag dupes. Commits to main.
+# check off covered wishlist entries, flag dupes. Delivers one commit on a
+# kb/librarian-<date> branch and opens a PR against protected main.
 # Scheduled before the daily 06:00 UTC scout so the two never collide.
 
 on:
