@@ -40,8 +40,9 @@ this file tracks what is *not done yet*.
 - [x] Axiomancer GitHub Actions has the repository secret and can reach the Worker: post-wiring `/march` and `/digest` runs returned authenticated `tools/list: 200` and discovered all six tools.
 - [x] A real MCP client completed authenticated discovery and `kb_overview` against the deployed corpus during the Axiomancer migration.
 - [x] Axiomancer skills name `kb-query` as the external prior-art surface and require `kb:` / `src-NNN` receipts where evidence is used.
-- [x] Keep `scripts/kb-sync.mjs` for now as a grep-first fallback; the synced `kb/` snapshot is no longer the MCP runtime.
-- [ ] Verify the Axiomancer `kb-query` skill actually falls back to grep-first when the Worker is down, unreachable, or unauthorized — not just that authenticated calls succeed while it's healthy.
+- [x] ~~Keep `scripts/kb-sync.mjs` for now as a grep-first fallback~~ — **reversed 2026-09-04** (Axiomancer PR #285). The script, the gitignored `kb/` snapshot, and every grep-first instruction that pointed at it are deleted. The hosted Worker is now Axiomancer's sole route to the corpus.
+- [x] ~~Verify the Axiomancer `kb-query` skill actually falls back to grep-first when the Worker is down~~ — moot; there is no fallback to verify. The replacement requirement, now written into Axiomancer's skill and design agents: an unreachable Worker is reported as *prior-art grounding unavailable for this run*, and anything answered from memory is labeled UNGROUNDED. A stale local copy is never substituted, and a remembered figure is never presented as a corpus fact.
+- [ ] **`needs human`** — Accept the availability trade this makes explicit: a Worker outage now removes prior-art grounding from Axiomancer design sessions outright rather than degrading it to a lagging snapshot. Nothing in Axiomancer's build, test, or gameplay path depends on the corpus, so the blast radius is research quality, not runtime.
 - [ ] **`needs human`** — Configure egress and credential attachment separately for any hosted Claude environment outside GitHub Actions; `workers.dev` is not on every provider's default allowlist.
 - [ ] Add privacy-preserving `tools/call` telemetry. Current Worker invocation counts include health checks, initialization, and `tools/list`, so they cannot prove substantive corpus use.
 
