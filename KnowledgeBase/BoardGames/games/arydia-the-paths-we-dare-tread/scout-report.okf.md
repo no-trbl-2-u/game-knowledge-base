@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Used BGG search result metadata and a retailer's BGG-facing rating signal."
     retry_needs: manual_review
-    notes: "Direct BGG page and XML API returned access errors during this run. Retried 2026-08-19 (librarian): still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not a game-specific issue. Downgraded to manual_review since automated fetch has failed twice."
+    notes: "Direct BGG page and XML API returned access errors during this run. Retried 2026-08-19 (librarian): still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not a game-specific issue. Downgraded to manual_review since automated fetch has failed twice. Retried 2026-09-04 (librarian): still HTTP 403, third consecutive failure. A real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial, confirming that an ordinary browser session is not sufficient; an authenticated/interactive BGG session or a BGG-derived mirror is required."
 sources:
   - id: "src-001"
     title: "Arydia: The Paths We Dare Tread — BoardGameGeek"

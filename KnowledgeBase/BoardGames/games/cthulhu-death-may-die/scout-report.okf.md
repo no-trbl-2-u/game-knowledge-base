@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "BGG search result and page URL used as discovery lead; no numeric rating asserted."
     retry_needs: alternate_source
-    notes: "Direct page retrieval returned HTTP 403 on 2026-07-28."
+    notes: "Direct page retrieval returned HTTP 403 on 2026-07-28. Retried 2026-09-04 (librarian): still HTTP 403, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. Systemic to boardgamegeek.com from this environment. No body claim depends on this source, so the document remains verified; this entry stays open only as a discovery-provenance record."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Cthulhu: Death May Die"

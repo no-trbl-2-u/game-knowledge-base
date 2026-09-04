@@ -16,14 +16,14 @@ followups:
     url: "https://boardgamegeek.com/boardgame/254591/heroes-of-terrinoth"
     failure: blocked
     fallback: "DuckDuckGo discovery snippets plus BoardGameMatcher BGG-derived metadata"
-    retry_needs: browser_fetch
-    notes: "Direct page returned HTTP 403 and XML API returned HTTP 401; recheck current BGG statistics and comments later."
+    retry_needs: manual_review
+    notes: "Direct page returned HTTP 403 and XML API returned HTTP 401; recheck current BGG statistics and comments later. Retried 2026-09-04 (librarian): still HTTP 403/401. A real headless Chromium session (Playwright) was also served the Cloudflare 'Performing security verification' interstitial and never cleared it, so browser_fetch is exhausted for boardgamegeek.com from this environment; downgraded to manual_review."
   - source_id: "src-003"
     url: "https://www.fantasyflightgames.com/en/products/heroes-of-terrinoth/"
     failure: blocked
     fallback: "Official Fantasy Flight CDN rulebook and product-page search snippet"
-    retry_needs: browser_fetch
-    notes: "Publisher landing page returned HTTP 403; rulebook remained fully accessible."
+    retry_needs: manual_review
+    notes: "Publisher landing page returned HTTP 403; rulebook remained fully accessible. Retried 2026-09-04 (librarian): fantasyflightgames.com now answers a Cloudflare JS challenge ('Just a moment...'), and a real headless Chromium session (Playwright) was also held at 'Performing security verification' without clearing. browser_fetch is exhausted for this domain from this environment; downgraded to manual_review. Note the official rulebook CDN asset is unaffected, so no rules claim depends on this entry."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Heroes of Terrinoth"

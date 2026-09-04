@@ -16,14 +16,8 @@ followups:
     url: "https://boardgamegeek.com/boardgame/264220/tainted-grail-the-fall-of-avalon"
     failure: blocked
     fallback: "BGG search result and indexed review metadata"
-    retry_needs: browser_fetch
-    notes: "Recover current average, Geek Rating, rank, and mechanism list."
-  - source_id: "src-004"
-    url: "https://awakenrealms.com/"
-    failure: other
-    fallback: "Official Kickstarter campaign page"
-    retry_needs: alternate_source
-    notes: "Recover the exact base-game rulebook, FAQ, and errata assets."
+    retry_needs: manual_review
+    notes: "Recover current average, Geek Rating, rank, and mechanism list. Retried 2026-09-04 (librarian): still HTTP 403. Escalated the attempt to a real headless Chromium session (Playwright), which also received the Cloudflare 'Performing security verification' interstitial and never cleared it, so `browser_fetch` is now demonstrably exhausted for boardgamegeek.com from this environment; downgraded to manual_review. A future pass needs an authenticated/interactive BGG session or a BGG-derived mirror as an alternate document."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Tainted Grail: The Fall of Avalon"
@@ -47,12 +41,12 @@ sources:
     retrieved_at: "2026-07-20"
     notes: "Review result; URL is a search-result lead and requires audit."
   - id: "src-004"
-    title: "Awaken Realms support / rulebook lead"
-    url: "https://awakenrealms.com/"
-    kind: other
+    title: "Awaken Realms — official Downloads page"
+    url: "https://awakenrealms.com/download"
+    kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-20"
-    notes: "Official domain; exact asset not recovered."
+    retrieved_at: "2026-09-04"
+    notes: "Publisher asset index; exact rulebook and FAQ assets recovered 2026-09-04. See sources.okf.md src-005..src-007."
 confidence: medium
 status: needs_followup
 ---
@@ -98,6 +92,20 @@ The available review metadata marks downtime high, a warning that narrative brea
 
 The first chapter taught the survival and campaign vocabulary in a staged sequence before exposing the full narrative burden.
 
+## Librarian pass 2026-09-04
+
+- Resolved followup `src-004`. The publisher rebuilt awakenrealms.com as a client-rendered
+  single-page app, which is why a plain fetch of the bare domain returned only an empty shell
+  in July. Rendering `https://awakenrealms.com/download` and expanding the game's accordion
+  recovered the official asset index. The exact base-game rulebook (src-005) and FAQ v1.0
+  (src-006) are now registered with retrieval receipts, plus the revised Rulebook 2.0
+  (src-007). No English-language errata document is published in that group; only a German
+  errata asset is listed. That is recorded as a narrowed gap, not an absence claim.
+- `src-001` (BGG) remains open and was downgraded from `browser_fetch` to `manual_review`
+  after a real Chromium session also failed the Cloudflare challenge.
+
 ## Open questions
 
-Current BGG score/rank, official rulebook, FAQ, errata, exact turn sequence, and a broader review sample.
+Current BGG score/rank, exact turn sequence, whether an English errata exists off the official
+Downloads index, and a broader review sample. The official rulebook and FAQ are no longer open
+questions as of 2026-09-04.
