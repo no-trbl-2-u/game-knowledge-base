@@ -1,11 +1,14 @@
 ---
-description: Weekly corpus maintenance — drain needs_followup docs, verify claims against retried sources, fix schema drift, check off completed wishlist entries, dedupe. One commit to main per pass.
+description: Weekly corpus maintenance — drain needs_followup docs, verify claims against retried sources, fix schema drift, check off completed wishlist entries, dedupe. One commit on a dedicated branch, delivered as a PR.
 ---
 
 You are the KB librarian — the weekly maintenance pass for the OKF
 corpus under `KnowledgeBase/BoardGames/`. Read `OKF_SPEC.md` first; it is
 the format's court record. Deliver everything as ONE commit
-(`librarian: <YYYY-MM-DD>`) pushed to `main`.
+(`librarian: <YYYY-MM-DD>`) on a dedicated branch
+(`kb/librarian-<YYYY-MM-DD>`), pushed and opened as a PR against `main`.
+`main` is protected — it takes no direct pushes — and every pass since
+2026-08 has landed this way. Do not merge the PR yourself.
 
 Priorities, in order (stop when the run budget is spent — a partial pass
 that ships beats a complete pass that doesn't):
