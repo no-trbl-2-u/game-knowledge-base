@@ -123,10 +123,10 @@ Existing-game maintenance pass for the wishlist request: document Gloomhaven's m
 
 - BoardGameGeek: identified through search; direct page blocked.
 - BGG-facing score mirror: retrieved successfully.
-- Publisher page: not confirmed.
-- Official rulebook: not located.
+- Publisher page: confirmed and retrieved as src-008; it links the official Gloomhaven resources and edition-bound materials.
+- 2017 English base-game rulebook: located and inspected as the static PDF receipt src-009; the retrieved artifact is secondary provenance.
 - Structured rules: Dized retrieved.
-- Review sources: The Opinionated Gamers and Co-op Board Games.
+- Review sources: The Opinionated Gamers, Co-op Board Games, and Ars Technica (src-010).
 
 ## Rulebook extraction status
 
@@ -150,10 +150,10 @@ Existing-game maintenance pass for the wishlist request: document Gloomhaven's m
 
 ## Run validation
 
-- `WISHLIST.md` entry checked off: n/a — wishlist empty.
-- `node scripts/generate-index.mjs` run after writing docs: pending.
-- `node scripts/validate-okf.mjs` exit 0 before push: pending.
-- 2026-08-31 (librarian): the two `pending` lines above record the state at scout time only. This game is promoted canonical corpus; `node scripts/generate-index.mjs` and `node scripts/validate-okf.mjs` both ran green in the 2026-08-31 librarian pass.
+- `WISHLIST.md` entry checked off: yes — the Gloomhaven monster ability-decks request was consumed by this maintenance pass.
+- `node scripts/generate-index.mjs` run after writing docs: passed; index fresh.
+- `node scripts/validate-okf.mjs` exit 0 before push: passed; 2,798 files clean.
+- 2026-08-31 (librarian): the earlier scout-state observations were superseded; this game is promoted canonical corpus, and `node scripts/generate-index.mjs` plus `node scripts/validate-okf.mjs` both ran green in the 2026-08-31 librarian pass.
 
 ## Monster ability-deck findings
 
