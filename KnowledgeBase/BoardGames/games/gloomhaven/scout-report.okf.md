@@ -102,14 +102,14 @@ sources:
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-09-03"
-    notes: "Official Cephalofair-linked static 74-page PDF; HTTP 200, 51,013,512 bytes, SHA-256 a8bb3b2e3d875f325d12da48ca4c6fd7807876b3b0353bf4052a74678d339f27. OCR inspection found the same eight-card and shuffle-icon architecture, but the 2025/Second Edition artifact is not backdated into this 2017 scope."
+    notes: "Official Cephalofair-linked static 74-page PDF; HTTP 200, 51,013,512 bytes, SHA-256 a8bb3b2e3d875f325d12da48ca4c6fd7807876b3b0353bf4052a74678d339f27. OCR inspection found the card-driven and shuffle-icon architecture, but the 2025/Second Edition artifact is not backdated into this 2017 scope."
 confidence: medium
 status: needs_followup
 ---
 
 ## Scout objective
 
-Existing-game maintenance pass for the wishlist request: document Gloomhaven's monster ability-deck size, shuffle-icon reshuffle rule, and reception of its card-driven enemy AI within the 2017 base-game scope.
+Existing-game maintenance pass for the wishlist request: document Gloomhaven's monster ability-card rules, shuffle-icon reshuffle rule, and reception of its card-driven enemy AI within the 2017 base-game scope.
 
 ## Why this game
 
@@ -157,9 +157,9 @@ Existing-game maintenance pass for the wishlist request: document Gloomhaven's m
 
 ## Monster ability-deck findings
 
-- Claim: Each monster set has an eight-card ability deck, and one card is played per monster type on the map each round; all monsters in that type use the same card.
+- Claim: At the start of each round, one card is played for each monster type currently on the map from its respective monster ability deck; all monsters in that type use the same card.
   Source: src-009
-  Evidence: 2017 rulebook PDF page 10, "Monster Ability Cards," and page 3's component list.
+  Evidence: 2017 rulebook PDF page 10, "Monster Ability Cards," says one card is played for each monster type from its respective deck and that the card determines the abilities for every monster of that type.
   Confidence: high
 
 - Claim: A card's shuffle icon returns that monster type's discarded ability cards to its deck at end of round, while abilities absent from the card are not performed.
@@ -172,7 +172,7 @@ Existing-game maintenance pass for the wishlist request: document Gloomhaven's m
   Evidence: Ars Technica's monster-AI passage calls it "quick and painless" and describes new plans on the fly.
   Confidence: high
 
-The 2025/Second Edition official FAQ and rulebook were retrieved as current authorities but are not silently merged into this 2017 base-game scope. Their existence resolves the earlier source-location uncertainty, not the edition boundary.
+The per-set ability-card count remains unknown in this record: the retrieved 2017 rulebook pages used here do not state it. The 2025/Second Edition official FAQ and rulebook were retrieved as current authorities but are not silently merged into this 2017 base-game scope. Their existence resolves the earlier source-location uncertainty, not the edition boundary.
 
 ## Strongest design lessons
 
@@ -188,4 +188,4 @@ It reduced state-restoration and setup burden without weakening the campaign's s
 
 ## Open questions
 
-Verify exact BGG metadata directly and, if a future pass needs publisher-hosted first-edition bytes rather than the retrieved mirror, locate an edition-matched Cephalofair-hosted or authorized archive copy. The monster-deck claims in this pass have page-level citations and an exact static receipt, but the 2017 source is secondary provenance.
+Verify exact BGG metadata directly and, if a future pass needs publisher-hosted first-edition bytes rather than the retrieved mirror, locate an edition-matched Cephalofair-hosted or authorized archive copy. The 2017 source is secondary provenance; its cited pages support the card-driven and shuffle-icon rules but do not establish an exact per-set card count.

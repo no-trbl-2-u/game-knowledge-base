@@ -63,9 +63,9 @@ status: verified
   Evidence: The Cephalofair Gloomhaven page links a "Gloomhaven FAQ" hosted at cephalofairgames.github.io and lists major errata for First Printing (2025) copies.
   Confidence: high
 
-- Claim: Each monster set uses a deck of eight monster ability cards; at the start of a round, one card is played for each monster type currently on the map, and that card governs both normal and elite monsters of that type for the round.
+- Claim: At the start of a round, one card is played for each monster type currently on the map from its respective monster ability deck, and that card governs both normal and elite monsters of that type for the round.
   Source: src-009
-  Evidence: The 2017 rulebook's "Monster Ability Cards" section on PDF page 10 says one card is played for each monster type from its deck and that the card determines the abilities for every monster of that type; the component list on PDF page 3 lists 232 monster ability cards, while the card section states the per-set deck size is eight.
+  Evidence: The 2017 rulebook's "Monster Ability Cards" section on PDF page 10 says one card is played for each monster type from its respective deck and that the card determines the abilities for every monster of that type, including normal and elite monsters.
   Confidence: high
 
 - Claim: A monster ability card's shuffle icon sends that monster set's discard pile back into its draw deck at the end of the round; monsters only perform the abilities listed on that round's card.

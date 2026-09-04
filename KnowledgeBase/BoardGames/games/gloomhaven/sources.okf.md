@@ -95,7 +95,7 @@ sources:
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-09-03"
-    notes: "Official Cephalofair support link resolves to this static 74-page PDF via Drive download URL https://drive.usercontent.google.com/download?id=16TmmCKa6zVVObj2qM-vIj9RcEAC3nfMT&export=download; HTTP 200, 51,013,512 bytes, SHA-256 a8bb3b2e3d875f325d12da48ca4c6fd7807876b3b0353bf4052a74678d339f27. OCR inspection found the same eight-card and shuffle-icon architecture on PDF pages 38 and 44, but this 2025/Second Edition artifact is kept separate from the 2017 scope."
+    notes: "Official Cephalofair support link resolves to this static 74-page PDF via Drive download URL https://drive.usercontent.google.com/download?id=16TmmCKa6zVVObj2qM-vIj9RcEAC3nfMT&export=download; HTTP 200, 51,013,512 bytes, SHA-256 a8bb3b2e3d875f325d12da48ca4c6fd7807876b3b0353bf4052a74678d339f27. OCR inspection found the card-driven and shuffle-icon architecture on PDF pages 38 and 44, but this 2025/Second Edition artifact is kept separate from the 2017 scope."
 confidence: high
 status: verified
 ---
