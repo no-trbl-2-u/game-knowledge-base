@@ -16,8 +16,9 @@
 //             back to the agent (exit 2 + findings on stderr). Instant
 //             schema feedback instead of a red validate job later.
 // stop      : warn when a turn ends with a dirty tree or unpushed commits
-//             (the corpus passes commit+push to main as one atomic act;
-//             leftover work is invisible to the next scheduled pass). With
+//             (main is protected: each pass commits, pushes its own branch,
+//             and opens a PR; leftover work is invisible to the next
+//             scheduled pass). With
 //             KB_STRICT_STOP=1 it blocks the stop instead — and breaks its
 //             own cycle after 3 consecutive blocks, so a genuinely wedged
 //             turn can still end. Ported from Axiomancer's guard.mjs.
@@ -47,6 +48,12 @@ const GENERATED = {
     'scripts/generate-dawncaster-keywords-okf.py (one-shot generator; regenerate, do not hand-edit)',
   'KnowledgeBase/DigitalCardGames/dawncaster/keywords.json':
     'scripts/generate-dawncaster-keywords-okf.py (one-shot generator; regenerate, do not hand-edit)',
+  'KnowledgeBase/DigitalCardGames/slay-the-spire/cards.csv':
+    'node scripts/generate-slay-the-spire-card-sidecars.mjs',
+  'KnowledgeBase/DigitalCardGames/slay-the-spire/cards.json':
+    'node scripts/generate-slay-the-spire-card-sidecars.mjs',
+  'KnowledgeBase/DigitalCardGames/slay-the-spire/card-index.csv':
+    'node scripts/generate-slay-the-spire-card-sidecars.mjs',
 }
 
 const normalize = (p) => {
@@ -151,10 +158,11 @@ function stopCheck(input) {
     + (dirty && unpushed ? ' + ' : '')
     + (unpushed ? `${unpushed} unpushed commit(s)` : '')
   const message =
-    `okf-guard: turn is ending with ${reason}. Corpus passes commit and `
-    + 'push to main as a single atomic act — the next scheduled pass '
-    + 'pulls from origin and will not see this work. Finish the '
-    + 'commit+push, or note the leftover in the pass\'s own log.'
+    `okf-guard: turn is ending with ${reason}. Corpus passes commit, push `
+    + 'their pass branch, and open its PR before ending (main is protected) '
+    + '— the next scheduled pass pulls from origin and will not see this '
+    + 'work. Finish the commit + push + PR, or note the leftover in the '
+    + 'pass\'s own log.'
 
   const strict = process.env.KB_STRICT_STOP === '1'
   const alreadyContinuing = input?.stop_hook_active === true
@@ -172,6 +180,8 @@ function selfTest() {
       () => preWrite('KnowledgeBase/BoardGames/INDEX.okf.md') === 2],
     ['pre-write blocks a generated sidecar (backslash path)',
       () => preWrite('KnowledgeBase\\DigitalCardGames\\dawncaster\\cards.csv') === 2],
+    ['pre-write blocks a generated Slay the Spire sidecar',
+      () => preWrite('KnowledgeBase/DigitalCardGames/slay-the-spire/card-index.csv') === 2],
     ['pre-write allows a normal record',
       () => preWrite('KnowledgeBase/BoardGames/games/root/index.okf.md') === 0],
     ['pre-write allows non-KB files',

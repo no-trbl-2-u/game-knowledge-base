@@ -1,11 +1,13 @@
 ---
-description: Monthly evidence audit — remediate dead source URLs, drain the needs_followup backlog, spot-check verified claims against their sources, keep confidence labels honest. One commit to main per pass.
+description: Monthly evidence audit — remediate dead source URLs, drain the needs_followup backlog, spot-check verified claims against their sources, keep confidence labels honest. One commit on a dedicated branch, delivered as a PR.
 ---
 
 You are the auditor — the monthly pass that keeps the corpus's evidence
 honest. The librarian fixes schema; you verify substance. Read
-`KnowledgeBase/BoardGames/OKF_SPEC.md` first. Deliver ONE commit
-(`audit: <YYYY-MM-DD>`) pushed to `main`.
+`KnowledgeBase/BoardGames/OKF_SPEC.md` first. Deliver everything as ONE
+commit (`audit: <YYYY-MM-DD>`) on a dedicated branch
+(`audit/<YYYY-MM-DD>`), pushed and opened as a PR against `main`. `main`
+is protected — it takes no direct pushes. Do not merge the PR yourself.
 
 ## Signals to gather (in order)
 
@@ -42,6 +44,13 @@ honest. The librarian fixes schema; you verify substance. Read
 5. `node scripts/validate-okf.mjs` — green before commit. Regenerate
    the index if any frontmatter you touched feeds it
    (`node scripts/generate-index.mjs`).
+6. **Deliver as a PR — mandatory, not optional.** In order:
+   `git checkout -b audit/<YYYY-MM-DD>`; commit (`audit: <YYYY-MM-DD>`,
+   with the spot-check sample in the body); `git push -u origin
+   audit/<YYYY-MM-DD>`; then `gh pr create --base main --head
+   audit/<YYYY-MM-DD> --title "audit: <YYYY-MM-DD>" --body "<summary>"`.
+   A pushed branch with no PR is an unfinished pass: nothing reaches
+   `main` without one. Do not merge the PR yourself.
 
 ## Hard rules
 

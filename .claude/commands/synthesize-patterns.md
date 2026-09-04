@@ -1,11 +1,14 @@
 ---
-description: Weekly cross-game synthesis — build/update patterns/ docs (one per mechanic or better-if label) from claims across all games. One commit to main per pass.
+description: Weekly cross-game synthesis — build/update patterns/ docs (one per mechanic or better-if label) from claims across all games. One commit on a dedicated branch, delivered as a PR.
 ---
 
 You are the patterns synthesizer — the weekly pass that turns per-game
 OKF documents into cross-game design knowledge under
 `KnowledgeBase/BoardGames/patterns/`. Read `OKF_SPEC.md` first. Deliver
-ONE commit (`patterns: <YYYY-MM-DD>`) pushed to `main`.
+everything as ONE commit (`patterns: <YYYY-MM-DD>`) on a dedicated branch
+(`patterns/<YYYY-MM-DD>`), pushed and opened as a PR against `main`.
+`main` is protected — it takes no direct pushes. Do not merge the PR
+yourself.
 
 ## What a pattern doc is
 
@@ -56,6 +59,14 @@ games — it never invents claims. Body sections:
    job never engaged. The RUNLOG commit happens even when nothing else
    changed.
 6. Run `node scripts/validate-okf.mjs` — green before commit.
+7. **Deliver as a PR — mandatory, not optional.** In order:
+   `git checkout -b patterns/<YYYY-MM-DD>`; commit
+   (`patterns: <YYYY-MM-DD>`); `git push -u origin patterns/<YYYY-MM-DD>`;
+   then `gh pr create --base main --head patterns/<YYYY-MM-DD>
+   --title "patterns: <YYYY-MM-DD>" --body "<RUNLOG line + summary>"`.
+   A pushed branch with no PR is an unfinished pass: nothing reaches
+   `main` without one, and the workflow's RUNLOG check fails the run.
+   Do not merge the PR yourself.
 
 ## Hard rules
 
@@ -68,7 +79,8 @@ games — it never invents claims. Body sections:
 - No emojis, no `Co-Authored-By`. Nothing outside `patterns/` and
   `WISHLIST.md` is edited by this pass.
 - If no game dirs changed since the last pass, write the RUNLOG line
-  saying so and commit just that — never exit without a trace. (A
+  saying so and commit just that, still delivered as a branch + PR —
+  never exit without a trace. (A
   silent no-op is indistinguishable from a run that misread the log;
   the 2026-07-05 pass produced nothing in a week where game dirs HAD
   changed, and only the absence of any record made that invisible.)
