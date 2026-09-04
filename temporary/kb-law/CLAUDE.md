@@ -1,3 +1,5 @@
+> ARCHIVED 2026-09-04 — superseded by /CLAUDE.md. Kept as a dated snapshot; the kb/ grep-fallback described below no longer exists.
+
 # CLAUDE.md — game-knowledge-base
 
 SomberSoft OKF knowledge base: board-game rules/reception research plus a

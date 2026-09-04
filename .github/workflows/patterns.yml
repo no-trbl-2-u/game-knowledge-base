@@ -2,8 +2,9 @@ name: patterns
 
 # Weekly cross-game synthesis (see .claude/commands/synthesize-patterns.md):
 # folds the week's new game docs into patterns/<label>.okf.md, keyed to the
-# better-if taxonomy and major mechanics. Commits to main. Scheduled before
-# the daily 06:00 UTC scout so the two never collide.
+# better-if taxonomy and major mechanics. Delivers one commit on a
+# patterns/<date> branch and opens a PR against protected main. Scheduled
+# before the daily 06:00 UTC scout so the two never collide.
 
 on:
   schedule:
@@ -29,9 +30,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Capture pre-run HEAD
-        id: pre
-        run: echo "head=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      # The pass names its branch patterns/<YYYY-MM-DD>; capture the date
+      # before the agent starts so the check below looks for the same name.
+      - name: Capture run date
+        id: run
+        run: echo "date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
 
       - name: Run Claude (patterns synthesis)
         uses: anthropics/claude-code-action@v1
@@ -48,12 +51,29 @@ jobs:
       # Every patterns run must log to RUNLOG.md, even a no-op — the
       # 2026-07-05 incident was a run that ended silently and left no
       # evidence it had happened. Prose alone didn't hold; this does.
+      #
+      # The check inspects what reached origin, not the runner's local clone:
+      # a local-only commit used to satisfy a pre..HEAD grep and then vanish
+      # with the runner. main is protected, so the pass delivers as a
+      # patterns/<date> branch plus a PR — both must exist, and the branch
+      # must carry a RUNLOG commit beyond origin/main.
       - name: Enforce RUNLOG rule
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
         run: |
-          if git log "${{ steps.pre.outputs.head }}..HEAD" --name-only --format= \
-              | grep -q '^KnowledgeBase/BoardGames/patterns/RUNLOG.md$'; then
-            echo "RUNLOG row committed — rule satisfied."
-          else
-            echo "::error title=Silent patterns run::No commit between ${{ steps.pre.outputs.head }} and HEAD touched KnowledgeBase/BoardGames/patterns/RUNLOG.md. Every run logs, even no-ops (see the 2026-07-05 incident in RUNLOG.md)."
+          branch="patterns/${{ steps.run.outputs.date }}"
+          if ! git fetch origin main "$branch"; then
+            echo "::error title=Silent patterns run::origin has no branch $branch. Every run pushes patterns/<date> and opens a PR, even for a no-op (see the 2026-07-05 incident in RUNLOG.md)."
             exit 1
           fi
+          if ! git log "origin/main..origin/$branch" --name-only --format= \
+              | grep -q '^KnowledgeBase/BoardGames/patterns/RUNLOG.md$'; then
+            echo "::error title=Silent patterns run::No commit on origin/$branch beyond origin/main touches KnowledgeBase/BoardGames/patterns/RUNLOG.md. Every run logs, even no-ops (see the 2026-07-05 incident in RUNLOG.md)."
+            exit 1
+          fi
+          pr="$(gh pr list --head "$branch" --base main --state open --json number --jq '.[0].number')"
+          if [ -z "$pr" ]; then
+            echo "::error title=Unopened patterns PR::origin/$branch carries the RUNLOG row but no open PR targets main from it. The pass must finish with gh pr create."
+            exit 1
+          fi
+          echo "RUNLOG row pushed on $branch and PR #$pr is open — rule satisfied."

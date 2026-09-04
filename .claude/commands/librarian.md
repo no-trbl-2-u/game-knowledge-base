@@ -43,6 +43,14 @@ that ships beats a complete pass that doesn't):
 4. **Dedupe / contradiction check.** Flag (in the commit body, not by
    deleting) near-duplicate docs and claims that contradict across docs
    of the same game.
+5. **Deliver as a PR — mandatory, not optional.** In order:
+   `git checkout -b kb/librarian-<YYYY-MM-DD>`; commit
+   (`librarian: <YYYY-MM-DD>`); `git push -u origin
+   kb/librarian-<YYYY-MM-DD>`; then `gh pr create --base main --head
+   kb/librarian-<YYYY-MM-DD> --title "librarian: <YYYY-MM-DD>" --body
+   "<summary>"`. A pushed branch with no PR is an unfinished pass —
+   several `librarian/*` branches have been left this way and never
+   reached `main`. Do not merge the PR yourself.
 
 Hard rules:
 
