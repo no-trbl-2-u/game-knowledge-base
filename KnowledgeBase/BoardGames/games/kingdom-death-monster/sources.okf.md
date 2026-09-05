@@ -78,4 +78,4 @@ The publisher page is the primary product source. BGG is the discovery and score
 
 ## Open questions
 
-Locate the official 1.6 rulebook or FAQ and capture current BGG statistics from an alternate authenticated or mirror source.
+Locate the official 1.6 rulebook. The official FAQ is already retrieved and recorded as src-006; current BGG statistics remain unverified because direct access failed.
