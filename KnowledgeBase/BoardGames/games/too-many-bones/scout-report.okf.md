@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "BGG search result plus official product description and secondary review leads"
     retry_needs: manual_review
-    notes: "Direct HTML returned HTTP 403 and XML API returned HTTP 401; recheck current average, Geek Rating, rank, weight, and mechanism metadata. Retried 2026-08-19 (librarian): still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not a game-specific issue. Downgrading to manual_review since automated fetch has failed twice."
+    notes: "Direct HTML returned HTTP 403 and XML API returned HTTP 401; recheck current average, Geek Rating, rank, weight, and mechanism metadata. Retried 2026-08-19 (librarian): still HTTP 403, matching the systemic BGG block documented in marvel-champions-the-card-game/scout-report.okf.md — not a game-specific issue. Downgrading to manual_review since automated fetch has failed twice. Retried 2026-09-04 (librarian): still HTTP 403, third consecutive failure. This game's URL was the one used to test escalation: a real headless Chromium session (Playwright) received the Cloudflare 'Performing security verification' interstitial (Ray ID logged) and never cleared it after an 8s settle. That result generalises to every BGG followup in this corpus."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Too Many Bones"

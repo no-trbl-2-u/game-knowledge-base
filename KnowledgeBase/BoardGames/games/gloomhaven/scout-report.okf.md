@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Used BGG search result and BGG Data mirror for score and identity."
     retry_needs: alternate_source
-    notes: "Direct BGG page returned HTTP 403 from this environment."
+    notes: "Direct BGG page returned HTTP 403 from this environment. Retried 2026-09-04 (librarian): still HTTP 403, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. The block is systemic to boardgamegeek.com from this environment, not game-specific. alternate_source remains correct: a BGG-derived mirror is the retrievable document a future pass should name."
 sources:
   - id: "src-001"
     title: "Gloomhaven — BoardGameGeek"

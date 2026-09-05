@@ -17,13 +17,13 @@ followups:
     failure: blocked
     fallback: "Used the publisher product page plus search-result metadata and a secondary review."
     retry_needs: alternate_source
-    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 on 2026-07-17; current score/rank/weight remain unverified."
+    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 on 2026-07-17; current score/rank/weight remain unverified. Retried 2026-09-04 (librarian): still HTTP 403/401, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. Systemic to boardgamegeek.com from this environment; alternate_source (a BGG-derived mirror) remains the right retrieval route."
   - source_id: "src-005"
     url: "https://shop.kingdomdeath.com/products/kingdom-death-monster-1-5"
     failure: other
     fallback: "Product page was accessible, but no downloadable rulebook was located in the retrieved material."
     retry_needs: manual_review
-    notes: "Retry official rulebook, FAQ, or BGG files."
+    notes: "Retry official rulebook, FAQ, or BGG files. Retried 2026-09-04 (librarian): the shop product page still returns HTTP 200 (299,990 bytes) and was fully enumerated — it contains no PDF link of any kind, confirming the original finding on a second dated retrieval rather than leaving it as a one-run observation. The only support surface it exposes is https://support.kingdomdeath.com/en-US, which was also retrieved (HTTP 200) and is a store/fulfillment help centre (store-faq, damaged-items, combine-order, backer-kit articles), not a rules document archive. BGG files remain the outstanding lead but require an authenticated BGG session (see src-001). Not an absence claim."
 sources:
   - id: "src-001"
     title: "Kingdom Death: Monster — BoardGameGeek"
