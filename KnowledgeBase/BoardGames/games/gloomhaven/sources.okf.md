@@ -106,4 +106,4 @@ BGG establishes identity and discovery. BGG Data supplies a retrieved score snap
 
 ## Open questions
 
-First-edition official rulebook and current FAQ version require librarian follow-up.
+The 2017 first-edition rulebook remains represented by the retrieved secondary mirror (src-009); an edition-matched publisher-hosted or authorized archive copy remains an open question. The current official FAQ (src-011) was retrieved as a 2025/Second Edition authority and is excluded from this 2017 base-game scope.
