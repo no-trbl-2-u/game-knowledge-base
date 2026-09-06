@@ -81,7 +81,7 @@ status: needs_followup
   Evidence: WayTooManyGames describes each monster's custom decks and AI-card health; Always Board Never Boring calls the card system a source of story moments; Meeple Mountain describes each monster's unique wound deck and its reactions, lasting effects, and critical results.
   Confidence: high
 
-- Claim: The deck architecture gives players information to act on but does not fully disclose which behavior will appear next, so wounds can both reduce the threat and alter the planning problem.
+- Claim: Reviewers describe the deck architecture as encounter-specific behavior whose available AI cards also function as the monster's remaining health.
   Source: src-007, src-009
-  Evidence: WayTooManyGames says the AI deck is assembled from difficulty-specific cards and determines health; Meeple Mountain describes custom AI as determining movement and attacks while the deck is depleted by wounds.
-  Confidence: medium
+  Evidence: WayTooManyGames says the AI deck is assembled from difficulty-specific cards, determines the monster's health, and loses cards as the monster is injured; Meeple Mountain describes a custom AI deck determining movement and attacks and doubling as hit points until empty.
+  Confidence: high
