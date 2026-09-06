@@ -16,7 +16,7 @@ sources:
     title: "Kingdom Death: Monster — BoardGameGeek"
     url: "https://boardgamegeek.com/boardgame/55690/kingdom-death-monster"
     kind: bgg_page
-    provenance: official
+    provenance: community
     retrieved_at: "2026-07-17"
     notes: "BGG discovery and score lead; direct page returned HTTP 403."
   - id: "src-002"
