@@ -60,6 +60,34 @@ sources:
     provenance: official
     retrieved_at: "2026-07-17"
     notes: "Registered failed extraction/search path; no rulebook file located in accessible product material."
+  - id: "src-006"
+    title: "Kingdom Death official FAQ — Showdown"
+    url: "https://kingdomdeath.com/rules/faq"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-09-05"
+    notes: "Dynamic HTML receipt: HTTP 200, 99,460 bytes, SHA-256 64a66e8d68f1b8976741bfb750bfe169a13ace768192639e504a58404a1993af."
+  - id: "src-007"
+    title: "Kingdom Death: Monster — WayTooManyGames review"
+    url: "https://waytoomany.games/2019/08/11/kingdom-death-monster-review/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Dynamic HTML receipt observed 2026-09-05T03:17:11Z: HTTP 200, 281,491 bytes, SHA-256 5b67c31cae543f3849147d4314540f6d95811b41470fed0fe8434232b7851b4f."
+  - id: "src-008"
+    title: "Review - Kingdom Death: Monster — Always Board Never Boring"
+    url: "https://www.alwaysboardneverboring.com/2016/11/kingdom-death-monster.html"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Dynamic HTML receipt: HTTP 200, 190,494 bytes, SHA-256 941cf1159ef5530bf6541cee74dcbe7822971df828537fec6a6b7079ca5c6ee6."
+  - id: "src-009"
+    title: "Kingdom Death: Monster Game Review — Meeple Mountain"
+    url: "https://www.meeplemountain.com/reviews/kingdom-death-monster/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Dynamic HTML receipt observed 2026-09-05T03:17:12Z: HTTP 200, 240,299 bytes, SHA-256 89e27c36d62c9bee61aac895e0a153b249a76a863f4be65c9e474d0837473c5e."
 confidence: medium
 status: needs_followup
 ---
@@ -70,7 +98,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Why this game
 
-- Wishlist entry consumed: no — the wishlist had no unchecked entries; free choice.
+- Wishlist entry consumed: yes — the explicit Kingdom Death: Monster AI-deck and hit-location-deck follow-up was updated in this maintenance pass.
 - BGG signal: Kingdom Death: Monster was selected from the high-rated RPG field; the BGG page is the primary score lead, but its current numeric score and rank could not be retrieved in this run.
 - Mechanics relevance: persistent campaign progression, survivor development, cooperative tactical combat, dice-driven risk, and differentiated roles.
 - Review/reception signal: available review metadata identifies role-playing, campaign, storytelling, grid movement, dice rolling, and critical hits/failures.
@@ -85,8 +113,9 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 - BoardGameGeek: identified as primary discovery source; HTTP 403 on page and HTTP 401 on XML API.
 - Publisher page: retrieved successfully.
 - Official rulebook: not located.
-- FAQ/errata: not located.
+- Official FAQ: retrieved from `kingdomdeath.com/rules/faq`; selected Showdown entries now support attack timing and hit-location edge cases.
 - Review sources: Meeple Mountain retrieved as a review lead.
+- Additional review sources: WayTooManyGames and Always Board Never Boring retrieved for deck architecture and reception corroboration.
 - Forum/community sources: not used.
 
 ## Rulebook extraction status
@@ -95,6 +124,23 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 - File inspected: no.
 - Page count/version/date if known: unknown.
 - Text extraction quality: not applicable; bounded secondary summaries only.
+
+## 2026-09-05 maintenance findings
+
+- Claim: The official FAQ provides a supported rule source for selected showdown timing and hit-location edge cases, but it is not a replacement for the unretrieved 1.6 core rulebook.
+  Source: src-005, src-006
+  Evidence: The official FAQ was retrieved successfully and contains Showdown entries; the separate official rulebook search path still yielded no downloadable core rulebook.
+  Confidence: high
+
+- Claim: Independent reviews corroborate the AI deck as both monster behavior and a depletable health structure, while hit-location cards carry location-specific combat consequences.
+  Source: src-007, src-008, src-009
+  Evidence: The three retrieved review pages describe encounter-specific AI decks, AI-card attrition or health, and hit-location cards with wound, reaction, reward, or critical-result content.
+  Confidence: high
+
+- Claim: The current research closes the wishlist subtopic at the level of sourced architecture and reception, not complete edition-matched rules coverage.
+  Source: src-006, src-007, src-008, src-009
+  Evidence: Official FAQ semantics and three independent review receipts support the added claims, while the core rulebook remains an open document gap.
+  Confidence: high
 
 ## Documents written
 
@@ -115,6 +161,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 - `node scripts/generate-index.mjs` run after writing docs: pending.
 - `node scripts/validate-okf.mjs` exit 0 before push: pending.
 - 2026-08-31 (librarian): the two `pending` lines above record the state at scout time only. Kingdom Death: Monster is promoted canonical corpus; `node scripts/generate-index.mjs` and `node scripts/validate-okf.mjs` both ran green in the 2026-08-31 librarian pass.
+- 2026-09-05 (Bathcat maintenance): updated `KnowledgeBase/BoardGames/games/kingdom-death-monster/sources.okf.md`, `rules/actions.okf.md`, `rules/turn-structure.okf.md`, `rules/edge-cases-faq.okf.md`, `reception/reviews.okf.md`, `reception/better-if.okf.md`, and this report with the four fresh receipts and bounded claims above; canonical index regeneration and validation are pending final gate execution.
 
 ## Strongest design lessons
 

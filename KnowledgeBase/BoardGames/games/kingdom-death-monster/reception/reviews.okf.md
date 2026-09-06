@@ -27,6 +27,27 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-17"
     notes: "Review reception and mechanism evidence."
+  - id: "src-007"
+    title: "Kingdom Death: Monster — WayTooManyGames review"
+    url: "https://waytoomany.games/2019/08/11/kingdom-death-monster-review/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Review evidence on encounter-specific decks and changing monster behavior."
+  - id: "src-008"
+    title: "Review - Kingdom Death: Monster — Always Board Never Boring"
+    url: "https://www.alwaysboardneverboring.com/2016/11/kingdom-death-monster.html"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Review evidence on hit-location cards creating story moments and AI-card attrition."
+  - id: "src-009"
+    title: "Kingdom Death: Monster Game Review — Meeple Mountain"
+    url: "https://www.meeplemountain.com/reviews/kingdom-death-monster/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Current review receipt corroborating AI deck as hit points and unique wound decks."
 confidence: medium
 status: needs_followup
 ---
@@ -54,3 +75,13 @@ status: needs_followup
   Source: src-004
   Evidence: Review identifies dice rolling and critical hits/failures among the mechanisms; consensus strength is not established here.
   Confidence: low
+
+- Claim: Reviewers treat the AI and hit-location decks as a distinctive source of encounter identity, with damage changing the monster's remaining behavior and hit-location effects creating narrative turns.
+  Source: src-007, src-008, src-009
+  Evidence: WayTooManyGames describes each monster's custom decks and AI-card health; Always Board Never Boring calls the card system a source of story moments; Meeple Mountain describes each monster's unique wound deck and its reactions, lasting effects, and critical results.
+  Confidence: high
+
+- Claim: Reviewers describe the deck architecture as encounter-specific behavior whose available AI cards also function as the monster's remaining health.
+  Source: src-007, src-009
+  Evidence: WayTooManyGames says the AI deck is assembled from difficulty-specific cards, determines the monster's health, and loses cards as the monster is injured; Meeple Mountain describes a custom AI deck determining movement and attacks and doubling as hit points until empty.
+  Confidence: high

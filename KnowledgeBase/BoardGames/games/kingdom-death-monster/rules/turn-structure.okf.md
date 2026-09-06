@@ -26,13 +26,27 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-17"
     notes: "High-level campaign loop."
+  - id: "src-006"
+    title: "Kingdom Death official FAQ — Showdown"
+    url: "https://kingdomdeath.com/rules/faq"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-09-05"
+    notes: "Showdown survival-opportunity timing; dynamic receipt observed 2026-09-05."
 confidence: low
 status: needs_followup
 ---
 
 ## Summary
 
-At campaign scale, the reported structure is settlement administration followed by a hunt and then a showdown. The showdown itself is a sequence of survivor turns and monster behavior, but exact timing rules remain unverified.
+At campaign scale, the reported structure is settlement administration followed by a hunt and then a showdown. The FAQ now verifies one load-bearing interruption point inside a survivor attack, while the complete core rulebook remains unretrieved.
+
+## Source-backed facts
+
+- Claim: During a survivor attack, another survivor may surge after the wound attempt and before the monster resolves reactions; the original attack then resumes after the surge attack is completely resolved.
+  Source: src-006
+  Evidence: The official Showdown FAQ places the survival opportunity "after they attempt to wound it, but before the monster performs any reactions" and says the original attack is paused until the surge attack is resolved.
+  Confidence: high
 
 ## Open questions
 
