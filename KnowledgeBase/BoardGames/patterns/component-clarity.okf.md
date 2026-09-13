@@ -4,16 +4,19 @@ type: pattern
 mechanics: []
 better_if_labels: [component-clarity]
 confidence: medium
-status: verified
+status: draft
 ---
 
 ## Summary
 
-Component-clarity friction shows up two ways across this sample: physical legibility (icon systems, reference cards, board/graphic design) and physical handling (chip durability, table footprint, tracking overhead). Heavier euros and app-adjacent adaptations (Ark Nova, Mage Knight, Slay the Spire) draw complaints that icon-heavy systems demand repeated rulebook/reference lookups rather than resolving from the table state. Lighter, family-weight games (Quacks) draw complaints about physical wear on handled components rather than legibility. The one clean praised-design example (Quacks' status icons) suggests small in-line reminder icons are an effective, low-cost fix for memory load — a much narrower intervention than the "ruthless visual hierarchy" heavy games seem to need.
+Component-clarity friction shows up three ways across this sample: physical legibility (icon systems, reference cards, board/graphic design), physical handling (chip/tracker durability, table footprint, tracking overhead), and — newly evidenced — spatial crowding, where a grid or map simply runs out of room for the pieces the rules ask players to place on it. Heavier euros and app-adjacent adaptations (Ark Nova, Mage Knight, Slay the Spire) draw complaints that icon-heavy systems demand repeated rulebook/reference lookups rather than resolving from the table state. Lighter, family-weight games (Quacks) draw complaints about physical wear on handled components rather than legibility, a durability complaint now echoed by a legacy game's fragile trackers (Betrayal Legacy). The one clean praised-design example (Quacks' status icons) suggests small in-line reminder icons are an effective, low-cost fix for memory load — a much narrower intervention than the "ruthless visual hierarchy" heavy games seem to need.
 
 ## Evidence by game
 
 - ark-nova (src-009): Tabletop Gaming's review concludes "component and design irks" keep the game from being the best it could be, using the phrase "veer towards ugly duckling," confidence: medium
+- betrayal-legacy (src-005): the reviewer says tracker clips can slip or damage cardboard Family cards, supporting trackers that remain fixed without damaging the components they mark, confidence: medium
+- bloodborne-the-card-game (src-006): Meeple Mountain specifically criticizes the drab visual palette, supporting higher-contrast presentation for quick reading in a simultaneous, timing-sensitive game, confidence: medium
+- cthulhu-death-may-die (src-003): "You will run out of room for miniatures on some of the tiles," supporting a documented stacking or token-substitution convention for crowded map tiles, confidence: medium
 - dune-imperium (src-006): a BGG file-page commenter called the square rulebook/reference-sheet format hard to hold and read one-handed and "awkward to use and find space for at the table," confidence: medium
 - heat-pedal-to-the-metal (src-006): Co-op Board Games' review lists "Player board iconography requires learning" as a friction point for new players, confidence: medium
 - mage-knight (src-012): BGG Ultimate Edition rating comments describe "rules checking is 30% of playing time" and "really fiddly rules," tied to the game's site/enemy-effect iconography needing multiple lookups, confidence: medium
@@ -34,7 +37,10 @@ No other game in this sample produced a review quote that explicitly praises a c
 - mage-knight (src-012): fiddly rules push rules-checking to roughly 30% of playing time, implicating unclear iconography/reference design, confidence: medium
 - slay-the-spire-the-board-game (src-007): fiddly cube/effect tracking and a "massive box/table footprint" are named dislikes, confidence: high
 - the-quacks-of-quedlinburg (src-005): repeated handling wears visible marks into the chips within a handful of plays, confidence: high
+- betrayal-legacy (src-005): physical trackers can slip or damage the permanent legacy cards they're meant to mark, a durability risk with permanent consequences.
+- bloodborne-the-card-game (src-006): a drab visual palette makes quick reading harder in a game whose simultaneous timing depends on fast information scanning.
+- cthulhu-death-may-die (src-003): miniature footprint can exceed the physical space a crowded map tile provides, with no documented workaround.
 
 ## Coverage gaps
 
-Every citable claim here comes from secondary reviews, not from direct component/graphic-design analysis, and only one game (Quacks) offers a genuine praised-design counterexample — the corpus is thin on the "works well" side of this label. A game whose reviewers specifically credit iconography or a reference-card redesign for resolving prior complaints (e.g., a revised/second edition) would strengthen the "where it works" side considerably.
+Every citable claim here comes from secondary reviews, not from direct component/graphic-design analysis, and only one game (Quacks) offers a genuine praised-design counterexample — the corpus is thin on the "works well" side of this label. betrayal-legacy and bloodborne-the-card-game contribute from `needs_followup` source docs, which is why this pattern's status has stepped back to draft pending re-verification. A game whose reviewers specifically credit iconography or a reference-card redesign for resolving prior complaints (e.g., a revised/second edition) would strengthen the "where it works" side considerably.

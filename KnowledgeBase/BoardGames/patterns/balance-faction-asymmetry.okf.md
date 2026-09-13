@@ -3,19 +3,22 @@ okf_version: 0.2
 type: pattern
 mechanics: [variable-player-powers]
 better_if_labels: [balance-faction-asymmetry]
-confidence: low
+confidence: medium
 status: verified
 ---
 
 ## Summary
 
-Evidence for this pattern is thin: only 3 of the 4 candidate games yielded claims actually about power/faction balance, and one of those (Dune: Imperium) rests on a single low-confidence reviewer aside. The clearest signal comes from Root, where reviewers treat faction asymmetry as the game's best-in-class strength and its main onboarding/low-player-count cost in the same breath — asymmetry that changes the whole board, not just one player's options, is what reviewers reward, but it also means the design is only "on" when enough differentiated factions are at the table. Ark Nova carries this label in its own corpus tags but its sourced complaints are about bolted-on interaction cards, not power/faction imbalance, so it was excluded rather than forced in.
+Evidence for this pattern has grown from a single-game anchor (Root) to a broader mix of campaign and asymmetric-power games, though most contributions remain single-review observations. The clearest signal is still Root, where reviewers treat faction asymmetry as the game's best-in-class strength and its main onboarding/low-player-count cost in the same breath — asymmetry that changes the whole board, not just one player's options, is what reviewers reward, but it also means the design is only "on" when enough differentiated factions are at the table. Newer campaign-game evidence (Descent 2E, Star Wars: Imperial Assault) shifts the frame slightly: balance complaints there are about scenario/quest design varying in difficulty across roles or player counts, not about any single faction's power level, while Dark Pact shows the same asymmetric-difficulty complaint in a solo-vs-deck-building context (uneven Pact difficulty across thirteen alternate win conditions). Ark Nova carries this label in its own corpus tags but its sourced complaints are about bolted-on interaction cards, not power/faction imbalance, so it was excluded rather than forced in.
 
 ## Evidence by game
 
+- dark-pact (src-007, src-009): reviews question the equivalence of Dark Pact's thirteen alternate win-condition "Pacts," raising uneven difficulty as a balance risk, supporting a difficulty indicator or recommended pairing method grounded in playtesting, confidence: medium
+- descent-journeys-in-the-dark-second-edition (src-004): a review reports that quest goals drive balance and that balance varies widely between quests, i.e. across scenarios rather than across a fixed faction roster, confidence: medium
 - dune-imperium (src-010): A reviewer flagged that leader Glossu Rabban may be overpowered in the conflict phase, able to recruit soldiers easily and become "close to unstoppable" — a single, low-confidence outlier concern rather than a broad consensus, confidence: low
 - heroes-of-terrinoth (src-005): A reviewer found some introductory quests nearly damage-free and effectively automatic wins, i.e. the challenge undershoots what the hero roster's danger is meant to be tuned for, confidence: medium
 - root (src-006): A reviewer called Root's asymmetry "some of the best... I've ever seen" with a "high skill ceiling," while also noting that "without expansions, the experience at lower player counts is much more muted," confidence: high
+- star-wars-imperial-assault (src-003): a review identifies campaign mission balance and the five-person ideal player count as pressure points, tying balance directly to scaling rather than a single overpowered role, confidence: medium
 
 ## Where it works
 
@@ -28,7 +31,10 @@ No other game in this set produced praised-design evidence tied specifically to 
 - dune-imperium (src-010): possible single-leader power outlier (Glossu Rabban) in the conflict phase, confidence: low
 - heroes-of-terrinoth (src-005): easy introductory quests can be near-automatic wins, undershooting the tension the hero powers are balanced against, confidence: medium
 - root (src-006): faction asymmetry is diluted at low player counts without expansions, so the "different machines" experience the design is praised for depends on table size and ownership of extra content, confidence: high
+- descent-journeys-in-the-dark-second-edition (src-004): quest-to-quest balance swings widely enough that a review calls it out directly, independent of which faction or hero is played.
+- star-wars-imperial-assault (src-003): a campaign tuned around a specific ideal player count creates balance pressure whenever the actual table doesn't match it.
+- dark-pact (src-007, src-009): thirteen alternate win-condition Pacts are questioned for equivalence, with no in-box difficulty indicator to guide new players toward a fair matchup.
 
 ## Coverage gaps
 
-Only Root supplies strong, well-cited evidence on both sides of this pattern; Dune: Imperium's contribution is a single low-confidence aside and Heroes of Terrinoth's is an adjacent difficulty-tuning claim rather than a direct power-balance complaint. The corpus would benefit from a game with a well-documented, widely-corroborated overpowered-faction controversy (multiple independent sources, not one aside) to test whether Root's asymmetry-as-strength pattern holds when balance actually breaks down rather than merely thins out at low player counts.
+Root still supplies the strongest, most-corroborated evidence in this pattern; Dune: Imperium's contribution remains a single low-confidence aside. The corpus now has real evidence that "balance" complaints in campaign games are about scenario/quest tuning rather than faction power specifically — a distinction worth tracking separately if more campaign games are added. It would still benefit from a game with a well-documented, widely-corroborated overpowered-faction controversy (multiple independent sources, not one aside) to test whether Root's asymmetry-as-strength pattern holds when faction balance actually breaks down rather than merely thins out at low player counts.

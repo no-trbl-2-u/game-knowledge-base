@@ -19,6 +19,11 @@ state forward rather than about having state at all. Evidence here is moderate: 
 games (Heroes of Terrinoth, Slay the Spire) supply high-confidence, quote-backed
 claims; the rest supply real but thinner medium-confidence signal, and
 kingdom-death-monster's contribution rests on a doc still marked `needs_followup`.
+Newer campaign games add two more shapes of the same problem: distinguishing
+parallel progression tracks that both look like "the campaign" (Cthulhu: Death May
+Die's investigator vs. Elder One advancement) and reconciling campaign continuity
+with real-world group scheduling (Star Wars: Imperial Assault, The Crew's
+mission-difficulty signaling).
 
 ## Evidence by game
 
@@ -29,6 +34,10 @@ kingdom-death-monster's contribution rests on a doc still marked `needs_followup
 - mage-knight (src-012): a BGG ratings comment wants more connective tissue, stating "narration as campaign or events are missing" from the otherwise-praised optimization puzzle, confidence: medium
 - oathsworn-into-the-deepwood (src-005): the campaign's world-state "changes and develops from player actions," but this persistence is flagged as a bookkeeping-burden risk rather than pure upside, confidence: medium
 - slay-the-spire-the-board-game (src-008): a reviewer unfamiliar with the source video game found moving forward after Act III "very unclear," having to lean on outside video-game knowledge to know what persists, resets, or unlocks, confidence: high
+- arydia-the-paths-we-dare-tread (src-004): a review says the physical state permits only one ongoing game, supporting campaign storage/save procedures that support multiple concurrent parties, confidence: low
+- cthulhu-death-may-die (src-002): skill levels advance at sanity thresholds while the Elder One advances from Mythos summoning symbols and Stage reveals, supporting reinforcing the distinction between investigator and Elder One progression at the table, confidence: medium
+- star-wars-imperial-assault (src-003, src-004): group-size and campaign-balance concerns are both central to the reviews, supporting between-mission administration that preserves narrative continuity without demanding a full recurring group, confidence: medium
+- the-crew (src-002, src-004): the manual organizes 50 missions with a difficulty section, and The Family Gamers describes increasing complexity across scenarios, supporting visibly signaling difficulty and completion without exposing the hidden decision problem, confidence: medium
 
 ## Where it works
 
@@ -42,6 +51,8 @@ kingdom-death-monster's contribution rests on a doc still marked `needs_followup
 - slay-the-spire-the-board-game (src-008): post-Act-III progression (what persists, what resets, what unlocks) was "very unclear" without prior video-game familiarity — a ritualized reset procedure is the implied fix.
 - oathsworn-into-the-deepwood (src-005): persistent world-state across chapters is flagged as a likely bookkeeping burden even where reviewers admire the design intent.
 - mage-knight (src-012): players who want the strong solo/co-op puzzle to feel more like an adventure specifically miss campaign or event narration connecting sessions.
+- arydia-the-paths-we-dare-tread (src-004): supporting only one ongoing campaign at a time in physical storage blocks groups from running concurrent parties.
+- star-wars-imperial-assault (src-003, src-004): campaign continuity assumes a stable, full recurring group, which reviewers flag as a real-world scheduling cost.
 
 ## Coverage gaps
 
@@ -51,4 +62,5 @@ with only publisher-page and single-review sourcing — its contribution here sh
 treated as provisional until a librarian/audit pass strengthens it. gi-joe-deck-building-game
 carries the `campaign-progression` label in the index but its own better-if doc only
 offers a low-confidence inference about resetting between missions, not a real
-reviewer claim, so it contributed nothing usable to this synthesis.
+reviewer claim, so it contributed nothing usable to this synthesis. arydia-the-paths-we-dare-tread's
+contribution comes from a `needs_followup` source doc and should be treated as provisional.

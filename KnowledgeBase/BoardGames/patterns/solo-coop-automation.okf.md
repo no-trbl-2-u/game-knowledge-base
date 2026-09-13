@@ -9,9 +9,13 @@ status: verified
 
 ## Summary
 
-Across this sample, solo/co-op automation friction is less about bot AI logic itself and more about whether the solo/co-op mode earns its own identity rather than inheriting multiplayer's footprint or feeling like a lesser substitute. Reviewers reward solo modes that visibly shed multiplayer overhead (shorter downtime, tighter table presence) and punish ones that graft multiplayer scale onto a single player, produce a "multiplayer solitaire" co-op experience, or feel swingy/brain-burning when one person runs multiple hands. Evidence is moderately thin — five of six candidate games contributed usable claims, and only Spirit Island and Mage Knight offer both a praise and a complaint angle; Dune Imperium's solo/automation better-if claim lacked a direct source quote and was excluded.
+Across this sample, solo/co-op automation friction is less about bot AI logic itself and more about whether the solo/co-op mode earns its own identity rather than inheriting multiplayer's footprint or feeling like a lesser substitute. Reviewers reward solo modes that visibly shed multiplayer overhead (shorter downtime, tighter table presence) and punish ones that graft multiplayer scale onto a single player, produce a "multiplayer solitaire" co-op experience, or feel swingy/brain-burning when one person runs multiple hands. Two newer games sharpen a different angle: rather than a bot deck, "automation" here means a lightweight modifier layer (Elder Sign's lenient death penalties, Horrified's solo appendix that adjusts terror and removes specific cards) rather than a separate simulated opponent — reviewers treat this as functional but note it can leave player-count balance uneven, since more human players spread risk across more characters and powers. Evidence is moderately thin — most candidate games contributed usable claims, and only Spirit Island and Mage Knight offer both a praise and a complaint angle; Dune Imperium's solo/automation better-if claim lacked a direct source quote and was excluded.
 
 ## Evidence by game
+
+- elder-sign (src-002, src-004): solo play works without a separate automation system, but leans on lenient death penalties rather than designed solo tension — RPGnet reports enjoying it "both in solo efforts and with others," while Opinionated Gamers notes death penalties "are not very harsh," confidence: high
+- elder-sign (src-004): player-count balance is uneven in a way a scaling rule could address, with the game reported as "slightly easier with larger number of players" due to more characters and powers to spread damage across, confidence: medium
+- horrified (src-002): the solo appendix changes terror levels and removes specific cards rather than supplying a separate automated opponent, treating solo/co-op pacing as a modifier layer rather than a bot-AI problem, confidence: medium
 
 - ark-nova (src-008): A solo-focused review says the game board is "just too big for solo play (or in general, arguably)" — the physical footprint wasn't scaled down for a single player. confidence: high
 - heat-pedal-to-the-metal (src-006): Co-op Board Games' pros list for the review credits "solo AI" alongside simultaneous card selection and heat management as a strength, though the reception doc doesn't preserve an exact quote for that specific item. confidence: medium
@@ -25,6 +29,7 @@ Across this sample, solo/co-op automation friction is less about bot AI logic it
 - spirit-island (src-008): Praised as "fantastic... for solo players and small groups," with higher player counts identified as the slower configuration instead.
 - slay-the-spire-the-board-game (src-007): Cooperative play is called "a revelation" and the central justification for the tabletop adaptation existing at all.
 - heat-pedal-to-the-metal (src-006): Solo AI is named among the review's praised elements, though without a preserved direct quote (confidence: medium).
+- elder-sign (src-002, src-004): solo play is explicitly enjoyed without requiring a separate bot/automa system, relying instead on the base game's own death-penalty leniency.
 
 ## Where it fails
 
@@ -32,7 +37,8 @@ Across this sample, solo/co-op automation friction is less about bot AI logic it
 - mage-knight (src-011): Cooperative mode reads as "multiplayer solitaire" — parallel individual optimization rather than deep interdependence.
 - slay-the-spire-the-board-game (src-007): Solo mode feels like a slower physical stand-in for the video game rather than a distinct tactile experience.
 - spirit-island (src-009): True solo is "swingy," multi-handing "can cause brain burn," and the ending feels "lacklustre"/procedural rather than climactic.
+- elder-sign (src-004): easier outcomes at higher player counts show the base scaling rule under-corrects for the extra characters and powers a larger group brings.
 
 ## Coverage gaps
 
-Dune Imperium's better-if doc proposes automating its House Hagal rival-priority logic for solo/two-player play, but the claim carries no direct source quote (only a general "evidence basis" note), so it couldn't be cited here — a case where the underlying source review would need re-checking for an actual quote before it strengthens this pattern. More broadly, none of the six games in this sample use a card-driven "automa" bot deck (e.g., Scythe- or Wingspan-style); the corpus would benefit from a game with an explicit automaton/bot-opponent system to give this pattern genuine bot-AI-logic evidence rather than only solo-mode-scaling and co-op-cohesion complaints.
+Dune Imperium's better-if doc proposes automating its House Hagal rival-priority logic for solo/two-player play, but the claim carries no direct source quote (only a general "evidence basis" note), so it couldn't be cited here — a case where the underlying source review would need re-checking for an actual quote before it strengthens this pattern. More broadly, none of the games in this sample use a card-driven "automa" bot deck (e.g., Scythe- or Wingspan-style); the corpus would benefit from a game with an explicit automaton/bot-opponent system to give this pattern genuine bot-AI-logic evidence rather than only solo-mode-scaling and co-op-cohesion complaints.

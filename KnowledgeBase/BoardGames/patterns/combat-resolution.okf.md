@@ -9,18 +9,29 @@ status: draft
 
 ## Summary
 
-Evidence is thin. Dune: Imperium's hidden simultaneous-commitment combat
+Evidence is still thin but has broadened past a single hidden-information axis. Dune: Imperium's hidden simultaneous-commitment combat
 draws praise for tension but a matching complaint that the same hiddenness
 reads as swinginess/imbalance when a leader's combat strength outpaces
 opponents' visibility into it. Kingdom Death: Monster's dice-based combat
 resolution is only lightly sourced so far (needs_followup) but points at the
 same tension: risk/randomness that defines the game's identity is also the
-axis reviewers flag as needing clearer at-the-table communication. Both games
-suggest the same shape of problem — resolution mechanics that are core to the
+axis reviewers flag as needing clearer at-the-table communication. Two newer
+games add different shapes of the same problem: a card-driven duel game
+(Unmatched) where the appeal is explicitly the attacker/defender bluff and
+hand-pressure decision, not raw combat math, and a campaign game (Arydia)
+where AI-driven Threat-based combat needs its state changes kept visible and
+auditable rather than hidden behind card resolution. A fourth data point
+(Scythe) shows the mirror complaint: combat can be prominent in a game's
+marketing and rules presentation while remaining rare in actual sessions,
+so pacing expectations and combat frequency should be set consistently.
+These games together suggest resolution mechanics that are core to the
 game's appeal are also the primary source of "better if" requests.
 
 ## Evidence by game
 
+- arydia-the-paths-we-dare-tread (src-005): foe behavior depends on Threat levels and AI cards, supporting keeping threat changes visible and auditable at the table, confidence: medium
+- scythe (src-003): the reviewer says combat is prominent in the presentation but rare during a typical session, confidence: medium
+- unmatched-battle-of-legends-volume-one (src-003): the review describes attacks as a mix of brute force and light bluffing, with players deciding when to invest cards and when to hold them, supporting protecting that bluff/hand-pressure decision in any combat-presentation change, confidence: medium
 - dune-imperium (src-008): Reviewer (There Will Be Games) praised hidden combat
   inputs, saying a player is "never 100% sure how much combat power someone
   has," calling resulting decisions "hard, impactful, and constant." confidence: medium
@@ -39,6 +50,8 @@ game's appeal are also the primary source of "better if" requests.
 - dune-imperium (src-008): Hidden combat power that keeps opponents guessing
   is explicitly named as a source of the game's tension and impactful
   decision-making, not just a complaint.
+- unmatched-battle-of-legends-volume-one (src-003): the attacker/defender bluff and
+  hand-pressure decision is named the "intelligent part" of otherwise simple attacks.
 - kingdom-death-monster: No praised-design evidence tying specifically to
   combat resolution was found in the docs read (the game's praised-design
   claims center on tactical combat as a broad mechanism blend, not on the
@@ -59,11 +72,18 @@ game's appeal are also the primary source of "better if" requests.
   hits/failures) is flagged as needing clearer point-of-decision
   communication, though this is an inference in the source doc rather than a
   directly reported reviewer complaint, confidence: low.
+- arydia-the-paths-we-dare-tread (src-005): AI-card and Threat-driven foe behavior
+  needs its state changes surfaced clearly or it risks feeling arbitrary rather
+  than legible, confidence: medium.
+- scythe (src-003): combat's prominence in rules and presentation outstrips how
+  often it actually occurs at the table, a pacing/expectation mismatch rather
+  than a resolution-mechanics complaint, confidence: medium.
 
 ## Coverage gaps
 
 Current support for this label remains narrow, and Kingdom Death: Monster's
-reception docs are still `needs_followup` with low-confidence, inference-heavy claims. A
-dedicated combat-heavy game (e.g., a wargame or skirmish title) with a
+reception docs are still `needs_followup` with low-confidence, inference-heavy claims;
+arydia-the-paths-we-dare-tread's contribution is also from a `needs_followup` source
+doc. A dedicated combat-heavy game (e.g., a wargame or skirmish title) with a
 `verified` reception doc would substantially strengthen this pattern; until
 then, conclusions here should be read as provisional.
