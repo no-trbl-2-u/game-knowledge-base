@@ -16,8 +16,8 @@ followups:
     url: "https://boardgamegeek.com/boardgame/251661/oathsworn-into-the-deepwood"
     failure: blocked
     fallback: "Used publisher page, review evidence, and BGG-facing statistics mirror."
-    retry_needs: alternate_source
-    notes: "Direct BGG page and XML endpoint were inaccessible during this run; retry BGG files/forums or a publisher rulebook download. Retried 2026-09-04 (librarian): still HTTP 403, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. The block is systemic to boardgamegeek.com from this environment. alternate_source remains correct; the publisher rulebook download is the more promising of the two named leads."
+    retry_needs: manual_review
+    notes: "Direct BGG page and XML endpoint were inaccessible during this run; retry BGG files/forums or a publisher rulebook download. Retried 2026-09-04 (librarian): still HTTP 403, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. The block is systemic to boardgamegeek.com from this environment. 2026-09-15 (audit): the other named lead succeeded instead — the official rulebook was retrieved directly from Shadowborne Games' resources page (src-007/src-008 in `sources.okf.md`), so BGG direct access is no longer load-bearing for this game's rules coverage. Only BGG's own live statistics (rating/rank refresh) remain behind this block; downgraded to manual_review since no further automated BGG lead remains untried."
 sources:
   - id: "src-001"
     title: "Oathsworn: Into the Deepwood — BoardGameGeek"
@@ -89,6 +89,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 - File inspected: no.
 - Page count/version/date if known: unknown.
 - Text extraction quality: not applicable; secondary summaries only.
+- 2026-09-15 (audit): resolved for the Encounter half. Shadowborne Games' official "Printable Files" resources page (not BGG) links both rulebooks directly; the Encounter Rule Book (src-007, 36 pages) was retrieved and extracted with `pypdf`, including an official page-33 FAQ appendix. `rules/edge-cases-faq.okf.md` now carries page-cited official claims and moved from `needs_followup` to `verified`. The Story Rule Book (src-008, 20 pages) was retrieved but not yet mined for body claims.
 
 ## Documents written
 
@@ -124,4 +125,5 @@ The campaign introduced its rules and bookkeeping in guided layers, while making
 
 ## Open questions
 
-Recover the official rulebook, verify all BGG metadata directly, and replace secondary rule summaries with page/section citations.
+- Mine the Story Rule Book (src-008) for its chapter-narrative and city-map procedures; only the Encounter Rule Book's FAQ and combat rules were extracted this pass.
+- BGG direct access remains blocked from this environment; verify current rating/rank/weight when a browser-accessible recheck is available.

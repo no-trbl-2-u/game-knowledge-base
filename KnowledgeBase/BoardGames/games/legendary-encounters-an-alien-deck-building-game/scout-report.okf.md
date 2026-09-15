@@ -11,19 +11,7 @@ game:
   edition: "base game"
 scope: "base game"
 mechanics: [cooperative-game, deck-bag-and-pool-building, deck-building, hand-management, open-drafting, solo-solitaire-game, variable-player-powers]
-followups:
-  - source_id: "src-002"
-    url: "https://boardgamegeek.com/filepage/104744/legendary-enccounters-rulebook"
-    failure: blocked
-    fallback: "BGG files listing plus secondary rules walkthrough/review sources were used for high-level summaries."
-    retry_needs: manual_review
-    notes: "Official rulebook listing was found, but direct file/PDF extraction was not completed during this cron run. Retried 2026-09-04 (librarian): the BGG filepage returned HTTP 403, and a real headless Chromium session (Playwright) against boardgamegeek.com was held at the Cloudflare 'Performing security verification' interstitial without clearing. BGG file downloads additionally require a logged-in account, so browser_fetch alone cannot satisfy this entry; downgraded to manual_review. A future pass needs an authenticated BGG session."
-  - source_id: null
-    url: "https://upperdeck.com/"
-    failure: not_found
-    fallback: "BGG official file listing and secondary summaries."
-    retry_needs: alternate_source
-    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF."
+followups: []
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Legendary Encounters: An Alien Deck Building Game"
@@ -38,7 +26,7 @@ sources:
     kind: rulebook_pdf
     provenance: official
     retrieved_at: "2026-07-09"
-    notes: "Official rulebook lead; direct extraction pending."
+    notes: "Official rulebook lead; superseded as the extraction source by src-006 (2026-09-15 audit), since this BGG filepage requires an authenticated account to download."
   - id: "src-003"
     title: "Life of Uz — Board-Gaming Review: Legendary Encounters An Alien Deckbuilding Game"
     url: "http://lifeofuz.blogspot.com/2016/05/board-gaming-review-legendary.html"
@@ -53,8 +41,15 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-09"
     notes: "Rules summary page and commentary."
-confidence: medium
-status: needs_followup
+  - id: "src-006"
+    title: "Legendary Encounters: An Alien Deck Building Game Rulebook — Upper Deck official rules page"
+    url: "https://theupperdeckco.wpenginepowered.com/wp-content/uploads/2024/05/Legendary_Encounters_Rules-Alien.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-09-15"
+    notes: "2026-09-15 audit pass, alternate_source retry resolved: Upper Deck's current rules hub (upperdeck.com/ud-game-rules/) links this directly downloadable copy, bypassing the BGG authenticated-download wall. HTTP 200; 3,336,967 bytes; 28 pages; SHA-256 7a597bedfb9938723f9d4336f6cb3b005e0d71ddff59ced2624c9d5350eced04."
+confidence: high
+status: verified
 ---
 
 ## Scout objective
@@ -82,6 +77,7 @@ Study one high-scoring cooperative deckbuilding game not already present in the 
 - File inspected: BGG file listing inspected via search/extracted snippets, not full PDF.
 - Page count/version/date if known: unknown.
 - Text extraction quality: not available.
+- 2026-09-15 (audit): resolved. The BGG file listing (src-002) still requires an authenticated account, but Upper Deck's own rules hub links a directly downloadable copy (src-006): HTTP 200, 28 pages, extracted cleanly with `pypdf`. `rules/edge-cases-faq.okf.md` now carries page-cited official claims and the doc's status moved from `needs_followup` to `verified`.
 
 ## Documents written
 
@@ -116,4 +112,4 @@ Study one high-scoring cooperative deckbuilding game not already present in the 
 
 ## Open questions
 
-- Direct official rulebook and FAQ extraction remain the main knowledge gap.
+- The Upper Deck-hosted PDF (src-006) carries no printing/version date; confirm whether it matches the original 2014 retail printing before treating its page numbers as stable across printings.

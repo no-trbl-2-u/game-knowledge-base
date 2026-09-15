@@ -29,7 +29,7 @@ followups:
     failure: blocked
     fallback: "Official Learn to Play PDF plus ArkhamDB Rules Reference mirror for edge-case leads."
     retry_needs: alternate_source
-    notes: "HTTP 403 from direct Rules Reference PDF URL attempted during 2026-07-10 scout. Retried 2026-09-04 (librarian): still HTTP 403 (application/xml error body) from images-cdn.fantasyflightgames.com. Additionally checked the Wayback availability API for this exact asset URL: it returned an empty `archived_snapshots` object, so no archive capture of this PDF exists to fall back on. alternate_source remains correct; the ArkhamDB Rules Reference mirror is the retrievable document a future pass should target."
+    notes: "HTTP 403 from direct Rules Reference PDF URL attempted during 2026-07-10 scout. Retried 2026-09-04 (librarian): still HTTP 403 (application/xml error body) from images-cdn.fantasyflightgames.com. Additionally checked the Wayback availability API for this exact asset URL: it returned an empty `archived_snapshots` object, so no archive capture of this PDF exists to fall back on. 2026-09-15 (audit): alternate_source retry succeeded — the named ArkhamDB Rules Reference mirror (src-004) states it is a full replica with FAQ updates merged in, and was retrieved and mined for `rules/edge-cases-faq.okf.md`, which moved from `needs_followup` to `verified`. The official CDN PDF itself remains 403; this entry stays open only to flag that the ArkhamDB text is secondary provenance, not the primary PDF."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Arkham Horror: The Card Game"
@@ -57,8 +57,8 @@ sources:
     url: "https://arkhamdb.com/rules"
     kind: other
     provenance: secondary
-    retrieved_at: "2026-07-10"
-    notes: "Rules Reference mirror used only for edge-case leads."
+    retrieved_at: "2026-09-15"
+    notes: "2026-09-15 audit pass: re-retrieved and mined in full (HTTP 200, 290,500 bytes) to resolve the src-009 alternate_source followup; now the primary citation base for rules/edge-cases-faq.okf.md."
   - id: "src-005"
     title: "Board Game Quest — Arkham Horror: The Card Game – Chapter Two Review"
     url: "https://www.boardgamequest.com/arkham-horror-the-card-game-chapter-two-review/"

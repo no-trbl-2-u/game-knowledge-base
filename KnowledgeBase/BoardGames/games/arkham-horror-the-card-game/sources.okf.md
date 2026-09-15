@@ -38,8 +38,8 @@ sources:
     url: "https://arkhamdb.com/rules"
     kind: other
     provenance: secondary
-    retrieved_at: "2026-07-10"
-    notes: "Community rules reference mirror stating it replicates Core Set Rules Reference and includes official FAQ updates; used only for edge-case leads."
+    retrieved_at: "2026-09-15"
+    notes: "Community rules reference mirror stating it replicates Core Set Rules Reference and includes official FAQ updates. 2026-09-15 audit pass: re-retrieved in full (HTTP 200, 290,500 bytes) and mined for `rules/edge-cases-faq.okf.md`, resolving the game's last open alternate_source followup."
   - id: "src-005"
     title: "Board Game Quest — Arkham Horror: The Card Game – Chapter Two Review"
     url: "https://www.boardgamequest.com/arkham-horror-the-card-game-chapter-two-review/"
