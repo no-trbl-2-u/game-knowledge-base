@@ -33,13 +33,20 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-31"
     notes: "Independent review."
+  - id: "src-009"
+    title: "CMON — Bloodborne: The Card Game Rulebook (2025 web export)"
+    url: "https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-09-16"
+    notes: "Currently-linked official rulebook asset; 82,846,744 bytes; 16 pages; SHA-256 c03978b1bbbe6793e0f082bfc2320e6ba397303d631d9597287c088fe2a8d3ed. Text-diffed against src-002; no rules-content differences, no version/errata marker."
 followups:
   - source_id: "src-001"
     url: "https://www.cmon.com/product/bloodborne-the-card-game/bloodborne-the-card-game"
     failure: blocked
     fallback: "Dated original-URL proxy and direct assets returned HTTP 200; proxy currently lists Rulebook 79.01 MB."
     retry_needs: manual_review
-    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it. Retried 2026-09-04 (librarian): the Cloudflare block has LIFTED — the product page now returns HTTP 200 (72,449 bytes) to a direct fetch. Enumerated it: it exposes exactly one PDF, the official rulebook at https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf, plus a link to the publisher-wide portal https://support.cmon.com/hc/en-us. That portal was also retrieved (HTTP 200) and is a fulfillment/customer-service help centre — its article set is shipping, refunds, pledge-manager, damaged-component and 'How do I get the Rulebook for my game' topics — not a rules FAQ/errata archive. This narrows but does not close the entry, and is NOT an absence claim. Next retrieval target: the dated rulebook PDF itself for any embedded errata/version marker."
+    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it. Retried 2026-09-04 (librarian): the Cloudflare block has LIFTED — the product page now returns HTTP 200 (72,449 bytes) to a direct fetch. Enumerated it: it exposes exactly one PDF, the official rulebook at https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf, plus a link to the publisher-wide portal https://support.cmon.com/hc/en-us. That portal was also retrieved (HTTP 200) and is a fulfillment/customer-service help centre — its article set is shipping, refunds, pledge-manager, damaged-component and 'How do I get the Rulebook for my game' topics — not a rules FAQ/errata archive. This narrows but does not close the entry, and is NOT an absence claim. Next retrieval target: the dated rulebook PDF itself for any embedded errata/version marker. Retried 2026-09-16 (librarian): fetched the dated rulebook PDF (now registered as src-009) and diffed its extracted text against src-002 (the 2016 official S3 object). No rules-content differences found; the only deltas are TOC letter-spacing artifacts from a different font substitution during text extraction. No version/errata marker appears in the PDF metadata or body. This closes the 'embedded errata/version marker' sub-question with a negative result: the current rulebook carries no rule changes from 2016. The broader publisher-wide FAQ/errata/support inventory (the support.cmon.com fulfillment portal is not a rules archive) remains open; a closed inventory or authoritative evidence of absence is still required."
 confidence: high
 status: needs_followup
 ---
@@ -68,6 +75,11 @@ status: needs_followup
 - Claim: Independent reception supports both praise and friction without model-generated sentiment.
   Source: src-004
   Evidence: "Ars praises bluffing, dread, and push-your-luck tension while warning that take-that nastiness will not suit players who dislike being mean to friends."
+  Confidence: high
+
+- Claim: The rulebook currently linked from the live CMON product page carries no rules changes and no embedded version/errata marker relative to the original 2016 release rulebook.
+  Source: src-002, src-009
+  Evidence: "Text extracted from src-009 (2025-03-22, 16 pages) diffed against src-002 (2016-07-19, 16 pages) shows no rules-content differences; remaining diff lines are TOC letter-spacing artifacts from font substitution during extraction, and neither PDF's metadata carries a version or errata marker."
   Confidence: high
 
 ## Why the governing denominator is open

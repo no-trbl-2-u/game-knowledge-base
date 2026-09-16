@@ -41,19 +41,27 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "HTTP 403; www host also 403; exact CDX query empty."
+  - id: "src-009"
+    title: "Shadows over Camelot historical Rules/FAQ download page (2014 archive)"
+    url: "http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-09-16"
+    notes: "Complete official download inventory as of the 2014 capture; its linked sc_faq_en.pdf is byte-identical to src-002."
+  - id: "src-010"
+    title: "Shadows over Camelot rulebook, reprint-2012 earlier revision (2016 archive)"
+    url: "http://web.archive.org/web/20160221232306/http://cdn1.daysofwonder.com/shadowsovercamelot/en/img/sc_rules_2012_en.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-09-16"
+    notes: "Same reprint-2012 edition as src-003, modified 2013-02-07 (earlier than src-003's 2015-05-18); still not release-era 2005 evidence."
 followups:
   - source_id: "src-004"
     url: "https://ncdn0.daysofwonder.com/shadowsovercamelot/en/img/sc_rules_en.pdf"
     failure: blocked
     fallback: "2005 Book of Quests and FAQ 1.0 govern acquired release law; 2015 rulebook is labeled comparison only."
     retry_needs: wayback_snapshot
-    notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference. Retried 2026-09-04 (librarian): CDN still HTTP 403, and the Wayback availability API returned an empty `archived_snapshots` object for this exact asset URL, independently confirming the earlier empty CDX result. No archive capture of this PDF exists, so retry_needs `wayback_snapshot` is not satisfiable for this URL; a future pass must find an alternate immutable copy of the 2005 Rules booklet instead."
-  - source_id: null
-    url: "https://www.daysofwonder.com/shadowsovercamelot/en/content/faq"
-    failure: blocked
-    fallback: "Official FAQ 1.0 PDF acquired directly from Asmodee CDN."
-    retry_needs: wayback_snapshot
-    notes: "Direct/browser Access Denied; text-proxy retrieval aid reports current 404. Need complete historical official web FAQ/support inventory and explicit version bridge. Retried 2026-09-04 (librarian): live URL still HTTP 403, but the Wayback availability API CONFIRMS a usable capture exists — http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/ (status 200, timestamp 20150403062225). Retrieval of that capture was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. This is an environmental throttle, not a missing document. Next pass should fetch that exact capture URL directly; retry_needs `wayback_snapshot` is correct and now has a concrete target."
+    notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference. Retried 2026-09-04 (librarian): CDN still HTTP 403, and the Wayback availability API returned an empty `archived_snapshots` object for this exact asset URL, independently confirming the earlier empty CDX result. No archive capture of this PDF exists, so retry_needs `wayback_snapshot` is not satisfiable for this URL; a future pass must find an alternate immutable copy of the 2005 Rules booklet instead. Retried 2026-09-16 (librarian): while chasing an alternate rulebook lead, recovered the 2014-archived download page (now src-009) and an earlier reprint-2012 rulebook revision (now src-010) — neither is the 2005 original, so this exact-URL followup remains unsatisfiable and the target document is unchanged: an alternate immutable copy of the 2005 Rules booklet specifically."
   - source_id: null
     url: "lawful immutable English 2005 first-retail component inventory document"
     failure: not_found
@@ -76,6 +84,18 @@ status: needs_followup
   Source: src-001, src-002, src-003, src-004
   Evidence: Two release-era official PDFs are acquired, but original Rules bytes, first-retail inspection, historical support inventory, and complete local-text mappings are absent; later inventory is not release proof.
   Confidence: high
+
+## Version-bridge finding (2026-09-16, librarian)
+
+- Claim: FAQ 1.0 (src-002) is confirmed byte-identical to the copy hosted on Days of Wonder's own CDN as far back as a 2014 Wayback capture, closing the "explicit version bridge" gap for the FAQ document specifically.
+  Source: src-002, src-009
+  Evidence: "Both files are 309,029 bytes with SHA-256 2f4ab8d1756e5743dd7cf12802bebb371dcf08141b448d9867adce5ca7a90709."
+  Confidence: high
+
+- Claim: The reprint-2012 rulebook edition was revised at least once between 2013 and 2015; this is a later comparison data point only and does not close the release-era 2005 Rules gap.
+  Source: src-003, src-010
+  Evidence: "src-010 carries the same title and creation date as src-003 but a modified date of 2013-02-07 versus 2015-05-18, with a different hash and byte size."
+  Confidence: medium
 
 ## Provisional later-inventory arithmetic
 

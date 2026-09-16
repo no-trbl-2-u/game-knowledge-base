@@ -90,6 +90,13 @@ sources:
     provenance: community
     retrieved_at: "2026-07-31"
     notes: "Identity lead only; no weight or rating retained because no fresh auditable snapshot was acquired."
+  - id: "src-012"
+    title: "Nemesis Lockdown — Asmodee shop listing (2023 archive)"
+    url: "http://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-09-16"
+    notes: "Confirms Item No. NEMLD01 as the official retail SKU; no UPC/EAN or first-print lot marker present."
 followups:
   - source_id: "src-001"
     url: "https://web.archive.org/web/20231129181753id_/https://awakenrealms.com/images/download/Nemesis_Lockdown/ENG/Nemesis_LD_Rulebook_280x280mm_bleed3mm-32-pages.pdf"
@@ -114,7 +121,7 @@ followups:
     failure: blocked
     fallback: "Search result exposed Item No. NEMLD01; no body claim relies on the blocked page."
     retry_needs: wayback_snapshot
-    notes: "Need official retail SKU/UPC/publication receipt and first-print markers. Retried 2026-09-04 (librarian): live shop.asmodee.com still HTTP 403, and browser escalation is not the blocker, so browser_fetch is the wrong route. Switched retry_needs to wayback_snapshot because the Wayback availability API CONFIRMS a capture exists — http://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01 (status 200, timestamp 20230529174739). Retrieval was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. Environmental throttle, not a missing document. Next pass should fetch that exact capture URL and read the SKU/EAN block."
+    notes: "Need official retail SKU/UPC/publication receipt and first-print markers. Retried 2026-09-04 (librarian): live shop.asmodee.com still HTTP 403, and browser escalation is not the blocker, so browser_fetch is the wrong route. Switched retry_needs to wayback_snapshot because the Wayback availability API CONFIRMS a capture exists — http://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01 (status 200, timestamp 20230529174739). Retrieval was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. Environmental throttle, not a missing document. Next pass should fetch that exact capture URL and read the SKU/EAN block. Retried 2026-09-16 (librarian): the throttle has cleared; fetched the exact capture (now registered as src-012). It confirms Item No. NEMLD01 as the official retail SKU. No UPC/EAN or first-print lot/version marker appears anywhere on the page, so that portion of the followup remains open; a future pass needs a document source that actually carries a UPC/EAN or lot marker."
   - source_id: null
     url: "lawful immutable English 2022 first-retail component/card/face document corpus"
     failure: not_found
@@ -149,6 +156,13 @@ status: needs_followup
 - Claim: Mars Surface mode is core-box alternate-board content and is represented only at framework level; compatibility cards/Intruder mode are physically inventoried but their borrowed original-Nemesis law is excluded.
   Source: src-001
   Evidence: Rulebook pp. 30-31 separates Solo/Coop, original-character compatibility, alternate board, and original Intruder mode.
+  Confidence: high
+
+## Retail identity finding (2026-09-16, librarian)
+
+- Claim: The official Asmodee retail SKU for the core box is confirmed as NEMLD01.
+  Source: src-012
+  Evidence: "Item No. NEMLD01 appears on the 2023-05-29 archived Asmodee shop listing."
   Confidence: high
 
 ## Coverage arithmetic

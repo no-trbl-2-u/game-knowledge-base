@@ -90,6 +90,13 @@ sources:
     provenance: community
     retrieved_at: "2026-07-31"
     notes: "Identity lead only; no weight or rating retained because no fresh auditable snapshot was acquired."
+  - id: "src-012"
+    title: "Nemesis Lockdown — Asmodee shop listing (2023 archive)"
+    url: "http://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-09-16"
+    notes: "HTTP 200; 64,941 bytes. Confirms Item No. NEMLD01 as the official Asmodee retail SKU, matching the search-result lead already on file. No UPC/EAN or first-print lot marker appears on this page; that portion of the followup remains open."
 confidence: medium
 status: needs_followup
 ---
@@ -130,4 +137,9 @@ status: needs_followup
 - Claim: Current rulebook and Room Sheet bytes cannot yet be proven immutable release-era retail bytes.
   Source: src-001, src-002, src-010
   Evidence: The oldest 2023-11-29 rulebook replay is a genuine archive capture truncated to a 1 MiB prefix (`x-archive-orig-content-length: 1048576`, crawler length 6075325) that is byte-identical to current; alternate modifiers expose the same prefix, and a Range beyond it redirects to the complete 2024-02-20 object proven by Memento-Datetime/x-archive-src. The Room Sheet behaves likewise. Chunking cannot recover either missing 2023 tail; current bytes equal the later complete captures, and the two CDX digests do not prove a revision.
+  Confidence: high
+
+- Claim: The official Asmodee retail SKU for the core box is confirmed as NEMLD01; UPC/EAN and first-print lot markers remain unacquired.
+  Source: src-012
+  Evidence: "Item No. NEMLD01 appears on the 2023-05-29 archived Asmodee shop listing, matching the earlier unverified search-result lead."
   Confidence: high

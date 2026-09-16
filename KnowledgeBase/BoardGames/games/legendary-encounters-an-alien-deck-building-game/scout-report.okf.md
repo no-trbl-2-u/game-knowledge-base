@@ -23,7 +23,7 @@ followups:
     failure: not_found
     fallback: "BGG official file listing and secondary summaries."
     retry_needs: alternate_source
-    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF."
+    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF. Retried 2026-09-16 (librarian): upperdeck.com root now returns HTTP 200 (was not_found at the original check), and an on-site search for \"legendary encounters alien\" returns HTTP 200 with matches, but every result is an expansion-preview blog post (Alien: Covenant expansion card previews); none is a rulebook page or PDF link for the 2014 base game. This is a negative retrieval result, not proof the document never existed — Upper Deck's older product-support pages for this title may simply be gone. alternate_source remains correct; the retrievable document a future pass should target is a rulebook mirror named in a secondary review or an archived upperdeck.com product/support page."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Legendary Encounters: An Alien Deck Building Game"

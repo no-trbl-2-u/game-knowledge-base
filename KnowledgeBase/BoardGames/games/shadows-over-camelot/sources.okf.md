@@ -69,6 +69,20 @@ sources:
     provenance: community
     retrieved_at: "2026-07-31"
     notes: "Identity locator for BGG 15062 only; no weight/rating snapshot retained."
+  - id: "src-009"
+    title: "Shadows over Camelot historical Rules/FAQ download page (2014 archive)"
+    url: "http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-09-16"
+    notes: "Wayback capture request redirected to the nearest stored snapshot, timestamp 20140801092604. HTTP 200; 22,104 bytes. Enumerates the complete official download inventory at that date: Rules book, Quests book, and FAQ each in English/French/German/Italian/Korean, plus Merlin's Company Rules and Bedivere coat of arms. Its linked sc_faq_en.pdf (fetched from the same cdn1.daysofwonder.com host, 309,029 bytes) is SHA-256 2f4ab8d1756e5743dd7cf12802bebb371dcf08141b448d9867adce5ca7a90709 — byte-identical to src-002's current Asmodee-CDN copy, establishing a verified version bridge for the FAQ document from at least 2014 to the present."
+  - id: "src-010"
+    title: "Shadows over Camelot rulebook, reprint-2012 earlier revision (2016 archive)"
+    url: "http://web.archive.org/web/20160221232306/http://cdn1.daysofwonder.com/shadowsovercamelot/en/img/sc_rules_2012_en.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-09-16"
+    notes: "Linked from src-009's 2014 download page under the filename sc_rules_2012_en.pdf; the Wayback redirect served the nearest capture, timestamp 20160221232306. HTTP 200; 6,252,777 bytes; 20 pages; SHA-256 ec846e47b52bc4e6af887e51cacfde2bb707e7ab7bbcee79561a383bd6369aca; PDF metadata: title 'SOC rulebook EN reprint 2012:TTR2 europe rules EN', created 2012-04-23, modified 2013-02-07. This is the same 'reprint 2012' edition as src-003 but an earlier revision (src-003 is modified 2015-05-18, different hash and byte size). It documents that the reprint-2012 rulebook was revised at least once between 2013 and 2015; it is not release-era 2005 evidence and does not change the open first-print denominator."
 confidence: medium
 status: needs_followup
 ---
@@ -94,3 +108,13 @@ status: needs_followup
   Source: src-003, src-004
   Evidence: No acquired 2005 physical/official inventory receipt exposes SKU or UPC; later footer cannot be backdated.
   Confidence: high
+
+- Claim: FAQ 1.0 (src-002) is verified byte-identical to the copy hosted on Days of Wonder's own CDN as far back as a 2014 Wayback capture, establishing a version bridge independent of the current Asmodee-CDN migration.
+  Source: src-009
+  Evidence: "Both files are 309,029 bytes with SHA-256 2f4ab8d1756e5743dd7cf12802bebb371dcf08141b448d9867adce5ca7a90709."
+  Confidence: high
+
+- Claim: The reprint-2012 rulebook edition (the same edition as src-003) was revised at least once between 2013 and 2015; this is a later comparison data point and does not establish 2005 release-era rules.
+  Source: src-010
+  Evidence: "src-010 metadata: same title/creation date as src-003 but modified 2013-02-07 versus src-003's 2015-05-18, with a different SHA-256 and byte size."
+  Confidence: medium

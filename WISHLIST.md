@@ -7,6 +7,8 @@ BoardGames intake candidates and never create `intake-gap` issues.
 
 - [x] [The Quacks of Quedlinburg](KnowledgeBase/BoardGames/games/the-quacks-of-quedlinburg/) — push-your-luck bust economy and rubber-band catch-up reception (covered 2026-07-05)
 - [ ] card costing benchmarks (MTG mana curve + goldfish clock, Hearthstone vanilla test, Dominion Big Money baseline) — price-experiment needs costing prior art with reception evidence
+- [ ] NPC dialogue reception prior art — flavor vs. reactive minor-NPC voice in market/town settings, dead-end-dialogue player complaints; narrative-heavy digital RPGs/roguelikes with authored dialogue trees (Disco Elysium, Pathologic 2, Hades, Undertale) are the likely precedent corpus (from GitHub issue #79)
+- [ ] NPC dialogue voice-distinctiveness prior art — player reception signals for speaker-distinguishable dialogue register, dead-end/quest-gating friction, in campaign narrative board/card games; existing corpus entries (Gloomhaven, Tainted Grail, Oathsworn) carry no content on this axis; candidate for a `patterns/` entry (from GitHub issue #80)
 ## Digital-game research leads — not BoardGames intake
 
 - [ ] Astrea: Six-Sided Oracles — dice-builder analysis (no-blank-faces design, corruption/purify economy); wanted for spec 33 dice-as-equipment prior art
