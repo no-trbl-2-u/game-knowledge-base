@@ -12,6 +12,7 @@ BoardGames intake candidates and never create `intake-gap` issues.
 - [ ] Astrea: Six-Sided Oracles — dice-builder analysis (no-blank-faces design, corruption/purify economy); wanted for spec 33 dice-as-equipment prior art
 - [ ] Dicey Dungeons — digital-system analysis (dice always usable: randomness decides what, not whether); wanted for spec 33 dice-as-equipment prior art
 - [ ] Slice & Dice — digital-system analysis (miss-heavy faces tolerated via reroll ritual + visible per-level die upgrades); wanted for spec 33 dice-as-equipment prior art
+- [ ] NPC/dialogue-staging prior art (e.g. Disco Elysium, Pathologic 2, Undertale, or a comparable CRPG with branching quest-giver/vendor/healer dialogue) — flavor vs. reactive/alignment-gated NPC design, healer/vendor archetype dialogue conventions, dead-end dialogue node reception; wanted for Axiomancer `/adjust-npcs` pass 12 (2026-09-18) NPC staging work (from issue #81)
 
 ## Physical tabletop intake candidates
 

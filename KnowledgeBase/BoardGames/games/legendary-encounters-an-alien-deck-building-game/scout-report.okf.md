@@ -18,12 +18,6 @@ followups:
     fallback: "BGG files listing plus secondary rules walkthrough/review sources were used for high-level summaries."
     retry_needs: manual_review
     notes: "Official rulebook listing was found, but direct file/PDF extraction was not completed during this cron run. Retried 2026-09-04 (librarian): the BGG filepage returned HTTP 403, and a real headless Chromium session (Playwright) against boardgamegeek.com was held at the Cloudflare 'Performing security verification' interstitial without clearing. BGG file downloads additionally require a logged-in account, so browser_fetch alone cannot satisfy this entry; downgraded to manual_review. A future pass needs an authenticated BGG session."
-  - source_id: null
-    url: "https://upperdeck.com/"
-    failure: not_found
-    fallback: "BGG official file listing and secondary summaries."
-    retry_needs: alternate_source
-    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Legendary Encounters: An Alien Deck Building Game"
@@ -53,6 +47,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-09"
     notes: "Rules summary page and commentary."
+  - id: "src-005"
+    title: "Legendary Encounters: An Alien Deck Building Game — Official Rulebook"
+    url: "https://theupperdeckco.wpenginepowered.com/wp-content/uploads/2024/05/Legendary_Encounters_Rules-Alien.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-09-23"
+    notes: "28-page official Upper Deck rulebook PDF, linked from the official upperdeck.com/ud-game-rules/ page. Retried 2026-09-23 (librarian): resolves the prior 'no stable publisher-hosted PDF' gap directly, without needing the blocked BGG filepage lead."
 confidence: medium
 status: needs_followup
 ---
@@ -116,4 +117,5 @@ Study one high-scoring cooperative deckbuilding game not already present in the 
 
 ## Open questions
 
-- Direct official rulebook and FAQ extraction remain the main knowledge gap.
+- Retried 2026-09-23 (librarian): the official Upper Deck rulebook PDF was found and retrieved directly from upperdeck.com/ud-game-rules/ (src-005); `rules/edge-cases-faq.okf.md` now cites it for the Objective/Hive-timing and Final Enemy claims. The BGG filepage rulebook lead (src-002) remains blocked (Cloudflare/login-gated), but is no longer the only official rulebook route.
+- Remaining gap: a closed official FAQ/errata document beyond the base rulebook is still not acquired.
