@@ -4,18 +4,23 @@ type: pattern
 mechanics: [dice-rolling, deck-bag-and-pool-building, push-your-luck]
 better_if_labels: [randomness]
 confidence: medium
-status: verified
+status: draft
 ---
 
 ## Summary
 
 Randomness friction splits into two failure modes and one recurring fix. Too much
-uncontrolled variance (an oversized card pool, an artificial catch-up bump) reads as
-the game overriding player skill; too little variance (a thin card pool that repeats)
-reads as predictable and stale. The recurring mitigation reviewers reward is giving
-players a lever over the randomness — deterministic ordering, a dice-or-card choice,
-or a catch-up tool framed as earned rather than free — so a bad outcome still traces
-back to a legible decision.
+uncontrolled variance — an oversized card pool, a fully dice-gated resolution system,
+an exposure mechanic driven by a single die or card draw — reads as the game
+overriding player skill, and in its sharpest form (Betrayal Legacy, Elder Sign, both
+Dead of Winter titles) can strand a player who played well with a failed task, a lost
+turn, or removal from the game entirely; too little variance (a thin card pool that
+repeats) reads as predictable and stale. The recurring mitigation reviewers reward is
+giving players a lever over the randomness — deterministic ordering, a dice-or-card
+choice, or a catch-up tool framed as earned rather than free — so a bad outcome still
+traces back to a legible decision; where no such lever exists (Elder Sign's rerolls
+are described as limited, Betrayal Legacy's dice and card draws offer none), reviewers
+treat the swing as a design flaw rather than texture.
 
 ## Evidence by game
 
@@ -45,6 +50,18 @@ back to a legible decision.
 - the-quacks-of-quedlinburg (src-005): the reviewer flags bag-pull variance as a
   strong taste filter, warning that luck-averse players should try the game before
   buying it, confidence: high
+- betrayal-legacy (src-005): "a series of card draws just pushes you out of the game"
+  and "the most dickheaded dice" combine so that a player can end "unable to even
+  meaningfully participate" despite reasonable play, confidence: medium (source doc
+  status: needs_followup)
+- dead-of-winter-a-crossroads-game (src-005): opening-turn exposure "can really knock
+  the wind out of you and the group" before anyone has made a meaningful decision,
+  confidence: high (source doc status: needs_followup)
+- dead-of-winter-the-long-night (src-004): the exposure die's "random nature can be
+  slightly unfair," confidence: high (source doc status: needs_followup)
+- elder-sign (src-001, src-002, src-004): task resolution is fully dice-gated with
+  "limited recourse beyond consumable rerolls," so "a few bad rolls...can cause a
+  failure while simultaneously using up all of one's resources," confidence: high
 
 ## Where it works
 
@@ -75,6 +92,15 @@ back to a legible decision.
 - the-quacks-of-quedlinburg (src-005): the reviewer's blunt warning — don't buy
   sight-unseen "if you don't like luck" — shows bag-pull variance as a hard filter
   on the audience, not just a texture note.
+- betrayal-legacy (src-005): "the most dickheaded dice" can push a player out of the
+  game outright, leaving them "unable to even meaningfully participate" regardless of
+  how well they played.
+- elder-sign (src-001, src-002, src-004): task resolution has "limited recourse
+  beyond consumable rerolls," so a bad dice streak can consume all of a player's
+  resources on a single failed check.
+- dead-of-winter-a-crossroads-game (src-005): a single random exposure draw on the
+  opening turn "can really knock the wind out of you and the group" before any
+  meaningful decision has been made.
 
 ## Coverage gaps
 
@@ -85,4 +111,9 @@ rather than variance itself, and kingdom-death-monster's only randomness claim i
 explicitly flagged by its own doc as an unconfirmed inference (status:
 needs_followup). The corpus would benefit from a follow-up pass on
 kingdom-death-monster once its needs_followup backlog clears, specifically targeting
-how reviewers discuss its critical-hit/wound-table dice system.
+how reviewers discuss its critical-hit/wound-table dice system. The newest and
+sharpest variance-too-high cases — Betrayal Legacy's elimination-adjacent dice and
+card draws, and both Dead of Winter titles' exposure-die swings — are sourced from
+needs_followup docs; Elder Sign is the only verified-status contribution to this
+cluster, so a verified-status example of randomness severe enough to strand a
+well-playing player is still thin.

@@ -31,3 +31,36 @@ Format:
   games accumulate mechanic-specific reception evidence. kingdom-death-monster
   and too-many-bones are still needs_followup on their reception docs;
   every pattern doc citing either is status: draft, not verified.
+- 2026-09-27: no pass logged here between 2026-07-19 and today despite the
+  weekly cadence — a ~10-week gap during which the corpus was reset (`kb:
+  reset scout corpus and adopt 5-5-5 intake`, 2026-07-30) and rebuilt from 18
+  games to 46 through the new scout/promote pipeline; flagging the gap itself
+  per the "missing line means the job never engaged" rule, though the cause
+  looks like the pass simply not having been invoked rather than a run that
+  produced nothing. Treated as a large catch-up: 27 newly-promoted games had
+  no pattern-doc citations at all (arydia-the-paths-we-dare-tread,
+  battlestar-galactica-the-board-game, betrayal-legacy, bloodborne-the-card-game,
+  cthulhu-death-may-die, dark-pact, dead-of-winter-a-crossroads-game,
+  dead-of-winter-the-long-night, descent-journeys-in-the-dark-second-edition,
+  dominion, earthborne-rangers, elder-sign, food-chain-magnate,
+  forgotten-waters, horrified, nemesis, nemesis-lockdown, onirim-second-edition,
+  scythe, shadows-over-camelot, star-wars-imperial-assault,
+  tainted-grail-the-fall-of-avalon, terra-mystica, the-crew,
+  the-thing-the-boardgame, unfathomable, unmatched-battle-of-legends-volume-one),
+  plus 7 older games (arkham-horror-the-card-game, root, mage-knight,
+  spirit-island, kingdom-death-monster, heat-pedal-to-the-metal,
+  the-quacks-of-quedlinburg) re-checked for mechanics that only just crossed
+  the 5-game tag-prevalence threshold. 4 pattern doc(s) created
+  (hidden-information, modular-board, semi-cooperative-game,
+  simultaneous-action-selection — all explicitly flagged thin-relative-to-tag-
+  prevalence in their own Summaries), 25 updated (every existing doc except
+  deck-bag-and-pool-building, which had no new evidence), 3 wishlist
+  append(s). All 18 better-if labels now have at least one game's evidence
+  except kingmaking, still excluded for zero evidence. Deliberately deferred
+  (real reviewer commentary too thin even though the tag-prevalence threshold
+  is met or close): action-points (2 games with substantive commentary out of
+  6 tagged), grid-movement (0 games with substantive commentary despite 7
+  tagged — every citation found was background metadata only), and
+  resource-management (1 game, weak). the-thing-the-boardgame, unfathomable,
+  and battlestar-galactica-the-board-game have no reception docs yet and
+  contributed nothing. `node scripts/validate-okf.mjs` green before commit.

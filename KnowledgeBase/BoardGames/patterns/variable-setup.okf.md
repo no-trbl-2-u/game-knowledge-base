@@ -9,23 +9,37 @@ status: verified
 
 ## Summary
 
-Across the corpus, variable/modular setup earns its replayability reputation only
-when the pool of variation is large enough to feel fresh; a small or fixed
-sub-pool (few fear/blight cards, no modules yet unlocked, mismatched module
-sets) turns the same mechanic into a source of predictability or imbalance
-complaints instead. The failure mode is rarely "randomized setup is bad" —
-it is "there wasn't enough variety in the setup pool," or "the variable
-pieces weren't curated correctly." Evidence is real but thin: of the five
-tagged games, only three (Heat, Spirit Island, Quacks) yielded reviewer
-claims that were genuinely about setup *variability* rather than setup
-*duration* or in-game card-draw randomness.
+Across the corpus, variable/modular setup earns its replayability reputation when the
+pool of variation is large enough to feel fresh, or when the setup step routes into a
+genuinely different experience each time — a distinct victory condition, a distinct
+monster mini-game, a reshuffled ship layout — and it earns complaints when the variable
+pool is too small or too uncurated to deliver on that promise: a base race without
+modules, thin fear/blight decks, or mismatched ingredient-book combinations. Rulebook-level
+evidence (Dominion's many Kingdom-card choices, Horrified's variable monster selection)
+confirms the mechanic is structurally present in more of the corpus than reviewer
+commentary alone would show, even without an explicit reviewer verdict on the resulting
+variety in those cases. Evidence is real but uneven in depth: of the seven tagged games
+with citable evidence, Dark Pact, Horrified, and Nemesis newly confirm that varied victory
+conditions, monster selection, and ship layout specifically (not just general
+replayability) drive the praise, while Heat, Spirit Island, and Quacks remain the primary
+source of the failure-mode evidence.
 
 ## Evidence by game
 
+- dark-pact (src-007, src-009, src-010): Alternate victory requirements are praised as
+  "the main source of strategic variety," confidence: high
+- dominion (src-002): The rulebook presents "many Kingdom-card choices" as the
+  setup-time variability engine, confidence: medium
 - heat-pedal-to-the-metal (src-005): Roll to Review lists as a con that
   "Early games without modules may feel overly simplistic for seasoned
   players" — the base race alone under-delivers until the optional,
   variable championship modules are added, confidence: medium
+- horrified (src-003): A reviewer describes "a different mini-game for each
+  monster" via variable monster selection, confidence: medium
+- horrified (src-002): The official rules are built around "variable
+  monster selection," confidence: high
+- nemesis (src-007, src-008, src-009): "Randomized ship layout" and spare
+  room tiles support high replayability, confidence: high
 - spirit-island (src-005): Gideon's Gaming notes the core box's fear and
   blight decks are small enough to repeat ("low number of fear cards means
   they repeat often"; "only comes with two blight cards"), which the same
@@ -42,6 +56,13 @@ claims that were genuinely about setup *variability* rather than setup
 
 ## Where it works
 
+- dark-pact (src-007, src-009, src-010): Alternate victory requirements are
+  called "the main source of strategic variety," making the variable
+  setup itself the engine of replayability rather than a side effect.
+- horrified (src-003): Variable monster selection is credited with
+  delivering "a different mini-game for each monster" in the same box.
+- nemesis (src-007, src-008, src-009): Randomized ship layout and spare
+  room tiles are credited with high replayability.
 - the-quacks-of-quedlinburg (src-004): variable module/ingredient setup is
   named directly as the reason "every game will be different," driving
   family-friendly replayability.
@@ -70,4 +91,8 @@ rather than setup-condition variability itself, so neither yielded usable
 evidence here — this pattern's coverage would benefit from a game whose
 reviews discuss modular-board or randomized-market setup explicitly (tile
 layout, scenario draw, starting-resource randomization) rather than
-in-game draw variance.
+in-game draw variance. Dominion's and Horrified's new evidence is
+rulebook-sourced (neutral polarity): it confirms the setup-variability
+mechanism exists but does not yet carry a reviewer's qualitative verdict on
+whether the resulting variety holds up over many plays, the way Dark
+Pact's, Nemesis's, and Quacks's reviewer commentary does.

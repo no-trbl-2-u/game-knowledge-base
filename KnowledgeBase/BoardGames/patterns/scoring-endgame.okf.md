@@ -14,8 +14,13 @@ scoring/endgame complaints, and Slay the Spire's tagged instance is really about
 post-run campaign-reset clarity rather than a scoring ceremony or trigger-design
 problem. Where the pattern shows up cleanly, the complaint is not that the endgame
 math is unfair — it's that closing the game requires either the rulebook (Ark Nova)
-or feels anticlimactic/procedural rather than climactic (Spirit Island). The evidence
-base remains narrow, so conclusions here should be treated as directional, not definitive.
+or feels anticlimactic/procedural rather than climactic (Spirit Island). Nemesis adds
+a fourth data point, but a purely descriptive one: its endgame requires resolving a
+"final engine/coordinate/contamination/objective sequence," and the available
+evidence describes what that sequence involves rather than whether players found it
+satisfying or frustrating, so it doesn't yet support a works or fails claim either
+way. The evidence base remains narrow, so conclusions here should be treated as
+directional, not definitive.
 
 ## Evidence by game
 
@@ -30,6 +35,10 @@ base remains narrow, so conclusions here should be treated as directional, not d
 - slay-the-spire-the-board-game (src-008): coopgestalt found the transition after
   finishing Act III "very unclear" without prior video-game familiarity — an
   endgame/reset-procedure complaint more than a scoring-ceremony one, confidence: medium
+- nemesis (src-005, src-008): Closing out a game requires resolving a "final
+  engine/coordinate/contamination/objective sequence" — a descriptive account of what
+  the endgame entails, without an accompanying reviewer verdict on whether that
+  sequence works or fails, confidence: medium
 
 ## Where it works
 
@@ -58,4 +67,8 @@ Evidence clusters around "closing the game requires external reference" (Ark Nov
 modes under one label. A heavier area-control or engine-building title with an
 explicit, reviewer-discussed final-scoring phase (tableau/board tally at game end)
 would help separate "scoring math is a chore" from "the endgame trigger itself lacks
-drama," since the current evidence mostly supports the latter.
+drama," since the current evidence mostly supports the latter. Nemesis's contribution
+names the mechanical shape of its endgame sequence but not a reviewer's verdict on it;
+a follow-up pass should look for a source that says whether that engine/coordinate/
+contamination/objective sequence lands as satisfying closure or as another instance of
+the "chore" or "anticlimactic" complaints seen elsewhere in this set.
