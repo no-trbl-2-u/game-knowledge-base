@@ -23,7 +23,7 @@ followups:
     failure: other
     fallback: "Product page was accessible, but no downloadable rulebook was located in the retrieved material."
     retry_needs: manual_review
-    notes: "Retry official rulebook, FAQ, or BGG files. Retried 2026-09-04 (librarian): the shop product page still returns HTTP 200 (299,990 bytes) and was fully enumerated — it contains no PDF link of any kind, confirming the original finding on a second dated retrieval rather than leaving it as a one-run observation. The only support surface it exposes is https://support.kingdomdeath.com/en-US, which was also retrieved (HTTP 200) and is a store/fulfillment help centre (store-faq, damaged-items, combine-order, backer-kit articles), not a rules document archive. BGG files remain the outstanding lead but require an authenticated BGG session (see src-001). Not an absence claim."
+    notes: "Retry the official 1.6 core rulebook. The FAQ is already retrieved as src-006; BGG files remain an outstanding lead but require an authenticated BGG session (see src-001). Retried 2026-09-04 (librarian): the shop product page still returns HTTP 200 (299,990 bytes) and was fully enumerated — it contains no PDF link of any kind, confirming the original finding on a second dated retrieval rather than leaving it as a one-run observation. The only support surface it exposes is https://support.kingdomdeath.com/en-US, which was also retrieved (HTTP 200) and is a store/fulfillment help centre (store-faq, damaged-items, combine-order, backer-kit articles), not a rules document archive. Not an absence claim."
 sources:
   - id: "src-001"
     title: "Kingdom Death: Monster — BoardGameGeek"
@@ -157,7 +157,7 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Run validation
 
-- `WISHLIST.md` entry checked off: n/a — wishlist empty.
+- `WISHLIST.md` entry checked off: yes — the explicit Kingdom Death: Monster AI-deck and hit-location-deck follow-up was consumed in this maintenance pass.
 - `node scripts/generate-index.mjs` run after writing docs: pending.
 - `node scripts/validate-okf.mjs` exit 0 before push: pending.
 - 2026-08-31 (librarian): the two `pending` lines above record the state at scout time only. Kingdom Death: Monster is promoted canonical corpus; `node scripts/generate-index.mjs` and `node scripts/validate-okf.mjs` both ran green in the 2026-08-31 librarian pass.
