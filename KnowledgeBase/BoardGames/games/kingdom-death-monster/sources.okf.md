@@ -16,7 +16,7 @@ sources:
     title: "Kingdom Death: Monster — BoardGameGeek"
     url: "https://boardgamegeek.com/boardgame/55690/kingdom-death-monster"
     kind: bgg_page
-    provenance: official
+    provenance: community
     retrieved_at: "2026-07-17"
     notes: "BGG discovery and score lead; direct page returned HTTP 403."
   - id: "src-002"
@@ -40,6 +40,34 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-17"
     notes: "Review identifies cooperative, dice, grid movement, role-playing, campaign, solo, and storytelling mechanisms."
+  - id: "src-006"
+    title: "Kingdom Death official FAQ — Showdown"
+    url: "https://kingdomdeath.com/rules/faq"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-09-05"
+    notes: "Dynamic HTML receipt observed 2026-09-05T03:16:48Z; HTTP 200, 99,460 bytes, SHA-256 64a66e8d68f1b8976741bfb750bfe169a13ace768192639e504a58404a1993af. Showdown FAQ entries include hit-location critical-wound handling and survival-opportunity timing."
+  - id: "src-007"
+    title: "Kingdom Death: Monster — WayTooManyGames review"
+    url: "https://waytoomany.games/2019/08/11/kingdom-death-monster-review/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Dynamic HTML receipt observed 2026-09-05T03:17:11Z; HTTP 200, 281,491 bytes, SHA-256 5b67c31cae543f3849147d4314540f6d95811b41470fed0fe8434232b7851b4f. Review describes AI, hit-location, and resource decks, including AI-deck health and difficulty assembly."
+  - id: "src-008"
+    title: "Review - Kingdom Death: Monster — Always Board Never Boring"
+    url: "https://www.alwaysboardneverboring.com/2016/11/kingdom-death-monster.html"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Dynamic HTML receipt observed 2026-09-05T03:16:51Z; HTTP 200, 190,494 bytes, SHA-256 941cf1159ef5530bf6541cee74dcbe7822971df828537fec6a6b7079ca5c6ee6. Review explains AI-card removal as monster attrition and hit-location draws as story-generating combat moments."
+  - id: "src-009"
+    title: "Kingdom Death: Monster Game Review — Meeple Mountain"
+    url: "https://www.meeplemountain.com/reviews/kingdom-death-monster/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Dynamic HTML receipt observed 2026-09-05T03:17:12Z; HTTP 200, 240,299 bytes, SHA-256 89e27c36d62c9bee61aac895e0a153b249a76a863f4be65c9e474d0837473c5e. Review explicitly states that the AI deck doubles as monster hit points and that each monster has a unique wound deck with effects and critical results."
 confidence: medium
 status: needs_followup
 ---
@@ -50,4 +78,4 @@ The publisher page is the primary product source. BGG is the discovery and score
 
 ## Open questions
 
-Locate the official 1.6 rulebook or FAQ and capture current BGG statistics from an alternate authenticated or mirror source.
+Locate the official 1.6 rulebook. The official FAQ is already retrieved and recorded as src-006; current BGG statistics remain unverified because direct access failed.

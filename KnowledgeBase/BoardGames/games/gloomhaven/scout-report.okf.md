@@ -75,17 +75,45 @@ sources:
     provenance: official
     retrieved_at: "2026-08-31"
     notes: "Official publisher support hub, confirmed in the 2026-08-31 librarian pass; the 2026-07-16 not_found followup is resolved. Links the Gloomhaven Rulebook, the Gloomhaven FAQ at cephalofairgames.github.io, a puzzle-book hint guide, how-to-play videos, First Printing (2025) errata, and crossover character sheets."
+  - id: "src-009"
+    title: "Gloomhaven Rulebook (2017 English edition) — mirrored PDF"
+    url: "https://cdn.1j1ju.com/medias/8d/c5/21-gloomhaven-rulebook.pdf"
+    kind: rulebook_pdf
+    provenance: secondary
+    retrieved_at: "2026-09-03"
+    notes: "Static 52-page PDF receipt: 13,154,428 bytes, SHA-256 9965c76dfc747c82a4013d645e95f5ffc64692865617527734199b064a2117fe."
+  - id: "src-010"
+    title: "Gloomhaven review: 2017’s biggest board game is astoundingly good — Ars Technica"
+    url: "https://arstechnica.com/gaming/2017/04/gloomhaven-review-2017s-biggest-board-game-is-astoundingly-good/2/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-03"
+    notes: "HTTP 200 dynamic HTML receipt; final URL redirected to the article root; cited monster-AI passage remained present."
+  - id: "src-011"
+    title: "Official FAQ for Gloomhaven (2025) / Second Edition"
+    url: "https://cephalofairgames.github.io/gloomhaven2e-faq/"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-09-03"
+    notes: "Current Second Edition FAQ, retained as an edition-bound authority and not backdated into the 2017 rules scope."
+  - id: "src-012"
+    title: "Gloomhaven (2025) Rulebook — Cephalofair-linked Google Drive PDF"
+    url: "https://drive.google.com/file/d/16TmmCKa6zVVObj2qM-vIj9RcEAC3nfMT/view?usp=sharing"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-09-03"
+    notes: "Official Cephalofair-linked static 74-page PDF; HTTP 200, 51,013,512 bytes, SHA-256 a8bb3b2e3d875f325d12da48ca4c6fd7807876b3b0353bf4052a74678d339f27. OCR inspection found the card-driven and shuffle-icon architecture, but the 2025/Second Edition artifact is not backdated into this 2017 scope."
 confidence: medium
 status: needs_followup
 ---
 
 ## Scout objective
 
-Study one high-scoring RPG / role-playing board game for rules structure, reception, and better-if opportunities.
+Existing-game maintenance pass for the wishlist request: document Gloomhaven's monster ability-card rules, shuffle-icon reshuffle rule, and reception of its card-driven enemy AI within the 2017 base-game scope.
 
 ## Why this game
 
-- Wishlist entry consumed: no — wishlist had no unchecked entries; free choice.
+- Wishlist entry consumed: the physical-tabletop request for "Gloomhaven monster ability decks"; Quarriors / Dice Masters remains excluded by standing order.
 - BGG signal: BGG Data reported rating 8.6, overall rank #3, and weight 3.9 at retrieval.
 - Mechanics relevance: persistent campaign, distinct mercenary roles, tactical cardplay, cooperative scenarios, and progression.
 - RPG fit: BGG pitches strategic monster combat and legacy quests; Dized describes players as wandering mercenaries with distinct skills, experience, loot, new locations, and branching story decisions.
@@ -95,17 +123,17 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 - BoardGameGeek: identified through search; direct page blocked.
 - BGG-facing score mirror: retrieved successfully.
-- Publisher page: not confirmed.
-- Official rulebook: not located.
+- Publisher page: confirmed and retrieved as src-008; it links the official Gloomhaven resources and edition-bound materials.
+- 2017 English base-game rulebook: located and inspected as the static PDF receipt src-009; the retrieved artifact is secondary provenance.
 - Structured rules: Dized retrieved.
-- Review sources: The Opinionated Gamers and Co-op Board Games.
+- Review sources: The Opinionated Gamers, Co-op Board Games, and Ars Technica (src-010).
 
 ## Rulebook extraction status
 
-- Official rulebook found: no.
-- File inspected: no.
-- Page count/version/date if known: unknown.
-- Text extraction quality: secondary summaries only.
+- 2017 base-game rulebook found: yes, as a static 52-page third-party mirror; exact bytes were verified and the PDF text layer was inspected.
+- File inspected: yes; PDF pages 10 and 32 support the monster ability-card and end-of-round claims.
+- Page count/version/date if known: 52 pages; 2017 English edition boundary from the mirror record.
+- Text extraction quality: machine-readable PDF text; the mirror is secondary provenance, while the current Cephalofair support page and its separately identified 2025/Second Edition rulebook remain edition-bound authorities.
 
 ## Documents written
 
@@ -122,10 +150,29 @@ Study one high-scoring RPG / role-playing board game for rules structure, recept
 
 ## Run validation
 
-- `WISHLIST.md` entry checked off: n/a — wishlist empty.
-- `node scripts/generate-index.mjs` run after writing docs: pending.
-- `node scripts/validate-okf.mjs` exit 0 before push: pending.
-- 2026-08-31 (librarian): the two `pending` lines above record the state at scout time only. This game is promoted canonical corpus; `node scripts/generate-index.mjs` and `node scripts/validate-okf.mjs` both ran green in the 2026-08-31 librarian pass.
+- `WISHLIST.md` entry checked off: yes — the Gloomhaven monster ability-decks request was consumed by this maintenance pass.
+- `node scripts/generate-index.mjs` run after writing docs: passed; index fresh.
+- `node scripts/validate-okf.mjs` exit 0 before push: passed; 2,798 files clean.
+- 2026-08-31 (librarian): the earlier scout-state observations were superseded; this game is promoted canonical corpus, and `node scripts/generate-index.mjs` plus `node scripts/validate-okf.mjs` both ran green in the 2026-08-31 librarian pass.
+
+## Monster ability-deck findings
+
+- Claim: At the start of each round, one card is played for each monster type currently on the map from its respective monster ability deck; all monsters in that type use the same card.
+  Source: src-009
+  Evidence: 2017 rulebook PDF page 10, "Monster Ability Cards," says one card is played for each monster type from its respective deck and that the card determines the abilities for every monster of that type.
+  Confidence: high
+
+- Claim: A card's shuffle icon returns that monster type's discarded ability cards to its deck at end of round, while abilities absent from the card are not performed.
+  Source: src-009
+  Evidence: 2017 rulebook PDF pages 10 and 32, monster ability-card explanation and End of Round procedure.
+  Confidence: high
+
+- Claim: A reviewer found the card-driven monster AI quick to administer but unpredictable enough to demand plan changes.
+  Source: src-010
+  Evidence: Ars Technica's monster-AI passage calls it "quick and painless" and describes new plans on the fly.
+  Confidence: high
+
+The per-set ability-card count remains unknown in this record: the retrieved 2017 rulebook pages used here do not state it. The 2025/Second Edition official FAQ and rulebook were retrieved as current authorities but are not silently merged into this 2017 base-game scope. Their existence resolves the earlier source-location uncertainty, not the edition boundary.
 
 ## Strongest design lessons
 
@@ -141,4 +188,4 @@ It reduced state-restoration and setup burden without weakening the campaign's s
 
 ## Open questions
 
-Recover the official first-edition rulebook, verify exact BGG metadata directly, and replace secondary rules summaries with page or section citations.
+Verify exact BGG metadata directly and, if a future pass needs publisher-hosted first-edition bytes rather than the retrieved mirror, locate an edition-matched Cephalofair-hosted or authorized archive copy. The 2017 source is secondary provenance; its cited pages support the card-driven and shuffle-icon rules but do not establish an exact per-set card count.

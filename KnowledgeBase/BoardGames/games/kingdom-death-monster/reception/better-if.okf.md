@@ -27,6 +27,27 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-17"
     notes: "Mechanism and reception lead."
+  - id: "src-007"
+    title: "Kingdom Death: Monster — WayTooManyGames review"
+    url: "https://waytoomany.games/2019/08/11/kingdom-death-monster-review/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Review evidence on changing AI-card health and encounter assembly."
+  - id: "src-008"
+    title: "Review - Kingdom Death: Monster — Always Board Never Boring"
+    url: "https://www.alwaysboardneverboring.com/2016/11/kingdom-death-monster.html"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Review evidence on hit-location story moments."
+  - id: "src-009"
+    title: "Kingdom Death: Monster Game Review — Meeple Mountain"
+    url: "https://www.meeplemountain.com/reviews/kingdom-death-monster/"
+    kind: review
+    provenance: secondary
+    retrieved_at: "2026-09-05"
+    notes: "Current review evidence on unique wound-deck effects and AI-card health."
 confidence: low
 status: needs_followup
 ---
@@ -47,6 +68,11 @@ status: needs_followup
   Source: src-002
   Evidence: The product premise makes persistent survivor survival and campaign continuity central; the recommendation is an inference.
   Confidence: low
+
+- Claim: The game would be better if it made the relationship between AI-card depletion, changing threat, and hit-location consequences easier to read at the table.
+  Source: src-007, src-008, src-009
+  Evidence: The reviews describe AI cards as both behavior and health, and describe hit-location cards as carrying reactions, rewards, and critical effects; the readability recommendation is an interpretation of that documented load.
+  Confidence: medium
 
 ## Open questions
 
