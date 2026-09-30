@@ -61,7 +61,8 @@ games — it never invents claims. Body sections:
 6. Run `node scripts/validate-okf.mjs` — green before commit.
 7. **Deliver as a PR — mandatory, not optional.** In order:
    `git checkout -b patterns/<YYYY-MM-DD>`; commit
-   (`patterns: <YYYY-MM-DD>`); `git push -u origin patterns/<YYYY-MM-DD>`;
+   (`patterns: <YYYY-MM-DD>`); `node scripts/push-topic-branch.mjs
+   patterns/<YYYY-MM-DD>`;
    then `gh pr create --base main --head patterns/<YYYY-MM-DD>
    --title "patterns: <YYYY-MM-DD>" --body "<RUNLOG line + summary>"`.
    A pushed branch with no PR is an unfinished pass: nothing reaches

@@ -45,7 +45,7 @@ that ships beats a complete pass that doesn't):
    of the same game.
 5. **Deliver as a PR — mandatory, not optional.** In order:
    `git checkout -b kb/librarian-<YYYY-MM-DD>`; commit
-   (`librarian: <YYYY-MM-DD>`); `git push -u origin
+   (`librarian: <YYYY-MM-DD>`); `node scripts/push-topic-branch.mjs
    kb/librarian-<YYYY-MM-DD>`; then `gh pr create --base main --head
    kb/librarian-<YYYY-MM-DD> --title "librarian: <YYYY-MM-DD>" --body
    "<summary>"`. A pushed branch with no PR is an unfinished pass —

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import test from 'node:test';
+import { isAllowedTopicBranch } from './push-topic-branch.mjs';
 
 const settings = JSON.parse(fs.readFileSync(new URL('../.claude/settings.json', import.meta.url), 'utf8'));
 const allow = settings.permissions?.allow ?? [];
@@ -16,12 +17,12 @@ function permitted(command) {
   return allow.some((rule) => matches(rule, command));
 }
 
-test('push policy allows topic branches and denies direct main pushes', () => {
+test('push policy delegates delivery to the guarded topic-branch wrapper', () => {
   for (const command of [
-    'git push -u origin kb/example',
-    'git push origin chore/repair-settings',
-    'git push -u origin audit/2026-09-29',
-    'git push origin patterns/2026-09-29',
+    'node scripts/push-topic-branch.mjs kb/example',
+    'node scripts/push-topic-branch.mjs chore/repair-settings',
+    'node scripts/push-topic-branch.mjs audit/2026-09-29',
+    'node scripts/push-topic-branch.mjs patterns/2026-09-29',
   ]) {
     assert.equal(permitted(command), true, `expected allowed: ${command}`);
   }
@@ -30,12 +31,27 @@ test('push policy allows topic branches and denies direct main pushes', () => {
     'git push origin main',
     'git push -u origin main',
     'git push origin refs/heads/main',
+    'git push origin audit/foo:main',
+    'git push -u origin patterns/foo:main',
   ]) {
     assert.equal(permitted(command), false, `expected denied: ${command}`);
   }
 });
 
-test('push policy contains no unscoped wildcard rule', () => {
-  assert.equal(allow.includes('Bash(git push -u origin *)'), false);
-  assert.equal(allow.includes('Bash(git push origin *)'), false);
+test('wrapper rejects destination refspecs for both push spellings', () => {
+  for (const branch of [
+    'audit/foo:main',
+    'patterns/foo:main',
+    'kb/foo:refs/heads/main',
+    'main',
+  ]) {
+    assert.equal(isAllowedTopicBranch(branch), false, `expected rejected branch: ${branch}`);
+  }
+  for (const branch of ['audit/foo', 'patterns/2026-09-30', 'kb/repair-settings']) {
+    assert.equal(isAllowedTopicBranch(branch), true, `expected allowed branch: ${branch}`);
+  }
+});
+
+test('settings contain no direct git-push allow rule', () => {
+  assert.equal(allow.some((rule) => rule.startsWith('Bash(git push')), false);
 });

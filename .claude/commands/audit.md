@@ -46,8 +46,8 @@ is protected — it takes no direct pushes. Do not merge the PR yourself.
    (`node scripts/generate-index.mjs`).
 6. **Deliver as a PR — mandatory, not optional.** In order:
    `git checkout -b audit/<YYYY-MM-DD>`; commit (`audit: <YYYY-MM-DD>`,
-   with the spot-check sample in the body); `git push -u origin
-   audit/<YYYY-MM-DD>`; then `gh pr create --base main --head
+   with the spot-check sample in the body); `node
+   scripts/push-topic-branch.mjs audit/<YYYY-MM-DD>`; then `gh pr create --base main --head
    audit/<YYYY-MM-DD> --title "audit: <YYYY-MM-DD>" --body "<summary>"`.
    A pushed branch with no PR is an unfinished pass: nothing reaches
    `main` without one. Do not merge the PR yourself.
