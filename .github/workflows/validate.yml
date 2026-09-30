@@ -43,6 +43,8 @@ jobs:
         run: node --test scripts/telemetry-delivery.test.mjs
       - name: Test event-driven correction-loop contract
         run: node --test scripts/kb-loop-contract.test.mjs
+      - name: Test Claude push permission policy
+        run: node --test scripts/claude-settings-policy.test.mjs
       - name: Self-test write guard
         run: node .claude/hooks/okf-guard.mjs self-test
 
