@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Used publisher page, review evidence, and BGG-facing statistics mirror."
     retry_needs: alternate_source
-    notes: "Direct BGG page and XML endpoint were inaccessible during this run; retry BGG files/forums or a publisher rulebook download. Retried 2026-09-04 (librarian): still HTTP 403, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. The block is systemic to boardgamegeek.com from this environment. alternate_source remains correct; the publisher rulebook download is the more promising of the two named leads."
+    notes: "Direct BGG page and XML endpoint were inaccessible during this run; retry BGG files/forums or a publisher rulebook download. Retried 2026-09-04 (librarian): still HTTP 403, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. The block is systemic to boardgamegeek.com from this environment. alternate_source remains correct; the publisher rulebook download is the more promising of the two named leads. Retried 2026-09-30 (librarian): direct curl still returns HTTP 403; no change from 2026-09-04."
 sources:
   - id: "src-001"
     title: "Oathsworn: Into the Deepwood — BoardGameGeek"

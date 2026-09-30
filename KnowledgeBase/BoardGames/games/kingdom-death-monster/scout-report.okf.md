@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Used the publisher product page plus search-result metadata and a secondary review."
     retry_needs: alternate_source
-    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 on 2026-07-17; current score/rank/weight remain unverified. Retried 2026-09-04 (librarian): still HTTP 403/401, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. Systemic to boardgamegeek.com from this environment; alternate_source (a BGG-derived mirror) remains the right retrieval route."
+    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 on 2026-07-17; current score/rank/weight remain unverified. Retried 2026-09-04 (librarian): still HTTP 403/401, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. Systemic to boardgamegeek.com from this environment; alternate_source (a BGG-derived mirror) remains the right retrieval route. Retried 2026-09-30 (librarian): direct curl still returns HTTP 403; no change from 2026-09-04."
   - source_id: "src-005"
     url: "https://shop.kingdomdeath.com/products/kingdom-death-monster-1-5"
     failure: other

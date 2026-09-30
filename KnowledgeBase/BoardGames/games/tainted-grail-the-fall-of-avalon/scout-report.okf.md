@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "BGG search result and indexed review metadata"
     retry_needs: manual_review
-    notes: "Recover current average, Geek Rating, rank, and mechanism list. Retried 2026-09-04 (librarian): still HTTP 403. Escalated the attempt to a real headless Chromium session (Playwright), which also received the Cloudflare 'Performing security verification' interstitial and never cleared it, so `browser_fetch` is now demonstrably exhausted for boardgamegeek.com from this environment; downgraded to manual_review. A future pass needs an authenticated/interactive BGG session or a BGG-derived mirror as an alternate document."
+    notes: "Recover current average, Geek Rating, rank, and mechanism list. Retried 2026-09-04 (librarian): still HTTP 403. Escalated the attempt to a real headless Chromium session (Playwright), which also received the Cloudflare 'Performing security verification' interstitial and never cleared it, so `browser_fetch` is now demonstrably exhausted for boardgamegeek.com from this environment; downgraded to manual_review. A future pass needs an authenticated/interactive BGG session or a BGG-derived mirror as an alternate document. Retried 2026-09-30 (librarian): direct curl still returns HTTP 403; no change from 2026-09-04."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Tainted Grail: The Fall of Avalon"

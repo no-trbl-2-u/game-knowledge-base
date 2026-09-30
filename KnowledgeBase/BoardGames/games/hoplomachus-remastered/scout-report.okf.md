@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Search result snippets and a secondary BGG-rating report"
     retry_needs: manual_review
-    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 during this run; recheck later for current average, rank, weight, and comments. Retried 2026-09-04 (librarian): still HTTP 403/401. A real headless Chromium session (Playwright) was also served the Cloudflare 'Performing security verification' interstitial and never cleared it, so browser_fetch is exhausted for boardgamegeek.com from this environment; downgraded to manual_review."
+    notes: "Direct BGG page returned HTTP 403 and XML API returned HTTP 401 during this run; recheck later for current average, rank, weight, and comments. Retried 2026-09-04 (librarian): still HTTP 403/401. A real headless Chromium session (Playwright) was also served the Cloudflare 'Performing security verification' interstitial and never cleared it, so browser_fetch is exhausted for boardgamegeek.com from this environment; downgraded to manual_review. Retried 2026-09-30 (librarian): direct curl still returns HTTP 403; no change from 2026-09-04."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Hoplomachus: Remastered"
