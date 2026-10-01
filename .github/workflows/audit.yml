@@ -3,7 +3,8 @@ name: audit
 # Monthly evidence audit (see .claude/commands/audit.md): remediate dead
 # source URLs filed by the weekly check-links sweep, drain the
 # needs_followup backlog, spot-check verified claims against their
-# sources, keep confidence labels honest. Commits to main. 15th at an
+# sources, keep confidence labels honest. Delivers one commit on an
+# audit/<date> branch and opens a PR against protected main. 15th at an
 # off-peak minute — clear of the daily 06:00 scout, Wed librarian, Sun
 # patterns, and Mon check-links cadences.
 

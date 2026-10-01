@@ -1,24 +1,30 @@
 # CLAUDE.md — game-knowledge-base
 
-SomberSoft OKF knowledge base: board-game rules/reception research plus a
-Dawncaster card corpus. Every content file is an `*.okf.md` — markdown with
-strict YAML frontmatter. **`KnowledgeBase/BoardGames/OKF_SPEC.md` is the
-contract; read it before writing any record.** The operating mandate (who
-writes what, on what cadence) is `KnowledgeBase/BoardGames/operations.okf.md`.
+SomberSoft OKF knowledge base: board-game rules/reception research plus
+digital card corpora (Dawncaster and Slay the Spire under
+`KnowledgeBase/DigitalCardGames/`). Every content file is an `*.okf.md` —
+markdown with strict YAML frontmatter. **`KnowledgeBase/BoardGames/OKF_SPEC.md`
+is the contract; read it before writing any record.** The operating mandate
+(who writes what, on what cadence) is `KnowledgeBase/BoardGames/operations.okf.md`.
+`temporary/` is an archival dossier — dated snapshots that are never
+authoritative and are not loaded by any agent or workflow.
 
-## The four rules that prevent most damage
+## The five rules that prevent most damage
 
 1. **Metadata firewall — grep frontmatter before opening bodies.** Every
    game doc carries the game's full `mechanics` and (on reception docs)
    `better_if_labels` tags, so queries resolve from frontmatter + the
    generated indexes without reading bodies. Start at
-   `KnowledgeBase/BoardGames/INDEX.okf.md` or the Dawncaster sidecars
-   (`cards.csv` / `cards.json` / `keywords.json`).
+   `KnowledgeBase/BoardGames/INDEX.okf.md` or the card-corpus sidecars
+   (Dawncaster: `cards.csv` / `cards.json` / `card-index.csv` /
+   `keywords.json`; Slay the Spire: `cards.csv` / `cards.json` /
+   `card-index.csv` under `KnowledgeBase/DigitalCardGames/slay-the-spire/`).
 2. **Never hand-edit generated files** — `INDEX.okf.md` and the Dawncaster
-   sidecars are derived; edit the source records and rerun
+   and Slay the Spire sidecars are derived; edit the source records and rerun
    `node scripts/generate-index.mjs` /
-   `node scripts/generate-dawncaster-card-sidecars.mjs`. (A PreToolUse hook
-   blocks these edits; that block is correct, not an obstacle.)
+   `node scripts/generate-dawncaster-card-sidecars.mjs` /
+   `node scripts/generate-slay-the-spire-card-sidecars.mjs`. (A PreToolUse
+   hook blocks these edits; that block is correct, not an obstacle.)
 3. **Provenance is sacred.** Every body claim carries a
    `Source: src-NNN` / `Evidence: "quote"` / `Confidence:` triplet citing a
    source declared in frontmatter. Never mirror copyrighted rulebook text —
@@ -43,14 +49,15 @@ writes what, on what cadence) is `KnowledgeBase/BoardGames/operations.okf.md`.
 ```
 node scripts/validate-okf.mjs            # full corpus + index/sidecar freshness
 node scripts/validate-okf.mjs <files...> # just those files
-node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs scripts/validate-okf-visuals.test.mjs scripts/telemetry-delivery.test.mjs
+node --test scripts/intake-lib.test.mjs scripts/validate-intake-package.test.mjs scripts/fail-closed.test.mjs scripts/validate-okf-provenance.test.mjs scripts/validate-okf-visuals.test.mjs scripts/telemetry-delivery.test.mjs scripts/kb-loop-contract.test.mjs
 node scripts/validate-intake.mjs --base origin/main # diff-aware hard gate
 ```
 
 A PostToolUse hook runs the single-file check after every write under
 `KnowledgeBase/` and reports findings immediately; the `validate` CI job
 blocks on the same findings. A Stop hook warns when a turn ends with a
-dirty tree or unpushed commits (corpus passes commit+push atomically).
+dirty tree or unpushed commits (corpus passes commit, push their branch,
+and open a PR before the turn ends).
 Full-corpus scans log a row to `TELEMETRY.md` (what was scanned, when,
 complete or not) — a record, never a work queue. Controlled vocabularies (mechanics slugs,
 better-if labels, enums) are pinned — extend the vocabulary source +
