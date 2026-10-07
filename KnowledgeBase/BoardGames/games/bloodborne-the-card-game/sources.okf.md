@@ -68,6 +68,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-31"
     notes: "Subordinate inspection mirror only; HTTP 200; 1,947,755 bytes; 16 pages; SHA-256 64f9096fcd45bded2576fc3aaa275e460c24e125b0eddc42f60977b86cfdcf88; rewritten 2019 metadata. Not primary rule authority."
+  - id: "src-009"
+    title: "CMON — Bloodborne: The Card Game Rulebook (2025 web export)"
+    url: "https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-10-07"
+    notes: "HTTP 200; 82,846,744 bytes; 16 pages; SHA-256 c03978b1bbbe6793e0f082bfc2320e6ba397303d631d9597287c088fe2a8d3ed; created/modified 2025-03-22, creator Adobe InDesign 20.0. Full per-page text extraction (pypdf) and whitespace-normalized diff against src-002 found zero content differences — every apparent diff line was a text-run/kerning artifact of re-extraction, not a wording change. Non-substantive re-export of the identical 2016 rulebook; no errata or version marker embedded."
 confidence: high
 status: needs_followup
 ---
@@ -86,6 +93,7 @@ status: needs_followup
 | src-006 | independent review and expansion boundary | Dated text-proxy observation: HTTP 200; 10,382 bytes; SHA-256 `08e7e6bd376c482a3e72056a60eb1836f187683a2eeeb3322292bdb28960f4f0`; not an immutable live-content expectation. |
 | src-007 | historical product-family boundary | HTTP 200; final URL unchanged; text/html; 4,349 bytes. |
 | src-008 | subordinate mirror / inspection derivative | HTTP 200; final URL unchanged; application/pdf; 1,947,755 bytes; 16 pages; SHA-256 `64f9096fcd45bded2576fc3aaa275e460c24e125b0eddc42f60977b86cfdcf88`; not primary authority. |
+| src-009 | 2025 publisher re-export, diffed against src-002 | HTTP 200; application/pdf; 82,846,744 bytes; 16 pages; SHA-256 `c03978b1bbbe6793e0f082bfc2320e6ba397303d631d9597287c088fe2a8d3ed`; content-identical to src-002 once text-extraction artifacts are normalized out — no errata or revision. |
 
 The repaired rulebook, dynamic page, review, and current visual receipts were observed no later than `2026-07-31T08:39:05Z`; older rows retain their original dated observations.
 

@@ -33,13 +33,20 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-31"
     notes: "Independent review."
+  - id: "src-005"
+    title: "CMON — Bloodborne: The Card Game Rulebook (2025 web export)"
+    url: "https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-10-07"
+    notes: "HTTP 200; 82,846,744 bytes; 16 pages; SHA-256 c03978b1bbbe6793e0f082bfc2320e6ba397303d631d9597287c088fe2a8d3ed; created/modified 2025-03-22, creator Adobe InDesign 20.0. Full per-page text extraction (pypdf) and whitespace-normalized diff against src-002 found zero content differences — every apparent diff line was a text-run/kerning artifact of re-extraction (e.g. 'SETTING' split as 'S ETTING'), not a wording change. This is a non-substantive re-export of the identical 2016 rulebook, not a revision; no errata or version marker is embedded."
 followups:
   - source_id: "src-001"
     url: "https://www.cmon.com/product/bloodborne-the-card-game/bloodborne-the-card-game"
     failure: blocked
     fallback: "Dated original-URL proxy and direct assets returned HTTP 200; proxy currently lists Rulebook 79.01 MB."
     retry_needs: manual_review
-    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it. Retried 2026-09-04 (librarian): the Cloudflare block has LIFTED — the product page now returns HTTP 200 (72,449 bytes) to a direct fetch. Enumerated it: it exposes exactly one PDF, the official rulebook at https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf, plus a link to the publisher-wide portal https://support.cmon.com/hc/en-us. That portal was also retrieved (HTTP 200) and is a fulfillment/customer-service help centre — its article set is shipping, refunds, pledge-manager, damaged-component and 'How do I get the Rulebook for my game' topics — not a rules FAQ/errata archive. This narrows but does not close the entry, and is NOT an absence claim. Next retrieval target: the dated rulebook PDF itself for any embedded errata/version marker."
+    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it. Retried 2026-09-04 (librarian): the Cloudflare block has LIFTED — the product page now returns HTTP 200 (72,449 bytes) to a direct fetch. Enumerated it: it exposes exactly one PDF, the official rulebook at https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf, plus a link to the publisher-wide portal https://support.cmon.com/hc/en-us. That portal was also retrieved (HTTP 200) and is a fulfillment/customer-service help centre — its article set is shipping, refunds, pledge-manager, damaged-component and 'How do I get the Rulebook for my game' topics — not a rules FAQ/errata archive. This narrows but does not close the entry, and is NOT an absence claim. Retried 2026-10-07 (librarian): fetched the dated rulebook PDF (src-005) and diffed its full extracted text against src-002 — content-identical, no errata or version marker found, so that specific lead is now closed with a negative result. The publisher-wide FAQ/errata/clarification/support inventory itself remains unproved; support.cmon.com's article set still has no rules-FAQ section to enumerate. Still not an absence claim."
 confidence: high
 status: needs_followup
 ---
@@ -68,6 +75,11 @@ status: needs_followup
 - Claim: Independent reception supports both praise and friction without model-generated sentiment.
   Source: src-004
   Evidence: "Ars praises bluffing, dread, and push-your-luck tension while warning that take-that nastiness will not suit players who dislike being mean to friends."
+  Confidence: high
+
+- Claim: The 2025-dated "_web" rulebook export is content-identical to the 2016 rulebook already on file; it carries no errata or rules revision.
+  Source: src-005
+  Evidence: "Whitespace-normalized text extraction of all 16 pages matched src-002 byte-for-character; every apparent diff was a text-run splitting artifact, not a wording change."
   Confidence: high
 
 ## Why the governing denominator is open

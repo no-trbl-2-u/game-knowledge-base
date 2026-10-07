@@ -90,6 +90,13 @@ sources:
     provenance: community
     retrieved_at: "2026-07-31"
     notes: "Identity lead only; no weight or rating retained because no fresh auditable snapshot was acquired."
+  - id: "src-012"
+    title: "Asmodee shop product page (2023-05-29 archive capture)"
+    url: "http://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-10-07"
+    notes: "HTTP 200; 64,925 bytes, retrieved via Wayback after the prior pass's 429 rate-limit cleared. Page markup exposes an 'Item No.' SKU field reading NEMLD01 for the core box. No separate UPC/EAN code was found; the only other numeric strings on the page are a CSS cache-buster version and a Facebook Pixel id, not product codes."
 confidence: medium
 status: needs_followup
 ---
@@ -123,6 +130,13 @@ status: needs_followup
 - Claim: The Stretch Goal rulebook, Chytrids, Untold Stories #3, Medic/terrain/Kings/cosmetics/promos, original Nemesis and its Aftermath/Void Seeders/Carnomorphs compatibility, translations, later reprints, and digital adaptation are excluded except where a source distinguishes them.
   Source: src-003, src-004, src-007
   Evidence: Downloads JSON labels the SG rulebook separately; FAQ page 3 isolates Chytrids/SG/Aftermath questions; Gamefound separates expansions/add-ons from the standalone product.
+  Confidence: high
+
+## Retail identity
+
+- Claim: The English core-box retail SKU is NEMLD01; no UPC/EAN or first-print marker was found alongside it.
+  Source: src-012
+  Evidence: Archived shop listing markup: `<span class="name">Item No.</span><span class="value" itemprop="productID sku">NEMLD01</span>`.
   Confidence: high
 
 ## Revision finding

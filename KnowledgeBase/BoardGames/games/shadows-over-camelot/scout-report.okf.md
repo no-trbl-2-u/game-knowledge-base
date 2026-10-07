@@ -41,19 +41,27 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "HTTP 403; www host also 403; exact CDX query empty."
+  - id: "src-005"
+    title: "Days of Wonder FAQ/downloads portal (2015-04-03 archive capture)"
+    url: "http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-10-07"
+    notes: "HTTP 200; 22,104 bytes, retrieved via Wayback after the prior pass's 429 rate-limit cleared. Lists the download links then offered for Rules book, Quests book, FAQ, Merlin's Company Rules, and Bedivere's coat of arms across English/French/German/Italian/Korean. The FAQ link (sc_faq_en.pdf) is byte-identical (SHA-256 2f4ab8d1756e5743dd7cf12802bebb371dcf08141b448d9867adce5ca7a90709) to already-acquired src-002. The English Rules-book link is sc_rules_2012_en.pdf, not a plain sc_rules_en.pdf; German/Italian/Korean still used plain-named rules files at this date."
+  - id: "src-006"
+    title: "Archived pre-2015 English reprint rulebook (2012 edition line)"
+    url: "http://web.archive.org/web/20150403062225/http://cdn1.daysofwonder.com/shadowsovercamelot/en/img/sc_rules_2012_en.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-10-07"
+    notes: "HTTP 200; 6,252,777 bytes; 20 pages; SHA-256 ec846e47b52bc4e6af887e51cacfde2bb707e7ab7bbcee79561a383bd6369aca. PDF title 'SOC rulebook EN reprint 2012:TTR2 europe rules EN'; CreationDate 2012-04-23, ModDate 2013-02-07. Distinct file from src-003 (ModDate 2015-05-18, different hash): an earlier revision of the same 2012-reprint line, not the original 2005 release."
 followups:
   - source_id: "src-004"
     url: "https://ncdn0.daysofwonder.com/shadowsovercamelot/en/img/sc_rules_en.pdf"
     failure: blocked
     fallback: "2005 Book of Quests and FAQ 1.0 govern acquired release law; 2015 rulebook is labeled comparison only."
-    retry_needs: wayback_snapshot
-    notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference. Retried 2026-09-04 (librarian): CDN still HTTP 403, and the Wayback availability API returned an empty `archived_snapshots` object for this exact asset URL, independently confirming the earlier empty CDX result. No archive capture of this PDF exists, so retry_needs `wayback_snapshot` is not satisfiable for this URL; a future pass must find an alternate immutable copy of the 2005 Rules booklet instead."
-  - source_id: null
-    url: "https://www.daysofwonder.com/shadowsovercamelot/en/content/faq"
-    failure: blocked
-    fallback: "Official FAQ 1.0 PDF acquired directly from Asmodee CDN."
-    retry_needs: wayback_snapshot
-    notes: "Direct/browser Access Denied; text-proxy retrieval aid reports current 404. Need complete historical official web FAQ/support inventory and explicit version bridge. Retried 2026-09-04 (librarian): live URL still HTTP 403, but the Wayback availability API CONFIRMS a usable capture exists — http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/ (status 200, timestamp 20150403062225). Retrieval of that capture was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. This is an environmental throttle, not a missing document. Next pass should fetch that exact capture URL directly; retry_needs `wayback_snapshot` is correct and now has a concrete target."
+    retry_needs: alternate_source
+    notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference. Retried 2026-09-04 (librarian): CDN still HTTP 403, and the Wayback availability API returned an empty `archived_snapshots` object for this exact asset URL, independently confirming the earlier empty CDX result. Retried 2026-10-07 (librarian): fetched the historical downloads portal (src-005), a 2015-04-03 capture — it already linked the English Rules book as sc_rules_2012_en.pdf, not a plain sc_rules_en.pdf, while German/Italian/Korean still used plain-named files. This corroborates (does not prove) that the English release file had already been replaced site-wide by 2015, consistent with the empty CDX/404 result; it is not evidence of permanent absence. retry_needs changed from wayback_snapshot to alternate_source: no archive capture of this exact filename exists at any date tried, so a third-party 2005-era mirror or scan is the next retrievable document."
   - source_id: null
     url: "lawful immutable English 2005 first-retail component inventory document"
     failure: not_found
@@ -101,10 +109,15 @@ status: needs_followup
   Evidence: Acquired 2005 texts explain classes and many identities but do not establish a licensed exhaustive physical face manifest; the only complete inventory spread acquired is later.
   Confidence: high
 
+- Claim: By 2015-04-03, the official downloads portal's complete FAQ/support inventory was: Rules book, Quests book, FAQ, Merlin's Company Rules, and Bedivere's coat of arms, across English/French/German/Italian/Korean. This closes the "complete historical official web FAQ/support inventory" followup for that date.
+  Source: src-005
+  Evidence: Archived page lists exactly these five document families with per-language file-size labels and direct PDF links.
+  Confidence: high
+
 ## Exact residual help
 
-- Claim: Closure requires document sources only — a lawful nonreplacement English 2005 first-retail component inventory document; immutable original Rules/Book of Quests/aids with publisher chain; complete historical official FAQ/web support inventory and version bridge; and licensed base-only card/loyalty/quest/board/die identity/text/face denominators. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; where no lawful document source exists, the denominator stays permanently `UNKNOWN` and these records stay `needs_followup` as an accepted terminal state.
-  Source: src-001, src-002, src-003, src-004
+- Claim: Closure requires document sources only — a lawful nonreplacement English 2005 first-retail component inventory document; immutable original Rules/Book of Quests/aids with publisher chain; and licensed base-only card/loyalty/quest/board/die identity/text/face denominators. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; where no lawful document source exists, the denominator stays permanently `UNKNOWN` and these records stay `needs_followup` as an accepted terminal state.
+  Source: src-001, src-002, src-003, src-004, src-005, src-006
   Evidence: These are the open authority classes above.
   Confidence: high
 
