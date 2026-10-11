@@ -4,17 +4,22 @@ type: pattern
 mechanics: []
 better_if_labels: [expansion-bloat]
 confidence: medium
-status: verified
+status: draft
 ---
 
 ## Summary
 
-Evidence is narrow. The available cases describe expansion-bloat as a "completeness
-pressure" problem rather than a rules-complexity one: reviewers feel the base
-product is a fine design on its own, but the surrounding product line (more
-character copies, more factions, more reprints) becomes an implicit
-requirement to reach the "ideal" experience, and that pressure — not raw
-card/faction count — is what draws criticism.
+Evidence is narrow but has grown from two games to four. The available cases describe
+expansion-bloat mostly as a "completeness pressure" problem rather than a
+rules-complexity one: reviewers feel the base product is a fine design on its own, but
+the surrounding product line (more character copies, more factions, more reprints)
+becomes an implicit requirement to reach the "ideal" experience, and that pressure —
+not raw card/faction count — is what draws criticism. Dead of Winter: The Long Night
+adds a second shape to this: a standalone expansion whose individual modules are
+praised, but whose overall value is questioned specifically for owners of the base
+game rather than for new players. Dominion's expansion-fatigue complaint sits
+alongside an active, ongoing community-errata ecosystem, suggesting the two findings
+(product sprawl, rules churn) can compound for a single long-running game.
 
 ## Evidence by game
 
@@ -27,10 +32,19 @@ card/faction count — is what draws criticism.
   perceived-completeness pressure — "having them all is the ideal
   experience" — and that "the Law of Root booklet itself even heightens the
   feeling of incompleteness," confidence: medium
+- dead-of-winter-the-long-night (src-004): the reviewer says they're "not sure The
+  Long Night is a worthwhile purchase if you've already got the original game,"
+  even while separately praising the Raxxon and Bandits modules it adds, confidence: high
+- dominion (src-003, src-007): a review lists expansion fatigue as a minor flaw while
+  a separate community errata article documents an active, ongoing rules ecosystem
+  around the growing card pool, confidence: medium
 
 ## Where it works
 
-No praised-design evidence found for this pattern.
+- dead-of-winter-the-long-night (src-004): the Raxxon module is called "a very tough
+  but enjoyable addition," and the Bandits module is separately called "cool" —
+  individual expansion content praised on its own terms, independent of the
+  standalone-purchase value question raised about the same release.
 
 ## Where it fails
 
@@ -44,6 +58,12 @@ No praised-design evidence found for this pattern.
 - root (src-006): the official rules booklet itself is cited as amplifying
   the sense that the base game alone is incomplete, pushing players toward
   the full expansion set to get the "ideal" experience.
+- dead-of-winter-the-long-night (src-004): despite praised individual modules, the
+  reviewer questions whether the standalone expansion is worth buying for someone who
+  already owns the base game.
+- dominion (src-003, src-007): expansion fatigue is named as a minor flaw, and a
+  separate, actively-maintained community errata resource signals the rules ecosystem
+  keeps growing alongside the card pool.
 
 ## Coverage gaps
 
@@ -52,4 +72,5 @@ direct player-count survey data. Games with large, ongoing expansion
 catalogs — living card games (e.g. other LCGs beyond Arkham), legacy games,
 and app-supported games with frequent content drops — would test whether
 this "completeness pressure" framing holds outside campaign/asymmetric-board
-designs.
+designs. Dead of Winter: The Long Night and Dominion both add evidence outside
+the campaign/asymmetric-board niche, narrowing but not closing that gap.

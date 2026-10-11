@@ -4,7 +4,7 @@ type: pattern
 mechanics: [simultaneous-action-selection]
 better_if_labels: [downtime]
 confidence: medium
-status: verified
+status: draft
 ---
 
 ## Summary
@@ -15,7 +15,12 @@ Knight, Spirit Island all get noticeably slower at 4 players), and (2)
 structural fixes reviewers actually praise — solo/small-group play that
 sidesteps waiting entirely, and free/simultaneous action order that lets
 players act without a rigid queue (Mage Knight's solo mode, Slay the Spire's
-any-order card/potion/ability play). Only a subset of the games in scope surfaced
+any-order card/potion/ability play). A third shape shows up in the new
+evidence: elimination-driven downtime, where the complaint isn't turn length
+but what happens to a player once they're removed from play — ejected or
+dead characters in Nemesis, Nemesis: Lockdown, and Star Wars: Imperial
+Assault are reported to have nothing to do but spectate for the rest of the
+session. Only a subset of the games in scope surfaced
 usable downtime-specific evidence; several games carry the `downtime` label
 in their frontmatter without a substantiated claim in the body text, so
 this pattern's coverage is thinner than the label distribution alone would
@@ -27,6 +32,10 @@ suggest.
 - mage-knight (src-009): There Will Be Games notes "every round has the potential to take a while, since every move invites analysis," but adds that the solo version largely escapes this "without a lot of the downtime" other players create, confidence: high
 - slay-the-spire-the-board-game (src-008, src-003): coopgestalt praises the rulebook's free-order play (cards/potions/abilities in any order) as reducing waiting, while the BGG rulebook-file source notes v2.30 removed the optional sequential-turn variant, reinforcing free order as the intended design, confidence: medium
 - spirit-island (src-008): Punchboard calls Spirit Island "fantastic for solo players and small groups" but flags that "higher player counts can slow the game down due to extensive discussion and coordination," confidence: high
+- nemesis (src-006, src-007): reviews pair frequent, punishing character death with long-session and downtime concerns, and one reviewer anticipates elevated downtime at higher player counts once players start getting eliminated, confidence: medium
+- nemesis-lockdown (src-008): a reviewer reports that ejected players can only spectate for the remainder of the game, confidence: medium
+- star-wars-imperial-assault (src-003): a reviewer argues four Rebel characters produce the strongest experience, which in practice requires five total participants to avoid one person sitting out, confidence: medium
+- unmatched-battle-of-legends-volume-one (src-003): the reviewer reports that four-player play tends to bog down as fighters muddy into and around each other, recommending the game be approached as a duel instead, confidence: medium
 
 ## Where it works
 
@@ -38,6 +47,8 @@ suggest.
 - ark-nova (src-007): four-player games are called out as too long to be worth playing, a direct downtime-driven player-count ceiling.
 - mage-knight (src-009): round length "invites analysis" from every player, producing downtime even outside the four-player extreme.
 - spirit-island (src-008): discussion and coordination overhead at higher player counts is named as the specific slowdown mechanism, distinct from raw turn length.
+- nemesis-lockdown (src-008): an ejected player has nothing but spectating to do for the rest of the session — the sharpest elimination-downtime complaint in the corpus.
+- unmatched-battle-of-legends-volume-one (src-003): four-player games are reported to bog down as fighters crowd into each other on the shared grid, a scaling problem distinct from turn-length AP.
 
 ## Coverage gaps
 

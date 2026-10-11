@@ -9,7 +9,7 @@ status: verified
 
 ## Summary
 
-Across games tagged `solo-solitaire-game`, only a minority carry reception evidence that actually discusses the dedicated solo mode as its own experience (as opposed to the mechanic simply being listed). Where reviewers do address solo play directly, the same tension recurs: a strong ruleset "just works" alone because it removes multiplayer downtime and negotiation overhead, but the solo variant itself is judged on whether it introduces its own new problems — swinginess from running a single hand, brain burn from multi-handing, an anticlimactic/procedural endgame, oversized physical footprint for one player, or (for a video-game adaptation) simply feeling like a slower manual reenactment of software logic. Evidence is genuinely thin for most co-op titles in this set; several carry the tag with no solo-specific reviewer commentary at all.
+Across games tagged `solo-solitaire-game`, only a minority carry reception evidence that actually discusses the dedicated solo mode as its own experience (as opposed to the mechanic simply being listed). Where reviewers do address solo play directly, the same tension recurs: a strong ruleset "just works" alone because it removes multiplayer downtime and negotiation overhead, but the solo variant itself is judged on whether it introduces its own new problems — swinginess from running a single hand, brain burn from multi-handing, an anticlimactic/procedural endgame, oversized physical footprint for one player, or (for a video-game adaptation) simply feeling like a slower manual reenactment of software logic. Onirim adds the cleanest unqualified "where it works" case in this pattern — reviewers call the solo mode outstanding and credit a short 10-15 minute session with making it a genuinely complete experience on its own, expansions included only as a bonus. Elder Sign complicates the "fewer problems" read: the same leniency that makes solo approachable (easy character replacement after death) is also named as removing meaningful stakes. Evidence is genuinely thin for most co-op titles in this set; several carry the tag with no solo-specific reviewer commentary at all.
 
 ## Evidence by game
 
@@ -17,17 +17,22 @@ Across games tagged `solo-solitaire-game`, only a minority carry reception evide
 - mage-knight (src-009): There Will Be Games credits the solo variant with sidestepping the downtime that afflicts multiplayer turns: "solo version... without a lot of the downtime." confidence: high
 - slay-the-spire-the-board-game (src-007, src-008): Rolling In The Meep judges solo play "admirable but less successful" because it feels too much like a physical substitute for the original video game; coopgestalt's own scoring shows solo (8.5/10) trailing co-op (9/10). confidence: medium
 - spirit-island (src-009, src-008): Stidjen Plays Solo reports true solo is swingy, multi-handing causes brain burn, and the endgame feels procedural; Punchboard separately calls the game "fantastic... for solo players and small groups." confidence: high
+- elder-sign (src-002, src-004): one reviewer enjoyed the game "both in solo efforts and with others"; a separate claim notes death penalties are lenient enough that a solo player could simply burn through several characters in a single game, confidence: high
+- onirim-second-edition (src-002): Pros and Final Thoughts praise quick 10-15 minute solo sessions, ease of learning and teaching, and call the solo mode outstanding — the Pros section says it would be "solid" even without the expansions, confidence: high
 
 ## Where it works
 
 - mage-knight (src-009): the solo mode is praised specifically because it removes the downtime problem that dogs the multiplayer table — the same brain-burning card-efficiency puzzle without waiting on other players.
 - spirit-island (src-008): reviewer calls it a fantastic fit for solo players and small groups, treating low player count (including solo) as the format where the design shines brightest.
+- onirim-second-edition (src-002): a 10-15 minute solo session is praised as outstanding and complete on its own — the cleanest unqualified solo-mode praise in this pattern, with expansions treated as a bonus rather than a requirement.
+- elder-sign (src-002): the reviewer treats solo play as equally valid to group play rather than a lesser substitute.
 
 ## Where it fails
 
 - ark-nova (src-008): output randomness from the large card deck undermines forward planning in solo play, and the board's physical footprint is called out as oversized specifically for a single player.
 - slay-the-spire-the-board-game (src-007): solo play is the weaker mode in an otherwise praised adaptation, criticized for feeling like a slower manual version of the source video game rather than offering its own tabletop-specific value.
 - spirit-island (src-009): true solo (one hand) is swingy, and the multi-handed solo alternative causes brain burn; the same reviewer separately flags a procedural, anticlimactic solo endgame.
+- elder-sign (src-004): lenient death penalties mean a solo player can burn through several characters in a single game rather than facing a real loss condition — approachability purchased at the cost of stakes.
 
 ## Coverage gaps
 

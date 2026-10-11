@@ -15,10 +15,13 @@ sub-pool (few fear/blight cards, no modules yet unlocked, mismatched module
 sets) turns the same mechanic into a source of predictability or imbalance
 complaints instead. The failure mode is rarely "randomized setup is bad" —
 it is "there wasn't enough variety in the setup pool," or "the variable
-pieces weren't curated correctly." Evidence is real but thin: of the five
-tagged games, only three (Heat, Spirit Island, Quacks) yielded reviewer
-claims that were genuinely about setup *variability* rather than setup
-*duration* or in-game card-draw randomness.
+pieces weren't curated correctly." Evidence was thin (three games: Heat, Spirit
+Island, Quacks) and has grown to five. Nemesis adds a clean "where it works"
+case — spare room tiles, varied objectives, and changing layouts are credited
+directly with generating replayable, chaotic sessions — while Dominion shows a
+different shape of the same mechanic: letting new players choose how much
+Kingdom-card variety to engage with, rather than forcing the full variable pool
+on them immediately.
 
 ## Evidence by game
 
@@ -39,6 +42,11 @@ claims that were genuinely about setup *variability* rather than setup
   ingredient-book sets chosen at setup can leave the game "wildly
   unbalanced" if not curated together, confidence: medium (lowest of the
   two cited claims)
+- nemesis (src-007, src-008, src-009): reviews cite spare room tiles, varied objectives,
+  and changing chaotic layouts as generating replayable, emergent sessions, confidence: high
+- dominion (src-002, src-003): the rulebook presents many Kingdom-card choices, and a
+  reviewer notes new players can choose how much of that variable-setup complexity to
+  engage with, rather than facing the full pool immediately, confidence: medium
 
 ## Where it works
 
@@ -48,6 +56,10 @@ claims that were genuinely about setup *variability* rather than setup
 - spirit-island (src-005): modular board and asymmetric spirit setup are
   credited with giving the game "a ton of variety, player choice, and
   replay value."
+- nemesis (src-007, src-008, src-009): spare room tiles, varied objectives, and
+  changing layouts are credited directly with generating replayable, chaotic sessions.
+- dominion (src-002, src-003): letting new players scale how much Kingdom-card variety
+  they engage with is praised as an accessible on-ramp into the variable-setup system.
 
 ## Where it fails
 
@@ -67,7 +79,8 @@ Ark Nova and Root both carry the variable-setup tag, but their reviewed
 sources spoke to in-play card-draw randomness (Ark Nova's 212-card zoo
 deck) and faction/expansion depth (Root's low-player-count faction mix)
 rather than setup-condition variability itself, so neither yielded usable
-evidence here — this pattern's coverage would benefit from a game whose
-reviews discuss modular-board or randomized-market setup explicitly (tile
-layout, scenario draw, starting-resource randomization) rather than
-in-game draw variance.
+evidence here. Nemesis's modular room-tile/objective setup is exactly the kind
+of evidence the previous pass asked for, closing that gap; Dominion's
+scalable-complexity angle is a new, distinct shape (setup variety as an
+onboarding dial) rather than a duplicate of the replayability-via-variety
+claims already on file.

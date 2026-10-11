@@ -18,9 +18,13 @@ detail tying it to the dice mechanism). Where dice are discussed directly, the
 same lever recurs: giving players a way to choose or convert around a roll
 (dice-or-card resolution, character-specific dice pools) reads as thoughtful,
 while unmediated crit/fail swings read as an accessibility and communication
-risk. Two of the four contributing games (kingdom-death-monster,
-too-many-bones) are still `needs_followup`, so this pattern should be treated
-as a working hypothesis, not a settled consensus.
+risk. Elder Sign is this pattern's strongest new case and shows both sides within
+one game: a shrinking, non-reused dice pool is praised for building legible,
+escalating difficulty, while the same system is dismissed elsewhere as "glorified
+Yahtzee" and blamed for "rich get richer, poor get poorer" swings. Betrayal Legacy
+adds a blunter unmediated-swing complaint ("the most dickheaded dice"). Two of the
+contributing games (kingdom-death-monster, too-many-bones) are still `needs_followup`,
+so this pattern should be treated as a working hypothesis, not a settled consensus.
 
 ## Evidence by game
 
@@ -39,6 +43,17 @@ as a working hypothesis, not a settled consensus.
   critical hits/failures as core mechanisms, but the doc explicitly flags
   that consensus strength on this axis is not established from the material
   fetched, confidence: low
+- betrayal-legacy (src-005): dice are called "the most dickheaded dice," an
+  unmediated-swing complaint named at the dice mechanism specifically, confidence: high
+- elder-sign (src-001, src-002): critics dismiss the system as "glorified Yahtzee
+  with custom dice," while the same review praises that dice retired from
+  finished tasks aren't reused, making later tasks progressively harder rather
+  than flatly random, confidence: high
+- elder-sign (src-004): the reviewer warns of a "rich get richer, poor get poorer"
+  dynamic where a short run of bad rolls can both fail a task and drain the
+  resources needed to recover, confidence: high
+- cthulhu-death-may-die (src-003): "you can get completely ruined by dice and card
+  randomness in this game," confidence: medium
 
 ## Where it works
 
@@ -50,6 +65,9 @@ as a working hypothesis, not a settled consensus.
 - too-many-bones (src-004, src-005): tying dice pools to individual character
   ("Gearloc") identity is framed as the source of tactical distinctiveness,
   turning a shared randomizer into a build-specific tool.
+- elder-sign (src-002): retiring dice from completed tasks rather than reusing them
+  is praised for making the final stretch progressively, legibly harder instead of
+  flatly random — a mediated-swing design the dismissive "Yahtzee" framing misses.
 
 ## Where it fails
 
@@ -61,16 +79,24 @@ as a working hypothesis, not a settled consensus.
   as a barrier to onboarding for players who don't already understand them,
   i.e., dice-pool literacy itself is a friction point for new players,
   confidence: medium.
+- betrayal-legacy (src-005): dice are called out by name as "the most dickheaded
+  dice," an unmediated-swing complaint distinct from the game's other friction points.
+- elder-sign (src-001, src-004): the system is dismissed by critics as "glorified
+  Yahtzee" and separately blamed for a "rich get richer, poor get poorer" dynamic
+  where bad rolls compound rather than merely costing a single turn.
+- cthulhu-death-may-die (src-003): dice and card randomness together are described
+  as capable of ruining a game outright.
 
 ## Coverage gaps
 
-Three of the eight tagged games (hoplomachus-remastered, root,
+Three of the originally-tagged games (hoplomachus-remastered, root,
 the-quacks-of-quedlinburg) have verified reception docs that never discuss
 dice mechanics by name despite carrying the dice-rolling tag, and
 mage-knight's "deterministic combat" praise has no source-linked claim to
-cite. The corpus would benefit from re-reading hoplomachus-remastered and
-root's reception sources specifically for dice-combat commentary (their dice
-subsystems — Chip Theory's chip-and-die combat, Root's dice-based Woodland
-skirmishes — are known to exist mechanically but are undocumented here), and
-from resolving the needs_followup status on kingdom-death-monster and
-too-many-bones so this pattern's confidence can move past low.
+cite. Elder Sign and Betrayal Legacy now give this pattern two games with
+genuine, direct dice-mechanism commentary on both sides, narrowing but not
+closing the hoplomachus/root gap. The corpus would still benefit from
+re-reading hoplomachus-remastered and root's reception sources specifically
+for dice-combat commentary, and from resolving the needs_followup status on
+kingdom-death-monster and too-many-bones so this pattern's confidence can move
+past low.

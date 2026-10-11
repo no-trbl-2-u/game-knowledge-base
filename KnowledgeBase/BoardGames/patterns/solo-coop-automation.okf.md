@@ -18,6 +18,7 @@ Across this sample, solo/co-op automation friction is less about bot AI logic it
 - mage-knight (src-011, src-009): A BGG fan critique says Mage Knight's "Coop is not cooperative enough," calling it "multiplayer solitaire" beyond shared planning and joint city assaults (src-011); a separate review counters that the solo variant sheds "a lot of the downtime" that burdens multiplayer sessions (src-009). confidence: medium (src-011) / high (src-009)
 - slay-the-spire-the-board-game (src-007): A reviewer says solo play is "admirable" but "less successful" because it feels too much like a slower physical substitute for the original video game rather than its own experience. confidence: medium
 - spirit-island (src-008, src-009): Punchboard calls the game "fantastic... for solo players and small groups" (src-008); a dedicated solo review counters that "true solo mode is swingy," multi-handing "can cause brain burn," and the endgame feels "lacklustre" (src-009). confidence: high (both)
+- elder-sign (src-002, src-004): one review says it enjoyed the game "both in solo efforts and with others," noting penalties for dying are not harsh enough to stop a solo player from burning through several characters in one game; a separate claim reports the game plays slightly easier with more players, since extra characters spread damage and add special powers. confidence: high
 
 ## Where it works
 
@@ -25,6 +26,7 @@ Across this sample, solo/co-op automation friction is less about bot AI logic it
 - spirit-island (src-008): Praised as "fantastic... for solo players and small groups," with higher player counts identified as the slower configuration instead.
 - slay-the-spire-the-board-game (src-007): Cooperative play is called "a revelation" and the central justification for the tabletop adaptation existing at all.
 - heat-pedal-to-the-metal (src-006): Solo AI is named among the review's praised elements, though without a preserved direct quote (confidence: medium).
+- elder-sign (src-002): the reviewer reports enjoying the game in both solo and group configurations, treating solo as a genuinely valid mode rather than a lesser substitute.
 
 ## Where it fails
 
@@ -32,7 +34,8 @@ Across this sample, solo/co-op automation friction is less about bot AI logic it
 - mage-knight (src-011): Cooperative mode reads as "multiplayer solitaire" — parallel individual optimization rather than deep interdependence.
 - slay-the-spire-the-board-game (src-007): Solo mode feels like a slower physical stand-in for the video game rather than a distinct tactile experience.
 - spirit-island (src-009): True solo is "swingy," multi-handing "can cause brain burn," and the ending feels "lacklustre"/procedural rather than climactic.
+- elder-sign (src-004): lenient death penalties let a solo player simply burn through several characters in one game rather than facing a real loss condition, and the game is reported as slightly easier at higher player counts since more characters means more special powers to spread damage across.
 
 ## Coverage gaps
 
-Dune Imperium's better-if doc proposes automating its House Hagal rival-priority logic for solo/two-player play, but the claim carries no direct source quote (only a general "evidence basis" note), so it couldn't be cited here — a case where the underlying source review would need re-checking for an actual quote before it strengthens this pattern. More broadly, none of the six games in this sample use a card-driven "automa" bot deck (e.g., Scythe- or Wingspan-style); the corpus would benefit from a game with an explicit automaton/bot-opponent system to give this pattern genuine bot-AI-logic evidence rather than only solo-mode-scaling and co-op-cohesion complaints.
+Dune Imperium's better-if doc proposes automating its House Hagal rival-priority logic for solo/two-player play, but the claim carries no direct source quote (only a general "evidence basis" note), so it couldn't be cited here — a case where the underlying source review would need re-checking for an actual quote before it strengthens this pattern. More broadly, none of the games in this sample use a card-driven "automa" bot deck (e.g., Scythe- or Wingspan-style); the corpus would benefit from a game with an explicit automaton/bot-opponent system to give this pattern genuine bot-AI-logic evidence rather than only solo-mode-scaling and co-op-cohesion complaints.

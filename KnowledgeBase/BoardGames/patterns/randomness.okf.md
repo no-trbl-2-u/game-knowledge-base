@@ -4,7 +4,7 @@ type: pattern
 mechanics: [dice-rolling, deck-bag-and-pool-building, push-your-luck]
 better_if_labels: [randomness]
 confidence: medium
-status: verified
+status: draft
 ---
 
 ## Summary
@@ -15,7 +15,11 @@ the game overriding player skill; too little variance (a thin card pool that rep
 reads as predictable and stale. The recurring mitigation reviewers reward is giving
 players a lever over the randomness — deterministic ordering, a dice-or-card choice,
 or a catch-up tool framed as earned rather than free — so a bad outcome still traces
-back to a legible decision.
+back to a legible decision. Elder Sign and Nemesis both supply a clean praised/criticized
+split on the same mechanism: Elder Sign's shrinking dice pool is praised for building
+suspense even as the game is dismissed elsewhere as "glorified Yahtzee," and Nemesis's
+emergent room/event randomness is praised for generating stories while separately blamed
+for domino-effect outcomes that overwhelm planning.
 
 ## Evidence by game
 
@@ -45,6 +49,28 @@ back to a legible decision.
 - the-quacks-of-quedlinburg (src-005): the reviewer flags bag-pull variance as a
   strong taste filter, warning that luck-averse players should try the game before
   buying it, confidence: high
+- betrayal-legacy (src-005): card draws can leave a player "unable to even meaningfully
+  participate" despite reasonable play, and dice are separately called "the most
+  dickheaded dice," confidence: high
+- cthulhu-death-may-die (src-003): "you can get completely ruined by dice and card
+  randomness in this game," confidence: high
+- dead-of-winter-a-crossroads-game (src-005): a first-turn bite can "knock the wind
+  out of you and the group," though the reviewer qualifies the result as interesting
+  "for the right players," confidence: medium
+- dead-of-winter-the-long-night (src-004): the game's "random nature can be slightly
+  unfair" even as the same randomness is credited with helping the theme, confidence: high
+- elder-sign (src-001, src-002): critics dismiss the system as "glorified Yahtzee
+  with custom dice," while the same review praises that dice retired from finished
+  tasks aren't reused, making each subsequent task progressively harder, confidence: high
+- elder-sign (src-004): the reviewer warns of a "rich get richer, poor get poorer"
+  dynamic where a few bad rolls can cause failure and drain resources at once,
+  confidence: high
+- nemesis (src-006, src-007, src-009): reviewers praise emergent room/event randomness
+  for producing "stories to tell through emergent sequences" and cinematic tension,
+  while others blame the same system for domino-effect outcomes and "overwhelming
+  randomness," confidence: high
+- nemesis-lockdown (src-009): the reviewer reports that randomness "can torpedo games
+  despite strategy," obscuring otherwise meaningful choices, confidence: medium
 
 ## Where it works
 
@@ -60,6 +86,12 @@ back to a legible decision.
   player choice is singled out as a thoughtful risk-mitigation mechanism.
 - the-quacks-of-quedlinburg (src-006): the rat-tail catch-up rule is praised for
   keeping players who busted badly competitive, softening the sting of a bad bag pull.
+- elder-sign (src-002): retiring dice from completed tasks rather than reusing them
+  is praised for making the final stretch progressively, legibly harder rather than
+  flatly random.
+- nemesis (src-006, src-007, src-009): the same emergent-event randomness that
+  produces "domino" complaints elsewhere is independently praised for generating
+  memorable, story-worthy sequences and sustained early-game tension.
 
 ## Where it fails
 
@@ -75,6 +107,14 @@ back to a legible decision.
 - the-quacks-of-quedlinburg (src-005): the reviewer's blunt warning — don't buy
   sight-unseen "if you don't like luck" — shows bag-pull variance as a hard filter
   on the audience, not just a texture note.
+- betrayal-legacy (src-005): card-draw variance can leave an attentive player locked
+  out of meaningful participation regardless of play quality.
+- cthulhu-death-may-die (src-003): dice and card randomness together are described
+  as capable of ruining a game outright.
+- elder-sign (src-004): a short run of bad rolls can both fail a task and drain the
+  resources needed to recover from it in the same stroke.
+- nemesis-lockdown (src-009): randomness is reported strong enough to "torpedo"
+  otherwise sound strategic play.
 
 ## Coverage gaps
 

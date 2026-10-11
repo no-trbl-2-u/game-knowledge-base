@@ -58,4 +58,7 @@ Evidence clusters around "closing the game requires external reference" (Ark Nov
 modes under one label. A heavier area-control or engine-building title with an
 explicit, reviewer-discussed final-scoring phase (tableau/board tally at game end)
 would help separate "scoring math is a chore" from "the endgame trigger itself lacks
-drama," since the current evidence mostly supports the latter.
+drama," since the current evidence mostly supports the latter. betrayal-legacy and
+nemesis both carry the `scoring-endgame` label in their frontmatter but neither's
+current reception docs yield a body claim actually about scoring or the end-of-game
+trigger, so this pass could not add either as a usable data point.
