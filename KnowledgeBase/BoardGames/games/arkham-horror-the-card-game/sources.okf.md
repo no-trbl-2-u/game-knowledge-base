@@ -24,8 +24,8 @@ sources:
     url: "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-10"
-    notes: "Publisher page located by search; direct page fetch blocked with HTTP 403, but search result listed official downloads."
+    retrieved_at: "2026-10-14"
+    notes: "Publisher page located by search; direct page fetch blocked with HTTP 403 at scout time and still Cloudflare-blocked on 2026-09-04 retry. Resolved 2026-10-14 (librarian): the block has lifted and direct fetch now returns the real product-line listing."
   - id: "src-003"
     title: "Arkham Horror: The Card Game — Learn to Play PDF"
     url: "https://images-cdn.fantasyflightgames.com/filer_public/dd/78/dd7818fe-0c9a-4a6c-b685-e32ab55b1702/ahc60_learn_to_play_web.pdf"
@@ -38,8 +38,8 @@ sources:
     url: "https://arkhamdb.com/rules"
     kind: other
     provenance: secondary
-    retrieved_at: "2026-07-10"
-    notes: "Community rules reference mirror stating it replicates Core Set Rules Reference and includes official FAQ updates; used only for edge-case leads."
+    retrieved_at: "2026-10-14"
+    notes: "Community rules reference mirror stating it replicates Core Set Rules Reference and includes official FAQ updates; re-fetched in full (not just table of contents) in the 2026-10-14 librarian pass and used for substantive edge-case rulings in rules/edge-cases-faq.okf.md."
   - id: "src-005"
     title: "Board Game Quest — Arkham Horror: The Card Game – Chapter Two Review"
     url: "https://www.boardgamequest.com/arkham-horror-the-card-game-chapter-two-review/"
@@ -89,7 +89,7 @@ Source registry for *Arkham Horror: The Card Game*. Official Learn to Play was r
 - Claim: ArkhamDB labels its rules page as a replica of the Core Set Rules Reference plus updates.
   Source: src-004
   Evidence: "This page contains a replica of the Rules Reference found in any copy of the Core Set of Arkham Horror: The Card Game."
-  Confidence: medium
+  Confidence: high
 
 ## Open questions
 

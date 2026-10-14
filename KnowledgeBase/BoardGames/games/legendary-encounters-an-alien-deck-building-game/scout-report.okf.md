@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "BGG files listing plus secondary rules walkthrough/review sources were used for high-level summaries."
     retry_needs: manual_review
-    notes: "Official rulebook listing was found, but direct file/PDF extraction was not completed during this cron run. Retried 2026-09-04 (librarian): the BGG filepage returned HTTP 403, and a real headless Chromium session (Playwright) against boardgamegeek.com was held at the Cloudflare 'Performing security verification' interstitial without clearing. BGG file downloads additionally require a logged-in account, so browser_fetch alone cannot satisfy this entry; downgraded to manual_review. A future pass needs an authenticated BGG session."
+    notes: "Official rulebook listing was found, but direct file/PDF extraction was not completed during this cron run. Retried 2026-09-04 (librarian): the BGG filepage returned HTTP 403, and a real headless Chromium session (Playwright) against boardgamegeek.com was held at the Cloudflare 'Performing security verification' interstitial without clearing. BGG file downloads additionally require a logged-in account, so browser_fetch alone cannot satisfy this entry; downgraded to manual_review. A future pass needs an authenticated BGG session. Retried 2026-10-14 (librarian): boardgamegeek.com game pages are still HTTP 403, matching the systemic block re-confirmed this pass in too-many-bones/scout-report.okf.md; the filepage URL requiring a logged-in account is unaffected by that general finding and remains the specific blocker here."
   - source_id: null
     url: "https://upperdeck.com/"
     failure: not_found

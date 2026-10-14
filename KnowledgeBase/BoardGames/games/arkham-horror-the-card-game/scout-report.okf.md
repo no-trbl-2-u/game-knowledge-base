@@ -17,19 +17,13 @@ followups:
     failure: blocked
     fallback: "BGG page URL plus search snippets and a secondary review page quoting BGG Geek Rating 8.57922."
     retry_needs: manual_review
-    notes: "HTTP 401 from XML API during 2026-07-10 scout. Retried 2026-09-04 (librarian): XML API still HTTP 401 and boardgamegeek.com HTML still HTTP 403. A real headless Chromium session (Playwright) was also served the Cloudflare 'Performing security verification' interstitial and never cleared it, so browser_fetch is demonstrably exhausted for this domain from this environment; manual_review is correct. A future pass needs an authenticated BGG session or a BGG-derived mirror document."
-  - source_id: "src-002"
-    url: "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/"
-    failure: blocked
-    fallback: "Official Learn to Play PDF URL from search result; product page retained as official source target."
-    retry_needs: manual_review
-    notes: "HTTP 403 from direct product-page fetch during 2026-07-10 scout. Retried 2026-09-04 (librarian): fantasyflightgames.com now sits behind a Cloudflare JS challenge — one probe returned a 216KB body but every repeat returned the 5.9KB 'Just a moment...' interstitial, and a real headless Chromium session (Playwright) was also held at 'Performing security verification' without clearing. browser_fetch is therefore exhausted for this domain from this environment; downgraded to manual_review."
+    notes: "HTTP 401 from XML API during 2026-07-10 scout. Retried 2026-09-04 (librarian): XML API still HTTP 401 and boardgamegeek.com HTML still HTTP 403. A real headless Chromium session (Playwright) was also served the Cloudflare 'Performing security verification' interstitial and never cleared it, so browser_fetch is demonstrably exhausted for this domain from this environment; manual_review is correct. Retried 2026-10-14 (librarian): boardgamegeek.com game pages are still HTTP 403 (checked via a sibling game page, since the block is confirmed systemic across this corpus's BGG followups). A future pass needs an authenticated BGG session or a BGG-derived mirror document."
   - source_id: "src-009"
     url: "https://images-cdn.fantasyflightgames.com/filer_public/2f/b8/2fb895a5-07cb-4784-8a18-b92b3c91e6c9/ahc_rules_reference_v19-compressed.pdf"
     failure: blocked
     fallback: "Official Learn to Play PDF plus ArkhamDB Rules Reference mirror for edge-case leads."
     retry_needs: alternate_source
-    notes: "HTTP 403 from direct Rules Reference PDF URL attempted during 2026-07-10 scout. Retried 2026-09-04 (librarian): still HTTP 403 (application/xml error body) from images-cdn.fantasyflightgames.com. Additionally checked the Wayback availability API for this exact asset URL: it returned an empty `archived_snapshots` object, so no archive capture of this PDF exists to fall back on. alternate_source remains correct; the ArkhamDB Rules Reference mirror is the retrievable document a future pass should target."
+    notes: "HTTP 403 from direct Rules Reference PDF URL attempted during 2026-07-10 scout. Retried 2026-09-04 (librarian): still HTTP 403. Retried 2026-10-14 (librarian): still HTTP 403 (application/xml error body); the Wayback availability API still has no capture of this asset. Resolved via alternate_source this pass instead: the ArkhamDB Rules Reference mirror (src-004) was re-fetched in full (not just its table of contents) and yielded concrete, citable rulings — the Golden/Silver/Grim Rule precedence hierarchy, triggered-ability timing order, exceptional-card deckbuilding cost, and campaign trauma/transfer rules — now recorded with high confidence in rules/edge-cases-faq.okf.md. The official PDF itself remains blocked and this entry is left open only as a record of that; no further action is needed unless the direct PDF becomes reachable."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Arkham Horror: The Card Game"
@@ -43,8 +37,8 @@ sources:
     url: "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-10"
-    notes: "Product page direct fetch blocked; search result identified official downloads."
+    retrieved_at: "2026-10-14"
+    notes: "Product page direct fetch blocked with HTTP 403 at scout time (2026-07-10) and still Cloudflare-blocked on 2026-09-04 retry. Resolved 2026-10-14 (librarian): the Cloudflare block has lifted — direct fetch now returns the real product-line listing page (Core Game, five investigator decks, two campaign expansions, two scenario packs, and the Revised Core Set), confirmed by its FFG header/footer and absence of any challenge markers. Followup dropped; no rules/FAQ download links are present on this listing page itself."
   - id: "src-003"
     title: "Arkham Horror: The Card Game — Learn to Play PDF"
     url: "https://images-cdn.fantasyflightgames.com/filer_public/dd/78/dd7818fe-0c9a-4a6c-b685-e32ab55b1702/ahc60_learn_to_play_web.pdf"
@@ -57,8 +51,8 @@ sources:
     url: "https://arkhamdb.com/rules"
     kind: other
     provenance: secondary
-    retrieved_at: "2026-07-10"
-    notes: "Rules Reference mirror used only for edge-case leads."
+    retrieved_at: "2026-10-14"
+    notes: "Rules Reference mirror; re-fetched in full (not just table of contents) in the 2026-10-14 librarian pass and used for substantive edge-case rulings."
   - id: "src-005"
     title: "Board Game Quest — Arkham Horror: The Card Game – Chapter Two Review"
     url: "https://www.boardgamequest.com/arkham-horror-the-card-game-chapter-two-review/"
@@ -158,4 +152,4 @@ The first-box path gave stronger deck examples, clearer upgrade routes, and bett
 ## Open questions
 
 - Recheck BGG current average/rank/weight/mechanisms when direct BGG access is available.
-- Retrieve the official Rules Reference PDF through a browser or alternate official URL.
+- The official Rules Reference PDF remains blocked; the ArkhamDB mirror substituted successfully (2026-10-14), so retrieving the direct PDF is no longer blocking, only a nice-to-have if BGG/FFG access opens further.
