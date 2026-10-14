@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "slug": "pandemic-legacy-season-1",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-10-14T06:05:07.000Z",
+  "sources": [
+    {
+      "id": "src-002",
+      "title": "Pandemic Legacy: Season 1 English rulebook — Z-Man Games",
+      "roles": ["official_rules", "visual"],
+      "provenance": "official",
+      "url": "https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/zm7170_zm7171_rules_web.pdf",
+      "final_url": "https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/zm7170_zm7171_rules_web.pdf",
+      "retrieved_at": "2026-10-14T06:02:19.422Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 8559108,
+      "sha256": "409b7121d6a7c6afcf307d6aaf7d081271a4d2bb1b0325db5c72d00fdffab3a6",
+      "locator": "PDF pages 1–16; especially pp. 5–8, 10–15; page 15 copyright identity",
+      "evidence": "Take all the pawns and blindly select one. That player goes first, and play proceeds clockwise."
+    },
+    {
+      "id": "src-003",
+      "title": "Pandemic Legacy: Season 1 review — Geeks Under Grace",
+      "roles": ["independent_review"],
+      "provenance": "secondary",
+      "url": "https://www.geeksundergrace.com/tabletop/review-pandemic-legacy-season-1/",
+      "final_url": "https://www.geeksundergrace.com/tabletop/review-pandemic-legacy-season-1/",
+      "retrieved_at": "2026-10-14T06:03:22.479Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 130604,
+      "sha256": "8447f95276479009c67fd0b21bd1013286125bc414d4abbefd72a7cc0d541ae6",
+      "locator": "Review body; spoiler-free framing; campaign length, permanence, and replay discussion",
+      "evidence": "Season 1 is played over a series of 12 game months."
+    },
+    {
+      "id": "src-004",
+      "title": "Pandemic Legacy: Season 1 Blue edition cover art — Z-Man Games",
+      "roles": ["visual"],
+      "provenance": "official",
+      "url": "https://cdn.svc.asmodee.net/production-zman/uploads/image-converter/2024/08/ZM7170_coverarts.webp",
+      "final_url": "https://cdn.svc.asmodee.net/production-zman/uploads/image-converter/2024/08/ZM7170_coverarts.webp",
+      "retrieved_at": "2026-10-14T06:06:57.083Z",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "byte_length": 211146,
+      "sha256": "db517e2518484154e2c90590e1f55553c9c10e4e94413414561831f2558ead75",
+      "locator": "Official cover-art asset",
+      "evidence": "Official Z-Man Games cover art asset for Pandemic Legacy: Season 1."
+    }
+  ]
+}
