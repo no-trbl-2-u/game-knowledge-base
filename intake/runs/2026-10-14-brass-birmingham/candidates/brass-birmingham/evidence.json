@@ -1,0 +1,86 @@
+{
+  "schema_version": 3,
+  "slug": "brass-birmingham",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-10-14T00:06:00.000Z",
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Brass: Birmingham — Roxley product page",
+      "roles": ["identity"],
+      "provenance": "official",
+      "url": "https://roxley.com/products/brass-birmingham",
+      "final_url": "https://roxley.com/products/brass-birmingham",
+      "retrieved_at": "2026-10-14T00:04:31.532Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "byte_length": 317476,
+      "sha256": "8c34bf064fa3253e4a542066c2a2ad17d3ef2a75d67609db2a637ff64ca019ec",
+      "locator": "Overview and Features sections; page metadata",
+      "evidence": "Brass: Birmingham is a competitive, heavy weight, hand management, network building, economic game."
+    },
+    {
+      "id": "src-002",
+      "title": "Brass: Birmingham Rulebook — Roxley",
+      "roles": ["official_rules"],
+      "provenance": "official",
+      "url": "https://cdn.shopify.com/s/files/1/0246/2190/8043/files/Brass-Birmingham-Rulebook.pdf?v=1758826281",
+      "final_url": "https://cdn.shopify.com/s/files/1/0246/2190/8043/files/Brass-Birmingham-Rulebook.pdf?v=1758826281",
+      "retrieved_at": "2026-10-14T00:04:33.537Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 12325277,
+      "sha256": "bb627a11c769957fbb5f26a210e3957ae27a2bad054ba9cb3b4fadc6c2ba73e5",
+      "locator": "PDF pages 1, 4–12; goal, setup, turn structure, actions, scoring",
+      "evidence": "On your turn, perform a total of 2 actions."
+    },
+    {
+      "id": "src-003",
+      "title": "Brass: Birmingham Review — What Board Game",
+      "roles": ["independent_review"],
+      "provenance": "secondary",
+      "url": "https://www.whatboardgame.com/post/brass-birmingham-review",
+      "final_url": "https://www.whatboardgame.com/post/brass-birmingham-review",
+      "retrieved_at": "2026-10-14T00:04:35.257Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 934503,
+      "sha256": "6e09cdbc2ebd871fbccf0c84434223cf06060bf0ca77c8e8ca55afd22c9b9928",
+      "locator": "Review section on learning curve and rules teachability",
+      "evidence": "Brass surprisingly simple to understand, and has a bigger learning curve in the strategy to the rules."
+    },
+    {
+      "id": "src-004",
+      "title": "Brass: Birmingham product image — Roxley",
+      "roles": ["visual"],
+      "provenance": "official",
+      "url": "https://cdn.shopify.com/s/files/1/0246/2190/8043/t/5/assets/efe427c2dcbf--Brass-Birmingham.jpg?v=1781038939",
+      "final_url": "https://cdn.shopify.com/s/files/1/0246/2190/8043/t/5/assets/efe427c2dcbf--Brass-Birmingham.jpg?v=1781038939",
+      "retrieved_at": "2026-10-14T00:04:43.643Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 157466,
+      "sha256": "8d216686d063e5297d42d8be7b16b3cfe9b04f827b3e38a6e3002840c482e8ba",
+      "locator": "Official product image asset",
+      "evidence": "Official Roxley product image for Brass: Birmingham."
+    },
+    {
+      "id": "src-005",
+      "title": "Brass: Birmingham gameplay image — Roxley",
+      "roles": ["visual"],
+      "provenance": "official",
+      "url": "https://cdn.shopify.com/s/files/1/0246/2190/8043/t/5/assets/0f96a108ffe6--DS8-0619-ee8d74.jpg?v=1781038945",
+      "final_url": "https://cdn.shopify.com/s/files/1/0246/2190/8043/t/5/assets/0f96a108ffe6--DS8-0619-ee8d74.jpg?v=1781038945",
+      "retrieved_at": "2026-10-14T00:04:45.097Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 201209,
+      "sha256": "919b76979ccdd3bfa61fe51f0b88095be8f2756a12a4f63759e7f73f627b0f8a",
+      "locator": "Official gameplay image asset",
+      "evidence": "Official Roxley gameplay image for Brass: Birmingham."
+    }
+  ]
+}

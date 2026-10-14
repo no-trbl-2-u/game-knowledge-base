@@ -1,0 +1,47 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-10-14-brass-birmingham",
+  "created_at": "2026-10-14T00:06:00.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "economic network-building strategy"
+  },
+  "candidates": [
+    {
+      "slug": "brass-birmingham",
+      "title": "Brass: Birmingham",
+      "bgg_id": 224517,
+      "cohort": "rotating_focus",
+      "focus_fit": "This released physical tabletop game combines hand management, network expansion, markets, and industrial tile placement.",
+      "status": "ready_for_audit",
+      "discovery_sources": [
+        "https://boardgamegeek.com/boardgame/224517/brass-birmingham",
+        "https://roxley.com/products/brass-birmingham"
+      ],
+      "blockers": [],
+      "coverage": {
+        "deckbuilder": false,
+        "methodology": "Counts the retrieved official core rulebook as the governing-rules document and counts only source-backed factual entries; exhaustive card, FAQ, and component inventories were not claimed.",
+        "rules": {
+          "recorded": 1,
+          "known_total": 1,
+          "percent": 100
+        },
+        "factual": {
+          "recorded": 15,
+          "known_total": null,
+          "percent": null
+        }
+      }
+    }
+  ]
+}
