@@ -28,7 +28,7 @@ BoardGames intake candidates and never create `intake-gap` issues.
 
 Top 100 BGG-ranked base games not yet in the corpus. Editions of one game collapse to the highest-ranked entry; standalone sequels of covered games are listed. Rank snapshot: beefsack/bgg-ranking-historicals `2026-10-12.csv`.
 
-- [ ] Brass: Birmingham (2018) — BGG overall rank #1 on 2026-10-12, [BGG 224517](https://boardgamegeek.com/boardgame/224517/brass-birmingham); rules + reception for top-ranked coverage (BGG is discovery only)
+- [x] Brass: Birmingham (2018) — BGG overall rank #1 on 2026-10-12, [BGG 224517](https://boardgamegeek.com/boardgame/224517/brass-birmingham); rules + reception for top-ranked coverage (BGG is discovery only; covered 2026-10-14 in intake run 2026-10-14-brass-birmingham)
 - [ ] Pandemic Legacy: Season 1 (2015) — BGG overall rank #3 on 2026-10-12, [BGG 161936](https://boardgamegeek.com/boardgame/161936/pandemic-legacy-season-1); rules + reception for top-ranked coverage (BGG is discovery only)
 - [ ] Dune: Imperium – Uprising (2023) — BGG overall rank #5 on 2026-10-12, [BGG 397598](https://boardgamegeek.com/boardgame/397598/dune-imperium-uprising); rules + reception for top-ranked coverage (BGG is discovery only)
 - [ ] Twilight Imperium: Fourth Edition (2017) — BGG overall rank #7 on 2026-10-12, [BGG 233078](https://boardgamegeek.com/boardgame/233078/twilight-imperium-fourth-edition); rules + reception for top-ranked coverage (BGG is discovery only)
