@@ -8,6 +8,21 @@
   "researched_at": "2026-10-14T06:05:07.000Z",
   "sources": [
     {
+      "id": "src-001",
+      "title": "BoardGameGeek API identity — Pandemic Legacy: Season 1",
+      "roles": ["identity"],
+      "provenance": "community",
+      "url": "https://api.geekdo.com/api/geekitems?objectid=161936&objecttype=thing",
+      "final_url": "https://api.geekdo.com/api/geekitems?objectid=161936&objecttype=thing",
+      "retrieved_at": "2026-10-15T00:02:23.055Z",
+      "http_status": 200,
+      "content_type": "application/json",
+      "byte_length": 53047,
+      "sha256": "8a02a7dd873a9d9c1f52055b5b3238391cf8e70e6bf75130f63076d8c8fdcea3",
+      "locator": "JSON item objectid=161936; item id=161936; canonical_link and name fields",
+      "evidence": "Pandemic Legacy: Season 1"
+    },
+    {
       "id": "src-002",
       "title": "Pandemic Legacy: Season 1 English rulebook — Z-Man Games",
       "roles": ["official_rules", "visual"],

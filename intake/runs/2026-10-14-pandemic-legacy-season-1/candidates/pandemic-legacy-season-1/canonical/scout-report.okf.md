@@ -13,6 +13,13 @@ scope: "base game"
 mechanics: [action-points, campaign-game, cooperative-game, hand-management, hidden-information, legacy-game, set-collection, variable-player-powers]
 followups: []
 sources:
+  - id: "src-001"
+    title: "BoardGameGeek API identity — Pandemic Legacy: Season 1"
+    url: "https://api.geekdo.com/api/geekitems?objectid=161936&objecttype=thing"
+    kind: bgg_page
+    provenance: community
+    retrieved_at: "2026-10-15"
+    notes: "HTTP 200, application/json, 53,047 bytes, SHA-256 8a02a7dd873a9d9c1f52055b5b3238391cf8e70e6bf75130f63076d8c8fdcea3; item objectid/id 161936 and canonical_link identify the game."
   - id: "src-002"
     title: "Pandemic Legacy: Season 1 English rulebook — Z-Man Games"
     url: "https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/zm7170_zm7171_rules_web.pdf"
@@ -31,23 +38,16 @@ confidence: high
 status: verified
 ---
 
-## Scout objective
-
-- Claim: This run selected the first eligible unchecked physical tabletop wishlist entry after the standing Quarriors exclusion.
-  Source: src-002
-  Evidence: WISHLIST.md places Quarriors first but the scheduled directive excludes it; the next unchecked physical tabletop candidate is Pandemic Legacy: Season 1, BGG 161936. The retrieved official rulebook confirms a released physical game identity.
-  Confidence: high
-
-## Selection and scope
+## Identity and scope
 
 - Claim: The packet is a cooperative-campaign cohort record for Pandemic Legacy: Season 1, not Pandemic base game or Season 2.
-  Source: src-002
-  Evidence: The rulebook's title/copyright identity and its 12-month legacy setup are specific to Pandemic Legacy: Season 1.
+  Source: src-001, src-002
+  Evidence: The BoardGameGeek API identity receipt records item objectid/id 161936, canonical link, and the name Pandemic Legacy: Season 1; the rulebook's title/copyright identity and its 12-month legacy setup are specific to Pandemic Legacy: Season 1.
   Confidence: high
 
 - Claim: BGG is retained only as the discovery and numeric identity lead; no rating or complexity weight is claimed.
-  Source: src-002
-  Evidence: The manifest preserves BGG ID 161936 from the wishlist, while game.weight remains null and no BGG rating receipt is published.
+  Source: src-001
+  Evidence: The BGG API identity receipt records item objectid/id 161936 and the canonical link; game.weight remains null and no BGG rating receipt is published.
   Confidence: high
 
 ## Coverage ledger
