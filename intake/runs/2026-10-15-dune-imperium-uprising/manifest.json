@@ -1,0 +1,48 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-10-15-dune-imperium-uprising",
+  "created_at": "2026-10-15T06:06:00.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "deck-building worker-placement with hidden combat"
+  },
+  "candidates": [
+    {
+      "slug": "dune-imperium-uprising",
+      "title": "Dune: Imperium — Uprising",
+      "bgg_id": 397598,
+      "cohort": "rotating_focus",
+      "focus_fit": "This released tabletop game directly combines deck-building, worker placement, hidden combat commitment, and a race for Victory Points.",
+      "status": "promoted",
+      "discovery_sources": [
+        "https://boardgamegeek.com/boardgame/397598/dune-imperium-uprising",
+        "https://www.direwolfdigital.com/dune-imperium-uprising/"
+      ],
+      "blockers": [],
+      "coverage": {
+        "deckbuilder": true,
+        "methodology": "Counts one retrieved official main rulebook as the governing-rules document and counts only source-backed factual or visual entries; exhaustive card, component, and rating denominators are not claimed.",
+        "rules": {
+          "recorded": 1,
+          "known_total": 1,
+          "percent": 100
+        },
+        "factual": {
+          "recorded": 18,
+          "known_total": null,
+          "percent": null
+        }
+      },
+      "promoted_at": "2026-10-15T09:04:45.970Z"
+    }
+  ]
+}
