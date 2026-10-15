@@ -35,11 +35,11 @@ sources:
     notes: "Reception and campaign-group-size testimony."
   - id: "src-004"
     title: "The Thoughtful Gamer — Star Wars: Imperial Assault review"
-    url: "https://thethoughtfulgamer.com/2017/11/15/imperial-assault-review/"
+    url: "https://thethoughtfulgamer.com/2017/11/15/star-wars-imperial-assault-review/"
     kind: review
     provenance: secondary
     retrieved_at: "2026-07-24"
-    notes: "Reception and role/campaign description."
+    notes: "Reception and role/campaign description. Audit 2026-10-15: check-links flagged the stored URL (missing the \"star-wars-\" slug segment) as a 404 dead link. This was a transcription error, not link rot: the live page resolves at this corrected URL (HTTP 200, re-confirmed this pass); Wayback CDX also shows continuous captures of this exact corrected URL from 2017 onward. `url` corrected; `src-004` id unchanged."
 confidence: high
 status: verified
 ---

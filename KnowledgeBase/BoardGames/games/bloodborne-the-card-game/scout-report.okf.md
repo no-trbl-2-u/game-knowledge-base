@@ -33,13 +33,20 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-31"
     notes: "Independent review."
+  - id: "src-005"
+    title: "CMON — Bloodborne: The Card Game Rulebook (2025 web re-export)"
+    url: "https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-10-15"
+    notes: "Audit 2026-10-15: HTTP 200, 82,846,744 bytes, SHA-256 c03978b1bbbe6793e0f082bfc2320e6ba397303d631d9597287c088fe2a8d3ed; 16 pages; metadata CreationDate 2025-03-22. Text-extracted; no errata/version/revision markers found. Structurally identical (page-for-page) to the original 2016 rulebook (src-002); a 2025 re-export, not a revised edition."
 followups:
   - source_id: "src-001"
     url: "https://www.cmon.com/product/bloodborne-the-card-game/bloodborne-the-card-game"
     failure: blocked
     fallback: "Dated original-URL proxy and direct assets returned HTTP 200; proxy currently lists Rulebook 79.01 MB."
     retry_needs: manual_review
-    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it. Retried 2026-09-04 (librarian): the Cloudflare block has LIFTED — the product page now returns HTTP 200 (72,449 bytes) to a direct fetch. Enumerated it: it exposes exactly one PDF, the official rulebook at https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf, plus a link to the publisher-wide portal https://support.cmon.com/hc/en-us. That portal was also retrieved (HTTP 200) and is a fulfillment/customer-service help centre — its article set is shipping, refunds, pledge-manager, damaged-component and 'How do I get the Rulebook for my game' topics — not a rules FAQ/errata archive. This narrows but does not close the entry, and is NOT an absence claim. Next retrieval target: the dated rulebook PDF itself for any embedded errata/version marker."
+    notes: "Direct access remained Cloudflare/HTTP 403. A closed publisher-wide FAQ/errata/clarification/support inventory, or authoritative evidence of absence, remains required; the dynamic product page alone cannot close it. Retried 2026-09-04 (librarian): the Cloudflare block has LIFTED — the product page now returns HTTP 200 (72,449 bytes) to a direct fetch. Enumerated it: it exposes exactly one PDF, the official rulebook at https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf, plus a link to the publisher-wide portal https://support.cmon.com/hc/en-us. That portal was also retrieved (HTTP 200) and is a fulfillment/customer-service help centre — its article set is shipping, refunds, pledge-manager, damaged-component and 'How do I get the Rulebook for my game' topics — not a rules FAQ/errata archive. This narrows but does not close the entry, and is NOT an absence claim. Next retrieval target: the dated rulebook PDF itself for any embedded errata/version marker. Retried 2026-10-15 (audit): fetched the dated rulebook PDF directly (HTTP 200, 82,846,744 bytes, SHA-256 c03978b1bbbe6793e0f082bfc2320e6ba397303d631d9597287c088fe2a8d3ed; 16 pages; PDF metadata CreationDate 2025-03-22, Creator Adobe InDesign 20.0). Text-extracted all 16 pages (32,005 characters) and searched for errata/version/revision/corrigendum/update markers: none found, and the credits/table-of-contents structure matches the original 2016 rulebook (src-002) page-for-page. This is a 2025 re-export of the same 16-page rulebook, not a revised edition with tracked changes — the PDF's own 2025-03-22 metadata timestamp is the only version marker that exists. Registered as src-005. The publisher-wide FAQ/errata/clarification inventory itself is still unconfirmed closed-or-absent; this retrieval only rules out the dated rulebook PDF as a place where such content would surface."
 confidence: high
 status: needs_followup
 ---

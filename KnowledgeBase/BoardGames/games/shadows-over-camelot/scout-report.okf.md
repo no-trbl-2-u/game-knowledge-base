@@ -41,6 +41,13 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "HTTP 403; www host also 403; exact CDX query empty."
+  - id: "src-005"
+    title: "Days of Wonder — Shadows over Camelot Rules and FAQ web page (archived)"
+    url: "http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/"
+    kind: faq
+    provenance: official
+    retrieved_at: "2026-10-15"
+    notes: "Audit 2026-10-15: live daysofwonder.com host returns 404/403; retrieved via Wayback Machine capture dated 2015-04-03. HTTP 200, 22,108 bytes, SHA-256 64590e617e53549b64b096d6c5e2fac50491d874ac9c809d9f233482ee1bdb67. Secondary web-FAQ mirror; no new claim rests on it beyond confirming the official FAQ 1.0 PDF (src-002) was web-published at this URL."
 followups:
   - source_id: "src-004"
     url: "https://ncdn0.daysofwonder.com/shadowsovercamelot/en/img/sc_rules_en.pdf"
@@ -48,12 +55,12 @@ followups:
     fallback: "2005 Book of Quests and FAQ 1.0 govern acquired release law; 2015 rulebook is labeled comparison only."
     retry_needs: wayback_snapshot
     notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference. Retried 2026-09-04 (librarian): CDN still HTTP 403, and the Wayback availability API returned an empty `archived_snapshots` object for this exact asset URL, independently confirming the earlier empty CDX result. No archive capture of this PDF exists, so retry_needs `wayback_snapshot` is not satisfiable for this URL; a future pass must find an alternate immutable copy of the 2005 Rules booklet instead."
-  - source_id: null
+  - source_id: "src-005"
     url: "https://www.daysofwonder.com/shadowsovercamelot/en/content/faq"
     failure: blocked
-    fallback: "Official FAQ 1.0 PDF acquired directly from Asmodee CDN."
-    retry_needs: wayback_snapshot
-    notes: "Direct/browser Access Denied; text-proxy retrieval aid reports current 404. Need complete historical official web FAQ/support inventory and explicit version bridge. Retried 2026-09-04 (librarian): live URL still HTTP 403, but the Wayback availability API CONFIRMS a usable capture exists — http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/ (status 200, timestamp 20150403062225). Retrieval of that capture was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. This is an environmental throttle, not a missing document. Next pass should fetch that exact capture URL directly; retry_needs `wayback_snapshot` is correct and now has a concrete target."
+    fallback: "Official FAQ 1.0 PDF acquired directly from Asmodee CDN; this page is a secondary web-FAQ mirror of that same official content."
+    retry_needs: alternate_source
+    notes: "Direct/browser Access Denied; text-proxy retrieval aid reports current 404 (check-links 2026-10-12 confirmed 404, not just blocked). Retried 2026-09-04 (librarian): live URL still HTTP 403, Wayback availability API confirmed a usable capture. Retried 2026-10-15 (audit): the 429 rate-limit cleared; fetched http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/ directly (HTTP 200, 22,108 bytes, SHA-256 64590e617e53549b64b096d6c5e2fac50491d874ac9c809d9f233482ee1bdb67; page title \"Rules and FAQ - Shadows over Camelot | Days of Wonder\"). Registered as src-005 below and cited in its archived form. The live daysofwonder.com host is permanently retired (now redirects through asmodee.net), so retry_needs moves to alternate_source: a future pass should look for a current Asmodee-hosted FAQ/support index rather than retrying this dead host."
   - source_id: null
     url: "lawful immutable English 2005 first-retail component inventory document"
     failure: not_found

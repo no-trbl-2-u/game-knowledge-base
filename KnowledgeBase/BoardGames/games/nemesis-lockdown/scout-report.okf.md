@@ -90,6 +90,13 @@ sources:
     provenance: community
     retrieved_at: "2026-07-31"
     notes: "Identity lead only; no weight or rating retained because no fresh auditable snapshot was acquired."
+  - id: "src-012"
+    title: "Asmodee Shop — Nemesis: Lockdown product page (archived)"
+    url: "https://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-10-15"
+    notes: "Audit 2026-10-15: live shop.asmodee.com now 404; retrieved via Wayback Machine capture dated 2023-05-29. HTTP 200, 64,925 bytes. Confirms retail SKU/Item No. NEMLD01 and USD 190.00 list price; no UPC/EAN present on the page."
 followups:
   - source_id: "src-001"
     url: "https://web.archive.org/web/20231129181753id_/https://awakenrealms.com/images/download/Nemesis_Lockdown/ENG/Nemesis_LD_Rulebook_280x280mm_bleed3mm-32-pages.pdf"
@@ -109,12 +116,12 @@ followups:
     fallback: "The current folder is fully enumerated at six articles; only the Status-marker article supplies target-core correction law."
     retry_needs: wayback_snapshot
     notes: "Current accessible inventory is closed. Need historical FAQ/support history beyond the complete current folder; wrapper hash drift is not semantic drift."
-  - source_id: null
+  - source_id: "src-012"
     url: "https://shop.asmodee.com/nemesis-lockdown-nemld01"
     failure: blocked
-    fallback: "Search result exposed Item No. NEMLD01; no body claim relies on the blocked page."
-    retry_needs: wayback_snapshot
-    notes: "Need official retail SKU/UPC/publication receipt and first-print markers. Retried 2026-09-04 (librarian): live shop.asmodee.com still HTTP 403, and browser escalation is not the blocker, so browser_fetch is the wrong route. Switched retry_needs to wayback_snapshot because the Wayback availability API CONFIRMS a capture exists — http://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01 (status 200, timestamp 20230529174739). Retrieval was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. Environmental throttle, not a missing document. Next pass should fetch that exact capture URL and read the SKU/EAN block."
+    fallback: "Search result exposed Item No. NEMLD01; archived capture now confirms it directly."
+    retry_needs: alternate_source
+    notes: "Need official retail SKU/UPC/publication receipt and first-print markers. Retried 2026-09-04 (librarian): live shop.asmodee.com still HTTP 403. Retried 2026-10-15 (audit): live host now returns a true 404 (check-links confirmed), and the 2026-09-04 rate-limit cleared; fetched http://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01 directly (HTTP 200, 64,925 bytes). The page confirms SKU/Item No. NEMLD01 (productId=NEMLD01 appears in the add-to-basket form, tracking-model URL, and tell-a-friend link) and lists price USD 190.00, In Stock. No UPC/EAN/GTIN or first-print/edition marker is present on this page — the archived retail listing simply does not carry that data. Registered as src-012. retry_needs moves to alternate_source: the live Asmodee shop host is retired for this SKU, so a future pass needs a different document (packaging photo-document, distributor catalog, or publisher-issued barcode sheet) for UPC/EAN, not another retry of this URL."
   - source_id: null
     url: "lawful immutable English 2022 first-retail component/card/face document corpus"
     failure: not_found

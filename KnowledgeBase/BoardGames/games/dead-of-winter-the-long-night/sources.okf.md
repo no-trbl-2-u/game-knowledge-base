@@ -67,7 +67,7 @@ sources:
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "HTTP 403 Cloudflare; not negative proof."
+    notes: "HTTP 403 Cloudflare; not negative proof. Audit 2026-10-15: check-links confirmed this is now a true 404 (page retired, not a Cloudflare block) and no Wayback capture exists for this exact URL (CDX query returned zero rows). No body claim relies on src-008 — Plaid Hat's own live and archived pages (src-002, src-003) remain the governing product-scope sources — so no confidence downgrade is needed. This locator stays permanently UNKNOWN as a route lead; a future pass would need a different FFG-side URL, not a retry of this one."
 confidence: high
 status: needs_followup
 ---

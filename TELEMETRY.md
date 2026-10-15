@@ -360,3 +360,5 @@ deterministic tier's.
 | 2026-10-15T03:02:54Z | generate-index | games/**/*.okf.md frontmatter | 92 table row | 0 | yes | wrote KnowledgeBase/BoardGames/INDEX.okf.md |
 | 2026-10-15T03:02:55Z | validate-okf | full corpus + index/sidecar freshness | 2822 files | 0 | yes | - |
 | 2026-10-15T03:03:19Z | validate-okf | full corpus + index/sidecar freshness | 2822 files | 0 | yes | - |
+| 2026-10-15T04:39:56Z | check-links | all frontmatter url: in KnowledgeBase/ | 2112 unique  | 93 | yes | 8 dead, 85 suspect |
+| 2026-10-15T04:52:09Z | validate-okf | full corpus + index/sidecar freshness | 2822 files | 0 | yes | - |
