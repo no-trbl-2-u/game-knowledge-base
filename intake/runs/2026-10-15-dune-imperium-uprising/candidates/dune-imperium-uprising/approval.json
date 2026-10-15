@@ -1,0 +1,31 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-10-15T09:02:11.000Z",
+  "packet_sha256": "abcc3e57d0d937e006959613e086ac7622fef704fe4ab086c2903e31d678f212",
+  "reviewed_source_ids": [
+    "src-001",
+    "src-002",
+    "src-003",
+    "src-004",
+    "src-005",
+    "src-006",
+    "src-007",
+    "src-008"
+  ],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Exact-head audit reopened the official 20-page rulebook, product identity, two independent reviews, and four visual assets. Static PDF and image receipts replayed byte-identically; dynamic review wrappers changed only in transport metadata while identity and cited semantics remained present. Claim triplets, edition scope, unknown factual denominator, visual reductions, and staged packet gates were verified."
+}
