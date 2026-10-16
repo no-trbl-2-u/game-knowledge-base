@@ -1,0 +1,86 @@
+{
+  "schema_version": 3,
+  "slug": "twilight-imperium-fourth-edition",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-10-16T00:04:06.659Z",
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Twilight Imperium Fourth Edition — Fantasy Flight Games product page",
+      "roles": ["identity"],
+      "provenance": "official",
+      "url": "https://www.fantasyflightgames.com/product/twilight-imperium-fourth-edition/",
+      "final_url": "https://www.fantasyflightgames.com/product/twilight-imperium-fourth-edition/",
+      "retrieved_at": "2026-10-16T00:03:53.938Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 171326,
+      "sha256": "9860aea8f3995cb303d1ede522ae24479b07890e3d2014053cd7fde3560ba817",
+      "locator": "Product description and player/time metadata",
+      "evidence": "Build an intergalactic empire through trade, research, conquest and grand politics."
+    },
+    {
+      "id": "src-002",
+      "title": "Twilight Imperium Fourth Edition Learn to Play",
+      "roles": ["official_rules"],
+      "provenance": "official",
+      "url": "https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/08/ti-k0289_learn_to_play_2020_web.pdf",
+      "final_url": "https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/2026/08/ti-k0289_learn_to_play_2020_web.pdf",
+      "retrieved_at": "2026-10-16T00:04:05.132Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 15694502,
+      "sha256": "ac91632f142898db6c784be2bb4287875b31b7a3b4d6836bcef95f5e070d647d",
+      "locator": "PDF page 3, Objective and Game Overview; pages 8–12, round and action phases",
+      "evidence": "The first player to accumulate 10 victory points claims the Imperial Throne and wins the game."
+    },
+    {
+      "id": "src-003",
+      "title": "Five Beginner’s Notes on Twilight Imperium — SPACE-BIFF!",
+      "roles": ["independent_review"],
+      "provenance": "secondary",
+      "url": "https://spacebiff.com/2017/12/01/twilight-imperium/",
+      "final_url": "https://spacebiff.com/2017/12/01/twilight-imperium/",
+      "retrieved_at": "2026-10-16T00:03:55.536Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 143320,
+      "sha256": "ac10dcae4004ccde600df2d9e5c56785264db982dc9bf8ef5d781305a106e8b9",
+      "locator": "Notes #1 and #2, gameplay observations",
+      "evidence": "In practice, the rules themselves are fairly straightforward."
+    },
+    {
+      "id": "src-004",
+      "title": "Twilight Imperium Fourth Edition hero image",
+      "roles": ["visual"],
+      "provenance": "official",
+      "url": "https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/image-converter/2026/09/FFG_TI07_Hero-Slider.webp",
+      "final_url": "https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/image-converter/2026/09/FFG_TI07_Hero-Slider.webp",
+      "retrieved_at": "2026-10-16T00:04:06.465Z",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "byte_length": 406166,
+      "sha256": "efd4cca8aa6a9a3a441882fe210ddd8b5caacd94336a6c347e12e5e831377185",
+      "locator": "Official Fantasy Flight Games product image asset",
+      "evidence": "Hero image for Twilight Imperium Fourth Edition product identity."
+    },
+    {
+      "id": "src-005",
+      "title": "Twilight Imperium Fourth Edition product image",
+      "roles": ["visual"],
+      "provenance": "official",
+      "url": "https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/image-converter/2026/08/FFG_TI07_Product-Image-1.webp",
+      "final_url": "https://cdn.svc.asmodee.net/production-fantasyflightgames/uploads/image-converter/2026/08/FFG_TI07_Product-Image-1.webp",
+      "retrieved_at": "2026-10-16T00:04:06.659Z",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "byte_length": 201264,
+      "sha256": "e7efb9748814ccd8ace2c2892a81f78b94928cebc8312d540ccf3f80489f1b9c",
+      "locator": "Official Fantasy Flight Games product image asset",
+      "evidence": "Product image showing the Twilight Imperium Fourth Edition box and components."
+    }
+  ]
+}
