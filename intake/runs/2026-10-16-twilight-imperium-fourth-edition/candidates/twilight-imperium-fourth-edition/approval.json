@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-10-16T03:02:13.889Z",
+  "packet_sha256": "cc02d6aed2a65eee8e8ec992b87d73d67613841af7daa2a5f711f64c5107ff3a",
+  "reviewed_source_ids": ["src-001", "src-002", "src-003", "src-004", "src-005"],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Reopened the official product page, exact Learn to Play PDF, and independent SPACE-BIFF! review. Static PDF and source-image receipts replayed byte-for-byte; the review HTML changed wrapper bytes but retained identity, cited excerpts, and load-bearing semantics. Reduced visuals and contact sheet are meaningful, hashed, and non-substitutive. Coverage remains honestly bounded to the retrieved governing document and null rating/component denominators."
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-10-16-twilight-imperium-fourth-edition",
+  "created_at": "2026-10-16T00:06:00.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "diplomatic area-control with negotiation, drafting, and modular setup"
+  },
+  "candidates": [
+    {
+      "slug": "twilight-imperium-fourth-edition",
+      "title": "Twilight Imperium Fourth Edition",
+      "bgg_id": 233078,
+      "cohort": "rotating_focus",
+      "focus_fit": "This released tabletop game combines area movement, negotiation, drafting, modular setup, variable player powers, and a long-form political conflict arc.",
+      "status": "promoted",
+      "discovery_sources": [
+        "https://boardgamegeek.com/boardgame/233078/twilight-imperium-fourth-edition",
+        "https://www.fantasyflightgames.com/product/twilight-imperium-fourth-edition/"
+      ],
+      "blockers": [],
+      "coverage": {
+        "deckbuilder": false,
+        "methodology": "Counts one retrieved official Learn to Play document as the governing-rules document and counts only source-backed factual or visual entries; exhaustive component, card, and rating denominators are not claimed.",
+        "rules": {
+          "recorded": 1,
+          "known_total": 1,
+          "percent": 100
+        },
+        "factual": {
+          "recorded": 12,
+          "known_total": null,
+          "percent": null
+        }
+      },
+      "promoted_at": "2026-10-16T03:03:06.413Z"
+    }
+  ]
+}
