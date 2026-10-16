@@ -367,3 +367,8 @@ deterministic tier's.
 | 2026-10-15T09:04:46Z | validate-okf | full corpus + index/sidecar freshness | 2834 files | 0 | yes | - |
 | 2026-10-15T09:05:15Z | validate-okf | full corpus + index/sidecar freshness | 2834 files | 0 | yes | - |
 | 2026-10-16T00:06:28Z | validate-okf | full corpus + index/sidecar freshness | 2834 files | 0 | yes | - |
+| 2026-10-16T03:03:06Z | generate-index | games/**/*.okf.md frontmatter | 96 table row | 0 | yes | wrote KnowledgeBase/BoardGames/INDEX.okf.md |
+| 2026-10-16T03:03:06Z | validate-okf | full corpus + index/sidecar freshness | 2846 files | 0 | yes | - |
+| 2026-10-16T03:03:07Z | generate-index | games/**/*.okf.md frontmatter | 96 table row | 0 | yes | wrote KnowledgeBase/BoardGames/INDEX.okf.md |
+| 2026-10-16T03:03:08Z | validate-okf | full corpus + index/sidecar freshness | 2846 files | 0 | yes | - |
+| 2026-10-16T03:03:42Z | validate-okf | full corpus + index/sidecar freshness | 2846 files | 0 | yes | - |
