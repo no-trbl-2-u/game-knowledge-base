@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-10-17T09:01:48.000Z",
+  "packet_sha256": "cb8b099f099fa4074247a8f3ab4fbecdc981cb95d71107f2adf302fb831bd626",
+  "reviewed_source_ids": ["src-001", "src-002", "src-003", "src-004", "src-005", "src-006", "src-007", "src-008"],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Exact-head audit passed after the prior provenance repair. FryxGames rules and four static visual receipts replayed byte-for-byte; dynamic review wrapper drift retained source identity and cited semantics. BGG identity was removed where no lawful receipt existed, setup/teardown was removed, and remaining claims have document-local witnesses."
+}
