@@ -4,14 +4,14 @@ type: reception
 game:
   title: "Terraforming Mars"
   slug: "terraforming-mars"
-  bgg_id: 167791
+  bgg_id: null
   publisher: "FryxGames"
   year: 2016
   weight: null
   edition: "English base game, 2016 release"
 scope: "base game"
 mechanics: [deck-building, hand-management, tile-placement, tableau-building, resource-management, set-collection, engine-building, area-majority-influence, drafting, end-game-bonuses, solo-solitaire-game]
-better_if_labels: [strategic-depth, downtime, onboarding, setup-teardown]
+better_if_labels: [strategic-depth, downtime, onboarding]
 sources:
   - id: "src-003"
     title: "Two Minds about Terraforming Mars — SPACE-BIFF!"
@@ -59,7 +59,6 @@ Independent reception presents Terraforming Mars as a strong engine-building and
 - onboarding: make the first generation teach the card economy and global tracks in a more staged order.
 - downtime: offer a planning aid for tableau-heavy turns at larger counts.
 - strategic-depth: preserve card variety while making strategic signals easier to read.
-- setup-teardown: reduce the burden created by the many cards, tiles, cubes, and boards.
 
 ## Open questions
 

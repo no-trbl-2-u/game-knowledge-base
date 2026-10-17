@@ -4,14 +4,14 @@ type: better_if
 game:
   title: "Terraforming Mars"
   slug: "terraforming-mars"
-  bgg_id: 167791
+  bgg_id: null
   publisher: "FryxGames"
   year: 2016
   weight: null
   edition: "English base game, 2016 release"
 scope: "base game"
 mechanics: [deck-building, hand-management, tile-placement, tableau-building, resource-management, set-collection, engine-building, area-majority-influence, drafting, end-game-bonuses, solo-solitaire-game]
-better_if_labels: [strategic-depth, downtime, onboarding, setup-teardown]
+better_if_labels: [strategic-depth, downtime, onboarding]
 sources:
   - id: "src-003"
     title: "Two Minds about Terraforming Mars — SPACE-BIFF!"
@@ -47,10 +47,6 @@ The improvement opportunities below are interpretations of independent reception
   Evidence: The independent review explicitly reports that a full five-player game can drag and advises players to plan turns in advance.
   Confidence: high
 
-- Claim: Terraforming Mars would be better if setup and teardown made the board, cards, tiles, cubes, and player areas easier to organize.
-  Source: src-003, src-004
-  Evidence: The reviewed game presents a dense tableau-and-map system, while the review page records the 1–5 player range; this is an operational interpretation, not a measured setup-time claim.
-  Confidence: medium
 
 ## Open questions
 

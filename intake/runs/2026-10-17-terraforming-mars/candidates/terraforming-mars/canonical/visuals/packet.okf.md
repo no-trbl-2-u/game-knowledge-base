@@ -4,7 +4,7 @@ type: visual_reference
 game:
   title: "Terraforming Mars"
   slug: "terraforming-mars"
-  bgg_id: 167791
+  bgg_id: null
   publisher: "FryxGames"
   year: 2016
   weight: null

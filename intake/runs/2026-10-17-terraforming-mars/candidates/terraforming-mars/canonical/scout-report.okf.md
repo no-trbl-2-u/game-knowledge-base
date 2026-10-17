@@ -4,7 +4,7 @@ type: scout_report
 game:
   title: "Terraforming Mars"
   slug: "terraforming-mars"
-  bgg_id: 167791
+  bgg_id: null
   publisher: "FryxGames"
   year: 2016
   weight: null
@@ -117,7 +117,6 @@ SPACE-BIFF! treats the project cards as the source of much of the game's variety
 
 1. onboarding — teach global parameters, card retention, and the two-action turn in separate passes.
 2. downtime — provide a planning aid for tableau-heavy turns and larger player counts.
-3. setup-teardown — make the many card, cube, tile, and board elements easier to stage and reset.
 
 ## Open questions
 
