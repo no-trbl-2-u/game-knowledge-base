@@ -13,12 +13,26 @@ scope: "base game"
 mechanics: [action-selection, area-majority-influence, area-movement, campaign-game, card-play-conflict-resolution, dice-rolling, hand-management, hidden-information, variable-setup]
 sources:
   - id: "src-001"
-    title: "War of the Ring – Second Edition (English Rulebook) — Ares Games on Issuu"
+    title: "War of the Ring – Second Edition (English Rulebook) publication metadata — Ares Games on Issuu"
     url: "https://issuu.com/aresgames/docs/wotr001-rulebook_en_web"
-    kind: rulebook_pdf
+    kind: other
     provenance: official
     retrieved_at: "2026-10-18"
-    notes: "Official victory and endgame rules."
+    notes: "Official Ares Games Srl account; HTML publication metadata only. Rule claims use exact static page-image receipts."
+  - id: "src-011"
+    title: "Ares Games official War of the Ring rulebook, Issuu page 18"
+    url: "https://image.isu.pub/170411105545-d094bcb1c330429db2745895b8c172a6/jpg/page_18.jpg?width=1600"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-10-18"
+    notes: "Static official page image; exact byte receipt in evidence.json; turn-sequence witness."
+  - id: "src-018"
+    title: "Ares Games official War of the Ring rulebook, Issuu page 44"
+    url: "https://image.isu.pub/170411105545-d094bcb1c330429db2745895b8c172a6/jpg/page_44.jpg?width=1600"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-10-18"
+    notes: "Static official page image; exact byte receipt in evidence.json; victory-condition witness."
   - id: "src-003"
     title: "War of the Ring Second Edition Review — Gaming Respawn"
     url: "https://gamingrespawn.com/board-game-reviews/22702/war-ring-second-edition-review/"
@@ -37,11 +51,11 @@ The game ends when a faction satisfies a military victory route or when the Ring
 ## Source-backed facts
 
 - Claim: The Free Peoples win by destroying the Ring or reaching four military victory points, while the Shadow wins by corrupting the Ring or reaching ten military victory points.
-  Source: src-001, src-003
-  Evidence: The official victory rules and Gaming Respawn review state these faction-specific Ring and military thresholds.
+  Source: src-018, src-003
+  Evidence: The official victory page image and Gaming Respawn review state these faction-specific Ring and military thresholds.
   Confidence: high
 
 - Claim: Victory is checked at the end of the round rather than only after a fixed number of rounds.
-  Source: src-001
-  Evidence: The official turn sequence places a victory check after action resolution.
+  Source: src-011
+  Evidence: The official turn page image places a victory check after action resolution.
   Confidence: high

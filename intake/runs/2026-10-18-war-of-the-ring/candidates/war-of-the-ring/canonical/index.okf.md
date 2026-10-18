@@ -13,12 +13,12 @@ scope: "base game"
 mechanics: [action-selection, area-majority-influence, area-movement, campaign-game, card-play-conflict-resolution, dice-rolling, hand-management, hidden-information, variable-setup]
 sources:
   - id: "src-001"
-    title: "War of the Ring – Second Edition (English Rulebook) — Ares Games on Issuu"
+    title: "War of the Ring – Second Edition (English Rulebook) publication metadata — Ares Games on Issuu"
     url: "https://issuu.com/aresgames/docs/wotr001-rulebook_en_web"
-    kind: rulebook_pdf
+    kind: other
     provenance: official
     retrieved_at: "2026-10-18"
-    notes: "Official Ares Games Srl account; Issuu publication identifies a 48-page English Second Edition rulebook."
+    notes: "Official Ares Games Srl account; Issuu HTML metadata identifies the 48-page English Second Edition publication. Rule claims use exact static page-image receipts."
   - id: "src-002"
     title: "War of the Ring Board Game Review — Meeple Mountain"
     url: "https://www.meeplemountain.com/reviews/war-of-the-ring-2nd-edition/"
@@ -52,7 +52,7 @@ War of the Ring: Second Edition is a 2012 Ares Games physical tabletop game for 
 
 - Claim: The packet scope is the English Second Edition identified by the official Ares Games rulebook publication.
   Source: src-001
-  Evidence: The official Ares Games publisher account exposes “War of the Ring – Second Edition (English Rulebook)” as a 48-page publication.
+  Evidence: The official Ares Games publisher account exposes “War of the Ring – Second Edition (English Rulebook)” as a 48-page publication; the static page-image receipt set supplies the rules witness.
   Confidence: high
 
 - Claim: The game is primarily an asymmetric two-sided contest, with team rules for four players.
