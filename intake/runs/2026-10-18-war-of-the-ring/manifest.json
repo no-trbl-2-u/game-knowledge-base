@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-10-18-war-of-the-ring",
+  "created_at": "2026-10-18T00:04:33.487Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "asymmetrical area control and hidden movement"
+  },
+  "candidates": [
+    {
+      "slug": "war-of-the-ring",
+      "title": "War of the Ring: Second Edition",
+      "bgg_id": 115746,
+      "cohort": "rotating_focus",
+      "focus_fit": "This released physical tabletop game combines asymmetrical area movement, hidden fellowship movement, dice-driven action selection, and card-based conflict resolution.",
+      "status": "promoted",
+      "discovery_sources": [
+        "https://boardgamegeek.com/boardgame/115746/war-of-the-ring-second-edition",
+        "https://boardgamegeek.com/boardgame/115746/war-of-the-ring-second-edition",
+        "https://issuu.com/aresgames/docs/wotr001-rulebook_en_web"
+      ],
+      "blockers": [],
+      "coverage": {
+        "deckbuilder": false,
+        "methodology": "Counts one retrieved official governing rulebook publication as the governing-rules document and counts only source-backed factual and visual entries; exhaustive component, card, and rating denominators are not claimed.",
+        "rules": {
+          "recorded": 1,
+          "known_total": 1,
+          "percent": 100
+        },
+        "factual": {
+          "recorded": 18,
+          "known_total": null,
+          "percent": null
+        }
+      },
+      "promoted_at": "2026-10-18T09:02:51.730Z"
+    }
+  ]
+}

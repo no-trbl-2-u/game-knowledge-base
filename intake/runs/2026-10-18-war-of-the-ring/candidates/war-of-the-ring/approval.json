@@ -1,0 +1,25 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-10-18T09:01:53.000Z",
+  "packet_sha256": "80d0c97b8a2820e474b32e0a79768ba8a12a09deb52ecb2ce5876ae9f94f9a8b",
+  "reviewed_source_ids": [
+    "src-001", "src-002", "src-003", "src-004", "src-005", "src-006", "src-007", "src-008",
+    "src-009", "src-010", "src-011", "src-012", "src-013", "src-014", "src-015", "src-016", "src-017", "src-018"
+  ],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Reopened exact official Issuu page-image witnesses and independent reviews; static receipt hashes matched, dynamic review identity and cited semantics remained usable, visual hashes matched, and coverage remains honestly bounded with no rating or component denominator claimed."
+}
