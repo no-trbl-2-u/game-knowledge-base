@@ -22,7 +22,7 @@
       "bgg_id": 187645,
       "cohort": "rotating_focus",
       "focus_fit": "This released physical tabletop game combines asymmetric faction powers, hidden Rebel-base information, point-to-point movement, leader action selection, and card-driven combat.",
-      "status": "approved",
+      "status": "promoted",
       "discovery_sources": [
         "https://boardgamegeek.com/boardgame/187645/star-wars-rebellion",
         "https://www.fantasyflightgames.com/product/star-wars-rebellion/",
@@ -42,7 +42,8 @@
           "known_total": null,
           "percent": null
         }
-      }
+      },
+      "promoted_at": "2026-10-19T03:03:37.950Z"
     }
   ]
 }
