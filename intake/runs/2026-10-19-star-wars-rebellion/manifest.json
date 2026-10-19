@@ -1,0 +1,48 @@
+{
+  "schema_version": 3,
+  "run_id": "2026-10-19-star-wars-rebellion",
+  "created_at": "2026-10-19T00:00:51.000Z",
+  "scout": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "target": {
+    "cooperative": 1,
+    "solo_rpg": 1,
+    "rotating_focus": 1,
+    "total": 3
+  },
+  "focus": {
+    "mechanic": "asymmetric hidden-information conflict"
+  },
+  "candidates": [
+    {
+      "slug": "star-wars-rebellion",
+      "title": "Star Wars: Rebellion",
+      "bgg_id": 187645,
+      "cohort": "rotating_focus",
+      "focus_fit": "This released physical tabletop game combines asymmetric faction powers, hidden Rebel-base information, point-to-point movement, leader action selection, and card-driven combat.",
+      "status": "ready_for_audit",
+      "discovery_sources": [
+        "https://boardgamegeek.com/boardgame/187645/star-wars-rebellion",
+        "https://www.fantasyflightgames.com/product/star-wars-rebellion/",
+        "https://arstechnica.com/gaming/2016/03/star-wars-rebellion-review-a-fully-operational-4-hour-board-game/"
+      ],
+      "blockers": [],
+      "coverage": {
+        "deckbuilder": false,
+        "methodology": "Counts the two retrieved official governing documents as the bounded rules inventory and counts only source-backed factual and visual entries; no exhaustive component or card denominator is claimed.",
+        "rules": {
+          "recorded": 2,
+          "known_total": 2,
+          "percent": 100
+        },
+        "factual": {
+          "recorded": 18,
+          "known_total": null,
+          "percent": null
+        }
+      }
+    }
+  ]
+}
