@@ -21,7 +21,7 @@
       "title": "Gloomhaven: Jaws of the Lion",
       "bgg_id": null,
       "cohort": "cooperative",
-      "status": "approved",
+      "status": "promoted",
       "discovery_sources": [
         "https://boardgamegeek.com/boardgame/291457/gloomhaven-jaws-of-the-lion",
         "https://cephalofair.com/products/gloomhaven-jaws-of-the-lion"
@@ -40,7 +40,8 @@
           "known_total": null,
           "percent": null
         }
-      }
+      },
+      "promoted_at": "2026-10-19T09:05:59.808Z"
     }
   ]
 }
