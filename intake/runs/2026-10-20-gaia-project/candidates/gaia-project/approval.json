@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-10-20T03:02:43.580Z",
+  "packet_sha256": "dd765fea8f9dadfe9461bc190ab4ccc1f4922cfa779710427f0f73a75778393b",
+  "reviewed_source_ids": [
+    "src-001",
+    "src-002",
+    "src-003",
+    "src-004",
+    "src-005",
+    "src-006",
+    "src-007"
+  ],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Exact-head audit reopened the Feuerland product page, static German first-edition rulebook, two independent reviews, and three official visual assets. Fresh PDF and image hashes match the receipts; H@LL9000 HTML hash drift is wrapper/source-page drift with identity and cited semantic witnesses preserved. The contact sheet and reduced derivatives are distinct, meaningful, and non-substitutive. Coverage remains honestly bounded with unknown denominators left null."
+}
