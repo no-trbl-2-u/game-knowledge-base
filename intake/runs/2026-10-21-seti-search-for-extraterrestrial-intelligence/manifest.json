@@ -22,7 +22,7 @@
       "bgg_id": 418059,
       "cohort": "rotating_focus",
       "focus_fit": "This released physical tabletop game combines a randomized solar-system setup, rotating discs, card-driven action efficiency, resource conversion, and a solo rival institution.",
-      "status": "approved",
+      "status": "promoted",
       "discovery_sources": [
         "https://boardgamegeek.com/boardgame/418059/seti-search-for-extraterrestrial-intelligence",
         "https://www.czechgames.com/games/seti-search-for-extraterrestrial-intelligence",
@@ -43,7 +43,8 @@
           "known_total": null,
           "percent": null
         }
-      }
+      },
+      "promoted_at": "2026-10-21T09:03:43.513Z"
     }
   ]
 }
