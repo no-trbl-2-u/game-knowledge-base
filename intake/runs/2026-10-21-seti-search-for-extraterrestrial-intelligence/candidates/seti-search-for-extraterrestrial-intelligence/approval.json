@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-10-21T09:02:49.000Z",
+  "packet_sha256": "4055c43930519b3d5a96edb644f6e77fe99593707b19c6e64b6680cf0c95733e",
+  "reviewed_source_ids": ["src-001", "src-002", "src-003", "src-004", "src-005", "src-006", "src-007"],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Exact-head audit passed. The official first-edition rulebook and three visual assets replayed with matching static hashes; dynamic review wrappers changed bytes but retained identity, final URLs, cited reception markers, and edition scope. Claims remain bounded and unknown denominators are honest."
+}
