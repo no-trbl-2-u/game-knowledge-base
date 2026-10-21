@@ -13,6 +13,13 @@ scope: "base game"
 mechanics: [action-selection, area-movement, card-play-conflict-resolution, hand-management, income, modular-board, resource-management, solo-solitaire-game, tech-trees-tech-tracks, variable-setup]
 better_if_labels: [onboarding, strategic-depth, downtime, randomness, accessibility]
 sources:
+  - id: "src-002"
+    title: "SETI English rulebook — Czech Games Edition"
+    url: "https://filemanager.czechgames.com/storage/files/seti-search-for-extraterrestrial-intelligence/rules/seti-rules-en.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-10-21"
+    notes: "Official governing rules for card modes and recurring income."
   - id: "src-003"
     title: "SETI review — What Board Game"
     url: "https://www.whatboardgame.com/post/seti-search-for-extraterrestrial-intelligence-board-game-review"
