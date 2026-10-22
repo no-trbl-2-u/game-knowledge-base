@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "decision": "approved",
+  "auditor": {
+    "name": "The Mennonite",
+    "role": "Requirements and Risk Examiner"
+  },
+  "reviewed_at": "2026-10-22T03:02:48Z",
+  "packet_sha256": "8869e7756fb435283766018ebe17141b861ba7e3f2c3d32628aefbf25c448b17",
+  "reviewed_source_ids": ["src-001", "src-002", "src-003"],
+  "checks": {
+    "official_rules_inspected": true,
+    "independent_review_inspected": true,
+    "claims_supported": true,
+    "source_roles_distinct": true,
+    "rating_evidence_checked": true,
+    "visuals_meaningful": true,
+    "no_placeholders": true,
+    "no_generated_semantic_content": true
+  },
+  "notes": "Exact-head audit passed. The official 2nd Edition Deluxe rulebook and independent reception source were reopened; static PDF/image receipts replayed byte-identically, while dynamic HTML wrapper drift retained identity and cited semantics. Coverage remains intentionally bounded and unknown denominators remain null; BGG rating and weight are not claimed. Visual derivatives are meaningful, reduced, source-linked, and hash-valid."
+}
