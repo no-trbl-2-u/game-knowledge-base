@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "slug": "twilight-struggle",
+  "researcher": {
+    "name": "Bathcat",
+    "role": "Field Intelligence and Knowledge Scout"
+  },
+  "researched_at": "2026-10-22T00:04:56.045Z",
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Twilight Struggle Deluxe rulebook — GMT Games",
+      "roles": ["official_rules", "visual"],
+      "provenance": "official",
+      "url": "https://www.gmtgames.com/living_rules/TS_Rules_Deluxe.pdf",
+      "final_url": "https://www.gmtgames.com/living_rules/TS_Rules_Deluxe.pdf",
+      "retrieved_at": "2026-10-22T00:04:56.045Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "byte_length": 1656414,
+      "sha256": "cecc32db372d4c8e1822114f4f7a651e5c18e89048abfd2b7005fe8dd8e93a0d",
+      "locator": "PDF pp. 1–4, 8–10, 16–18, 23–24, 28–30: components, game sequence, action rounds, scoring, final scoring, variants; page 2 rendered for visual reference",
+      "evidence": "The object of the game is to score Victory Points (VPs)."
+    },
+    {
+      "id": "src-002",
+      "title": "Twilight Struggle Collector’s Edition — The Opinionated Gamers",
+      "roles": ["identity", "independent_review"],
+      "provenance": "secondary",
+      "url": "https://opinionatedgamers.com/2017/04/26/twilight-struggle-collectors-edition-photos-and-game-history-by-chris-wray/",
+      "final_url": "https://opinionatedgamers.com/2017/04/26/twilight-struggle-collectors-edition-photos-and-game-history-by-chris-wray/",
+      "retrieved_at": "2026-10-22T00:04:23.141Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "byte_length": 183996,
+      "sha256": "cecbe91f11326ffc9ca94be12747a410eb04fc5fbd708379a118687fd19c781c",
+      "locator": "Article dated April 26, 2017; opening description and game-history section",
+      "evidence": "When the game was released in 2005, it received immediate critical acclaim."
+    },
+    {
+      "id": "src-003",
+      "title": "Twilight Struggle box photograph — The Opinionated Gamers",
+      "roles": ["visual"],
+      "provenance": "secondary",
+      "url": "https://i0.wp.com/opinionatedgamers.com/wp-content/uploads/2017/04/box.jpeg?resize=506%2C350&ssl=1",
+      "final_url": "https://i0.wp.com/opinionatedgamers.com/wp-content/uploads/2017/04/box.jpeg?resize=506%2C350&ssl=1",
+      "retrieved_at": "2026-10-22T00:04:23.377Z",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "byte_length": 28582,
+      "sha256": "1ed7f5dff86b9745fc49a195a94bb051c66e86066091537b0581bb1520f4349f",
+      "locator": "Article image alt text “Box”; reduced local derivative used for private visual analysis",
+      "evidence": "Twilight Struggle Collector’s Edition box photograph"
+    }
+  ]
+}
