@@ -90,6 +90,13 @@ sources:
     provenance: community
     retrieved_at: "2026-07-31"
     notes: "Identity lead only; no weight or rating retained because no fresh auditable snapshot was acquired."
+  - id: "src-012"
+    title: "Asmodee shop — Nemesis Lockdown retail listing (archived)"
+    url: "https://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01"
+    kind: other
+    provenance: official
+    retrieved_at: "2026-11-04"
+    notes: "Retried 2026-11-04 (librarian): the previously-confirmed Wayback capture is now retrievable (HTTP 200, 64,916 bytes; the 2026-09-04 attempt hit web.archive.org HTTP 429 rate-limiting). Confirms Item No. NEMLD01 and lists price $190.00 under the Z-Man Games (US distributor) storefront branding. No SKU, UPC, EAN, or barcode field appears anywhere in the page body or markup; this is the complete retail-listing content, not a truncated fetch."
 confidence: medium
 status: needs_followup
 ---

@@ -109,12 +109,12 @@ followups:
     fallback: "The current folder is fully enumerated at six articles; only the Status-marker article supplies target-core correction law."
     retry_needs: wayback_snapshot
     notes: "Current accessible inventory is closed. Need historical FAQ/support history beyond the complete current folder; wrapper hash drift is not semantic drift."
-  - source_id: null
+  - source_id: "src-012"
     url: "https://shop.asmodee.com/nemesis-lockdown-nemld01"
-    failure: blocked
-    fallback: "Search result exposed Item No. NEMLD01; no body claim relies on the blocked page."
-    retry_needs: wayback_snapshot
-    notes: "Need official retail SKU/UPC/publication receipt and first-print markers. Retried 2026-09-04 (librarian): live shop.asmodee.com still HTTP 403, and browser escalation is not the blocker, so browser_fetch is the wrong route. Switched retry_needs to wayback_snapshot because the Wayback availability API CONFIRMS a capture exists — http://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01 (status 200, timestamp 20230529174739). Retrieval was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. Environmental throttle, not a missing document. Next pass should fetch that exact capture URL and read the SKU/EAN block."
+    failure: not_found
+    fallback: "Archived listing confirms Item No. NEMLD01 and price $190.00; no body claim relies on the blocked live page."
+    retry_needs: alternate_source
+    notes: "Need official retail SKU/UPC/publication receipt and first-print markers. Retried 2026-11-04 (librarian): the Wayback capture named in the 2026-09-04 note was successfully fetched this pass (HTTP 200, 64,916 bytes; the prior HTTP 429 rate-limit has cleared). It confirms Item No. NEMLD01 and lists price $190.00 under Z-Man Games storefront branding, but contains no SKU, UPC, EAN, or barcode field anywhere in its markup — this is the complete page content, not a truncated fetch. wayback_snapshot is therefore exhausted for this exact URL; closing the SKU/UPC/first-print-marker denominator needs a different document (e.g. a retailer barcode/listing page, box-back scan, or distributor catalog entry), so retry_needs moves to alternate_source."
   - source_id: null
     url: "lawful immutable English 2022 first-retail component/card/face document corpus"
     failure: not_found

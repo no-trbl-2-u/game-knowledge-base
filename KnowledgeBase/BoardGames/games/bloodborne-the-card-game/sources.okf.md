@@ -68,6 +68,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-31"
     notes: "Subordinate inspection mirror only; HTTP 200; 1,947,755 bytes; 16 pages; SHA-256 64f9096fcd45bded2576fc3aaa275e460c24e125b0eddc42f60977b86cfdcf88; rewritten 2019 metadata. Not primary rule authority."
+  - id: "src-009"
+    title: "CMON — Bloodborne: The Card Game Rulebook (2025 web reupload)"
+    url: "https://www.cmon.com/wp-content/uploads/2025/03/Bloodborne_rulebook_web.pdf"
+    kind: rulebook_pdf
+    provenance: official
+    retrieved_at: "2026-11-04"
+    notes: "Retrieved 2026-11-04 (librarian), the named next retrieval target from the 2026-09-04 pass. HTTP 200; application/pdf; 82,846,744 bytes; 16 pages; SHA-256 c03978b1bbbe6793e0f082bfc2320e6ba397303d631d9597287c088fe2a8d3ed; PDF metadata created/modified 2025-03-22, producer Adobe PDF Library 17.0, no version string. Full text extraction is word-for-word identical to src-002 (2016 original) apart from PDF-reflow whitespace/word-split artifacts; no errata or rules-change marker is present. This is a recompressed reupload of the unchanged 2016 rulebook, not a new edition."
 confidence: high
 status: needs_followup
 ---
@@ -95,7 +102,7 @@ The repaired rulebook, dynamic page, review, and current visual receipts were ob
 |---|---|---|---|
 | English 2016 standalone rulebook | CLOSED / acquired from official CMON S3 as src-002 | Official 2016 base-game authority; exact receipt reproduced | Governs the general rules summarized across the seven rule records |
 | Current CMON product/support page | Dynamic receipt acquired from src-001 | Official current publisher surface; presently lists `Rulebook 79.01 MB` | Supports identity, manifest, and the current link observation; does not close publisher-wide support inventory |
-| Official FAQ/errata/clarification/support inventory | OPEN / UNKNOWN | Would govern corrections or card clarifications if such material exists | No exhaustive publisher-wide inventory or authoritative evidence of absence was acquired |
+| Official FAQ/errata/clarification/support inventory | OPEN / UNKNOWN | Would govern corrections or card clarifications if such material exists | No exhaustive publisher-wide inventory or authoritative evidence of absence was acquired; the 2025 rulebook reupload (src-009) was checked and carries no embedded errata/version marker |
 | Five Hunter Boards / player aids | CLOSED for printed general surfaces | Rule-bearing: round sequence, three Trophy/scoring tracks, and collected/banked Blood Echo zones and bonuses | Official rulebook pp. 4, 9, 12, and 14–15 sufficiently governs these printed surfaces; card-local interactions remain in their card classes |
 | Three custom Monster dice | CLOSED for resolving faces | Rule-bearing resolving components: damage values and combo faces | Official rulebook p. 10 sufficiently governs damage and repeated combo resolution |
 | Five Hunter Health Dials, Blood Echo tokens, Trophy tokens, First Player token | CLOSED as state/value markers | Track health, values, trophies, and turn priority; no independent resolving text was identified | Official rulebook sufficiently governs their state/value-marker functions |

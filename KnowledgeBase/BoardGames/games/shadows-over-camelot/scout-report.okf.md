@@ -49,12 +49,6 @@ followups:
     retry_needs: wayback_snapshot
     notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference. Retried 2026-09-04 (librarian): CDN still HTTP 403, and the Wayback availability API returned an empty `archived_snapshots` object for this exact asset URL, independently confirming the earlier empty CDX result. No archive capture of this PDF exists, so retry_needs `wayback_snapshot` is not satisfiable for this URL; a future pass must find an alternate immutable copy of the 2005 Rules booklet instead."
   - source_id: null
-    url: "https://www.daysofwonder.com/shadowsovercamelot/en/content/faq"
-    failure: blocked
-    fallback: "Official FAQ 1.0 PDF acquired directly from Asmodee CDN."
-    retry_needs: wayback_snapshot
-    notes: "Direct/browser Access Denied; text-proxy retrieval aid reports current 404. Need complete historical official web FAQ/support inventory and explicit version bridge. Retried 2026-09-04 (librarian): live URL still HTTP 403, but the Wayback availability API CONFIRMS a usable capture exists — http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/ (status 200, timestamp 20150403062225). Retrieval of that capture was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. This is an environmental throttle, not a missing document. Next pass should fetch that exact capture URL directly; retry_needs `wayback_snapshot` is correct and now has a concrete target."
-  - source_id: null
     url: "lawful immutable English 2005 first-retail component inventory document"
     failure: not_found
     fallback: "Later 2015 inventory is retained only as a provisional lead; 2005 review supplies secondary observations."
@@ -99,6 +93,13 @@ status: needs_followup
 - Claim: Complete quantity/identity/text/mapping/face/side/surface denominators remain **UNKNOWN** for the first-print Rules/aids; every card identity and duplicate allocation; seven coat/figure/power mappings as physically printed; every main/Quest board face; sword faces; D8 face map; relic/miniature printing; and release support corpus.
   Source: src-001, src-002, src-003, src-004
   Evidence: Acquired 2005 texts explain classes and many identities but do not establish a licensed exhaustive physical face manifest; the only complete inventory spread acquired is later.
+  Confidence: high
+
+## Resolved followups
+
+- Claim: The historical official Days of Wonder FAQ/support portal followup is resolved: a 2015-04-03 Wayback snapshot shows the portal exposed only the already-acquired FAQ PDF plus four other known assets, with no separate web FAQ content and no additional support inventory.
+  Source: src-002
+  Evidence: Wayback capture of the FAQ portal (2015-04-03) lists five downloads total; the linked FAQ PDF is byte-identical to src-002 (SHA-256 2f4ab8d1756e5743dd7cf12802bebb371dcf08141b448d9867adce5ca7a90709).
   Confidence: high
 
 ## Exact residual help

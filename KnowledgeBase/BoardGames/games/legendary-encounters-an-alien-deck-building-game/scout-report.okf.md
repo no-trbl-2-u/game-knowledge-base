@@ -23,7 +23,7 @@ followups:
     failure: not_found
     fallback: "BGG official file listing and secondary summaries."
     retry_needs: alternate_source
-    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF."
+    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF. Retried 2026-11-04 (librarian): upperdeck.com and upperdeckstore.com are both reachable now (HTTP 200), unlike the Cloudflare-blocked BGG filepage above. Searched upperdeck.com (site search and /rules/ hub) and upperdeckstore.com's Legendary product listing for a base-game rulebook PDF; found only card-preview blog posts and the storefront listing, no rulebook asset at either domain. Also re-checked boardgamegeek.com/filepage/104744 and the XML API directly: still HTTP 403/401, matching the systemic BGG block documented across this corpus. alternate_source is exhausted for upperdeck.com specifically; no new retrievable document lead is known for either followup in this entry."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Legendary Encounters: An Alien Deck Building Game"

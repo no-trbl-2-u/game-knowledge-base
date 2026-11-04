@@ -47,7 +47,7 @@ sources:
     kind: publisher_page
     provenance: official
     retrieved_at: "2026-07-31"
-    notes: "Direct/browser returned Access Denied; Jina retrieval aid reported the current target as 404. Historical FAQ inventory remains open."
+    notes: "Direct/browser returned Access Denied; Jina retrieval aid reported the current target as 404. Retried 2026-11-04 (librarian): fetched the confirmed Wayback capture http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/ (HTTP 200, 22,102 bytes). The captured portal lists exactly five downloadable assets — Rules book, Book of Quests, FAQ, Merlin's Company Rules book, and Bedivere's coat of arms, each in up to five languages — and no separate web-rendered FAQ text beyond those PDFs. The linked sc_faq_en.pdf is byte-identical to the already-acquired src-002 (SHA-256 2f4ab8d1756e5743dd7cf12802bebb371dcf08141b448d9867adce5ca7a90709). Historical FAQ/support inventory is closed at this snapshot."
   - id: "src-006"
     title: "Review of Shadows over Camelot"
     url: "https://www.rpg.net/reviews/archive/11/11335.phtml"
@@ -93,4 +93,9 @@ status: needs_followup
 - Claim: SKU lead DOW7201, UPC, first-print lot/version marker, and exact 2005 publication boundary remain unverified; 7202-P07 belongs only to the later comparison file.
   Source: src-003, src-004
   Evidence: No acquired 2005 physical/official inventory receipt exposes SKU or UPC; later footer cannot be backdated.
+  Confidence: high
+
+- Claim: The historical official FAQ/support portal inventory is closed: a 2015-04-03 Wayback snapshot of the retired Days of Wonder FAQ page exposed only five downloadable assets (Rules book, Book of Quests, FAQ, Merlin's Company Rules book, Bedivere's coat of arms), each in up to five languages, with no separate web-rendered FAQ content; the linked FAQ PDF is byte-identical to the already-acquired src-002.
+  Source: src-002, src-005
+  Evidence: Wayback capture at http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/ lists exactly these five downloads; the linked sc_faq_en.pdf matches SHA-256 2f4ab8d1756e5743dd7cf12802bebb371dcf08141b448d9867adce5ca7a90709.
   Confidence: high
