@@ -30,6 +30,10 @@ base remains narrow, so conclusions here should be treated as directional, not d
 - slay-the-spire-the-board-game (src-008): coopgestalt found the transition after
   finishing Act III "very unclear" without prior video-game familiarity — an
   endgame/reset-procedure complaint more than a scoring-ceremony one, confidence: medium
+- star-wars-rebellion (src-005): the Rebel reputation-victory finish lacks the visible
+  climax of the Imperial destruction finish — a marker meeting a round tracker versus
+  a dramatic Imperial defeat — so the two win conditions deliver unequal endings,
+  confidence: medium
 
 ## Where it works
 
@@ -50,12 +54,18 @@ asymmetric spirits and fear-based victory, Slay the Spire's cooperative adaptati
 - slay-the-spire-the-board-game (src-008): the "end" of a run/Act cycle is a reset and
   meta-progression event, and that transition was not self-explanatory for a player
   without outside (video-game) context.
+- star-wars-rebellion (src-005): one of two asymmetric victory conditions (Rebel
+  reputation) ends on a quiet tracker comparison rather than a dramatic table-state
+  event, an asymmetric-ending version of the "doesn't feel earned" complaint.
 
 ## Coverage gaps
 
 Evidence clusters around "closing the game requires external reference" (Ark Nova) and
-"the ending doesn't feel earned" (Spirit Island) — two related but distinct failure
-modes under one label. A heavier area-control or engine-building title with an
-explicit, reviewer-discussed final-scoring phase (tableau/board tally at game end)
-would help separate "scoring math is a chore" from "the endgame trigger itself lacks
-drama," since the current evidence mostly supports the latter.
+"the ending doesn't feel earned" (Spirit Island, Star Wars: Rebellion) — two related but
+distinct failure modes under one label. A heavier area-control or engine-building title
+with an explicit, reviewer-discussed final-scoring phase (tableau/board tally at game
+end) would help separate "scoring math is a chore" from "the endgame trigger itself
+lacks drama," since the current evidence mostly supports the latter. Star Wars:
+Rebellion also raises a distinct question worth a dedicated follow-up: do asymmetric
+victory conditions in other games (not just this one) tend to produce unequal endings
+for each side?

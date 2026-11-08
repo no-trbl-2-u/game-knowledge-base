@@ -23,6 +23,9 @@ BoardGames intake candidates and never create `intake-gap` issues.
 - [x] A verified (non-needs_followup), combat-heavy skirmish/wargame — [Unmatched: Battle of Legends, Volume One](KnowledgeBase/BoardGames/games/unmatched-battle-of-legends-volume-one/) covers asymmetric fighters, tactical movement, and card-driven combat resolution (covered 2026-09-03; pointer repointed from the intake packet to the promoted game dir 2026-09-04)
 - [x] [Gloomhaven monster ability decks](KnowledgeBase/BoardGames/games/gloomhaven/) — monster ability-card rules, shuffle-icon reshuffle rule, and reception on card-driven enemy AI (covered 2026-09-03)
 - [x] [Kingdom Death: Monster AI deck + hit-location deck](KnowledgeBase/BoardGames/games/kingdom-death-monster/) — deck-as-boss-HP structure, hit-location consequences, and showdown timing/reception coverage (covered 2026-09-05)
+- [ ] A dungeon-crawl campaign game whose reviewers specifically praise *incremental* board/room reveal (rather than full pre-layout) for preserving mystery without sacrificing setup speed — patterns/setup-teardown.okf.md and patterns/campaign-game.okf.md both cite Descent 2E's full-board setup trading mystery for speed, with no corpus counter-example yet
+- [ ] A competitive area-control or engine-building game with a well-documented, multi-source overpowered-faction *controversy* (not a single reviewer's aside) — patterns/balance-faction-asymmetry.okf.md needs a case where balance actually, verifiably breaks down, to test whether Root/Scythe's asymmetry-as-strength pattern holds under real imbalance
+- [ ] A game whose central mechanic is negotiation or trading rather than conflict, suspicion, or cooperation — patterns/player-interaction.okf.md's closest case (Twilight Imperium's strategy-card alliances) is incidental to its action-selection system rather than a dedicated trading/negotiation core
 
 ### BGG top-ranked backfill (ranks as of 2026-10-12)
 

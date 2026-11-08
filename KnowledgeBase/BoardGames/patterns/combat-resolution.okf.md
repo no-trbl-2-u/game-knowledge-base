@@ -3,24 +3,36 @@ okf_version: 0.2
 type: pattern
 mechanics: [force-commitment, dice-rolling]
 better_if_labels: [combat-resolution]
-confidence: low
+confidence: medium
 status: draft
 ---
 
 ## Summary
 
-Evidence is thin. Dune: Imperium's hidden simultaneous-commitment combat
-draws praise for tension but a matching complaint that the same hiddenness
-reads as swinginess/imbalance when a leader's combat strength outpaces
-opponents' visibility into it. Kingdom Death: Monster's dice-based combat
-resolution is only lightly sourced so far (needs_followup) but points at the
-same tension: risk/randomness that defines the game's identity is also the
-axis reviewers flag as needing clearer at-the-table communication. Both games
-suggest the same shape of problem — resolution mechanics that are core to the
-game's appeal are also the primary source of "better if" requests.
+The pattern first seen in Dune: Imperium repeats across the newly-added
+campaign and war games: whatever makes combat resolution exciting
+(hidden commitment, dominant investment paths, tedious multi-round
+procedures, bluffing) is also what reviewers name as the "better if" target.
+Three distinct failure shapes now have multiple citations: (1) one path or
+leader becoming dominant inside the resolution system (Dune: Imperium's
+Glossu Rabban, Dune: Imperium Uprising's sandworm-doubling), (2) resolution
+becoming a tracked-state burden rather than a quick decision (Gloomhaven:
+Jaws of the Lion's many simultaneous card-state areas), and (3) resolution
+becoming a long, fiddly procedure disproportionate to its decision content
+(Star Wars: Rebellion's "high-maintenance slugfest" multi-round battles).
+Unmatched is the clearest "where it works" counter-example: a mix of brute
+force and light bluffing with card-investment timing, explicitly called the
+"intelligent part" of its combat by reviewers. Kingdom Death: Monster's
+dice-based combat resolution is still only lightly sourced (needs_followup).
 
 ## Evidence by game
 
+- arydia-the-paths-we-dare-tread (src-005): foe behavior depends on Threat levels and AI cards, so threat changes should stay visible/auditable at the table, confidence: medium
+- dune-imperium-uprising (src-004): the sandworm reward-doubling mechanic can make "one investment path feel dominant," with the sandworm-investing player pulling "ahead decisively in many ... plays", confidence: medium
+- gloomhaven-jaws-of-the-lion (src-003): characters are praised as interesting, but each has many simultaneous state areas (hand/discard/lost/active/items) to track, raising cognitive burden during resolution, confidence: medium
+- scythe (src-003): combat is prominent in the game's presentation but rare during a typical session, confidence: high
+- star-wars-rebellion (src-005, src-006): late-game combat is "fiddly," with multi-round multi-theater battles becoming tedious; Geeks Under Grace calls it a "high-maintenance slugfest" where cards "rarely create interesting decisions", confidence: high
+- unmatched-battle-of-legends-volume-one (src-003): attacks are "a mix of brute force and light bluffing" with card-investment timing decisions called the intelligent part of combat, confidence: medium
 - dune-imperium (src-008): Reviewer (There Will Be Games) praised hidden combat
   inputs, saying a player is "never 100% sure how much combat power someone
   has," calling resulting decisions "hard, impactful, and constant." confidence: medium
@@ -39,6 +51,7 @@ game's appeal are also the primary source of "better if" requests.
 - dune-imperium (src-008): Hidden combat power that keeps opponents guessing
   is explicitly named as a source of the game's tension and impactful
   decision-making, not just a complaint.
+- unmatched-battle-of-legends-volume-one (src-003): the mix of brute-force commitment and light bluffing, with card-investment timing, is called the "intelligent part" of combat — resolution itself is the praised design, not just the theme around it.
 - kingdom-death-monster: No praised-design evidence tying specifically to
   combat resolution was found in the docs read (the game's praised-design
   claims center on tactical combat as a broad mechanism blend, not on the
@@ -55,6 +68,11 @@ game's appeal are also the primary source of "better if" requests.
   card counts, sword ranges, commitment reminders) so uncertainty doesn't
   read as unfairness — this is the better-if doc's own synthesis of the
   praised-uncertainty tension, confidence: medium.
+- dune-imperium-uprising (src-004): the same dominant-path shape recurs one game later — sandworm reward doubling lets one investment path pull decisively ahead, confidence: medium.
+- star-wars-rebellion (src-005, src-006): multi-round, multi-theater battles are called "fiddly" and a "high-maintenance slugfest" where cards "rarely create interesting decisions" — the clearest case of resolution procedure outweighing its decision content, confidence: high.
+- gloomhaven-jaws-of-the-lion (src-003): tracking hand/discard/lost/active/items simultaneously across interesting characters raises cognitive burden during resolution even though the characters themselves are praised, confidence: medium.
+- scythe (src-003): combat's prominence in presentation and marketing outstrips how often it actually resolves in play, a mismatch between advertised and experienced identity, confidence: high.
+- arydia-the-paths-we-dare-tread (src-005): Threat-level/AI-card-driven foe behavior needs to stay visible and auditable, or resolution outcomes read as arbitrary, confidence: medium.
 - kingdom-death-monster (src-004): Combat randomness (dice rolling, critical
   hits/failures) is flagged as needing clearer point-of-decision
   communication, though this is an inference in the source doc rather than a
@@ -62,8 +80,13 @@ game's appeal are also the primary source of "better if" requests.
 
 ## Coverage gaps
 
-Current support for this label remains narrow, and Kingdom Death: Monster's
-reception docs are still `needs_followup` with low-confidence, inference-heavy claims. A
-dedicated combat-heavy game (e.g., a wargame or skirmish title) with a
-`verified` reception doc would substantially strengthen this pattern; until
-then, conclusions here should be read as provisional.
+This label now has corroborating evidence across six games rather than two,
+and the "dominant path" failure shape (Dune: Imperium, Dune: Imperium
+Uprising) is a real cross-title recurrence worth flagging to a design
+audience. Kingdom Death: Monster's reception docs are still
+`needs_followup` with low-confidence, inference-heavy claims, so its
+contribution remains provisional. Unmatched is this pattern's only clean
+"where it works" case from a dedicated combat-identity game; a second
+skirmish/wargame title with a `verified` reception doc praising its
+resolution system specifically (not just its theme) would strengthen the
+positive side further.
