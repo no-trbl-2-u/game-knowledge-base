@@ -41,19 +41,20 @@ sources:
     provenance: official
     retrieved_at: "2026-07-31"
     notes: "HTTP 403; www host also 403; exact CDX query empty."
+  - id: "src-005"
+    title: "Days of Wonder — Shadows over Camelot Rules and FAQ download page (2015 archive capture)"
+    url: "http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-11-11"
+    notes: "Wayback capture, timestamp 20150403062225; 22,102 bytes; SHA-256 dda688d58f273027c6698303830c67302a269e54daa0055883184cffb763fadb. Enumerated complete linked PDF set: Rules book (en/fr/de/it/kr), Quests book (en/fr/de/it/kr), FAQ (en/fr/de only), Merlin's Company Rules book (en/fr/de/it), Bedivere's coat of arms (en/fr/de/it). No separate errata or FAQ-archive document is linked from this page."
 followups:
   - source_id: "src-004"
     url: "https://ncdn0.daysofwonder.com/shadowsovercamelot/en/img/sc_rules_en.pdf"
     failure: blocked
     fallback: "2005 Book of Quests and FAQ 1.0 govern acquired release law; 2015 rulebook is labeled comparison only."
     retry_needs: wayback_snapshot
-    notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference. Retried 2026-09-04 (librarian): CDN still HTTP 403, and the Wayback availability API returned an empty `archived_snapshots` object for this exact asset URL, independently confirming the earlier empty CDX result. No archive capture of this PDF exists, so retry_needs `wayback_snapshot` is not satisfiable for this URL; a future pass must find an alternate immutable copy of the 2005 Rules booklet instead."
-  - source_id: null
-    url: "https://www.daysofwonder.com/shadowsovercamelot/en/content/faq"
-    failure: blocked
-    fallback: "Official FAQ 1.0 PDF acquired directly from Asmodee CDN."
-    retry_needs: wayback_snapshot
-    notes: "Direct/browser Access Denied; text-proxy retrieval aid reports current 404. Need complete historical official web FAQ/support inventory and explicit version bridge. Retried 2026-09-04 (librarian): live URL still HTTP 403, but the Wayback availability API CONFIRMS a usable capture exists — http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/ (status 200, timestamp 20150403062225). Retrieval of that capture was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. This is an environmental throttle, not a missing document. Next pass should fetch that exact capture URL directly; retry_needs `wayback_snapshot` is correct and now has a concrete target."
+    notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference. Retried 2026-09-04 (librarian): CDN still HTTP 403, and the Wayback availability API returned an empty `archived_snapshots` object for this exact asset URL, independently confirming the earlier empty CDX result. No archive capture of this PDF exists, so retry_needs `wayback_snapshot` is not satisfiable for this URL; a future pass must find an alternate immutable copy of the 2005 Rules booklet instead. Retried 2026-11-11 (librarian): confirmed again via the sibling cdn1.daysofwonder.com host named on the now-retrieved 2015 archive support page — the exact Wayback CDX query for that host/path also returns []. No archive capture of this PDF exists on either CDN host; a future pass must find an alternate immutable copy of the 2005 Rules booklet instead."
   - source_id: null
     url: "lawful immutable English 2005 first-retail component inventory document"
     failure: not_found
@@ -101,9 +102,14 @@ status: needs_followup
   Evidence: Acquired 2005 texts explain classes and many identities but do not establish a licensed exhaustive physical face manifest; the only complete inventory spread acquired is later.
   Confidence: high
 
+- Claim: The official Days of Wonder support/download page for Shadows over Camelot is closed to exactly five document families per translation (Rules book, Quests book, FAQ, Merlin's Company Rules book, Bedivere's coat of arms), with English FAQ limited to the single FAQ 1.0 PDF already held as src-002; no separate FAQ archive or errata document is linked from that page.
+  Source: src-005
+  Evidence: 2015 archive capture of the page lists exactly these five labeled download rows with per-language file-size figures and no additional FAQ/errata entry.
+  Confidence: high
+
 ## Exact residual help
 
-- Claim: Closure requires document sources only — a lawful nonreplacement English 2005 first-retail component inventory document; immutable original Rules/Book of Quests/aids with publisher chain; complete historical official FAQ/web support inventory and version bridge; and licensed base-only card/loyalty/quest/board/die identity/text/face denominators. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; where no lawful document source exists, the denominator stays permanently `UNKNOWN` and these records stay `needs_followup` as an accepted terminal state.
+- Claim: Closure requires document sources only — a lawful nonreplacement English 2005 first-retail component inventory document; immutable original Rules/Book of Quests/aids with publisher chain; and licensed base-only card/loyalty/quest/board/die identity/text/face denominators. Physical-copy acquisition and box/SKU/lot inspection are out of scope for this corpus; where no lawful document source exists, the denominator stays permanently `UNKNOWN` and these records stay `needs_followup` as an accepted terminal state. The historical official FAQ/web support inventory question is now closed (src-005): this corpus's English FAQ holding is complete relative to the official download page.
   Source: src-001, src-002, src-003, src-004
   Evidence: These are the open authority classes above.
   Confidence: high

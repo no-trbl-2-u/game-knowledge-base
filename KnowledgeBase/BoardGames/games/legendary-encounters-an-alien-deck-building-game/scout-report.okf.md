@@ -23,7 +23,7 @@ followups:
     failure: not_found
     fallback: "BGG official file listing and secondary summaries."
     retry_needs: alternate_source
-    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF."
+    notes: "Search did not surface a stable publisher-hosted base-game rulebook PDF. Retried 2026-11-11 (librarian): web search surfaced a retailer-hosted PDF lead (fgbradleys.com/wp-content/uploads/rules/Legendary%20Encounters%20-%20rules.pdf); direct curl fetch returned HTTP 403, so it is not currently retrievable either. No publisher-hosted or retailer-hosted PDF mirror is retrievable from this environment at this time; not an absence claim."
 sources:
   - id: "src-001"
     title: "BoardGameGeek — Legendary Encounters: An Alien Deck Building Game"
