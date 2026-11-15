@@ -35,11 +35,11 @@ sources:
     notes: "Reception and campaign-group-size testimony."
   - id: "src-004"
     title: "The Thoughtful Gamer — Star Wars: Imperial Assault review"
-    url: "https://thethoughtfulgamer.com/2017/11/15/imperial-assault-review/"
+    url: "https://thethoughtfulgamer.com/2017/11/15/star-wars-imperial-assault-review/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-24"
-    notes: "Reception and role/campaign description."
+    retrieved_at: "2026-11-15"
+    notes: "Reception and role/campaign description. URL corrected this pass: the recorded slug was missing the `star-wars-` segment and 404s; the correct live URL was confirmed HTTP 200 this pass. Not link rot, a transcription error at authoring time."
 confidence: high
 status: verified
 ---

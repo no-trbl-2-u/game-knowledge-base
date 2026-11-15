@@ -42,12 +42,12 @@ sources:
     retrieved_at: "2026-07-31"
     notes: "Direct request returned HTTP 403; equivalent www host also 403; exact-url CDX query returned an empty JSON array. This is a failed lead, not proof of absence."
   - id: "src-005"
-    title: "Retired Days of Wonder FAQ portal"
-    url: "https://www.daysofwonder.com/shadowsovercamelot/en/content/faq"
+    title: "Retired Days of Wonder FAQ portal (Wayback capture)"
+    url: "http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/"
     kind: publisher_page
     provenance: official
-    retrieved_at: "2026-07-31"
-    notes: "Direct/browser returned Access Denied; Jina retrieval aid reported the current target as 404. Historical FAQ inventory remains open."
+    retrieved_at: "2026-11-15"
+    notes: "Live URL is a true 404/Cloudflare-blocked dead end (reconfirmed this pass); pointed at the confirmed 2015-04-03 Wayback capture instead (HTTP 200, 22,192 bytes). The archived page is Days of Wonder's \"Rules and FAQ\" download hub, not a separate Q&A text — it links the Rules book, Quests book, and FAQ PDF (the same FAQ already acquired as src-002) in five languages. Historical FAQ inventory is closed at this page; no separate web-text FAQ beyond the PDF is evidenced."
   - id: "src-006"
     title: "Review of Shadows over Camelot"
     url: "https://www.rpg.net/reviews/archive/11/11335.phtml"

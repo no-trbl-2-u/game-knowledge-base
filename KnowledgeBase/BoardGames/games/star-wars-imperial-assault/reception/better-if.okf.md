@@ -22,11 +22,11 @@ sources:
     notes: "Reception evidence for balance and group-size pressure."
   - id: "src-004"
     title: "The Thoughtful Gamer — Star Wars: Imperial Assault review"
-    url: "https://thethoughtfulgamer.com/2017/11/15/imperial-assault-review/"
+    url: "https://thethoughtfulgamer.com/2017/11/15/star-wars-imperial-assault-review/"
     kind: review
     provenance: secondary
-    retrieved_at: "2026-07-24"
-    notes: "Reception evidence for campaign and role structure."
+    retrieved_at: "2026-11-15"
+    notes: "Reception evidence for campaign and role structure. URL corrected this pass: the recorded slug was missing the `star-wars-` segment and 404s; the correct live URL was confirmed HTTP 200 this pass. Not link rot, a transcription error at authoring time."
 confidence: medium
 status: verified
 ---

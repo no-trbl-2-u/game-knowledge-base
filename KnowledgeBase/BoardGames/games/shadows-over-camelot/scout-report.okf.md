@@ -48,12 +48,12 @@ followups:
     fallback: "2005 Book of Quests and FAQ 1.0 govern acquired release law; 2015 rulebook is labeled comparison only."
     retry_needs: wayback_snapshot
     notes: "Direct CDN and www requests returned 403; exact Wayback CDX URL query returned []. Need immutable original Rules booklet bytes and any release player aid/card reference. Retried 2026-09-04 (librarian): CDN still HTTP 403, and the Wayback availability API returned an empty `archived_snapshots` object for this exact asset URL, independently confirming the earlier empty CDX result. No archive capture of this PDF exists, so retry_needs `wayback_snapshot` is not satisfiable for this URL; a future pass must find an alternate immutable copy of the 2005 Rules booklet instead."
-  - source_id: null
+  - source_id: "src-005"
     url: "https://www.daysofwonder.com/shadowsovercamelot/en/content/faq"
     failure: blocked
-    fallback: "Official FAQ 1.0 PDF acquired directly from Asmodee CDN."
+    fallback: "Official FAQ 1.0 PDF acquired directly from Asmodee CDN; the archived FAQ portal confirms no separate web-text FAQ exists beyond that PDF."
     retry_needs: wayback_snapshot
-    notes: "Direct/browser Access Denied; text-proxy retrieval aid reports current 404. Need complete historical official web FAQ/support inventory and explicit version bridge. Retried 2026-09-04 (librarian): live URL still HTTP 403, but the Wayback availability API CONFIRMS a usable capture exists — http://web.archive.org/web/20150403062225/http://www.daysofwonder.com/shadowsovercamelot/en/content/faq/ (status 200, timestamp 20150403062225). Retrieval of that capture was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. This is an environmental throttle, not a missing document. Next pass should fetch that exact capture URL directly; retry_needs `wayback_snapshot` is correct and now has a concrete target."
+    notes: "RESOLVED 2026-11-15 (audit): retrieved the 2015-04-03 Wayback capture (previously blocked by web.archive.org 429 rate-limiting). The archived page is Days of Wonder's \"Rules and FAQ\" download hub — it links the Rules book, Quests book, and the same FAQ PDF already acquired as src-002, in five languages; no distinct web-text FAQ is present. sources.okf.md src-005 now points at this capture directly. Historical web FAQ inventory is closed at this page; this followup is drained."
   - source_id: null
     url: "lawful immutable English 2005 first-retail component inventory document"
     failure: not_found

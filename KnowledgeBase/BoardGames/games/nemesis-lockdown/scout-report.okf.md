@@ -113,8 +113,8 @@ followups:
     url: "https://shop.asmodee.com/nemesis-lockdown-nemld01"
     failure: blocked
     fallback: "Search result exposed Item No. NEMLD01; no body claim relies on the blocked page."
-    retry_needs: wayback_snapshot
-    notes: "Need official retail SKU/UPC/publication receipt and first-print markers. Retried 2026-09-04 (librarian): live shop.asmodee.com still HTTP 403, and browser escalation is not the blocker, so browser_fetch is the wrong route. Switched retry_needs to wayback_snapshot because the Wayback availability API CONFIRMS a capture exists — http://web.archive.org/web/20230529174739/https://shop.asmodee.com/nemesis-lockdown-nemld01 (status 200, timestamp 20230529174739). Retrieval was not completed this pass: web.archive.org returned HTTP 429 rate-limiting to both curl and a real browser session throughout the run. Environmental throttle, not a missing document. Next pass should fetch that exact capture URL and read the SKU/EAN block."
+    retry_needs: alternate_source
+    notes: "Need official retail SKU/UPC/publication receipt and first-print markers. Retried 2026-11-15 (audit): fetched the 2023-05-29 Wayback capture (previously blocked by web.archive.org 429 rate-limiting). The archived storefront page reconfirms only \"Item No. NEMLD01\" — the same Item No. already known from the search snippet; no SKU/UPC/EAN block is present on this page. This document source is exhausted. retry_needs switched to alternate_source: a future pass needs a different publisher/retailer page that actually lists a UPC/EAN, not a repeat of this page. Per this doc's own Disposition, box/SKU/lot physical inspection remains out of scope, so full UPC/EAN may stay permanently UNKNOWN."
   - source_id: null
     url: "lawful immutable English 2022 first-retail component/card/face document corpus"
     failure: not_found
