@@ -17,7 +17,7 @@ followups:
     failure: blocked
     fallback: "Used publisher page, review evidence, and BGG-facing statistics mirror."
     retry_needs: alternate_source
-    notes: "Direct BGG page and XML endpoint were inaccessible during this run; retry BGG files/forums or a publisher rulebook download. Retried 2026-09-04 (librarian): still HTTP 403, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. The block is systemic to boardgamegeek.com from this environment. alternate_source remains correct; the publisher rulebook download is the more promising of the two named leads."
+    notes: "Direct BGG page and XML endpoint were inaccessible during this run; retry BGG files/forums or a publisher rulebook download. Retried 2026-09-04 (librarian): still HTTP 403, and a real headless Chromium session (Playwright) was also held at the Cloudflare 'Performing security verification' interstitial. The block is systemic to boardgamegeek.com from this environment. alternate_source remains correct; the publisher rulebook download is the more promising of the two named leads. Retried 2026-11-18 (librarian): found and followed the named publisher rulebook download lead. The Shadowborne Games Resources page (src-006) names and links the two official English rulebook PDFs (Story Rule Book, Encounter Rule Book) by exact Google Drive file ID — this game has never had its official rulebook located before (prior runs used review summaries only). Attempted retrieval of the Story Rule Book: curl against the Drive uc?export=download endpoint returns HTTP 200 but silently truncates the stream at 2,883,460 bytes against the PDF's own declared Linearized length of 81,909,402 bytes, producing an unparseable truncated file (confirmed with two PDF parsers). This is Google Drive's large-file download-warning interstitial substituting a short response rather than the real object; a future pass needs either the Drive API with an access token, a cookie-authenticated confirm-token flow, or a non-Drive mirror of the same two documents."
 sources:
   - id: "src-001"
     title: "Oathsworn: Into the Deepwood — BoardGameGeek"
@@ -54,6 +54,13 @@ sources:
     provenance: secondary
     retrieved_at: "2026-07-15"
     notes: "Campaign state and combat testimony."
+  - id: "src-006"
+    title: "Oathsworn — Shadowborne Games Resources (Printable Files)"
+    url: "https://www.shadowborne-games.com/pages/resources"
+    kind: publisher_page
+    provenance: official
+    retrieved_at: "2026-11-18"
+    notes: "Lists two official English PDF rulebooks by exact title: 'Oathsworn Story Rule Book' (Google Drive file id 1eUmHux5TOpkzpGDTyn1epZWFoK2jM-8m) and 'Oathsworn Encounter Rule Book' (Google Drive file id 1C20PYk17Mh_cAAQxgKNl1JjcsmTmZBlQ). Not yet extracted; see followup."
 confidence: medium
 status: needs_followup
 ---
