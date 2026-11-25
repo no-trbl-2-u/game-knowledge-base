@@ -14,11 +14,6 @@ deterministic tier's.
 
 | when (UTC) | pass | scope | scanned | findings | complete | note |
 |---|---|---|---|---|---|---|
-| 2026-07-19T06:03:47Z | generate-index | games/**/*.okf.md frontmatter | 55 table row | 0 | yes | wrote KnowledgeBase/BoardGames/INDEX.okf.md |
-| 2026-07-19T06:03:48Z | validate-okf | full corpus + index/sidecar freshness | 2443 files | 2 | yes | - |
-| 2026-07-19T06:05:02Z | generate-index | games/**/*.okf.md frontmatter | 55 table row | 0 | yes | wrote KnowledgeBase/BoardGames/INDEX.okf.md |
-| 2026-07-19T06:05:03Z | validate-okf | full corpus + index/sidecar freshness | 2444 files | 0 | yes | - |
-| 2026-07-19T06:05:22Z | validate-okf | full corpus + index/sidecar freshness | 2444 files | 0 | yes | - |
 | 2026-07-19T07:52:00Z | validate-okf | full corpus + index/sidecar freshness | 2470 files | 0 | yes | - |
 | 2026-07-19T07:53:13Z | generate-index | games/**/*.okf.md frontmatter | 55 table row | 0 | yes | wrote KnowledgeBase/BoardGames/INDEX.okf.md |
 | 2026-07-19T07:53:14Z | validate-okf | full corpus + index/sidecar freshness | 2470 files | 0 | yes | - |
@@ -414,3 +409,8 @@ deterministic tier's.
 | 2026-11-18T05:29:46Z | validate-okf | full corpus + index/sidecar freshness | 2918 files | 0 | yes | - |
 | 2026-11-18T05:30:19Z | validate-okf | full corpus + index/sidecar freshness | 2918 files | 0 | yes | - |
 | 2026-11-18T05:30:56Z | validate-okf | full corpus + index/sidecar freshness | 2918 files | 0 | yes | - |
+| 2026-11-25T05:30:15Z | validate-okf | full corpus + index/sidecar freshness | 2918 files | 1 | yes | - |
+| 2026-11-25T05:30:17Z | generate-index | games/**/*.okf.md frontmatter | 102 table ro | 0 | yes | wrote KnowledgeBase/BoardGames/INDEX.okf.md |
+| 2026-11-25T05:30:17Z | validate-okf | full corpus + index/sidecar freshness | 2918 files | 0 | yes | - |
+| 2026-11-25T05:32:08Z | validate-okf | full corpus + index/sidecar freshness | 2918 files | 0 | yes | - |
+| 2026-11-25T05:34:13Z | validate-okf | full corpus + index/sidecar freshness | 2918 files | 0 | yes | - |
